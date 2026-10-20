@@ -1,77 +1,286 @@
 {
-  "updated": "2026-10-20T11:59:59.997Z",
+  "updated": "2026-10-20T13:49:05.210Z",
+  "philosophy": "不是少铺是让每个自己转。每条线三件套：采集（数据 diff）、雷达（每日扫外部最新消息）、反应（命中即报警进月报，升降级有规则）。十年会天翻地覆，线是动态的。",
   "rules": {
-    "maintenance_budget": "全部序列每周 cron 自动跑，人工接口为每月一次读月报点头，合计一小时",
-    "promotion": "任何 B/C 守候对象触发信号命中后，当月做十问初筛再决定是否升级",
-    "annual_checkup": "每年一次三问，驱动时间表是否推进、历史是否出现真实买方或稳定引用方、是否出现资金充足的回填者，任何一问连续两年答否即降级或清仓"
+    "maintenance_budget": "雷达每日自动扫，采集每周自动跑，人工每月读月报点头合计一小时",
+    "reaction": "雷达命中写入该线 alerts 并进月报；连续三个月零事件的 watch 线建议降级；命中升级触发器的线当月做十问初筛",
+    "annual_checkup": "每年三问，驱动是否推进、历史是否出现买方或引用方、是否出现回填者，任一问连续两年答否即降级或清仓",
+    "admin_surface": "调雷达关键词、改状态、加新线，只编辑本文件，不改代码"
   },
   "series": [
     {
       "id": "mcpreflight-weekly",
       "status": "running-external",
       "home": "C:/Users/eqzyz/agenttoll-master/mcpdoctor",
-      "cron": "每周一 UTC 02:00",
-      "driver": "MCP 生态周度普查，agent 经济记录层",
-      "unbackfillable": "2026-10 起的逐周握手与 x402 状态序列",
-      "notes": "外部已有完整流水线，本中枢只聚合其状态"
+      "collect": null,
+      "radar": [
+        {
+          "channel": "hn",
+          "query": "Model Context Protocol"
+        },
+        {
+          "channel": "gn",
+          "query": "MCP server registry ecosystem"
+        },
+        {
+          "channel": "gn",
+          "query": "x402 payments protocol"
+        }
+      ],
+      "driver": "MCP 生态周度普查"
     },
     {
       "id": "erc8004-snapshot",
       "status": "running-external",
       "home": "C:/Users/eqzyz/agenttoll-master/mcpdoctor",
-      "cron": "每周",
-      "driver": "agent 身份注册表链上计数，以太坊与 Base",
-      "unbackfillable": "2026-10 起的持有与转账周度序列"
+      "collect": null,
+      "radar": [
+        {
+          "channel": "hn",
+          "query": "ERC-8004"
+        },
+        {
+          "channel": "gn",
+          "query": "trustless agents identity registry"
+        }
+      ],
+      "driver": "agent 身份注册表链上序列"
     },
     {
       "id": "protocol-watch",
       "status": "running-external",
       "home": "C:/Users/eqzyz/agenttoll-master/mcpdoctor",
-      "cron": "每日",
-      "driver": "MCP spec、x402、ERC-8004、A2A 四仓库 release 监视"
+      "collect": null,
+      "radar": [
+        {
+          "channel": "hn",
+          "query": "x402 protocol"
+        },
+        {
+          "channel": "gn",
+          "query": "agent payments standard"
+        }
+      ],
+      "driver": "四协议仓库 release 监视（mcpdoctor 每日）"
     },
     {
       "id": "sb253-docket",
       "status": "active",
-      "script": "scripts/sb253-docket.mjs",
-      "cron": "每周",
-      "driver": "加州 SB253/261 气候披露，2026-11-10 首窗，2027 鉴证，2030 合理鉴证",
-      "unbackfillable": "首窗谁交了/交了什么的快照与逐年轨迹",
+      "cron": {
+        "collect": "weekly",
+        "radar": "daily"
+      },
+      "collect": {
+        "type": "pages",
+        "pages": [
+          {
+            "id": "sb261-docket",
+            "url": "https://ww2.arb.ca.gov/public-comments/climate-related-financial-risk-reports-sb-261-docket"
+          },
+          {
+            "id": "sb253-reporting",
+            "url": "https://ww2.arb.ca.gov/our-work/programs/corporate-ghg-reporting/corporate-disclosure-climate-data"
+          },
+          {
+            "id": "sb253-program",
+            "url": "https://ww2.arb.ca.gov/our-work/programs/california-corporate-greenhouse-gas-reporting-and-climate-related-financial-risk"
+          }
+        ],
+        "linkFilter": "approved-comments|entity_id|system/files|survey123|climate"
+      },
+      "radar": [
+        {
+          "channel": "gn",
+          "query": "California SB 253 climate disclosure"
+        },
+        {
+          "channel": "gn",
+          "query": "SB 261 climate risk California"
+        },
+        {
+          "channel": "hn",
+          "query": "SB 253 climate"
+        }
+      ],
+      "driver": "加州气候披露，2026-11-10 首窗，2027 鉴证，2030 合理鉴证",
+      "unbackfillable": "首窗快照与逐年披露轨迹",
       "buyer_evidence": "MSCI ESG 年费 5 千到 200 万美元续订率 93.4% [CONFIRMED 2026-10-20]",
-      "risks": "SB261 被第九巡回禁令暂停，首年宽限"
+      "risks": "SB261 第九巡回禁令暂停中，司法裁决是雷达重点"
     },
     {
       "id": "agent-dirs",
       "status": "active",
-      "script": "scripts/agent-dirs.mjs",
-      "cron": "每周",
-      "driver": "agent 支付轨道 2026 年起跑，密钥目录带时间戳",
-      "unbackfillable": "agent 身份密钥的注册轮换吊销事件流，现场不记就没了"
+      "cron": {
+        "collect": "weekly",
+        "radar": "daily"
+      },
+      "collect": {
+        "type": "dirs",
+        "dirs": [
+          "https://chatgpt.com/.well-known/http-message-signatures-directory",
+          "https://agent.bot.goog/.well-known/http-message-signatures-directory"
+        ]
+      },
+      "radar": [
+        {
+          "channel": "hn",
+          "query": "web bot auth"
+        },
+        {
+          "channel": "gn",
+          "query": "agent payments protocol"
+        },
+        {
+          "channel": "gn",
+          "query": "web bot auth agent identity"
+        }
+      ],
+      "driver": "agent 支付轨道 2026 起跑",
+      "unbackfillable": "密钥注册轮换吊销事件流"
     },
     {
       "id": "eidas-tsl",
       "status": "active",
-      "script": "scripts/eidas-tsl.mjs",
-      "cron": "每周",
-      "driver": "eIDAS 2.0 钱包 2026 强制推开",
-      "unbackfillable": "中等，TSL 历史无人攒，可回填性中",
-      "notes": "decade-portfolio 既定 A 级低成本序列，定位组合配角"
+      "cron": {
+        "collect": "weekly",
+        "radar": "daily"
+      },
+      "collect": {
+        "type": "lotl",
+        "url": "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+      },
+      "radar": [
+        {
+          "channel": "gn",
+          "query": "eIDAS wallet"
+        },
+        {
+          "channel": "hn",
+          "query": "eIDAS 2.0"
+        }
+      ],
+      "driver": "eIDAS 2.0 钱包推开",
+      "notes": "组合配角，历史付费意愿存疑"
     },
     {
       "id": "aiact-register",
       "status": "auto-wait",
-      "script": "scripts/aiact-register.mjs",
-      "cron": "每月",
-      "driver": "EU AI Act 高风险义务 2027-12-02 与 2028-08-02，罚款上限 7%",
-      "notes": "官方库 HTML only，机器可读数据落地之日即立项之日，本序列只做落地侦测"
+      "cron": {
+        "collect": "monthly",
+        "radar": "daily"
+      },
+      "collect": {
+        "type": "pages",
+        "pages": [
+          {
+            "id": "ec-gpai-practice",
+            "url": "https://digital-strategy.ec.europa.eu/en/policies/code-practice-gpai"
+          },
+          {
+            "id": "ec-aiact-policy",
+            "url": "https://digital-strategy.ec.europa.eu/en/policies/ai-act"
+          },
+          {
+            "id": "ec-register-hr",
+            "url": "https://digital-strategy.ec.europa.eu/en/policies/register-high-risk-ai-systems"
+          },
+          {
+            "id": "proxy-timeline",
+            "url": "https://artificialintelligenceact.eu/implementation-timeline/"
+          }
+        ],
+        "machineReadable": true
+      },
+      "radar": [
+        {
+          "channel": "gn",
+          "query": "EU AI Act high-risk register"
+        },
+        {
+          "channel": "gn",
+          "query": "AI Act Article 71 database"
+        },
+        {
+          "channel": "hn",
+          "query": "AI Act register"
+        }
+      ],
+      "driver": "AI Act 高风险义务 2027-12-02 与 2028-08-02",
+      "notes": "机器可读数据落地之日即立项之日"
     },
     {
       "id": "triggers",
       "status": "active",
-      "script": "scripts/triggers.mjs",
-      "cron": "每月",
-      "driver": "守候清单 B/C 全部触发信号月扫",
-      "notes": "覆盖 CFTC 算力期货批复、Cloudflare Gateway GA、H.R. 8915、Lloyd's Lab、aiSure 品类、IRS agent 收入、Coloprice 成交价报告等"
+      "cron": {
+        "collect": "monthly",
+        "radar": "daily"
+      },
+      "collect": {
+        "type": "pages",
+        "pages": [
+          {
+            "id": "x402-spec",
+            "url": "https://www.x402.org/"
+          },
+          {
+            "id": "coloprice-marketplace",
+            "url": "https://coloprice.com/marketplace/"
+          },
+          {
+            "id": "parametrix-llm",
+            "url": "https://www.parametrixinsurance.com/"
+          },
+          {
+            "id": "lloyds-lab",
+            "url": "https://www.lloyds.com/insights/lloyds-lab"
+          },
+          {
+            "id": "hr8915",
+            "url": "https://www.govtrack.us/congress/bills/119/hr8915"
+          }
+        ],
+        "match": {
+          "x402-spec": "v1\\.0|specification",
+          "parametrix-llm": "LLM|language model",
+          "hr8915": "passed|became law|voted"
+        }
+      },
+      "radar": [
+        {
+          "channel": "fr",
+          "query": "compute derivatives"
+        },
+        {
+          "channel": "fr",
+          "query": "autonomous agent income"
+        },
+        {
+          "channel": "gn",
+          "query": "compute futures CFTC"
+        },
+        {
+          "channel": "gn",
+          "query": "agent insurance"
+        },
+        {
+          "channel": "gn",
+          "query": "AI personality rights bill"
+        },
+        {
+          "channel": "hn",
+          "query": "compute futures"
+        },
+        {
+          "channel": "hn",
+          "query": "agent insurance"
+        },
+        {
+          "channel": "hn",
+          "query": "Cloudflare Monetization Gateway"
+        }
+      ],
+      "driver": "守候清单 B/C 全部升级触发器",
+      "notes": "命中当月十问初筛"
     }
   ]
 }

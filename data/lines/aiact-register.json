@@ -1,0 +1,82 @@
+{
+ "collect": {
+  "runs": [
+   {
+    "date": "2026-10-20T13:48:33.401Z",
+    "pages": [
+     {
+      "id": "ec-gpai-practice",
+      "status": 200,
+      "sig": "45634:PCFET0NUWVBFIGh0bWw+",
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "ec-aiact-policy",
+      "status": 200,
+      "sig": "45634:PCFET0NUWVBFIGh0bWw+",
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "ec-register-hr",
+      "status": 200,
+      "sig": "45634:PCFET0NUWVBFIGh0bWw+",
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "proxy-timeline",
+      "status": 200,
+      "sig": "339460:PCFET0NUWVBFIGh0bWw+",
+      "changed": false,
+      "keywordHit": false
+     }
+    ]
+   }
+  ],
+  "events": []
+ },
+ "radar": {
+  "runs": [
+   {
+    "date": "2026-10-20T13:43:30.250Z",
+    "channel": "gn",
+    "query": "EU AI Act high-risk register",
+    "error": "TypeError: fetch failed"
+   },
+   {
+    "date": "2026-10-20T13:43:30.250Z",
+    "channel": "gn",
+    "query": "AI Act Article 71 database",
+    "error": "TypeError: fetch failed"
+   },
+   {
+    "date": "2026-10-20T13:43:30.250Z",
+    "channel": "hn",
+    "query": "AI Act register",
+    "count": 0
+   },
+   {
+    "date": "2026-10-20T13:46:36.704Z",
+    "channel": "gn",
+    "query": "EU AI Act high-risk register",
+    "error": "TypeError: fetch failed"
+   },
+   {
+    "date": "2026-10-20T13:46:36.704Z",
+    "channel": "gn",
+    "query": "AI Act Article 71 database",
+    "error": "TypeError: fetch failed"
+   },
+   {
+    "date": "2026-10-20T13:46:36.704Z",
+    "channel": "hn",
+    "query": "AI Act register",
+    "count": 0
+   }
+  ],
+  "items": [],
+  "alerts": []
+ }
+}

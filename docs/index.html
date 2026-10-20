@@ -1,12 +1,12 @@
 <!doctype html><html lang="zh"><meta charset="utf-8"><title>longgame portfolio</title>
-<style>body{font-family:ui-sans-serif,system-ui;max-width:960px;margin:40px auto;padding:0 16px;color:#1f2328}table{border-collapse:collapse;width:100%}td,th{border:1px solid #d0d7de;padding:8px;font-size:14px;text-align:left}code{background:#f6f8fa;padding:2px 4px;border-radius:4px}h1{font-size:22px}h2{font-size:16px;border-bottom:1px solid #d0d7de;padding-bottom:6px}</style>
-<h1>longgame 组合仪表盘</h1><p>更新 2026-10-20T11:59:59.997Z。规则：全部序列 cron 自转，人工每月读月报一小时。升级规则：触发信号命中当月十问初筛。</p>
-<h2>序列状态</h2><table><tr><th>序列</th><th>状态</th><th>节奏</th><th>最近运行</th><th>事件数</th><th>驱动</th></tr><tr><td><code>mcpreflight-weekly</code></td><td style="color:#57606a;font-weight:600">running-external</td><td>每周一 UTC 02:00</td><td>external</td><td>-</td><td>MCP 生态周度普查，agent 经济记录层</td></tr>
-<tr><td><code>erc8004-snapshot</code></td><td style="color:#57606a;font-weight:600">running-external</td><td>每周</td><td>external</td><td>-</td><td>agent 身份注册表链上计数，以太坊与 Base</td></tr>
-<tr><td><code>protocol-watch</code></td><td style="color:#57606a;font-weight:600">running-external</td><td>每日</td><td>external</td><td>-</td><td>MCP spec、x402、ERC-8004、A2A 四仓库 release 监视</td></tr>
-<tr><td><code>sb253-docket</code></td><td style="color:#1a7f37;font-weight:600">active</td><td>每周</td><td>2026-10-20</td><td>1</td><td>加州 SB253/261 气候披露，2026-11-10 首窗，2027 鉴证，2030 合理鉴证</td></tr>
-<tr><td><code>agent-dirs</code></td><td style="color:#1a7f37;font-weight:600">active</td><td>每周</td><td>2026-10-20</td><td>0</td><td>agent 支付轨道 2026 年起跑，密钥目录带时间戳</td></tr>
-<tr><td><code>eidas-tsl</code></td><td style="color:#1a7f37;font-weight:600">active</td><td>每周</td><td>2026-10-20</td><td>0</td><td>eIDAS 2.0 钱包 2026 强制推开</td></tr>
-<tr><td><code>aiact-register</code></td><td style="color:#9a6700;font-weight:600">auto-wait</td><td>每月</td><td>2026-10-20</td><td>0</td><td>EU AI Act 高风险义务 2027-12-02 与 2028-08-02，罚款上限 7%</td></tr>
-<tr><td><code>triggers</code></td><td style="color:#1a7f37;font-weight:600">active</td><td>每月</td><td>2026-10-20</td><td>0</td><td>守候清单 B/C 全部触发信号月扫</td></tr></table>
-<h2>最近触发信号</h2><ul><li><code>hn-compute-futures</code> 2026-10-20 8 条 HN 新故事</li><li><code>hn-cf-gateway</code> 2026-10-20 1 条 HN 新故事</li><li><code>hn-agent-insurance</code> 2026-10-20 8 条 HN 新故事</li></ul>
+<style>body{font-family:ui-sans-serif,system-ui;max-width:1000px;margin:40px auto;padding:0 16px;color:#1f2328}table{border-collapse:collapse;width:100%}td,th{border:1px solid #d0d7de;padding:8px;font-size:14px;text-align:left}code{background:#f6f8fa;padding:2px 4px;border-radius:4px}h1{font-size:22px}h2{font-size:16px;border-bottom:1px solid #d0d7de;padding-bottom:6px}</style>
+<h1>longgame 组合仪表盘</h1><p>更新 2026-10-20T13:49:05.210Z。八条线动态运行：雷达每日扫外部消息，采集按各自节奏 diff，反应规则自动进月报。</p>
+<table><tr><th>线</th><th>状态</th><th>节奏</th><th>最近雷达</th><th>采集事件</th><th>雷达命中</th><th>驱动</th></tr><tr><td><code>mcpreflight-weekly</code></td><td>running-external</td><td>external</td><td>-</td><td>0</td><td>0</td><td>MCP 生态周度普查</td></tr>
+<tr><td><code>erc8004-snapshot</code></td><td>running-external</td><td>external</td><td>-</td><td>0</td><td>0</td><td>agent 身份注册表链上序列</td></tr>
+<tr><td><code>protocol-watch</code></td><td>running-external</td><td>external</td><td>-</td><td>0</td><td>0</td><td>四协议仓库 release 监视（mcpdoctor 每日）</td></tr>
+<tr><td><code>sb253-docket</code></td><td>active</td><td>采集weekly/雷达daily</td><td>2026-10-20</td><td>0</td><td>0</td><td>加州气候披露，2026-11-10 首窗，2027 鉴证，2030 合理鉴证</td></tr>
+<tr><td><code>agent-dirs</code></td><td>active</td><td>采集weekly/雷达daily</td><td>2026-10-20</td><td>0</td><td>0</td><td>agent 支付轨道 2026 起跑</td></tr>
+<tr><td><code>eidas-tsl</code></td><td>active</td><td>采集weekly/雷达daily</td><td>2026-10-20</td><td>0</td><td>0</td><td>eIDAS 2.0 钱包推开</td></tr>
+<tr><td><code>aiact-register</code></td><td>auto-wait</td><td>采集monthly/雷达daily</td><td>2026-10-20</td><td>0</td><td>0</td><td>AI Act 高风险义务 2027-12-02 与 2028-08-02</td></tr>
+<tr><td><code>triggers</code></td><td>active</td><td>采集monthly/雷达daily</td><td>2026-10-20</td><td>0</td><td>0</td><td>守候清单 B/C 全部升级触发器</td></tr></table>
+<h2>升降级建议</h2><ul><li>无</li></ul>

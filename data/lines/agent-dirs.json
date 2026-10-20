@@ -1,0 +1,43 @@
+{
+ "collect": {
+  "runs": [
+   {
+    "date": "2026-10-20T13:47:40.900Z",
+    "dirs": {
+     "https://chatgpt.com/.well-known/http-message-signatures-directory": {
+      "error": "TypeError: fetch failed"
+     },
+     "https://agent.bot.goog/.well-known/http-message-signatures-directory": {
+      "error": "TypeError: fetch failed"
+     }
+    },
+    "keys": {}
+   }
+  ],
+  "events": []
+ },
+ "radar": {
+  "runs": [
+   {
+    "date": "2026-10-20T13:45:59.424Z",
+    "channel": "hn",
+    "query": "web bot auth",
+    "count": 5
+   },
+   {
+    "date": "2026-10-20T13:45:59.424Z",
+    "channel": "gn",
+    "query": "agent payments protocol",
+    "error": "TypeError: fetch failed"
+   },
+   {
+    "date": "2026-10-20T13:45:59.424Z",
+    "channel": "gn",
+    "query": "web bot auth agent identity",
+    "error": "TypeError: fetch failed"
+   }
+  ],
+  "items": [],
+  "alerts": []
+ }
+}

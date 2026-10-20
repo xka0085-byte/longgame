@@ -1,0 +1,41 @@
+{
+ "collect": {
+  "runs": [
+   {
+    "date": "2026-10-20T13:48:02.426Z",
+    "error": "TimeoutError: The operation was aborted due to timeout"
+   }
+  ],
+  "events": []
+ },
+ "radar": {
+  "runs": [
+   {
+    "date": "2026-10-20T13:43:16.199Z",
+    "channel": "gn",
+    "query": "eIDAS wallet",
+    "error": "TypeError: fetch failed"
+   },
+   {
+    "date": "2026-10-20T13:43:16.199Z",
+    "channel": "hn",
+    "query": "eIDAS 2.0",
+    "count": 0
+   },
+   {
+    "date": "2026-10-20T13:46:24.269Z",
+    "channel": "gn",
+    "query": "eIDAS wallet",
+    "error": "TypeError: fetch failed"
+   },
+   {
+    "date": "2026-10-20T13:46:24.269Z",
+    "channel": "hn",
+    "query": "eIDAS 2.0",
+    "count": 0
+   }
+  ],
+  "items": [],
+  "alerts": []
+ }
+}

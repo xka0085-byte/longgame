@@ -1,0 +1,75 @@
+{
+ "collect": {
+  "runs": [
+   {
+    "date": "2026-10-20T13:47:38.359Z",
+    "pages": [
+     {
+      "id": "sb261-docket",
+      "status": 200,
+      "sig": "68754:CjwhRE9DVFlQRSBodG1s",
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "sb253-reporting",
+      "status": 200,
+      "sig": "58031:CjwhRE9DVFlQRSBodG1s",
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "sb253-program",
+      "status": 200,
+      "sig": "60805:CjwhRE9DVFlQRSBodG1s",
+      "changed": false,
+      "keywordHit": false
+     }
+    ]
+   }
+  ],
+  "events": []
+ },
+ "radar": {
+  "runs": [
+   {
+    "date": "2026-10-20T13:42:27.783Z",
+    "channel": "gn",
+    "query": "California SB 253 climate disclosure",
+    "error": "TypeError: fetch failed"
+   },
+   {
+    "date": "2026-10-20T13:42:27.783Z",
+    "channel": "gn",
+    "query": "SB 261 climate risk California",
+    "error": "TypeError: fetch failed"
+   },
+   {
+    "date": "2026-10-20T13:42:27.783Z",
+    "channel": "hn",
+    "query": "SB 253 climate",
+    "count": 0
+   },
+   {
+    "date": "2026-10-20T13:45:35.592Z",
+    "channel": "gn",
+    "query": "California SB 253 climate disclosure",
+    "error": "TypeError: fetch failed"
+   },
+   {
+    "date": "2026-10-20T13:45:35.592Z",
+    "channel": "gn",
+    "query": "SB 261 climate risk California",
+    "error": "TypeError: fetch failed"
+   },
+   {
+    "date": "2026-10-20T13:45:35.592Z",
+    "channel": "hn",
+    "query": "SB 253 climate",
+    "count": 0
+   }
+  ],
+  "items": [],
+  "alerts": []
+ }
+}
