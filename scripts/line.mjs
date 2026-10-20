@@ -26,8 +26,10 @@ const newAlerts = [];
 function pushItems(ch, items) {
   // 相关度过滤：查询的主要词必须都在标题里，压掉 Algolia 模糊匹配噪声
   const tokens = (ch.query || '').toLowerCase().split(/\s+/).filter(w => w.length >= 3);
+  const excludeRe = ch.exclude ? new RegExp(ch.exclude, 'i') : null;
   for (const it of items) {
     if (!it.url || seenUrls.has(it.url)) continue;
+    if (excludeRe && excludeRe.test(it.title || '')) continue;
     if (tokens.length) {
       const title = (it.title || '').toLowerCase();
       if (!tokens.every(t => title.includes(t))) continue;
@@ -100,7 +102,14 @@ if (mode === 'collect' && line.collect) {
     for (const kw of c.keywords) {
       try {
         const base = `https://efts.sec.gov/LATEST/search-index?q=%22${encodeURIComponent(kw)}%22&forms=${c.form || 'D'}`;
-        const all = await (await fetch(base, { headers: UA, signal: AbortSignal.timeout(30000) })).json();
+        const all = await (async () => {
+          for (let i = 0; i < 2; i++) {
+            const j = await (await fetch(base, { headers: UA, signal: AbortSignal.timeout(30000) })).json();
+            if (j.hits?.total?.value != null) return j;
+            await new Promise(r => setTimeout(r, 1500));
+          }
+          return {};
+        })();
         const mo = await (await fetch(`${base}&dateRange=custom&startdt=${monthStart}&enddt=${nowISO.slice(0, 10)}`, { headers: UA, signal: AbortSignal.timeout(30000) })).json();
         const entry = { keyword: kw, allTime: all.hits?.total?.value ?? null, thisMonth: mo.hits?.total?.value ?? null };
         run.queries.push(entry);

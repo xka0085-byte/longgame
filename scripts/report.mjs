@@ -1,4 +1,4 @@
-// 组合月报与仪表盘：雷达摘要、采集事件、升降级建议。人工接口=读月报点头。
+// 组合月报与仪表盘：分组线卡 + 反应链路图 + 雷达命中流。人工接口=读月报点头。
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 
 const now = new Date();
@@ -13,41 +13,89 @@ function readLine(id) {
   try { return JSON.parse(readFileSync(f, 'utf8')); } catch { return null; }
 }
 
-const rows = [], proposals = [];
-for (const s of portfolio.series) {
-  const st = readLine(s.id);
-  const collectRuns = st?.collect?.runs?.length || 0;
-  const collectEvents = st?.collect?.events || [];
-  const radarAlerts = st?.radar?.alerts || [];
-  const lastRadar = st?.radar?.runs?.at(-1)?.date?.slice(0, 10) || '-';
-  rows.push(`<tr><td><code>${s.id}</code></td><td>${s.status}</td><td>${s.cron ? `采集${s.cron.collect}/雷达${s.cron.radar}` : s.home ? 'external' : '-'}</td><td>${st ? lastRadar : '-'}</td><td>${collectEvents.length}</td><td>${radarAlerts.length}</td><td>${(s.driver || '').slice(0, 48)}</td></tr>`);
-  // 反应规则：命中升级触发器的线、静默线、事件活跃线
-  const upgradeHit = s.id === 'triggers' && radarAlerts.some(a => /CFTC|insurance|personality|Gateway/i.test(a.title || ''));
-  if (upgradeHit) proposals.push(`${s.id}：雷达命中升级触发器，当月做十问初筛`);
-  if (st && s.status === 'watch' && radarAlerts.length === 0) proposals.push(`${s.id}：watch 且持续静默，候选降级`);
-  if (radarAlerts.length >= 5) proposals.push(`${s.id}：本期雷达命中 ${radarAlerts.length} 条，人工过目是否调整雷达关键词`);
-}
+const GROUPS = [
+  { name: 'Agent 经济', lines: ['mcpreflight-weekly', 'erc8004-snapshot', 'protocol-watch', 'agent-dirs'] },
+  { name: '气候与能源', lines: ['sb253-docket', 'grid-queue'] },
+  { name: '合规与身份信任', lines: ['aiact-register', 'eidas-tsl', 'c2pa-spec', 'state-ai-laws'] },
+  { name: '算力金融与守候', lines: ['formd-sweep', 'compute-futures', 'triggers'] },
+];
+const byId = Object.fromEntries(portfolio.series.map(s => [s.id, s]));
+const stOf = id => readLine(id);
 
-let md = `# 组合月报 ${month}\n\n生成 ${now.toISOString()}。人工接口：读毕点头。规则：雷达命中进月报，升级触发器命中当月十问初筛，任一线连续两年三问体检答否即清仓。\n\n`;
+let md = `# 组合月报 ${month}\n\n生成 ${now.toISOString()}。人工接口：读毕点头。规则：雷达命中进月报，升级触发器命中当月十问初筛，任一线连续两年三问体检答否即降级或清仓。\n\n`;
 for (const s of portfolio.series) {
-  const st = readLine(s.id);
+  const st = stOf(s.id);
   md += `## ${s.id}（${s.status}）\n- 驱动：${s.driver || '-'}\n`;
+  if (s.artifact) md += `- 产物：${s.artifact}\n`;
   if (st) {
-    const recent = (st.radar.alerts || []).slice(-6);
     md += `- 雷达命中累计 ${st.radar.alerts.length} 条，采集事件累计 ${st.collect.events.length} 条\n`;
-    for (const a of recent) md += `  - ${a.date.slice(0, 10)} [${a.channel}] ${a.title}\n`;
+    for (const a of (st.radar.alerts || []).slice(-5)) md += `  - ${a.date.slice(0, 10)} [${a.channel}] ${a.title}\n`;
   } else if (s.home) md += `- 外部序列：${s.home}\n`;
   if (s.risks) md += `- 风险：${s.risks}\n`;
   md += '\n';
 }
-md += '## 升降级建议\n\n' + (proposals.length ? proposals.map(p => `- ${p}`).join('\n') : '无') + '\n';
+const alertsAll = portfolio.series.flatMap(s => (stOf(s.id)?.radar.alerts || []).slice(-3).map(a => ({ line: s.id, ...a }))).sort((a, b) => (a.date < b.date ? 1 : -1)).slice(0, 15);
+md += '## 最近雷达命中\n\n' + (alertsAll.length ? alertsAll.map(a => `- ${a.date.slice(0, 10)} [${a.line}] ${a.title}`).join('\n') : '无') + '\n';
+md += '\n## 每年三问体检\n\n一 驱动时间表是否推进。二 历史是否出现真实买方或稳定引用方。三 是否出现资金充足的回填者。任一问连续两年答否即降级或清仓。\n';
 writeFileSync(`docs/report-${month}.md`, md);
 
-const html = `<!doctype html><html lang="zh"><meta charset="utf-8"><title>longgame portfolio</title>
-<style>body{font-family:ui-sans-serif,system-ui;max-width:1000px;margin:40px auto;padding:0 16px;color:#1f2328}table{border-collapse:collapse;width:100%}td,th{border:1px solid #d0d7de;padding:8px;font-size:14px;text-align:left}code{background:#f6f8fa;padding:2px 4px;border-radius:4px}h1{font-size:22px}h2{font-size:16px;border-bottom:1px solid #d0d7de;padding-bottom:6px}footer{margin-top:32px;font-size:12px;color:#57606a}</style>
-<h1>longgame 组合仪表盘</h1><p>更新 ${now.toISOString()}。八条线动态运行：雷达每日扫外部消息，采集按各自节奏 diff，反应规则自动进月报。</p>
-<table><tr><th>线</th><th>状态</th><th>节奏</th><th>最近雷达</th><th>采集事件</th><th>雷达命中</th><th>驱动</th></tr>${rows.join('\n')}</table>
-<h2>升降级建议</h2><ul>${proposals.map(p => `<li>${p}</li>`).join('') || '<li>无</li>'}</ul>
-<footer>longgame portfolio，零人工测量线组合自 2026-10。引用格式见 llms.txt。数据全部来自公开来源，数字自带生成日期。</footer>`;
+// 分组线卡 HTML
+function esc(s) { return String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+function lineCard(id) {
+  const s = byId[id];
+  if (!s) return '';
+  const st = stOf(id);
+  const radarN = st?.radar.alerts.length ?? '-';
+  const evN = st?.collect.events.length ?? '-';
+  const lastRadar = st?.radar.runs.at(-1)?.date?.slice(0, 10) ?? (s.home ? 'external' : '待首跑');
+  const chs = (s.radar || []).map(r => r.channel).filter((v, i, a) => a.indexOf(v) === i);
+  const statusColor = s.status === 'active' ? '#1a7f37' : s.status === 'auto-wait' ? '#9a6700' : '#57606a';
+  return `<div class="card${id === 'sb253-docket' ? ' focal' : ''}">
+  <div class="row"><code>${id}</code><span class="pill" style="color:${statusColor};border-color:${statusColor}">${s.status}</span></div>
+  <div class="driver">${esc(s.driver || '')}</div>
+  ${s.artifact ? `<div class="artifact">产物：${esc(s.artifact)}</div>` : ''}
+  <div class="meta">采集 ${s.cron?.collect ?? '-'} · 雷达 ${s.cron?.radar ?? '-'}${chs.length ? ' · ' + chs.map(esc).join('/') : ''}</div>
+  <div class="stats">雷达命中 <b>${radarN}</b> · 采集事件 <b>${evN}</b> · 最近雷达 ${lastRadar}</div>
+</div>`;
+}
+const groupHtml = GROUPS.map(g => `<div class="group"><h2>${g.name}</h2><div class="cards">${g.lines.map(lineCard).join('')}</div></div>`).join('\n');
+
+// 反应链路 SVG（6 节点 5 箭头，符合预算）
+const flowSvg = `<svg viewBox="0 0 720 96" width="100%" height="auto" role="img" aria-label="数据流">
+<defs><marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="8" markerHeight="8" markerUnits="userSpaceOnUse" orient="auto"><path d="M1 1 L7 4 L1 7 Z" fill="var(--text-muted)"/></marker></defs>
+${[['数据源', 40], ['雷达', 170], ['采集', 300], ['事件流', 430], ['月报', 560]].map(([t, x], i) => `<rect x="${x}" y="28" width="100" height="40" rx="8" fill="var(--surface)" stroke="var(--border)"/><text x="${x + 50}" y="52" text-anchor="middle" font-size="14" fill="var(--text)">${t}</text>${i < 4 ? `<path d="M${x + 104} 48 H${x + 126}" stroke="var(--text-muted)" stroke-width="1.5" fill="none" marker-end="url(#ah)"/>` : ''}`).join('')}
+<rect x="660" y="28" width="60" height="40" rx="20" fill="var(--brand-soft)" stroke="var(--brand)"/><text x="690" y="52" text-anchor="middle" font-size="13" fill="var(--brand-text)">反应</text>
+</svg>`;
+
+const alertsHtml = alertsAll.map(a => `<li><span class="d">${a.date.slice(0, 10)}</span> <code>${a.line}</code> ${esc(a.title)}</li>`).join('') || '<li>暂无命中</li>';
+const html = `<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>longgame portfolio</title>
+<style>
+:root{--bg:#f6f8fa;--surface:#ffffff;--border:#d0d7de;--text:#1f2328;--muted:#57606a;--brand:#1a7f37;--brand-soft:#dafbe1}
+*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,'Segoe UI';background:var(--bg);color:var(--text)}
+.wrap{max-width:1080px;margin:0 auto;padding:28px 16px}
+h1{font-size:22px;margin:0 0 4px}h2{font-size:15px;margin:20px 0 10px;color:var(--muted);text-transform:letter-spacing:.5px}
+.sub{color:var(--muted);font-size:13px;margin-bottom:18px}
+.group{margin-bottom:22px}.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px}
+.card.focal{border:2px solid var(--brand)}
+.row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+code{background:var(--bg);padding:2px 6px;border-radius:6px;font-size:13px}
+.pill{font-size:11px;border:1px solid;border-radius:999px;padding:1px 8px}
+.driver{font-size:13px;margin-top:8px;color:var(--muted)}
+.artifact{font-size:12px;margin-top:6px;background:var(--bg);border-radius:8px;padding:6px 8px}
+.meta,.stats{font-size:12px;color:var(--muted);margin-top:6px}
+.flow{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:12px}
+ul.hits{columns:1;font-size:13px;padding-left:18px}.hits li{margin:4px 0}
+.d{color:var(--muted);font-family:monospace;font-size:12px}
+footer{margin-top:30px;font-size:12px;color:var(--muted)}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1117;--surface:#161b22;--border:#30363d;--text:#e6edf3;--muted:#8b949e;--brand:#3fb950;--brand-soft:#12261e}}
+</style><div class="wrap">
+<h1>longgame 组合仪表盘</h1>
+<div class="sub">更新 ${now.toISOString()} · ${portfolio.series.length} 条线 · 雷达每日 · 采集按各自节奏 · 反应规则自动进月报</div>
+<div class="flow">${flowSvg}</div>
+${groupHtml}
+<h2>最近雷达命中</h2><ul class="hits">${alertsHtml}</ul>
+<footer>longgame portfolio，零人工测量线组合自 2026-10。引用格式见 llms.txt。数据全部来自公开来源，数字自带生成日期。每年三问体检：驱动推进、买方与引用、回填者。</footer>
+</div>`;
 writeFileSync('docs/index.html', html);
-console.log(`report docs/report-${month}.md + dashboard docs/index.html, proposals=${proposals.length}`);
+console.log(`report docs/report-${month}.md + dashboard docs/index.html (grouped cards), lines=${portfolio.series.length}`);
