@@ -1,0 +1,25 @@
+name: monthly-series
+on:
+  schedule:
+    - cron: "0 4 1 * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/aiact-register.mjs
+      - run: node scripts/triggers.mjs
+      - run: node scripts/monthly-report.mjs
+      - name: commit
+        run: |
+          git config user.name "longgame-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/ docs/ portfolio.json
+          git diff --cached --quiet || git commit -m "monthly report $(date -u +%Y-%m)"
+          git push

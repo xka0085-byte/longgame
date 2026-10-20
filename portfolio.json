@@ -1,0 +1,77 @@
+{
+  "updated": "2026-10-20T11:59:59.997Z",
+  "rules": {
+    "maintenance_budget": "全部序列每周 cron 自动跑，人工接口为每月一次读月报点头，合计一小时",
+    "promotion": "任何 B/C 守候对象触发信号命中后，当月做十问初筛再决定是否升级",
+    "annual_checkup": "每年一次三问，驱动时间表是否推进、历史是否出现真实买方或稳定引用方、是否出现资金充足的回填者，任何一问连续两年答否即降级或清仓"
+  },
+  "series": [
+    {
+      "id": "mcpreflight-weekly",
+      "status": "running-external",
+      "home": "C:/Users/eqzyz/agenttoll-master/mcpdoctor",
+      "cron": "每周一 UTC 02:00",
+      "driver": "MCP 生态周度普查，agent 经济记录层",
+      "unbackfillable": "2026-10 起的逐周握手与 x402 状态序列",
+      "notes": "外部已有完整流水线，本中枢只聚合其状态"
+    },
+    {
+      "id": "erc8004-snapshot",
+      "status": "running-external",
+      "home": "C:/Users/eqzyz/agenttoll-master/mcpdoctor",
+      "cron": "每周",
+      "driver": "agent 身份注册表链上计数，以太坊与 Base",
+      "unbackfillable": "2026-10 起的持有与转账周度序列"
+    },
+    {
+      "id": "protocol-watch",
+      "status": "running-external",
+      "home": "C:/Users/eqzyz/agenttoll-master/mcpdoctor",
+      "cron": "每日",
+      "driver": "MCP spec、x402、ERC-8004、A2A 四仓库 release 监视"
+    },
+    {
+      "id": "sb253-docket",
+      "status": "active",
+      "script": "scripts/sb253-docket.mjs",
+      "cron": "每周",
+      "driver": "加州 SB253/261 气候披露，2026-11-10 首窗，2027 鉴证，2030 合理鉴证",
+      "unbackfillable": "首窗谁交了/交了什么的快照与逐年轨迹",
+      "buyer_evidence": "MSCI ESG 年费 5 千到 200 万美元续订率 93.4% [CONFIRMED 2026-10-20]",
+      "risks": "SB261 被第九巡回禁令暂停，首年宽限"
+    },
+    {
+      "id": "agent-dirs",
+      "status": "active",
+      "script": "scripts/agent-dirs.mjs",
+      "cron": "每周",
+      "driver": "agent 支付轨道 2026 年起跑，密钥目录带时间戳",
+      "unbackfillable": "agent 身份密钥的注册轮换吊销事件流，现场不记就没了"
+    },
+    {
+      "id": "eidas-tsl",
+      "status": "active",
+      "script": "scripts/eidas-tsl.mjs",
+      "cron": "每周",
+      "driver": "eIDAS 2.0 钱包 2026 强制推开",
+      "unbackfillable": "中等，TSL 历史无人攒，可回填性中",
+      "notes": "decade-portfolio 既定 A 级低成本序列，定位组合配角"
+    },
+    {
+      "id": "aiact-register",
+      "status": "auto-wait",
+      "script": "scripts/aiact-register.mjs",
+      "cron": "每月",
+      "driver": "EU AI Act 高风险义务 2027-12-02 与 2028-08-02，罚款上限 7%",
+      "notes": "官方库 HTML only，机器可读数据落地之日即立项之日，本序列只做落地侦测"
+    },
+    {
+      "id": "triggers",
+      "status": "active",
+      "script": "scripts/triggers.mjs",
+      "cron": "每月",
+      "driver": "守候清单 B/C 全部触发信号月扫",
+      "notes": "覆盖 CFTC 算力期货批复、Cloudflare Gateway GA、H.R. 8915、Lloyd's Lab、aiSure 品类、IRS agent 收入、Coloprice 成交价报告等"
+    }
+  ]
+}
