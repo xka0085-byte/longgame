@@ -1,0 +1,75 @@
+{
+ "collect": {
+  "runs": [
+   {
+    "date": "2026-10-20T16:00:51.708Z",
+    "pages": [
+     {
+      "id": "multistate-ai",
+      "status": 200,
+      "sig": "172406:PCFkb2N0eXBlIGh0bWw+",
+      "changed": false,
+      "keywordHit": false
+     }
+    ]
+   }
+  ],
+  "events": []
+ },
+ "radar": {
+  "runs": [
+   {
+    "date": "2026-10-20T16:01:37.285Z",
+    "channel": "gn",
+    "query": "state AI law enforcement",
+    "count": 5
+   },
+   {
+    "date": "2026-10-20T16:01:37.285Z",
+    "channel": "gn",
+    "query": "Colorado AI Act",
+    "count": 5
+   },
+   {
+    "date": "2026-10-20T16:01:37.285Z",
+    "channel": "hn",
+    "query": "state AI law",
+    "count": 4
+   }
+  ],
+  "items": [
+   {
+    "line": "state-ai-laws",
+    "channel": "gn",
+    "query": "state AI law enforcement",
+    "title": "DOJ’s Retreat on AI Enforcement Puts Focus on State Regulators - Bloomberg Law News",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOZkNSRG13NkQyb2wzZFpqYUd3cEZsVGNZNjByN2NPeVBGMU04cEhpMFhNUGdONXEwb3BTY1llZHBEU0pvVXJLLV9EMDV6YkprWkM1YzRsY2ZXbjhyRHJBVzRtZWhiY0xwUGNWbUNHdW9LRkp2dEVzdGo0eGpTVWF5WXIwRDFkSmNNVEotRnJPZko0U1QyVG5wV0JnUFBXd1hLNkMtUnFVcUJfbHFSaWNkS0tBa3VWbmFaU3dGS0JtSzdoc2FrN0tlbjBB?oc=5",
+    "date": "Fri, 16 Oct 2026 08:30:00 GMT",
+    "foundAt": "2026-10-20T16:01:37.285Z"
+   },
+   {
+    "line": "state-ai-laws",
+    "channel": "gn",
+    "query": "Colorado AI Act",
+    "title": "The Colorado AI Act: What It Requires - CASRAI",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5DY1N0Q1M1NmZFUEY3b2YzbmMzemU1d0FrZENhcTBQSFJLY24zNE9hcFhZOGVZeVZsazFXYTNXVThKQ2R6UkF0RmVIRGdoWjdRZXc5aERBMFg2b0tvM3JTeA?oc=5",
+    "date": "Fri, 25 Sep 2026 07:00:00 GMT",
+    "foundAt": "2026-10-20T16:01:37.285Z"
+   }
+  ],
+  "alerts": [
+   {
+    "date": "2026-10-20T16:01:37.285Z",
+    "title": "DOJ’s Retreat on AI Enforcement Puts Focus on State Regulators - Bloomberg Law News",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOZkNSRG13NkQyb2wzZFpqYUd3cEZsVGNZNjByN2NPeVBGMU04cEhpMFhNUGdONXEwb3BTY1llZHBEU0pvVXJLLV9EMDV6YkprWkM1YzRsY2ZXbjhyRHJBVzRtZWhiY0xwUGNWbUNHdW9LRkp2dEVzdGo0eGpTVWF5WXIwRDFkSmNNVEotRnJPZko0U1QyVG5wV0JnUFBXd1hLNkMtUnFVcUJfbHFSaWNkS0tBa3VWbmFaU3dGS0JtSzdoc2FrN0tlbjBB?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-10-20T16:01:37.285Z",
+    "title": "The Colorado AI Act: What It Requires - CASRAI",
+    "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5DY1N0Q1M1NmZFUEY3b2YzbmMzemU1d0FrZENhcTBQSFJLY24zNE9hcFhZOGVZeVZsazFXYTNXVThKQ2R6UkF0RmVIRGdoWjdRZXc5aERBMFg2b0tvM3JTeA?oc=5",
+    "channel": "gn"
+   }
+  ]
+ }
+}

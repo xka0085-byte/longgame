@@ -1,0 +1,80 @@
+{
+ "collect": {
+  "runs": [
+   {
+    "date": "2026-10-20T15:58:42.262Z",
+    "queries": [
+     {
+      "keyword": "humanoid",
+      "allTime": null,
+      "thisMonth": 1
+     },
+     {
+      "keyword": "robotics",
+      "allTime": 610,
+      "thisMonth": 5
+     },
+     {
+      "keyword": "defense tech",
+      "allTime": 7,
+      "thisMonth": 1
+     },
+     {
+      "keyword": "stablecoin",
+      "allTime": 21,
+      "thisMonth": 0
+     },
+     {
+      "keyword": "AI infrastructure",
+      "allTime": 36,
+      "thisMonth": null
+     },
+     {
+      "keyword": "compute",
+      "allTime": 42,
+      "thisMonth": 3
+     },
+     {
+      "keyword": "agentic",
+      "allTime": 10,
+      "thisMonth": 0
+     },
+     {
+      "keyword": "data center",
+      "allTime": 94,
+      "thisMonth": 8
+     },
+     {
+      "keyword": "fusion",
+      "allTime": 436,
+      "thisMonth": 4
+     },
+     {
+      "keyword": "nuclear",
+      "allTime": 75,
+      "thisMonth": 1
+     }
+    ]
+   }
+  ],
+  "events": []
+ },
+ "radar": {
+  "runs": [
+   {
+    "date": "2026-10-20T16:01:20.319Z",
+    "channel": "gn",
+    "query": "private funding humanoid robotics",
+    "count": 5
+   },
+   {
+    "date": "2026-10-20T16:01:20.319Z",
+    "channel": "hn",
+    "query": "Form D filing",
+    "count": 0
+   }
+  ],
+  "items": [],
+  "alerts": []
+ }
+}

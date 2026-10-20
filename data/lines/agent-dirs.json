@@ -35,9 +35,59 @@
     "channel": "gn",
     "query": "web bot auth agent identity",
     "error": "TypeError: fetch failed"
+   },
+   {
+    "date": "2026-10-20T16:00:58.782Z",
+    "channel": "hn",
+    "query": "web bot auth",
+    "count": 4
+   },
+   {
+    "date": "2026-10-20T16:00:58.782Z",
+    "channel": "gn",
+    "query": "agent payments protocol",
+    "count": 5
+   },
+   {
+    "date": "2026-10-20T16:00:58.782Z",
+    "channel": "gn",
+    "query": "web bot auth agent identity",
+    "count": 5
    }
   ],
-  "items": [],
-  "alerts": []
+  "items": [
+   {
+    "line": "agent-dirs",
+    "channel": "gn",
+    "query": "agent payments protocol",
+    "title": "Virtuals Protocol Launches Private Agent Payments - Cryptonews.net",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBZY3VtT2JhNk1GczZYeXg0SFBnanE2aTNpYndGZHI5emVSY1hKZkthOVBMdTBhenRwRmhIV2tiOUZkTFlocnB4bEhhR0hES2pBc29xZmYycTh1SlZU?oc=5",
+    "date": "Mon, 19 Oct 2026 18:21:50 GMT",
+    "foundAt": "2026-10-20T16:00:58.782Z"
+   },
+   {
+    "line": "agent-dirs",
+    "channel": "gn",
+    "query": "web bot auth agent identity",
+    "title": "Web Bot Auth: Verifying User Identity &amp; Ensuring Agent Trust Through the Customer Journey - Security Boulevard",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPdnZQaWFTWnctNE9wTkxWMG1jN1NtSUM1Z2JScGRtVzNNTF92b2tHc0ZkV2loajRpRjhjbWhJZVRXOEdKYnhoMll2bWFoSndPaDI5bktLb19SajNyZWg5aEluVHVBODRvNkEzcEp4V2MzWE9kWnRlT2VLT0pQZnNpMmF2aU9mbUJiNXB2S1J1bHN0QmM2T3V3MmJUOUZyWXBwWnJadnhRZGZvNjdZTE1udVNyaWxpRmV4Zjc5T2MydHZVWUk?oc=5",
+    "date": "Thu, 22 Jan 2026 08:00:00 GMT",
+    "foundAt": "2026-10-20T16:00:58.782Z"
+   }
+  ],
+  "alerts": [
+   {
+    "date": "2026-10-20T16:00:58.782Z",
+    "title": "Virtuals Protocol Launches Private Agent Payments - Cryptonews.net",
+    "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBZY3VtT2JhNk1GczZYeXg0SFBnanE2aTNpYndGZHI5emVSY1hKZkthOVBMdTBhenRwRmhIV2tiOUZkTFlocnB4bEhhR0hES2pBc29xZmYycTh1SlZU?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-10-20T16:00:58.782Z",
+    "title": "Web Bot Auth: Verifying User Identity &amp; Ensuring Agent Trust Through the Customer Journey - Security Boulevard",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPdnZQaWFTWnctNE9wTkxWMG1jN1NtSUM1Z2JScGRtVzNNTF92b2tHc0ZkV2loajRpRjhjbWhJZVRXOEdKYnhoMll2bWFoSndPaDI5bktLb19SajNyZWg5aEluVHVBODRvNkEzcEp4V2MzWE9kWnRlT2VLT0pQZnNpMmF2aU9mbUJiNXB2S1J1bHN0QmM2T3V3MmJUOUZyWXBwWnJadnhRZGZvNjdZTE1udVNyaWxpRmV4Zjc5T2MydHZVWUk?oc=5",
+    "channel": "gn"
+   }
+  ]
  }
 }

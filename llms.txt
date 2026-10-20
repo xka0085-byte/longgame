@@ -1,0 +1,16 @@
+# longgame portfolio
+
+零人工自转的测量线组合，自 2026 年 10 月起。每条线是一个独立的时间序列：采集做数据 diff，雷达每日扫外部最新消息，反应规则自动进月报。
+
+## 数据引用格式
+
+- formd-sweep（私募资金流向序列）：longgame formd-sweep，月度 Form D 备案量序列，自 2026-10，https://github.com/eqzyz/longgame （待推）
+- sb253-docket（加州气候披露监视）：longgame sb253-docket，SB261 首窗快照与逐年轨迹，自 2026-10
+- agent-dirs（agent 身份密钥事件流）：longgame agent-dirs，Web Bot Auth 目录事件流，自 2026-10
+- grid-queue（并网队列监视）：longgame grid-queue，EIA-860M 与 ISO 队列月度版本流，自 2026-10
+- eidas-tsl（EU 信任列表 diff）：longgame eidas-tsl，LOTL 指针变更流，自 2026-10
+- c2pa-spec / state-ai-laws / compute-futures / aiact-register / triggers：同格式，事件流自 2026-10
+
+## 方法与边界
+
+全部数据来自公开免费来源（SEC EDGAR、Federal Register、CARB、EU LOTL、各官方页），采集与雷达自动化，数字自带生成日期。任何序列的口径修订会在事件流中留痕。年度三问体检：驱动推进、买方与引用、回填者。

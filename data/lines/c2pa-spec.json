@@ -1,0 +1,54 @@
+{
+ "collect": {
+  "runs": [
+   {
+    "date": "2026-10-20T16:00:49.940Z",
+    "pages": [
+     {
+      "id": "c2pa-specs",
+      "status": 200,
+      "sig": "13364:PCFET0NUWVBFIGh0bWw+",
+      "changed": false,
+      "keywordHit": true
+     }
+    ]
+   }
+  ],
+  "events": []
+ },
+ "radar": {
+  "runs": [
+   {
+    "date": "2026-10-20T16:01:32.102Z",
+    "channel": "gn",
+    "query": "C2PA content credentials adoption",
+    "count": 5
+   },
+   {
+    "date": "2026-10-20T16:01:32.102Z",
+    "channel": "hn",
+    "query": "content credentials",
+    "count": 0
+   }
+  ],
+  "items": [
+   {
+    "line": "c2pa-spec",
+    "channel": "gn",
+    "query": "C2PA content credentials adoption",
+    "title": "C2PA Welcomes TikTok to Steering Committee, Advancing the Adoption of Content Credentials at a Global Scale - Morningstar",
+    "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNZXpvbmRFc194V1o2eW5qUmQ0MXdCMWRXQUxXb0VPRVo3MDd2T1dmR3ZiUTdzdUNCSVY3TEdVQ0l0ODhNREVQRU5IUldfSWtiWmpBcmxwNk5TbVp6UTdrYy1QT2VRblJyWU5BbVg2X214c0lZRFprbndOc2FOZGxDUVJCVHlzemJRWk9xZFR5TVFxXzBqbl9qZUhrU1RGOGhwaDItblUwM0JEQWtVNWRScS1zWHR2OHlwSjJsamlYN29UQTItNFJDekZ2cDhDRVU4TlczY0tiRkdOc3dnWER1MFIteVREczMzc2UwV25PQWlVcndmWFVZVTFkcw?oc=5",
+    "date": "Tue, 28 Jul 2026 07:00:00 GMT",
+    "foundAt": "2026-10-20T16:01:32.102Z"
+   }
+  ],
+  "alerts": [
+   {
+    "date": "2026-10-20T16:01:32.102Z",
+    "title": "C2PA Welcomes TikTok to Steering Committee, Advancing the Adoption of Content Credentials at a Global Scale - Morningstar",
+    "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNZXpvbmRFc194V1o2eW5qUmQ0MXdCMWRXQUxXb0VPRVo3MDd2T1dmR3ZiUTdzdUNCSVY3TEdVQ0l0ODhNREVQRU5IUldfSWtiWmpBcmxwNk5TbVp6UTdrYy1QT2VRblJyWU5BbVg2X214c0lZRFprbndOc2FOZGxDUVJCVHlzemJRWk9xZFR5TVFxXzBqbl9qZUhrU1RGOGhwaDItblUwM0JEQWtVNWRScS1zWHR2OHlwSjJsamlYN29UQTItNFJDekZ2cDhDRVU4TlczY0tiRkdOc3dnWER1MFIteVREczMzc2UwV25PQWlVcndmWFVZVTFkcw?oc=5",
+    "channel": "gn"
+   }
+  ]
+ }
+}

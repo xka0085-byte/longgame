@@ -93,6 +93,24 @@ if (mode === 'collect' && line.collect) {
       } catch (e) { run.dirs[url] = { error: String(e).slice(0, 100) }; }
     }
     run.keys = kidsMap;
+  } else if (c.type === 'edgar') {
+    // EDGAR Form D 关键词备案量月度快照：当月计数加全历史计数，构成不可回填的资金流向序列
+    run.queries = [];
+    const monthStart = nowISO.slice(0, 7) + '-01';
+    for (const kw of c.keywords) {
+      try {
+        const base = `https://efts.sec.gov/LATEST/search-index?q=%22${encodeURIComponent(kw)}%22&forms=${c.form || 'D'}`;
+        const all = await (await fetch(base, { headers: UA, signal: AbortSignal.timeout(30000) })).json();
+        const mo = await (await fetch(`${base}&dateRange=custom&startdt=${monthStart}&enddt=${nowISO.slice(0, 10)}`, { headers: UA, signal: AbortSignal.timeout(30000) })).json();
+        const entry = { keyword: kw, allTime: all.hits?.total?.value ?? null, thisMonth: mo.hits?.total?.value ?? null };
+        run.queries.push(entry);
+        const prevAll = prev?.runs?.find(r => r.queries)?.queries?.find(q => q.keyword === kw);
+        if (prevAll && typeof entry.thisMonth === 'number' && entry.thisMonth > 0 && prevAll.allTime === entry.allTime) {
+          // 全历史数没涨但当月有数，视为口径异常，如实记录
+          st.collect.events.push({ date: nowISO, type: 'edgar-anomaly', keyword: kw });
+        }
+      } catch (e) { run.queries.push({ keyword: kw, error: String(e).slice(0, 100) }); }
+    }
   } else if (c.type === 'lotl') {
     try {
       const r = await fetch(c.url, { headers: UA, signal: AbortSignal.timeout(30000) });

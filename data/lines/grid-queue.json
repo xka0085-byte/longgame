@@ -1,0 +1,43 @@
+{
+ "collect": {
+  "runs": [
+   {
+    "date": "2026-10-20T16:00:53.029Z",
+    "pages": [
+     {
+      "id": "eia860m",
+      "status": 200,
+      "sig": "94010:PCFkb2N0eXBlIGh0bWw+",
+      "changed": false,
+      "keywordHit": true
+     }
+    ]
+   }
+  ],
+  "events": []
+ },
+ "radar": {
+  "runs": [
+   {
+    "date": "2026-10-20T16:01:43.146Z",
+    "channel": "gn",
+    "query": "interconnection queue data center",
+    "count": 5
+   },
+   {
+    "date": "2026-10-20T16:01:43.146Z",
+    "channel": "gn",
+    "query": "large load tariff utility",
+    "count": 5
+   },
+   {
+    "date": "2026-10-20T16:01:43.146Z",
+    "channel": "hn",
+    "query": "interconnection queue",
+    "count": 0
+   }
+  ],
+  "items": [],
+  "alerts": []
+ }
+}

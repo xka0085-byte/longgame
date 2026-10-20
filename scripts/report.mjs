@@ -44,9 +44,10 @@ md += '## 升降级建议\n\n' + (proposals.length ? proposals.map(p => `- ${p}`
 writeFileSync(`docs/report-${month}.md`, md);
 
 const html = `<!doctype html><html lang="zh"><meta charset="utf-8"><title>longgame portfolio</title>
-<style>body{font-family:ui-sans-serif,system-ui;max-width:1000px;margin:40px auto;padding:0 16px;color:#1f2328}table{border-collapse:collapse;width:100%}td,th{border:1px solid #d0d7de;padding:8px;font-size:14px;text-align:left}code{background:#f6f8fa;padding:2px 4px;border-radius:4px}h1{font-size:22px}h2{font-size:16px;border-bottom:1px solid #d0d7de;padding-bottom:6px}</style>
+<style>body{font-family:ui-sans-serif,system-ui;max-width:1000px;margin:40px auto;padding:0 16px;color:#1f2328}table{border-collapse:collapse;width:100%}td,th{border:1px solid #d0d7de;padding:8px;font-size:14px;text-align:left}code{background:#f6f8fa;padding:2px 4px;border-radius:4px}h1{font-size:22px}h2{font-size:16px;border-bottom:1px solid #d0d7de;padding-bottom:6px}footer{margin-top:32px;font-size:12px;color:#57606a}</style>
 <h1>longgame 组合仪表盘</h1><p>更新 ${now.toISOString()}。八条线动态运行：雷达每日扫外部消息，采集按各自节奏 diff，反应规则自动进月报。</p>
 <table><tr><th>线</th><th>状态</th><th>节奏</th><th>最近雷达</th><th>采集事件</th><th>雷达命中</th><th>驱动</th></tr>${rows.join('\n')}</table>
-<h2>升降级建议</h2><ul>${proposals.map(p => `<li>${p}</li>`).join('') || '<li>无</li>'}</ul>`;
+<h2>升降级建议</h2><ul>${proposals.map(p => `<li>${p}</li>`).join('') || '<li>无</li>'}</ul>
+<footer>longgame portfolio，零人工测量线组合自 2026-10。引用格式见 llms.txt。数据全部来自公开来源，数字自带生成日期。</footer>`;
 writeFileSync('docs/index.html', html);
 console.log(`report docs/report-${month}.md + dashboard docs/index.html, proposals=${proposals.length}`);

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-20T13:49:05.210Z",
+  "updated": "2026-10-20T16:01:48.927Z",
   "philosophy": "不是少铺是让每个自己转。每条线三件套：采集（数据 diff）、雷达（每日扫外部最新消息）、反应（命中即报警进月报，升降级有规则）。十年会天翻地覆，线是动态的。",
   "rules": {
     "maintenance_budget": "雷达每日自动扫，采集每周自动跑，人工每月读月报点头合计一小时",
@@ -281,6 +281,187 @@
       ],
       "driver": "守候清单 B/C 全部升级触发器",
       "notes": "命中当月十问初筛"
+    },
+    {
+      "id": "formd-sweep",
+      "status": "active",
+      "cron": {
+        "collect": "monthly",
+        "radar": "daily"
+      },
+      "collect": {
+        "type": "edgar",
+        "keywords": [
+          "humanoid",
+          "robotics",
+          "defense tech",
+          "stablecoin",
+          "AI infrastructure",
+          "compute",
+          "agentic",
+          "data center",
+          "fusion",
+          "nuclear"
+        ],
+        "form": "D"
+      },
+      "radar": [
+        {
+          "channel": "gn",
+          "query": "private funding humanoid robotics"
+        },
+        {
+          "channel": "hn",
+          "query": "Form D filing"
+        }
+      ],
+      "driver": "私募资金流向硬数据",
+      "unbackfillable": "月度备案量快照只有当时扫的人手里才有，EDGAR 可查历史但没人存序列",
+      "artifact": "逐关键词月度备案量序列加 movers 报告，每季度一份署名资金流向报告",
+      "brand_line": "longgame formd-sweep，月度私募资金序列，自 2026-10"
+    },
+    {
+      "id": "compute-futures",
+      "status": "active",
+      "cron": {
+        "collect": "weekly",
+        "radar": "daily"
+      },
+      "collect": {
+        "type": "pages",
+        "pages": [
+          {
+            "id": "coloprice-marketplace",
+            "url": "https://coloprice.com/marketplace/"
+          },
+          {
+            "id": "cme-compute",
+            "url": "https://www.cmegroup.com/markets/compute.html"
+          }
+        ],
+        "match": {
+          "cme-compute": "compute|GPU"
+        }
+      },
+      "radar": [
+        {
+          "channel": "fr",
+          "query": "compute derivatives"
+        },
+        {
+          "channel": "gn",
+          "query": "compute futures exchange"
+        },
+        {
+          "channel": "hn",
+          "query": "compute futures"
+        }
+      ],
+      "driver": "CFTC 裁决加两所挂牌加承购转手市场成型",
+      "artifact": "批复与挂牌事件流，挂牌首日起记基差序列"
+    },
+    {
+      "id": "c2pa-spec",
+      "status": "active",
+      "cron": {
+        "collect": "weekly",
+        "radar": "daily"
+      },
+      "collect": {
+        "type": "pages",
+        "pages": [
+          {
+            "id": "c2pa-specs",
+            "url": "https://c2pa.org/specifications/specifications/2.3/index.html"
+          }
+        ],
+        "match": {
+          "c2pa-specs": "2\\.[0-9]"
+        }
+      },
+      "radar": [
+        {
+          "channel": "gn",
+          "query": "C2PA content credentials adoption"
+        },
+        {
+          "channel": "hn",
+          "query": "content credentials"
+        }
+      ],
+      "driver": "EU AI Act Art 50 水印互操作 2027-02-02 生效前采纳窗口",
+      "artifact": "规范版本演进时间线"
+    },
+    {
+      "id": "state-ai-laws",
+      "status": "active",
+      "cron": {
+        "collect": "weekly",
+        "radar": "daily"
+      },
+      "collect": {
+        "type": "pages",
+        "pages": [
+          {
+            "id": "multistate-ai",
+            "url": "https://www.multistate.ai/"
+          }
+        ]
+      },
+      "radar": [
+        {
+          "channel": "gn",
+          "query": "state AI law enforcement"
+        },
+        {
+          "channel": "gn",
+          "query": "Colorado AI Act"
+        },
+        {
+          "channel": "hn",
+          "query": "state AI law"
+        }
+      ],
+      "driver": "州级 AI 法案 patchwork，科罗拉多 2026 生效",
+      "artifact": "逐州生效日期与执法状态机"
+    },
+    {
+      "id": "grid-queue",
+      "status": "active",
+      "cron": {
+        "collect": "monthly",
+        "radar": "daily"
+      },
+      "collect": {
+        "type": "pages",
+        "pages": [
+          {
+            "id": "eia860m",
+            "url": "https://www.eia.gov/electricity/data/eia860m/"
+          }
+        ],
+        "match": {
+          "eia860m": "xlsx|excel|download"
+        }
+      },
+      "radar": [
+        {
+          "channel": "gn",
+          "query": "interconnection queue data center"
+        },
+        {
+          "channel": "gn",
+          "query": "large load tariff utility"
+        },
+        {
+          "channel": "hn",
+          "query": "interconnection queue"
+        }
+      ],
+      "driver": "AI 数据中心电力缺口，结构性确定",
+      "unbackfillable": "月度文件时点快照，多 ISO 无人做统一历史",
+      "artifact": "月度文件版本流加队列新闻事件流",
+      "notes": "decade-portfolio 第二序列，天花板全场最高，先挂监视等买方信号"
     }
   ]
 }

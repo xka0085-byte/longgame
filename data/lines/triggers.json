@@ -90,9 +90,134 @@
     "channel": "hn",
     "query": "Cloudflare Monetization Gateway",
     "count": 0
+   },
+   {
+    "date": "2026-10-20T16:01:11.645Z",
+    "channel": "fr",
+    "query": "compute derivatives",
+    "count": 0
+   },
+   {
+    "date": "2026-10-20T16:01:11.645Z",
+    "channel": "fr",
+    "query": "autonomous agent income",
+    "count": 0
+   },
+   {
+    "date": "2026-10-20T16:01:11.645Z",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "count": 5
+   },
+   {
+    "date": "2026-10-20T16:01:11.645Z",
+    "channel": "gn",
+    "query": "agent insurance",
+    "count": 5
+   },
+   {
+    "date": "2026-10-20T16:01:11.645Z",
+    "channel": "gn",
+    "query": "AI personality rights bill",
+    "count": 5
+   },
+   {
+    "date": "2026-10-20T16:01:11.645Z",
+    "channel": "hn",
+    "query": "compute futures",
+    "count": 0
+   },
+   {
+    "date": "2026-10-20T16:01:11.645Z",
+    "channel": "hn",
+    "query": "agent insurance",
+    "count": 1
+   },
+   {
+    "date": "2026-10-20T16:01:11.645Z",
+    "channel": "hn",
+    "query": "Cloudflare Monetization Gateway",
+    "count": 0
    }
   ],
-  "items": [],
-  "alerts": []
+  "items": [
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "title": "CFTC considers AI compute futures as CME eyes new market - Crain's Chicago Business",
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNRzlNeGYtRExNTFZlckgxaVlWMnBrcW4xNXFDbXRQd3BCR0RRRW9INGpneWFWWWg4dlNGTHA2dEc5UUpNS0FFRUUtVjRiRzROSEM5Z0M4Vl9LaXNLVEVZZlQ5YnkzZF9PdXJFVVlGVy1NQjZxN0RydkZZNkF0TTZzQkw3R3FLYjB1MkFOejR6UTdiaEk?oc=5",
+    "date": "Wed, 19 Aug 2026 07:00:00 GMT",
+    "foundAt": "2026-10-20T16:01:11.645Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "title": "CFTC seeks public input on AI compute futures contracts as CME eyes October launch - TradingView",
+    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPdVcwUVVNeTlDNHNMUnFGZThRZGhBR0N0bjVPMWRlYkxHQ0E0ekpSbDRVc05YVS0tb2NYTmpvcnpiQkQ0TzRNeHBqa25oRW5PWXUtLXZIcGtQSmplMm5RMkVfdnM3ZUFHYlFjLUJnWEJPRnhmSmkxSFFRZUxrcllPMDJDWDhrLVFkUlkzUktJN2NzZlYxOG9uaGlLZUhFX3N6QUFrOEMxMUU2ZHFCRkdkVlJDZS11bjNZM2tDdlBVTWV5V2w4SFN0RVdBdjNhY0wxUUFId0lvT3FxN1d0RGZJ?oc=5",
+    "date": "Mon, 17 Aug 2026 07:00:00 GMT",
+    "foundAt": "2026-10-20T16:01:11.645Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Vertafore launches Velocity Coach Agent to drive employee proficiency and productivity at independent insurance agencies - PR Newswire",
+    "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxNcjBkLUIwMXFSRVdzMXl3MlBTa3ZuNG50X29zTWdRTHA2aU5Wa2dlbGxMdUZqZDVIc3NMOE9fYlV6MUZKWmdhcExOX2w5Si1TdjA5TEEtVnNXeTJmbVQwZnVaLWRQSjc0dUhXWXUxT0I5dXZhenVFQ1dPYzIzX25yWFhpQUdJcWhZaW1zckNaOTlrcWV5Q0E3b195TV9CaUdPZUNRMzhpZHpIZmhTUjVsaDRYeDk2LURnR3ZvaXl5T2RsQlJzLWpBbDA0V19ybFM4V1dWX3l3dGE3ZmpMek9wQTNVNHhIVDNKNWpXeTMyaTJQVnltcGRIWUgwRkFYd0FZNG5FSE05QQ?oc=5",
+    "date": "Tue, 20 Oct 2026 15:16:00 GMT",
+    "foundAt": "2026-10-20T16:01:11.645Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Insurance Agent Tells Drivers to \"Hit the Deer,\" But There's a Good Reason - Yahoo Autos",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPbmZVYWtCQl9iREJQRmJtUENFWnR6azZMYXREUVcwcDVfN3lhU0FVU1lLRjZjN1czd2VSTzYzZFhuU1NzeEV6a2lsSm9fMnRaREowazlIa2pvZEw3ZllIODVCRnc3UUZQWHB2aTFrUjdkamlzaTEwbThQOUhKb1ZqUkhJT3VFeGdyZ2EtRjh1LWNjOXhpcGFSRmlxclZxck9SZVE?oc=5",
+    "date": "Tue, 20 Oct 2026 00:06:00 GMT",
+    "foundAt": "2026-10-20T16:01:11.645Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "AI personality rights bill",
+    "title": "Denmark targets AI deepfakes with landmark personality rights bill - World IP Review",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOcndocGk4QnZqYUhfMmtEa3kyaHU2VU5GWWV6M0JSb1FnbV8zQ0FhZEQyeGJIY05KUENjUThZRzVkdFVtOVg2ajZMaGQ4NGhGbVdLcTViczl3eG9MbU5oNGZ1U3NWOXpXMkUteF9sWlRBNkFBZ3M0eGdZYnlpcXVMNEZ0YkVFMDJQMmV3VTgwaXJaa3EzMmlyU0VPLWdWbWFlVDV1WGFzcUhmOHhoNl9SME81d3Q4Q3hibVhGeA?oc=5",
+    "date": "Mon, 12 Oct 2026 16:05:11 GMT",
+    "foundAt": "2026-10-20T16:01:11.645Z"
+   }
+  ],
+  "alerts": [
+   {
+    "date": "2026-10-20T16:01:11.645Z",
+    "title": "CFTC considers AI compute futures as CME eyes new market - Crain's Chicago Business",
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNRzlNeGYtRExNTFZlckgxaVlWMnBrcW4xNXFDbXRQd3BCR0RRRW9INGpneWFWWWg4dlNGTHA2dEc5UUpNS0FFRUUtVjRiRzROSEM5Z0M4Vl9LaXNLVEVZZlQ5YnkzZF9PdXJFVVlGVy1NQjZxN0RydkZZNkF0TTZzQkw3R3FLYjB1MkFOejR6UTdiaEk?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-10-20T16:01:11.645Z",
+    "title": "CFTC seeks public input on AI compute futures contracts as CME eyes October launch - TradingView",
+    "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPdVcwUVVNeTlDNHNMUnFGZThRZGhBR0N0bjVPMWRlYkxHQ0E0ekpSbDRVc05YVS0tb2NYTmpvcnpiQkQ0TzRNeHBqa25oRW5PWXUtLXZIcGtQSmplMm5RMkVfdnM3ZUFHYlFjLUJnWEJPRnhmSmkxSFFRZUxrcllPMDJDWDhrLVFkUlkzUktJN2NzZlYxOG9uaGlLZUhFX3N6QUFrOEMxMUU2ZHFCRkdkVlJDZS11bjNZM2tDdlBVTWV5V2w4SFN0RVdBdjNhY0wxUUFId0lvT3FxN1d0RGZJ?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-10-20T16:01:11.645Z",
+    "title": "Vertafore launches Velocity Coach Agent to drive employee proficiency and productivity at independent insurance agencies - PR Newswire",
+    "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxNcjBkLUIwMXFSRVdzMXl3MlBTa3ZuNG50X29zTWdRTHA2aU5Wa2dlbGxMdUZqZDVIc3NMOE9fYlV6MUZKWmdhcExOX2w5Si1TdjA5TEEtVnNXeTJmbVQwZnVaLWRQSjc0dUhXWXUxT0I5dXZhenVFQ1dPYzIzX25yWFhpQUdJcWhZaW1zckNaOTlrcWV5Q0E3b195TV9CaUdPZUNRMzhpZHpIZmhTUjVsaDRYeDk2LURnR3ZvaXl5T2RsQlJzLWpBbDA0V19ybFM4V1dWX3l3dGE3ZmpMek9wQTNVNHhIVDNKNWpXeTMyaTJQVnltcGRIWUgwRkFYd0FZNG5FSE05QQ?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-10-20T16:01:11.645Z",
+    "title": "Insurance Agent Tells Drivers to \"Hit the Deer,\" But There's a Good Reason - Yahoo Autos",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPbmZVYWtCQl9iREJQRmJtUENFWnR6azZMYXREUVcwcDVfN3lhU0FVU1lLRjZjN1czd2VSTzYzZFhuU1NzeEV6a2lsSm9fMnRaREowazlIa2pvZEw3ZllIODVCRnc3UUZQWHB2aTFrUjdkamlzaTEwbThQOUhKb1ZqUkhJT3VFeGdyZ2EtRjh1LWNjOXhpcGFSRmlxclZxck9SZVE?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-10-20T16:01:11.645Z",
+    "title": "Denmark targets AI deepfakes with landmark personality rights bill - World IP Review",
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOcndocGk4QnZqYUhfMmtEa3kyaHU2VU5GWWV6M0JSb1FnbV8zQ0FhZEQyeGJIY05KUENjUThZRzVkdFVtOVg2ajZMaGQ4NGhGbVdLcTViczl3eG9MbU5oNGZ1U3NWOXpXMkUteF9sWlRBNkFBZ3M0eGdZYnlpcXVMNEZ0YkVFMDJQMmV3VTgwaXJaa3EzMmlyU0VPLWdWbWFlVDV1WGFzcUhmOHhoNl9SME81d3Q4Q3hibVhGeA?oc=5",
+    "channel": "gn"
+   }
+  ]
  }
 }

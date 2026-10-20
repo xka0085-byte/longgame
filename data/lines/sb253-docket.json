@@ -67,9 +67,44 @@
     "channel": "hn",
     "query": "SB 253 climate",
     "count": 0
+   },
+   {
+    "date": "2026-10-20T16:00:53.745Z",
+    "channel": "gn",
+    "query": "California SB 253 climate disclosure",
+    "count": 5
+   },
+   {
+    "date": "2026-10-20T16:00:53.745Z",
+    "channel": "gn",
+    "query": "SB 261 climate risk California",
+    "count": 5
+   },
+   {
+    "date": "2026-10-20T16:00:53.745Z",
+    "channel": "hn",
+    "query": "SB 253 climate",
+    "count": 0
    }
   ],
-  "items": [],
-  "alerts": []
+  "items": [
+   {
+    "line": "sb253-docket",
+    "channel": "gn",
+    "query": "California SB 253 climate disclosure",
+    "title": "Breakfast Briefing: Navigating California’s Climate Disclosure Mandates (SB 253 &amp; SB 261) - Hogan Lovells Cadwalader",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQRFNHeWdNWWllb3pmMmhKRThyaS1GYlZYeWtuTk52ZExPNUFCSEswTEZZQzJQX3BXTm5TWmx4TDVMR2k2MkxkNW9Fb2RXZzRnTzJ5MEhQb2VQUHlsZmlqZTl4VWxJQ2ZxWFlobTBkZjFQcld3UWZueVhHRkktcXdkNm9lc1FfbVF0OE90b1BKLXJTSDlUOXdiUmZkTzZXZlds?oc=5",
+    "date": "Wed, 30 Sep 2026 11:29:09 GMT",
+    "foundAt": "2026-10-20T16:00:53.745Z"
+   }
+  ],
+  "alerts": [
+   {
+    "date": "2026-10-20T16:00:53.745Z",
+    "title": "Breakfast Briefing: Navigating California’s Climate Disclosure Mandates (SB 253 &amp; SB 261) - Hogan Lovells Cadwalader",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQRFNHeWdNWWllb3pmMmhKRThyaS1GYlZYeWtuTk52ZExPNUFCSEswTEZZQzJQX3BXTm5TWmx4TDVMR2k2MkxkNW9Fb2RXZzRnTzJ5MEhQb2VQUHlsZmlqZTl4VWxJQ2ZxWFlobTBkZjFQcld3UWZueVhHRkktcXdkNm9lc1FfbVF0OE90b1BKLXJTSDlUOXdiUmZkTzZXZlds?oc=5",
+    "channel": "gn"
+   }
+  ]
  }
 }

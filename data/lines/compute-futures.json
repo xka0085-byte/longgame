@@ -1,0 +1,50 @@
+{
+ "collect": {
+  "runs": [
+   {
+    "date": "2026-10-20T16:00:48.085Z",
+    "pages": [
+     {
+      "id": "coloprice-marketplace",
+      "status": 200,
+      "sig": "21840:PCFET0NUWVBFIGh0bWw+",
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "cme-compute",
+      "status": 404,
+      "sig": "126587:PCFET0NUWVBFIEhUTUw+",
+      "changed": false,
+      "keywordHit": false
+     }
+    ]
+   }
+  ],
+  "events": []
+ },
+ "radar": {
+  "runs": [
+   {
+    "date": "2026-10-20T16:01:27.688Z",
+    "channel": "fr",
+    "query": "compute derivatives",
+    "count": 0
+   },
+   {
+    "date": "2026-10-20T16:01:27.688Z",
+    "channel": "gn",
+    "query": "compute futures exchange",
+    "count": 5
+   },
+   {
+    "date": "2026-10-20T16:01:27.688Z",
+    "channel": "hn",
+    "query": "compute futures",
+    "count": 3
+   }
+  ],
+  "items": [],
+  "alerts": []
+ }
+}
