@@ -1,11 +1,32 @@
 {
-  "updated": "2026-10-20T16:31:41.400Z",
+  "updated": "2026-10-21T02:32:13.304Z",
   "philosophy": "不是少铺是让每个自己转。每条线三件套：采集（数据 diff）、雷达（每日扫外部最新消息）、反应（命中即报警进月报，升降级有规则）。十年会天翻地覆，线是动态的。",
   "rules": {
-    "maintenance_budget": "雷达每日自动扫，采集每周自动跑，人工每月读月报点头合计一小时",
-    "reaction": "雷达命中写入该线 alerts 并进月报；连续三个月零事件的 watch 线建议降级；命中升级触发器的线当月做十问初筛",
+    "maintenance_budget": "雷达每日自动扫，采集每周自动跑，产物与反应每月自动生成，人工每月读月报点头合计一小时",
+    "reaction": "radar 命中由 react.mjs 分类：removal 立即兑现，corrective 先实测再在既有线程回证据，demand 才可进入触达评估，rule 更新参数，noise 只记录；连续三个月零事件的 watch 线建议降级；命中升级触发器的线当月做十问初筛",
     "annual_checkup": "每年三问，驱动是否推进、历史是否出现买方或引用方、是否出现回填者，任一问连续两年答否即降级或清仓",
-    "admin_surface": "调雷达关键词、改状态、加新线，只编辑本文件，不改代码"
+    "admin_surface": "调雷达关键词、改状态、加新线，只编辑本文件，不改代码",
+    "state_machine": "watch 只挂雷达采集不产报告；active 定期出产物；escalated 命中触发器或出现买方原话当月过十问；monetizing 出现付费或采购意向；retired 体检答否退出",
+    "distribution": {
+      "tier0_passive_auto": [
+        "docs/lines/<id>.html",
+        "docs/feed.xml",
+        "docs/sitemap.xml",
+        "llms.txt 引用块",
+        "IndexNow 可选"
+      ],
+      "tier1_semi_auto": [
+        "dev.to 草稿待点头",
+        "自有页面更新无需点头"
+      ],
+      "tier2_active_outreach": [
+        "需对方公开原话链接",
+        "需 outreach-guard 通过",
+        "需写台账",
+        "需 tone-check 通过",
+        "单条定制不铺量"
+      ]
+    }
   },
   "series": [
     {

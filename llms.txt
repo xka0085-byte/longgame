@@ -14,3 +14,16 @@
 ## 方法与边界
 
 全部数据来自公开免费来源（SEC EDGAR、Federal Register、CARB、EU LOTL、各官方页），采集与雷达自动化，数字自带生成日期。任何序列的口径修订会在事件流中留痕。年度三问体检：驱动推进、买方与引用、回填者。
+
+<!-- AUTO-CITATIONS:START -->
+## 引用格式（自动生成 2026-10-21）
+
+- sb253-docket：CARB 披露相关链接 0 条（首窗 11-10），自 2026-10，链接 https://longgame.example/lines/sb253-docket.html
+- agent-dirs：当前登记的 agent 密钥 0 把，自 2026-10，链接 https://longgame.example/lines/agent-dirs.html
+- eidas-tsl：累计雷达命中 2 条，自 2026-10，链接 https://longgame.example/lines/eidas-tsl.html
+- triggers：累计雷达命中 5 条，自 2026-10，链接 https://longgame.example/lines/triggers.html
+- formd-sweep：本月十个关键词合计新增 Form D 备案 23 件，自 2026-10，链接 https://longgame.example/lines/formd-sweep.html
+- c2pa-spec：累计雷达命中 1 条，自 2026-10，链接 https://longgame.example/lines/c2pa-spec.html
+- state-ai-laws：累计雷达命中 2 条，自 2026-10，链接 https://longgame.example/lines/state-ai-laws.html
+- grid-queue：EIA-860M 页可达，等待月度文件更新，自 2026-10，链接 https://longgame.example/lines/grid-queue.html
+<!-- AUTO-CITATIONS:END -->

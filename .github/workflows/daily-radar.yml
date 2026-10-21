@@ -13,6 +13,7 @@ jobs:
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
       - run: node scripts/run-all.mjs radar
+      - run: node scripts/react.mjs
       - name: commit
         run: |
           git config user.name "longgame-bot"
