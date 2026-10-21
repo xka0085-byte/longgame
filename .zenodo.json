@@ -1,0 +1,33 @@
+{
+  "title": "longgame public data series",
+  "description": "Initial public snapshot of a set of independently maintained public-data series. Each series records one quantity that cannot be reconstructed after the fact, with the source, collection date, and method stated on its page. Series include California SB 253/261 docket monitoring, SEC Form D private-placement counts, EIA-860M generator and queue aggregates, agent identity key directories, EU trusted list pointers, and AI Act registry availability checks. Some series are pending source availability and are labelled as such.",
+  "creators": [
+    {
+      "name": "eqzyz",
+      "affiliation": "Independent"
+    }
+  ],
+  "keywords": [
+    "public data",
+    "regulatory disclosure",
+    "energy queue",
+    "private markets",
+    "agent identity",
+    "time series"
+  ],
+  "license": "cc-by-4.0",
+  "upload_type": "dataset",
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/xka0085-byte/longgame",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://xka0085-byte.github.io/longgame/",
+      "relation": "isDocumentedBy",
+      "scheme": "url"
+    }
+  ]
+}

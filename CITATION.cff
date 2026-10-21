@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use these series, cite this snapshot and the specific series page."
+title: "longgame public data series"
+type: dataset
+authors:
+  - name: "eqzyz"
+version: "2026.10.21"
+date-released: "2026-10-21"
+license: CC-BY-4.0
+url: "https://xka0085-byte.github.io/longgame/"
+repository-code: "https://github.com/xka0085-byte/longgame"
+abstract: "A set of independently maintained public-data series. Each series records one quantity that cannot be reconstructed after the fact, with source, collection date, and method stated on its page. Some series are pending source availability and are labelled as such."
+keywords:
+  - public data
+  - regulatory disclosure
+  - energy queue
+  - private markets
+  - agent identity
+  - time series
