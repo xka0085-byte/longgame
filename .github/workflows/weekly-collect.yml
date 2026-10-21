@@ -24,3 +24,4 @@ jobs:
           git add data/ docs/ llms.txt
           git diff --cached --quiet || git commit -m "collect weekly $(date -u +%F)"
           git push
+# indexed 2026-10-21
