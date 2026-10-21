@@ -20,7 +20,7 @@
 
 - sb253-docket：CARB 披露相关链接 0 条（首窗 11-10）（最近一次成功采集于 2026-10-20，本期采集失败），自 2026-10，链接 https://longgame.example/lines/sb253-docket.html
 - agent-dirs：当前登记的 agent 密钥 6 把，自 2026-10，链接 https://longgame.example/lines/agent-dirs.html
-- eidas-tsl：累计雷达命中 2 条，自 2026-10，链接 https://longgame.example/lines/eidas-tsl.html
+- eidas-tsl：EU 信任列表指针 42 个，自 2026-10，链接 https://longgame.example/lines/eidas-tsl.html
 - triggers：累计雷达命中 7 条，自 2026-10，链接 https://longgame.example/lines/triggers.html
 - formd-sweep：本月十个关键词合计新增 Form D 备案 23 件，自 2026-10，链接 https://longgame.example/lines/formd-sweep.html
 - c2pa-spec：累计雷达命中 1 条，自 2026-10，链接 https://longgame.example/lines/c2pa-spec.html
