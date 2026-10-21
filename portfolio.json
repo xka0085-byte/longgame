@@ -110,6 +110,8 @@
     {
       "id": "sb253-docket",
       "status": "active",
+      "window_start": "2026-11-01",
+      "window_until": "2026-11-15",
       "cron": {
         "collect": "weekly",
         "radar": "daily"

@@ -3,6 +3,7 @@
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { radarOnce } from './lib/radar.mjs';
 import { collectEia } from './lib/eia860m.mjs';
+import { parseSb253Html, parseSb253Csv, findCsvLinks } from './lib/sb253-entities.mjs';
 
 const UA = { 'User-Agent': 'longgame-portfolio/0.2 personal research' };
 const [lineId, mode] = process.argv.slice(2);
@@ -93,6 +94,31 @@ if (mode === 'collect' && line.collect) {
         run.pages.push({ id: p.id, status: r.status, bytes, sig, changed: !!changed, keywordHit: !!hit, unavailable: false });
         if (changed) st.collect.events.push({ date: nowISO, page: p.id, note: hit ? 'CHANGE + KEYWORD HIT' : 'content changed' });
         if (prevPage?.unavailable) st.collect.events.push({ date: nowISO, page: p.id, type: 'data-source-recovered', status: r.status, bytes });
+        // SB 253 首窗：只有页面出现显式「企业名 + 档案号/状态」表格或 CSV 名单时才落盘；
+        // 抽不到就保留上一份名单，绝不用空数组覆盖，也绝不猜企业名。
+        // 只解析 SB 253 自身的页面：SB 261 的表单/评论名单不得当作 SB 253 名单。
+        if (lineId === 'sb253-docket' && /sb[-_ ]?253/i.test(`${p.id} ${p.url}`)) {
+          let entities = parseSb253Html(html);
+          if (!entities.length) {
+            for (const csvUrl of findCsvLinks(html, p.url)) {
+              try {
+                const cr = await fetch(csvUrl, { headers: UA, signal: AbortSignal.timeout(30000) });
+                if (!cr.ok) continue;
+                const parsed = parseSb253Csv(await cr.text());
+                if (parsed.length) { entities = parsed.map(e => ({ ...e, url: csvUrl })); break; }
+              } catch { /* 单个名单链接失败不阻断整轮采集 */ }
+            }
+          }
+          if (entities.length) {
+            writeFileSync('data/sb253-entities.json', JSON.stringify({
+              source: p.url,
+              extractedAt: nowISO,
+              pageId: p.id,
+              entities,
+            }, null, 2));
+            st.collect.events.push({ date: nowISO, page: p.id, type: 'sb253-entities-extracted', count: entities.length });
+          }
+        }
       } catch (e) {
         run.pages.push({ id: p.id, error: String(e).slice(0, 100), unavailable: true, reason: 'fetch-error' });
         if (!prevPage?.unavailable) st.collect.events.push({ date: nowISO, page: p.id, type: 'data-source-unavailable', reason: 'fetch-error' });

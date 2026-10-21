@@ -79,6 +79,11 @@ ${sc ? `<div class="kpi"><div class="n">${esc(sc.value)}</div><div class="lbl">$
   if (sc) items.push({ id: s.id, title: `${s.id}：${sc.label}`, date: iso, link: `lines/${s.id}.html` });
 }
 
+// 单品页：只在文件已生成时写入 sitemap，避免列出 404。
+for (const p of ['grid-queue-latest', 'sb253-first-window']) {
+  if (existsSync(`docs/lines/${p}.html`)) sitemap.push(`https://longgame.example/lines/${p}.html`);
+}
+
 // RSS
 const rss = `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>longgame portfolio</title><link>https://longgame.example/</link><description>零人工测量线组合，逐线时间序列与事件流</description><lastBuildDate>${now.toUTCString()}</lastBuildDate>
 ${items.map(i => `<item><title>${esc(i.title)}</title><link>https://longgame.example/${i.link}</link><guid>${esc(i.id)}-${day}</guid><pubDate>${now.toUTCString()}</pubDate></item>`).join('')}
@@ -115,7 +120,17 @@ console.log(`publish: ${items.length} line pages, feed.xml, sitemap.xml, llms.tx
 // 找不到 eiaCounts 时导出脚本报错退出，不用旧值或 0 顶替，发布步骤整体判失败。
 try {
   execFileSync('node', ['scripts/export-grid-csv.mjs'], { stdio: 'inherit' });
+  // 简报页只读 CSV + JSON 同一运行；数字不一致时脚本报错，不发布页面。
+  execFileSync('node', ['scripts/grid-queue-latest.mjs'], { stdio: 'inherit' });
 } catch (e) {
-  console.error(`publish: grid CSV export failed: ${String(e.message).slice(0, 160)}`);
+  console.error(`publish: grid CSV/page step failed: ${String(e.message).slice(0, 160)}`);
+  process.exitCode = 1;
+}
+
+// sb253 首窗页：有名单就填表，名单为空或数据源不可用则保留骨架并标注，不填零、不编企业名。
+try {
+  execFileSync('node', ['scripts/sb253-first-window.mjs'], { stdio: 'inherit' });
+} catch (e) {
+  console.error(`publish: sb253 first-window step failed: ${String(e.message).slice(0, 160)}`);
   process.exitCode = 1;
 }
