@@ -82,6 +82,57 @@
      "bytes": 13955142,
      "fakeLinks": 4
     }
+   },
+   {
+    "date": "2026-10-21T08:17:25.373Z",
+    "eia": {
+     "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+     "bytes": 13955142,
+     "fakeLinks": [
+      "december_generator2026.xlsx",
+      "november_generator2026.xlsx",
+      "october_generator2026.xlsx",
+      "september_generator2026.xlsx"
+     ],
+     "summary": {
+      "sheets": {
+       "Operating": 28379,
+       "Planned": 2313,
+       "Retired": 7338,
+       "Canceled or Postponed": 1743,
+       "Operating_PR": 230,
+       "Planned_PR": 7,
+       "Retired_PR": 12
+      },
+      "plannedMW": 288543.9,
+      "canceledMW": 185065.9,
+      "plannedByYear": {
+       "2026": 601,
+       "2027": 812,
+       "2028": 420,
+       "2029": 208,
+       "2030": 221,
+       "2031": 39,
+       "2032": 3,
+       "2033": 1,
+       "2034": 4,
+       "2039": 2
+      },
+      "retiredMW": 308166.1
+     }
+    },
+    "eiaCounts": {
+     "operating": 28379,
+     "planned": 2313,
+     "retired": 7338,
+     "canceled": 1743,
+     "plannedMW": 288543.9,
+     "canceledMW": 185065.9,
+     "retiredMW": 308166.1,
+     "file": "august_generator2026.xlsx",
+     "bytes": 13955142,
+     "fakeLinks": 4
+    }
    }
   ],
   "events": [

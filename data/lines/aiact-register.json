@@ -33,9 +33,63 @@
       "keywordHit": false
      }
     ]
+   },
+   {
+    "date": "2026-10-21T08:17:10.353Z",
+    "pages": [
+     {
+      "id": "ec-gpai-practice",
+      "status": 200,
+      "sig": "45652:PCFET0NUWVBFIGh0bWw+",
+      "changed": true,
+      "keywordHit": false
+     },
+     {
+      "id": "ec-aiact-policy",
+      "status": 200,
+      "sig": "45652:PCFET0NUWVBFIGh0bWw+",
+      "changed": true,
+      "keywordHit": false
+     },
+     {
+      "id": "ec-register-hr",
+      "status": 200,
+      "sig": "45652:PCFET0NUWVBFIGh0bWw+",
+      "changed": true,
+      "keywordHit": false
+     },
+     {
+      "id": "proxy-timeline",
+      "status": 200,
+      "sig": "339570:PCFET0NUWVBFIGh0bWw+",
+      "changed": true,
+      "keywordHit": false
+     }
+    ]
    }
   ],
-  "events": []
+  "events": [
+   {
+    "date": "2026-10-21T08:17:10.353Z",
+    "page": "ec-gpai-practice",
+    "note": "content changed"
+   },
+   {
+    "date": "2026-10-21T08:17:10.353Z",
+    "page": "ec-aiact-policy",
+    "note": "content changed"
+   },
+   {
+    "date": "2026-10-21T08:17:10.353Z",
+    "page": "ec-register-hr",
+    "note": "content changed"
+   },
+   {
+    "date": "2026-10-21T08:17:10.353Z",
+    "page": "proxy-timeline",
+    "note": "content changed"
+   }
+  ]
  },
  "radar": {
   "runs": [

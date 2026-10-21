@@ -37,9 +37,60 @@
       "error": "TypeError: fetch failed"
      }
     ]
+   },
+   {
+    "date": "2026-10-21T08:17:11.684Z",
+    "pages": [
+     {
+      "id": "x402-spec",
+      "status": 200,
+      "sig": "93459:PCFkb2N0eXBlIGh0bWw+",
+      "changed": true,
+      "keywordHit": false
+     },
+     {
+      "id": "coloprice-marketplace",
+      "status": 200,
+      "sig": "21840:PCFET0NUWVBFIGh0bWw+",
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "parametrix-llm",
+      "status": 200,
+      "sig": "37433:PCFET0NUWVBFIGh0bWw+",
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "lloyds-lab",
+      "status": 200,
+      "sig": "113771:DQo8IURPQ1RZUEUgaHRt",
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "hr8915",
+      "status": 403,
+      "sig": "5159:PCFET0NUWVBFIGh0bWw+",
+      "changed": true,
+      "keywordHit": false
+     }
+    ]
    }
   ],
-  "events": []
+  "events": [
+   {
+    "date": "2026-10-21T08:17:11.684Z",
+    "page": "x402-spec",
+    "note": "content changed"
+   },
+   {
+    "date": "2026-10-21T08:17:11.684Z",
+    "page": "hr8915",
+    "note": "content changed"
+   }
+  ]
  },
  "radar": {
   "runs": [

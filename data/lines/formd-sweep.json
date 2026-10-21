@@ -110,6 +110,61 @@
       "thisMonth": 1
      }
     ]
+   },
+   {
+    "date": "2026-10-21T08:17:13.673Z",
+    "queries": [
+     {
+      "keyword": "humanoid",
+      "allTime": 12,
+      "thisMonth": 1
+     },
+     {
+      "keyword": "robotics",
+      "allTime": 610,
+      "thisMonth": 5
+     },
+     {
+      "keyword": "defense tech",
+      "allTime": 7,
+      "thisMonth": 1
+     },
+     {
+      "keyword": "stablecoin",
+      "allTime": 21,
+      "thisMonth": 0
+     },
+     {
+      "keyword": "AI infrastructure",
+      "allTime": 36,
+      "thisMonth": 0
+     },
+     {
+      "keyword": "compute",
+      "allTime": 42,
+      "thisMonth": 3
+     },
+     {
+      "keyword": "agentic",
+      "allTime": 10,
+      "thisMonth": 0
+     },
+     {
+      "keyword": "data center",
+      "allTime": 94,
+      "thisMonth": 8
+     },
+     {
+      "keyword": "fusion",
+      "allTime": 436,
+      "thisMonth": 4
+     },
+     {
+      "keyword": "nuclear",
+      "allTime": 75,
+      "thisMonth": 1
+     }
+    ]
    }
   ],
   "events": []
