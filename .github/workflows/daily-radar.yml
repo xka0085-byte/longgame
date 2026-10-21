@@ -21,3 +21,4 @@ jobs:
           git add data/
           git diff --cached --quiet || git commit -m "radar $(date -u +%F)"
           git push
+# indexed 2026-10-21
