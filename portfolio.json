@@ -63,7 +63,8 @@
       "evidence_level": "E0",
       "quality_status": "UNVERIFIED",
       "backfill_difficulty": "H3",
-      "verified_by_third_party": false
+      "verified_by_third_party": false,
+      "managed_in": "mcpdoctor"
     },
     {
       "id": "erc8004-snapshot",
@@ -84,7 +85,8 @@
       "evidence_level": "E0",
       "quality_status": "OK",
       "backfill_difficulty": "H2",
-      "verified_by_third_party": false
+      "verified_by_third_party": false,
+      "managed_in": "mcpdoctor"
     },
     {
       "id": "protocol-watch",
@@ -105,7 +107,8 @@
       "evidence_level": "E0",
       "quality_status": "OK",
       "backfill_difficulty": "H1",
-      "verified_by_third_party": false
+      "verified_by_third_party": false,
+      "managed_in": "mcpdoctor"
     },
     {
       "id": "sb253-docket",

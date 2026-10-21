@@ -22,6 +22,20 @@ const GROUPS = [
 const byId = Object.fromEntries(portfolio.series.map(s => [s.id, s]));
 const stOf = id => readLine(id);
 
+function auditSummaryMarkdown() {
+  const p = 'docs/status.json';
+  if (!existsSync(p)) return '## 审计摘要\n\n未找到 docs/status.json；本月未运行 self-audit。\n';
+  try {
+    const status = JSON.parse(readFileSync(p, 'utf8'));
+    const lines = Array.isArray(status.lines) ? status.lines : [];
+    const count = k => lines.filter(l => l.freshness === k).length;
+    const attention = lines.filter(l => l.freshness !== 'fresh' || l.page_ok === false || l.csv_ok === false || l.source_status === 'partial');
+    return `## 审计摘要\n\n生成 ${status.generated_at || '-'}。fresh ${count('fresh')} 条，stale ${count('stale')} 条，unavailable ${count('unavailable')} 条，never ${count('never')} 条。需关注 ${attention.length} 项。\n\n自检明细见 [docs/audit/latest.md](docs/audit/latest.md)。审计只做状态汇总与证据触发提案，不修改任何线，也不代表第三方复算。\n`;
+  } catch (e) {
+    return `## 审计摘要\n\ndocs/status.json 无法读取：${e.message}\n`;
+  }
+}
+
 let md = `# 组合月报 ${month}\n\n生成 ${now.toISOString()}。人工接口：读毕点头。规则：雷达命中进月报，升级触发器命中当月十问初筛，任一线连续两年三问体检答否即降级或清仓。\n\n`;
 for (const s of portfolio.series) {
   const st = stOf(s.id);
@@ -36,7 +50,8 @@ for (const s of portfolio.series) {
 }
 const alertsAll = portfolio.series.flatMap(s => (stOf(s.id)?.radar.alerts || []).slice(-3).map(a => ({ line: s.id, ...a }))).sort((a, b) => (a.date < b.date ? 1 : -1)).slice(0, 15);
 md += '## 最近雷达命中\n\n' + (alertsAll.length ? alertsAll.map(a => `- ${a.date.slice(0, 10)} [${a.line}] ${a.title}`).join('\n') : '无') + '\n';
-md += '\n## 每年三问体检\n\n一 驱动时间表是否推进。二 历史是否出现真实买方或稳定引用方。三 是否出现资金充足的回填者。任一问连续两年答否即降级或清仓。\n';
+md += '\n' + auditSummaryMarkdown() + '\n';
+md += '## 每年三问体检\n\n一 驱动时间表是否推进。二 历史是否出现真实买方或稳定引用方。三 是否出现资金充足的回填者。任一问连续两年答否即降级或清仓。\n';
 writeFileSync(`docs/report-${month}.md`, md);
 
 // 分组线卡 HTML

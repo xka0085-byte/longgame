@@ -1,0 +1,25 @@
+name: weekly-audit
+# Audit-only weekly job. It does not collect data, does not touch
+# portfolio.json, and does not change any data line. It only writes the
+# audit status and the human-readable audit page.
+on:
+  schedule:
+    - cron: "30 3 * * 1"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - run: node scripts/self-audit.mjs
+      - name: commit audit
+        run: |
+          git config user.name "longgame-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add docs/status.json docs/audit/latest.md
+          git diff --cached --quiet || git commit -m "audit $(date -u +%F)"
+          git push
