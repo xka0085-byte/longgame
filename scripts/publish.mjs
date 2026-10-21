@@ -27,7 +27,7 @@ function scalarOf(id, st) {
     if (id === 'agent-dirs') return r.dirs && Object.values(r.dirs).some(d => d.keyCount != null);
     if (id === 'eidas-tsl') return r.pointerCount != null;
     if (id === 'grid-queue') return r.eiaCounts != null;
-    if (id === 'sb253-docket') return (r.pages || []).some(p => p.status === 200);
+    if (id === 'sb253-docket') return (r.pages || []).some(p => p.status === 200 && p.unavailable !== true && p.sig);
     return false;
   }) || latest;
   const stale = good && latest && good !== latest;

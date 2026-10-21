@@ -52,6 +52,80 @@
       "keywordHit": false
      }
     ]
+   },
+   {
+    "date": "2026-10-21T08:45:57.881Z",
+    "pages": [
+     {
+      "id": "sb261-docket",
+      "status": 202,
+      "bytes": 0,
+      "unavailable": true,
+      "reason": "http-202",
+      "sig": null,
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "sb253-reporting",
+      "status": 202,
+      "bytes": 0,
+      "unavailable": true,
+      "reason": "http-202",
+      "sig": null,
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "sb253-program",
+      "status": 202,
+      "bytes": 0,
+      "unavailable": true,
+      "reason": "http-202",
+      "sig": null,
+      "changed": false,
+      "keywordHit": false
+     }
+    ],
+    "unavailablePages": 3,
+    "status": "data-source-unavailable"
+   },
+   {
+    "date": "2026-10-21T08:45:59.372Z",
+    "pages": [
+     {
+      "id": "sb261-docket",
+      "status": 202,
+      "bytes": 0,
+      "unavailable": true,
+      "reason": "http-202",
+      "sig": null,
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "sb253-reporting",
+      "status": 202,
+      "bytes": 0,
+      "unavailable": true,
+      "reason": "http-202",
+      "sig": null,
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "sb253-program",
+      "status": 202,
+      "bytes": 0,
+      "unavailable": true,
+      "reason": "http-202",
+      "sig": null,
+      "changed": false,
+      "keywordHit": false
+     }
+    ],
+    "unavailablePages": 3,
+    "status": "data-source-unavailable"
    }
   ],
   "events": [
@@ -69,6 +143,30 @@
     "date": "2026-10-21T07:37:28.750Z",
     "page": "sb253-program",
     "note": "content changed"
+   },
+   {
+    "date": "2026-10-21T08:45:57.881Z",
+    "page": "sb261-docket",
+    "type": "data-source-unavailable",
+    "status": 202,
+    "bytes": 0,
+    "reason": "http-202"
+   },
+   {
+    "date": "2026-10-21T08:45:57.881Z",
+    "page": "sb253-reporting",
+    "type": "data-source-unavailable",
+    "status": 202,
+    "bytes": 0,
+    "reason": "http-202"
+   },
+   {
+    "date": "2026-10-21T08:45:57.881Z",
+    "page": "sb253-program",
+    "type": "data-source-unavailable",
+    "status": 202,
+    "bytes": 0,
+    "reason": "http-202"
    }
   ]
  },

@@ -64,17 +64,44 @@ if (mode === 'collect' && line.collect) {
     const matchMap = c.match || {};
     run.pages = [];
     for (const p of c.pages) {
+      const prevPage = prev?.pages?.find(x => x.id === p.id);
+      // 与上一轮「有效」抓取比对签名，跳过历史里被标记为不可用的运行
+      const prevGood = [...st.collect.runs].reverse()
+        .map(r => (r.pages || []).find(x => x.id === p.id))
+        .find(x => x && x.status === 200 && x.unavailable !== true && x.sig);
       try {
         const r = await fetch(p.url, { headers: UA, signal: AbortSignal.timeout(30000) });
         const html = await r.text();
+        const bytes = Buffer.byteLength(html);
+        const empty = html.trim().length === 0;
+        // 202 (Accepted) 与空正文都不是成功抓取：CARB 一类站点会对非浏览器客户端
+        // 返回 202 + 0 字节。此时既不能判定「内容变化」，也不能覆盖上一轮有效数据。
+        const unavailable = r.status === 202 || r.status === 204 || !r.ok || empty;
+        if (unavailable) {
+          const reason = r.status === 202 ? 'http-202'
+            : r.status === 204 ? 'http-204'
+            : !r.ok ? `http-${r.status}`
+            : 'empty-body';
+          run.pages.push({ id: p.id, status: r.status, bytes, unavailable: true, reason, sig: null, changed: false, keywordHit: false });
+          if (!prevPage?.unavailable) st.collect.events.push({ date: nowISO, page: p.id, type: 'data-source-unavailable', status: r.status, bytes, reason });
+          continue;
+        }
         const sig = `${html.length}:${Buffer.from(html).toString('base64').slice(0, 20)}`;
-        const last = prev?.pages.find(x => x.id === p.id);
-        const changed = last && last.sig !== sig;
+        const changed = prevGood && prevGood.sig !== sig;
         const matchRe = matchMap[p.id] ? new RegExp(matchMap[p.id], 'i') : null;
         const hit = matchRe && matchRe.test(html);
-        run.pages.push({ id: p.id, status: r.status, sig, changed: !!changed, keywordHit: !!hit });
+        run.pages.push({ id: p.id, status: r.status, bytes, sig, changed: !!changed, keywordHit: !!hit, unavailable: false });
         if (changed) st.collect.events.push({ date: nowISO, page: p.id, note: hit ? 'CHANGE + KEYWORD HIT' : 'content changed' });
-      } catch (e) { run.pages.push({ id: p.id, error: String(e).slice(0, 100) }); }
+        if (prevPage?.unavailable) st.collect.events.push({ date: nowISO, page: p.id, type: 'data-source-recovered', status: r.status, bytes });
+      } catch (e) {
+        run.pages.push({ id: p.id, error: String(e).slice(0, 100), unavailable: true, reason: 'fetch-error' });
+        if (!prevPage?.unavailable) st.collect.events.push({ date: nowISO, page: p.id, type: 'data-source-unavailable', reason: 'fetch-error' });
+      }
+    }
+    const un = run.pages.filter(x => x.unavailable);
+    if (un.length) {
+      run.unavailablePages = un.length;
+      run.status = un.length === run.pages.length ? 'data-source-unavailable' : 'partial';
     }
   } else if (c.type === 'dirs') {
     run.dirs = {}; const kidsMap = {};

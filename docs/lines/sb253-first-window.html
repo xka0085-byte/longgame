@@ -49,8 +49,8 @@ footer .cite{color:var(--text);font-size:12px}
 <h2>状态图例（五个允许取值，不设其他取值）</h2>
 <div class="panel">
 <ul class="legend">
-  <li><span class="chip s1">已确认提交</span><span class="def">在 CARB docket 中检索到该企业的提交记录，并附可核对的记录链接。</span></li>
-  <li><span class="chip s2">官方记录中未发现</span><span class="def">在我方扫描所覆盖的 docket 范围内未检索到该企业记录。仅指未发现，不指未提交。</span></li>
+  <li><span class="chip s1">已确认提交</span><span class="def">在 CARB 官方公开记录中检索到该企业的提交记录，并附可核对的记录链接。</span></li>
+  <li><span class="chip s2">官方记录中未发现</span><span class="def">在我方扫描所覆盖的官方公开记录范围内未检索到该企业记录。仅指未发现，不指未提交。</span></li>
   <li><span class="chip s3">提交渠道未核实</span><span class="def">未能确认该企业适用的提交渠道或代提交通道，无法判定是否存在记录。</span></li>
   <li><span class="chip s4">数据源暂不可用</span><span class="def">当期抓取失败或返回空响应，无法核验。保留最近一次成功值并标注本期失败，不记为零。</span></li>
   <li><span class="chip s5">状态存在争议</span><span class="def">多来源记录冲突，或企业方表述与官方记录不一致，暂不裁决，原样并列。</span></li>
@@ -73,6 +73,7 @@ footer .cite{color:var(--text);font-size:12px}
     <tr>
       <td class="empty" colspan="5">
         本页为骨架版本：<code>data/lines/sb253-docket.json</code> 内不含企业名单字段，故此处没有可填的企业行。
+<p class="note">数据源说明：截至 2026-10-21，CARB 未公开发布 SB 253 首窗提交名单。entity_id=47456 的 docket 属于 SB 261，不得当作 SB 253 名单使用。SB 253 的官方入口是 2026 Report Intake Platform 与 climatedisclosure@arb.ca.gov，是否会公开发布尚不可知。核实记录见 <a href="../notes/sb253-source-verification-2026-10-21.md">来源核实文档</a>。</p>
         名单载入后每家企业一行。此处的空表不代表任何企业提交与否，见页首声明句。
       </td>
     </tr>
