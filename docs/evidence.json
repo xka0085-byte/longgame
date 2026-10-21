@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "line_id": "mcpreflight-weekly",
+    "type": "reply",
+    "url": "https://github.com/szaffarano/org-mcp-server/issues/232#issuecomment-6312745662",
+    "date": "2026-10-21",
+    "note": "维护者确认并修复 tools/list 缺失字段，另修 releases/latest 与 macos 构建，感谢并关闭 issue"
+  },
+  {
+    "line_id": "mcpreflight-weekly",
+    "type": "reply",
+    "url": "https://github.com/Novence-ai/mcp/issues/4#issuecomment-6309942717",
+    "date": "2026-10-21",
+    "note": "维护者纠正 handshake 误报，我方复测确认并回帖，暴露扫描器会话头缺陷"
+  }
+]

@@ -1,6 +1,6 @@
 # longgame 自我审计 2026-10-21
 
-生成时间：2026-10-21T13:00:39.713Z（UTC）。这是本地 self-audit 的状态汇总与提案，不是第三方复算，也不代表任何外部验证。
+生成时间：2026-10-21T13:04:39.567Z（UTC）。这是本地 self-audit 的状态汇总与提案，不是第三方复算，也不代表任何外部验证。
 
 ## 状态表
 
@@ -19,7 +19,7 @@
 | state-ai-laws | fresh | 2026-10-20 16:00:51.708Z | 2026-10-20 16:00:51.708Z | 0 | 0 | ok | true | — | 0 |
 | triggers | fresh | 2026-10-21 08:17:11.684Z | 2026-10-21 08:17:11.684Z | 0 | 0 | partial | true | — | 0 |
 | erc8004-snapshot | external | — | — | — | — | external-managed | false | — | 0 |
-| mcpreflight-weekly | external | — | — | — | — | external-managed | false | — | 0 |
+| mcpreflight-weekly | external | — | — | — | — | external-managed | false | — | 2 |
 | protocol-watch | external | — | — | — | — | external-managed | false | — | 0 |
 
 统计：fresh 9，stale 0，unavailable 1，never 0。
@@ -35,7 +35,13 @@
 
 ## 提案（最多 3 条）
 
-本期 docs/evidence.json 无记录，不提提案。没有证据就不写提案。
+### P-20261021-01
+- action: new-artifact
+- target: mcpreflight-weekly
+- reason: 该线已有 2 条外部证据（reply）；建议把证据固化为可引用产物，供人工判断。
+- evidence_urls: <https://github.com/szaffarano/org-mcp-server/issues/232#issuecomment-6312745662>, <https://github.com/Novence-ai/mcp/issues/4#issuecomment-6309942717>
+- effort: S
+- risk: low
 
 ---
 

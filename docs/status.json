@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T13:00:39.713Z",
+  "generated_at": "2026-10-21T13:04:39.567Z",
   "lines": [
     {
       "id": "mcpreflight-weekly",
@@ -12,7 +12,7 @@
       "freshness": "external",
       "page_ok": false,
       "csv_ok": null,
-      "evidence_count_90d": 0
+      "evidence_count_90d": 2
     },
     {
       "id": "erc8004-snapshot",
