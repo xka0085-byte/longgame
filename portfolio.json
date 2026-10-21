@@ -321,7 +321,7 @@
         {
           "channel": "gn",
           "query": "agent insurance",
-          "exclude": "insurance agent"
+          "exclude": "insurance agent|pharmacy|judgment|policy before"
         },
         {
           "channel": "gn",
@@ -334,7 +334,7 @@
         {
           "channel": "hn",
           "query": "agent insurance",
-          "exclude": "insurance agent"
+          "exclude": "insurance agent|pharmacy|judgment|policy before"
         },
         {
           "channel": "hn",
