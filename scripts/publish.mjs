@@ -1,6 +1,7 @@
 // 产物层与被动分发：逐线页面 + RSS + sitemap + llms.txt 自动引用块
 // 每条线一个可截图标量，全部带日期与引用行。零依赖。
 import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from 'node:fs';
+import { execFileSync } from 'node:child_process';
 
 const now = new Date();
 const iso = now.toISOString();
@@ -109,3 +110,12 @@ if (llms.includes('<!-- AUTO-CITATIONS:START -->')) {
 }
 writeFileSync('llms.txt', llms);
 console.log(`publish: ${items.length} line pages, feed.xml, sitemap.xml, llms.txt updated`);
+
+// grid-queue 单行 CSV 同步导出：数据只来自 data/lines/grid-queue.json 最近一次含 eiaCounts 的运行。
+// 找不到 eiaCounts 时导出脚本报错退出，不用旧值或 0 顶替，发布步骤整体判失败。
+try {
+  execFileSync('node', ['scripts/export-grid-csv.mjs'], { stdio: 'inherit' });
+} catch (e) {
+  console.error(`publish: grid CSV export failed: ${String(e.message).slice(0, 160)}`);
+  process.exitCode = 1;
+}

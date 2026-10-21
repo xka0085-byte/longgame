@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="zh">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>sb253 首窗名单（模板） — longgame</title>
+<style>
+:root{--bg:#f6f8fa;--surface:#fff;--border:#d0d7de;--text:#1f2328;--muted:#57606a;--brand:#1a7f37;--warn:#9a6700}
+*{box-sizing:border-box}
+body{margin:0;font-family:ui-sans-serif,system-ui;background:var(--bg);color:var(--text);line-height:1.55}
+.wrap{max-width:920px;margin:0 auto;padding:32px 16px}
+h1{font-size:22px;margin:0}
+h2{font-size:15px;margin:28px 0 8px;color:var(--muted);text-transform:none}
+.sub{font-size:13px;color:var(--muted);margin-top:6px}
+.notice{background:#fff8e5;border:1px solid #e3c26b;border-left:4px solid var(--warn);border-radius:8px;padding:14px 16px;margin:18px 0;font-size:15px;font-weight:600}
+.notice .en{font-family:ui-monospace,monospace;display:block;font-size:15px}
+.notice .zh{display:block;font-size:12px;font-weight:400;color:var(--muted);margin-top:6px}
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin:16px 0}
+table{border-collapse:collapse;width:100%;font-size:13px}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left;vertical-align:top}
+th{background:#f6f8fa;font-weight:600}
+td.empty{color:var(--muted);font-style:normal}
+.legend{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.legend li{font-size:13px;display:flex;gap:10px;align-items:flex-start}
+.chip{display:inline-block;white-space:nowrap;font-size:12px;padding:2px 8px;border-radius:999px;border:1px solid;flex:0 0 auto}
+.s1{color:#1a7f37;border-color:#1a7f37;background:#eaf7ee}
+.s2{color:#57606a;border-color:#8c959f;background:#f2f4f5}
+.s3{color:#9a6700;border-color:#bf8700;background:#fdf6e3}
+.s4{color:#a40e26;border-color:#cf222e;background:#ffebe9}
+.s5{color:#6639ba;border-color:#8250df;background:#f5f0ff}
+.legend .def{color:var(--text)}
+.meta{font-size:12px;color:var(--muted)}
+code{font-family:ui-monospace,monospace;font-size:12px;background:#f6f8fa;border:1px solid var(--border);border-radius:4px;padding:1px 4px}
+ul.plain{margin:6px 0 0;padding-left:18px;font-size:13px}
+ul.plain li{margin:5px 0}
+a{color:#0969da}
+footer{margin-top:32px;font-size:12px;color:var(--muted);border-top:1px solid var(--border);padding-top:12px}
+footer .cite{color:var(--text);font-size:12px}
+</style>
+<div class="wrap">
+
+<h1>SB 253 首窗名单（模板）</h1>
+<div class="sub">数据线 <code>sb253-docket</code> · 首窗 2026-11-10 · 只做状态核验，不做合规判断</div>
+
+<div class="notice">
+  <span class="en">No record found does not mean the company did not file.</span>
+  <span class="zh">未检索到记录不等于该企业未提交。本页任何「未发现」只描述我方在特定日期的检索范围与结果。</span>
+</div>
+
+<h2>状态图例（五个允许取值，不设其他取值）</h2>
+<div class="panel">
+<ul class="legend">
+  <li><span class="chip s1">已确认提交</span><span class="def">在 CARB docket 中检索到该企业的提交记录，并附可核对的记录链接。</span></li>
+  <li><span class="chip s2">官方记录中未发现</span><span class="def">在我方扫描所覆盖的 docket 范围内未检索到该企业记录。仅指未发现，不指未提交。</span></li>
+  <li><span class="chip s3">提交渠道未核实</span><span class="def">未能确认该企业适用的提交渠道或代提交通道，无法判定是否存在记录。</span></li>
+  <li><span class="chip s4">数据源暂不可用</span><span class="def">当期抓取失败或返回空响应，无法核验。保留最近一次成功值并标注本期失败，不记为零。</span></li>
+  <li><span class="chip s5">状态存在争议</span><span class="def">多来源记录冲突，或企业方表述与官方记录不一致，暂不裁决，原样并列。</span></li>
+</ul>
+</div>
+
+<h2>名单表（字段已固定，2026-11-10 当天只填数据）</h2>
+<div class="panel" style="overflow-x:auto">
+<table>
+  <thead>
+    <tr>
+      <th style="width:22%">企业名</th>
+      <th style="width:14%">是否在 docket 出现</th>
+      <th style="width:14%">出现日期</th>
+      <th style="width:30%">来源链接</th>
+      <th style="width:20%">状态</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="empty" colspan="5">
+        本页为骨架版本：<code>data/lines/sb253-docket.json</code> 内不含企业名单字段，故此处没有可填的企业行。
+        名单载入后每家企业一行。此处的空表不代表任何企业提交与否，见页首声明句。
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h2>字段定义</h2>
+<div class="panel">
+<ul class="plain">
+  <li><strong>企业名</strong>：与提交文件、docket 记录中出现的名称保持一致；同一企业不同写法并列保留，不合并。</li>
+  <li><strong>是否在 docket 出现</strong>：只取 <code>是</code> / <code>否</code> / <code>未核实</code> 三个值。<code>否</code> 的含义限定为「我方扫描范围内未检索到」。</li>
+  <li><strong>出现日期</strong>：docket 记录上的提交日期（<code>YYYY-MM-DD</code>）；无记录时留空，不填检索日期。</li>
+  <li><strong>来源链接</strong>：指向可核对的 CARB 记录页或提交件地址；不得填检索入口页充数。</li>
+  <li><strong>状态</strong>：只允许上方图例的五个值，不得自造第六个值，不得用文字描述替代。</li>
+</ul>
+<div class="meta" style="margin-top:10px">采集失败时保留最近一次成功值并标注本期失败，不写 0。</div>
+</div>
+
+<h2>数据源与我方扫描记录</h2>
+<div class="panel">
+<ul class="plain">
+  <li>本地数据：<code>data/lines/sb253-docket.json</code>。两轮采集（2026-10-20 13:47 UTC、2026-10-21 07:37 UTC）的 <code>links</code> 均为空数组，即本地数据集内企业名单 0 条。此为数据集内无记录，不能读作没有企业提交。</li>
+  <li>2026-10-20 13:47 UTC：<code>sb261-docket</code>、<code>sb253-reporting</code>、<code>sb253-program</code> 三页均返回 200，正文长度 58k–68k 字节。</li>
+  <li>2026-10-21 07:37 UTC：同三页均返回 202，正文长度 0 字节（签名 <code>0:</code>），采集器记为内容变更。按上述规则，该轮判为数据源暂不可用，不覆盖上一轮成功值，也不记为零。</li>
+  <li>docket 页面 <a href="https://ww2.arb.ca.gov/approved-comments?entity_id=47456" rel="nofollow noopener">https://ww2.arb.ca.gov/approved-comments?entity_id=47456</a>：我方于 2026-10-21 以浏览器引擎读取，返回 HTTP 202，页面标题为 “Climate-Related Financial Risk Reports (SB 261) Docket”，列表含提交人、主题、附件与记录查看链接。该页面标题指向 SB 261 docket，与本线 SB 253 首窗的对应关系尚未核实，填数前需先确认 entity_id 归属。</li>
+  <li>本地采集器在同一日期未取到该 docket 正文（202 空响应），因此名单不能由本地采集直接产出。</li>
+</ul>
+</div>
+
+<footer>
+  <div class="cite">longgame sb253-docket，首窗名单，生成于 2026-11-10。</div>
+  <div style="margin-top:6px">构建记录：本骨架构建于 2026-10-21；2026-11-10 为首窗填数日，届时按该日期重跑并填入名单。以上数字为我方扫描结果，2026-10-21，未经第三方复算。方法与边界见 <a href="../llms.txt">llms.txt</a>。</div>
+</footer>
+
+</div>
+</html>
