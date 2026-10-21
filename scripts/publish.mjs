@@ -75,24 +75,25 @@ ${sc ? `<div class="kpi"><div class="n">${esc(sc.value)}</div><div class="lbl">$
 <h2>数据变更</h2><ul>${events.map(e => `<li><span class="d">${e.date.slice(0, 10)}</span> ${esc(e.note || e.type)} ${esc(e.page || e.url || e.kid || '')}</li>`).join('') || '<li>无</li>'}</ul>
 <footer>longgame ${esc(s.id)}，数据自 2026-10 起，生成于 ${iso}。来源为公开数据，数字自带生成日期。引用格式：longgame ${esc(s.id)}（${day}）。方法与边界见 llms.txt。</footer></div>`;
   writeFileSync(`docs/lines/${s.id}.html`, html);
-  sitemap.push(`https://longgame.example/lines/${s.id}.html`);
+  sitemap.push(`https://xka0085-byte.github.io/longgame/lines/${s.id}.html`);
   if (sc) items.push({ id: s.id, title: `${s.id}：${sc.label}`, date: iso, link: `lines/${s.id}.html` });
 }
 
 // 单品页：只在文件已生成时写入 sitemap，避免列出 404。
 for (const p of ['grid-queue-latest', 'sb253-first-window']) {
-  if (existsSync(`docs/lines/${p}.html`)) sitemap.push(`https://longgame.example/lines/${p}.html`);
+  if (existsSync(`docs/lines/${p}.html`)) sitemap.push(`https://xka0085-byte.github.io/longgame/lines/${p}.html`);
 }
+if (existsSync('docs/verify.html')) sitemap.push('https://xka0085-byte.github.io/longgame/verify.html');
 
 // RSS
-const rss = `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>longgame portfolio</title><link>https://longgame.example/</link><description>零人工测量线组合，逐线时间序列与事件流</description><lastBuildDate>${now.toUTCString()}</lastBuildDate>
-${items.map(i => `<item><title>${esc(i.title)}</title><link>https://longgame.example/${i.link}</link><guid>${esc(i.id)}-${day}</guid><pubDate>${now.toUTCString()}</pubDate></item>`).join('')}
+const rss = `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>longgame portfolio</title><link>https://xka0085-byte.github.io/longgame/</link><description>零人工测量线组合，逐线时间序列与事件流</description><lastBuildDate>${now.toUTCString()}</lastBuildDate>
+${items.map(i => `<item><title>${esc(i.title)}</title><link>https://xka0085-byte.github.io/longgame/${i.link}</link><guid>${esc(i.id)}-${day}</guid><pubDate>${now.toUTCString()}</pubDate></item>`).join('')}
 </channel></rss>`;
 writeFileSync('docs/feed.xml', rss);
 
 // sitemap
 writeFileSync('docs/sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://longgame.example/</loc><lastmod>${day}</lastmod></url>
+<url><loc>https://xka0085-byte.github.io/longgame/</loc><lastmod>${day}</lastmod></url>
 ${sitemap.map(u => `<url><loc>${u}</loc><lastmod>${day}</lastmod></url>`).join('\n')}
 </urlset>`);
 
@@ -104,7 +105,7 @@ const BASE = `# longgame portfolio
 const block = `<!-- AUTO-CITATIONS:START -->
 ## 引用格式（自动生成 ${day}）
 
-${items.map(i => `- ${i.title}，自 2026-10，链接 https://longgame.example/${i.link}`).join('\n')}
+${items.map(i => `- ${i.title}，自 2026-10，链接 https://xka0085-byte.github.io/longgame/${i.link}`).join('\n')}
 <!-- AUTO-CITATIONS:END -->`;
 
 let llms = existsSync('llms.txt') ? readFileSync('llms.txt', 'utf8') : BASE + '\n';

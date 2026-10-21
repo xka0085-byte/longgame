@@ -1,0 +1,211 @@
+{
+  "generated_at": "2026-10-21T13:25:41.591Z",
+  "commit": "8a0124b9e47dd42d8e5f77c0e0761bb559907a01",
+  "note": "Hashes identify the exact files behind each status. They are not a validation of correctness. External checks counts only entries in docs/evidence.json that came from someone outside this project.",
+  "lines": [
+    {
+      "id": "mcpreflight-weekly",
+      "kind": "external",
+      "managed_in": "mcpdoctor",
+      "data_file": null,
+      "data_sha256": null,
+      "page_file": null,
+      "page_sha256": null,
+      "source_urls": [],
+      "last_success_at": null,
+      "freshness": "external",
+      "external_checks": 2,
+      "reproduce": "node scripts/verify.mjs && node scripts/self-audit.mjs && node scripts/attest.mjs"
+    },
+    {
+      "id": "erc8004-snapshot",
+      "kind": "external",
+      "managed_in": "mcpdoctor",
+      "data_file": null,
+      "data_sha256": null,
+      "page_file": null,
+      "page_sha256": null,
+      "source_urls": [],
+      "last_success_at": null,
+      "freshness": "external",
+      "external_checks": 0,
+      "reproduce": "node scripts/verify.mjs && node scripts/self-audit.mjs && node scripts/attest.mjs"
+    },
+    {
+      "id": "protocol-watch",
+      "kind": "external",
+      "managed_in": "mcpdoctor",
+      "data_file": null,
+      "data_sha256": null,
+      "page_file": null,
+      "page_sha256": null,
+      "source_urls": [],
+      "last_success_at": null,
+      "freshness": "external",
+      "external_checks": 0,
+      "reproduce": "node scripts/verify.mjs && node scripts/self-audit.mjs && node scripts/attest.mjs"
+    },
+    {
+      "id": "sb253-docket",
+      "kind": "local",
+      "managed_in": "longgame",
+      "data_file": "data/lines/sb253-docket.json",
+      "data_sha256": "c51a736f486db00c10c25b27afd480e79faf196b849dc604280f2c771e2972bd",
+      "page_file": "docs/lines/sb253-docket.html",
+      "page_sha256": "2b8bcf0f791e95507b05b7a1197cbe81f08db491342e3ff11ad3696dc5e9c60d",
+      "source_urls": [
+        "https://ww2.arb.ca.gov/public-comments/climate-related-financial-risk-reports-sb-261-docket",
+        "https://ww2.arb.ca.gov/our-work/programs/corporate-ghg-reporting/corporate-disclosure-climate-data",
+        "https://ww2.arb.ca.gov/our-work/programs/california-corporate-greenhouse-gas-reporting-and-climate-related-financial-risk"
+      ],
+      "last_success_at": "2026-10-21T07:37:28.750Z",
+      "freshness": "unavailable",
+      "external_checks": 0,
+      "reproduce": "node scripts/verify.mjs && node scripts/self-audit.mjs && node scripts/attest.mjs"
+    },
+    {
+      "id": "agent-dirs",
+      "kind": "local",
+      "managed_in": "longgame",
+      "data_file": "data/lines/agent-dirs.json",
+      "data_sha256": "c0fdbc6bbac9be18636e9746149d326cef5f15c13755d385de63c555c350b8e6",
+      "page_file": "docs/lines/agent-dirs.html",
+      "page_sha256": "df34c20370526ce5c744ba10e173b7eeb778dc50fc431670729db5c417eebace",
+      "source_urls": [],
+      "last_success_at": "2026-10-21T07:37:26.907Z",
+      "freshness": "fresh",
+      "external_checks": 0,
+      "reproduce": "node scripts/verify.mjs && node scripts/self-audit.mjs && node scripts/attest.mjs"
+    },
+    {
+      "id": "eidas-tsl",
+      "kind": "local",
+      "managed_in": "longgame",
+      "data_file": "data/lines/eidas-tsl.json",
+      "data_sha256": "313abb5359af9828b5c102b3b755d79396e93b16fd0b247400c233d9885e9810",
+      "page_file": "docs/lines/eidas-tsl.html",
+      "page_sha256": "7d7ce70f4dd0ac6f31285dbfa16f689bdb8fde4e3bdc7f0fbfd35be20b48ed0c",
+      "source_urls": [],
+      "last_success_at": "2026-10-21T13:00:27.804Z",
+      "freshness": "fresh",
+      "external_checks": 0,
+      "reproduce": "node scripts/verify.mjs && node scripts/self-audit.mjs && node scripts/attest.mjs"
+    },
+    {
+      "id": "aiact-register",
+      "kind": "local",
+      "managed_in": "longgame",
+      "data_file": "data/lines/aiact-register.json",
+      "data_sha256": "d41fa00846814a3897e018116e116a161758010b907e59f696bd5dbba0da1954",
+      "page_file": "docs/lines/aiact-register.html",
+      "page_sha256": "66db95230cdbe8e2c9ff195333e85505a0bbec678bf798d350225f0c557af066",
+      "source_urls": [
+        "https://digital-strategy.ec.europa.eu/en/policies/code-practice-gpai",
+        "https://digital-strategy.ec.europa.eu/en/policies/ai-act",
+        "https://digital-strategy.ec.europa.eu/en/policies/register-high-risk-ai-systems",
+        "https://artificialintelligenceact.eu/implementation-timeline/"
+      ],
+      "last_success_at": "2026-10-21T08:17:10.353Z",
+      "freshness": "fresh",
+      "external_checks": 0,
+      "reproduce": "node scripts/verify.mjs && node scripts/self-audit.mjs && node scripts/attest.mjs"
+    },
+    {
+      "id": "triggers",
+      "kind": "local",
+      "managed_in": "longgame",
+      "data_file": "data/lines/triggers.json",
+      "data_sha256": "ea96edc7b5994059ad82890d4c0e6cf38915d2ee89af8c4306c55f64db20b780",
+      "page_file": "docs/lines/triggers.html",
+      "page_sha256": "501cfbcc0ebf2fb797f6cfe4a58991d1d4cc0d181514fcba34e8b0921746f7fb",
+      "source_urls": [
+        "https://www.x402.org/",
+        "https://coloprice.com/marketplace/",
+        "https://www.parametrixinsurance.com/",
+        "https://www.lloyds.com/insights/lloyds-lab",
+        "https://www.govtrack.us/congress/bills/119/hr8915"
+      ],
+      "last_success_at": "2026-10-21T08:17:11.684Z",
+      "freshness": "fresh",
+      "external_checks": 0,
+      "reproduce": "node scripts/verify.mjs && node scripts/self-audit.mjs && node scripts/attest.mjs"
+    },
+    {
+      "id": "formd-sweep",
+      "kind": "local",
+      "managed_in": "longgame",
+      "data_file": "data/lines/formd-sweep.json",
+      "data_sha256": "d1e16e4f03d503f336034ddf718f9abfce4cf204fd675cb01074ab914e57839a",
+      "page_file": "docs/lines/formd-sweep.html",
+      "page_sha256": "122854f3e3a9d750b49928364b8f9615e9944d24d58099cfd628854d6aeb230e",
+      "source_urls": [],
+      "last_success_at": "2026-10-21T08:17:13.673Z",
+      "freshness": "fresh",
+      "external_checks": 0,
+      "reproduce": "node scripts/verify.mjs && node scripts/self-audit.mjs && node scripts/attest.mjs"
+    },
+    {
+      "id": "compute-futures",
+      "kind": "local",
+      "managed_in": "longgame",
+      "data_file": "data/lines/compute-futures.json",
+      "data_sha256": "317bca4d6a9cc828d0849aadb7c93c050c0b742904fedd59e735f7cbed044e7a",
+      "page_file": "docs/lines/compute-futures.html",
+      "page_sha256": "4399025aad37c0314ae5c727eae5ca4fc4a25311cec91596984ade03a2e328ce",
+      "source_urls": [
+        "https://coloprice.com/marketplace/",
+        "https://www.cmegroup.com/markets/compute.html"
+      ],
+      "last_success_at": "2026-10-20T16:00:48.085Z",
+      "freshness": "fresh",
+      "external_checks": 0,
+      "reproduce": "node scripts/verify.mjs && node scripts/self-audit.mjs && node scripts/attest.mjs"
+    },
+    {
+      "id": "c2pa-spec",
+      "kind": "local",
+      "managed_in": "longgame",
+      "data_file": "data/lines/c2pa-spec.json",
+      "data_sha256": "07aabb40f3f26a7ebcfaa141b137fe9cdc15c11ca35dd0d6ece55997252c1fc9",
+      "page_file": "docs/lines/c2pa-spec.html",
+      "page_sha256": "dc37c88b03dfc573e0069dea976e978d239d9deefe38467b1493e858072a6aff",
+      "source_urls": [
+        "https://c2pa.org/specifications/specifications/2.3/index.html"
+      ],
+      "last_success_at": "2026-10-20T16:00:49.940Z",
+      "freshness": "fresh",
+      "external_checks": 0,
+      "reproduce": "node scripts/verify.mjs && node scripts/self-audit.mjs && node scripts/attest.mjs"
+    },
+    {
+      "id": "state-ai-laws",
+      "kind": "local",
+      "managed_in": "longgame",
+      "data_file": "data/lines/state-ai-laws.json",
+      "data_sha256": "22ee315c9f32b1b49572cd09c71660754be2b6a2d3c297a26d12d58c15de6c6c",
+      "page_file": "docs/lines/state-ai-laws.html",
+      "page_sha256": "e6d1b1052d53e897eb49e4cdb2263b24c823b89cc7fcfa7e7e88dec1fb9ad01f",
+      "source_urls": [
+        "https://www.multistate.ai/"
+      ],
+      "last_success_at": "2026-10-20T16:00:51.708Z",
+      "freshness": "fresh",
+      "external_checks": 0,
+      "reproduce": "node scripts/verify.mjs && node scripts/self-audit.mjs && node scripts/attest.mjs"
+    },
+    {
+      "id": "grid-queue",
+      "kind": "local",
+      "managed_in": "longgame",
+      "data_file": "data/lines/grid-queue.json",
+      "data_sha256": "d56c708837719536bd0e165ad20e337ca7e17b56e7da4da3f1606602b34c4f03",
+      "page_file": "docs/lines/grid-queue.html",
+      "page_sha256": "b0908f4706def32b554e0698ca777b50f5e4937e79c86f36b809819a6fa0d216",
+      "source_urls": [],
+      "last_success_at": "2026-10-21T08:17:25.373Z",
+      "freshness": "fresh",
+      "external_checks": 0,
+      "reproduce": "node scripts/verify.mjs && node scripts/self-audit.mjs && node scripts/attest.mjs"
+    }
+  ]
+}
