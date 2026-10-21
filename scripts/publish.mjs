@@ -18,26 +18,39 @@ const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').re
 // 从各线数据里抽一个可分享标量
 function scalarOf(id, st) {
   if (!st) return null;
-  const last = st.collect?.runs?.at(-1);
-  if (id === 'formd-sweep' && last?.queries) {
-    const ok = last.queries.filter(q => typeof q.thisMonth === 'number');
+  const runs = st.collect?.runs || [];
+  const latest = runs.at(-1);
+  // 采集失败时不得把旧值写成 0：取最近一次有有效数据的那次，并标注是否为最新
+  const good = runs.slice().reverse().find(r => {
+    if (id === 'formd-sweep') return r.queries?.some(q => typeof q.thisMonth === 'number');
+    if (id === 'agent-dirs') return r.dirs && Object.values(r.dirs).some(d => d.keyCount != null);
+    if (id === 'eidas-tsl') return r.pointerCount != null;
+    if (id === 'grid-queue') return r.eiaCounts != null;
+    if (id === 'sb253-docket') return (r.pages || []).some(p => p.status === 200);
+    return false;
+  }) || latest;
+  const stale = good && latest && good !== latest;
+  const stamp = good?.date?.slice(0, 10) || day;
+  const suffix = stale ? `（最近一次成功采集于 ${stamp}，本期采集失败）` : '';
+  if (id === 'formd-sweep' && good?.queries) {
+    const ok = good.queries.filter(q => typeof q.thisMonth === 'number');
     const sum = ok.reduce((a, q) => a + q.thisMonth, 0);
-    return { value: sum, label: `本月十个关键词合计新增 Form D 备案 ${sum} 件`, unit: '件' };
+    return { value: sum, label: `本月十个关键词合计新增 Form D 备案 ${sum} 件${suffix}`, unit: '件' };
   }
-  if (id === 'agent-dirs' && last?.dirs) {
-    const keys = Object.values(last.dirs).reduce((a, d) => a + (d.keyCount || 0), 0);
-    return { value: keys, label: `当前登记的 agent 密钥 ${keys} 把`, unit: '把' };
+  if (id === 'agent-dirs' && good?.dirs) {
+    const keys = Object.values(good.dirs).reduce((a, d) => a + (d.keyCount || 0), 0);
+    return { value: keys, label: `当前登记的 agent 密钥 ${keys} 把${suffix}`, unit: '把' };
   }
-  if (id === 'eidas-tsl' && last?.pointerCount != null) {
-    return { value: last.pointerCount, label: `EU 信任列表指针 ${last.pointerCount} 个`, unit: '个' };
+  if (id === 'eidas-tsl' && good?.pointerCount != null) {
+    return { value: good.pointerCount, label: `EU 信任列表指针 ${good.pointerCount} 个${suffix}`, unit: '个' };
   }
-  if (id === 'sb253-docket' && last?.pages) {
-    const links = last.links?.length ?? 0;
-    return { value: links, label: `CARB 披露相关链接 ${links} 条（首窗 11-10）`, unit: '条' };
+  if (id === 'sb253-docket' && good?.pages) {
+    const links = good.links?.length ?? 0;
+    return { value: links, label: `CARB 披露相关链接 ${links} 条（首窗 11-10）${suffix}`, unit: '条' };
   }
-  if (id === 'grid-queue' && last?.pages) {
-    const p = last.pages.find(x => x.status === 200);
-    return p ? { value: last.pages.length, label: `EIA-860M 页可达，等待月度文件更新`, unit: '' } : null;
+  if (id === 'grid-queue' && good?.eiaCounts) {
+    const e = good.eiaCounts;
+    return { value: e.plannedMW, label: `EIA-860M ${e.file} 计划新增 ${e.planned} 行合计 ${e.plannedMW} MW，已取消 ${e.canceled} 行合计 ${e.canceledMW} MW${suffix}`, unit: 'MW' };
   }
   const alerts = st.radar?.alerts?.length ?? 0;
   return alerts ? { value: alerts, label: `累计雷达命中 ${alerts} 条`, unit: '条' } : null;

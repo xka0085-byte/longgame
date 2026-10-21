@@ -12,6 +12,31 @@
      }
     },
     "keys": {}
+   },
+   {
+    "date": "2026-10-21T07:37:26.907Z",
+    "dirs": {
+     "https://chatgpt.com/.well-known/http-message-signatures-directory": {
+      "status": 200,
+      "keyCount": 1
+     },
+     "https://agent.bot.goog/.well-known/http-message-signatures-directory": {
+      "status": 200,
+      "keyCount": 5
+     }
+    },
+    "keys": {
+     "https://chatgpt.com/.well-known/http-message-signatures-directory": [
+      "ArwjqcCqtA5oxEWkzXGC-To_0A9whHmajCHtfe8I9aY"
+     ],
+     "https://agent.bot.goog/.well-known/http-message-signatures-directory": [
+      "mhxuPw",
+      "cYSMkA",
+      "bUCe2A",
+      "DYiMjA",
+      "Ggh50g"
+     ]
+    }
    }
   ],
   "events": []
@@ -50,6 +75,24 @@
    },
    {
     "date": "2026-10-20T16:00:58.782Z",
+    "channel": "gn",
+    "query": "web bot auth agent identity",
+    "count": 5
+   },
+   {
+    "date": "2026-10-21T07:36:48.998Z",
+    "channel": "hn",
+    "query": "web bot auth",
+    "count": 2
+   },
+   {
+    "date": "2026-10-21T07:36:48.998Z",
+    "channel": "gn",
+    "query": "agent payments protocol",
+    "count": 5
+   },
+   {
+    "date": "2026-10-21T07:36:48.998Z",
     "channel": "gn",
     "query": "web bot auth agent identity",
     "count": 5

@@ -18,12 +18,12 @@
 <!-- AUTO-CITATIONS:START -->
 ## 引用格式（自动生成 2026-10-21）
 
-- sb253-docket：CARB 披露相关链接 0 条（首窗 11-10），自 2026-10，链接 https://longgame.example/lines/sb253-docket.html
-- agent-dirs：当前登记的 agent 密钥 0 把，自 2026-10，链接 https://longgame.example/lines/agent-dirs.html
+- sb253-docket：CARB 披露相关链接 0 条（首窗 11-10）（最近一次成功采集于 2026-10-20，本期采集失败），自 2026-10，链接 https://longgame.example/lines/sb253-docket.html
+- agent-dirs：当前登记的 agent 密钥 6 把，自 2026-10，链接 https://longgame.example/lines/agent-dirs.html
 - eidas-tsl：累计雷达命中 2 条，自 2026-10，链接 https://longgame.example/lines/eidas-tsl.html
-- triggers：累计雷达命中 5 条，自 2026-10，链接 https://longgame.example/lines/triggers.html
+- triggers：累计雷达命中 7 条，自 2026-10，链接 https://longgame.example/lines/triggers.html
 - formd-sweep：本月十个关键词合计新增 Form D 备案 23 件，自 2026-10，链接 https://longgame.example/lines/formd-sweep.html
 - c2pa-spec：累计雷达命中 1 条，自 2026-10，链接 https://longgame.example/lines/c2pa-spec.html
 - state-ai-laws：累计雷达命中 2 条，自 2026-10，链接 https://longgame.example/lines/state-ai-laws.html
-- grid-queue：EIA-860M 页可达，等待月度文件更新，自 2026-10，链接 https://longgame.example/lines/grid-queue.html
+- grid-queue：EIA-860M august_generator2026.xlsx 计划新增 2313 行合计 288543.9 MW，已取消 1743 行合计 185065.9 MW，自 2026-10，链接 https://longgame.example/lines/grid-queue.html
 <!-- AUTO-CITATIONS:END -->

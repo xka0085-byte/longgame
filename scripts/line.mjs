@@ -2,6 +2,7 @@
 // 采集做数据 diff，雷达扫外部最新消息，命中写 alerts。状态全部落 data/lines/<id>.json
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { radarOnce } from './lib/radar.mjs';
+import { collectEia } from './lib/eia860m.mjs';
 
 const UA = { 'User-Agent': 'longgame-portfolio/0.2 personal research' };
 const [lineId, mode] = process.argv.slice(2);
@@ -120,6 +121,35 @@ if (mode === 'collect' && line.collect) {
         }
       } catch (e) { run.queries.push({ keyword: kw, error: String(e).slice(0, 100) }); }
     }
+  } else if (c.type === 'eia860m') {
+    try {
+      const res = await collectEia();
+      run.eia = res;
+      if (res.summary) {
+        const s = res.summary;
+        run.eiaCounts = {
+          operating: s.sheets.Operating ?? null,
+          planned: s.sheets.Planned ?? null,
+          retired: s.sheets.Retired ?? null,
+          canceled: s.sheets['Canceled or Postponed'] ?? null,
+          plannedMW: s.plannedMW ?? null,
+          canceledMW: s.canceledMW ?? null,
+          retiredMW: s.retiredMW ?? null,
+          file: res.url.split('/').pop(),
+          bytes: res.bytes,
+          fakeLinks: res.fakeLinks?.length ?? 0,
+        };
+        const prevE = prev?.eiaCounts;
+        if (prevE && prevE.planned !== run.eiaCounts.planned) {
+          st.collect.events.push({ date: nowISO, type: 'planned-units-changed', from: prevE.planned, to: run.eiaCounts.planned });
+        }
+        if (prevE && prevE.canceled !== run.eiaCounts.canceled) {
+          st.collect.events.push({ date: nowISO, type: 'canceled-units-changed', from: prevE.canceled, to: run.eiaCounts.canceled });
+        }
+      } else if (res.error) {
+        st.collect.events.push({ date: nowISO, type: 'eia-no-valid-file', tried: res.tried });
+      }
+    } catch (e) { run.error = String(e).slice(0, 160); }
   } else if (c.type === 'lotl') {
     try {
       const r = await fetch(c.url, { headers: UA, signal: AbortSignal.timeout(30000) });

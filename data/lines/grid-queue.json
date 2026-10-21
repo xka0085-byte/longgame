@@ -12,9 +12,85 @@
       "keywordHit": true
      }
     ]
+   },
+   {
+    "date": "2026-10-21T07:37:45.520Z",
+    "pages": [
+     {
+      "id": "eia860m",
+      "status": 200,
+      "sig": "94010:PCFkb2N0eXBlIGh0bWw+",
+      "changed": false,
+      "keywordHit": true
+     }
+    ]
+   },
+   {
+    "date": "2026-10-21T07:47:29.649Z",
+    "eia": {
+     "error": "no real xlsx found",
+     "tried": []
+    }
+   },
+   {
+    "date": "2026-10-21T07:47:55.473Z",
+    "eia": {
+     "url": "https://www.eia.gov/electricity/data/eia860m/xls/august_generator2026.xlsx",
+     "bytes": 13955142,
+     "fakeLinks": [
+      "december_generator2026.xlsx",
+      "november_generator2026.xlsx",
+      "october_generator2026.xlsx",
+      "september_generator2026.xlsx"
+     ],
+     "summary": {
+      "sheets": {
+       "Operating": 28379,
+       "Planned": 2313,
+       "Retired": 7338,
+       "Canceled or Postponed": 1743,
+       "Operating_PR": 230,
+       "Planned_PR": 7,
+       "Retired_PR": 12
+      },
+      "plannedMW": 288543.9,
+      "canceledMW": 185065.9,
+      "plannedByYear": {
+       "2026": 601,
+       "2027": 812,
+       "2028": 420,
+       "2029": 208,
+       "2030": 221,
+       "2031": 39,
+       "2032": 3,
+       "2033": 1,
+       "2034": 4,
+       "2039": 2
+      },
+      "retiredMW": 308166.1
+     }
+    },
+    "eiaCounts": {
+     "operating": 28379,
+     "planned": 2313,
+     "retired": 7338,
+     "canceled": 1743,
+     "plannedMW": 288543.9,
+     "canceledMW": 185065.9,
+     "retiredMW": 308166.1,
+     "file": "august_generator2026.xlsx",
+     "bytes": 13955142,
+     "fakeLinks": 4
+    }
    }
   ],
-  "events": []
+  "events": [
+   {
+    "date": "2026-10-21T07:47:29.649Z",
+    "type": "eia-no-valid-file",
+    "tried": []
+   }
+  ]
  },
  "radar": {
   "runs": [
@@ -32,6 +108,24 @@
    },
    {
     "date": "2026-10-20T16:01:43.146Z",
+    "channel": "hn",
+    "query": "interconnection queue",
+    "count": 0
+   },
+   {
+    "date": "2026-10-21T07:37:22.605Z",
+    "channel": "gn",
+    "query": "interconnection queue data center",
+    "count": 5
+   },
+   {
+    "date": "2026-10-21T07:37:22.605Z",
+    "channel": "gn",
+    "query": "large load tariff utility",
+    "count": 5
+   },
+   {
+    "date": "2026-10-21T07:37:22.605Z",
     "channel": "hn",
     "query": "interconnection queue",
     "count": 0

@@ -7,6 +7,13 @@
     "annual_checkup": "每年三问，驱动是否推进、历史是否出现买方或引用方、是否出现回填者，任一问连续两年答否即降级或清仓",
     "admin_surface": "调雷达关键词、改状态、加新线，只编辑本文件，不改代码",
     "state_machine": "watch 只挂雷达采集不产报告；active 定期出产物；escalated 命中触发器或出现买方原话当月过十问；monetizing 出现付费或采购意向；retired 体检答否退出",
+    "verification": {
+      "claim_policy": "不许说『没问题了』。只报已验证什么、用什么方法、还有什么未验证。自测通过只证明已知用例通过，不证明没有未知缺陷",
+      "tier1_self_consistency": "scripts/verify.mjs 从原始数据复算每个对外数字，页面数字不一致即失败",
+      "tier2_spec_conformance": "扫描器类资产必须有本地假服务器一致性套件，覆盖规范边界用例，任何人可复现",
+      "tier3_independent": "只有不依赖我们的第三方使用、引用或复测过，才算独立验证。当前全部线为 false",
+      "numbers_policy": "已知缺陷修复后未全量重扫前，普查数字一律不对外引用"
+    },
     "distribution": {
       "tier0_passive_auto": [
         "docs/lines/<id>.html",
@@ -26,7 +33,11 @@
         "需 tone-check 通过",
         "单条定制不铺量"
       ]
-    }
+    },
+    "asset_model": "GPT-6 longgame 1.0 采纳部分：L1 原始证据、L2 标准事件、L3 质量与不确定性、L4 分析、L5 市场验证。当前只到 L1-L2，L3 以 quality_status 表达，L5 全为 E0",
+    "evidence_ladder": "E0 只有假设；E1 表示感兴趣；E2 查看样本或提交需求；E3 实际使用或试点；E4 付费续订采购。任何线不得凭运行时长或数据量升级",
+    "backfill_ladder": "H1 大部分可重建；H2 部分可重建或高成本；H3 关键事件无法恢复",
+    "freeze": "暂停新增路线直到三个阻塞项清零：全量重扫解冻数字、任务真正上线、至少一条线拿到 E2 行为证据"
   },
   "series": [
     {
@@ -48,7 +59,11 @@
           "query": "x402 payments protocol"
         }
       ],
-      "driver": "MCP 生态周度普查"
+      "driver": "MCP 生态周度普查",
+      "evidence_level": "E0",
+      "quality_status": "UNVERIFIED",
+      "backfill_difficulty": "H3",
+      "verified_by_third_party": false
     },
     {
       "id": "erc8004-snapshot",
@@ -65,7 +80,11 @@
           "query": "trustless agents identity registry"
         }
       ],
-      "driver": "agent 身份注册表链上序列"
+      "driver": "agent 身份注册表链上序列",
+      "evidence_level": "E0",
+      "quality_status": "OK",
+      "backfill_difficulty": "H2",
+      "verified_by_third_party": false
     },
     {
       "id": "protocol-watch",
@@ -82,7 +101,11 @@
           "query": "agent payments standard"
         }
       ],
-      "driver": "四协议仓库 release 监视（mcpdoctor 每日）"
+      "driver": "四协议仓库 release 监视（mcpdoctor 每日）",
+      "evidence_level": "E0",
+      "quality_status": "OK",
+      "backfill_difficulty": "H1",
+      "verified_by_third_party": false
     },
     {
       "id": "sb253-docket",
@@ -126,7 +149,11 @@
       "driver": "加州气候披露，2026-11-10 首窗，2027 鉴证，2030 合理鉴证",
       "unbackfillable": "首窗快照与逐年披露轨迹",
       "buyer_evidence": "MSCI ESG 年费 5 千到 200 万美元续订率 93.4% [CONFIRMED 2026-10-20]",
-      "risks": "SB261 第九巡回禁令暂停中，司法裁决是雷达重点"
+      "risks": "SB261 第九巡回禁令暂停中，司法裁决是雷达重点",
+      "evidence_level": "E0",
+      "quality_status": "OK",
+      "backfill_difficulty": "H2",
+      "verified_by_third_party": false
     },
     {
       "id": "agent-dirs",
@@ -157,7 +184,11 @@
         }
       ],
       "driver": "agent 支付轨道 2026 起跑",
-      "unbackfillable": "密钥注册轮换吊销事件流"
+      "unbackfillable": "密钥注册轮换吊销事件流",
+      "evidence_level": "E0",
+      "quality_status": "DEGRADED",
+      "backfill_difficulty": "H3",
+      "verified_by_third_party": false
     },
     {
       "id": "eidas-tsl",
@@ -181,7 +212,11 @@
         }
       ],
       "driver": "eIDAS 2.0 钱包推开",
-      "notes": "组合配角，历史付费意愿存疑"
+      "notes": "组合配角，历史付费意愿存疑",
+      "evidence_level": "E0",
+      "quality_status": "OK",
+      "backfill_difficulty": "H2",
+      "verified_by_third_party": false
     },
     {
       "id": "aiact-register",
@@ -227,7 +262,11 @@
         }
       ],
       "driver": "AI Act 高风险义务 2027-12-02 与 2028-08-02",
-      "notes": "机器可读数据落地之日即立项之日"
+      "notes": "机器可读数据落地之日即立项之日",
+      "evidence_level": "E0",
+      "quality_status": "WATCH",
+      "backfill_difficulty": "H1",
+      "verified_by_third_party": false
     },
     {
       "id": "triggers",
@@ -303,7 +342,11 @@
         }
       ],
       "driver": "守候清单 B/C 全部升级触发器",
-      "notes": "命中当月十问初筛"
+      "notes": "命中当月十问初筛",
+      "evidence_level": "E0",
+      "quality_status": "OK",
+      "backfill_difficulty": "H1",
+      "verified_by_third_party": false
     },
     {
       "id": "formd-sweep",
@@ -341,7 +384,11 @@
       "driver": "私募资金流向硬数据",
       "unbackfillable": "月度备案量快照只有当时扫的人手里才有，EDGAR 可查历史但没人存序列",
       "artifact": "逐关键词月度备案量序列加 movers 报告，每季度一份署名资金流向报告",
-      "brand_line": "longgame formd-sweep，月度私募资金序列，自 2026-10"
+      "brand_line": "longgame formd-sweep，月度私募资金序列，自 2026-10",
+      "evidence_level": "E0",
+      "quality_status": "OK",
+      "backfill_difficulty": "H1",
+      "verified_by_third_party": false
     },
     {
       "id": "compute-futures",
@@ -381,7 +428,11 @@
         }
       ],
       "driver": "CFTC 裁决加两所挂牌加承购转手市场成型",
-      "artifact": "批复与挂牌事件流，挂牌首日起记基差序列"
+      "artifact": "批复与挂牌事件流，挂牌首日起记基差序列",
+      "evidence_level": "E0",
+      "quality_status": "DEGRADED",
+      "backfill_difficulty": "H2",
+      "verified_by_third_party": false
     },
     {
       "id": "c2pa-spec",
@@ -413,7 +464,11 @@
         }
       ],
       "driver": "EU AI Act Art 50 水印互操作 2027-02-02 生效前采纳窗口",
-      "artifact": "规范版本演进时间线"
+      "artifact": "规范版本演进时间线",
+      "evidence_level": "E0",
+      "quality_status": "OK",
+      "backfill_difficulty": "H1",
+      "verified_by_third_party": false
     },
     {
       "id": "state-ai-laws",
@@ -446,7 +501,11 @@
         }
       ],
       "driver": "州级 AI 法案 patchwork，科罗拉多 2026 生效",
-      "artifact": "逐州生效日期与执法状态机"
+      "artifact": "逐州生效日期与执法状态机",
+      "evidence_level": "E0",
+      "quality_status": "OK",
+      "backfill_difficulty": "H1",
+      "verified_by_third_party": false
     },
     {
       "id": "grid-queue",
@@ -456,16 +515,7 @@
         "radar": "daily"
       },
       "collect": {
-        "type": "pages",
-        "pages": [
-          {
-            "id": "eia860m",
-            "url": "https://www.eia.gov/electricity/data/eia860m/"
-          }
-        ],
-        "match": {
-          "eia860m": "xlsx|excel|download"
-        }
+        "type": "eia860m"
       },
       "radar": [
         {
@@ -484,7 +534,11 @@
       "driver": "AI 数据中心电力缺口，结构性确定",
       "unbackfillable": "月度文件时点快照，多 ISO 无人做统一历史",
       "artifact": "月度文件版本流加队列新闻事件流",
-      "notes": "decade-portfolio 第二序列，天花板全场最高，先挂监视等买方信号"
+      "notes": "decade-portfolio 第二序列，天花板全场最高，先挂监视等买方信号",
+      "evidence_level": "E0",
+      "quality_status": "DEGRADED",
+      "backfill_difficulty": "H2",
+      "verified_by_third_party": false
     }
   ]
 }
