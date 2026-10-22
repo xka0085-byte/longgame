@@ -1,6 +1,6 @@
 # 故障注入 nightly
 
-生成 2026-10-22T03:49:43.357Z，commit `0990a7012043`，运行链接 https://github.com/xka0085-byte/longgame/actions/runs/39718967924。
+生成 2026-10-22T06:55:46.220Z，commit `d2c086926ebb`，运行链接 https://github.com/xka0085-byte/longgame/actions/runs/39737032297。
 
 - 全部故障被拦截：是
 - 真实 data/lines 未变：是
