@@ -137,10 +137,23 @@ if (mode === 'collect' && line.collect) {
     for (const url of c.dirs) {
       try {
         const r = await fetch(url, { headers: UA, signal: AbortSignal.timeout(30000) });
+        if (!r.ok) {
+          run.dirs[url] = { status: r.status, unavailable: true, reason: `http-${r.status}` };
+          collectFailure = true;
+          console.error(`${lineId}: directory ${url} unavailable (status=${r.status})`);
+          continue;
+        }
         const body = await r.text();
         let kids = [];
-        try { const j = JSON.parse(body); const arr = j.keys || j.jwks?.keys || []; kids = arr.map(k => k.kid || k.x || `${k.kty}`).filter(Boolean); }
-        catch { kids = [`unparsed:${body.length}b`]; }
+        let parsed = false;
+        try { const j = JSON.parse(body); const arr = j.keys || j.jwks?.keys || []; kids = arr.map(k => k.kid || k.x || `${k.kty}`).filter(Boolean); parsed = true; }
+        catch { parsed = false; }
+        if (!parsed) {
+          run.dirs[url] = { status: r.status, unavailable: true, reason: 'unparseable' };
+          collectFailure = true;
+          console.error(`${lineId}: directory ${url} unparseable (${body.length}b)`);
+          continue;
+        }
         run.dirs[url] = { status: r.status, keyCount: kids.length };
         kidsMap[url] = kids;
         if (!r.ok || kids.length === 0) {
@@ -227,11 +240,12 @@ if (mode === 'collect' && line.collect) {
   } else if (c.type === 'lotl') {
     try {
       const r = await fetch(c.url, { headers: UA, signal: AbortSignal.timeout(30000) });
+      if (!r.ok) throw new Error(`LOTL http-${r.status}`);
       const xml = await r.text();
       const locs = [...xml.matchAll(/(?:TSLLocation|SchemeTSLLocation)>(https?:[^<]+)/g)].map(m => m[1].trim()).filter(u => !/eu-lotl\.xml/.test(u));
       run.pointers = [...new Set(locs)].sort();
       run.pointerCount = run.pointers.length;
-      if (!r.ok || run.pointerCount === 0) {
+      if (run.pointerCount === 0) {
         collectFailure = true;
         console.error(`${lineId}: LOTL unusable (status=${r.status}, pointers=${run.pointerCount})`);
       }
