@@ -2,7 +2,7 @@
 
 - 生成日期：2026-10-21（Asia/Shanghai）
 - 分支：assurance-phase1
-- 基线快照：工作树基于 `a1dd9e80399fc8ef809a6fb2ba723cff06508000` 加本阶段未提交改动
+- 基线快照：基于 `a1dd9e80399fc8ef809a6fb2ba723cff06508000` 的工作树，加本阶段改动；本阶段改动已提交到 assurance-phase1（最终提交见分支 HEAD）
 - 方法：只读检查仓库文件与本地数据；不访问外部网络；不修改 `portfolio.json`、`data/lines`、`docs`
 - 术语：PASS = 本地实跑检查通过；PARTIAL = 仅覆盖部分对象或仅校验形状；UNKNOWN = 无证据或无法确认
 - 哈希清单：`assurance/baseline-hashes.json`（sha256，覆盖 10 个数据线 JSON、12 个 docs 页面、13 份契约、portfolio.json、llms.txt）
