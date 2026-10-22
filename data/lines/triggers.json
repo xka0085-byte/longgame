@@ -333,6 +333,54 @@
     "channel": "hn",
     "query": "Cloudflare Monetization Gateway",
     "count": 0
+   },
+   {
+    "date": "2026-10-22T09:47:22.494Z",
+    "channel": "fr",
+    "query": "compute derivatives",
+    "count": 1
+   },
+   {
+    "date": "2026-10-22T09:47:22.494Z",
+    "channel": "fr",
+    "query": "autonomous agent income",
+    "count": 0
+   },
+   {
+    "date": "2026-10-22T09:47:22.494Z",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "count": 5
+   },
+   {
+    "date": "2026-10-22T09:47:22.494Z",
+    "channel": "gn",
+    "query": "agent insurance",
+    "count": 5
+   },
+   {
+    "date": "2026-10-22T09:47:22.494Z",
+    "channel": "gn",
+    "query": "AI personality rights bill",
+    "count": 5
+   },
+   {
+    "date": "2026-10-22T09:47:22.494Z",
+    "channel": "hn",
+    "query": "compute futures",
+    "count": 4
+   },
+   {
+    "date": "2026-10-22T09:47:22.494Z",
+    "channel": "hn",
+    "query": "agent insurance",
+    "count": 0
+   },
+   {
+    "date": "2026-10-22T09:47:22.494Z",
+    "channel": "hn",
+    "query": "Cloudflare Monetization Gateway",
+    "count": 0
    }
   ],
   "items": [
@@ -398,6 +446,24 @@
     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE8zZzJCaGVpbU5BZHZNRXRSMkZ2ZFBZUUFNQXpyWW9GaVlKZ0NPaXlXWHNOcnExRm45dlVPOXd0aWFYYUJMSUdLT0F6UkUyYWhVTG8zLTVmTkl2UGRueDVBTmJTVUZlMkszZWE1QmppUWs0THR3LWdsVg?oc=5",
     "date": "Wed, 21 Oct 2026 05:05:08 GMT",
     "foundAt": "2026-10-21T07:36:59.242Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "title": "CFTC Ends Compute Derivatives Comment Period as GPU Futures Remain Under Review - TOKENPOST",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFByRHRUWjh3UHVNLXBiR0RfZ3pYekRFYTJNbjdBb1VtMnRjcUZ5aVJZTXNadzViSEdrVW1xMFpLVUZUdXBHRXlJRFlHcUZCZnpBdzE0U0JvdGFKWTQ?oc=5",
+    "date": "Wed, 21 Oct 2026 15:30:59 GMT",
+    "foundAt": "2026-10-22T09:47:22.494Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Storm damaged your home? What insurance actually covers — and why you should call your agent first - AZ Family",
+    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNVk5IeWhKeEp5dDRydnNLdEdZalZjZjVIQUlBdTA4UFl4V1FPc3piYk5rOUJwakdNYWVKUTVNNGZlWE1HQXp0alB4TEJCbklzU2dwUVNpV0J1QlhsY3ZMdmdwQ19VdG82QmlheUFyLTVoR0pTNE5EMEMtUHYtdlU5bUhTUjdncjgzU19kNzRlSm1rbzNIRnVVdnFSUHJVZms1bHFfNjVVdTlDOXJQbUlJMnd6QUV4emt1V3ptUWluZDlpMkRVZGZKX3FObFd0Ulk?oc=5",
+    "date": "Thu, 22 Oct 2026 00:11:17 GMT",
+    "foundAt": "2026-10-22T09:47:22.494Z"
    }
   ],
   "alerts": [
@@ -441,6 +507,18 @@
     "date": "2026-10-21T07:36:59.242Z",
     "title": "Alabama Pharmacy, Not Agent, at Fault for Not Reading Policy Before $5M Judgment - Insurance Journal",
     "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE8zZzJCaGVpbU5BZHZNRXRSMkZ2ZFBZUUFNQXpyWW9GaVlKZ0NPaXlXWHNOcnExRm45dlVPOXd0aWFYYUJMSUdLT0F6UkUyYWhVTG8zLTVmTkl2UGRueDVBTmJTVUZlMkszZWE1QmppUWs0THR3LWdsVg?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-10-22T09:47:22.494Z",
+    "title": "CFTC Ends Compute Derivatives Comment Period as GPU Futures Remain Under Review - TOKENPOST",
+    "url": "https://news.google.com/rss/articles/CBMiW0FVX3lxTFByRHRUWjh3UHVNLXBiR0RfZ3pYekRFYTJNbjdBb1VtMnRjcUZ5aVJZTXNadzViSEdrVW1xMFpLVUZUdXBHRXlJRFlHcUZCZnpBdzE0U0JvdGFKWTQ?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-10-22T09:47:22.494Z",
+    "title": "Storm damaged your home? What insurance actually covers — and why you should call your agent first - AZ Family",
+    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNVk5IeWhKeEp5dDRydnNLdEdZalZjZjVIQUlBdTA4UFl4V1FPc3piYk5rOUJwakdNYWVKUTVNNGZlWE1HQXp0alB4TEJCbklzU2dwUVNpV0J1QlhsY3ZMdmdwQ19VdG82QmlheUFyLTVoR0pTNE5EMEMtUHYtdlU5bUhTUjdncjgzU19kNzRlSm1rbzNIRnVVdnFSUHJVZms1bHFfNjVVdTlDOXJQbUlJMnd6QUV4emt1V3ptUWluZDlpMkRVZGZKX3FObFd0Ulk?oc=5",
     "channel": "gn"
    }
   ]

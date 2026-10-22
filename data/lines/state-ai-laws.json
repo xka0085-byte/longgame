@@ -71,6 +71,24 @@
     "channel": "hn",
     "query": "state AI law",
     "count": 0
+   },
+   {
+    "date": "2026-10-22T09:47:27.927Z",
+    "channel": "gn",
+    "query": "state AI law enforcement",
+    "count": 5
+   },
+   {
+    "date": "2026-10-22T09:47:27.927Z",
+    "channel": "gn",
+    "query": "Colorado AI Act",
+    "count": 5
+   },
+   {
+    "date": "2026-10-22T09:47:27.927Z",
+    "channel": "hn",
+    "query": "state AI law",
+    "count": 3
    }
   ],
   "items": [
@@ -91,6 +109,15 @@
     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5DY1N0Q1M1NmZFUEY3b2YzbmMzemU1d0FrZENhcTBQSFJLY24zNE9hcFhZOGVZeVZsazFXYTNXVThKQ2R6UkF0RmVIRGdoWjdRZXc5aERBMFg2b0tvM3JTeA?oc=5",
     "date": "Fri, 25 Sep 2026 07:00:00 GMT",
     "foundAt": "2026-10-20T16:01:37.285Z"
+   },
+   {
+    "line": "state-ai-laws",
+    "channel": "gn",
+    "query": "Colorado AI Act",
+    "title": "Colorado Unveils New Proposed Rules Implementing Revamped AI Act - Ogletree",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOMER1QW1ZQldaOWU3RDd4QjVUdWZJcUlabUxKX1BLd2NubzBiV2dpdE02WTRyQW5wUGdUUVdMV2xZRXpBOUtnQnFfSFZ5dXhPY3pCdnBCLTJVRUI3VzlleXdPbEltV20zTmY5UXRIQ1QtMTNCODdUdHdHdWNPU1hCb0V4TS04LVBkbWlmRE0wYjJ3b2FvdWd5R1NPTDlZMWRQZ0gyLTJHR1dBVmpYM3U3QlRmcUNSZzA?oc=5",
+    "date": "Fri, 28 Aug 2026 07:00:00 GMT",
+    "foundAt": "2026-10-22T09:47:27.927Z"
    }
   ],
   "alerts": [
@@ -104,6 +131,12 @@
     "date": "2026-10-20T16:01:37.285Z",
     "title": "The Colorado AI Act: What It Requires - CASRAI",
     "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE5DY1N0Q1M1NmZFUEY3b2YzbmMzemU1d0FrZENhcTBQSFJLY24zNE9hcFhZOGVZeVZsazFXYTNXVThKQ2R6UkF0RmVIRGdoWjdRZXc5aERBMFg2b0tvM3JTeA?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-10-22T09:47:27.927Z",
+    "title": "Colorado Unveils New Proposed Rules Implementing Revamped AI Act - Ogletree",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOMER1QW1ZQldaOWU3RDd4QjVUdWZJcUlabUxKX1BLd2NubzBiV2dpdE02WTRyQW5wUGdUUVdMV2xZRXpBOUtnQnFfSFZ5dXhPY3pCdnBCLTJVRUI3VzlleXdPbEltV20zTmY5UXRIQ1QtMTNCODdUdHdHdWNPU1hCb0V4TS04LVBkbWlmRE0wYjJ3b2FvdWd5R1NPTDlZMWRQZ0gyLTJHR1dBVmpYM3U3QlRmcUNSZzA?oc=5",
     "channel": "gn"
    }
   ]
