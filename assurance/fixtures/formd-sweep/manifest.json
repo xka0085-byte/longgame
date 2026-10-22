@@ -1,0 +1,37 @@
+{
+ "dataset": "formd-sweep",
+ "line": "formd-sweep",
+ "sample_status": "REQUIRED",
+ "samples": [
+  {
+   "file": "normal.json",
+   "kind": "normal",
+   "target": "contract-schema",
+   "expected": "pass",
+   "expected_error_contains": null,
+   "sha256": "806e82bd4239987f9da6c33235bc7b9ca6ac17ce9eef2bf9e670c3584d2c8c98",
+   "source": "hand-authored synthetic; 不含生产数据",
+   "basis": "依据 Form D 契约的 query 字段与非负计数不变量。 两个关键词，计数为非负整数"
+  },
+  {
+   "file": "empty.json",
+   "kind": "empty",
+   "target": "contract-schema",
+   "expected": "fail",
+   "expected_error_contains": "queries must be a non-empty array",
+   "sha256": "2add1b63a167bc2fa904e780998037029809e0025887938da7370a595131d111",
+   "source": "hand-authored synthetic; 不含生产数据",
+   "basis": "依据 Form D 契约的 query 字段与非负计数不变量。 查询数组为空视为采集失败，不是零份文件"
+  },
+  {
+   "file": "structural.json",
+   "kind": "invalid",
+   "target": "contract-schema",
+   "expected": "fail",
+   "expected_error_contains": "allTime must be non-negative integer",
+   "sha256": "ab5807a9962a4f92f63f91a2941261fe9081e47b4086fc7c72eb79ae47437291",
+   "source": "hand-authored synthetic; 不含生产数据",
+   "basis": "依据 Form D 契约的 query 字段与非负计数不变量。 计数用字符串且出现负数"
+  }
+ ]
+}

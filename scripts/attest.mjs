@@ -7,9 +7,23 @@ import crypto from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 
 const ROOT = path.resolve(import.meta.dirname, '..');
+const DOCS = process.env.LONGGAME_DOCS || path.join(ROOT, 'docs');
 const portfolio = JSON.parse(fs.readFileSync(path.join(ROOT, 'portfolio.json'), 'utf8'));
-const status = JSON.parse(fs.readFileSync(path.join(ROOT, 'docs/status.json'), 'utf8'));
+const status = JSON.parse(fs.readFileSync(path.join(DOCS, 'status.json'), 'utf8'));
 const statusById = new Map(status.lines.map(l => [l.id, l]));
+
+function assuranceLevel(id) {
+  const file = path.join(ROOT, 'assurance/contracts/datasets', `${id}.yaml`);
+  try {
+    const m = fs.readFileSync(file, 'utf8').match(/^assurance_level:\s*([0-5])\s*$/m);
+    return m ? Number(m[1]) : null;
+  } catch { return null; }
+}
+
+function provenance(id) {
+  try { return JSON.parse(fs.readFileSync(path.join(ROOT, 'assurance/provenance', `${id}.json`), 'utf8')); }
+  catch { return null; }
+}
 
 function sha256(file) {
   try {
@@ -32,13 +46,16 @@ const lines = [];
 
 for (const s of portfolio.series) {
   const dataFile = path.join(ROOT, 'data/lines', `${s.id}.json`);
-  const pageFile = path.join(ROOT, 'docs/lines', `${s.id}.html`);
+  const pageFile = path.join(DOCS, 'lines', `${s.id}.html`);
   const st = statusById.get(s.id) || {};
+  const prov = provenance(s.id);
   const sources = (s.collect?.pages || []).map(p => p.url).filter(Boolean);
   lines.push({
     id: s.id,
     kind: s.managed_in && s.managed_in !== 'longgame' ? 'external' : 'local',
     managed_in: s.managed_in || 'longgame',
+    assurance_level: assuranceLevel(s.id),
+    last_verified_at: prov?.generated_at ?? null,
     data_file: fs.existsSync(dataFile) ? `data/lines/${s.id}.json` : null,
     data_sha256: sha256(dataFile),
     page_file: fs.existsSync(pageFile) ? `docs/lines/${s.id}.html` : null,
@@ -57,12 +74,12 @@ const out = {
   note: 'Hashes identify the exact files behind each status. They are not a validation of correctness. External checks counts only entries in docs/evidence.json that came from someone outside this project.',
   lines,
 };
-fs.writeFileSync(path.join(ROOT, 'docs/attestations.json'), JSON.stringify(out, null, 2));
+fs.writeFileSync(path.join(DOCS, 'attestations.json'), JSON.stringify(out, null, 2));
 
 const rows = lines.map(l => {
   const short = l.data_sha256 ? l.data_sha256.slice(0, 12) : '—';
   const ev = l.external_checks ? String(l.external_checks) : '0';
-  return `<tr><td><code>${l.id}</code></td><td>${l.kind}</td><td>${l.freshness ?? '—'}</td><td>${short}</td><td>${ev}</td><td>${l.source_urls[0] ? `<a href="${l.source_urls[0]}">source</a>` : '—'}</td></tr>`;
+  return `<tr><td><code>${l.id}</code></td><td>${l.kind}</td><td>${l.assurance_level ?? 'UNKNOWN'}</td><td>${l.last_verified_at ? l.last_verified_at.slice(0, 19).replace('T', ' ') : '—'}</td><td>${l.freshness ?? '—'}</td><td>${short}</td><td>${ev}</td><td>${l.source_urls[0] ? `<a href="${l.source_urls[0]}">source</a>` : '—'}</td></tr>`;
 }).join('\n');
 
 const html = `<!doctype html>
@@ -84,9 +101,9 @@ a{color:var(--accent)}.cite{margin-top:40px;padding-top:14px;border-top:1px soli
 <h1>Verify this yourself</h1>
 <p class="sub">Generated ${out.generated_at} at commit <code>${commit ? commit.slice(0, 12) : 'unknown'}</code>. Longgame data series.</p>
 <p>Nothing on this page asks you to trust us. Each row points to the raw data file, its hash, the public source, and the command that recomputes every published number. If a hash does not match the file you downloaded, the status is not the one we published.</p>
-<div class="note">External checks is the number of recorded cases where someone outside this project used, cited or recomputed a series. It is currently zero for most lines. A zero here means no external check exists, not that the data is correct.</div>
+<div class="note">Assurance level is capped at 2 for local lines and 1 for external lines. No line is Level 3 or above; nothing on this page claims independent third-party assurance. External checks is the number of recorded cases where someone outside this project used, cited or recomputed a series. It is currently zero for most lines. A zero here means no external check exists, not that the data is correct.</div>
 <h2>Status attestations</h2>
-<table><thead><tr><th>Line</th><th>Kind</th><th>Freshness</th><th>Data SHA-256</th><th>External checks</th><th>Source</th></tr></thead>
+<table><thead><tr><th>Line</th><th>Kind</th><th>Assurance level</th><th>Last verified</th><th>Freshness</th><th>Data SHA-256</th><th>External checks</th><th>Source</th></tr></thead>
 <tbody>${rows}</tbody></table>
 <h2>Reproduce</h2>
 <pre><code>git clone https://github.com/xka0085-byte/longgame
@@ -100,5 +117,5 @@ node scripts/attest.mjs</code></pre>
 <p><a href="https://github.com/xka0085-byte/longgame/issues">Issue tracker</a> · <a href="attestations.json">attestations.json</a></p>
 <p class="cite">Citation: longgame status attestations, generated ${out.generated_at}. https://xka0085-byte.github.io/longgame/verify.html</p>
 </main></body></html>`;
-fs.writeFileSync(path.join(ROOT, 'docs/verify.html'), html);
+fs.writeFileSync(path.join(DOCS, 'verify.html'), html);
 console.log(`attest: ${lines.length} lines, commit ${commit ? commit.slice(0, 12) : 'unknown'}`);

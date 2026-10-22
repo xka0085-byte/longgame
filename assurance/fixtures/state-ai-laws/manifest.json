@@ -1,0 +1,37 @@
+{
+ "dataset": "state-ai-laws",
+ "line": "state-ai-laws",
+ "sample_status": "REQUIRED",
+ "samples": [
+  {
+   "file": "normal.json",
+   "kind": "normal",
+   "target": "contract-schema",
+   "expected": "pass",
+   "expected_error_contains": null,
+   "sha256": "7455a7127d6029ae360dd1d9d228ee951b6bd2c11628dd3779b43d2404d99b18",
+   "source": "hand-authored synthetic; 不含生产数据",
+   "basis": "依据页面契约字段定义与布尔类型不变量。 正常 200 页面，bytes 为正、签名非空、布尔标记齐全"
+  },
+  {
+   "file": "empty.json",
+   "kind": "empty",
+   "target": "contract-schema",
+   "expected": "fail",
+   "expected_error_contains": "pages must be a non-empty array",
+   "sha256": "9c2f940a84dc855d717d0f77fb47db64d038efdd203de332bedd1e81532c7d32",
+   "source": "hand-authored synthetic; 不含生产数据",
+   "basis": "依据页面契约字段定义与布尔类型不变量。 页面数组为空表示没有可用抓取，必须失败"
+  },
+  {
+   "file": "structural.json",
+   "kind": "invalid",
+   "target": "contract-schema",
+   "expected": "fail",
+   "expected_error_contains": "page[0].bytes must be a non-negative integer",
+   "sha256": "45015fa66b5cbc48b28ea0e053bd345f302ec734c59d980ddc93d1e028fe32ec",
+   "source": "hand-authored synthetic; 不含生产数据",
+   "basis": "依据页面契约字段定义与布尔类型不变量。 状态码/字节/签名/布尔标记类型错位，必须失败"
+  }
+ ]
+}

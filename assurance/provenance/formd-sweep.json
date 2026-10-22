@@ -1,0 +1,14 @@
+{
+  "run_id": "local-20261022034747726",
+  "line": "formd-sweep",
+  "commit": "2564b28db93213e1df123d46828e2a2219206fc5",
+  "contract_version": 1,
+  "assurance_level": 2,
+  "raw_sha256": "d1e16e4f03d503f336034ddf718f9abfce4cf204fd675cb01074ab914e57839a",
+  "normalized_sha256": "fe4445f79526bfc758a1a9a148174462ff1145ca29e7b337a51c7f086b333457",
+  "validation_status": "PASS",
+  "publication_status": "PUBLISHED",
+  "publication_reason": null,
+  "last_success_at": "2026-10-21T08:17:13.673Z",
+  "generated_at": "2026-10-22T03:47:47.726Z"
+}

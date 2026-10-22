@@ -1,1 +1,20 @@
-assurance/fixtures/** text eol=lf
+# 统一换行：样本、契约、数据与前端页面一律 LF，避免 CI 与 Windows 之间的 diff 噪声。
+* text=auto eol=lf
+*.json text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf
+*.mjs text eol=lf
+*.js text eol=lf
+*.md text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.csv text eol=lf
+*.txt text eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.xlsx binary
+*.xls binary
+*.zip binary

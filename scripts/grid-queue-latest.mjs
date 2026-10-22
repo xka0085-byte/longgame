@@ -6,8 +6,9 @@
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 
 const JSON_PATH = 'data/lines/grid-queue.json';
-const CSV_PATH = 'docs/data/grid-queue-latest.csv';
-const OUT = 'docs/lines/grid-queue-latest.html';
+const DOCS = process.env.LONGGAME_DOCS || 'docs';
+const CSV_PATH = `${DOCS}/data/grid-queue-latest.csv`;
+const OUT = `${DOCS}/lines/grid-queue-latest.html`;
 
 if (!existsSync(JSON_PATH)) { console.error(`${JSON_PATH} not found`); process.exit(1); }
 if (!existsSync(CSV_PATH)) { console.error(`${CSV_PATH} not found`); process.exit(1); }

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-21T15:20:27.207Z",
+  "generated_at": "2026-10-22T03:42:56.452Z",
   "real_data_hash_before": {
     "agent-dirs.json": "c0fdbc6bbac9be18636e9746149d326cef5f15c13755d385de63c555c350b8e6",
     "aiact-register.json": "d41fa00846814a3897e018116e116a161758010b907e59f696bd5dbba0da1954",
@@ -31,7 +31,7 @@
       "id": "column-rename",
       "target": "fixtures/grid-queue/normal.json",
       "expected_block_point": "fixtures",
-      "injected_at": "2026-10-21T15:20:24.788Z",
+      "injected_at": "2026-10-22T03:42:53.396Z",
       "gate_exit": 1,
       "gate_failed_check": "fixtures",
       "gate_checks": [
@@ -39,19 +39,19 @@
           "name": "verify",
           "script": "scripts/verify.mjs",
           "exitCode": 0,
-          "ms": 252
+          "ms": 114
         },
         {
           "name": "contracts",
           "script": "scripts/validate-contracts.mjs",
           "exitCode": 0,
-          "ms": 101
+          "ms": 193
         },
         {
           "name": "fixtures",
           "script": "scripts/run-fixtures.mjs",
           "exitCode": 1,
-          "ms": 85
+          "ms": 116
         }
       ],
       "publish_exit": 1,
@@ -68,7 +68,7 @@
       "id": "unit-mw-to-gw",
       "target": "fixtures/grid-queue/normal.json",
       "expected_block_point": "fixtures",
-      "injected_at": "2026-10-21T15:20:25.413Z",
+      "injected_at": "2026-10-22T03:42:54.148Z",
       "gate_exit": 1,
       "gate_failed_check": "fixtures",
       "gate_checks": [
@@ -76,19 +76,19 @@
           "name": "verify",
           "script": "scripts/verify.mjs",
           "exitCode": 0,
-          "ms": 131
+          "ms": 105
         },
         {
           "name": "contracts",
           "script": "scripts/validate-contracts.mjs",
           "exitCode": 0,
-          "ms": 97
+          "ms": 157
         },
         {
           "name": "fixtures",
           "script": "scripts/run-fixtures.mjs",
           "exitCode": 1,
-          "ms": 74
+          "ms": 112
         }
       ],
       "publish_exit": 1,
@@ -105,7 +105,7 @@
       "id": "empty-response",
       "target": "data/lines/grid-queue.json",
       "expected_block_point": "contracts",
-      "injected_at": "2026-10-21T15:20:25.840Z",
+      "injected_at": "2026-10-22T03:42:54.673Z",
       "gate_exit": 1,
       "gate_failed_check": "verify",
       "gate_checks": [
@@ -113,7 +113,7 @@
           "name": "verify",
           "script": "scripts/verify.mjs",
           "exitCode": 1,
-          "ms": 102
+          "ms": 104
         }
       ],
       "publish_exit": 1,
@@ -130,7 +130,7 @@
       "id": "http-429",
       "target": "data/lines/grid-queue.json",
       "expected_block_point": "contracts",
-      "injected_at": "2026-10-21T15:20:26.307Z",
+      "injected_at": "2026-10-22T03:42:55.339Z",
       "gate_exit": 1,
       "gate_failed_check": "contracts",
       "gate_checks": [
@@ -138,13 +138,13 @@
           "name": "verify",
           "script": "scripts/verify.mjs",
           "exitCode": 0,
-          "ms": 95
+          "ms": 103
         },
         {
           "name": "contracts",
           "script": "scripts/validate-contracts.mjs",
           "exitCode": 1,
-          "ms": 88
+          "ms": 192
         }
       ],
       "publish_exit": 1,
@@ -161,7 +161,7 @@
       "id": "duplicate-rows",
       "target": "data/lines/grid-queue.json",
       "expected_block_point": "contracts",
-      "injected_at": "2026-10-21T15:20:26.803Z",
+      "injected_at": "2026-10-22T03:42:55.956Z",
       "gate_exit": 1,
       "gate_failed_check": "contracts",
       "gate_checks": [
@@ -169,13 +169,13 @@
           "name": "verify",
           "script": "scripts/verify.mjs",
           "exitCode": 0,
-          "ms": 107
+          "ms": 104
         },
         {
           "name": "contracts",
           "script": "scripts/validate-contracts.mjs",
           "exitCode": 1,
-          "ms": 101
+          "ms": 162
         }
       ],
       "publish_exit": 1,
@@ -192,7 +192,7 @@
       "id": "truncated-data-file",
       "target": "data/lines/grid-queue.json",
       "expected_block_point": "contracts",
-      "injected_at": "2026-10-21T15:20:27.205Z",
+      "injected_at": "2026-10-22T03:42:56.450Z",
       "gate_exit": 1,
       "gate_failed_check": "verify",
       "gate_checks": [
@@ -200,7 +200,7 @@
           "name": "verify",
           "script": "scripts/verify.mjs",
           "exitCode": 1,
-          "ms": 94
+          "ms": 92
         }
       ],
       "publish_exit": 1,

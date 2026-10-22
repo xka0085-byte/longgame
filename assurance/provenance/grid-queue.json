@@ -1,0 +1,14 @@
+{
+  "run_id": "local-20261022034747726",
+  "line": "grid-queue",
+  "commit": "2564b28db93213e1df123d46828e2a2219206fc5",
+  "contract_version": 1,
+  "assurance_level": 2,
+  "raw_sha256": "d56c708837719536bd0e165ad20e337ca7e17b56e7da4da3f1606602b34c4f03",
+  "normalized_sha256": "c26211f9e9147873b7312a4c318a7a8b87cd6f0d2bb78e87e86658a0100f56ef",
+  "validation_status": "PASS",
+  "publication_status": "PUBLISHED",
+  "publication_reason": null,
+  "last_success_at": "2026-10-21T08:17:25.373Z",
+  "generated_at": "2026-10-22T03:47:47.726Z"
+}

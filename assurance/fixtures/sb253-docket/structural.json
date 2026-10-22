@@ -1,0 +1,20 @@
+{
+ "collect": {
+  "runs": [
+   {
+    "date": "2026-10-21T12:00:00.000Z",
+    "pages": [
+     {
+      "id": "sb253-reporting",
+      "status": "200",
+      "bytes": -1,
+      "sig": 42,
+      "changed": "false",
+      "keywordHit": 0,
+      "unavailable": "false"
+     }
+    ]
+   }
+  ]
+ }
+}

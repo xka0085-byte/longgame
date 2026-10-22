@@ -1,4 +1,6 @@
 contract_version: 1
+assurance_level: 2
+assurance_level_basis: "本仓库已具备契约、固定样本、发布门禁与故障注入，但尚无独立于本仓库的外部复算，按上限 2 记录。"
 id: "c2pa-spec"
 status: "contract-only"
 owner: "UNKNOWN"
@@ -37,6 +39,14 @@ schema:
       type: "integer"
       unit: "bytes"
       min: 0
+    - path: "page.changed"
+      type: "boolean"
+      unit: "UNKNOWN"
+      note: "与上一轮有效抓取比较，布尔值"
+    - path: "page.keywordHit"
+      type: "boolean"
+      unit: "UNKNOWN"
+      note: "页面是否命中关键词，布尔值"
   primary_key:
     - "run.date"
     - "page.id"
@@ -44,6 +54,9 @@ schema:
     strategy: "run.date+page.id 唯一"
     basis: "line.mjs pages 分支"
   invariants:
+    - id: "page-flags-boolean"
+      rule: "changed 与 keywordHit 必须为布尔值，不得用字符串或 0/1 替代"
+      basis: "line.mjs 使用 !!changed 与 !!hit 写入，类型为 boolean"
     - id: "unavailable-keeps-previous"
       rule: "unavailable=true 的运行不得写入新的有效摘要或覆盖上一份有效数据"
       basis: "line.mjs 对 202/204/非 2xx/空正文分支的处理语义"
@@ -62,8 +75,8 @@ units:
     basis: "页面条数"
 freshness:
   cadence: "weekly"
-  max_age_days: "UNKNOWN"
-  basis: "UNKNOWN"
+  max_age_days: 10
+  basis: "本仓库采集 cron 为 weekly；按 1.5 个采集周期设定上限，超过即视为过期，不以旧值冒充新鲜数据。"
 failure_policy:
   on_http_error: "fail"
   on_429: "fail"
@@ -73,6 +86,7 @@ failure_policy:
   on_unit_mismatch: "fail"
   on_duplicate: "fail"
   on_source_host_mismatch: "fail"
+  on_quarantine: "keep-previous"
 publish:
   require_gate: true
   blocked_by:
@@ -80,10 +94,17 @@ publish:
     - "contracts"
     - "fixtures"
   external_data: false
+  preconditions:
+    - "同一 commit 的 assurance-gate 必须 PASS（verify / contracts / fixtures / fault-injection）"
+    - "validate-contracts 零失败"
+    - "本地线固定样本全部通过；外部线为 NOT_APPLICABLE"
+    - "候选仅写入 assurance/.staging，全部校验通过后才原子替换 docs 与 data"
+    - "provenance 必须写入 raw_sha256 / normalized_sha256 / validation_status / publication_status"
 review:
   last_reviewed: "2026-10-21"
   unresolved_assumptions:
-    - "新鲜度上限未从来源文档或历史运行中证明，故标记 UNKNOWN，不设数值阈值。"
+    - "owner 未指定，责任人与升级路径为 UNKNOWN。"
+    - "新鲜度上限由采集周期推导，来源文档未规定该数值，故阈值仅作为本仓库运维阈值，不声称来自来源本身。"
     - "来源许可条款未在本阶段核验，故标记 UNKNOWN。"
     - "本契约只覆盖字段与不变量，不证明来源内容的语义正确性。"
     - "规范版本号与页面路径的对应关系未由 C2PA 官方版本策略证明。"

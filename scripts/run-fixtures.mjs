@@ -1,16 +1,14 @@
 // 固定样本执行器：按 manifest 逐样本执行，独立校验，仅凭退出码判定。
 // 不修改任何生产数据；只读 assurance/fixtures 下的样本文件。
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { createHash } from 'node:crypto';
+import { evaluateRun, sha256File } from './lib/assurance-core.mjs';
 
 const ROOT = process.cwd();
 const FIXTURE_ROOT = join(ROOT, 'assurance/fixtures');
-const DATASETS = ['grid-queue', 'mcpreflight'];
 const EIA_HOST = 'www.eia.gov';
+const EXTERNAL = new Set(['mcpreflight-weekly', 'erc8004-snapshot', 'protocol-watch']);
 const results = [];
-
-function sha256(path) { return createHash('sha256').update(readFileSync(path)).digest('hex'); }
 
 function isHostAllowed(url, hosts) {
   let host;
@@ -81,31 +79,57 @@ function evaluateMcpreflight(data, target) {
 
 function nameOr(r, i) { return r && r.name ? r.name : `#${i}`; }
 
-for (const dataset of DATASETS) {
+const manifestDirs = readdirSync(FIXTURE_ROOT, { withFileTypes: true })
+  .filter((d) => d.isDirectory())
+  .map((d) => d.name)
+  .filter((name) => existsSync(join(FIXTURE_ROOT, name, 'manifest.json')) || existsSync(join(FIXTURE_ROOT, name, 'NOT_APPLICABLE.md')))
+  .sort();
+
+for (const dataset of manifestDirs) {
   const dir = join(FIXTURE_ROOT, dataset);
+  const marker = join(dir, 'NOT_APPLICABLE.md');
+  if (EXTERNAL.has(dataset) || existsSync(marker)) {
+    const text = existsSync(marker) ? readFileSync(marker, 'utf8') : '';
+    const ok = /NOT_APPLICABLE/.test(text) && /原因/.test(text);
+    results.push({ dataset, file: 'NOT_APPLICABLE.md', status: ok ? 'PASS' : 'FAIL', errors: ok ? [] : ['external fixture marker must state NOT_APPLICABLE and a reason'] });
+    console.log(`${ok ? 'PASS' : 'FAIL'} ${dataset}: NOT_APPLICABLE (external, no synthetic samples)`);
+    continue;
+  }
+
   const manifestPath = join(dir, 'manifest.json');
-  if (!existsSync(manifestPath)) { results.push({ dataset, file: 'manifest.json', status: 'FAIL', errors: ['manifest missing'] }); continue; }
   let manifest;
   try { manifest = JSON.parse(readFileSync(manifestPath, 'utf8')); }
   catch (e) { results.push({ dataset, file: 'manifest.json', status: 'FAIL', errors: [`manifest parse: ${e.message}`] }); continue; }
 
-  if (!Array.isArray(manifest.samples) || manifest.samples.length < 6) {
-    results.push({ dataset, file: 'manifest.json', status: 'FAIL', errors: ['manifest must list at least 6 samples'] });
+  const lineId = manifest.line || dataset;
+  const minSamples = dataset === 'grid-queue' || dataset === 'mcpreflight' ? 6 : 3;
+  if (!Array.isArray(manifest.samples) || manifest.samples.length < minSamples) {
+    results.push({ dataset, file: 'manifest.json', status: 'FAIL', errors: [`manifest must list at least ${minSamples} samples`] });
+  }
+  const kinds = new Set((manifest.samples || []).map((s) => s.kind));
+  for (const kind of ['normal', 'empty', 'invalid']) {
+    if (!kinds.has(kind)) results.push({ dataset, file: 'manifest.json', status: 'FAIL', errors: [`missing sample kind: ${kind}`] });
   }
 
   for (const sample of manifest.samples || []) {
     const file = join(dir, sample.file);
     const rec = { dataset, file: sample.file, target: sample.target, expected: sample.expected, status: 'FAIL', errors: [], checks: [], observed: null };
     if (!existsSync(file)) { rec.errors.push('sample file missing'); results.push(rec); continue; }
+    for (const key of ['sha256', 'source', 'target', 'expected', 'basis']) {
+      if (!sample[key]) rec.errors.push(`manifest sample missing ${key}`);
+    }
     try {
-      const actualHash = sha256(file);
+      const actualHash = sha256File(file);
       if (actualHash !== sample.sha256) rec.checks.push(`sha256 mismatch: expected ${sample.sha256}, got ${actualHash}`);
       const data = JSON.parse(readFileSync(file, 'utf8'));
-      const ev = dataset === 'grid-queue' ? evaluateGrid(data) : evaluateMcpreflight(data, sample.target);
+      const ev = dataset === 'grid-queue'
+        ? evaluateGrid(data)
+        : dataset === 'mcpreflight'
+          ? evaluateMcpreflight(data, sample.target)
+          : { errors: evaluateRun(lineId, data, { strict: true }), values: null };
       rec.checks.push(...ev.errors);
       rec.observed = ev.values || null;
 
-      // checks 是校验器对样本的实际判定；errors 是"样本是否按预期表现"的偏差。
       if (sample.expected === 'pass') {
         if (rec.checks.length > 0) rec.errors.push('expected pass but checks failed');
       } else if (sample.expected === 'fail') {
@@ -113,6 +137,8 @@ for (const dataset of DATASETS) {
         else if (sample.expected_error_contains && !rec.checks.join(' ').includes(sample.expected_error_contains)) {
           rec.errors.push(`expected error containing "${sample.expected_error_contains}" not found`);
         }
+      } else {
+        rec.errors.push(`invalid expected value: ${sample.expected}`);
       }
       if (sample.expected === 'pass' && sample.expected_values && rec.observed) {
         for (const [k, v] of Object.entries(sample.expected_values)) {
@@ -130,5 +156,13 @@ for (const dataset of DATASETS) {
 }
 
 const failed = results.filter((r) => r.status !== 'PASS');
+mkdirSync(join(ROOT, 'assurance/results'), { recursive: true });
+writeFileSync(join(ROOT, 'assurance/results/fixtures.json'), JSON.stringify({
+  at: new Date().toISOString(),
+  samples: results.length,
+  passed: results.length - failed.length,
+  failed: failed.length,
+  results,
+}, null, 2) + '\n');
 console.log(`\nrun-fixtures: ${results.length} samples, ${results.length - failed.length} passed, ${failed.length} failed`);
 process.exitCode = failed.length ? 1 : 0;

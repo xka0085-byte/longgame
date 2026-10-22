@@ -1,0 +1,36 @@
+name: forced-failure
+# 验收用：在 CI 沙箱副本里对三条线各注入一次样本失败，确认 gate 失败且 publish 被拦。
+# 手动触发；job 成功表示三次都被拦截且真实数据未变。
+on:
+  workflow_dispatch:
+  push:
+    branches: [assurance-phase2]
+    paths:
+      - assurance/tests/forced-failure.mjs
+      - .github/workflows/forced-failure.yml
+
+permissions:
+  contents: read
+
+jobs:
+  forced-failure:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install openpyxl
+      - name: inject sample failures and attempt publish
+        run: node assurance/tests/forced-failure.mjs
+      - name: upload result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: forced-failure-result
+          path: assurance/results/forced-failure.json
+          if-no-files-found: warn

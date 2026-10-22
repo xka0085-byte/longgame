@@ -18,7 +18,6 @@
 <!-- AUTO-CITATIONS:START -->
 ## 引用格式（自动生成 2026-10-22）
 
-- sb253-docket：CARB 披露相关链接 0 条（首窗 11-10）（最近一次成功采集于 2026-10-20，本期采集失败），自 2026-10，链接 https://xka0085-byte.github.io/longgame/lines/sb253-docket.html
 - agent-dirs：当前登记的 agent 密钥 6 把，自 2026-10，链接 https://xka0085-byte.github.io/longgame/lines/agent-dirs.html
 - eidas-tsl：EU 信任列表指针 42 个，自 2026-10，链接 https://xka0085-byte.github.io/longgame/lines/eidas-tsl.html
 - formd-sweep：本月十个关键词合计新增 Form D 备案 23 件，自 2026-10，链接 https://xka0085-byte.github.io/longgame/lines/formd-sweep.html

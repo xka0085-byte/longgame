@@ -1,0 +1,49 @@
+{
+  "generated_at": "2026-10-22T03:45:28.798Z",
+  "commit": "2564b28db93213e1df123d46828e2a2219206fc5",
+  "all_blocked": true,
+  "cases": [
+    {
+      "line": "agent-dirs",
+      "sample": "assurance/fixtures/agent-dirs/normal.json",
+      "sample_sha256_after_mutation": "adf369ecac16e10e67dc57ecf3b263080d634130852e5bf1eda32f8ffcb0a004",
+      "gate_exit": 1,
+      "gate_failed_check": "fixtures",
+      "publish_exit": 1,
+      "publish_blocked": true,
+      "sandbox_data_hash_before": "c0fdbc6bbac9be18636e9746149d326cef5f15c13755d385de63c555c350b8e6",
+      "sandbox_data_hash_after_publish": "c0fdbc6bbac9be18636e9746149d326cef5f15c13755d385de63c555c350b8e6",
+      "sandbox_data_unchanged": true,
+      "real_data_unchanged": true,
+      "pass": true
+    },
+    {
+      "line": "eidas-tsl",
+      "sample": "assurance/fixtures/eidas-tsl/normal.json",
+      "sample_sha256_after_mutation": "033a6c55c7d14771e2ffca5fa3458db5c7615872839e551eb5c34e28df15c3de",
+      "gate_exit": 1,
+      "gate_failed_check": "fixtures",
+      "publish_exit": 1,
+      "publish_blocked": true,
+      "sandbox_data_hash_before": "313abb5359af9828b5c102b3b755d79396e93b16fd0b247400c233d9885e9810",
+      "sandbox_data_hash_after_publish": "313abb5359af9828b5c102b3b755d79396e93b16fd0b247400c233d9885e9810",
+      "sandbox_data_unchanged": true,
+      "real_data_unchanged": true,
+      "pass": true
+    },
+    {
+      "line": "formd-sweep",
+      "sample": "assurance/fixtures/formd-sweep/normal.json",
+      "sample_sha256_after_mutation": "5b6aba62b1f7b690b5d555f057f4b249000f991eeee0eb15b5f19a543104d326",
+      "gate_exit": 1,
+      "gate_failed_check": "fixtures",
+      "publish_exit": 1,
+      "publish_blocked": true,
+      "sandbox_data_hash_before": "d1e16e4f03d503f336034ddf718f9abfce4cf204fd675cb01074ab914e57839a",
+      "sandbox_data_hash_after_publish": "d1e16e4f03d503f336034ddf718f9abfce4cf204fd675cb01074ab914e57839a",
+      "sandbox_data_unchanged": true,
+      "real_data_unchanged": true,
+      "pass": true
+    }
+  ]
+}

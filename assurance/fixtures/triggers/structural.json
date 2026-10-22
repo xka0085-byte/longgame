@@ -1,0 +1,20 @@
+{
+ "collect": {
+  "runs": [
+   {
+    "date": "2026-10-21T12:00:00.000Z",
+    "pages": [
+     {
+      "id": "trigger-sample",
+      "status": "200",
+      "bytes": -5,
+      "sig": 7,
+      "changed": "false",
+      "keywordHit": "yes",
+      "unavailable": "false"
+     }
+    ]
+   }
+  ]
+ }
+}

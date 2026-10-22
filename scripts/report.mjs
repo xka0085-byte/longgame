@@ -36,6 +36,57 @@ function auditSummaryMarkdown() {
   }
 }
 
+function assuranceSummaryMarkdown() {
+  const readJson = (p) => { try { return JSON.parse(readFileSync(p, 'utf8')); } catch { return null; } };
+  const contracts = readJson('assurance/results/contracts.json');
+  const fixtures = readJson('assurance/results/fixtures.json');
+  const aTotal = contracts?.assertions ?? null;
+  const aFail = contracts?.failures ?? null;
+  const fTotal = fixtures?.samples ?? null;
+  const fPass = fixtures?.passed ?? null;
+  let rate = 'UNKNOWN';
+  if (aTotal !== null && aFail !== null && fTotal !== null && fPass !== null && aTotal + fTotal > 0) {
+    rate = `${(((aTotal - aFail + fPass) / (aTotal + fTotal)) * 100).toFixed(1)}%（契约 ${aTotal - aFail}/${aTotal}，样本 ${fPass}/${fTotal}）`;
+  }
+
+  // 本月 quarantine 次数：来自发布台账，每次进入隔离记一条。
+  let qCount = 0;
+  if (existsSync('assurance/quarantine-log.jsonl')) {
+    for (const row of readFileSync('assurance/quarantine-log.jsonl', 'utf8').split(/\r?\n/).filter(Boolean)) {
+      try { if (JSON.parse(row).at?.slice(0, 7) === month) qCount += 1; } catch { /* 跳过坏行 */ }
+    }
+  }
+
+  let evidence = 0;
+  const ev = readJson('docs/evidence.json');
+  if (Array.isArray(ev)) evidence = ev.length;
+
+  const levels = [];
+  for (const s of portfolio.series) {
+    let lvl = 'UNKNOWN';
+    const f = `assurance/contracts/datasets/${s.id}.yaml`;
+    if (existsSync(f)) {
+      const m = readFileSync(f, 'utf8').match(/^assurance_level:\s*([0-5])\s*$/m);
+      if (m) lvl = m[1];
+    }
+    levels.push(`| ${s.id} | ${lvl} |`);
+  }
+
+  return `## 工程保证月报
+
+- 断言通过率：${rate}
+- 本月 quarantine 次数：${qCount}（来源 assurance/quarantine-log.jsonl，按进入隔离的线每次记一条）
+- 外部证据数：${evidence}（docs/evidence.json 中来自项目外部的条目总数）
+- 各线 assurance_level：
+
+| 线 | assurance_level |
+| --- | --- |
+${levels.join('\n')}
+
+说明：本地线最高 2，外部线最高 1，无任何线达到 Level 3。通过率与等级只描述当前可复现的检查结果，不代表第三方独立验证。
+`;
+}
+
 let md = `# 组合月报 ${month}\n\n生成 ${now.toISOString()}。人工接口：读毕点头。规则：雷达命中进月报，升级触发器命中当月十问初筛，任一线连续两年三问体检答否即降级或清仓。\n\n`;
 for (const s of portfolio.series) {
   const st = stOf(s.id);
@@ -50,6 +101,7 @@ for (const s of portfolio.series) {
 }
 const alertsAll = portfolio.series.flatMap(s => (stOf(s.id)?.radar.alerts || []).slice(-3).map(a => ({ line: s.id, ...a }))).sort((a, b) => (a.date < b.date ? 1 : -1)).slice(0, 15);
 md += '## 最近雷达命中\n\n' + (alertsAll.length ? alertsAll.map(a => `- ${a.date.slice(0, 10)} [${a.line}] ${a.title}`).join('\n') : '无') + '\n';
+md += '\n' + assuranceSummaryMarkdown() + '\n';
 md += '\n' + auditSummaryMarkdown() + '\n';
 md += '## 每年三问体检\n\n一 驱动时间表是否推进。二 历史是否出现真实买方或稳定引用方。三 是否出现资金充足的回填者。任一问连续两年答否即降级或清仓。\n';
 writeFileSync(`docs/report-${month}.md`, md);

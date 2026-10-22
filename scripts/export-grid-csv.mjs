@@ -5,7 +5,8 @@ import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { dirname } from 'node:path';
 
 const SRC = 'data/lines/grid-queue.json';
-const OUT = 'docs/data/grid-queue-latest.csv';
+const DOCS = process.env.LONGGAME_DOCS || 'docs';
+const OUT = `${DOCS}/data/grid-queue-latest.csv`;
 const COLS = [
   'date',
   'source_file',

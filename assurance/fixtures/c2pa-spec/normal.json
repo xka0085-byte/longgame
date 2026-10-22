@@ -1,0 +1,20 @@
+{
+ "collect": {
+  "runs": [
+   {
+    "date": "2026-10-21T12:00:00.000Z",
+    "pages": [
+     {
+      "id": "c2pa-sample",
+      "status": 200,
+      "bytes": 2048,
+      "sig": "2048:PGh0bWw+",
+      "changed": false,
+      "keywordHit": true,
+      "unavailable": false
+     }
+    ]
+   }
+  ]
+ }
+}

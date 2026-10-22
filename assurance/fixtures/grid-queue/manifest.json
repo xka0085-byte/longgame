@@ -1,70 +1,84 @@
 {
-  "dataset": "grid-queue",
-  "contract": "assurance/contracts/datasets/grid-queue.yaml",
-  "generated_at": "2026-10-21",
-  "samples": [
-    {
-      "file": "normal.json",
-      "sha256": "4d648af80d3f586159ae35322cdeb95c5e85e683aeaeefd60d9e00a5d442f6f6",
-      "source": "构造样本，未复制生产数据；列语义来自 EIA-860M 公开表头",
-      "target": "contract-schema",
-      "expected": "pass",
-      "expected_error_contains": "",
-      "expected_values": {
-        "sum_capacity_mw": 446,
-        "record_count": 3
-      },
-      "expected_basis": "三行容量 150.5 + 220.0 + 75.5 = 446.0，人工算术；字段名取自 EIA-860M 表头 Nameplate Capacity (MW)"
-    },
-    {
-      "file": "empty.json",
-      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
-      "source": "构造样本，未复制生产数据；列语义来自 EIA-860M 公开表头",
-      "target": "contract-schema",
-      "expected": "fail",
-      "expected_error_contains": "empty",
-      "expected_values": null,
-      "expected_basis": "契约要求至少一条记录；空数组不能作为成功采集"
-    },
-    {
-      "file": "missing-column.json",
-      "sha256": "adccff018aede770bae39f9145bf6cf0847ff2587407c9e711b0ac68bd677a1a",
-      "source": "构造样本，未复制生产数据；列语义来自 EIA-860M 公开表头",
-      "target": "contract-schema",
-      "expected": "fail",
-      "expected_error_contains": "capacity_mw",
-      "expected_values": null,
-      "expected_basis": "契约要求 capacity_mw 必填；缺列时不得回退 0"
-    },
-    {
-      "file": "unit-gw.json",
-      "sha256": "9b4a9aa1b8d5ae66fe5345d8c6f434880fb93c61bdd7804b0a7477a780b286af",
-      "source": "构造样本，未复制生产数据；列语义来自 EIA-860M 公开表头",
-      "target": "contract-schema",
-      "expected": "fail",
-      "expected_error_contains": "MW",
-      "expected_values": null,
-      "expected_basis": "契约规定 capacity_unit 必须为 MW；GW 数值未换算，不能当作 MW"
-    },
-    {
-      "file": "duplicate.json",
-      "sha256": "8c1dc5c73ce31a546b538e08b09ecab7c5f1e696b5a2e05d2f10da4f67de65bc",
-      "source": "构造样本，未复制生产数据；列语义来自 EIA-860M 公开表头",
-      "target": "contract-schema",
-      "expected": "fail",
-      "expected_error_contains": "duplicate",
-      "expected_values": null,
-      "expected_basis": "主键 period+plant_id+generator_id 必须唯一"
-    },
-    {
-      "file": "source-error.json",
-      "sha256": "1665e219428491724a8be7eb84d8b26abf756509b4feb3343344923a37b3bdf4",
-      "source": "构造样本，未复制生产数据；列语义来自 EIA-860M 公开表头",
-      "target": "contract-schema",
-      "expected": "fail",
-      "expected_error_contains": "host",
-      "expected_values": null,
-      "expected_basis": "source_url 主机必须属于 source.hosts（www.eia.gov）"
-    }
-  ]
+ "dataset": "grid-queue",
+ "contract": "assurance/contracts/datasets/grid-queue.yaml",
+ "generated_at": "2026-10-21",
+ "samples": [
+  {
+   "file": "normal.json",
+   "sha256": "4d648af80d3f586159ae35322cdeb95c5e85e683aeaeefd60d9e00a5d442f6f6",
+   "source": "构造样本，未复制生产数据；列语义来自 EIA-860M 公开表头",
+   "target": "contract-schema",
+   "expected": "pass",
+   "expected_error_contains": "",
+   "expected_values": {
+    "sum_capacity_mw": 446,
+    "record_count": 3
+   },
+   "expected_basis": "三行容量 150.5 + 220.0 + 75.5 = 446.0，人工算术；字段名取自 EIA-860M 表头 Nameplate Capacity (MW)",
+   "basis": "依据契约 required_fields、单位与去重规则手工构造；预期不从采集器输出复制。",
+   "kind": "normal"
+  },
+  {
+   "file": "empty.json",
+   "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+   "source": "构造样本，未复制生产数据；列语义来自 EIA-860M 公开表头",
+   "target": "contract-schema",
+   "expected": "fail",
+   "expected_error_contains": "empty",
+   "expected_values": null,
+   "expected_basis": "契约要求至少一条记录；空数组不能作为成功采集",
+   "basis": "依据契约 required_fields、单位与去重规则手工构造；预期不从采集器输出复制。",
+   "kind": "empty"
+  },
+  {
+   "file": "missing-column.json",
+   "sha256": "adccff018aede770bae39f9145bf6cf0847ff2587407c9e711b0ac68bd677a1a",
+   "source": "构造样本，未复制生产数据；列语义来自 EIA-860M 公开表头",
+   "target": "contract-schema",
+   "expected": "fail",
+   "expected_error_contains": "capacity_mw",
+   "expected_values": null,
+   "expected_basis": "契约要求 capacity_mw 必填；缺列时不得回退 0",
+   "basis": "依据契约 required_fields、单位与去重规则手工构造；预期不从采集器输出复制。",
+   "kind": "invalid"
+  },
+  {
+   "file": "unit-gw.json",
+   "sha256": "9b4a9aa1b8d5ae66fe5345d8c6f434880fb93c61bdd7804b0a7477a780b286af",
+   "source": "构造样本，未复制生产数据；列语义来自 EIA-860M 公开表头",
+   "target": "contract-schema",
+   "expected": "fail",
+   "expected_error_contains": "MW",
+   "expected_values": null,
+   "expected_basis": "契约规定 capacity_unit 必须为 MW；GW 数值未换算，不能当作 MW",
+   "basis": "依据契约 required_fields、单位与去重规则手工构造；预期不从采集器输出复制。",
+   "kind": "invalid"
+  },
+  {
+   "file": "duplicate.json",
+   "sha256": "8c1dc5c73ce31a546b538e08b09ecab7c5f1e696b5a2e05d2f10da4f67de65bc",
+   "source": "构造样本，未复制生产数据；列语义来自 EIA-860M 公开表头",
+   "target": "contract-schema",
+   "expected": "fail",
+   "expected_error_contains": "duplicate",
+   "expected_values": null,
+   "expected_basis": "主键 period+plant_id+generator_id 必须唯一",
+   "basis": "依据契约 required_fields、单位与去重规则手工构造；预期不从采集器输出复制。",
+   "kind": "invalid"
+  },
+  {
+   "file": "source-error.json",
+   "sha256": "1665e219428491724a8be7eb84d8b26abf756509b4feb3343344923a37b3bdf4",
+   "source": "构造样本，未复制生产数据；列语义来自 EIA-860M 公开表头",
+   "target": "contract-schema",
+   "expected": "fail",
+   "expected_error_contains": "host",
+   "expected_values": null,
+   "expected_basis": "source_url 主机必须属于 source.hosts（www.eia.gov）",
+   "basis": "依据契约 required_fields、单位与去重规则手工构造；预期不从采集器输出复制。",
+   "kind": "invalid"
+  }
+ ],
+ "line": "grid-queue",
+ "sample_status": "REQUIRED"
 }

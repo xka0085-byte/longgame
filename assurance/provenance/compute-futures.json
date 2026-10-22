@@ -1,0 +1,14 @@
+{
+  "run_id": "local-20261022034747726",
+  "line": "compute-futures",
+  "commit": "2564b28db93213e1df123d46828e2a2219206fc5",
+  "contract_version": 1,
+  "assurance_level": 2,
+  "raw_sha256": "317bca4d6a9cc828d0849aadb7c93c050c0b742904fedd59e735f7cbed044e7a",
+  "normalized_sha256": "acb51cfabd328d172ac0d9dc7cac18ac596f4ccb00b272706b7fb80896ec895b",
+  "validation_status": "PASS",
+  "publication_status": "QUARANTINED",
+  "publication_reason": "latest run is not publish-eligible",
+  "last_success_at": null,
+  "generated_at": "2026-10-22T03:47:47.726Z"
+}

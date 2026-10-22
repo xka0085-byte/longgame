@@ -1,0 +1,537 @@
+{
+  "at": "2026-10-22T03:47:48.392Z",
+  "samples": 42,
+  "passed": 42,
+  "failed": 0,
+  "results": [
+    {
+      "dataset": "agent-dirs",
+      "file": "normal.json",
+      "target": "contract-schema",
+      "expected": "pass",
+      "status": "PASS",
+      "errors": [],
+      "checks": [],
+      "observed": null
+    },
+    {
+      "dataset": "agent-dirs",
+      "file": "empty.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "dirs must be a non-empty object"
+      ],
+      "observed": null
+    },
+    {
+      "dataset": "agent-dirs",
+      "file": "structural.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "dirs[https://a.example/dir].keyCount must be non-negative integer"
+      ],
+      "observed": null
+    },
+    {
+      "dataset": "aiact-register",
+      "file": "normal.json",
+      "target": "contract-schema",
+      "expected": "pass",
+      "status": "PASS",
+      "errors": [],
+      "checks": [],
+      "observed": null
+    },
+    {
+      "dataset": "aiact-register",
+      "file": "empty.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "pages must be a non-empty array"
+      ],
+      "observed": null
+    },
+    {
+      "dataset": "aiact-register",
+      "file": "structural.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "page[0].status must be integer",
+        "page[0].changed must be boolean",
+        "page[0].keywordHit must be boolean",
+        "page[0].unavailable must be boolean",
+        "page[0].bytes must be a non-negative integer",
+        "page[0].sig must be string or null"
+      ],
+      "observed": null
+    },
+    {
+      "dataset": "c2pa-spec",
+      "file": "normal.json",
+      "target": "contract-schema",
+      "expected": "pass",
+      "status": "PASS",
+      "errors": [],
+      "checks": [],
+      "observed": null
+    },
+    {
+      "dataset": "c2pa-spec",
+      "file": "empty.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "pages must be a non-empty array"
+      ],
+      "observed": null
+    },
+    {
+      "dataset": "c2pa-spec",
+      "file": "structural.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "page[0].status must be integer",
+        "page[0].changed must be boolean",
+        "page[0].keywordHit must be boolean",
+        "page[0].unavailable must be boolean",
+        "page[0].bytes must be a non-negative integer",
+        "page[0].sig must be string or null"
+      ],
+      "observed": null
+    },
+    {
+      "dataset": "compute-futures",
+      "file": "normal.json",
+      "target": "contract-schema",
+      "expected": "pass",
+      "status": "PASS",
+      "errors": [],
+      "checks": [],
+      "observed": null
+    },
+    {
+      "dataset": "compute-futures",
+      "file": "empty.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "pages must be a non-empty array"
+      ],
+      "observed": null
+    },
+    {
+      "dataset": "compute-futures",
+      "file": "structural.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "page[0].status must be integer",
+        "page[0].changed must be boolean",
+        "page[0].keywordHit must be boolean",
+        "page[0].unavailable must be boolean",
+        "page[0].bytes must be a non-negative integer",
+        "page[0].sig must be string or null"
+      ],
+      "observed": null
+    },
+    {
+      "dataset": "eidas-tsl",
+      "file": "normal.json",
+      "target": "contract-schema",
+      "expected": "pass",
+      "status": "PASS",
+      "errors": [],
+      "checks": [],
+      "observed": null
+    },
+    {
+      "dataset": "eidas-tsl",
+      "file": "empty.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "pointers must be a non-empty array"
+      ],
+      "observed": null
+    },
+    {
+      "dataset": "eidas-tsl",
+      "file": "structural.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "pointers must contain non-empty strings",
+        "pointerCount must be a non-negative integer"
+      ],
+      "observed": null
+    },
+    {
+      "dataset": "erc8004-snapshot",
+      "file": "NOT_APPLICABLE.md",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "dataset": "formd-sweep",
+      "file": "normal.json",
+      "target": "contract-schema",
+      "expected": "pass",
+      "status": "PASS",
+      "errors": [],
+      "checks": [],
+      "observed": null
+    },
+    {
+      "dataset": "formd-sweep",
+      "file": "empty.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "queries must be a non-empty array"
+      ],
+      "observed": null
+    },
+    {
+      "dataset": "formd-sweep",
+      "file": "structural.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "query[0].allTime must be non-negative integer",
+        "query[0].thisMonth must be non-negative integer"
+      ],
+      "observed": null
+    },
+    {
+      "dataset": "grid-queue",
+      "file": "normal.json",
+      "target": "contract-schema",
+      "expected": "pass",
+      "status": "PASS",
+      "errors": [],
+      "checks": [],
+      "observed": {
+        "record_count": 3,
+        "sum_capacity_mw": 446
+      }
+    },
+    {
+      "dataset": "grid-queue",
+      "file": "empty.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "empty dataset"
+      ],
+      "observed": {
+        "record_count": 0,
+        "sum_capacity_mw": 0
+      }
+    },
+    {
+      "dataset": "grid-queue",
+      "file": "missing-column.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "row 1 missing field capacity_mw",
+        "row 1 capacity_mw must be a finite number"
+      ],
+      "observed": {
+        "record_count": 3,
+        "sum_capacity_mw": 226
+      }
+    },
+    {
+      "dataset": "grid-queue",
+      "file": "unit-gw.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "row 1 capacity_unit must be MW, got \"GW\""
+      ],
+      "observed": {
+        "record_count": 3,
+        "sum_capacity_mw": 446
+      }
+    },
+    {
+      "dataset": "grid-queue",
+      "file": "duplicate.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "duplicate key 2026-08|1001|1"
+      ],
+      "observed": {
+        "record_count": 4,
+        "sum_capacity_mw": 596.5
+      }
+    },
+    {
+      "dataset": "grid-queue",
+      "file": "source-error.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "row 1 source host is not allowed: \"https://example.com/fake-eia.xlsx\""
+      ],
+      "observed": {
+        "record_count": 3,
+        "sum_capacity_mw": 446
+      }
+    },
+    {
+      "dataset": "mcpreflight",
+      "file": "normal.json",
+      "target": "contract-schema",
+      "expected": "pass",
+      "status": "PASS",
+      "errors": [],
+      "checks": [],
+      "observed": {
+        "result_count": 3
+      }
+    },
+    {
+      "dataset": "mcpreflight",
+      "file": "empty.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "empty results"
+      ],
+      "observed": {
+        "result_count": 0
+      }
+    },
+    {
+      "dataset": "mcpreflight",
+      "file": "missing-field.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "result 1 missing field finalStatus",
+        "result 1 finalStatus must be PASS|FAIL|AUTH_GATED|UNKNOWN, got undefined"
+      ],
+      "observed": {
+        "result_count": 3
+      }
+    },
+    {
+      "dataset": "mcpreflight",
+      "file": "unit-string.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "result 0 toolCount must be integer or null, got \"12 tools\""
+      ],
+      "observed": {
+        "result_count": 3
+      }
+    },
+    {
+      "dataset": "mcpreflight",
+      "file": "duplicate.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "duplicate key io.example/alpha"
+      ],
+      "observed": {
+        "result_count": 4
+      }
+    },
+    {
+      "dataset": "mcpreflight",
+      "file": "http-429.json",
+      "target": "publish-eligibility",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "result io.example/alpha is UNKNOWN and must not be published as PASS"
+      ],
+      "observed": {
+        "result_count": 3
+      }
+    },
+    {
+      "dataset": "mcpreflight-weekly",
+      "file": "NOT_APPLICABLE.md",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "dataset": "protocol-watch",
+      "file": "NOT_APPLICABLE.md",
+      "status": "PASS",
+      "errors": []
+    },
+    {
+      "dataset": "sb253-docket",
+      "file": "normal.json",
+      "target": "contract-schema",
+      "expected": "pass",
+      "status": "PASS",
+      "errors": [],
+      "checks": [],
+      "observed": null
+    },
+    {
+      "dataset": "sb253-docket",
+      "file": "empty.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "pages must be a non-empty array"
+      ],
+      "observed": null
+    },
+    {
+      "dataset": "sb253-docket",
+      "file": "structural.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "page[0].status must be integer",
+        "page[0].changed must be boolean",
+        "page[0].keywordHit must be boolean",
+        "page[0].unavailable must be boolean",
+        "page[0].bytes must be a non-negative integer",
+        "page[0].sig must be string or null"
+      ],
+      "observed": null
+    },
+    {
+      "dataset": "state-ai-laws",
+      "file": "normal.json",
+      "target": "contract-schema",
+      "expected": "pass",
+      "status": "PASS",
+      "errors": [],
+      "checks": [],
+      "observed": null
+    },
+    {
+      "dataset": "state-ai-laws",
+      "file": "empty.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "pages must be a non-empty array"
+      ],
+      "observed": null
+    },
+    {
+      "dataset": "state-ai-laws",
+      "file": "structural.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "page[0].status must be integer",
+        "page[0].changed must be boolean",
+        "page[0].keywordHit must be boolean",
+        "page[0].unavailable must be boolean",
+        "page[0].bytes must be a non-negative integer",
+        "page[0].sig must be string or null"
+      ],
+      "observed": null
+    },
+    {
+      "dataset": "triggers",
+      "file": "normal.json",
+      "target": "contract-schema",
+      "expected": "pass",
+      "status": "PASS",
+      "errors": [],
+      "checks": [],
+      "observed": null
+    },
+    {
+      "dataset": "triggers",
+      "file": "empty.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "pages must be a non-empty array"
+      ],
+      "observed": null
+    },
+    {
+      "dataset": "triggers",
+      "file": "structural.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "page[0].status must be integer",
+        "page[0].changed must be boolean",
+        "page[0].keywordHit must be boolean",
+        "page[0].unavailable must be boolean",
+        "page[0].bytes must be a non-negative integer",
+        "page[0].sig must be string or null",
+        "page[0].keywordHit must be boolean for triggers"
+      ],
+      "observed": null
+    }
+  ]
+}

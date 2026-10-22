@@ -4,3 +4,4 @@ assurance/fault-injection/guard-work/
 assurance/fault-injection/logs/
 assurance/fault-injection/run-error.log
 assurance/fault-injection/guard-result.json
+assurance/.staging/

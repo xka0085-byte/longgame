@@ -1,0 +1,37 @@
+{
+ "dataset": "agent-dirs",
+ "line": "agent-dirs",
+ "sample_status": "REQUIRED",
+ "samples": [
+  {
+   "file": "normal.json",
+   "kind": "normal",
+   "target": "contract-schema",
+   "expected": "pass",
+   "expected_error_contains": null,
+   "sha256": "69307390ad4ba0e72bc55f3ca687dbd6d588b66a12e9499e0b9e79e43444c040",
+   "source": "hand-authored synthetic; 不含生产数据",
+   "basis": "依据目录契约的 run.dirs/run.keys 字段与 keyCount 一致性；不取自生产运行。 单个目录 200，keyCount 与 keys 数组长度一致"
+  },
+  {
+   "file": "empty.json",
+   "kind": "empty",
+   "target": "contract-schema",
+   "expected": "fail",
+   "expected_error_contains": "dirs must be a non-empty object",
+   "sha256": "cf7cdf9e018352af177360356865815f312542da66389f752f8ff816e9c587df",
+   "source": "hand-authored synthetic; 不含生产数据",
+   "basis": "依据目录契约的 run.dirs/run.keys 字段与 keyCount 一致性；不取自生产运行。 目录集合为空视为采集失败，不是零密钥"
+  },
+  {
+   "file": "structural.json",
+   "kind": "invalid",
+   "target": "contract-schema",
+   "expected": "fail",
+   "expected_error_contains": "keyCount must be non-negative integer",
+   "sha256": "1d415afbfaaa65a25d52cb507aa4d835829facbdc8e08153806fc58067c642e8",
+   "source": "hand-authored synthetic; 不含生产数据",
+   "basis": "依据目录契约的 run.dirs/run.keys 字段与 keyCount 一致性；不取自生产运行。 keyCount 用字符串冒充整数且与 keys 长度不符"
+  }
+ ]
+}

@@ -1,0 +1,37 @@
+{
+ "dataset": "sb253-docket",
+ "line": "sb253-docket",
+ "sample_status": "REQUIRED",
+ "samples": [
+  {
+   "file": "normal.json",
+   "kind": "normal",
+   "target": "contract-schema",
+   "expected": "pass",
+   "expected_error_contains": null,
+   "sha256": "95d4fabc530c255e4f918671392e671b08f125f6e5852c244bd58631b389ec44",
+   "source": "hand-authored synthetic; 不含生产数据",
+   "basis": "依据 CARB 契约 required_fields 与 invariants；正常/空/结构错误三类独立手工构造。 CARB 页面正常抓取，200、非空签名、unavailable=false"
+  },
+  {
+   "file": "empty.json",
+   "kind": "empty",
+   "target": "contract-schema",
+   "expected": "fail",
+   "expected_error_contains": "pages must be a non-empty array",
+   "sha256": "9c2f940a84dc855d717d0f77fb47db64d038efdd203de332bedd1e81532c7d32",
+   "source": "hand-authored synthetic; 不含生产数据",
+   "basis": "依据 CARB 契约 required_fields 与 invariants；正常/空/结构错误三类独立手工构造。 空抓取没有任何页面记录，必须失败，不能当作零条企业记录"
+  },
+  {
+   "file": "structural.json",
+   "kind": "invalid",
+   "target": "contract-schema",
+   "expected": "fail",
+   "expected_error_contains": "page[0].status must be integer",
+   "sha256": "9ebf4c75e7c6464f5e73fb2fe1e077e44bd1c61f2316a30d25e688bd7253b69f",
+   "source": "hand-authored synthetic; 不含生产数据",
+   "basis": "依据 CARB 契约 required_fields 与 invariants；正常/空/结构错误三类独立手工构造。 状态码/字节/签名/布尔标记类型全部错位，必须失败"
+  }
+ ]
+}

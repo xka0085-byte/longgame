@@ -1,0 +1,37 @@
+{
+ "dataset": "eidas-tsl",
+ "line": "eidas-tsl",
+ "sample_status": "REQUIRED",
+ "samples": [
+  {
+   "file": "normal.json",
+   "kind": "normal",
+   "target": "contract-schema",
+   "expected": "pass",
+   "expected_error_contains": null,
+   "sha256": "7230d6d88f456e40e802e705cb9a7e37f05bba3d98560a758342abb023be402a",
+   "source": "hand-authored synthetic; 不含生产数据",
+   "basis": "依据 TSL 契约的 run.pointers/run.pointerCount 字段与长度一致不变量。 两个指针，pointerCount 与数组长度一致"
+  },
+  {
+   "file": "empty.json",
+   "kind": "empty",
+   "target": "contract-schema",
+   "expected": "fail",
+   "expected_error_contains": "pointers must be a non-empty array",
+   "sha256": "7261ed02de4e9214c12ee2138bcfb624abdad217ce813159f47cc0d10299d8cc",
+   "source": "hand-authored synthetic; 不含生产数据",
+   "basis": "依据 TSL 契约的 run.pointers/run.pointerCount 字段与长度一致不变量。 空指针列表必须失败，不能发布零个信任列表"
+  },
+  {
+   "file": "structural.json",
+   "kind": "invalid",
+   "target": "contract-schema",
+   "expected": "fail",
+   "expected_error_contains": "pointerCount must be a non-negative integer",
+   "sha256": "a841ad32988eec7ab0e5c1dd77a3c33e07092c6181ccfc54bfca8c5b3efbdb6a",
+   "source": "hand-authored synthetic; 不含生产数据",
+   "basis": "依据 TSL 契约的 run.pointers/run.pointerCount 字段与长度一致不变量。 指针含非字符串且计数为字符串"
+  }
+ ]
+}

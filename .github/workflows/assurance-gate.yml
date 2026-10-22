@@ -5,7 +5,7 @@ name: assurance-gate
 on:
   pull_request:
   push:
-    branches: [main, assurance-phase1]
+    branches: [main, assurance-phase1, assurance-phase2]
   workflow_dispatch:
 
 permissions:

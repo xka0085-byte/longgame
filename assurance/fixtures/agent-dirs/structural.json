@@ -1,0 +1,20 @@
+{
+ "collect": {
+  "runs": [
+   {
+    "date": "2026-10-21T12:00:00.000Z",
+    "dirs": {
+     "https://a.example/dir": {
+      "status": 200,
+      "keyCount": "2"
+     }
+    },
+    "keys": {
+     "https://a.example/dir": [
+      "only-one"
+     ]
+    }
+   }
+  ]
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "collect": {
+  "runs": [
+   {
+    "date": "2026-10-21T12:00:00.000Z",
+    "pointers": [
+     "https://a.example/tsl.xml",
+     "https://b.example/tsl.xml"
+    ],
+    "pointerCount": 2
+   }
+  ]
+ }
+}

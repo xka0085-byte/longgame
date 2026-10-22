@@ -1,0 +1,37 @@
+{
+ "dataset": "aiact-register",
+ "line": "aiact-register",
+ "sample_status": "REQUIRED",
+ "samples": [
+  {
+   "file": "normal.json",
+   "kind": "normal",
+   "target": "contract-schema",
+   "expected": "pass",
+   "expected_error_contains": null,
+   "sha256": "a5501807ef20f3aa59d36d4c7bf03001546cc6b7aecbca0a0d4dba884f4bf8aa",
+   "source": "hand-authored synthetic; 不含生产数据",
+   "basis": "依据页面契约的 id/status/unavailable/bytes/changed/keywordHit 字段定义。 正常 200 页面，bytes 为正、签名非空、布尔标记齐全"
+  },
+  {
+   "file": "empty.json",
+   "kind": "empty",
+   "target": "contract-schema",
+   "expected": "fail",
+   "expected_error_contains": "pages must be a non-empty array",
+   "sha256": "9c2f940a84dc855d717d0f77fb47db64d038efdd203de332bedd1e81532c7d32",
+   "source": "hand-authored synthetic; 不含生产数据",
+   "basis": "依据页面契约的 id/status/unavailable/bytes/changed/keywordHit 字段定义。 页面数组为空表示没有可用抓取，必须失败"
+  },
+  {
+   "file": "structural.json",
+   "kind": "invalid",
+   "target": "contract-schema",
+   "expected": "fail",
+   "expected_error_contains": "page[0].bytes must be a non-negative integer",
+   "sha256": "f4403a1ba3b7a2158bf525f4c056771c8a885a1cc1097cf0f04ad2bd2b271b29",
+   "source": "hand-authored synthetic; 不含生产数据",
+   "basis": "依据页面契约的 id/status/unavailable/bytes/changed/keywordHit 字段定义。 状态码/字节/签名/布尔标记类型错位，必须失败"
+  }
+ ]
+}

@@ -1,4 +1,6 @@
 contract_version: 1
+assurance_level: 1
+assurance_level_basis: "外部线由 mcpdoctor 托管，本仓库仅引用其状态，无本地原始数据与独立复算能力，按上限 1 记录。"
 id: "mcpreflight-weekly"
 status: "external"
 owner: "UNKNOWN"
@@ -59,7 +61,7 @@ units:
 freshness:
   cadence: "weekly"
   max_age_days: "UNKNOWN"
-  basis: "UNKNOWN"
+  basis: "外部线无本地采集与发布，longgame 无法独立证明新鲜度，故保持 UNKNOWN。"
 failure_policy:
   on_http_error: "fail"
   on_429: "fail"
@@ -69,16 +71,26 @@ failure_policy:
   on_unit_mismatch: "fail"
   on_duplicate: "fail"
   on_source_host_mismatch: "fail"
+  on_quarantine: "keep-previous"
 publish:
   require_gate: true
   blocked_by:
     - "contracts"
     - "fixtures"
   external_data: true
+  preconditions:
+    - "同一 commit 的 assurance-gate 必须 PASS（verify / contracts / fixtures / fault-injection）"
+    - "validate-contracts 零失败"
+    - "本地线固定样本全部通过；外部线为 NOT_APPLICABLE"
+    - "候选仅写入 assurance/.staging，全部校验通过后才原子替换 docs 与 data"
+    - "provenance 必须写入 raw_sha256 / normalized_sha256 / validation_status / publication_status"
+    - "外部线不本地发布；状态引用 mcpdoctor，缺证据时记 UNKNOWN"
 review:
   last_reviewed: "2026-10-21"
   unresolved_assumptions:
-    - "新鲜度上限未从来源文档或历史运行中证明，故标记 UNKNOWN，不设数值阈值。"
+    - "owner 未指定，责任人与升级路径为 UNKNOWN。"
+    - "外部线没有本地原始数据与采集代码，新鲜度只能保持 UNKNOWN，不能由本仓库证明。"
+    - "新鲜度上限由采集周期推导，来源文档未规定该数值，故阈值仅作为本仓库运维阈值，不声称来自来源本身。"
     - "来源许可条款未在本阶段核验，故标记 UNKNOWN。"
     - "本契约只覆盖字段与不变量，不证明来源内容的语义正确性。"
     - "该线由 mcpdoctor 管理，longgame 内无采集脚本与数据文件；契约只能约束外部产物，无法在本仓库门禁中验证实时数据。"

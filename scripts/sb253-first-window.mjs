@@ -6,7 +6,8 @@
 //  3) 五个状态取值固定，出现其他值直接报错，避免页面自造状态。
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 
-const PAGE = process.env.SB253_PAGE || 'docs/lines/sb253-first-window.html';
+const DOCS = process.env.LONGGAME_DOCS || 'docs';
+const PAGE = process.env.SB253_PAGE || `${DOCS}/lines/sb253-first-window.html`;
 const STATE = 'data/lines/sb253-docket.json';
 const ENTITIES = process.env.SB253_ENTITIES || 'data/sb253-entities.json';
 

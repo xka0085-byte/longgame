@@ -1,7 +1,9 @@
 // 数据契约校验器：只读 assurance/contracts/datasets/*.yaml 与契约声明的本地数据。
 // 不修改任何数据；任何失败以非零退出码阻止发布。
-import { readFileSync, existsSync, readdirSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
+import { createHash } from 'node:crypto';
+import { evaluateRun } from './lib/assurance-core.mjs';
 
 const ROOT = process.cwd();
 const CONTRACT_DIR = join(ROOT, 'assurance/contracts/datasets');
@@ -177,6 +179,15 @@ for (const file of files) {
   seen.add(id);
   if (!ids.has(id)) fail(id, 'id is not a series in portfolio.json');
   if (c.contract_version !== 1) fail(id, 'contract_version must be 1');
+  if (!Number.isInteger(c.assurance_level) || c.assurance_level < 0 || c.assurance_level > 5) {
+    fail(id, 'assurance_level must be an integer from 0 to 5');
+  } else {
+    const cap = c.scope?.external === true ? 1 : 2;
+    if (c.assurance_level > cap) fail(id, `assurance_level ${c.assurance_level} exceeds verified cap ${cap}`);
+  }
+  if (!c.assurance_level_basis || typeof c.assurance_level_basis !== 'string' || c.assurance_level_basis === 'UNKNOWN') {
+    fail(id, 'assurance_level_basis is required and must not be UNKNOWN');
+  }
   if (!['enforced', 'contract-only', 'external'].includes(c.status)) fail(id, `invalid status ${c.status}`);
   if (!c.owner || typeof c.owner !== 'string') fail(id, 'owner is required (UNKNOWN allowed)');
 
@@ -210,16 +221,31 @@ for (const file of files) {
   if (typeof fresh.max_age_days === 'number' && (!fresh.basis || fresh.basis === 'UNKNOWN')) {
     fail(id, 'numeric max_age_days requires a non-UNKNOWN basis');
   }
+  if (c.scope?.external !== true && fresh.max_age_days === 'UNKNOWN') {
+    fail(id, 'local line must declare a numeric freshness.max_age_days');
+  }
 
   const fp = c.failure_policy || {};
   for (const k of ['on_http_error', 'on_429', 'on_empty', 'on_parse_error', 'on_missing_field', 'on_unit_mismatch', 'on_duplicate', 'on_source_host_mismatch']) {
     if (!['fail', 'warn', 'keep-previous'].includes(fp[k])) fail(id, `failure_policy.${k} must be fail|warn|keep-previous`);
     if (c.status === 'enforced' && fp[k] !== 'fail') fail(id, `enforced contract must fail on ${k}`);
   }
+  if (!['fail', 'warn', 'keep-previous'].includes(fp.on_quarantine)) {
+    fail(id, 'failure_policy.on_quarantine must be fail|warn|keep-previous');
+  }
 
   const pub = c.publish || {};
   if (pub.require_gate !== true) fail(id, 'publish.require_gate must be true');
   if (!Array.isArray(pub.blocked_by) || pub.blocked_by.length === 0) fail(id, 'publish.blocked_by must be non-empty');
+  const preconditions = asArray(pub.preconditions);
+  if (preconditions.length < 4 || !preconditions.every(p => typeof p === 'string' && p.length > 0)) {
+    fail(id, 'publish.preconditions must list at least 4 concrete preconditions');
+  } else {
+    const joined = preconditions.join(' ');
+    for (const needle of ['assurance-gate', '.staging', 'provenance']) {
+      if (!joined.includes(needle)) fail(id, `publish.preconditions must mention ${needle}`);
+    }
+  }
 
   const rev = c.review || {};
   if (!rev.last_reviewed) fail(id, 'review.last_reviewed required');
@@ -300,6 +326,70 @@ for (const c of contracts) {
     else warn(c.id, 'enforced contract has no registered data checker; only shape was validated');
   }
 }
+
+// ---- 本地真实数据：字段/类型/不变量（历史记录缺新字段时不追溯判错）----
+for (const c of contracts) {
+  if (c.scope?.external === true) continue;
+  const rel = c.scope?.local_path;
+  if (!rel || rel === 'UNKNOWN') { fail(c.id, 'local contract has no local_path'); continue; }
+  const full = join(ROOT, rel);
+  if (!existsSync(full)) { fail(c.id, `data file missing: ${rel}`); continue; }
+  let data;
+  try { data = JSON.parse(readFileSync(full, 'utf8')); }
+  catch (e) { fail(c.id, `data file is not valid JSON: ${e.message}`); continue; }
+  for (const msg of evaluateRun(c.id, data, { strict: false })) fail(c.id, `data: ${msg}`);
+}
+
+// ---- 固定样本覆盖：九条本地线每线至少 3 个（正常/空/结构异常），外部三线 NOT_APPLICABLE ----
+const REQUIRED_SAMPLE_LINES = [
+  'sb253-docket', 'agent-dirs', 'eidas-tsl', 'aiact-register', 'triggers',
+  'formd-sweep', 'compute-futures', 'c2pa-spec', 'state-ai-laws',
+];
+const EXTERNAL_LINES = ['mcpreflight-weekly', 'erc8004-snapshot', 'protocol-watch'];
+const sha256 = (p) => createHash('sha256').update(readFileSync(p)).digest('hex');
+let sampleCount = 0;
+for (const id of REQUIRED_SAMPLE_LINES) {
+  const dir = join(ROOT, 'assurance/fixtures', id);
+  const manifestPath = join(dir, 'manifest.json');
+  if (!existsSync(manifestPath)) { fail(id, 'fixture manifest missing'); continue; }
+  let m;
+  try { m = JSON.parse(readFileSync(manifestPath, 'utf8')); }
+  catch (e) { fail(id, `fixture manifest parse: ${e.message}`); continue; }
+  if (m.sample_status !== 'REQUIRED') fail(id, 'fixture sample_status must be REQUIRED');
+  const samples = asArray(m.samples);
+  if (samples.length < 3) fail(id, `fixture must have at least 3 samples, got ${samples.length}`);
+  const kinds = new Set(samples.map(s => s.kind));
+  for (const kind of ['normal', 'empty', 'invalid']) {
+    if (!kinds.has(kind)) fail(id, `fixture missing kind ${kind}`);
+  }
+  for (const s of samples) {
+    sampleCount++;
+    for (const key of ['sha256', 'source', 'target', 'expected', 'basis']) {
+      if (!s[key] || typeof s[key] !== 'string') fail(id, `sample ${s.file || '?'} missing ${key}`);
+    }
+    if (!['pass', 'fail'].includes(s.expected)) fail(id, `sample ${s.file} expected must be pass|fail`);
+    const fp = join(dir, s.file);
+    if (!existsSync(fp)) { fail(id, `sample file missing ${s.file}`); continue; }
+    if (s.sha256 && sha256(fp) !== s.sha256) fail(id, `sample ${s.file} sha256 does not match manifest`);
+  }
+}
+for (const id of EXTERNAL_LINES) {
+  const marker = join(ROOT, 'assurance/fixtures', id, 'NOT_APPLICABLE.md');
+  if (!existsSync(marker)) { fail(id, 'external line must have assurance/fixtures/<id>/NOT_APPLICABLE.md'); continue; }
+  const text = readFileSync(marker, 'utf8');
+  if (!text.includes('NOT_APPLICABLE') || !text.includes('原因')) fail(id, 'NOT_APPLICABLE marker must state status and reason');
+}
+
+const assertionTotal = contracts.length * 6 + sampleCount;
+mkdirSync(join(ROOT, 'assurance/results'), { recursive: true });
+writeFileSync(join(ROOT, 'assurance/results/contracts.json'), JSON.stringify({
+  at: new Date().toISOString(),
+  contracts: contracts.length,
+  samples: sampleCount,
+  assertions: assertionTotal,
+  failures: errors.length,
+  warnings: warnings.length,
+}, null, 2) + '\n');
 
 for (const w of warnings) console.log(`WARN ${w}`);
 for (const e of errors) console.log(`FAIL ${e}`);

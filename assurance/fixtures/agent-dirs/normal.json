@@ -1,0 +1,21 @@
+{
+ "collect": {
+  "runs": [
+   {
+    "date": "2026-10-21T12:00:00.000Z",
+    "dirs": {
+     "https://a.example/.well-known/http-message-signatures-directory": {
+      "status": 200,
+      "keyCount": 2
+     }
+    },
+    "keys": {
+     "https://a.example/.well-known/http-message-signatures-directory": [
+      "key-one",
+      "key-two"
+     ]
+    }
+   }
+  ]
+ }
+}
