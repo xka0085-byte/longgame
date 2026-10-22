@@ -5,7 +5,7 @@
   "samples": [
     {
       "file": "normal.json",
-      "sha256": "d128e1ccec1125363db7e3e7cb486f40476a91a9f9399c94a687c74c1cb3c12f",
+      "sha256": "bdac2f034d3a71b8c3f2f79bd87bb2a13c361ae5a6c9b13b978bab1fe0efe0bf",
       "source": "构造样本，未复制生产数据；状态模型来自 mcpreflight.mjs 与 trust-scan-all.mjs 的静态审计",
       "target": "contract-schema",
       "expected": "pass",
@@ -14,7 +14,7 @@
     },
     {
       "file": "empty.json",
-      "sha256": "ddb39de424f79b9002a13ee93f16610479604e93213a89cbb5915c6f1f731732",
+      "sha256": "ea6b7cadf44368dbb26f15596a5deee785d2d6ff0878e9da938b99c6ef6763cb",
       "source": "构造样本，未复制生产数据；状态模型来自 mcpreflight.mjs 与 trust-scan-all.mjs 的静态审计",
       "target": "contract-schema",
       "expected": "fail",
@@ -23,7 +23,7 @@
     },
     {
       "file": "missing-field.json",
-      "sha256": "783c79e604b50ff52a559478164bd08254336df2ddf104fc923afc71f15b39cd",
+      "sha256": "e0bcef808890a5528ba2ee1b88ee67909683b52143924843e4fea8ce12dc4c0a",
       "source": "构造样本，未复制生产数据；状态模型来自 mcpreflight.mjs 与 trust-scan-all.mjs 的静态审计",
       "target": "contract-schema",
       "expected": "fail",
@@ -32,7 +32,7 @@
     },
     {
       "file": "unit-string.json",
-      "sha256": "95039439a07125c330e8a453ae8212999d4ac4d8db3b6b458bb148932626cd65",
+      "sha256": "88b85bdb53323da5edbd8aa5ea997f33025d6e70529a071754127e685780bbd3",
       "source": "构造样本，未复制生产数据；状态模型来自 mcpreflight.mjs 与 trust-scan-all.mjs 的静态审计",
       "target": "contract-schema",
       "expected": "fail",
@@ -41,7 +41,7 @@
     },
     {
       "file": "duplicate.json",
-      "sha256": "65d44b96af25c97263613448cc30f27abbd42d1bca519e3e622a93bd09627bb6",
+      "sha256": "755902bf10ce65309a4e480e9f5dd1c1f6735e784fdf071c03523a8194c9af57",
       "source": "构造样本，未复制生产数据；状态模型来自 mcpreflight.mjs 与 trust-scan-all.mjs 的静态审计",
       "target": "contract-schema",
       "expected": "fail",
@@ -50,7 +50,7 @@
     },
     {
       "file": "http-429.json",
-      "sha256": "e806a50d06234cf12b2d035e8eda913b07c35e31eae547b933a6b1b4f9302353",
+      "sha256": "23771abece8250cd86d8288500124571fc57850909af75858a0deb39ee18c079",
       "source": "构造样本，未复制生产数据；状态模型来自 mcpreflight.mjs 与 trust-scan-all.mjs 的静态审计",
       "target": "publish-eligibility",
       "expected": "fail",
