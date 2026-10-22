@@ -44,9 +44,10 @@ function assuranceSummaryMarkdown() {
   const aFail = contracts?.failures ?? null;
   const fTotal = fixtures?.samples ?? null;
   const fPass = fixtures?.passed ?? null;
+  const fNa = fixtures?.not_applicable ?? 0;
   let rate = 'UNKNOWN';
   if (aTotal !== null && aFail !== null && fTotal !== null && fPass !== null && aTotal + fTotal > 0) {
-    rate = `${(((aTotal - aFail + fPass) / (aTotal + fTotal)) * 100).toFixed(1)}%（契约 ${aTotal - aFail}/${aTotal}，样本 ${fPass}/${fTotal}）`;
+    rate = `${(((aTotal - aFail + fPass) / (aTotal + fTotal)) * 100).toFixed(1)}%（契约 ${aTotal - aFail}/${aTotal}，样本 ${fPass}/${fTotal}${fNa ? `，另 ${fNa} 条外部线 NOT_APPLICABLE 不计入` : ''}）`;
   }
 
   // 本月 quarantine 次数：来自发布台账，每次进入隔离记一条。

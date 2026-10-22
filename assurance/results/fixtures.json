@@ -1,8 +1,11 @@
 {
-  "at": "2026-10-22T06:55:19.171Z",
-  "samples": 42,
-  "passed": 42,
+  "at": "2026-10-22T07:17:00.530Z",
+  "samples": 39,
+  "passed": 39,
   "failed": 0,
+  "not_applicable": 3,
+  "markers_passed": 3,
+  "entries": 42,
   "results": [
     {
       "dataset": "agent-dirs",

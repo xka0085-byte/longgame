@@ -155,14 +155,27 @@ for (const dataset of manifestDirs) {
   }
 }
 
-const failed = results.filter((r) => r.status !== 'PASS');
+const markers = results.filter((r) => r.file === 'NOT_APPLICABLE.md');
+const executable = results.filter((r) => r.file !== 'NOT_APPLICABLE.md');
+const failedExecutable = executable.filter((r) => r.status !== 'PASS');
+const failedMarkers = markers.filter((r) => r.status !== 'PASS');
+const failed = [...failedExecutable, ...failedMarkers];
+
 mkdirSync(join(ROOT, 'assurance/results'), { recursive: true });
 writeFileSync(join(ROOT, 'assurance/results/fixtures.json'), JSON.stringify({
   at: new Date().toISOString(),
-  samples: results.length,
-  passed: results.length - failed.length,
+  samples: executable.length,
+  passed: executable.length - failedExecutable.length,
   failed: failed.length,
+  not_applicable: markers.length,
+  markers_passed: markers.length - failedMarkers.length,
+  entries: results.length,
   results,
 }, null, 2) + '\n');
-console.log(`\nrun-fixtures: ${results.length} samples, ${results.length - failed.length} passed, ${failed.length} failed`);
+
+console.log(
+  `\nrun-fixtures: ${executable.length} executable samples, ` +
+  `${executable.length - failedExecutable.length} passed, ${failedExecutable.length} failed; ` +
+  `${markers.length} NOT_APPLICABLE markers, ${markers.length - failedMarkers.length} passed, ${failedMarkers.length} failed`
+);
 process.exitCode = failed.length ? 1 : 0;
