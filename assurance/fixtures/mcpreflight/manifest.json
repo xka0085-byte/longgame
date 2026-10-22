@@ -1,75 +1,75 @@
 {
- "dataset": "mcpreflight-weekly",
- "contract": "assurance/contracts/datasets/mcpreflight-weekly.yaml",
- "generated_at": "2026-10-21",
- "samples": [
-  {
-   "file": "normal.json",
-   "sha256": "bdac2f034d3a71b8c3f2f79bd87bb2a13c361ae5a6c9b13b978bab1fe0efe0bf",
-   "source": "构造样本，未复制生产数据；状态模型来自 mcpreflight.mjs 与 trust-scan-all.mjs 的静态审计",
-   "target": "contract-schema",
-   "expected": "pass",
-   "expected_error_contains": "",
-   "expected_basis": "PASS/AUTH_GATED/FAIL 为扫描器声明的终态集合；字段语义来自 mcpreflight.mjs 的 report 结构；样本只验证结构与可发布性",
-   "basis": "依据契约 required_fields、单位与去重规则手工构造；预期不从采集器输出复制。",
-   "kind": "normal"
-  },
-  {
-   "file": "empty.json",
-   "sha256": "ea6b7cadf44368dbb26f15596a5deee785d2d6ff0878e9da938b99c6ef6763cb",
-   "source": "构造样本，未复制生产数据；状态模型来自 mcpreflight.mjs 与 trust-scan-all.mjs 的静态审计",
-   "target": "contract-schema",
-   "expected": "fail",
-   "expected_error_contains": "empty",
-   "expected_basis": "空 results 不能作为一次成功扫描；契约要求至少一条记录",
-   "basis": "依据契约 required_fields、单位与去重规则手工构造；预期不从采集器输出复制。",
-   "kind": "empty"
-  },
-  {
-   "file": "missing-field.json",
-   "sha256": "e0bcef808890a5528ba2ee1b88ee67909683b52143924843e4fea8ce12dc4c0a",
-   "source": "构造样本，未复制生产数据；状态模型来自 mcpreflight.mjs 与 trust-scan-all.mjs 的静态审计",
-   "target": "contract-schema",
-   "expected": "fail",
-   "expected_error_contains": "finalStatus",
-   "expected_basis": "契约要求 finalStatus 必填；缺字段不得默认为 PASS",
-   "basis": "依据契约 required_fields、单位与去重规则手工构造；预期不从采集器输出复制。",
-   "kind": "invalid"
-  },
-  {
-   "file": "unit-string.json",
-   "sha256": "88b85bdb53323da5edbd8aa5ea997f33025d6e70529a071754127e685780bbd3",
-   "source": "构造样本，未复制生产数据；状态模型来自 mcpreflight.mjs 与 trust-scan-all.mjs 的静态审计",
-   "target": "contract-schema",
-   "expected": "fail",
-   "expected_error_contains": "toolCount",
-   "expected_basis": "toolCount 必须为整数或 null；字符串不是计数",
-   "basis": "依据契约 required_fields、单位与去重规则手工构造；预期不从采集器输出复制。",
-   "kind": "invalid"
-  },
-  {
-   "file": "duplicate.json",
-   "sha256": "755902bf10ce65309a4e480e9f5dd1c1f6735e784fdf071c03523a8194c9af57",
-   "source": "构造样本，未复制生产数据；状态模型来自 mcpreflight.mjs 与 trust-scan-all.mjs 的静态审计",
-   "target": "contract-schema",
-   "expected": "fail",
-   "expected_error_contains": "duplicate",
-   "expected_basis": "主键 name 必须唯一",
-   "basis": "依据契约 required_fields、单位与去重规则手工构造；预期不从采集器输出复制。",
-   "kind": "invalid"
-  },
-  {
-   "file": "http-429.json",
-   "sha256": "23771abece8250cd86d8288500124571fc57850909af75858a0deb39ee18c079",
-   "source": "构造样本，未复制生产数据；状态模型来自 mcpreflight.mjs 与 trust-scan-all.mjs 的静态审计",
-   "target": "publish-eligibility",
-   "expected": "fail",
-   "expected_error_contains": "UNKNOWN",
-   "expected_basis": "最高原则第四条：UNKNOWN 不得写成 PASS；HTTP 429 是限流，不是零工具",
-   "basis": "依据契约 required_fields、单位与去重规则手工构造；预期不从采集器输出复制。",
-   "kind": "invalid"
-  }
- ],
- "line": "mcpreflight",
- "sample_status": "REQUIRED"
+  "dataset": "mcpreflight-weekly",
+  "contract": "assurance/contracts/datasets/mcpreflight-weekly.yaml",
+  "generated_at": "2026-10-21",
+  "samples": [
+    {
+      "file": "normal.json",
+      "sha256": "bdac2f034d3a71b8c3f2f79bd87bb2a13c361ae5a6c9b13b978bab1fe0efe0bf",
+      "source": "构造样本，未复制生产数据；状态模型来自 mcpreflight.mjs 与 trust-scan-all.mjs 的静态审计",
+      "target": "contract-schema",
+      "expected": "pass",
+      "expected_error_contains": "",
+      "expected_basis": "PASS/AUTH_GATED/FAIL 为扫描器声明的终态集合；字段语义来自 mcpreflight.mjs 的 report 结构；样本只验证结构与可发布性",
+      "basis": "依据契约 required_fields、单位与去重规则手工构造；预期不从采集器输出复制。",
+      "kind": "normal"
+    },
+    {
+      "file": "empty.json",
+      "sha256": "ea6b7cadf44368dbb26f15596a5deee785d2d6ff0878e9da938b99c6ef6763cb",
+      "source": "构造样本，未复制生产数据；状态模型来自 mcpreflight.mjs 与 trust-scan-all.mjs 的静态审计",
+      "target": "contract-schema",
+      "expected": "fail",
+      "expected_error_contains": "empty",
+      "expected_basis": "空 results 不能作为一次成功扫描；契约要求至少一条记录",
+      "basis": "依据契约 required_fields、单位与去重规则手工构造；预期不从采集器输出复制。",
+      "kind": "empty"
+    },
+    {
+      "file": "missing-field.json",
+      "sha256": "e0bcef808890a5528ba2ee1b88ee67909683b52143924843e4fea8ce12dc4c0a",
+      "source": "构造样本，未复制生产数据；状态模型来自 mcpreflight.mjs 与 trust-scan-all.mjs 的静态审计",
+      "target": "contract-schema",
+      "expected": "fail",
+      "expected_error_contains": "finalStatus",
+      "expected_basis": "契约要求 finalStatus 必填；缺字段不得默认为 PASS",
+      "basis": "依据契约 required_fields、单位与去重规则手工构造；预期不从采集器输出复制。",
+      "kind": "invalid"
+    },
+    {
+      "file": "unit-string.json",
+      "sha256": "88b85bdb53323da5edbd8aa5ea997f33025d6e70529a071754127e685780bbd3",
+      "source": "构造样本，未复制生产数据；状态模型来自 mcpreflight.mjs 与 trust-scan-all.mjs 的静态审计",
+      "target": "contract-schema",
+      "expected": "fail",
+      "expected_error_contains": "toolCount",
+      "expected_basis": "toolCount 必须为整数或 null；字符串不是计数",
+      "basis": "依据契约 required_fields、单位与去重规则手工构造；预期不从采集器输出复制。",
+      "kind": "invalid"
+    },
+    {
+      "file": "duplicate.json",
+      "sha256": "755902bf10ce65309a4e480e9f5dd1c1f6735e784fdf071c03523a8194c9af57",
+      "source": "构造样本，未复制生产数据；状态模型来自 mcpreflight.mjs 与 trust-scan-all.mjs 的静态审计",
+      "target": "contract-schema",
+      "expected": "fail",
+      "expected_error_contains": "duplicate",
+      "expected_basis": "主键 name 必须唯一",
+      "basis": "依据契约 required_fields、单位与去重规则手工构造；预期不从采集器输出复制。",
+      "kind": "invalid"
+    },
+    {
+      "file": "http-429.json",
+      "sha256": "23771abece8250cd86d8288500124571fc57850909af75858a0deb39ee18c079",
+      "source": "构造样本，未复制生产数据；状态模型来自 mcpreflight.mjs 与 trust-scan-all.mjs 的静态审计",
+      "target": "publish-eligibility",
+      "expected": "fail",
+      "expected_error_contains": "UNKNOWN",
+      "expected_basis": "最高原则第四条：UNKNOWN 不得写成 PASS；HTTP 429 是限流，不是零工具",
+      "basis": "依据契约 required_fields、单位与去重规则手工构造；预期不从采集器输出复制。",
+      "kind": "invalid"
+    }
+  ],
+  "line": "mcpreflight",
+  "sample_status": "REQUIRED"
 }
