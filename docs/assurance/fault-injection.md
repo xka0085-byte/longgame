@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: 8172bbfeb60efe68b8a8218b437d3563_1b980b7ecdbc11f1b307525400393706
+    ReservedCode1: /3c7ZKEBMOcEUO1HHD2XXVQCQmDgcXFWBHeNkRrwimEBLwP4AzzATS1e4AIIzp/eJC/g9xl3qABDMUjPlmyOlBKibrhTeUd3ckTZbTurrkgyzZ27S6T+iMDbtmJrilx0ZIHRU2/O2n6uzqM97lVJ5/k9APaGjV6Wsiz2fJydZpSZdM6GXM3Zq92fZEg=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: 8172bbfeb60efe68b8a8218b437d3563_1b980b7ecdbc11f1b307525400393706
+    ReservedCode2: /3c7ZKEBMOcEUO1HHD2XXVQCQmDgcXFWBHeNkRrwimEBLwP4AzzATS1e4AIIzp/eJC/g9xl3qABDMUjPlmyOlBKibrhTeUd3ckTZbTurrkgyzZ27S6T+iMDbtmJrilx0ZIHRU2/O2n6uzqM97lVJ5/k9APaGjV6Wsiz2fJydZpSZdM6GXM3Zq92fZEg=
+---
+
 # longgame 故障注入记录（第一阶段）
 
 - 执行日期：2026-10-21
@@ -90,3 +101,4 @@ node assurance/fault-injection/run-all.mjs
 - 第三方数据源内容正确性
 
 以上未覆盖项不能推断为无风险。
+*（内容由AI生成，仅供参考）*

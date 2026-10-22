@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: 8172bbfeb60efe68b8a8218b437d3563_1a588768cdbc11f1b307525400393706
+    ReservedCode1: iJ7QqrRcxKFt6lVEhsDqDjFGrH98MnnhR1E9XVLREbxGU1WQeMei/3qneHEyrC4nWhgT6Y4+J/Ifh6OJ9Xnq35+Q9/tgARx1mw6jyOuHkj5JHjyrJDY6fg6IvjzZGqxCW8J73J8jTfE2Q6H5+RunLf4W2YAfXJwVePuSL4/r7Mfm8lFAdVAI2jZOWFI=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: 8172bbfeb60efe68b8a8218b437d3563_1a588768cdbc11f1b307525400393706
+    ReservedCode2: iJ7QqrRcxKFt6lVEhsDqDjFGrH98MnnhR1E9XVLREbxGU1WQeMei/3qneHEyrC4nWhgT6Y4+J/Ifh6OJ9Xnq35+Q9/tgARx1mw6jyOuHkj5JHjyrJDY6fg6IvjzZGqxCW8J73J8jTfE2Q6H5+RunLf4W2YAfXJwVePuSL4/r7Mfm8lFAdVAI2jZOWFI=
+---
+
 # longgame 保证系统第一阶段：审计基线
 
 - 生成日期：2026-10-21（Asia/Shanghai）
@@ -73,3 +84,4 @@
 3. 故障注入覆盖 6 类已知故障，不覆盖上游 schema 渐进漂移、时区跨日、GitHub Actions 权限/并发等故障。
 4. `truncated-data-file` 的 `last_valid_run_preserved` 为 false 是“不可计算”而非“已被覆盖”；同一记录中 `write_after_injection=false`。
 5. 本基线不修改任何生产数据；所有哈希均取自当前工作树。
+*（内容由AI生成，仅供参考）*

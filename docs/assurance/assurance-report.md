@@ -1,3 +1,14 @@
+---
+AIGC:
+    Label: "1"
+    ContentProducer: 001191440300708461136T1XGW3
+    ProduceID: 8172bbfeb60efe68b8a8218b437d3563_1c70e467cdbc11f1898e525400248c00
+    ReservedCode1: eaDLHXnuIwkC2lxpHv5poPXSMVhj1gA4Dscm2cU1rqUUYEvGvJkkPm4JxKHnsm4LPcbgAk2OkI9AJwUd0Trufod7AXnMQDCg5X0hhlk9md1ji7jjUusUKAzxZs/BcPMxI0Isza2xrQVwrUd+5ZUbD09q9WEULjsU6tgWUNwqp4pT3UsbgeFppsmkcyI=
+    ContentPropagator: 001191440300708461136T1XGW3
+    PropagateID: 8172bbfeb60efe68b8a8218b437d3563_1c70e467cdbc11f1898e525400248c00
+    ReservedCode2: eaDLHXnuIwkC2lxpHv5poPXSMVhj1gA4Dscm2cU1rqUUYEvGvJkkPm4JxKHnsm4LPcbgAk2OkI9AJwUd0Trufod7AXnMQDCg5X0hhlk9md1ji7jjUusUKAzxZs/BcPMxI0Isza2xrQVwrUd+5ZUbD09q9WEULjsU6tgWUNwqp4pT3UsbgeFppsmkcyI=
+---
+
 # longgame 保证系统第一阶段验收报告
 
 - 报告日期：2026-10-21
@@ -130,3 +141,4 @@
 - 仍存在明确边界：仅 1 条线 enforced、3 条线无本地数据、无第三方审计、无长期运行数据
 
 因此本阶段的准确表述是：**本地自洽检查与已知故障注入通过，发布门禁可阻断已知失败模式**。不得表述为“系统已验证无缺陷”或“零风险”。
+*（内容由AI生成，仅供参考）*
