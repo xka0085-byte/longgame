@@ -1,0 +1,44 @@
+{
+  "scannedAt": "2026-10-20T03:05:00Z",
+  "results": [
+    {
+      "name": "io.example/alpha",
+      "finalStatus": "PASS",
+      "url": "https://alpha.example/mcp",
+      "toolCount": "12 tools",
+      "checkedAt": "2026-10-20T03:00:00Z",
+      "protocolVersion": "2025-06-18",
+      "findings": []
+    },
+    {
+      "name": "io.example/beta",
+      "finalStatus": "AUTH_GATED",
+      "url": "https://beta.example/mcp",
+      "toolCount": null,
+      "checkedAt": "2026-10-20T03:01:00Z",
+      "protocolVersion": "2025-06-18",
+      "findings": [
+        {
+          "code": "AUTH_REQUIRED",
+          "severity": "INFO",
+          "message": "401 on initialize"
+        }
+      ]
+    },
+    {
+      "name": "io.example/gamma",
+      "finalStatus": "FAIL",
+      "url": "https://gamma.example/mcp",
+      "toolCount": 0,
+      "checkedAt": "2026-10-20T03:02:00Z",
+      "protocolVersion": null,
+      "findings": [
+        {
+          "code": "SCHEMA_INVALID",
+          "severity": "ERROR",
+          "message": "tools/list returned non-array"
+        }
+      ]
+    }
+  ]
+}

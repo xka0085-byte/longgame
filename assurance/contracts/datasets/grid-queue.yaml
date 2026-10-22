@@ -1,0 +1,105 @@
+contract_version: 1
+id: "grid-queue"
+status: "enforced"
+owner: "UNKNOWN"
+scope:
+  external: false
+  local_path: "data/lines/grid-queue.json"
+  record_selector: "collect.runs"
+source:
+  name: "EIA-860M monthly generator inventory"
+  hosts:
+    - "www.eia.gov"
+  url: "https://www.eia.gov/electricity/data/eia860m/"
+  access: "public"
+  license: "UNKNOWN"
+  license_note: "EIA 为美国政府数据；具体署名与再分发条款未在本阶段核验。"
+schema:
+  format: "json"
+  required_fields:
+    - path: "eiaCounts.operating"
+      type: "integer"
+      unit: "count"
+      min: 0
+    - path: "eiaCounts.planned"
+      type: "integer"
+      unit: "count"
+      min: 0
+    - path: "eiaCounts.retired"
+      type: "integer"
+      unit: "count"
+      min: 0
+    - path: "eiaCounts.canceled"
+      type: "integer"
+      unit: "count"
+      min: 0
+    - path: "eiaCounts.plannedMW"
+      type: "number"
+      unit: "MW"
+      min: 0
+    - path: "eiaCounts.canceledMW"
+      type: "number"
+      unit: "MW"
+      min: 0
+    - path: "eiaCounts.retiredMW"
+      type: "number"
+      unit: "MW"
+      min: 0
+    - path: "eiaCounts.file"
+      type: "string"
+      unit: "UNKNOWN"
+      note: "必须是非空 xlsx 文件名"
+    - path: "eiaCounts.bytes"
+      type: "integer"
+      unit: "bytes"
+      min: 1
+  primary_key:
+    - "run.date"
+  dedupe:
+    strategy: "run.date 唯一"
+    basis: "line.mjs 每轮追加一条 run"
+  invariants:
+    - id: "rows-positive-implies-mw-positive"
+      rule: "planned/canceled/retired 任一计数大于 0 时，对应 MW 合计必须大于 0"
+      basis: "非负装机容量求和；计数>0 而 MW=0 只能是缺列或解析失败"
+    - id: "capacity-column-required"
+      rule: "源表必须存在 Nameplate Capacity (MW) 与 Planned Operation Year 列，缺列必须失败"
+      basis: "eia_parse.py 的列名查找；缺列回退 0.0 是本阶段发现的缺陷"
+units:
+  - field: "eiaCounts.plannedMW"
+    unit: "MW"
+    basis: "EIA 表头 Nameplate Capacity (MW)"
+  - field: "eiaCounts.canceledMW"
+    unit: "MW"
+    basis: "EIA 表头 Nameplate Capacity (MW)"
+  - field: "eiaCounts.retiredMW"
+    unit: "MW"
+    basis: "EIA 表头 Nameplate Capacity (MW)"
+freshness:
+  cadence: "monthly"
+  max_age_days: "UNKNOWN"
+  basis: "UNKNOWN"
+failure_policy:
+  on_http_error: "fail"
+  on_429: "fail"
+  on_empty: "fail"
+  on_parse_error: "fail"
+  on_missing_field: "fail"
+  on_unit_mismatch: "fail"
+  on_duplicate: "fail"
+  on_source_host_mismatch: "fail"
+publish:
+  require_gate: true
+  blocked_by:
+    - "verify"
+    - "contracts"
+    - "fixtures"
+  external_data: false
+review:
+  last_reviewed: "2026-10-21"
+  unresolved_assumptions:
+    - "新鲜度上限未从来源文档或历史运行中证明，故标记 UNKNOWN，不设数值阈值。"
+    - "来源许可条款未在本阶段核验，故标记 UNKNOWN。"
+    - "本契约只覆盖字段与不变量，不证明来源内容的语义正确性。"
+    - "EIA 月度文件的实际列名只由代码字符串证明，未在本阶段用官方数据字典逐列核验。"
+    - "MW 合计与行计数的业务口径（是否含 PR 表、是否去重）未由 EIA 文档证明。"

@@ -1,0 +1,93 @@
+contract_version: 1
+id: "sb253-docket"
+status: "contract-only"
+owner: "UNKNOWN"
+scope:
+  external: false
+  local_path: "data/lines/sb253-docket.json"
+  record_selector: "collect.runs"
+source:
+  name: "CARB SB 253 docket pages"
+  hosts:
+    - "ww2.arb.ca.gov"
+  url: "https://ww2.arb.ca.gov/our-work/programs/confidential-information-protection/implementation-sb-253-climate-corporate-data-accountability-act"
+  access: "public"
+  license: "UNKNOWN"
+  license_note: "CARB 页面与 CSV 的再分发许可未在本阶段核验。"
+schema:
+  format: "json"
+  required_fields:
+    - path: "run.date"
+      type: "string"
+      unit: "UNKNOWN"
+      note: "ISO-8601 尝试时间"
+    - path: "page.id"
+      type: "string"
+      unit: "UNKNOWN"
+      note: "页面标识"
+    - path: "page.status"
+      type: "integer"
+      unit: "UNKNOWN"
+      note: "HTTP 状态码"
+    - path: "page.unavailable"
+      type: "boolean"
+      unit: "UNKNOWN"
+      note: "不可用时必须为 true，且不得覆盖上一份有效数据"
+    - path: "page.bytes"
+      type: "integer"
+      unit: "bytes"
+      min: 0
+    - path: "page.sig"
+      type: "string|null"
+      unit: "UNKNOWN"
+      note: "有效抓取时非空；不可用时可为 null"
+  primary_key:
+    - "run.date"
+    - "page.id"
+  dedupe:
+    strategy: "run.date+page.id 唯一"
+    basis: "line.mjs 每轮对每个配置页面只写一条记录"
+  invariants:
+    - id: "unavailable-keeps-previous"
+      rule: "unavailable=true 的运行不得写入新的有效摘要或覆盖上一份有效数据"
+      basis: "line.mjs 对 202/204/非 2xx/空正文分支的处理语义"
+    - id: "status-and-unavailable-consistent"
+      rule: "status 非 2xx 时 unavailable 必须为 true"
+      basis: "HTTP 语义与 line.mjs 的 unavailable 判定"
+    - id: "entities-not-empty-overwrite"
+      rule: "解析不到企业名单时保留上一份名单，不写空数组"
+      basis: "line.mjs sb253-entities 分支"
+units:
+  - field: "page.bytes"
+    unit: "bytes"
+    basis: "Buffer.byteLength 的字节数"
+  - field: "run.unavailablePages"
+    unit: "count"
+    basis: "页面条数"
+freshness:
+  cadence: "weekly"
+  max_age_days: "UNKNOWN"
+  basis: "UNKNOWN"
+failure_policy:
+  on_http_error: "fail"
+  on_429: "fail"
+  on_empty: "fail"
+  on_parse_error: "fail"
+  on_missing_field: "fail"
+  on_unit_mismatch: "fail"
+  on_duplicate: "fail"
+  on_source_host_mismatch: "fail"
+publish:
+  require_gate: true
+  blocked_by:
+    - "verify"
+    - "contracts"
+    - "fixtures"
+  external_data: false
+review:
+  last_reviewed: "2026-10-21"
+  unresolved_assumptions:
+    - "新鲜度上限未从来源文档或历史运行中证明，故标记 UNKNOWN，不设数值阈值。"
+    - "来源许可条款未在本阶段核验，故标记 UNKNOWN。"
+    - "本契约只覆盖字段与不变量，不证明来源内容的语义正确性。"
+    - "企业名与档案号的抽取规则未由 CARB 文档逐条证明；fixture 未覆盖该线。"

@@ -1,0 +1,38 @@
+[
+  {
+    "period": "2026-08",
+    "plant_id": "1001",
+    "generator_id": "1",
+    "status": "planned",
+    "capacity_mw": 150.5,
+    "capacity_unit": "MW",
+    "source_url": "https://www.eia.gov/electricity/data/eia860m/"
+  },
+  {
+    "period": "2026-08",
+    "plant_id": "1002",
+    "generator_id": "1",
+    "status": "planned",
+    "capacity_mw": 220.0,
+    "capacity_unit": "MW",
+    "source_url": "https://www.eia.gov/electricity/data/eia860m/"
+  },
+  {
+    "period": "2026-08",
+    "plant_id": "1003",
+    "generator_id": "1",
+    "status": "operating",
+    "capacity_mw": 75.5,
+    "capacity_unit": "MW",
+    "source_url": "https://www.eia.gov/electricity/data/eia860m/"
+  },
+  {
+    "period": "2026-08",
+    "plant_id": "1001",
+    "generator_id": "1",
+    "status": "planned",
+    "capacity_mw": 150.5,
+    "capacity_unit": "MW",
+    "source_url": "https://www.eia.gov/electricity/data/eia860m/"
+  }
+]

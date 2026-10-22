@@ -1,0 +1,75 @@
+contract_version: 1
+id: "protocol-watch"
+status: "external"
+owner: "UNKNOWN"
+scope:
+  external: true
+  local_path: "UNKNOWN"
+  record_selector: "state"
+source:
+  name: "GitHub releases / tags for MCP-related protocol repos"
+  hosts:
+    - "api.github.com"
+  url: "https://api.github.com/repos/modelcontextprotocol/modelcontextprotocol/releases/latest"
+  access: "public"
+  license: "UNKNOWN"
+  license_note: "GitHub API 与各协议仓库 release 内容的许可未在本阶段核验。"
+schema:
+  format: "json"
+  required_fields:
+    - path: "record.repo"
+      type: "string"
+      unit: "UNKNOWN"
+      note: "owner/name"
+    - path: "record.tag"
+      type: "string"
+      unit: "UNKNOWN"
+    - path: "record.date"
+      type: "string"
+      unit: "UNKNOWN"
+    - path: "record.url"
+      type: "string"
+      unit: "UNKNOWN"
+  primary_key:
+    - "record.repo"
+  dedupe:
+    strategy: "repo 唯一"
+    basis: "state 以 repo 为键"
+  invariants:
+    - id: "fetch-failure-keeps-old-tag"
+      rule: "单个仓库请求失败不得删除或清空该仓库上一版 tag"
+      basis: "protocol-watch.mjs 只在成功时更新 state"
+    - id: "state-parse-failure-no-overwrite"
+      rule: "state JSON 解析失败时不得用空对象覆盖历史 state"
+      basis: "本阶段审计发现 catch{} 后继续写盘的缺陷"
+units:
+  - field: "state[].tag"
+    unit: "release-tag"
+    basis: "GitHub releases/tags 接口"
+freshness:
+  cadence: "daily"
+  max_age_days: "UNKNOWN"
+  basis: "UNKNOWN"
+failure_policy:
+  on_http_error: "fail"
+  on_429: "fail"
+  on_empty: "fail"
+  on_parse_error: "fail"
+  on_missing_field: "fail"
+  on_unit_mismatch: "fail"
+  on_duplicate: "fail"
+  on_source_host_mismatch: "fail"
+publish:
+  require_gate: true
+  blocked_by:
+    - "contracts"
+    - "fixtures"
+  external_data: true
+review:
+  last_reviewed: "2026-10-21"
+  unresolved_assumptions:
+    - "新鲜度上限未从来源文档或历史运行中证明，故标记 UNKNOWN，不设数值阈值。"
+    - "来源许可条款未在本阶段核验，故标记 UNKNOWN。"
+    - "本契约只覆盖字段与不变量，不证明来源内容的语义正确性。"
+    - "该线由 mcpdoctor 管理；本阶段未运行其采集器，只做静态审计。"
+    - "release 与 tag 的语义差异未由 GitHub 文档逐项证明。"

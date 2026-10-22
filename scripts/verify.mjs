@@ -3,6 +3,8 @@
 import { readFileSync, existsSync } from 'node:fs';
 
 const portfolio = JSON.parse(readFileSync('portfolio.json', 'utf8'));
+// 允许校验候选产物目录（CI 先在临时目录渲染，再门禁，再替换 docs）。
+const DOCS = process.env.LONGGAME_DOCS || 'docs';
 const read = id => { const f = `data/lines/${id}.json`; return existsSync(f) ? JSON.parse(readFileSync(f, 'utf8')) : null; };
 let fails = 0, checks = 0;
 const fail = (id, msg) => { fails++; console.log(`FAIL ${id}: ${msg}`); };
@@ -27,7 +29,7 @@ for (const s of portfolio.series) {
   } else if (s.id === 'eidas-tsl' && last?.pointerCount != null) {
     expected = last.pointerCount;
   }
-  const pagePath = `docs/lines/${s.id}.html`;
+  const pagePath = `${DOCS}/lines/${s.id}.html`;
   if (!existsSync(pagePath)) { fail(s.id, `page missing ${pagePath}`); continue; }
   const html = readFileSync(pagePath, 'utf8');
   checks++;

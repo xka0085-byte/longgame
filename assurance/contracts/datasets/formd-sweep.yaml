@@ -1,0 +1,79 @@
+contract_version: 1
+id: "formd-sweep"
+status: "contract-only"
+owner: "UNKNOWN"
+scope:
+  external: false
+  local_path: "data/lines/formd-sweep.json"
+  record_selector: "collect.runs[].queries"
+source:
+  name: "SEC EDGAR Form D full-text search"
+  hosts:
+    - "efts.sec.gov"
+  url: "https://efts.sec.gov/LATEST/search-index?q=%22data%20center%22&forms=D"
+  access: "public"
+  license: "UNKNOWN"
+  license_note: "SEC EDGAR 数据的再分发与署名要求未在本阶段核验。"
+schema:
+  format: "json"
+  required_fields:
+    - path: "query.keyword"
+      type: "string"
+      unit: "UNKNOWN"
+    - path: "query.allTime"
+      type: "integer|null"
+      unit: "count"
+      min: 0
+      note: "缺失时为 null，不得写 0"
+    - path: "query.thisMonth"
+      type: "integer|null"
+      unit: "count"
+      min: 0
+      note: "缺失时为 null，不得写 0"
+  primary_key:
+    - "run.date"
+    - "query.keyword"
+  dedupe:
+    strategy: "run.date+keyword 唯一"
+    basis: "line.mjs edgar 分支每个关键词一条"
+  invariants:
+    - id: "missing-count-not-zero"
+      rule: "API 未返回 hits.total.value 时必须为 null，不得写 0"
+      basis: "line.mjs 使用 ?? null"
+    - id: "alltime-not-less-than-month"
+      rule: "同一关键词同一口径下 allTime 不得小于 thisMonth"
+      basis: "UNKNOWN；不同接口参数可能改变口径，未证明"
+units:
+  - field: "query.allTime"
+    unit: "filings"
+    basis: "EDGAR 命中总数"
+  - field: "query.thisMonth"
+    unit: "filings"
+    basis: "EDGAR 当月命中数"
+freshness:
+  cadence: "monthly"
+  max_age_days: "UNKNOWN"
+  basis: "UNKNOWN"
+failure_policy:
+  on_http_error: "fail"
+  on_429: "fail"
+  on_empty: "fail"
+  on_parse_error: "fail"
+  on_missing_field: "fail"
+  on_unit_mismatch: "fail"
+  on_duplicate: "fail"
+  on_source_host_mismatch: "fail"
+publish:
+  require_gate: true
+  blocked_by:
+    - "verify"
+    - "contracts"
+    - "fixtures"
+  external_data: false
+review:
+  last_reviewed: "2026-10-21"
+  unresolved_assumptions:
+    - "新鲜度上限未从来源文档或历史运行中证明，故标记 UNKNOWN，不设数值阈值。"
+    - "来源许可条款未在本阶段核验，故标记 UNKNOWN。"
+    - "本契约只覆盖字段与不变量，不证明来源内容的语义正确性。"
+    - "allTime 与 thisMonth 是否同一查询口径未被 SEC 文档证明，故该不变量标记 UNKNOWN。"

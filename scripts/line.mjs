@@ -61,6 +61,7 @@ if (mode === 'collect' && line.collect) {
   const c = line.collect;
   const run = { date: nowISO };
   const prev = st.collect.runs.at(-1);
+  let collectFailure = false;
   if (c.type === 'pages') {
     const matchMap = c.match || {};
     run.pages = [];
@@ -128,6 +129,8 @@ if (mode === 'collect' && line.collect) {
     if (un.length) {
       run.unavailablePages = un.length;
       run.status = un.length === run.pages.length ? 'data-source-unavailable' : 'partial';
+      collectFailure = true;
+      console.error(`${lineId}: ${un.length}/${run.pages.length} page(s) unavailable`);
     }
   } else if (c.type === 'dirs') {
     run.dirs = {}; const kidsMap = {};
@@ -140,13 +143,17 @@ if (mode === 'collect' && line.collect) {
         catch { kids = [`unparsed:${body.length}b`]; }
         run.dirs[url] = { status: r.status, keyCount: kids.length };
         kidsMap[url] = kids;
+        if (!r.ok || kids.length === 0) {
+          collectFailure = true;
+          console.error(`${lineId}: directory ${url} unusable (status=${r.status}, keys=${kids.length})`);
+        }
         const old = prev?.keys?.[url];
         if (old) {
           const o = new Set(old), n = new Set(kids);
           for (const k of kids) if (!o.has(k)) st.collect.events.push({ date: nowISO, type: 'new-key', dir: url, kid: k });
           for (const k of old) if (!n.has(k)) st.collect.events.push({ date: nowISO, type: 'removed-or-rotated', dir: url, kid: k });
         }
-      } catch (e) { run.dirs[url] = { error: String(e).slice(0, 100) }; }
+      } catch (e) { run.dirs[url] = { error: String(e).slice(0, 100) }; collectFailure = true; console.error(`${lineId}: directory ${url} failed`); }
     }
     run.keys = kidsMap;
   } else if (c.type === 'edgar') {
@@ -167,12 +174,16 @@ if (mode === 'collect' && line.collect) {
         const mo = await (await fetch(`${base}&dateRange=custom&startdt=${monthStart}&enddt=${nowISO.slice(0, 10)}`, { headers: UA, signal: AbortSignal.timeout(30000) })).json();
         const entry = { keyword: kw, allTime: all.hits?.total?.value ?? null, thisMonth: mo.hits?.total?.value ?? null };
         run.queries.push(entry);
+        if (entry.allTime == null || entry.thisMonth == null) {
+          collectFailure = true;
+          console.error(`${lineId}: edgar keyword ${kw} returned missing totals`);
+        }
         const prevAll = prev?.runs?.find(r => r.queries)?.queries?.find(q => q.keyword === kw);
         if (prevAll && typeof entry.thisMonth === 'number' && entry.thisMonth > 0 && prevAll.allTime === entry.allTime) {
           // 全历史数没涨但当月有数，视为口径异常，如实记录
           st.collect.events.push({ date: nowISO, type: 'edgar-anomaly', keyword: kw });
         }
-      } catch (e) { run.queries.push({ keyword: kw, error: String(e).slice(0, 100) }); }
+      } catch (e) { run.queries.push({ keyword: kw, error: String(e).slice(0, 100) }); collectFailure = true; console.error(`${lineId}: edgar keyword ${kw} failed`); }
     }
   } else if (c.type === 'eia860m') {
     try {
@@ -193,6 +204,14 @@ if (mode === 'collect' && line.collect) {
           fakeLinks: res.fakeLinks?.length ?? 0,
         };
         const prevE = prev?.eiaCounts;
+        const missing = Object.entries(run.eiaCounts)
+          .filter(([k, v]) => k !== 'file' && k !== 'bytes' && k !== 'fakeLinks' && v == null)
+          .map(([k]) => k);
+        if (missing.length) {
+          run.eiaCounts.missingFields = missing;
+          collectFailure = true;
+          console.error(`${lineId}: EIA counts missing ${missing.join(',')}`);
+        }
         if (prevE && prevE.planned !== run.eiaCounts.planned) {
           st.collect.events.push({ date: nowISO, type: 'planned-units-changed', from: prevE.planned, to: run.eiaCounts.planned });
         }
@@ -200,9 +219,11 @@ if (mode === 'collect' && line.collect) {
           st.collect.events.push({ date: nowISO, type: 'canceled-units-changed', from: prevE.canceled, to: run.eiaCounts.canceled });
         }
       } else if (res.error) {
+        collectFailure = true;
+        console.error(`${lineId}: EIA no valid file`);
         st.collect.events.push({ date: nowISO, type: 'eia-no-valid-file', tried: res.tried });
       }
-    } catch (e) { run.error = String(e).slice(0, 160); }
+    } catch (e) { run.error = String(e).slice(0, 160); collectFailure = true; console.error(`${lineId}: EIA collect failed: ${run.error}`); }
   } else if (c.type === 'lotl') {
     try {
       const r = await fetch(c.url, { headers: UA, signal: AbortSignal.timeout(30000) });
@@ -210,16 +231,25 @@ if (mode === 'collect' && line.collect) {
       const locs = [...xml.matchAll(/(?:TSLLocation|SchemeTSLLocation)>(https?:[^<]+)/g)].map(m => m[1].trim()).filter(u => !/eu-lotl\.xml/.test(u));
       run.pointers = [...new Set(locs)].sort();
       run.pointerCount = run.pointers.length;
+      if (!r.ok || run.pointerCount === 0) {
+        collectFailure = true;
+        console.error(`${lineId}: LOTL unusable (status=${r.status}, pointers=${run.pointerCount})`);
+      }
       const prevPtrs = prev?.pointers || [];
       if (prevPtrs.length) {
         const pset = new Set(prevPtrs);
         for (const u of run.pointers) if (!pset.has(u)) st.collect.events.push({ date: nowISO, type: 'tsl-added', url: u });
         for (const u of prevPtrs) if (!run.pointers.includes(u)) st.collect.events.push({ date: nowISO, type: 'tsl-removed', url: u });
       }
-    } catch (e) { run.error = String(e).slice(0, 140); }
+    } catch (e) { run.error = String(e).slice(0, 140); collectFailure = true; console.error(`${lineId}: LOTL collect failed`); }
   }
   st.collect.runs.push(run);
   if (st.collect.runs.length > 300) st.collect.runs = st.collect.runs.slice(-300);
+  writeFileSync(OUT, JSON.stringify(st, null, 1));
+  if (collectFailure) {
+    console.error(`${lineId} collect FAILED: partial/unavailable data recorded, refusing success exit`);
+    process.exit(1);
+  }
 }
 
 writeFileSync(OUT, JSON.stringify(st, null, 1));

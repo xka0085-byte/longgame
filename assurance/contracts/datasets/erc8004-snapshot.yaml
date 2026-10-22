@@ -1,0 +1,86 @@
+contract_version: 1
+id: "erc8004-snapshot"
+status: "external"
+owner: "UNKNOWN"
+scope:
+  external: true
+  local_path: "UNKNOWN"
+  record_selector: "history[].chains"
+source:
+  name: "ERC-8004 identity registry counters via Blockscout"
+  hosts:
+    - "eth.blockscout.com"
+    - "base.blockscout.com"
+  url: "https://eth.blockscout.com/api/v2/tokens/0x8004A169FB4a3325136EB29fA0ceB6D2e539a432/counters"
+  access: "public"
+  license: "UNKNOWN"
+  license_note: "Blockscout 实例的使用条款与数据许可未在本阶段核验。"
+schema:
+  format: "json"
+  required_fields:
+    - path: "record.date"
+      type: "string"
+      unit: "UNKNOWN"
+      note: "YYYY-MM-DD"
+    - path: "record.chains.ethereum.holders"
+      type: "integer|null"
+      unit: "count"
+      min: 0
+    - path: "record.chains.ethereum.transfers"
+      type: "integer|null"
+      unit: "count"
+      min: 0
+    - path: "record.chains.base.holders"
+      type: "integer|null"
+      unit: "count"
+      min: 0
+    - path: "record.chains.base.transfers"
+      type: "integer|null"
+      unit: "count"
+      min: 0
+  primary_key:
+    - "record.date"
+  dedupe:
+    strategy: "日期唯一"
+    basis: "脚本同日覆盖、否则追加"
+  invariants:
+    - id: "missing-counter-not-zero"
+      rule: "API 缺字段或请求失败时必须为 null 并带 error，不得写 0"
+      basis: "最高原则第五条；本阶段审计发现 ?? 0 缺陷"
+    - id: "history-parse-failure-no-overwrite"
+      rule: "历史 JSON 解析失败时不得用单条记录覆盖整个历史文件"
+      basis: "本阶段审计发现 catch{} 后继续写盘的缺陷"
+units:
+  - field: "chains[].holders"
+    unit: "count"
+    basis: "Blockscout token_holders_count"
+  - field: "chains[].transfers"
+    unit: "count"
+    basis: "Blockscout transfers_count"
+freshness:
+  cadence: "weekly"
+  max_age_days: "UNKNOWN"
+  basis: "UNKNOWN"
+failure_policy:
+  on_http_error: "fail"
+  on_429: "fail"
+  on_empty: "fail"
+  on_parse_error: "fail"
+  on_missing_field: "fail"
+  on_unit_mismatch: "fail"
+  on_duplicate: "fail"
+  on_source_host_mismatch: "fail"
+publish:
+  require_gate: true
+  blocked_by:
+    - "contracts"
+    - "fixtures"
+  external_data: true
+review:
+  last_reviewed: "2026-10-21"
+  unresolved_assumptions:
+    - "新鲜度上限未从来源文档或历史运行中证明，故标记 UNKNOWN，不设数值阈值。"
+    - "来源许可条款未在本阶段核验，故标记 UNKNOWN。"
+    - "本契约只覆盖字段与不变量，不证明来源内容的语义正确性。"
+    - "该线由 mcpdoctor 管理；本阶段未运行其采集器，只做静态审计。"
+    - "Blockscout 计数器可能滞后或误报，脚本注释已承认；未量化误差。"

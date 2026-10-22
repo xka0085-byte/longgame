@@ -16,6 +16,8 @@ jobs:
         with: { python-version: "3.12" }
       - run: pip install openpyxl
       - run: node scripts/run-all.mjs collect-weekly
+      - name: assurance gate (blocks publish on failure)
+        run: node scripts/assurance-gate.mjs
       - run: node scripts/publish.mjs
       - name: commit
         run: |

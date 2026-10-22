@@ -23,6 +23,9 @@ function inWindow(s) {
 
 console.log(`run-all ${mode} today=${today}`);
 
+// 任一数据线采集/雷达失败都必须让整轮非零退出，供 assurance-gate 阻断发布。
+let failures = 0;
+
 for (const s of portfolio.series) {
   if (!s.collect && !s.radar) { console.log(`${s.id}: skip (external)`); continue; }
   const isCollect = mode === 'collect-weekly' || mode === 'collect-monthly' || mode === 'collect-daily';
@@ -45,13 +48,18 @@ for (const s of portfolio.series) {
         execFileSync('node', ['scripts/sb253-first-window.mjs'], { stdio: 'inherit', timeout: 60000 });
       }
     } catch (e) {
+      failures += 1;
       console.error(`${s.id} collect FAILED: ${e.message.slice(0, 140)}`);
     }
   } else if (mode === 'radar') {
     if (s.cron?.radar !== 'daily' || !s.radar?.length) continue;
     try { execFileSync('node', ['scripts/line.mjs', s.id, 'radar'], { stdio: 'inherit', timeout: 180000 }); }
-    catch (e) { console.error(`${s.id} radar FAILED: ${e.message.slice(0, 140)}`); }
+    catch (e) { failures += 1; console.error(`${s.id} radar FAILED: ${e.message.slice(0, 140)}`); }
   }
 }
 if (mode === 'report') execFileSync('node', ['scripts/report.mjs'], { stdio: 'inherit' });
+if (failures > 0) {
+  console.error(`run-all ${mode} FAILED: ${failures} line(s) failed`);
+  process.exit(1);
+}
 console.log(`run-all ${mode} done`);

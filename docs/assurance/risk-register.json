@@ -1,0 +1,332 @@
+{
+  "schema_version": 1,
+  "project": "longgame",
+  "scope": "assurance-phase1",
+  "generated_at": "2026-10-21",
+  "rating_scale": {
+    "severity": ["high", "medium", "low"],
+    "likelihood": ["high", "medium", "low", "unknown"],
+    "status": ["open", "mitigated", "accepted", "unknown"]
+  },
+  "risks": [
+    {
+      "id": "R-001",
+      "title": "9 条本地数据线只有契约形状校验，没有字段级数据校验器",
+      "category": "coverage",
+      "severity": "high",
+      "likelihood": "high",
+      "impact": "错误字段、错误单位或重复行可能进入页面而不被契约门禁拦住",
+      "status": "open",
+      "evidence": [
+        "assurance/contracts/datasets/agent-dirs.yaml:3",
+        "scripts/validate-contracts.mjs:298-301"
+      ],
+      "mitigation": "为每条线注册独立 checker；在 checker 落地前不得把它们计入强制保证范围",
+      "residual_risk": "当前只有 grid-queue 受字段级强制校验",
+      "owner": "repo-maintainer（具体负责人 UNKNOWN）",
+      "review_by": "phase2"
+    },
+    {
+      "id": "R-002",
+      "title": "3 条外部线无本地数据，无法本地复核",
+      "category": "evidence",
+      "severity": "high",
+      "likelihood": "unknown",
+      "impact": "mcpreflight-weekly / erc8004-snapshot / protocol-watch 的正确性无法由本仓库证明",
+      "status": "unknown",
+      "evidence": [
+        "portfolio.json",
+        "assurance/contracts/datasets/mcpreflight-weekly.yaml:3",
+        "assurance/contracts/datasets/erc8004-snapshot.yaml:3",
+        "assurance/contracts/datasets/protocol-watch.yaml:3"
+      ],
+      "mitigation": "契约中标记 external；对外表述只能写 UNKNOWN，不得写 PASS，也不得补零",
+      "residual_risk": "外部数据源自身变更或失效无法被本地门禁发现",
+      "owner": "repo-maintainer（具体负责人 UNKNOWN）",
+      "review_by": "phase2"
+    },
+    {
+      "id": "R-003",
+      "title": "强制契约集中在单条线，门禁强度不均衡",
+      "category": "design",
+      "severity": "medium",
+      "likelihood": "high",
+      "impact": "grid-queue 的失败会阻断发布，其他线同类失败不会；整体保证水平被高估",
+      "status": "open",
+      "evidence": [
+        "assurance/contracts/datasets/grid-queue.yaml:3",
+        "scripts/validate-contracts.mjs:299-300"
+      ],
+      "mitigation": "在风险登记与报告中显式区分 enforced / contract-only / external，禁止合并表述",
+      "residual_risk": "读者可能把 13 份契约误读为 13 条线均已强制保证",
+      "owner": "repo-maintainer（具体负责人 UNKNOWN）",
+      "review_by": "phase2"
+    },
+    {
+      "id": "R-004",
+      "title": "EIA 上游表名/列名变更导致解析失败",
+      "category": "upstream",
+      "severity": "medium",
+      "likelihood": "medium",
+      "impact": "grid-queue 无法产出新一轮数据",
+      "status": "mitigated",
+      "evidence": [
+        "scripts/lib/eia_parse.py:17-20",
+        "scripts/lib/eia_parse.py:33",
+        "scripts/lib/eia_parse.py:43",
+        "scripts/lib/eia_parse.py:86"
+      ],
+      "mitigation": "缺表、缺列、非数字 MW 一律非零退出，不写零，不静默回退",
+      "residual_risk": "失败会阻断采集，需要人工跟进上游变更；不会产出错误数字",
+      "owner": "repo-maintainer（具体负责人 UNKNOWN）",
+      "review_by": "each collect"
+    },
+    {
+      "id": "R-005",
+      "title": "上游 202/204/空正文伪装成成功响应",
+      "category": "upstream",
+      "severity": "medium",
+      "likelihood": "medium",
+      "impact": "若当作成功会清空上一份有效数据",
+      "status": "mitigated",
+      "evidence": [
+        "scripts/line.mjs:81-88"
+      ],
+      "mitigation": "标记 unavailable 并 continue，保留上一份有效数据，写 data-source-unavailable 事件",
+      "residual_risk": "长时间不可用会导致数据陈旧，需依赖事件流发现",
+      "owner": "repo-maintainer（具体负责人 UNKNOWN）",
+      "review_by": "each collect"
+    },
+    {
+      "id": "R-006",
+      "title": "采集异常被捕获后未向上传递退出码",
+      "category": "pipeline",
+      "severity": "medium",
+      "likelihood": "medium",
+      "impact": "失败的采集可能继续发布旧页面，造成“本轮已成功”的误判",
+      "status": "mitigated",
+      "evidence": [
+        "scripts/run-all.mjs:27",
+        "scripts/run-all.mjs:51",
+        "scripts/run-all.mjs:61-63",
+        "scripts/line.mjs:249-251"
+      ],
+      "mitigation": "failures/collectFailure 计数，末尾非零退出",
+      "residual_risk": "新增采集分支若忘记置位仍可能漏掉，需要 fixture/代码审查覆盖",
+      "owner": "repo-maintainer（具体负责人 UNKNOWN）",
+      "review_by": "phase2"
+    },
+    {
+      "id": "R-007",
+      "title": "损坏的数据文件被静默跳过",
+      "category": "pipeline",
+      "severity": "medium",
+      "likelihood": "low",
+      "impact": "页面可能保留旧数字而无人知道数据文件已损坏",
+      "status": "mitigated",
+      "evidence": [
+        "scripts/publish.mjs:19-22"
+      ],
+      "mitigation": "JSON 解析失败抛出错误并阻断发布",
+      "residual_risk": "损坏文件需要人工修复后才能恢复发布",
+      "owner": "repo-maintainer（具体负责人 UNKNOWN）",
+      "review_by": "phase2"
+    },
+    {
+      "id": "R-008",
+      "title": "无完整有效运行仍输出数字",
+      "category": "publish",
+      "severity": "medium",
+      "likelihood": "low",
+      "impact": "残缺运行可能被当作成功结果展示",
+      "status": "mitigated",
+      "evidence": [
+        "scripts/publish.mjs:38-44"
+      ],
+      "mitigation": "只取完整有效运行；无 good 返回 null，不出数字",
+      "residual_risk": "页面可能显示“暂无有效运行”，需要读者正确理解",
+      "owner": "repo-maintainer（具体负责人 UNKNOWN）",
+      "review_by": "phase2"
+    },
+    {
+      "id": "R-009",
+      "title": "陈旧门禁结果被复用于新提交",
+      "category": "gate",
+      "severity": "medium",
+      "likelihood": "low",
+      "impact": "未通过门禁的输入可能借旧结果发布",
+      "status": "mitigated",
+      "evidence": [
+        "scripts/lib/assurance-gate.mjs:58-77"
+      ],
+      "mitigation": "校验 passed、checks 全零、同 HEAD、同 inputs_hash",
+      "residual_risk": "inputs_hash 未覆盖 docs 与 workflow 本身，改这些文件不会使门禁失效",
+      "owner": "repo-maintainer（具体负责人 UNKNOWN）",
+      "review_by": "phase2"
+    },
+    {
+      "id": "R-010",
+      "title": "CI 门禁只跑快速故障守卫，未跑完整沙箱注入",
+      "category": "gate",
+      "severity": "medium",
+      "likelihood": "high",
+      "impact": "CI 绿灯不能证明完整注入套件通过",
+      "status": "open",
+      "evidence": [
+        "scripts/assurance-gate.mjs:10",
+        "assurance/fault-injection/guard-check.mjs"
+      ],
+      "mitigation": "把 run-all.mjs 接入定时任务或发布前手动执行；报告中分开表述两条证据",
+      "residual_risk": "完整注入依赖人工或额外流水线执行",
+      "owner": "repo-maintainer（具体负责人 UNKNOWN）",
+      "review_by": "phase2"
+    },
+    {
+      "id": "R-011",
+      "title": "截断数据文件时“最后有效数据是否保留”不可计算",
+      "category": "fault-injection",
+      "severity": "low",
+      "likelihood": "medium",
+      "impact": "该场景只能证明发布被拦，不能从字段上证明旧数据未被覆盖",
+      "status": "accepted",
+      "evidence": [
+        "assurance/fault-injection/result.json"
+      ],
+      "mitigation": "在同一记录中同时检查 write_after_injection；保留原始哈希对比",
+      "residual_risk": "报告读者可能把 false 误读为已覆盖，需要文字说明",
+      "owner": "repo-maintainer（具体负责人 UNKNOWN）",
+      "review_by": "phase2"
+    },
+    {
+      "id": "R-012",
+      "title": "GitHub 分支保护是否强制该门禁未知",
+      "category": "governance",
+      "severity": "medium",
+      "likelihood": "unknown",
+      "impact": "门禁可以被绕过（直接 push 或合并未通过检查的 PR）",
+      "status": "unknown",
+      "evidence": [
+        ".github/workflows/assurance-gate.yml"
+      ],
+      "mitigation": "在远端开启 required status checks；本地无法核实，标记 UNKNOWN",
+      "residual_risk": "治理层保证未被证明",
+      "owner": "repo-owner（具体负责人 UNKNOWN）",
+      "review_by": "phase2"
+    },
+    {
+      "id": "R-013",
+      "title": "缺少第三方独立审计",
+      "category": "assurance",
+      "severity": "high",
+      "likelihood": "high",
+      "impact": "所有 PASS 均为仓库内自洽检查，不能对外称“已验证”",
+      "status": "open",
+      "evidence": [
+        "scripts/verify.mjs:1-2"
+      ],
+      "mitigation": "对外只写“本地实跑/自洽检查”；需要独立复核时另请第三方",
+      "residual_risk": "保证等级受限于自证",
+      "owner": "repo-maintainer（具体负责人 UNKNOWN）",
+      "review_by": "phase2"
+    },
+    {
+      "id": "R-014",
+      "title": "缺少跨周/跨月长期运行数据",
+      "category": "operations",
+      "severity": "high",
+      "likelihood": "unknown",
+      "impact": "无法推断调度、上游漂移、配额限制下的长期稳定性",
+      "status": "unknown",
+      "evidence": [
+        "assurance/fault-injection/result.json"
+      ],
+      "mitigation": "保留每次运行结果；积累至少一个完整周期后再评估",
+      "residual_risk": "不得承诺零缺陷或长期稳定",
+      "owner": "repo-maintainer（具体负责人 UNKNOWN）",
+      "review_by": "after 4 weeks"
+    },
+    {
+      "id": "R-015",
+      "title": "时区与调度跨日导致日期标签偏差",
+      "category": "operations",
+      "severity": "low",
+      "likelihood": "medium",
+      "impact": "周/月报可能落在错误日期或重复运行",
+      "status": "open",
+      "evidence": [
+        ".github/workflows/weekly-collect.yml:4",
+        ".github/workflows/monthly-report.yml:4",
+        "scripts/run-all.mjs:15"
+      ],
+      "mitigation": "LONGGAME_TODAY 格式校验；后续增加幂等键",
+      "residual_risk": "UTC 与本地日期边界仍需观察",
+      "owner": "repo-maintainer（具体负责人 UNKNOWN）",
+      "review_by": "phase2"
+    },
+    {
+      "id": "R-016",
+      "title": "非 UTF-8/LF 写入导致 workflow 或脚本损坏",
+      "category": "tooling",
+      "severity": "low",
+      "likelihood": "medium",
+      "impact": "YAML 的 on: 被吞入注释，工作流不触发",
+      "status": "mitigated",
+      "evidence": [
+        ".github/workflows/assurance-gate.yml:1-8"
+      ],
+      "mitigation": "Workflow 注释改为 ASCII，文件统一 UTF-8 + LF",
+      "residual_risk": "Windows 本地编辑仍可能再次引入编码问题",
+      "owner": "repo-maintainer（具体负责人 UNKNOWN）",
+      "review_by": "phase2"
+    },
+    {
+      "id": "R-017",
+      "title": "fixtures 与契约不同步",
+      "category": "test",
+      "severity": "low",
+      "likelihood": "medium",
+      "impact": "样本继续通过但已不覆盖新契约字段",
+      "status": "open",
+      "evidence": [
+        "assurance/fixtures/grid-queue/manifest.json",
+        "assurance/fixtures/mcpreflight/manifest.json"
+      ],
+      "mitigation": "契约变更时同步更新 fixture 与 sha256；门禁指纹包含 fixtures",
+      "residual_risk": "依赖人工同步",
+      "owner": "repo-maintainer（具体负责人 UNKNOWN）",
+      "review_by": "phase2"
+    },
+    {
+      "id": "R-018",
+      "title": "门禁失败无主动告警渠道",
+      "category": "operations",
+      "severity": "medium",
+      "likelihood": "medium",
+      "impact": "失败只能从 Actions 日志发现，可能延迟处理",
+      "status": "open",
+      "evidence": [
+        ".github/workflows/assurance-gate.yml:26-38"
+      ],
+      "mitigation": "后续接入通知；当前依赖 GitHub Actions 默认通知",
+      "residual_risk": "无外部告警承诺",
+      "owner": "repo-maintainer（具体负责人 UNKNOWN）",
+      "review_by": "phase2"
+    },
+    {
+      "id": "R-019",
+      "title": "数据回滚依赖 git，缺少独立不可变快照",
+      "category": "recovery",
+      "severity": "medium",
+      "likelihood": "low",
+      "impact": "历史提交被强推或仓库损坏时恢复能力有限",
+      "status": "open",
+      "evidence": [
+        ".github/workflows/weekly-collect.yml:23-29"
+      ],
+      "mitigation": "当前以 git 提交作为恢复点；后续增加外部快照",
+      "residual_risk": "恢复时间与完整性未量化",
+      "owner": "repo-maintainer（具体负责人 UNKNOWN）",
+      "review_by": "phase2"
+    }
+  ]
+}

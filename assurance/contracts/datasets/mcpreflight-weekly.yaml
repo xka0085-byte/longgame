@@ -1,0 +1,85 @@
+contract_version: 1
+id: "mcpreflight-weekly"
+status: "external"
+owner: "UNKNOWN"
+scope:
+  external: true
+  local_path: "UNKNOWN"
+  record_selector: "results"
+source:
+  name: "MCP Registry + mcpreflight schema scan"
+  hosts:
+    - "registry.modelcontextprotocol.io"
+  url: "https://registry.modelcontextprotocol.io/v0/servers"
+  access: "public"
+  license: "UNKNOWN"
+  license_note: "MCP Registry 与各被扫描端点的许可未在本阶段核验。"
+schema:
+  format: "json"
+  required_fields:
+    - path: "record.name"
+      type: "string"
+      unit: "UNKNOWN"
+      note: "非空，作为主键"
+    - path: "record.finalStatus"
+      type: "string"
+      unit: "UNKNOWN"
+      note: "PASS|FAIL|AUTH_GATED|UNKNOWN"
+    - path: "record.url"
+      type: "string"
+      unit: "UNKNOWN"
+      note: "http(s) URL"
+    - path: "record.toolCount"
+      type: "integer|null"
+      unit: "count"
+      min: 0
+    - path: "record.checkedAt"
+      type: "string"
+      unit: "UNKNOWN"
+      note: "ISO-8601"
+    - path: "record.findings"
+      type: "array"
+      unit: "UNKNOWN"
+  primary_key:
+    - "record.name"
+  dedupe:
+    strategy: "name 唯一"
+    basis: "trust-scan-all 以服务器 name 为键"
+  invariants:
+    - id: "unknown-not-publishable"
+      rule: "finalStatus=UNKNOWN 的记录不得计入已验证或可发布结论"
+      basis: "最高原则第四条"
+    - id: "rate-limit-not-pass"
+      rule: "HTTP 429 必须记为 UNKNOWN/RATE_LIMITED，不得记为 PASS 或 0 个工具"
+      basis: "HTTP 语义与本阶段审计"
+units:
+  - field: "record.toolCount"
+    unit: "count"
+    basis: "tools/list 返回的 tools 数组长度"
+freshness:
+  cadence: "weekly"
+  max_age_days: "UNKNOWN"
+  basis: "UNKNOWN"
+failure_policy:
+  on_http_error: "fail"
+  on_429: "fail"
+  on_empty: "fail"
+  on_parse_error: "fail"
+  on_missing_field: "fail"
+  on_unit_mismatch: "fail"
+  on_duplicate: "fail"
+  on_source_host_mismatch: "fail"
+publish:
+  require_gate: true
+  blocked_by:
+    - "contracts"
+    - "fixtures"
+  external_data: true
+review:
+  last_reviewed: "2026-10-21"
+  unresolved_assumptions:
+    - "新鲜度上限未从来源文档或历史运行中证明，故标记 UNKNOWN，不设数值阈值。"
+    - "来源许可条款未在本阶段核验，故标记 UNKNOWN。"
+    - "本契约只覆盖字段与不变量，不证明来源内容的语义正确性。"
+    - "该线由 mcpdoctor 管理，longgame 内无采集脚本与数据文件；契约只能约束外部产物，无法在本仓库门禁中验证实时数据。"
+    - "扫描目标主机不受 registry 主机限制，允许主机集合无法枚举，标记 UNKNOWN。"

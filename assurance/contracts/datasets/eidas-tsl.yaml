@@ -1,0 +1,74 @@
+contract_version: 1
+id: "eidas-tsl"
+status: "contract-only"
+owner: "UNKNOWN"
+scope:
+  external: false
+  local_path: "data/lines/eidas-tsl.json"
+  record_selector: "collect.runs"
+source:
+  name: "EU List of Trusted Lists (LOTL)"
+  hosts:
+    - "ec.europa.eu"
+  url: "https://ec.europa.eu/tools/lotl/eu-lotl.xml"
+  access: "public"
+  license: "UNKNOWN"
+  license_note: "EU LOTL 的再分发许可未在本阶段核验。"
+schema:
+  format: "json"
+  required_fields:
+    - path: "run.date"
+      type: "string"
+      unit: "UNKNOWN"
+      note: "ISO-8601"
+    - path: "run.pointers"
+      type: "array"
+      unit: "UNKNOWN"
+      note: "去重后的 TSL 指针 URL"
+    - path: "run.pointerCount"
+      type: "integer"
+      unit: "count"
+      min: 0
+  primary_key:
+    - "run.date"
+  dedupe:
+    strategy: "run.date 唯一"
+    basis: "line.mjs 每轮追加一条 run"
+  invariants:
+    - id: "pointercount-equals-unique-pointers"
+      rule: "pointerCount 必须等于 run.pointers 去重后的长度"
+      basis: "line.mjs lotl 分支"
+    - id: "http-error-not-zero"
+      rule: "HTTP 错误或非 XML 响应不得产生 pointerCount=0 并覆盖上一份有效指针"
+      basis: "本阶段审计发现的缺陷；契约要求失败显式化"
+units:
+  - field: "run.pointerCount"
+    unit: "count"
+    basis: "指针 URL 条数"
+freshness:
+  cadence: "weekly"
+  max_age_days: "UNKNOWN"
+  basis: "UNKNOWN"
+failure_policy:
+  on_http_error: "fail"
+  on_429: "fail"
+  on_empty: "fail"
+  on_parse_error: "fail"
+  on_missing_field: "fail"
+  on_unit_mismatch: "fail"
+  on_duplicate: "fail"
+  on_source_host_mismatch: "fail"
+publish:
+  require_gate: true
+  blocked_by:
+    - "verify"
+    - "contracts"
+    - "fixtures"
+  external_data: false
+review:
+  last_reviewed: "2026-10-21"
+  unresolved_assumptions:
+    - "新鲜度上限未从来源文档或历史运行中证明，故标记 UNKNOWN，不设数值阈值。"
+    - "来源许可条款未在本阶段核验，故标记 UNKNOWN。"
+    - "本契约只覆盖字段与不变量，不证明来源内容的语义正确性。"
+    - "line.mjs lotl 分支未检查 r.ok；错误页可能被解析成 0 个指针，契约与本阶段实现不一致。"

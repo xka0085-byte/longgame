@@ -2,6 +2,10 @@
 // 每条线一个可截图标量，全部带日期与引用行。零依赖。
 import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
+import { assertGate } from './lib/assurance-gate.mjs';
+
+// 发布硬门禁：没有同一份输入、同一 commit 的 gate 通过记录，直接退出。
+assertGate();
 
 const now = new Date();
 const iso = now.toISOString();
@@ -12,7 +16,10 @@ mkdirSync('docs/lines', { recursive: true });
 function readLine(id) {
   const f = `data/lines/${id}.json`;
   if (!existsSync(f)) return null;
-  try { return JSON.parse(readFileSync(f, 'utf8')); } catch { return null; }
+  try { return JSON.parse(readFileSync(f, 'utf8')); } catch (e) {
+    // 损坏的数据文件不得静默跳过：跳过等于把该线从产物里删掉，必须阻断发布。
+    throw new Error(`corrupt data file ${f}: ${String(e.message).slice(0, 120)}`);
+  }
 }
 const esc = s => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -21,16 +28,21 @@ function scalarOf(id, st) {
   if (!st) return null;
   const runs = st.collect?.runs || [];
   const latest = runs.at(-1);
-  // 采集失败时不得把旧值写成 0：取最近一次有有效数据的那次，并标注是否为最新
+  // 采集失败时不得把旧值写成 0：取最近一次「完整有效」的数据；找不到就本期不出数字。
   const good = runs.slice().reverse().find(r => {
-    if (id === 'formd-sweep') return r.queries?.some(q => typeof q.thisMonth === 'number');
-    if (id === 'agent-dirs') return r.dirs && Object.values(r.dirs).some(d => d.keyCount != null);
-    if (id === 'eidas-tsl') return r.pointerCount != null;
-    if (id === 'grid-queue') return r.eiaCounts != null;
+    if (r.unavailablePages) return false;
+    if (r.eiaCounts?.missingFields?.length) return false;
+    if (id === 'formd-sweep') return r.queries?.length > 0 && r.queries.every(q => typeof q.thisMonth === 'number');
+    if (id === 'agent-dirs') return r.dirs && Object.values(r.dirs).length > 0 && Object.values(r.dirs).every(d => d.keyCount != null && d.keyCount > 0);
+    if (id === 'eidas-tsl') return r.pointerCount != null && r.pointerCount > 0;
+    if (id === 'grid-queue') return r.eiaCounts != null
+      && r.eiaCounts.planned != null && r.eiaCounts.plannedMW != null
+      && r.eiaCounts.canceled != null && r.eiaCounts.canceledMW != null;
     if (id === 'sb253-docket') return (r.pages || []).some(p => p.status === 200 && p.unavailable !== true && p.sig);
     return false;
-  }) || latest;
-  const stale = good && latest && good !== latest;
+  });
+  if (!good) return null;
+  const stale = latest && good !== latest;
   const stamp = good?.date?.slice(0, 10) || day;
   const suffix = stale ? `（最近一次成功采集于 ${stamp}，本期采集失败）` : '';
   if (id === 'formd-sweep' && good?.queries) {

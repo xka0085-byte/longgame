@@ -1,0 +1,75 @@
+contract_version: 1
+id: "agent-dirs"
+status: "contract-only"
+owner: "UNKNOWN"
+scope:
+  external: false
+  local_path: "data/lines/agent-dirs.json"
+  record_selector: "collect.runs"
+source:
+  name: "OpenAI / Google agent JWKS directories"
+  hosts:
+    - "chatgpt.com"
+    - "agent.bot.goog"
+  url: "https://chatgpt.com/.well-known/jwks.json"
+  access: "public"
+  license: "UNKNOWN"
+  license_note: "OpenAI 与 Google 的 JWKS 端点使用条款未在本阶段核验。"
+schema:
+  format: "json"
+  required_fields:
+    - path: "run.date"
+      type: "string"
+      unit: "UNKNOWN"
+      note: "ISO-8601"
+    - path: "run.dirs"
+      type: "object"
+      unit: "UNKNOWN"
+      note: "按 URL 索引的目录结果"
+    - path: "run.keys"
+      type: "object"
+      unit: "UNKNOWN"
+      note: "按 URL 索引的 kid 列表"
+  primary_key:
+    - "run.date"
+  dedupe:
+    strategy: "run.date 唯一"
+    basis: "line.mjs 每轮追加一条 run"
+  invariants:
+    - id: "keycount-equals-keys-length"
+      rule: "dirs[url].keyCount 必须等于 keys[url] 的长度（error 记录除外）"
+      basis: "line.mjs dirs 分支同时写 keyCount 与 kidsMap"
+    - id: "parse-failure-not-a-key"
+      rule: "JSON 解析失败不得写成 unparsed:<n>b 这样的伪密钥并计入 keyCount"
+      basis: "本阶段审计发现的缺陷；契约要求失败显式化"
+units:
+  - field: "dirs[].keyCount"
+    unit: "count"
+    basis: "JWKS keys 数组长度"
+freshness:
+  cadence: "weekly"
+  max_age_days: "UNKNOWN"
+  basis: "UNKNOWN"
+failure_policy:
+  on_http_error: "fail"
+  on_429: "fail"
+  on_empty: "fail"
+  on_parse_error: "fail"
+  on_missing_field: "fail"
+  on_unit_mismatch: "fail"
+  on_duplicate: "fail"
+  on_source_host_mismatch: "fail"
+publish:
+  require_gate: true
+  blocked_by:
+    - "verify"
+    - "contracts"
+    - "fixtures"
+  external_data: false
+review:
+  last_reviewed: "2026-10-21"
+  unresolved_assumptions:
+    - "新鲜度上限未从来源文档或历史运行中证明，故标记 UNKNOWN，不设数值阈值。"
+    - "来源许可条款未在本阶段核验，故标记 UNKNOWN。"
+    - "本契约只覆盖字段与不变量，不证明来源内容的语义正确性。"
+    - "line.mjs 对非 2xx 与 JSON 解析失败仍写入 keyCount，契约与本阶段实现不一致，已登记为风险。"

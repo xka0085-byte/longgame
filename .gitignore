@@ -1,0 +1,5 @@
+assurance/.gate/
+assurance/fault-injection/work/
+assurance/fault-injection/guard-work/
+assurance/fault-injection/logs/
+assurance/fault-injection/run-error.log

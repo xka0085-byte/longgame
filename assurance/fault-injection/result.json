@@ -1,0 +1,217 @@
+{
+  "generated_at": "2026-10-21T15:20:27.207Z",
+  "real_data_hash_before": {
+    "agent-dirs.json": "c0fdbc6bbac9be18636e9746149d326cef5f15c13755d385de63c555c350b8e6",
+    "aiact-register.json": "d41fa00846814a3897e018116e116a161758010b907e59f696bd5dbba0da1954",
+    "c2pa-spec.json": "07aabb40f3f26a7ebcfaa141b137fe9cdc15c11ca35dd0d6ece55997252c1fc9",
+    "compute-futures.json": "317bca4d6a9cc828d0849aadb7c93c050c0b742904fedd59e735f7cbed044e7a",
+    "eidas-tsl.json": "313abb5359af9828b5c102b3b755d79396e93b16fd0b247400c233d9885e9810",
+    "formd-sweep.json": "d1e16e4f03d503f336034ddf718f9abfce4cf204fd675cb01074ab914e57839a",
+    "grid-queue.json": "d56c708837719536bd0e165ad20e337ca7e17b56e7da4da3f1606602b34c4f03",
+    "sb253-docket.json": "c51a736f486db00c10c25b27afd480e79faf196b849dc604280f2c771e2972bd",
+    "state-ai-laws.json": "22ee315c9f32b1b49572cd09c71660754be2b6a2d3c297a26d12d58c15de6c6c",
+    "triggers.json": "ea96edc7b5994059ad82890d4c0e6cf38915d2ee89af8c4306c55f64db20b780"
+  },
+  "real_data_hash_after": {
+    "agent-dirs.json": "c0fdbc6bbac9be18636e9746149d326cef5f15c13755d385de63c555c350b8e6",
+    "aiact-register.json": "d41fa00846814a3897e018116e116a161758010b907e59f696bd5dbba0da1954",
+    "c2pa-spec.json": "07aabb40f3f26a7ebcfaa141b137fe9cdc15c11ca35dd0d6ece55997252c1fc9",
+    "compute-futures.json": "317bca4d6a9cc828d0849aadb7c93c050c0b742904fedd59e735f7cbed044e7a",
+    "eidas-tsl.json": "313abb5359af9828b5c102b3b755d79396e93b16fd0b247400c233d9885e9810",
+    "formd-sweep.json": "d1e16e4f03d503f336034ddf718f9abfce4cf204fd675cb01074ab914e57839a",
+    "grid-queue.json": "d56c708837719536bd0e165ad20e337ca7e17b56e7da4da3f1606602b34c4f03",
+    "sb253-docket.json": "c51a736f486db00c10c25b27afd480e79faf196b849dc604280f2c771e2972bd",
+    "state-ai-laws.json": "22ee315c9f32b1b49572cd09c71660754be2b6a2d3c297a26d12d58c15de6c6c",
+    "triggers.json": "ea96edc7b5994059ad82890d4c0e6cf38915d2ee89af8c4306c55f64db20b780"
+  },
+  "real_data_unchanged": true,
+  "all_blocked": true,
+  "faults": [
+    {
+      "id": "column-rename",
+      "target": "fixtures/grid-queue/normal.json",
+      "expected_block_point": "fixtures",
+      "injected_at": "2026-10-21T15:20:24.788Z",
+      "gate_exit": 1,
+      "gate_failed_check": "fixtures",
+      "gate_checks": [
+        {
+          "name": "verify",
+          "script": "scripts/verify.mjs",
+          "exitCode": 0,
+          "ms": 252
+        },
+        {
+          "name": "contracts",
+          "script": "scripts/validate-contracts.mjs",
+          "exitCode": 0,
+          "ms": 101
+        },
+        {
+          "name": "fixtures",
+          "script": "scripts/run-fixtures.mjs",
+          "exitCode": 1,
+          "ms": 85
+        }
+      ],
+      "publish_exit": 1,
+      "publish_blocked": true,
+      "publish_output_head": "publish blocked by assurance gate: gate result is not passed",
+      "data_hash_before_injection": "d56c708837719536bd0e165ad20e337ca7e17b56e7da4da3f1606602b34c4f03",
+      "data_hash_after_injection": "d56c708837719536bd0e165ad20e337ca7e17b56e7da4da3f1606602b34c4f03",
+      "data_hash_after_publish_attempt": "d56c708837719536bd0e165ad20e337ca7e17b56e7da4da3f1606602b34c4f03",
+      "write_after_injection": false,
+      "last_valid_run_preserved": true,
+      "blocked": true
+    },
+    {
+      "id": "unit-mw-to-gw",
+      "target": "fixtures/grid-queue/normal.json",
+      "expected_block_point": "fixtures",
+      "injected_at": "2026-10-21T15:20:25.413Z",
+      "gate_exit": 1,
+      "gate_failed_check": "fixtures",
+      "gate_checks": [
+        {
+          "name": "verify",
+          "script": "scripts/verify.mjs",
+          "exitCode": 0,
+          "ms": 131
+        },
+        {
+          "name": "contracts",
+          "script": "scripts/validate-contracts.mjs",
+          "exitCode": 0,
+          "ms": 97
+        },
+        {
+          "name": "fixtures",
+          "script": "scripts/run-fixtures.mjs",
+          "exitCode": 1,
+          "ms": 74
+        }
+      ],
+      "publish_exit": 1,
+      "publish_blocked": true,
+      "publish_output_head": "publish blocked by assurance gate: gate result is not passed",
+      "data_hash_before_injection": "d56c708837719536bd0e165ad20e337ca7e17b56e7da4da3f1606602b34c4f03",
+      "data_hash_after_injection": "d56c708837719536bd0e165ad20e337ca7e17b56e7da4da3f1606602b34c4f03",
+      "data_hash_after_publish_attempt": "d56c708837719536bd0e165ad20e337ca7e17b56e7da4da3f1606602b34c4f03",
+      "write_after_injection": false,
+      "last_valid_run_preserved": true,
+      "blocked": true
+    },
+    {
+      "id": "empty-response",
+      "target": "data/lines/grid-queue.json",
+      "expected_block_point": "contracts",
+      "injected_at": "2026-10-21T15:20:25.840Z",
+      "gate_exit": 1,
+      "gate_failed_check": "verify",
+      "gate_checks": [
+        {
+          "name": "verify",
+          "script": "scripts/verify.mjs",
+          "exitCode": 1,
+          "ms": 102
+        }
+      ],
+      "publish_exit": 1,
+      "publish_blocked": true,
+      "publish_output_head": "publish blocked by assurance gate: gate result is not passed",
+      "data_hash_before_injection": "d56c708837719536bd0e165ad20e337ca7e17b56e7da4da3f1606602b34c4f03",
+      "data_hash_after_injection": "b0bd2862dbc4412cdb6fd39c4ad4e5105e88fafd52d1f8c0c2c52d996c5b1fc9",
+      "data_hash_after_publish_attempt": "b0bd2862dbc4412cdb6fd39c4ad4e5105e88fafd52d1f8c0c2c52d996c5b1fc9",
+      "write_after_injection": false,
+      "last_valid_run_preserved": true,
+      "blocked": true
+    },
+    {
+      "id": "http-429",
+      "target": "data/lines/grid-queue.json",
+      "expected_block_point": "contracts",
+      "injected_at": "2026-10-21T15:20:26.307Z",
+      "gate_exit": 1,
+      "gate_failed_check": "contracts",
+      "gate_checks": [
+        {
+          "name": "verify",
+          "script": "scripts/verify.mjs",
+          "exitCode": 0,
+          "ms": 95
+        },
+        {
+          "name": "contracts",
+          "script": "scripts/validate-contracts.mjs",
+          "exitCode": 1,
+          "ms": 88
+        }
+      ],
+      "publish_exit": 1,
+      "publish_blocked": true,
+      "publish_output_head": "publish blocked by assurance gate: gate result is not passed",
+      "data_hash_before_injection": "d56c708837719536bd0e165ad20e337ca7e17b56e7da4da3f1606602b34c4f03",
+      "data_hash_after_injection": "865180d0749dbf0cf0009eca1e3ef8b7e4877cdfcaf603f616a58fc7f1a5ee16",
+      "data_hash_after_publish_attempt": "865180d0749dbf0cf0009eca1e3ef8b7e4877cdfcaf603f616a58fc7f1a5ee16",
+      "write_after_injection": false,
+      "last_valid_run_preserved": true,
+      "blocked": true
+    },
+    {
+      "id": "duplicate-rows",
+      "target": "data/lines/grid-queue.json",
+      "expected_block_point": "contracts",
+      "injected_at": "2026-10-21T15:20:26.803Z",
+      "gate_exit": 1,
+      "gate_failed_check": "contracts",
+      "gate_checks": [
+        {
+          "name": "verify",
+          "script": "scripts/verify.mjs",
+          "exitCode": 0,
+          "ms": 107
+        },
+        {
+          "name": "contracts",
+          "script": "scripts/validate-contracts.mjs",
+          "exitCode": 1,
+          "ms": 101
+        }
+      ],
+      "publish_exit": 1,
+      "publish_blocked": true,
+      "publish_output_head": "publish blocked by assurance gate: gate result is not passed",
+      "data_hash_before_injection": "d56c708837719536bd0e165ad20e337ca7e17b56e7da4da3f1606602b34c4f03",
+      "data_hash_after_injection": "4b0dc55fd13f7040a3b40e31a943a384f0fa1ddef144bbce1f563b320c2742eb",
+      "data_hash_after_publish_attempt": "4b0dc55fd13f7040a3b40e31a943a384f0fa1ddef144bbce1f563b320c2742eb",
+      "write_after_injection": false,
+      "last_valid_run_preserved": true,
+      "blocked": true
+    },
+    {
+      "id": "truncated-data-file",
+      "target": "data/lines/grid-queue.json",
+      "expected_block_point": "contracts",
+      "injected_at": "2026-10-21T15:20:27.205Z",
+      "gate_exit": 1,
+      "gate_failed_check": "verify",
+      "gate_checks": [
+        {
+          "name": "verify",
+          "script": "scripts/verify.mjs",
+          "exitCode": 1,
+          "ms": 94
+        }
+      ],
+      "publish_exit": 1,
+      "publish_blocked": true,
+      "publish_output_head": "publish blocked by assurance gate: gate result is not passed",
+      "data_hash_before_injection": "d56c708837719536bd0e165ad20e337ca7e17b56e7da4da3f1606602b34c4f03",
+      "data_hash_after_injection": "3182100087e7e32a6ebb035de85aea58a9c683201afaf900c8460b6ef354a3a4",
+      "data_hash_after_publish_attempt": "3182100087e7e32a6ebb035de85aea58a9c683201afaf900c8460b6ef354a3a4",
+      "write_after_injection": false,
+      "last_valid_run_preserved": false,
+      "blocked": true
+    }
+  ]
+}

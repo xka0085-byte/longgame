@@ -16,14 +16,11 @@
 全部数据来自公开免费来源（SEC EDGAR、Federal Register、CARB、EU LOTL、各官方页），采集与雷达自动化，数字自带生成日期。任何序列的口径修订会在事件流中留痕。年度三问体检：驱动推进、买方与引用、回填者。
 
 <!-- AUTO-CITATIONS:START -->
-## 引用格式（自动生成 2026-10-21）
+## 引用格式（自动生成 2026-10-22）
 
 - sb253-docket：CARB 披露相关链接 0 条（首窗 11-10）（最近一次成功采集于 2026-10-20，本期采集失败），自 2026-10，链接 https://xka0085-byte.github.io/longgame/lines/sb253-docket.html
 - agent-dirs：当前登记的 agent 密钥 6 把，自 2026-10，链接 https://xka0085-byte.github.io/longgame/lines/agent-dirs.html
 - eidas-tsl：EU 信任列表指针 42 个，自 2026-10，链接 https://xka0085-byte.github.io/longgame/lines/eidas-tsl.html
-- triggers：累计雷达命中 7 条，自 2026-10，链接 https://xka0085-byte.github.io/longgame/lines/triggers.html
 - formd-sweep：本月十个关键词合计新增 Form D 备案 23 件，自 2026-10，链接 https://xka0085-byte.github.io/longgame/lines/formd-sweep.html
-- c2pa-spec：累计雷达命中 1 条，自 2026-10，链接 https://xka0085-byte.github.io/longgame/lines/c2pa-spec.html
-- state-ai-laws：累计雷达命中 2 条，自 2026-10，链接 https://xka0085-byte.github.io/longgame/lines/state-ai-laws.html
 - grid-queue：EIA-860M august_generator2026.xlsx 计划新增 2313 行合计 288543.9 MW，已取消 1743 行合计 185065.9 MW，自 2026-10，链接 https://xka0085-byte.github.io/longgame/lines/grid-queue.html
 <!-- AUTO-CITATIONS:END -->

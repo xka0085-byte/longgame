@@ -1,0 +1,48 @@
+{
+  "at": "2026-10-22T01:28:07.731Z",
+  "all_blocked": true,
+  "faults": [
+    {
+      "id": "column-rename",
+      "kind": "fixtures",
+      "script": "scripts/run-fixtures.mjs",
+      "exit": 1,
+      "blocked": true
+    },
+    {
+      "id": "unit-mw-to-gw",
+      "kind": "fixtures",
+      "script": "scripts/run-fixtures.mjs",
+      "exit": 1,
+      "blocked": true
+    },
+    {
+      "id": "empty-response",
+      "kind": "contracts",
+      "script": "scripts/validate-contracts.mjs",
+      "exit": 1,
+      "blocked": true
+    },
+    {
+      "id": "http-429",
+      "kind": "contracts",
+      "script": "scripts/validate-contracts.mjs",
+      "exit": 1,
+      "blocked": true
+    },
+    {
+      "id": "duplicate-rows",
+      "kind": "contracts",
+      "script": "scripts/validate-contracts.mjs",
+      "exit": 1,
+      "blocked": true
+    },
+    {
+      "id": "truncated-data-file",
+      "kind": "contracts",
+      "script": "scripts/validate-contracts.mjs",
+      "exit": 1,
+      "blocked": true
+    }
+  ]
+}

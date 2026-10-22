@@ -19,6 +19,8 @@ jobs:
       - run: node scripts/react.mjs
       - run: node scripts/self-audit.mjs
       - run: node scripts/report.mjs
+      - name: assurance gate (blocks publish on failure)
+        run: node scripts/assurance-gate.mjs
       - run: node scripts/publish.mjs
       - name: commit
         run: |

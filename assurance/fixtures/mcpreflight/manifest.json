@@ -1,0 +1,61 @@
+{
+  "dataset": "mcpreflight-weekly",
+  "contract": "assurance/contracts/datasets/mcpreflight-weekly.yaml",
+  "generated_at": "2026-10-21",
+  "samples": [
+    {
+      "file": "normal.json",
+      "sha256": "d128e1ccec1125363db7e3e7cb486f40476a91a9f9399c94a687c74c1cb3c12f",
+      "source": "构造样本，未复制生产数据；状态模型来自 mcpreflight.mjs 与 trust-scan-all.mjs 的静态审计",
+      "target": "contract-schema",
+      "expected": "pass",
+      "expected_error_contains": "",
+      "expected_basis": "PASS/AUTH_GATED/FAIL 为扫描器声明的终态集合；字段语义来自 mcpreflight.mjs 的 report 结构；样本只验证结构与可发布性"
+    },
+    {
+      "file": "empty.json",
+      "sha256": "ddb39de424f79b9002a13ee93f16610479604e93213a89cbb5915c6f1f731732",
+      "source": "构造样本，未复制生产数据；状态模型来自 mcpreflight.mjs 与 trust-scan-all.mjs 的静态审计",
+      "target": "contract-schema",
+      "expected": "fail",
+      "expected_error_contains": "empty",
+      "expected_basis": "空 results 不能作为一次成功扫描；契约要求至少一条记录"
+    },
+    {
+      "file": "missing-field.json",
+      "sha256": "783c79e604b50ff52a559478164bd08254336df2ddf104fc923afc71f15b39cd",
+      "source": "构造样本，未复制生产数据；状态模型来自 mcpreflight.mjs 与 trust-scan-all.mjs 的静态审计",
+      "target": "contract-schema",
+      "expected": "fail",
+      "expected_error_contains": "finalStatus",
+      "expected_basis": "契约要求 finalStatus 必填；缺字段不得默认为 PASS"
+    },
+    {
+      "file": "unit-string.json",
+      "sha256": "95039439a07125c330e8a453ae8212999d4ac4d8db3b6b458bb148932626cd65",
+      "source": "构造样本，未复制生产数据；状态模型来自 mcpreflight.mjs 与 trust-scan-all.mjs 的静态审计",
+      "target": "contract-schema",
+      "expected": "fail",
+      "expected_error_contains": "toolCount",
+      "expected_basis": "toolCount 必须为整数或 null；字符串不是计数"
+    },
+    {
+      "file": "duplicate.json",
+      "sha256": "65d44b96af25c97263613448cc30f27abbd42d1bca519e3e622a93bd09627bb6",
+      "source": "构造样本，未复制生产数据；状态模型来自 mcpreflight.mjs 与 trust-scan-all.mjs 的静态审计",
+      "target": "contract-schema",
+      "expected": "fail",
+      "expected_error_contains": "duplicate",
+      "expected_basis": "主键 name 必须唯一"
+    },
+    {
+      "file": "http-429.json",
+      "sha256": "e806a50d06234cf12b2d035e8eda913b07c35e31eae547b933a6b1b4f9302353",
+      "source": "构造样本，未复制生产数据；状态模型来自 mcpreflight.mjs 与 trust-scan-all.mjs 的静态审计",
+      "target": "publish-eligibility",
+      "expected": "fail",
+      "expected_error_contains": "UNKNOWN",
+      "expected_basis": "最高原则第四条：UNKNOWN 不得写成 PASS；HTTP 429 是限流，不是零工具"
+    }
+  ]
+}
