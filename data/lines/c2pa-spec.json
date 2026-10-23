@@ -65,6 +65,18 @@
     "channel": "hn",
     "query": "content credentials",
     "count": 0
+   },
+   {
+    "date": "2026-10-23T09:42:25.910Z",
+    "channel": "gn",
+    "query": "C2PA content credentials adoption",
+    "count": 5
+   },
+   {
+    "date": "2026-10-23T09:42:25.910Z",
+    "channel": "hn",
+    "query": "content credentials",
+    "count": 0
    }
   ],
   "items": [
@@ -76,6 +88,15 @@
     "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNZXpvbmRFc194V1o2eW5qUmQ0MXdCMWRXQUxXb0VPRVo3MDd2T1dmR3ZiUTdzdUNCSVY3TEdVQ0l0ODhNREVQRU5IUldfSWtiWmpBcmxwNk5TbVp6UTdrYy1QT2VRblJyWU5BbVg2X214c0lZRFprbndOc2FOZGxDUVJCVHlzemJRWk9xZFR5TVFxXzBqbl9qZUhrU1RGOGhwaDItblUwM0JEQWtVNWRScS1zWHR2OHlwSjJsamlYN29UQTItNFJDekZ2cDhDRVU4TlczY0tiRkdOc3dnWER1MFIteVREczMzc2UwV25PQWlVcndmWFVZVTFkcw?oc=5",
     "date": "Tue, 28 Jul 2026 07:00:00 GMT",
     "foundAt": "2026-10-20T16:01:32.102Z"
+   },
+   {
+    "line": "c2pa-spec",
+    "channel": "gn",
+    "query": "C2PA content credentials adoption",
+    "title": "C2PA Welcomes TikTok to Steering Committee, Advancing the Adoption of Content Credentials at a Global Scale - PR Newswire",
+    "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNWXoxdHlYaUgyV0M3OHR6V0NxRHhET1c2SncxcHA0c1hpRzdxN2w2eWw4Ul81OHktU0MxQzlyWnktbjdfUFZKZEJVcUhqX1RWWllONWMtTUN3SmUxVVN6MFhELV9oVEc1N2F1MndZMWtTb0dWU21ndFd2V1RQT3pRdlBWS0Q4bEQzcnc2LTJ1UVd6MUduTVNOa0JSV3JNQXZwYnhWem12Q1V6OEh6YWg1ZkRzd0Jpa2pOVjU5MFNvM0pMOXNzX3pCRURyTjRHalpjU0c0WjRPcDNEWjgxUFZYbDBXRWVDU25rRTZSMmtyTk9CcEV5?oc=5",
+    "date": "Tue, 28 Jul 2026 07:00:00 GMT",
+    "foundAt": "2026-10-23T09:42:25.910Z"
    }
   ],
   "alerts": [
@@ -83,6 +104,12 @@
     "date": "2026-10-20T16:01:32.102Z",
     "title": "C2PA Welcomes TikTok to Steering Committee, Advancing the Adoption of Content Credentials at a Global Scale - Morningstar",
     "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxNZXpvbmRFc194V1o2eW5qUmQ0MXdCMWRXQUxXb0VPRVo3MDd2T1dmR3ZiUTdzdUNCSVY3TEdVQ0l0ODhNREVQRU5IUldfSWtiWmpBcmxwNk5TbVp6UTdrYy1QT2VRblJyWU5BbVg2X214c0lZRFprbndOc2FOZGxDUVJCVHlzemJRWk9xZFR5TVFxXzBqbl9qZUhrU1RGOGhwaDItblUwM0JEQWtVNWRScS1zWHR2OHlwSjJsamlYN29UQTItNFJDekZ2cDhDRVU4TlczY0tiRkdOc3dnWER1MFIteVREczMzc2UwV25PQWlVcndmWFVZVTFkcw?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-10-23T09:42:25.910Z",
+    "title": "C2PA Welcomes TikTok to Steering Committee, Advancing the Adoption of Content Credentials at a Global Scale - PR Newswire",
+    "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNWXoxdHlYaUgyV0M3OHR6V0NxRHhET1c2SncxcHA0c1hpRzdxN2w2eWw4Ul81OHktU0MxQzlyWnktbjdfUFZKZEJVcUhqX1RWWllONWMtTUN3SmUxVVN6MFhELV9oVEc1N2F1MndZMWtTb0dWU21ndFd2V1RQT3pRdlBWS0Q4bEQzcnc2LTJ1UVd6MUduTVNOa0JSV3JNQXZwYnhWem12Q1V6OEh6YWg1ZkRzd0Jpa2pOVjU5MFNvM0pMOXNzX3pCRURyTjRHalpjU0c0WjRPcDNEWjgxUFZYbDBXRWVDU25rRTZSMmtyTk9CcEV5?oc=5",
     "channel": "gn"
    }
   ]

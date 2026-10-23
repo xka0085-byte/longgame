@@ -381,6 +381,54 @@
     "channel": "hn",
     "query": "Cloudflare Monetization Gateway",
     "count": 0
+   },
+   {
+    "date": "2026-10-23T09:42:21.144Z",
+    "channel": "fr",
+    "query": "compute derivatives",
+    "count": 2
+   },
+   {
+    "date": "2026-10-23T09:42:21.144Z",
+    "channel": "fr",
+    "query": "autonomous agent income",
+    "count": 0
+   },
+   {
+    "date": "2026-10-23T09:42:21.144Z",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "count": 5
+   },
+   {
+    "date": "2026-10-23T09:42:21.144Z",
+    "channel": "gn",
+    "query": "agent insurance",
+    "count": 5
+   },
+   {
+    "date": "2026-10-23T09:42:21.144Z",
+    "channel": "gn",
+    "query": "AI personality rights bill",
+    "count": 5
+   },
+   {
+    "date": "2026-10-23T09:42:21.144Z",
+    "channel": "hn",
+    "query": "compute futures",
+    "count": 2
+   },
+   {
+    "date": "2026-10-23T09:42:21.144Z",
+    "channel": "hn",
+    "query": "agent insurance",
+    "count": 0
+   },
+   {
+    "date": "2026-10-23T09:42:21.144Z",
+    "channel": "hn",
+    "query": "Cloudflare Monetization Gateway",
+    "count": 0
    }
   ],
   "items": [
@@ -464,6 +512,24 @@
     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNVk5IeWhKeEp5dDRydnNLdEdZalZjZjVIQUlBdTA4UFl4V1FPc3piYk5rOUJwakdNYWVKUTVNNGZlWE1HQXp0alB4TEJCbklzU2dwUVNpV0J1QlhsY3ZMdmdwQ19VdG82QmlheUFyLTVoR0pTNE5EMEMtUHYtdlU5bUhTUjdncjgzU19kNzRlSm1rbzNIRnVVdnFSUHJVZms1bHFfNjVVdTlDOXJQbUlJMnd6QUV4emt1V3ptUWluZDlpMkRVZGZKX3FObFd0Ulk?oc=5",
     "date": "Thu, 22 Oct 2026 00:11:17 GMT",
     "foundAt": "2026-10-22T09:47:22.494Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Agents often missing from the loop on life, LTC insurance rate increases - InsuranceNewsNet",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOMFhhX1ZPM2VVQ2M3WjY5Rmo0WmdXOUYtUmlDZlp3OTR4cWs5Rk41OGx5WmFuMzJ3U05QbHlXZWVwZ0dIZDRxdWdsQVp1cFZXX3dzTEZXMHVHMEZ2emZxT2ppcGpjTENRVHhvYnVCZWU1aHdjMjZPV2Vod0tOMXVHekt5ajNQdEdZYk4tdnhlaXQ1VUdYZmNMWC0wZi1qV2Roc0huVUo0Wm5RZUo2LWtpRQ?oc=5",
+    "date": "Thu, 22 Oct 2026 14:01:49 GMT",
+    "foundAt": "2026-10-23T09:42:21.144Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "California insurance reviews go public: What real estate agents should know - Inman Real Estate News",
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1UcnRVdkNiUUVYN0p4N1ZYbUlnbTluU053ZzlpRXdKUGZKQjNxU3QwUjNFaWEtdU00TkdwNXd4TUJ2WFl2cjVSckpySzNDOGEtZGJkaGN2QzFKVmhZTE5OaHZoZWNRTnl0cGVyQmlub2stZnRDMDloek83bzMxQQ?oc=5",
+    "date": "Thu, 22 Oct 2026 20:59:27 GMT",
+    "foundAt": "2026-10-23T09:42:21.144Z"
    }
   ],
   "alerts": [
@@ -519,6 +585,18 @@
     "date": "2026-10-22T09:47:22.494Z",
     "title": "Storm damaged your home? What insurance actually covers — and why you should call your agent first - AZ Family",
     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNVk5IeWhKeEp5dDRydnNLdEdZalZjZjVIQUlBdTA4UFl4V1FPc3piYk5rOUJwakdNYWVKUTVNNGZlWE1HQXp0alB4TEJCbklzU2dwUVNpV0J1QlhsY3ZMdmdwQ19VdG82QmlheUFyLTVoR0pTNE5EMEMtUHYtdlU5bUhTUjdncjgzU19kNzRlSm1rbzNIRnVVdnFSUHJVZms1bHFfNjVVdTlDOXJQbUlJMnd6QUV4emt1V3ptUWluZDlpMkRVZGZKX3FObFd0Ulk?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-10-23T09:42:21.144Z",
+    "title": "Agents often missing from the loop on life, LTC insurance rate increases - InsuranceNewsNet",
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOMFhhX1ZPM2VVQ2M3WjY5Rmo0WmdXOUYtUmlDZlp3OTR4cWs5Rk41OGx5WmFuMzJ3U05QbHlXZWVwZ0dIZDRxdWdsQVp1cFZXX3dzTEZXMHVHMEZ2emZxT2ppcGpjTENRVHhvYnVCZWU1aHdjMjZPV2Vod0tOMXVHekt5ajNQdEdZYk4tdnhlaXQ1VUdYZmNMWC0wZi1qV2Roc0huVUo0Wm5RZUo2LWtpRQ?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-10-23T09:42:21.144Z",
+    "title": "California insurance reviews go public: What real estate agents should know - Inman Real Estate News",
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1UcnRVdkNiUUVYN0p4N1ZYbUlnbTluU053ZzlpRXdKUGZKQjNxU3QwUjNFaWEtdU00TkdwNXd4TUJ2WFl2cjVSckpySzNDOGEtZGJkaGN2QzFKVmhZTE5OaHZoZWNRTnl0cGVyQmlub2stZnRDMDloek83bzMxQQ?oc=5",
     "channel": "gn"
    }
   ]
