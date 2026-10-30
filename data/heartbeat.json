@@ -39,6 +39,14 @@
       "critical": 0,
       "warn": 2,
       "healed": []
+    },
+    {
+      "at": "2026-10-30T13:20:22.002Z",
+      "trigger": "local",
+      "overall": "degraded",
+      "critical": 0,
+      "warn": 1,
+      "healed": []
     }
   ]
 }

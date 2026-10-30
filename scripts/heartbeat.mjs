@@ -57,7 +57,9 @@ const DEFAULT_TUNING = {
   criticalMultiplier: 1.5,   // gap > (limit * multiplier) 升级为 critical
   consecutiveFailureCritical: 2,
   heartbeatSilenceHours: 30, // 心跳静默超过此值 = 触发器已死
-  selfOutputStaleHours: 48,  // docs/status.json 陈旧超过此值 = 自审环节断了
+  // 对齐 weekly-audit 的周期：它一周才产一次 docs/status.json，阈值设 48h 等于
+  // 每周有 5 天在报假警（线上实测 216h 仍在报）。8 天 = 一个周期 + 1 天宽限。
+  selfOutputStaleHours: 192, // docs/status.json 陈旧超过此值 = 自审环节断了
   historyKeep: 400,
   heartbeatKeep: 60,
 };
@@ -75,6 +77,41 @@ function readJson(p, fallback = null) {
   try { return JSON.parse(readFileSync(p, 'utf8')); }
   catch { return fallback; }
 }
+// 门禁结论要跨 workflow 读。assurance/.gate/result.json 落在 runner 本地目录，
+// job 结束即销毁，所以心跳在另一个 workflow 里永远读不到它——线上实测健康页
+// 每次都在报 gate-missing（假信号），而真正的 gate FAIL 反而看不见。
+// 有 GITHUB_TOKEN 时直接问 Actions 最近一次 assurance-gate 的结论；本地跑时回退读文件。
+async function gateState() {
+  const token = process.env.GITHUB_TOKEN;
+  const repo = process.env.GITHUB_REPOSITORY;
+  const branch = process.env.GITHUB_REF_NAME || 'master';
+  if (token && repo) {
+    try {
+      const res = await fetch(
+        `https://api.github.com/repos/${repo}/actions/workflows/assurance-gate.yml/runs?branch=${encodeURIComponent(branch)}&per_page=1`,
+        { headers: { Authorization: `Bearer ${token}`, Accept: 'application/vnd.github+json', 'User-Agent': 'longgame-heartbeat' } },
+      );
+      if (res.ok) {
+        const j = await res.json();
+        const run = (j.workflow_runs || [])[0];
+        if (run && run.status === 'completed' && run.conclusion) {
+          return {
+            at: run.updated_at || run.created_at,
+            passed: run.conclusion === 'success',
+            source: 'actions-api',
+            url: run.html_url,
+            conclusion: run.conclusion,
+          };
+        }
+      }
+    } catch (e) {
+      console.error(`heartbeat: gate lookup via api failed (${e.message}); falling back to local file`);
+    }
+  }
+  const local = readJson(GATE_RESULT);
+  return local ? { ...local, source: 'local-file' } : null;
+}
+
 function daysBetween(aIso, bIso) {
   const a = Date.parse(`${String(aIso).slice(0, 10)}T00:00:00Z`);
   const b = Date.parse(`${String(bIso).slice(0, 10)}T00:00:00Z`);
@@ -113,7 +150,7 @@ function lineCadence(s) {
   return { kind: 'unknown', limit: 7 + tuning.weeklyGraceDays };
 }
 
-function evaluate() {
+function evaluate(gate) {
   const signals = [];
   const lines = [];
 
@@ -235,17 +272,16 @@ function evaluate() {
     });
   }
 
-  // 发布门禁：最近一次结果失败或过旧
-  const gate = readJson(GATE_RESULT);
+  // 发布门禁：最近一次结果失败或过旧（gate 由调用方提供：CI 走 Actions API，本地走文件）
   if (gate) {
     const gateAgeH = (nowMs - Date.parse(gate.at)) / 3600000;
     if (gate.passed === false) {
-      signals.push({ id: 'gate-failed', severity: 'critical', detail: `最近一次 assurance-gate 为 FAIL（${gate.at}），发布被阻断` });
+      signals.push({ id: 'gate-failed', severity: 'critical', detail: `最近一次 assurance-gate 为 FAIL（${gate.at}，来源 ${gate.source || 'unknown'}），发布被阻断` });
     } else if (gateAgeH > 24 * 8) {
-      signals.push({ id: 'gate-stale', severity: 'warn', detail: `最近一次 gate 通过是 ${gate.at}（${gateAgeH.toFixed(0)} 小时前），超过 8 天未复跑` });
+      signals.push({ id: 'gate-stale', severity: 'warn', detail: `最近一次 gate 通过是 ${gate.at}（${gateAgeH.toFixed(0)} 小时前，来源 ${gate.source || 'unknown'}），超过 8 天未复跑` });
     }
   } else {
-    signals.push({ id: 'gate-missing', severity: 'warn', detail: '没有 assurance/.gate/result.json，门禁从未运行' });
+    signals.push({ id: 'gate-missing', severity: 'warn', detail: '查不到最近一次 assurance-gate 的结论（无 token 且无本地 result.json），门禁状态未知' });
   }
 
   const rank = { critical: 3, warn: 2, info: 1 };
@@ -319,13 +355,14 @@ code{background:#f3f4f6;padding:1px 5px;border-radius:4px;font-size:12.5px}
 }
 
 // ---------- 主流程 ----------
-const state = evaluate();
+const gate = await gateState();
+const state = evaluate(gate);
 let heal = { healed: [], failed: [], attempted: [] };
 let stateAfter = state;
 
 if (doHeal && state.signals.some(s => s.id.startsWith('line-stale:') || s.id.startsWith('line-never-collected:') || s.id.startsWith('line-never-successful:'))) {
   heal = selfHeal(state);
-  if (heal.healed.length) stateAfter = evaluate(); // 补采后重新评估，别拿旧结论告警
+  if (heal.healed.length) stateAfter = evaluate(gate); // 补采后重新评估，别拿旧结论告警
 }
 
 const critical = stateAfter.signals.filter(s => s.severity === 'critical');
@@ -341,6 +378,7 @@ const payload = {
   heal,
   previous_heartbeat_at: stateAfter.prevAt,
   silence_hours: stateAfter.silenceHours === null ? null : Number(stateAfter.silenceHours.toFixed(1)),
+  gate: gate ? { at: gate.at, passed: gate.passed, source: gate.source, url: gate.url || null } : null,
   thresholds: tuning,
   disclaimer: '内部自检，非第三方验证；E0 / verified_by_third_party=false',
 };
