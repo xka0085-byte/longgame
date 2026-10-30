@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-30T13:20:22.002Z",
+  "generated_at": "2026-10-30T13:21:56.685Z",
   "today": "2026-10-30",
-  "trigger": "local",
+  "trigger": "push",
   "overall": "degraded",
   "signals": [
     {
@@ -13,6 +13,11 @@
       "id": "self-output-stale",
       "severity": "warn",
       "detail": "docs/status.json 生成于 2026-10-21T13:04:39.567Z，已 216 小时未更新，自审环节（weekly-audit）没跑成"
+    },
+    {
+      "id": "gate-missing",
+      "severity": "warn",
+      "detail": "查不到最近一次 assurance-gate 的结论（无 token 且无本地 result.json），门禁状态未知"
     }
   ],
   "lines": [
@@ -201,14 +206,9 @@
     "failed": [],
     "attempted": []
   },
-  "previous_heartbeat_at": "2026-10-30T13:12:45.983Z",
-  "silence_hours": 0.1,
-  "gate": {
-    "at": "2026-10-30T13:16:06Z",
-    "passed": true,
-    "source": "actions-api",
-    "url": "https://github.com/xka0085-byte/longgame/actions/runs/41061789539"
-  },
+  "previous_heartbeat_at": "2026-10-30T13:20:22.002Z",
+  "silence_hours": 0,
+  "gate": null,
   "thresholds": {
     "weeklyGraceDays": 1,
     "monthlyGraceDays": 3,
@@ -216,7 +216,7 @@
     "criticalMultiplier": 1.5,
     "consecutiveFailureCritical": 2,
     "heartbeatSilenceHours": 30,
-    "selfOutputStaleHours": 48,
+    "selfOutputStaleHours": 192,
     "historyKeep": 400,
     "heartbeatKeep": 60
   },
