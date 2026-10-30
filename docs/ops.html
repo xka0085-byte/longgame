@@ -17,7 +17,7 @@ blockquote{border-left:3px solid #d1d5db;margin:18px 0;padding:6px 16px;color:#4
 </style>
 
 <h1>运维手册</h1>
-<p class="meta">最后更新 2026-10-30 · 适用 longgame（13 条数据线）与 mcpreflight</p>
+<p class="meta">最后更新 2026-10-30 · 适用 longgame（13 条数据线）与 mcpreflight · 当前状态：线上实跑通过（health.html 显示 ok）</p>
 
 <h2>先说结论：这套东西现在能自己跑，但"自己能不能跑"这件事还差一个外部见证</h2>
 
@@ -45,6 +45,22 @@ blockquote{border-left:3px solid #d1d5db;margin:18px 0;padding:6px 16px;color:#4
 
 <p>新鲜度按<b>最后一次成功采集</b>算，不按最后一次运行算。差别很关键：一条每周都跑、每次都全挂的线，
 用"最后运行时间"算会永远显示今天刚采过——这就是绿灯下的死亡。</p>
+
+<h2>上线当天实跑暴露的故障（已修）</h2>
+
+<p>这套机制不是"写完就完事"。第一次真跑在 GitHub 上，立刻暴露出四个只在真实环境里才出现的问题：</p>
+
+<table>
+<tr><th>故障</th><th>表现</th><th>根因</th><th>修法</th></tr>
+<tr><td>门禁信号永远是假警</td><td>健康页每轮都报 <code>gate-missing</code>，而真正的 gate FAIL 反而看不见</td><td><code>assurance/.gate/result.json</code> 落在 runner 的工作目录里，job 结束即销毁；心跳在另一个 workflow 里永远读不到它</td><td>心跳改成问 Actions API 要最近一次 assurance-gate 的结论（<code>conclusion</code>），本地跑时回退读文件。已实测读到 <code>passed=true</code> 并写进健康页</td></tr>
+<tr><td>没有变更被当成失败</td><td><code>self-upgrade</code> 首跑即红，还开出一条假告警 Issue</td><td><code>git add data/self-tuning.json</code>：该文件只在真有变更时才生成，<code>git add</code> 打到不存在的路径会以 128 退出</td><td>改为"存在才 add"，另外 7 个 workflow 的同类隐患一并加上 <code>|| true</code></td></tr>
+<tr><td>陈旧阈值和周期打架</td><td><code>self-output-stale</code> 连报 216 小时</td><td><code>docs/status.json</code> 一周才产一次，阈值设 48 小时等于每周有 5 天在报假警</td><td>阈值对齐到 192 小时（一个周期 + 1 天宽限）</td></tr>
+<tr><td>推对了代码，推错了分支</td><td>workflow 手动触发能跑，定时器毫无动静</td><td>默认分支是 <code>master</code>，改动推到了 <code>main</code>；schedule 只在默认分支触发</td><td>快进 master 后推送，schedule 与 pages 部署同时恢复</td></tr>
+</table>
+
+<blockquote>这四个里没有一个能被代码审查发现——它们全都是"在真实环境跑一次"才现形的。
+所以这套系统的验收标准不是"代码写完了"，而是"线上真跑过一轮并且绿灯"。
+2026-10-30 13:28 UTC 的那轮心跳 <code>overall=ok</code>，是它第一次真正通过验收。</blockquote>
 
 <h2>现在的告警通道</h2>
 
@@ -76,7 +92,12 @@ blockquote{border-left:3px solid #d1d5db;margin:18px 0;padding:6px 16px;color:#4
   -H "Authorization: Bearer $GH_PAT" \
   -H "Accept: application/vnd.github+json" \
   https://api.github.com/repos/xka0085-byte/longgame/actions/workflows/heartbeat.yml/dispatches \
-  -d '{"ref":"main"}'</pre>
+  -d '{"ref":"master"}'</pre>
+
+<p><b>分支必须写 <code>master</code>。</b>这个仓库的默认分支是 <code>master</code>，
+而 GitHub 的 schedule 事件<b>只在默认分支上触发</b>——代码推到一个非默认分支上，
+workflow 文件在，长得也对，但定时器永远不会叫它。2026-10-30 就踩过一次：
+改动推到了 <code>main</code>，workflow 手动 dispatch 能跑、schedule 全哑。</p>
 
 <p>需要一个 fine-grained PAT，权限只要 <b>Actions: write</b>（不需要 repo 全权限）。
 把 token 放在那台机器的环境变量里，不要写进仓库。</p>
