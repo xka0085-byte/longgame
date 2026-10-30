@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-30T13:28:18.622Z",
+  "generated_at": "2026-10-30T19:04:08.552Z",
   "today": "2026-10-30",
-  "trigger": "workflow_dispatch",
+  "trigger": "schedule",
   "overall": "ok",
   "signals": [
     {
@@ -196,13 +196,13 @@
     "failed": [],
     "attempted": []
   },
-  "previous_heartbeat_at": "2026-10-30T13:22:27.645Z",
-  "silence_hours": 0.1,
+  "previous_heartbeat_at": "2026-10-30T13:28:18.622Z",
+  "silence_hours": 5.6,
   "gate": {
-    "at": "2026-10-30T13:22:02Z",
+    "at": "2026-10-30T15:22:53Z",
     "passed": true,
     "source": "actions-api",
-    "url": "https://github.com/xka0085-byte/longgame/actions/runs/41062609467"
+    "url": "https://github.com/xka0085-byte/longgame/actions/runs/41080142540"
   },
   "thresholds": {
     "weeklyGraceDays": 1,
