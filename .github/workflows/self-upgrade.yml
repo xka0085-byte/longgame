@@ -53,7 +53,12 @@ jobs:
           git config user.name "longgame-bot"
           git config user.email "actions@users.noreply.github.com"
           BRANCH="${GITHUB_REF_NAME:-main}"
-          git add portfolio.json data/self-tuning.json data/self-upgrade-log.jsonl data/diagnostics.json data/heartbeat.json
+          # 逐个判断存在再 add：self-tuning.json 只在真有变更时才生成，git add 一个
+          # 不存在的路径会以 128 退出，把"没有变更"误报成"工作流失败"。
+          # 本轮实测踩过：dry-run 无变更 -> pathspec 不匹配 -> 开出假告警 Issue。
+          for f in portfolio.json data/self-tuning.json data/self-upgrade-log.jsonl data/diagnostics.json; do
+            [ -e "$f" ] && git add "$f"
+          done
           if git diff --cached --quiet; then
             echo "no policy change to commit"
             exit 0

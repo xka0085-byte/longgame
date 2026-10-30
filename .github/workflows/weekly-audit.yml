@@ -21,7 +21,7 @@ jobs:
         run: |
           git config user.name "longgame-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add docs/status.json docs/audit/latest.md
+          git add docs/status.json docs/audit/latest.md 2>/dev/null || true
           git diff --cached --quiet || git commit -m "audit $(date -u +%F)"
           BRANCH="${GITHUB_REF_NAME:-main}"
           for i in 1 2 3; do

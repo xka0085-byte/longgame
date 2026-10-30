@@ -55,7 +55,7 @@ jobs:
           git config user.name "longgame-bot"
           git config user.email "actions@users.noreply.github.com"
           BRANCH="${GITHUB_REF_NAME:-main}"
-          git add data/heartbeat.json data/collect-runs.json data/lines docs/health docs/health.html
+          git add data/heartbeat.json data/collect-runs.json data/lines docs/health docs/health.html 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "no health change to commit"
             exit 0
