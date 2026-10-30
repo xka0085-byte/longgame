@@ -12,9 +12,29 @@
       "keywordHit": true
      }
     ]
+   },
+   {
+    "date": "2026-10-30T08:05:13.760Z",
+    "pages": [
+     {
+      "id": "c2pa-specs",
+      "status": 200,
+      "bytes": 13225,
+      "sig": "13224:PCFET0NUWVBFIGh0bWw+",
+      "changed": true,
+      "keywordHit": true,
+      "unavailable": false
+     }
+    ]
    }
   ],
-  "events": []
+  "events": [
+   {
+    "date": "2026-10-30T08:05:13.760Z",
+    "page": "c2pa-specs",
+    "note": "CHANGE + KEYWORD HIT"
+   }
+  ]
  },
  "radar": {
   "runs": [
@@ -77,6 +97,18 @@
     "channel": "hn",
     "query": "content credentials",
     "count": 0
+   },
+   {
+    "date": "2026-10-30T08:04:12.605Z",
+    "channel": "gn",
+    "query": "C2PA content credentials adoption",
+    "count": 5
+   },
+   {
+    "date": "2026-10-30T08:04:12.605Z",
+    "channel": "hn",
+    "query": "content credentials",
+    "count": 1
    }
   ],
   "items": [

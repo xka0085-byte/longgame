@@ -12,9 +12,29 @@
       "keywordHit": false
      }
     ]
+   },
+   {
+    "date": "2026-10-30T08:05:17.183Z",
+    "pages": [
+     {
+      "id": "multistate-ai",
+      "status": 200,
+      "bytes": 214976,
+      "sig": "214952:PCFkb2N0eXBlIGh0bWw+",
+      "changed": true,
+      "keywordHit": false,
+      "unavailable": false
+     }
+    ]
    }
   ],
-  "events": []
+  "events": [
+   {
+    "date": "2026-10-30T08:05:17.183Z",
+    "page": "multistate-ai",
+    "note": "content changed"
+   }
+  ]
  },
  "radar": {
   "runs": [
@@ -107,6 +127,24 @@
     "channel": "hn",
     "query": "state AI law",
     "count": 3
+   },
+   {
+    "date": "2026-10-30T08:04:15.305Z",
+    "channel": "gn",
+    "query": "state AI law enforcement",
+    "count": 5
+   },
+   {
+    "date": "2026-10-30T08:04:15.305Z",
+    "channel": "gn",
+    "query": "Colorado AI Act",
+    "count": 5
+   },
+   {
+    "date": "2026-10-30T08:04:15.305Z",
+    "channel": "hn",
+    "query": "state AI law",
+    "count": 1
    }
   ],
   "items": [

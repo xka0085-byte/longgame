@@ -234,9 +234,59 @@
     "channel": "hn",
     "query": "interconnection queue",
     "count": 0
+   },
+   {
+    "date": "2026-10-30T08:04:19.239Z",
+    "channel": "gn",
+    "query": "interconnection queue data center",
+    "count": 5
+   },
+   {
+    "date": "2026-10-30T08:04:19.239Z",
+    "channel": "gn",
+    "query": "large load tariff utility",
+    "count": 5
+   },
+   {
+    "date": "2026-10-30T08:04:19.239Z",
+    "channel": "hn",
+    "query": "interconnection queue",
+    "count": 0
    }
   ],
-  "items": [],
-  "alerts": []
+  "items": [
+   {
+    "line": "grid-queue",
+    "channel": "gn",
+    "query": "interconnection queue data center",
+    "title": "Bipartisan Permitting Bill Data Centers Grid Interconnection Could Clear Queues - Enverus",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPTnhyMlpsMVZ1NzZJa2hrN2UxQVE0Z3hkTGN2UXRKLTAyOEZBVTd1WnNIRnNzT1hHejVRSDM2bVEtNkgxTlFVV094SG9WQTlRZ1JxVmdFN2FNb2QtaGVQRTlOWGRvTVJPZnlnbkpDdUtja2FUeGM4Y0tReHphVEhHRjY1aUFiMXE2dUVqb1ZZNnpOMUx0?oc=5",
+    "date": "Tue, 27 Oct 2026 15:28:30 GMT",
+    "foundAt": "2026-10-30T08:04:19.239Z"
+   },
+   {
+    "line": "grid-queue",
+    "channel": "gn",
+    "query": "large load tariff utility",
+    "title": "Large-load tariffs increasingly rely on upfront payments, exit fees, ramp schedules - Utility Dive",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE13OWFvNDVDT3NybEdkNDZYcndoTmlYTWlfSVhoekVGd1NqOFBBckV3VFczSVlpa2VCRXVwdUs2Y0s4ZEt4cWFrZWtuMHNsOHFhSlZ1YktmRjhXaXFHSUVwSEh1WXc2cDhVWDkxZnRLaEx4Yy16dm9wdE9GYmE?oc=5",
+    "date": "Tue, 08 Sep 2026 07:00:00 GMT",
+    "foundAt": "2026-10-30T08:04:19.239Z"
+   }
+  ],
+  "alerts": [
+   {
+    "date": "2026-10-30T08:04:19.239Z",
+    "title": "Bipartisan Permitting Bill Data Centers Grid Interconnection Could Clear Queues - Enverus",
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPTnhyMlpsMVZ1NzZJa2hrN2UxQVE0Z3hkTGN2UXRKLTAyOEZBVTd1WnNIRnNzT1hHejVRSDM2bVEtNkgxTlFVV094SG9WQTlRZ1JxVmdFN2FNb2QtaGVQRTlOWGRvTVJPZnlnbkpDdUtja2FUeGM4Y0tReHphVEhHRjY1aUFiMXE2dUVqb1ZZNnpOMUx0?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-10-30T08:04:19.239Z",
+    "title": "Large-load tariffs increasingly rely on upfront payments, exit fees, ramp schedules - Utility Dive",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE13OWFvNDVDT3NybEdkNDZYcndoTmlYTWlfSVhoekVGd1NqOFBBckV3VFczSVlpa2VCRXVwdUs2Y0s4ZEt4cWFrZWtuMHNsOHFhSlZ1YktmRjhXaXFHSUVwSEh1WXc2cDhVWDkxZnRLaEx4Yy16dm9wdE9GYmE?oc=5",
+    "channel": "gn"
+   }
+  ]
  }
 }

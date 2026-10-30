@@ -37,6 +37,56 @@
       "Ggh50g"
      ]
     }
+   },
+   {
+    "date": "2026-10-30T08:04:55.159Z",
+    "dirs": {
+     "https://chatgpt.com/.well-known/http-message-signatures-directory": {
+      "status": 200,
+      "keyCount": 1
+     },
+     "https://agent.bot.goog/.well-known/http-message-signatures-directory": {
+      "status": 200,
+      "keyCount": 5
+     }
+    },
+    "keys": {
+     "https://chatgpt.com/.well-known/http-message-signatures-directory": [
+      "ArwjqcCqtA5oxEWkzXGC-To_0A9whHmajCHtfe8I9aY"
+     ],
+     "https://agent.bot.goog/.well-known/http-message-signatures-directory": [
+      "mhxuPw",
+      "cYSMkA",
+      "bUCe2A",
+      "DYiMjA",
+      "Ggh50g"
+     ]
+    }
+   },
+   {
+    "date": "2026-10-30T08:05:08.645Z",
+    "dirs": {
+     "https://chatgpt.com/.well-known/http-message-signatures-directory": {
+      "status": 200,
+      "keyCount": 1
+     },
+     "https://agent.bot.goog/.well-known/http-message-signatures-directory": {
+      "status": 200,
+      "keyCount": 5
+     }
+    },
+    "keys": {
+     "https://chatgpt.com/.well-known/http-message-signatures-directory": [
+      "ArwjqcCqtA5oxEWkzXGC-To_0A9whHmajCHtfe8I9aY"
+     ],
+     "https://agent.bot.goog/.well-known/http-message-signatures-directory": [
+      "mhxuPw",
+      "cYSMkA",
+      "bUCe2A",
+      "DYiMjA",
+      "Ggh50g"
+     ]
+    }
    }
   ],
   "events": []
@@ -150,6 +200,24 @@
     "channel": "gn",
     "query": "web bot auth agent identity",
     "count": 5
+   },
+   {
+    "date": "2026-10-30T08:03:50.770Z",
+    "channel": "hn",
+    "query": "web bot auth",
+    "count": 5
+   },
+   {
+    "date": "2026-10-30T08:03:50.770Z",
+    "channel": "gn",
+    "query": "agent payments protocol",
+    "count": 5
+   },
+   {
+    "date": "2026-10-30T08:03:50.770Z",
+    "channel": "gn",
+    "query": "web bot auth agent identity",
+    "count": 5
    }
   ],
   "items": [
@@ -170,6 +238,15 @@
     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPdnZQaWFTWnctNE9wTkxWMG1jN1NtSUM1Z2JScGRtVzNNTF92b2tHc0ZkV2loajRpRjhjbWhJZVRXOEdKYnhoMll2bWFoSndPaDI5bktLb19SajNyZWg5aEluVHVBODRvNkEzcEp4V2MzWE9kWnRlT2VLT0pQZnNpMmF2aU9mbUJiNXB2S1J1bHN0QmM2T3V3MmJUOUZyWXBwWnJadnhRZGZvNjdZTE1udVNyaWxpRmV4Zjc5T2MydHZVWUk?oc=5",
     "date": "Thu, 22 Jan 2026 08:00:00 GMT",
     "foundAt": "2026-10-20T16:00:58.782Z"
+   },
+   {
+    "line": "agent-dirs",
+    "channel": "hn",
+    "query": "web bot auth",
+    "title": "Web Bot Auth: messh SDK 0.2.0 is out",
+    "url": "https://messh.io",
+    "date": "2026-10-29T17:51:05Z",
+    "foundAt": "2026-10-30T08:03:50.770Z"
    }
   ],
   "alerts": [
@@ -184,6 +261,12 @@
     "title": "Web Bot Auth: Verifying User Identity &amp; Ensuring Agent Trust Through the Customer Journey - Security Boulevard",
     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPdnZQaWFTWnctNE9wTkxWMG1jN1NtSUM1Z2JScGRtVzNNTF92b2tHc0ZkV2loajRpRjhjbWhJZVRXOEdKYnhoMll2bWFoSndPaDI5bktLb19SajNyZWg5aEluVHVBODRvNkEzcEp4V2MzWE9kWnRlT2VLT0pQZnNpMmF2aU9mbUJiNXB2S1J1bHN0QmM2T3V3MmJUOUZyWXBwWnJadnhRZGZvNjdZTE1udVNyaWxpRmV4Zjc5T2MydHZVWUk?oc=5",
     "channel": "gn"
+   },
+   {
+    "date": "2026-10-30T08:03:50.770Z",
+    "title": "Web Bot Auth: messh SDK 0.2.0 is out",
+    "url": "https://messh.io",
+    "channel": "hn"
    }
   ]
  }

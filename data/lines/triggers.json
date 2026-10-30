@@ -429,6 +429,54 @@
     "channel": "hn",
     "query": "Cloudflare Monetization Gateway",
     "count": 0
+   },
+   {
+    "date": "2026-10-30T08:04:00.050Z",
+    "channel": "fr",
+    "query": "compute derivatives",
+    "count": 5
+   },
+   {
+    "date": "2026-10-30T08:04:00.050Z",
+    "channel": "fr",
+    "query": "autonomous agent income",
+    "count": 1
+   },
+   {
+    "date": "2026-10-30T08:04:00.050Z",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "count": 5
+   },
+   {
+    "date": "2026-10-30T08:04:00.050Z",
+    "channel": "gn",
+    "query": "agent insurance",
+    "count": 5
+   },
+   {
+    "date": "2026-10-30T08:04:00.050Z",
+    "channel": "gn",
+    "query": "AI personality rights bill",
+    "count": 5
+   },
+   {
+    "date": "2026-10-30T08:04:00.050Z",
+    "channel": "hn",
+    "query": "compute futures",
+    "count": 4
+   },
+   {
+    "date": "2026-10-30T08:04:00.050Z",
+    "channel": "hn",
+    "query": "agent insurance",
+    "count": 1
+   },
+   {
+    "date": "2026-10-30T08:04:00.050Z",
+    "channel": "hn",
+    "query": "Cloudflare Monetization Gateway",
+    "count": 0
    }
   ],
   "items": [
@@ -530,6 +578,24 @@
     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1UcnRVdkNiUUVYN0p4N1ZYbUlnbTluU053ZzlpRXdKUGZKQjNxU3QwUjNFaWEtdU00TkdwNXd4TUJ2WFl2cjVSckpySzNDOGEtZGJkaGN2QzFKVmhZTE5OaHZoZWNRTnl0cGVyQmlub2stZnRDMDloek83bzMxQQ?oc=5",
     "date": "Thu, 22 Oct 2026 20:59:27 GMT",
     "foundAt": "2026-10-23T09:42:21.144Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "title": "CFTC’s Selig Sees Role for Compute Futures, Rules for AI Trading Agents - PYMNTS.com",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOd1laTjFsTS0xTS1rQWVaYkRMdzRxWGE2NHZiS2VIT28wakhYSEs0Vnl2amRKVnBRVTZEakVrS0lzUmxMR2lEZlJWWXNtNTViMi1CaENhbkszRzZNM25iQmRHYnMyYjJWUkRIckN2b0JwSzRkcV9lYWU0bnMxQ0V6aGF4b1JIZ1l2VWhmeE9FMHpZOENpSnNScE9FdmdXQnk3d2ROdkJ5S3hvX2RSZUZ1bDczRnpWRmNrVmhESnRNSTlRYkFqM0E?oc=5",
+    "date": "Thu, 29 Oct 2026 15:54:51 GMT",
+    "foundAt": "2026-10-30T08:04:00.050Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "title": "CFTC Considers AI Compute Futures as ICE, CME Eye New Market - Bloomberg.com",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTzV6WldoVTVHSGEwSGkzZF9WeFpzLXhQbkxCYlU2Sl94M2haOTJNejY0WWpsNTRmRnJKTm8tUVJhTWlkRUwwYTY0ZGk4WmxZVDV6MWVsNGhtbnltMlBLTjRuWlgxME9vOVBzcmdfd3FHb3BoWTRzZGp2dm14ZGxtZ0x0Nm9mcER1WnZDOE5HVGRkUEg3SWJoMmRXQzBLekd6TUVCZWxxZlA5Wk96RW9Z?oc=5",
+    "date": "Wed, 19 Aug 2026 07:00:00 GMT",
+    "foundAt": "2026-10-30T08:04:00.050Z"
    }
   ],
   "alerts": [
@@ -597,6 +663,18 @@
     "date": "2026-10-23T09:42:21.144Z",
     "title": "California insurance reviews go public: What real estate agents should know - Inman Real Estate News",
     "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1UcnRVdkNiUUVYN0p4N1ZYbUlnbTluU053ZzlpRXdKUGZKQjNxU3QwUjNFaWEtdU00TkdwNXd4TUJ2WFl2cjVSckpySzNDOGEtZGJkaGN2QzFKVmhZTE5OaHZoZWNRTnl0cGVyQmlub2stZnRDMDloek83bzMxQQ?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-10-30T08:04:00.050Z",
+    "title": "CFTC’s Selig Sees Role for Compute Futures, Rules for AI Trading Agents - PYMNTS.com",
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOd1laTjFsTS0xTS1rQWVaYkRMdzRxWGE2NHZiS2VIT28wakhYSEs0Vnl2amRKVnBRVTZEakVrS0lzUmxMR2lEZlJWWXNtNTViMi1CaENhbkszRzZNM25iQmRHYnMyYjJWUkRIckN2b0JwSzRkcV9lYWU0bnMxQ0V6aGF4b1JIZ1l2VWhmeE9FMHpZOENpSnNScE9FdmdXQnk3d2ROdkJ5S3hvX2RSZUZ1bDczRnpWRmNrVmhESnRNSTlRYkFqM0E?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-10-30T08:04:00.050Z",
+    "title": "CFTC Considers AI Compute Futures as ICE, CME Eye New Market - Bloomberg.com",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTzV6WldoVTVHSGEwSGkzZF9WeFpzLXhQbkxCYlU2Sl94M2haOTJNejY0WWpsNTRmRnJKTm8tUVJhTWlkRUwwYTY0ZGk4WmxZVDV6MWVsNGhtbnltMlBLTjRuWlgxME9vOVBzcmdfd3FHb3BoWTRzZGp2dm14ZGxtZ0x0Nm9mcER1WnZDOE5HVGRkUEg3SWJoMmRXQzBLekd6TUVCZWxxZlA5Wk96RW9Z?oc=5",
     "channel": "gn"
    }
   ]
