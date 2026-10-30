@@ -198,6 +198,245 @@
     ],
     "unavailablePages": 1,
     "status": "partial"
+   },
+   {
+    "date": "2026-10-30T09:06:48.438Z",
+    "pages": [
+     {
+      "id": "sb261-docket",
+      "status": 417,
+      "bytes": 142,
+      "unavailable": true,
+      "tolerated": true,
+      "reason": "http-417",
+      "sig": null,
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "sb253-reporting",
+      "status": 403,
+      "bytes": 919,
+      "unavailable": true,
+      "tolerated": false,
+      "reason": "http-403",
+      "sig": null,
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "sb253-program",
+      "status": 200,
+      "bytes": 61221,
+      "sig": "61201:CjwhRE9DVFlQRSBodG1s",
+      "changed": false,
+      "keywordHit": false,
+      "unavailable": false
+     }
+    ],
+    "unavailablePages": 2,
+    "status": "partial"
+   },
+   {
+    "date": "2026-10-30T09:08:22.740Z",
+    "pages": [
+     {
+      "id": "sb261-docket",
+      "status": 417,
+      "bytes": 142,
+      "unavailable": true,
+      "tolerated": true,
+      "reason": "http-417",
+      "sig": null,
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "sb253-reporting",
+      "status": 403,
+      "bytes": 919,
+      "unavailable": true,
+      "tolerated": false,
+      "reason": "http-403",
+      "sig": null,
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "sb253-program",
+      "status": 200,
+      "bytes": 61221,
+      "sig": "61201:CjwhRE9DVFlQRSBodG1s",
+      "changed": false,
+      "keywordHit": false,
+      "unavailable": false
+     }
+    ],
+    "unavailablePages": 2,
+    "status": "partial"
+   },
+   {
+    "date": "2026-10-30T09:09:34.046Z",
+    "pages": [
+     {
+      "id": "sb261-docket",
+      "status": 417,
+      "bytes": 142,
+      "unavailable": true,
+      "tolerated": true,
+      "throttled": true,
+      "reason": "http-417",
+      "sig": null,
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "sb253-reporting",
+      "status": 403,
+      "bytes": 919,
+      "unavailable": true,
+      "tolerated": false,
+      "throttled": true,
+      "reason": "http-403",
+      "sig": null,
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "sb253-program",
+      "status": 403,
+      "bytes": 919,
+      "unavailable": true,
+      "tolerated": false,
+      "throttled": true,
+      "reason": "http-403",
+      "sig": null,
+      "changed": false,
+      "keywordHit": false
+     }
+    ],
+    "unavailablePages": 3,
+    "status": "data-source-unavailable"
+   },
+   {
+    "date": "2026-10-30T09:09:56.585Z",
+    "pages": [
+     {
+      "id": "sb261-docket",
+      "status": 403,
+      "bytes": 919,
+      "unavailable": true,
+      "tolerated": true,
+      "throttled": true,
+      "reason": "http-403",
+      "sig": null,
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "sb253-reporting",
+      "status": 403,
+      "bytes": 919,
+      "unavailable": true,
+      "tolerated": false,
+      "throttled": true,
+      "reason": "http-403",
+      "sig": null,
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "sb253-program",
+      "status": 403,
+      "bytes": 919,
+      "unavailable": true,
+      "tolerated": false,
+      "throttled": true,
+      "reason": "http-403",
+      "sig": null,
+      "changed": false,
+      "keywordHit": false
+     }
+    ],
+    "unavailablePages": 3,
+    "status": "data-source-unavailable"
+   },
+   {
+    "date": "2026-10-30T09:10:34.398Z",
+    "pages": [
+     {
+      "id": "sb261-docket",
+      "status": 417,
+      "bytes": 142,
+      "unavailable": true,
+      "tolerated": true,
+      "throttled": true,
+      "reason": "http-417",
+      "sig": null,
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "sb253-reporting",
+      "status": 200,
+      "bytes": 58613,
+      "sig": "58599:CjwhRE9DVFlQRSBodG1s",
+      "changed": false,
+      "keywordHit": false,
+      "unavailable": false
+     },
+     {
+      "id": "sb253-program",
+      "status": 403,
+      "bytes": 919,
+      "unavailable": true,
+      "tolerated": false,
+      "throttled": true,
+      "reason": "http-403",
+      "sig": null,
+      "changed": false,
+      "keywordHit": false
+     }
+    ],
+    "unavailablePages": 2,
+    "status": "partial"
+   },
+   {
+    "date": "2026-10-30T09:10:43.157Z",
+    "pages": [
+     {
+      "id": "sb261-docket",
+      "status": 417,
+      "bytes": 142,
+      "unavailable": true,
+      "tolerated": true,
+      "throttled": true,
+      "reason": "http-417",
+      "sig": null,
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "sb253-reporting",
+      "status": 200,
+      "bytes": 58613,
+      "sig": "58599:CjwhRE9DVFlQRSBodG1s",
+      "changed": false,
+      "keywordHit": false,
+      "unavailable": false
+     },
+     {
+      "id": "sb253-program",
+      "status": 200,
+      "bytes": 61221,
+      "sig": "61201:CjwhRE9DVFlQRSBodG1s",
+      "changed": false,
+      "keywordHit": false,
+      "unavailable": false
+     }
+    ],
+    "unavailablePages": 1,
+    "status": "partial"
    }
   ],
   "events": [
@@ -259,6 +498,36 @@
    },
    {
     "date": "2026-10-30T08:04:27.098Z",
+    "page": "sb253-program",
+    "type": "data-source-recovered",
+    "status": 200,
+    "bytes": 61221
+   },
+   {
+    "date": "2026-10-30T09:06:48.438Z",
+    "page": "sb253-reporting",
+    "type": "data-source-unavailable",
+    "status": 403,
+    "bytes": 919,
+    "reason": "http-403"
+   },
+   {
+    "date": "2026-10-30T09:09:34.046Z",
+    "page": "sb253-program",
+    "type": "data-source-unavailable",
+    "status": 403,
+    "bytes": 919,
+    "reason": "http-403"
+   },
+   {
+    "date": "2026-10-30T09:10:34.398Z",
+    "page": "sb253-reporting",
+    "type": "data-source-recovered",
+    "status": 200,
+    "bytes": 58613
+   },
+   {
+    "date": "2026-10-30T09:10:43.157Z",
     "page": "sb253-program",
     "type": "data-source-recovered",
     "status": 200,

@@ -57,6 +57,27 @@ for (const s of portfolio.series) {
     catch (e) { failures += 1; console.error(`${s.id} radar FAILED: ${e.message.slice(0, 140)}`); }
   }
 }
+// 漏跑检测：GitHub 的 schedule 事件可能整段丢失（本项目 10-24~10-29 即无任何 schedule 运行），
+// 因此即使本轮采集成功，也要显式暴露"距上个采集点已超出自身周期"的线，避免看着绿灯其实断了。
+const todayMs = new Date(`${today}T00:00:00Z`).getTime();
+function gapDays(d) { return Math.round((todayMs - new Date(`${d}T00:00:00Z`).getTime()) / 86400000); }
+const stale = [];
+for (const s of portfolio.series) {
+  if (!s.collect) continue;
+  const f = `data/lines/${s.id}.json`;
+  if (!existsSync(f)) { stale.push(`${s.id}: no data file`); continue; }
+  const st = JSON.parse(readFileSync(f, 'utf8'));
+  const last = st.collect?.runs?.at(-1)?.date?.slice(0, 10);
+  if (!last) { stale.push(`${s.id}: no collect run`); continue; }
+  const limit = s.cron?.collect === 'monthly' ? 31 : 7;
+  const gap = gapDays(last);
+  if (gap > limit) stale.push(`${s.id}: last collect ${last} (${gap}d > ${limit}d cadence)`);
+}
+if (stale.length) {
+  console.warn(`stale lines (${stale.length}): collection gap exceeds cadence`);
+  for (const x of stale) console.warn(`  ${x}`);
+}
+
 if (mode === 'report') execFileSync('node', ['scripts/report.mjs'], { stdio: 'inherit' });
 if (failures > 0) {
   console.error(`run-all ${mode} FAILED: ${failures} line(s) failed`);

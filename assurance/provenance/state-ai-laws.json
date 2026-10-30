@@ -1,14 +1,14 @@
 {
-  "run_id": "local-20261022034747726",
+  "run_id": "local-20261030091152777",
   "line": "state-ai-laws",
-  "commit": "2564b28db93213e1df123d46828e2a2219206fc5",
+  "commit": "df87cd651aa759d5518289351c303fee01044087",
   "contract_version": 1,
   "assurance_level": 2,
-  "raw_sha256": "22ee315c9f32b1b49572cd09c71660754be2b6a2d3c297a26d12d58c15de6c6c",
-  "normalized_sha256": "8d67e8210aa42f3771087593df82b8a9aa1aeca8b1c73bf9d60b5eb8b5a9c566",
+  "raw_sha256": "9e94bdbabed2aa973fe289c50f791218895b1efdf550cfbd31738220c7a3cae1",
+  "normalized_sha256": "764440f6b9676c49a4efa992b7d525b405f8c42f37c0ed0aa6bf512dd326dac5",
   "validation_status": "PASS",
   "publication_status": "PUBLISHED",
   "publication_reason": null,
-  "last_success_at": "2026-10-20T16:00:51.708Z",
-  "generated_at": "2026-10-22T03:47:47.726Z"
+  "last_success_at": "2026-10-30T09:10:56.430Z",
+  "generated_at": "2026-10-30T09:11:52.777Z"
 }

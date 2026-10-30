@@ -124,7 +124,9 @@
         "pages": [
           {
             "id": "sb261-docket",
-            "url": "https://ww2.arb.ca.gov/public-comments/climate-related-financial-risk-reports-sb-261-docket"
+            "url": "https://ww2.arb.ca.gov/public-comments/climate-related-financial-risk-reports-sb-261-docket",
+            "tolerate": true,
+            "tolerate_reason": "CARB 对非浏览器客户端返回 417/202，SB 261 分卷长期不可抓取；主线数据由 sb253-reporting、sb253-program 承担"
           },
           {
             "id": "sb253-reporting",
@@ -411,7 +413,13 @@
           },
           {
             "id": "cme-compute",
-            "url": "https://www.cmegroup.com/markets/compute.html"
+            "url": "https://www.cmegroup.com/markets/compute.html",
+            "tolerate": true,
+            "tolerate_reason": "CME 该路径已下线并全站拦截程序化访问（403/404）；保留作为恢复探针，恢复时自动记 data-source-recovered 事件"
+          },
+          {
+            "id": "silicon-data",
+            "url": "https://www.silicondata.com/"
           }
         ],
         "match": {

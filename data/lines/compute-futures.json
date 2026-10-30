@@ -71,6 +71,152 @@
     ],
     "unavailablePages": 1,
     "status": "partial"
+   },
+   {
+    "date": "2026-10-30T09:06:31.702Z",
+    "pages": [
+     {
+      "id": "coloprice-marketplace",
+      "status": 200,
+      "bytes": 23285,
+      "sig": "22796:PCFET0NUWVBFIGh0bWw+",
+      "changed": false,
+      "keywordHit": false,
+      "unavailable": false
+     },
+     {
+      "id": "cme-compute",
+      "status": 404,
+      "bytes": 126659,
+      "unavailable": true,
+      "tolerated": true,
+      "reason": "http-404",
+      "sig": null,
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "silicon-data",
+      "status": 200,
+      "bytes": 161894,
+      "sig": "161769:PCFET0NUWVBFIGh0bWw+",
+      "changed": false,
+      "keywordHit": false,
+      "unavailable": false
+     }
+    ],
+    "unavailablePages": 1,
+    "status": "partial"
+   },
+   {
+    "date": "2026-10-30T09:06:45.894Z",
+    "pages": [
+     {
+      "id": "coloprice-marketplace",
+      "status": 200,
+      "bytes": 23285,
+      "sig": "22796:PCFET0NUWVBFIGh0bWw+",
+      "changed": false,
+      "keywordHit": false,
+      "unavailable": false
+     },
+     {
+      "id": "cme-compute",
+      "status": 404,
+      "bytes": 126659,
+      "unavailable": true,
+      "tolerated": true,
+      "reason": "http-404",
+      "sig": null,
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "silicon-data",
+      "status": 200,
+      "bytes": 161894,
+      "sig": "161769:PCFET0NUWVBFIGh0bWw+",
+      "changed": false,
+      "keywordHit": false,
+      "unavailable": false
+     }
+    ],
+    "unavailablePages": 1,
+    "status": "partial"
+   },
+   {
+    "date": "2026-10-30T09:10:40.106Z",
+    "pages": [
+     {
+      "id": "coloprice-marketplace",
+      "status": 200,
+      "bytes": 23285,
+      "sig": "22796:PCFET0NUWVBFIGh0bWw+",
+      "changed": false,
+      "keywordHit": false,
+      "unavailable": false
+     },
+     {
+      "id": "cme-compute",
+      "status": 404,
+      "bytes": 126659,
+      "unavailable": true,
+      "tolerated": true,
+      "throttled": false,
+      "reason": "http-404",
+      "sig": null,
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "silicon-data",
+      "status": 200,
+      "bytes": 161894,
+      "sig": "161769:PCFET0NUWVBFIGh0bWw+",
+      "changed": false,
+      "keywordHit": false,
+      "unavailable": false
+     }
+    ],
+    "unavailablePages": 1,
+    "status": "partial"
+   },
+   {
+    "date": "2026-10-30T09:10:52.468Z",
+    "pages": [
+     {
+      "id": "coloprice-marketplace",
+      "status": 200,
+      "bytes": 23285,
+      "sig": "22796:PCFET0NUWVBFIGh0bWw+",
+      "changed": false,
+      "keywordHit": false,
+      "unavailable": false
+     },
+     {
+      "id": "cme-compute",
+      "status": 404,
+      "bytes": 126659,
+      "unavailable": true,
+      "tolerated": true,
+      "throttled": false,
+      "reason": "http-404",
+      "sig": null,
+      "changed": false,
+      "keywordHit": false
+     },
+     {
+      "id": "silicon-data",
+      "status": 200,
+      "bytes": 161894,
+      "sig": "161769:PCFET0NUWVBFIGh0bWw+",
+      "changed": false,
+      "keywordHit": false,
+      "unavailable": false
+     }
+    ],
+    "unavailablePages": 1,
+    "status": "partial"
    }
   ],
   "events": [

@@ -72,8 +72,16 @@ if (mode === 'collect' && line.collect) {
         .map(r => (r.pages || []).find(x => x.id === p.id))
         .find(x => x && x.status === 200 && x.unavailable !== true && x.sig);
       try {
-        const r = await fetch(p.url, { headers: UA, signal: AbortSignal.timeout(30000) });
-        const html = await r.text();
+        // 反爬/限流类状态码（202/403/417/429）先重试一次：CARB 这类站点对非浏览器客户端会随机拦截，
+        // 单次抖动不该被记成数据源失效。仍失败才进入 unavailable 分支并留事件。
+        const RETRYABLE = new Set([202, 403, 417, 429]);
+        let r = await fetch(p.url, { headers: UA, signal: AbortSignal.timeout(30000) });
+        let html = await r.text();
+        if ((!r.ok || r.status === 202) && RETRYABLE.has(r.status)) {
+          await new Promise(res => setTimeout(res, 2000));
+          r = await fetch(p.url, { headers: UA, signal: AbortSignal.timeout(30000) });
+          html = await r.text();
+        }
         const bytes = Buffer.byteLength(html);
         const empty = html.trim().length === 0;
         // 202 (Accepted) 与空正文都不是成功抓取：CARB 一类站点会对非浏览器客户端
@@ -84,7 +92,7 @@ if (mode === 'collect' && line.collect) {
             : r.status === 204 ? 'http-204'
             : !r.ok ? `http-${r.status}`
             : 'empty-body';
-          run.pages.push({ id: p.id, status: r.status, bytes, unavailable: true, reason, sig: null, changed: false, keywordHit: false });
+          run.pages.push({ id: p.id, status: r.status, bytes, unavailable: true, tolerated: p.tolerate === true, throttled: RETRYABLE.has(r.status) || empty, reason, sig: null, changed: false, keywordHit: false });
           if (!prevPage?.unavailable) st.collect.events.push({ date: nowISO, page: p.id, type: 'data-source-unavailable', status: r.status, bytes, reason });
           continue;
         }
@@ -121,7 +129,7 @@ if (mode === 'collect' && line.collect) {
           }
         }
       } catch (e) {
-        run.pages.push({ id: p.id, error: String(e).slice(0, 100), unavailable: true, reason: 'fetch-error' });
+        run.pages.push({ id: p.id, error: String(e).slice(0, 100), unavailable: true, tolerated: p.tolerate === true, reason: 'fetch-error' });
         if (!prevPage?.unavailable) st.collect.events.push({ date: nowISO, page: p.id, type: 'data-source-unavailable', reason: 'fetch-error' });
       }
     }
@@ -129,8 +137,24 @@ if (mode === 'collect' && line.collect) {
     if (un.length) {
       run.unavailablePages = un.length;
       run.status = un.length === run.pages.length ? 'data-source-unavailable' : 'partial';
-      collectFailure = true;
-      console.error(`${lineId}: ${un.length}/${run.pages.length} page(s) unavailable`);
+      // 三档判定，目标是"数据不断档"同时不放过真故障：
+      // 1) tolerate=true —— 该源已知长期不可抓取，永远只记事件（portfolio 里显式声明）；
+      // 2) throttled —— 反爬/限流类状态码（202/403/417/429/空正文挑战页），属环境性拦截，
+      //    不是数据源下线，放行但记事件，避免整周采集被单站反爬拖死；
+      // 3) 其余（404/410/5xx/解析失败）—— 首次告警放行，连续两轮不可用才判失败。
+      // 全线所有页同时不可用一律判失败，防止整条线静默停摆。
+      const blocking = un.filter(x => {
+        if (x.tolerated === true || x.throttled === true) return false;
+        const prevSame = prev?.pages?.find(y => y.id === x.id);
+        return prevSame?.unavailable === true;
+      });
+      const allDown = un.length === run.pages.length && !un.every(x => x.tolerated === true || x.throttled === true);
+      if (blocking.length || allDown) {
+        collectFailure = true;
+        console.error(`${lineId}: ${un.length}/${run.pages.length} page(s) unavailable (blocking=${blocking.length}, allDown=${allDown})`);
+      } else {
+        console.warn(`${lineId}: ${un.length}/${run.pages.length} page(s) unavailable (tolerated/throttled/first occurrence, recorded as events only)`);
+      }
     }
   } else if (c.type === 'dirs') {
     run.dirs = {}; const kidsMap = {};
