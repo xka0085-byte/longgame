@@ -31,6 +31,14 @@
       "critical": 0,
       "warn": 2,
       "healed": []
+    },
+    {
+      "at": "2026-10-30T13:12:45.983Z",
+      "trigger": "workflow_dispatch",
+      "overall": "degraded",
+      "critical": 0,
+      "warn": 2,
+      "healed": []
     }
   ]
 }
