@@ -18,6 +18,10 @@ jobs:
         with: { python-version: "3.12" }
       - run: pip install openpyxl
       - run: node scripts/run-all.mjs collect-daily
+      # Watchdog: GitHub silently drops schedule events (this repo saw zero automatic runs
+      # from 2026-10-22 to 10-29), so a single Monday cron is a single point of failure.
+      # Check weekly cadence every day and top up on the spot when a line is overdue.
+      - run: node scripts/if-stale.mjs
       - name: commit
         run: |
           git config user.name "longgame-bot"
