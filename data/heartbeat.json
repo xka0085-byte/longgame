@@ -7,6 +7,14 @@
       "critical": 0,
       "warn": 1,
       "healed": []
+    },
+    {
+      "at": "2026-10-30T12:36:59.091Z",
+      "trigger": "push",
+      "overall": "degraded",
+      "critical": 0,
+      "warn": 2,
+      "healed": []
     }
   ]
 }
