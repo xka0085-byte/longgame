@@ -8,6 +8,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
+  issues: write
 jobs:
   audit:
     runs-on: ubuntu-latest
@@ -22,4 +23,17 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add docs/status.json docs/audit/latest.md
           git diff --cached --quiet || git commit -m "audit $(date -u +%F)"
-          git push
+          BRANCH="${GITHUB_REF_NAME:-main}"
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin "$BRANCH" || true
+            if git push origin "HEAD:$BRANCH"; then echo "pushed (attempt $i)"; exit 0; fi
+            sleep 5
+          done
+          echo "push failed after 3 attempts" >&2
+          exit 1
+
+      - name: notify failure
+        if: failure()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/notify-failure.mjs "${{ github.workflow }}"

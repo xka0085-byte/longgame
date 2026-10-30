@@ -1,0 +1,12 @@
+{
+  "runs": [
+    {
+      "at": "2026-10-30T12:30:20.382Z",
+      "trigger": "local",
+      "overall": "degraded",
+      "critical": 0,
+      "warn": 1,
+      "healed": []
+    }
+  ]
+}

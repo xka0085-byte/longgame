@@ -1,0 +1,74 @@
+name: self-upgrade
+
+# 每周一次（外加手动）：按真实采集证据，对自己的运行策略做有限升级。
+#
+# 允许的范围（脚本内白名单，不接受外部输入）：
+#   - portfolio.json 中某页 tolerate 标记（连续 ≥3 轮不可用、近 20 轮零成功、状态码属反爬集合）
+#   - data/self-tuning.json 的周期容忍天数（真实间隔长期宽于名义周期时，+1 天，有上限）
+# 不允许：改解析器、改 evidence、改门禁阈值、改 assurance_level。
+# 每次变更都先跑 verify + contracts，不过就原样回滚，并在 data/self-upgrade-log.jsonl 留痕。
+
+on:
+  schedule:
+    - cron: "30 4 * * 1"   # UTC 周一 04:30 = 北京 12:30
+    - cron: "30 12 * * 4"  # UTC 周四 12:30 兜底（schedule 会丢，冗余一份）
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "只出计划不写入"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: self-upgrade
+  cancel-in-progress: false
+
+jobs:
+  upgrade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install openpyxl
+
+      - name: plan (dry-run)
+        run: node scripts/self-upgrade.mjs --dry-run
+
+      - name: apply (gate-checked, auto-rollback)
+        if: ${{ inputs.dry_run != true }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/self-upgrade.mjs
+
+      - name: commit if changed
+        if: always()
+        run: |
+          git config user.name "longgame-bot"
+          git config user.email "actions@users.noreply.github.com"
+          BRANCH="${GITHUB_REF_NAME:-main}"
+          git add portfolio.json data/self-tuning.json data/self-upgrade-log.jsonl data/diagnostics.json data/heartbeat.json
+          if git diff --cached --quiet; then
+            echo "no policy change to commit"
+            exit 0
+          fi
+          git commit -m "self-upgrade: apply evidence-backed policy change $(date -u +%F)"
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin "$BRANCH" || true
+            if git push origin "HEAD:$BRANCH"; then echo "pushed (attempt $i)"; exit 0; fi
+            sleep 5
+          done
+          echo "push failed after 3 attempts" >&2
+          exit 1
+
+      - name: notify failure
+        if: failure()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/notify-failure.mjs "${{ github.workflow }}"

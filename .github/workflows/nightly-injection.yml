@@ -13,6 +13,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency:
   group: nightly-injection
@@ -40,7 +41,14 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add docs/assurance/fault-injection.md
           git diff --cached --quiet || git commit -m "nightly fault injection $(date -u +%Y-%m-%d)"
-          git push
+          BRANCH="${GITHUB_REF_NAME:-main}"
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin "$BRANCH" || true
+            if git push origin "HEAD:$BRANCH"; then echo "pushed (attempt $i)"; exit 0; fi
+            sleep 5
+          done
+          echo "push failed after 3 attempts" >&2
+          exit 1
       - name: upload logs
         if: always()
         uses: actions/upload-artifact@v4
@@ -51,3 +59,9 @@ jobs:
             assurance/fault-injection/logs/
             assurance/fault-injection/result.json
           if-no-files-found: warn
+
+      - name: notify failure
+        if: failure()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/notify-failure.mjs "${{ github.workflow }}"

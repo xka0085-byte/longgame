@@ -10,6 +10,7 @@ on:
       - .github/workflows/forced-failure.yml
 
 permissions:
+  issues: write
   contents: read
 
 jobs:
@@ -34,3 +35,9 @@ jobs:
           name: forced-failure-result
           path: assurance/results/forced-failure.json
           if-no-files-found: warn
+
+      - name: notify failure
+        if: failure()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/notify-failure.mjs "${{ github.workflow }}"

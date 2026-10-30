@@ -9,6 +9,7 @@ on:
   workflow_dispatch:
 
 permissions:
+  issues: write
   contents: read
 
 jobs:
@@ -35,3 +36,9 @@ jobs:
             assurance/fault-injection/guard-result.json
             assurance/fault-injection/logs/
           if-no-files-found: warn
+
+      - name: notify failure
+        if: failure()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/notify-failure.mjs "${{ github.workflow }}"

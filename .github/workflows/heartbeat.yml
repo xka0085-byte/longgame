@@ -1,0 +1,101 @@
+name: heartbeat
+
+# 存在的理由：GitHub 的 schedule 会被静默丢弃。实测本项目 2026-10-22/23 各触发一次后，
+# 到 10-30 之间 158 小时没有任何 schedule 运行，而原设计只有一个周一的 cron，
+# 丢一次就是整周断档，且失败无声。
+#
+# 这里做两件事：
+#   1. 把单点 cron 变成一天三次（冗余：任一次生效即可，不必赌"周一那一次"）
+#   2. 每次运行做自检 → 超期线当场补采 → critical 开 Issue → 落健康页
+#
+# 诚实的边界：cron 全被丢弃时，这个 workflow 自己也不会跑，仓库内部救不了自己。
+# 真正的 dead-man 检查必须在仓库外部（见 docs/ops.html 的"外部触发器"一节）。
+
+on:
+  schedule:
+    - cron: "0 2 * * *"    # UTC 02:00 = 北京 10:00
+    - cron: "30 8 * * *"   # UTC 08:30 = 北京 16:30
+    - cron: "0 14 * * *"   # UTC 14:00 = 北京 22:00
+  workflow_dispatch:
+  push:
+    paths:
+      - "scripts/heartbeat.mjs"
+      - "scripts/lib/github-issue.mjs"
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: heartbeat
+  cancel-in-progress: false
+
+jobs:
+  heartbeat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: pip install openpyxl
+
+      # 自检 + 自愈 + 告警。本身可能非零退出（有 critical），先不拦，让后面的
+      # commit 把健康状态与 issue 落地，最后再由 verdict 步骤统一判定红绿。
+      - name: health check + self-heal + alert
+        continue-on-error: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/heartbeat.mjs
+
+      - name: commit health state
+        if: always()
+        run: |
+          git config user.name "longgame-bot"
+          git config user.email "actions@users.noreply.github.com"
+          BRANCH="${GITHUB_REF_NAME:-main}"
+          git add data/heartbeat.json data/collect-runs.json data/lines docs/health docs/health.html
+          if git diff --cached --quiet; then
+            echo "no health change to commit"
+            exit 0
+          fi
+          git commit -m "heartbeat $(date -u +%FT%TZ)"
+          # 心跳补采会与其他采集 workflow 同时写 data/lines，push 可能撞车。
+          # 重试三次、每次先 rebase：宁可多试几次，也不要因为一次非快进把健康状态丢掉。
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin "$BRANCH" || true
+            if git push origin "HEAD:$BRANCH"; then echo "pushed (attempt $i)"; exit 0; fi
+            sleep 5
+          done
+          echo "push failed after 3 attempts" >&2
+          exit 1
+
+      - name: verdict (fail the run if still critical)
+        run: |
+          node -e '
+            const fs=require("fs");
+            const p="docs/health/latest.json";
+            if(!fs.existsSync(p)){console.error("no health output");process.exit(1)}
+            const d=JSON.parse(fs.readFileSync(p,"utf8"));
+            console.log(`overall=${d.overall} critical=${d.signals.filter(s=>s.severity==="critical").length}`);
+            for(const s of d.signals) console.log(`  [${s.severity}] ${s.id} — ${s.detail}`);
+            process.exit(d.overall==="critical"?1:0);
+          '
+
+      - name: notify failure
+        if: failure()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # critical 情况下 heartbeat 自己已经开了 longgame-critical Issue，这里再开一条
+          # 只是噪声。噪声的代价是让人开始忽略 Issue——所以只在"脚本自己崩了、没来得及
+          # 告警"时才补开 workflow-failed。
+          if [ -f docs/health/latest.json ] && node -e '
+            const d=require("./docs/health/latest.json");
+            process.exit(d && d.overall==="critical" ? 0 : 1);
+          '; then
+            echo "critical already reported by heartbeat, skip duplicate issue"
+          else
+            node scripts/notify-failure.mjs "${{ github.workflow }}"
+          fi

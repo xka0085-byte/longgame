@@ -163,7 +163,7 @@ footer{margin-top:30px;font-size:12px;color:var(--muted)}
 <div class="flow">${flowSvg}</div>
 ${groupHtml}
 <h2>最近雷达命中</h2><ul class="hits">${alertsHtml}</ul>
-<footer>longgame portfolio，零人工测量线组合自 2026-10。引用格式见 llms.txt。数据全部来自公开来源，数字自带生成日期。每年三问体检：驱动推进、买方与引用、回填者。</footer>
+<footer>longgame portfolio，零人工测量线组合自 2026-10。引用格式见 llms.txt。数据全部来自公开来源，数字自带生成日期。每年三问体检：驱动推进、买方与引用、回填者。<br><a href="health.html">系统当前健康状态</a> · <a href="ops.html">运维手册（含已知缺口与恢复步骤）</a> · <a href="method.html">采集与门禁方法</a></footer>
 </div>`;
 writeFileSync('docs/index.html', html);
 console.log(`report docs/report-${month}.md + dashboard docs/index.html (grouped cards), lines=${portfolio.series.length}`);

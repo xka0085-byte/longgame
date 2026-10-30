@@ -170,6 +170,9 @@ for (const p of ['grid-queue-latest', 'sb253-first-window']) {
 }
 if (existsSync(join(STAGE_DOCS, 'verify.html'))) sitemap.push('https://xka0085-byte.github.io/longgame/verify.html');
 if (existsSync(join(STAGE_DOCS, 'method.html'))) sitemap.push('https://xka0085-byte.github.io/longgame/method.html');
+// 健康页与运维手册也要能被搜到：一个说明"现在还活着吗"，一个说明"死了怎么救"
+if (existsSync(join(STAGE_DOCS, 'health.html'))) sitemap.push('https://xka0085-byte.github.io/longgame/health.html');
+if (existsSync(join(STAGE_DOCS, 'ops.html'))) sitemap.push('https://xka0085-byte.github.io/longgame/ops.html');
 
 // RSS
 const rss = `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>longgame portfolio</title><link>https://xka0085-byte.github.io/longgame/</link><description>零人工测量线组合，逐线时间序列与事件流</description><lastBuildDate>${now.toUTCString()}</lastBuildDate>

@@ -1,0 +1,14 @@
+{
+  "generated_at": "2026-10-30T12:27:19.675Z",
+  "changes_proposed": [],
+  "changes_applied": [],
+  "reverted_by_gate": null,
+  "observations": [
+    {
+      "id": "compute-futures/cme-compute",
+      "kind": "intermittent",
+      "detail": "近 9 轮中成功 1 轮、当前连续不可用 8 轮，属间歇性拦截，不建议 tolerate（会掩盖真实故障）"
+    }
+  ],
+  "note": "诊断只记录现象与建议，不改代码。任何\"看起来像 bug\"的判断都需要人确认后才动解析器。"
+}

@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<title>longgame 运维手册</title>
+<style>
+body{font:16px/1.75 -apple-system,"Segoe UI",system-ui,sans-serif;max-width:760px;margin:56px auto;padding:0 22px;color:#1c1c1e}
+h1{font-size:26px;margin-bottom:6px}h2{font-size:19px;margin-top:40px;border-bottom:1px solid #e5e7eb;padding-bottom:6px}
+h3{font-size:16px;margin-top:24px}
+.meta{color:#6b7280;font-size:13px;margin-bottom:32px}
+table{border-collapse:collapse;width:100%;font-size:14px;margin:14px 0}
+th,td{border-bottom:1px solid #e5e7eb;padding:8px;text-align:left;vertical-align:top}
+th{background:#f9fafb;font-weight:600}
+code{background:#f3f4f6;padding:1px 5px;border-radius:4px;font-size:13.5px}
+pre{background:#f9fafb;border:1px solid #e5e7eb;padding:12px 14px;border-radius:6px;overflow-x:auto;font-size:13px}
+blockquote{border-left:3px solid #d1d5db;margin:18px 0;padding:6px 16px;color:#4b5563;font-size:14.5px}
+.warnbox{border:1px solid #fca5a5;background:#fef2f2;padding:12px 16px;border-radius:6px;margin:18px 0}
+</style>
+
+<h1>运维手册</h1>
+<p class="meta">最后更新 2026-10-30 · 适用 longgame（13 条数据线）与 mcpreflight</p>
+
+<h2>先说结论：这套东西现在能自己跑，但"自己能不能跑"这件事还差一个外部见证</h2>
+
+<p>2026-10-30 对线上记录的核查结果：</p>
+
+<table>
+<tr><th>事实</th><th>证据</th></tr>
+<tr><td>GitHub 的 schedule 事件被静默丢弃</td><td>longgame 最后两次 schedule 成功在 10-22、10-23；此后到 10-30 共 <b>158 小时</b>没有任何 schedule 运行。10-26（周一）whole weekly-collect 整次没跑。</td></tr>
+<tr><td>失败没有任何声音</td><td>17 个 workflow，无 failure 通知、无 Issue、无邮件。10-30 手动触发的 weekly-collect 失败后，也没人知道。</td></tr>
+<tr><td>看门狗和被监控对象在同一根线上</td><td>原 if-stale.mjs 挂在 daily-collect 内部。触发器死了，看门狗一起死。</td></tr>
+<tr><td>单线失败能拖死整轮</td><td>run-all 原逻辑"任一 line 失败即 exit 1"，导致 gate/publish 被跳过——数据采到了却不发布。</td></tr>
+</table>
+
+<p>代码层面能补的已经补了（下面三层）。<b>补不了的是：仓库完全不知道自己"没被叫醒"。</b>
+这件事必须由仓库外的某个东西来问一句"你还在吗"。</p>
+
+<h2>三层保底（已上线）</h2>
+
+<table>
+<tr><th>层</th><th>位置</th><th>做什么</th><th>防的是什么</th></tr>
+<tr><td>页级</td><td><code>scripts/line.mjs</code></td><td>三档容错：tolerate（已知抓不到，只记事件）／throttled（202/403/417/429/空挑战页，重试一次后放行）／其余（首次告警放行，连续两轮才判失败）</td><td>单页反爬拖垮一条线</td></tr>
+<tr><td>线级</td><td><code>scripts/run-all.mjs</code></td><td>单线失败只记录（写进 <code>data/collect-runs.json</code>），只有本轮尝试的线<b>全部</b>失败才判整轮失败</td><td>一条线故障让其它 12 条线的数据无法发布</td></tr>
+<tr><td>心跳级</td><td><code>scripts/heartbeat.mjs</code></td><td>一日三次自检 → 超期线当场补采 → critical 开 Issue → 落健康页与心跳文件</td><td>整周断档无人知</td></tr>
+</table>
+
+<p>新鲜度按<b>最后一次成功采集</b>算，不按最后一次运行算。差别很关键：一条每周都跑、每次都全挂的线，
+用"最后运行时间"算会永远显示今天刚采过——这就是绿灯下的死亡。</p>
+
+<h2>现在的告警通道</h2>
+
+<table>
+<tr><th>Issue 标题前缀</th><th>什么时候开</th><th>什么时候自动关</th></tr>
+<tr><td><code>workflow-failed: &lt;workflow 名&gt;</code></td><td>任一 workflow 失败（每个 workflow 最后一步 <code>notify-failure.mjs</code>）</td><td>人工关</td></tr>
+<tr><td><code>longgame-critical</code></td><td>心跳判定 critical：某线超期 1.5 倍周期 / 连续两轮全挂 / 门禁 FAIL</td><td>下次心跳判定恢复时自动关</td></tr>
+<tr><td><code>longgame-schedule-silence</code></td><td>上次心跳距今超 30 小时</td><td>心跳恢复后自动关</td></tr>
+</table>
+
+<p>健康状态随时可看：<a href="./health.html">health.html</a>（每轮自动重写），原始数据
+<code>docs/health/latest.json</code>，模型可读摘要 <code>docs/health/latest.json</code> 与
+<code>data/heartbeat.json</code>（心跳时间戳在这里，外部监控盯这个）。</p>
+
+<h2>唯一补不上的那块：外部 dead-man switch</h2>
+
+<div class="warnbox">
+<b>必须由人在仓库外做一次配置，代码做不到。</b>
+理由很直白：cron 被丢弃时，仓库里的任何脚本都不会运行，包括看门狗和心跳。
+"我没被叫醒"这句话，只能由外面的人替它说。
+</div>
+
+<h3>方案 A：外部定时器触发 workflow（推荐，能自愈）</h3>
+<p>任意一台常开的机器（VPS / NAS / 家里的旧电脑 / 树莓派）加一条定时任务，
+每 6 小时叫一次心跳。它跑起来就会自己补采超期线：</p>
+
+<pre># crontab -e
+0 */6 * * * curl -sS -X POST \
+  -H "Authorization: Bearer $GH_PAT" \
+  -H "Accept: application/vnd.github+json" \
+  https://api.github.com/repos/xka0085-byte/longgame/actions/workflows/heartbeat.yml/dispatches \
+  -d '{"ref":"main"}'</pre>
+
+<p>需要一个 fine-grained PAT，权限只要 <b>Actions: write</b>（不需要 repo 全权限）。
+把 token 放在那台机器的环境变量里，不要写进仓库。</p>
+
+<h3>方案 B：外部监控盯心跳时间戳（最省事，只能告警不能自愈）</h3>
+<p>用任何支持"HTTP 内容变化"或"JSON 字段"检查的服务（Healthchecks.io / UptimeRobot / 自建），
+盯 <code>https://xka0085-byte.github.io/longgame/health/latest.json</code> 里的
+<code>generated_at</code>，超过 30 小时未更新就发邮件。五分钟能配完，不需要 token，
+但它只能告诉你"断了"，不能替你补。</p>
+
+<blockquote>两个都做最好：A 负责把系统叫醒，B 负责在 A 也失效时叫醒你。
+只做 A 的风险是 A 自己挂了没人知道；只做 B 的风险是每次断档都要等你自己动手。</blockquote>
+
+<h2>自我升级的边界</h2>
+
+<p>每周一（外加周四兜底）<code>self-upgrade.yml</code> 会按真实采集证据自动调整<b>策略参数</b>，
+并且只允许动两处：</p>
+
+<table>
+<tr><th>允许自动改</th><th>条件</th><th>为什么安全</th></tr>
+<tr><td><code>portfolio.json</code> 某页 <code>tolerate</code></td><td>该页连续 ≥3 轮不可用、近 20 轮零成功、失败状态全属反爬/限流集合</td><td>只是让已知抓不到的源不再阻断整轮；不写入任何数值，保留上次数据</td></tr>
+<tr><td><code>data/self-tuning.json</code> 周期容忍天数</td><td>该线真实采集间隔长期宽于名义周期</td><td>只影响"多久算超期"的判定，每次 +1 天，weekly 上限 +3、monthly 上限 +7</td></tr>
+</table>
+
+<p><b>不允许自动改</b>（脚本内白名单，没有外部入口）：解析器、evidence.json、门禁阈值、
+<code>assurance_level</code>、<code>verified_by_third_party</code>、任何 workflow 文件。</p>
+
+<p>每次变更都先跑 <code>verify.mjs</code> 与 <code>validate-contracts.mjs</code>，不过就原样回滚，
+并在 <code>data/self-upgrade-log.jsonl</code> 留下 before/after、证据与回滚命令。
+诊断结论写 <code>data/diagnostics.json</code>——"看起来像 bug"的判断只记录，不动代码。</p>
+
+<blockquote>为什么不自动改解析器：自动改解析逻辑一旦出错，会把一条<b>降级</b>的线变成一条
+<b>看起来正常但是错的</b>线。这套项目对外只承诺"可复核"，宁可红着也不能假装绿着。</blockquote>
+
+<h2>看到告警时的处理顺序</h2>
+
+<h3><code>workflow-failed</code></h3>
+<ol>
+<li>点开 Issue 里的运行链接，看失败在哪一步。</li>
+<li>采集失败 → 看 <code>data/lines/&lt;id&gt;.json</code> 最后一条 run 的 <code>pages</code>／<code>dirs</code>／<code>queries</code> 字段，状态码就是原因。</li>
+<li>门禁失败 → 看 <code>assurance/.gate/result.json</code> 里哪一项没过。门禁失败<b>不许绕过</b>，修数据或修实现。</li>
+</ol>
+
+<h3><code>longgame-critical</code></h3>
+<ol>
+<li>看 <a href="./health.html">health.html</a> 哪条线红了。</li>
+<li>若是超期：心跳已尝试补采，补采也失败的线会在 Issue 里列出 <code>heal.failed</code>。</li>
+<li>若是某页永久 404/改版：到 <code>portfolio.json</code> 改 URL 或把这条线 <code>status</code> 降级；
+不要为了让红灯变绿而加 <code>tolerate</code>——那等于把"没数据"说成"没问题"。</li>
+</ol>
+
+<h3><code>longgame-schedule-silence</code></h3>
+<p>这条最特殊：它只有在<b>外部触发器把人叫醒、补跑了一次心跳之后</b>才会出现。
+出现就意味着 GitHub 的 cron 又丢了事件。处理方式是确认外部触发器还在工作（方案 A/B）。</p>
+
+<h2>人每月要做的三件事</h2>
+<ol>
+<li>读一次月报，对"是否继续跟这条线"点个头。</li>
+<li>看一眼 Issues 里有没有挂着没关的 <code>workflow-failed</code>。</li>
+<li>确认外部触发器（方案 A 或 B）还活着。</li>
+</ol>
+
+<blockquote>自检的边界：这是项目自己的内部检查，<b>不是第三方验证</b>。心跳只能证明"这一次跑了"，
+不能证明"该跑的那次跑了"；健康页全绿只说明已知检查项都通过，不说明没有未知缺陷。</blockquote>
+
+<p class="meta">返回 <a href="./index.html">首页</a> · <a href="./health.html">健康页</a> · <a href="./method.html">方法说明</a></p>
+</html>

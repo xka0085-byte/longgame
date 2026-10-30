@@ -1,0 +1,10 @@
+{
+  "at": "2026-10-30T12:27:19.625Z",
+  "today": "2026-10-30",
+  "mode": "collect-weekly",
+  "attempted": 6,
+  "failures": 0,
+  "failed_lines": [],
+  "stale_lines": [],
+  "verdict": "ok"
+}

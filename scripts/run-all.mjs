@@ -2,7 +2,7 @@
 // 采集窗口：portfolio.json 中某条线带 window_until（默认窗口起点 2026-11-01）时，
 // 窗口内改由 collect-daily 每日采集，weekly 跳过该线；窗口结束后自动回到 weekly。
 // 日期可用 LONGGAME_TODAY=YYYY-MM-DD 覆盖，仅用于验收模拟，不写入数据文件。
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 
 const MODES = ['radar', 'collect-daily', 'collect-weekly', 'collect-monthly', 'report'];
@@ -23,8 +23,16 @@ function inWindow(s) {
 
 console.log(`run-all ${mode} today=${today}`);
 
-// 任一数据线采集/雷达失败都必须让整轮非零退出，供 assurance-gate 阻断发布。
+// 失败判定的分层（2026-10-30 改）：
+//   页级（line.mjs）已经做三档容错，单页反爬不该拖垮整轮；
+//   线级（这里）原来更进一步——"任一 line 失败即整轮非零退出"，结果是一条线的环境性
+//   拦截（CI 出口 IP 被 403）会让其它 12 条线的真实采集全部无法发布。10-26、10-30 两次
+//   weekly-collect 就是这么静默停发的：数据采到了，但 exit=1 让 gate/publish 跳过。
+//   现在改成：单线失败只记录不阻断，只有**本轮尝试的线全部失败**才判失败。
+//   单线持续故障不会被掩盖——heartbeat 会对"连续两轮全挂"的线开 critical Issue。
 let failures = 0;
+let attempted = 0;
+const failedLines = [];
 
 for (const s of portfolio.series) {
   if (!s.collect && !s.radar) { console.log(`${s.id}: skip (external)`); continue; }
@@ -40,21 +48,23 @@ for (const s of portfolio.series) {
       if (s.cron?.collect !== want) continue;
       if (inWindow(s)) { console.log(`${s.id}: skip (daily window until ${s.window_until}, handled by collect-daily)`); continue; }
     }
+    attempted += 1;
     try {
       if (process.env.LONGGAME_DRY_RUN === '1') { console.log(`${s.id}: would collect (dry-run)`); continue; }
-      execFileSync('node', ['scripts/line.mjs', s.id, 'collect'], { stdio: 'inherit', timeout: 180000 });
+      execFileSync('node', ['scripts/line.mjs', s.id, 'collect'], { stdio: 'inherit', timeout: s.timeout_ms || 180000 });
       // sb253 首窗：每轮采集后立即刷新页面；有无名单、数据源是否可用由页面脚本判定。
       if (s.id === 'sb253-docket' && existsSync('scripts/sb253-first-window.mjs')) {
         execFileSync('node', ['scripts/sb253-first-window.mjs'], { stdio: 'inherit', timeout: 60000 });
       }
     } catch (e) {
-      failures += 1;
+      failures += 1; failedLines.push(`${s.id}:collect`);
       console.error(`${s.id} collect FAILED: ${e.message.slice(0, 140)}`);
     }
   } else if (mode === 'radar') {
     if (s.cron?.radar !== 'daily' || !s.radar?.length) continue;
-    try { execFileSync('node', ['scripts/line.mjs', s.id, 'radar'], { stdio: 'inherit', timeout: 180000 }); }
-    catch (e) { failures += 1; console.error(`${s.id} radar FAILED: ${e.message.slice(0, 140)}`); }
+    attempted += 1;
+    try { execFileSync('node', ['scripts/line.mjs', s.id, 'radar'], { stdio: 'inherit', timeout: s.timeout_ms || 180000 }); }
+    catch (e) { failures += 1; failedLines.push(`${s.id}:radar`); console.error(`${s.id} radar FAILED: ${e.message.slice(0, 140)}`); }
   }
 }
 // 漏跑检测：GitHub 的 schedule 事件可能整段丢失（本项目 10-24~10-29 即无任何 schedule 运行），
@@ -79,8 +89,25 @@ if (stale.length) {
 }
 
 if (mode === 'report') execFileSync('node', ['scripts/report.mjs'], { stdio: 'inherit' });
-if (failures > 0) {
-  console.error(`run-all ${mode} FAILED: ${failures} line(s) failed`);
+
+// 失败清单落盘：给 heartbeat 和 self-upgrade 当证据用，也给人排查时不用翻 Actions 日志。
+writeFileSync('data/collect-runs.json', JSON.stringify({
+  at: new Date().toISOString(),
+  today,
+  mode,
+  attempted,
+  failures,
+  failed_lines: failedLines,
+  stale_lines: stale,
+  verdict: attempted > 0 && failures === attempted ? 'failed' : failures > 0 ? 'partial' : 'ok',
+}, null, 2) + '\n');
+
+if (failures > 0 && failures < attempted) {
+  console.warn(`run-all ${mode} PARTIAL: ${failures}/${attempted} line(s) failed (${failedLines.join(', ')}) — 已采集到的线照常进入 gate/publish，故障线由 heartbeat 跟踪`);
+} else if (attempted > 0 && failures === attempted) {
+  console.error(`run-all ${mode} FAILED: all ${attempted} attempted line(s) failed — 全部数据源同时不可用，判整轮失败`);
   process.exit(1);
+} else if (attempted === 0) {
+  console.warn(`run-all ${mode}: 本模式无待执行线（检查 cron 配置与采集窗口）`);
 }
 console.log(`run-all ${mode} done`);

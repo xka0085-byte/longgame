@@ -282,6 +282,10 @@ if (mode === 'collect' && line.collect) {
     } catch (e) { run.error = String(e).slice(0, 140); collectFailure = true; console.error(`${lineId}: LOTL collect failed`); }
   }
   st.collect.runs.push(run);
+  // 把本轮的成败判定写进数据本身。没有这个字段时，下游只能靠"数不可用页"反推，
+  // 而 dirs / edgar / eia / lotl 这几类线根本没有 pages 字段，会被误判成"整轮全挂"。
+  // 判定权归采集器自己，下游只读结论。
+  run.ok = !collectFailure;
   if (st.collect.runs.length > 300) st.collect.runs = st.collect.runs.slice(-300);
   writeFileSync(OUT, JSON.stringify(st, null, 1));
   if (collectFailure) {
