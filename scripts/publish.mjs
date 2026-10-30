@@ -116,12 +116,15 @@ for (const s of portfolio.series) {
   const pub = publicationState(s.id, st);
   const contract_errors = evaluateRun(s.id, st, { strict: false });
   const latest = st.collect?.runs?.at(-1);
+  // 首次观测：取该线本地采集记录中最早一次 run 的时间戳，不外推、不补日期；无本地数据则为 null。
+  const firstObserved = st.collect?.runs?.[0]?.at || st.collect?.runs?.[0]?.date || null;
   const prov = {
     run_id: runId,
     line: s.id,
     commit,
     contract_version: contractVersion(s.id),
     assurance_level: assuranceLevel(s.id),
+    first_observed: firstObserved,
     raw_sha256: sha256File(`data/lines/${s.id}.json`),
     normalized_sha256: normalizedSha(latest),
     validation_status: contract_errors.length === 0 ? 'PASS' : 'FAIL',
@@ -144,6 +147,7 @@ for (const s of portfolio.series) {
 <style>:root{--bg:#f6f8fa;--surface:#fff;--border:#d0d7de;--text:#1f2328;--muted:#57606a;--brand:#1a7f37;--warn:#9a6700;--warnbg:#fff8c5}*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui;background:var(--bg);color:var(--text)}.wrap{max-width:820px;margin:0 auto;padding:32px 16px}.kpi{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;margin:16px 0}.kpi.warn{background:var(--warnbg);border-color:var(--warn)}.n{font-size:34px;font-weight:700;color:var(--brand)}.kpi.warn .n{color:var(--warn);font-size:28px}.lbl{font-size:14px;color:var(--muted);margin-top:4px}h1{font-size:22px;margin:0}h2{font-size:15px;margin:24px 0 8px;color:var(--muted)}li{font-size:13px;margin:6px 0}.d{font-family:monospace;font-size:12px;color:var(--muted)}footer{margin-top:32px;font-size:12px;color:var(--muted);border-top:1px solid var(--border);padding-top:12px}</style>
 <div class="wrap"><h1>${esc(s.id)}</h1><div class="lbl">${esc(s.driver || '')}</div>
 <div class="lbl">assurance_level: <b>${esc(prov.assurance_level ?? 'UNKNOWN')}</b> · 最近一次验证时间：<span class="d">${iso}</span></div>
+<div class="lbl">首次观测：<span class="d">${firstObserved ? esc(firstObserved.slice(0, 19).replace('T', ' ')) + ' UTC' : '外部托管，本仓库无本地采集记录'}</span>${firstObserved ? '（取本线最早一次采集 run 的时间戳，不追溯外推）' : ''}</div>
 ${unavailableBlock}
 ${sc ? `<div class="kpi"><div class="n">${esc(sc.value)}</div><div class="lbl">${esc(sc.label)}</div><div class="d" style="margin-top:8px">数字生成于 ${day}</div></div>` : (pub.publication_status === 'PUBLISHED' ? '<div class="kpi"><div class="lbl">本期无新增可分享数字</div></div>' : '')}
 <h2>最近雷达命中</h2><ul>${alerts.map(a => `<li><span class="d">${a.date.slice(0, 10)}</span> [${esc(a.channel)}] ${esc(a.title)}</li>`).join('') || '<li>无</li>'}</ul>
@@ -165,6 +169,7 @@ for (const p of ['grid-queue-latest', 'sb253-first-window']) {
   if (existsSync(join(STAGE_DOCS, 'lines', `${p}.html`))) sitemap.push(`https://xka0085-byte.github.io/longgame/lines/${p}.html`);
 }
 if (existsSync(join(STAGE_DOCS, 'verify.html'))) sitemap.push('https://xka0085-byte.github.io/longgame/verify.html');
+if (existsSync(join(STAGE_DOCS, 'method.html'))) sitemap.push('https://xka0085-byte.github.io/longgame/method.html');
 
 // RSS
 const rss = `<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"><channel><title>longgame portfolio</title><link>https://xka0085-byte.github.io/longgame/</link><description>零人工测量线组合，逐线时间序列与事件流</description><lastBuildDate>${now.toUTCString()}</lastBuildDate>

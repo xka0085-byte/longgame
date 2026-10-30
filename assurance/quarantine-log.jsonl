@@ -6,3 +6,11 @@
 {"run_id":"local-20261022034747726","line":"compute-futures","at":"2026-10-22T03:47:47.726Z","reason":"latest run is not publish-eligible","last_success_at":null}
 {"run_id":"local-20261030091152777","line":"triggers","at":"2026-10-30T09:11:52.777Z","reason":"latest run is not publish-eligible","last_success_at":null}
 {"run_id":"local-20261030091152777","line":"compute-futures","at":"2026-10-30T09:11:52.777Z","reason":"data-source-unavailable","last_success_at":null}
+{"run_id":"local-20261030104858393","line":"triggers","at":"2026-10-30T10:48:58.393Z","reason":"latest run is not publish-eligible","last_success_at":null}
+{"run_id":"local-20261030104858393","line":"compute-futures","at":"2026-10-30T10:48:58.393Z","reason":"data-source-unavailable","last_success_at":null}
+{"run_id":"local-20261030105032496","line":"triggers","at":"2026-10-30T10:50:32.496Z","reason":"latest run is not publish-eligible","last_success_at":null}
+{"run_id":"local-20261030105032496","line":"compute-futures","at":"2026-10-30T10:50:32.496Z","reason":"data-source-unavailable","last_success_at":null}
+{"run_id":"local-20261030105217635","line":"triggers","at":"2026-10-30T10:52:17.635Z","reason":"latest run is not publish-eligible","last_success_at":null}
+{"run_id":"local-20261030105217635","line":"compute-futures","at":"2026-10-30T10:52:17.635Z","reason":"data-source-unavailable","last_success_at":null}
+{"run_id":"local-20261030105440092","line":"triggers","at":"2026-10-30T10:54:40.092Z","reason":"latest run is not publish-eligible","last_success_at":null}
+{"run_id":"local-20261030105440092","line":"compute-futures","at":"2026-10-30T10:54:40.092Z","reason":"data-source-unavailable","last_success_at":null}

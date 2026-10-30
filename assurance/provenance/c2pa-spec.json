@@ -1,14 +1,15 @@
 {
-  "run_id": "local-20261030091152777",
+  "run_id": "local-20261030105440092",
   "line": "c2pa-spec",
-  "commit": "df87cd651aa759d5518289351c303fee01044087",
+  "commit": "ed5e81f1b374c23fa36c5c7983cb5761a437699c",
   "contract_version": 1,
   "assurance_level": 2,
-  "raw_sha256": "2e0d6e83e8114ff1a68db281bb6d9e35621f5ee6307cf7d0e9f187c0bbd50c57",
-  "normalized_sha256": "639e25958342012bcac791c02b61f8d7f52232727e68f414a46f48a66f161877",
+  "first_observed": "2026-10-20T16:00:49.940Z",
+  "raw_sha256": "de3511a6079a08b58ec7b351e625f565cc0546053de8f5da44cc0b9d36882f54",
+  "normalized_sha256": "0e709a0060df39457be5e7a30deb294ab1468b83070dd10361e53efba94269dc",
   "validation_status": "PASS",
   "publication_status": "PUBLISHED",
   "publication_reason": null,
-  "last_success_at": "2026-10-30T09:10:54.697Z",
-  "generated_at": "2026-10-30T09:11:52.777Z"
+  "last_success_at": "2026-10-30T09:15:30.739Z",
+  "generated_at": "2026-10-30T10:54:40.092Z"
 }

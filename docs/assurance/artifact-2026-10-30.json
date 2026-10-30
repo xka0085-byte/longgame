@@ -1,0 +1,486 @@
+{
+  "artifact": "longgame assurance snapshot",
+  "what_this_is": "一次发布门禁的自包含快照。所有字段均可从公开仓库重算：gate / contracts / fixtures / fault_injection 为对应脚本输出的原样，data_sha256 为 data/lines/*.json 的 SHA-256，first_observed 取该线最早一次采集 run。",
+  "limits": [
+    "证据等级 E0：流程与数据可公开复核，但未经第三方复算（verified_by_third_party 全为 false）。",
+    "first_observed 只代表该线在本仓库保留的最早采集 run，不代表数据源的首次公开时间。",
+    "gate 由项目自身脚本产出，属于自我审计，不构成外部审计结论。"
+  ],
+  "generated_at": "2026-10-30T10:51:55.292Z",
+  "gate_result_at": "2026-10-30T10:48:51.061Z",
+  "commit": "ed5e81f1b374c23fa36c5c7983cb5761a437699c",
+  "gate": {
+    "passed": true,
+    "at": "2026-10-30T10:48:51.061Z",
+    "head": "ed5e81f1b374c23fa36c5c7983cb5761a437699c",
+    "inputs_hash": "00efac15f3aa4b2afa2493baa765a40bc7fdae0ade78b1259d178890588979de",
+    "checks": [
+      {
+        "name": "verify",
+        "script": "scripts/verify.mjs",
+        "exitCode": 0,
+        "ms": 72
+      },
+      {
+        "name": "contracts",
+        "script": "scripts/validate-contracts.mjs",
+        "exitCode": 0,
+        "ms": 79
+      },
+      {
+        "name": "fixtures",
+        "script": "scripts/run-fixtures.mjs",
+        "exitCode": 0,
+        "ms": 78
+      },
+      {
+        "name": "fault-injection",
+        "script": "assurance/fault-injection/guard-check.mjs",
+        "exitCode": 0,
+        "ms": 688
+      }
+    ]
+  },
+  "contracts": {
+    "at": "2026-10-30T10:50:32.887Z",
+    "contracts": 13,
+    "assertions": 105
+  },
+  "fixtures": {
+    "at": "2026-10-30T10:50:32.962Z",
+    "samples": 39,
+    "passed": 39,
+    "failed": 0,
+    "not_applicable": 3,
+    "markers_passed": 3,
+    "entries": 42
+  },
+  "fixture_files": [
+    {
+      "file": "assurance/fixtures/agent-dirs/empty.json",
+      "sha256": "cf7cdf9e018352af177360356865815f312542da66389f752f8ff816e9c587df"
+    },
+    {
+      "file": "assurance/fixtures/agent-dirs/manifest.json",
+      "sha256": "0360ab81551e734985766acfe8622a664a1061b253cc0e57dfbf59e79a2e89f5"
+    },
+    {
+      "file": "assurance/fixtures/agent-dirs/normal.json",
+      "sha256": "69307390ad4ba0e72bc55f3ca687dbd6d588b66a12e9499e0b9e79e43444c040"
+    },
+    {
+      "file": "assurance/fixtures/agent-dirs/structural.json",
+      "sha256": "1d415afbfaaa65a25d52cb507aa4d835829facbdc8e08153806fc58067c642e8"
+    },
+    {
+      "file": "assurance/fixtures/aiact-register/empty.json",
+      "sha256": "9c2f940a84dc855d717d0f77fb47db64d038efdd203de332bedd1e81532c7d32"
+    },
+    {
+      "file": "assurance/fixtures/aiact-register/manifest.json",
+      "sha256": "ef1fe8930cf235f8557e9f2c2a33e27b5a7a7e3cbe27ef0fb2158fd8d4d1256e"
+    },
+    {
+      "file": "assurance/fixtures/aiact-register/normal.json",
+      "sha256": "a5501807ef20f3aa59d36d4c7bf03001546cc6b7aecbca0a0d4dba884f4bf8aa"
+    },
+    {
+      "file": "assurance/fixtures/aiact-register/structural.json",
+      "sha256": "f4403a1ba3b7a2158bf525f4c056771c8a885a1cc1097cf0f04ad2bd2b271b29"
+    },
+    {
+      "file": "assurance/fixtures/c2pa-spec/empty.json",
+      "sha256": "9c2f940a84dc855d717d0f77fb47db64d038efdd203de332bedd1e81532c7d32"
+    },
+    {
+      "file": "assurance/fixtures/c2pa-spec/manifest.json",
+      "sha256": "e6361215d7f8577727985852958bee31c8cf4bb223517139c75bd4548427854b"
+    },
+    {
+      "file": "assurance/fixtures/c2pa-spec/normal.json",
+      "sha256": "9583c64be2571a601f7c57b3ab63e32c550b5ba07711994b1c349abdf38536c4"
+    },
+    {
+      "file": "assurance/fixtures/c2pa-spec/structural.json",
+      "sha256": "c75d98ed53d4c765a50ddde073d7b6091ce04123d5aea911b54d86471740696c"
+    },
+    {
+      "file": "assurance/fixtures/compute-futures/empty.json",
+      "sha256": "9c2f940a84dc855d717d0f77fb47db64d038efdd203de332bedd1e81532c7d32"
+    },
+    {
+      "file": "assurance/fixtures/compute-futures/manifest.json",
+      "sha256": "3e0018f962868a83c9ce6c5fefc49d835c15072c2571a8b06d3639e75b76e068"
+    },
+    {
+      "file": "assurance/fixtures/compute-futures/normal.json",
+      "sha256": "eac661237d6897e23029bda23a3d3715fbe037f581d1aa31a7f5ad9495530b69"
+    },
+    {
+      "file": "assurance/fixtures/compute-futures/structural.json",
+      "sha256": "937d1c8d737ab7544bbc9ec0dec7e97f2a448e83eefe8d9d3c4b9e37c2e60f08"
+    },
+    {
+      "file": "assurance/fixtures/eidas-tsl/empty.json",
+      "sha256": "7261ed02de4e9214c12ee2138bcfb624abdad217ce813159f47cc0d10299d8cc"
+    },
+    {
+      "file": "assurance/fixtures/eidas-tsl/manifest.json",
+      "sha256": "5314e6a80821cb7c8afa7a9b14ad390b79620b1fcc622b285ab61c66e7d62900"
+    },
+    {
+      "file": "assurance/fixtures/eidas-tsl/normal.json",
+      "sha256": "7230d6d88f456e40e802e705cb9a7e37f05bba3d98560a758342abb023be402a"
+    },
+    {
+      "file": "assurance/fixtures/eidas-tsl/structural.json",
+      "sha256": "a841ad32988eec7ab0e5c1dd77a3c33e07092c6181ccfc54bfca8c5b3efbdb6a"
+    },
+    {
+      "file": "assurance/fixtures/formd-sweep/empty.json",
+      "sha256": "2add1b63a167bc2fa904e780998037029809e0025887938da7370a595131d111"
+    },
+    {
+      "file": "assurance/fixtures/formd-sweep/manifest.json",
+      "sha256": "47878b12197caa256c1879baab8cf558c3c99c83f6226f1d939aed9878a3f95b"
+    },
+    {
+      "file": "assurance/fixtures/formd-sweep/normal.json",
+      "sha256": "806e82bd4239987f9da6c33235bc7b9ca6ac17ce9eef2bf9e670c3584d2c8c98"
+    },
+    {
+      "file": "assurance/fixtures/formd-sweep/structural.json",
+      "sha256": "ab5807a9962a4f92f63f91a2941261fe9081e47b4086fc7c72eb79ae47437291"
+    },
+    {
+      "file": "assurance/fixtures/grid-queue/duplicate.json",
+      "sha256": "8c1dc5c73ce31a546b538e08b09ecab7c5f1e696b5a2e05d2f10da4f67de65bc"
+    },
+    {
+      "file": "assurance/fixtures/grid-queue/empty.json",
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    {
+      "file": "assurance/fixtures/grid-queue/manifest.json",
+      "sha256": "3eb3f9a0cf1a1c5ad1c191772cb1f52a2233f8a974f1c7600dc59ec9758a843b"
+    },
+    {
+      "file": "assurance/fixtures/grid-queue/missing-column.json",
+      "sha256": "adccff018aede770bae39f9145bf6cf0847ff2587407c9e711b0ac68bd677a1a"
+    },
+    {
+      "file": "assurance/fixtures/grid-queue/normal.json",
+      "sha256": "4d648af80d3f586159ae35322cdeb95c5e85e683aeaeefd60d9e00a5d442f6f6"
+    },
+    {
+      "file": "assurance/fixtures/grid-queue/source-error.json",
+      "sha256": "1665e219428491724a8be7eb84d8b26abf756509b4feb3343344923a37b3bdf4"
+    },
+    {
+      "file": "assurance/fixtures/grid-queue/unit-gw.json",
+      "sha256": "9b4a9aa1b8d5ae66fe5345d8c6f434880fb93c61bdd7804b0a7477a780b286af"
+    },
+    {
+      "file": "assurance/fixtures/mcpreflight/duplicate.json",
+      "sha256": "755902bf10ce65309a4e480e9f5dd1c1f6735e784fdf071c03523a8194c9af57"
+    },
+    {
+      "file": "assurance/fixtures/mcpreflight/empty.json",
+      "sha256": "ea6b7cadf44368dbb26f15596a5deee785d2d6ff0878e9da938b99c6ef6763cb"
+    },
+    {
+      "file": "assurance/fixtures/mcpreflight/http-429.json",
+      "sha256": "23771abece8250cd86d8288500124571fc57850909af75858a0deb39ee18c079"
+    },
+    {
+      "file": "assurance/fixtures/mcpreflight/manifest.json",
+      "sha256": "80984ca7f42ffb9b83c2c0d837921bcde74b3f788529b5ff286e59b2bfcd35a4"
+    },
+    {
+      "file": "assurance/fixtures/mcpreflight/missing-field.json",
+      "sha256": "e0bcef808890a5528ba2ee1b88ee67909683b52143924843e4fea8ce12dc4c0a"
+    },
+    {
+      "file": "assurance/fixtures/mcpreflight/normal.json",
+      "sha256": "bdac2f034d3a71b8c3f2f79bd87bb2a13c361ae5a6c9b13b978bab1fe0efe0bf"
+    },
+    {
+      "file": "assurance/fixtures/mcpreflight/unit-string.json",
+      "sha256": "88b85bdb53323da5edbd8aa5ea997f33025d6e70529a071754127e685780bbd3"
+    },
+    {
+      "file": "assurance/fixtures/sb253-docket/empty.json",
+      "sha256": "9c2f940a84dc855d717d0f77fb47db64d038efdd203de332bedd1e81532c7d32"
+    },
+    {
+      "file": "assurance/fixtures/sb253-docket/manifest.json",
+      "sha256": "b8d39d082bdf9d832230e76491515eed354b866db2fd0bd7e27649a9b89bd7ce"
+    },
+    {
+      "file": "assurance/fixtures/sb253-docket/normal.json",
+      "sha256": "95d4fabc530c255e4f918671392e671b08f125f6e5852c244bd58631b389ec44"
+    },
+    {
+      "file": "assurance/fixtures/sb253-docket/structural.json",
+      "sha256": "9ebf4c75e7c6464f5e73fb2fe1e077e44bd1c61f2316a30d25e688bd7253b69f"
+    },
+    {
+      "file": "assurance/fixtures/state-ai-laws/empty.json",
+      "sha256": "9c2f940a84dc855d717d0f77fb47db64d038efdd203de332bedd1e81532c7d32"
+    },
+    {
+      "file": "assurance/fixtures/state-ai-laws/manifest.json",
+      "sha256": "b34d5e5e02a1ef37c0774136c7a3a5707f0e64e4c2eee7875e9626724e3734bf"
+    },
+    {
+      "file": "assurance/fixtures/state-ai-laws/normal.json",
+      "sha256": "7455a7127d6029ae360dd1d9d228ee951b6bd2c11628dd3779b43d2404d99b18"
+    },
+    {
+      "file": "assurance/fixtures/state-ai-laws/structural.json",
+      "sha256": "45015fa66b5cbc48b28ea0e053bd345f302ec734c59d980ddc93d1e028fe32ec"
+    },
+    {
+      "file": "assurance/fixtures/triggers/empty.json",
+      "sha256": "9c2f940a84dc855d717d0f77fb47db64d038efdd203de332bedd1e81532c7d32"
+    },
+    {
+      "file": "assurance/fixtures/triggers/manifest.json",
+      "sha256": "5c68c1cd7d5e8839576406eb2f07fde0ffce72a393b4cd07dc20a2c419c2d97f"
+    },
+    {
+      "file": "assurance/fixtures/triggers/normal.json",
+      "sha256": "c3e63554c215a326cef8cc1a93c4618979a56c16503a628d5b86173f5efde83b"
+    },
+    {
+      "file": "assurance/fixtures/triggers/structural.json",
+      "sha256": "8caabd3407b9877382652b9be60d57240a308f12fb3931916ecce0d48ecc40d4"
+    }
+  ],
+  "fault_injection": {
+    "at": "2026-10-22T03:42:56.452Z",
+    "all_blocked": true,
+    "real_data_unchanged": true,
+    "faults": [
+      {
+        "id": "column-rename",
+        "target": "fixtures/grid-queue/normal.json",
+        "expected_block_point": "fixtures",
+        "gate_exit": 1,
+        "gate_failed_check": "fixtures",
+        "publish_blocked": true,
+        "blocked": true
+      },
+      {
+        "id": "unit-mw-to-gw",
+        "target": "fixtures/grid-queue/normal.json",
+        "expected_block_point": "fixtures",
+        "gate_exit": 1,
+        "gate_failed_check": "fixtures",
+        "publish_blocked": true,
+        "blocked": true
+      },
+      {
+        "id": "empty-response",
+        "target": "data/lines/grid-queue.json",
+        "expected_block_point": "contracts",
+        "gate_exit": 1,
+        "gate_failed_check": "verify",
+        "publish_blocked": true,
+        "blocked": true
+      },
+      {
+        "id": "http-429",
+        "target": "data/lines/grid-queue.json",
+        "expected_block_point": "contracts",
+        "gate_exit": 1,
+        "gate_failed_check": "contracts",
+        "publish_blocked": true,
+        "blocked": true
+      },
+      {
+        "id": "duplicate-rows",
+        "target": "data/lines/grid-queue.json",
+        "expected_block_point": "contracts",
+        "gate_exit": 1,
+        "gate_failed_check": "contracts",
+        "publish_blocked": true,
+        "blocked": true
+      },
+      {
+        "id": "truncated-data-file",
+        "target": "data/lines/grid-queue.json",
+        "expected_block_point": "contracts",
+        "gate_exit": 1,
+        "gate_failed_check": "verify",
+        "publish_blocked": true,
+        "blocked": true
+      }
+    ]
+  },
+  "lines": [
+    {
+      "line": "mcpreflight-weekly",
+      "status": "running-external",
+      "evidence_level": "E0",
+      "quality_status": "UNVERIFIED",
+      "verified_by_third_party": false,
+      "first_observed": null,
+      "first_observed_basis": "UNKNOWN：该线由外部工作流托管，本仓库无本地采集记录",
+      "run_count": 0,
+      "last_run_at": null,
+      "data_sha256": null
+    },
+    {
+      "line": "erc8004-snapshot",
+      "status": "running-external",
+      "evidence_level": "E0",
+      "quality_status": "OK",
+      "verified_by_third_party": false,
+      "first_observed": null,
+      "first_observed_basis": "UNKNOWN：该线由外部工作流托管，本仓库无本地采集记录",
+      "run_count": 0,
+      "last_run_at": null,
+      "data_sha256": null
+    },
+    {
+      "line": "protocol-watch",
+      "status": "running-external",
+      "evidence_level": "E0",
+      "quality_status": "OK",
+      "verified_by_third_party": false,
+      "first_observed": null,
+      "first_observed_basis": "UNKNOWN：该线由外部工作流托管，本仓库无本地采集记录",
+      "run_count": 0,
+      "last_run_at": null,
+      "data_sha256": null
+    },
+    {
+      "line": "sb253-docket",
+      "status": "active",
+      "evidence_level": "E0",
+      "quality_status": "OK",
+      "verified_by_third_party": false,
+      "first_observed": "2026-10-20T13:47:38.359Z",
+      "first_observed_basis": "data/lines/<line>.json 的 collect.runs[0].date（该线保留的最早一次采集 run，非外推）",
+      "run_count": 12,
+      "last_run_at": "2026-10-30T09:10:43.157Z",
+      "data_sha256": "87bb091008b8481b557629faf258539f0d61ba46d8f1f0c8ef6b5638a04617d2"
+    },
+    {
+      "line": "agent-dirs",
+      "status": "active",
+      "evidence_level": "E0",
+      "quality_status": "DEGRADED",
+      "verified_by_third_party": false,
+      "first_observed": "2026-10-20T13:47:40.900Z",
+      "first_observed_basis": "data/lines/<line>.json 的 collect.runs[0].date（该线保留的最早一次采集 run，非外推）",
+      "run_count": 6,
+      "last_run_at": "2026-10-30T09:15:25.680Z",
+      "data_sha256": "4f24138a78e6574dedf40f250817a4c4b7bf0cac1e6749e8e8a06334b841e5e5"
+    },
+    {
+      "line": "eidas-tsl",
+      "status": "active",
+      "evidence_level": "E0",
+      "quality_status": "OK",
+      "verified_by_third_party": false,
+      "first_observed": "2026-10-20T13:48:02.426Z",
+      "first_observed_basis": "data/lines/<line>.json 的 collect.runs[0].date（该线保留的最早一次采集 run，非外推）",
+      "run_count": 6,
+      "last_run_at": "2026-10-30T09:15:27.042Z",
+      "data_sha256": "a9673e7895f28eeefc33ed8d353ac28e7461a547abac1ec8ac072c7ac170a524"
+    },
+    {
+      "line": "aiact-register",
+      "status": "auto-wait",
+      "evidence_level": "E0",
+      "quality_status": "WATCH",
+      "verified_by_third_party": false,
+      "first_observed": "2026-10-20T13:48:33.401Z",
+      "first_observed_basis": "data/lines/<line>.json 的 collect.runs[0].date（该线保留的最早一次采集 run，非外推）",
+      "run_count": 2,
+      "last_run_at": "2026-10-21T08:17:10.353Z",
+      "data_sha256": "4606314f876502c65394144532e673ed770b6a95449cbe5c797d7fc7656ff40d"
+    },
+    {
+      "line": "triggers",
+      "status": "active",
+      "evidence_level": "E0",
+      "quality_status": "OK",
+      "verified_by_third_party": false,
+      "first_observed": "2026-10-20T13:48:44.453Z",
+      "first_observed_basis": "data/lines/<line>.json 的 collect.runs[0].date（该线保留的最早一次采集 run，非外推）",
+      "run_count": 2,
+      "last_run_at": "2026-10-21T08:17:11.684Z",
+      "data_sha256": "8d1d0095a96959ed6d4a48c0fdaf3caf393c36494988f73a8714807be94872de"
+    },
+    {
+      "line": "formd-sweep",
+      "status": "active",
+      "evidence_level": "E0",
+      "quality_status": "OK",
+      "verified_by_third_party": false,
+      "first_observed": "2026-10-20T15:58:42.262Z",
+      "first_observed_basis": "data/lines/<line>.json 的 collect.runs[0].date（该线保留的最早一次采集 run，非外推）",
+      "run_count": 3,
+      "last_run_at": "2026-10-21T08:17:13.673Z",
+      "data_sha256": "d6759b4b3ac41c4e4faad95b308ea6780434e55cec60809051ff2ffc05f62838"
+    },
+    {
+      "line": "compute-futures",
+      "status": "active",
+      "evidence_level": "E0",
+      "quality_status": "DEGRADED",
+      "verified_by_third_party": false,
+      "first_observed": "2026-10-20T16:00:48.085Z",
+      "first_observed_basis": "data/lines/<line>.json 的 collect.runs[0].date（该线保留的最早一次采集 run，非外推）",
+      "run_count": 8,
+      "last_run_at": "2026-10-30T09:15:28.412Z",
+      "data_sha256": "b19a8656fe19d90b546f6fe19e170110c086c69da6f643eed8fd195bc69c14b4"
+    },
+    {
+      "line": "c2pa-spec",
+      "status": "active",
+      "evidence_level": "E0",
+      "quality_status": "OK",
+      "verified_by_third_party": false,
+      "first_observed": "2026-10-20T16:00:49.940Z",
+      "first_observed_basis": "data/lines/<line>.json 的 collect.runs[0].date（该线保留的最早一次采集 run，非外推）",
+      "run_count": 4,
+      "last_run_at": "2026-10-30T09:15:30.739Z",
+      "data_sha256": "de3511a6079a08b58ec7b351e625f565cc0546053de8f5da44cc0b9d36882f54"
+    },
+    {
+      "line": "state-ai-laws",
+      "status": "active",
+      "evidence_level": "E0",
+      "quality_status": "OK",
+      "verified_by_third_party": false,
+      "first_observed": "2026-10-20T16:00:51.708Z",
+      "first_observed_basis": "data/lines/<line>.json 的 collect.runs[0].date（该线保留的最早一次采集 run，非外推）",
+      "run_count": 4,
+      "last_run_at": "2026-10-30T09:15:32.138Z",
+      "data_sha256": "ea653e821e12264347f7f2e34aa00f1f5bd1f8ed7294ac7a95d6f5f4135ec926"
+    },
+    {
+      "line": "grid-queue",
+      "status": "active",
+      "evidence_level": "E0",
+      "quality_status": "DEGRADED",
+      "verified_by_third_party": false,
+      "first_observed": "2026-10-20T16:00:53.029Z",
+      "first_observed_basis": "data/lines/<line>.json 的 collect.runs[0].date（该线保留的最早一次采集 run，非外推）",
+      "run_count": 5,
+      "last_run_at": "2026-10-21T08:17:25.373Z",
+      "data_sha256": "ff82786715bd4da2b22d0979b2a58eafeb78dd4776f5d2f6ef792d1258f6b5bb"
+    }
+  ],
+  "reproduce": [
+    "git clone https://github.com/xka0085-byte/longgame && cd longgame && npm i",
+    "node scripts/assurance-gate.mjs      # 产出 assurance/.gate/result.json（verify / contracts / fixtures / fault-injection 四项退出码）",
+    "node scripts/run-fixtures.mjs        # 产出 assurance/results/fixtures.json，比对 fixtures.samples / passed",
+    "node scripts/validate-contracts.mjs  # 产出 assurance/results/contracts.json，比对 contracts / assertions",
+    "sha256sum data/lines/<line>.json     # 与 lines[].data_sha256 对齐"
+  ]
+}

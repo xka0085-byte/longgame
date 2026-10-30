@@ -1,14 +1,15 @@
 {
-  "run_id": "local-20261030091152777",
+  "run_id": "local-20261030105440092",
   "line": "agent-dirs",
-  "commit": "df87cd651aa759d5518289351c303fee01044087",
+  "commit": "ed5e81f1b374c23fa36c5c7983cb5761a437699c",
   "contract_version": 1,
   "assurance_level": 2,
-  "raw_sha256": "38c43e3a26a505c74e53707a0db0a58102c1044ba46b6a8f77e96ceccf72427a",
-  "normalized_sha256": "91bc9e5fda5165f79878cde263a7f68b50ecbda567ead5385fe57f102e853fac",
+  "first_observed": "2026-10-20T13:47:40.900Z",
+  "raw_sha256": "4f24138a78e6574dedf40f250817a4c4b7bf0cac1e6749e8e8a06334b841e5e5",
+  "normalized_sha256": "0e11c5c2121786d12518d4ca6c77586341e30ba2a7c96d9e4d6be0cf46fa0b90",
   "validation_status": "PASS",
   "publication_status": "PUBLISHED",
   "publication_reason": null,
-  "last_success_at": "2026-10-30T09:10:49.298Z",
-  "generated_at": "2026-10-30T09:11:52.777Z"
+  "last_success_at": "2026-10-30T09:15:25.680Z",
+  "generated_at": "2026-10-30T10:54:40.092Z"
 }

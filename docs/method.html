@@ -1,0 +1,89 @@
+<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>采集与门禁方法 — longgame</title>
+<meta name="description" content="longgame 13 条零人工测量线的采集状态机、真实故障处置记录（403/404/417）、四道发布门禁与可复算产物。">
+<style>
+:root{--bg:#f6f8fa;--surface:#fff;--border:#d0d7de;--text:#1f2328;--muted:#57606a;--brand:#1a7f37;--warn:#9a6700;--warnbg:#fff8c5}
+*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,'Segoe UI';background:var(--bg);color:var(--text)}
+.wrap{max-width:860px;margin:0 auto;padding:32px 16px}
+h1{font-size:22px;margin:0 0 4px}h2{font-size:16px;margin:28px 0 8px}
+h3{font-size:14px;margin:18px 0 6px;color:var(--muted)}
+p,li{font-size:14px;line-height:1.7}
+.sub{color:var(--muted);font-size:13px;margin-bottom:16px}
+code,pre{font-family:ui-monospace,Consolas,monospace;font-size:12.5px}
+code{background:#eef2f5;padding:2px 5px;border-radius:5px}
+pre{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:12px 14px;overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13px;margin:10px 0}
+th,td{text-align:left;padding:7px 9px;border-bottom:1px solid var(--border);vertical-align:top}
+th{color:var(--muted);font-weight:600}
+.box{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin:14px 0}
+.box.warn{background:var(--warnbg);border-color:#d4a72c}
+.d{color:var(--muted);font-size:12px}
+footer{margin-top:34px;font-size:12px;color:var(--muted);border-top:1px solid var(--border);padding-top:12px}
+a{color:#0969da;text-decoration:none}a:hover{text-decoration:underline}
+@media (prefers-color-scheme:dark){:root{--bg:#0d1117;--surface:#161b22;--border:#30363d;--text:#e6edf3;--muted:#8b949e}code{background:#21262d}}
+</style>
+<div class="wrap">
+<h1>采集与门禁方法</h1>
+<div class="sub">13 条零人工测量线 · 公开来源 · 数字自带生成日期 · 失败记事件不记零 · 更新 2026-10-30</div>
+
+<p>这个站点每周/每月从公开来源抓取 13 条时间序列。没有人工填数，也没有估算：能抓到就写数字并附生成日期，抓不到就把该线隔离（quarantine）并公开原因，不用旧值冒充本期、不写 0 来凑一个"完整看板"。下面把采集状态机、真实遇到的失败以及发布前必须过的四道门禁逐项公开，便于任何人复核。</p>
+
+<h2>1. 一页数据怎么被判成可用</h2>
+<pre>请求 → 200/202/204/403/417/429
+       ├ 202 / 403 / 417 / 429 / 空正文  → RETRYABLE，退避后重试一次
+       ├ 仍失败 → unavailable，写一条 data-source-unavailable 事件（带 HTTP 状态码与字节数）
+       │           ├ 该源在 portfolio 中声明 tolerate:true → 只记事件，不阻断整轮
+       │           ├ 命中反爬/限流状态码 → throttled，只记事件（环境性拦截，非数据消失）
+       │           └ 其余 → blocking；仅当 blocking&gt;0 或全线皆挂，本轮才判 collectFailure
+       └ 恢复 200 → 写 data-source-recovered 事件，保留中断前的最后有效版本</pre>
+<p class="d">实现见 <code>scripts/line.mjs</code>（<code>RETRYABLE = new Set([202, 403, 417, 429])</code>）。第三条分支是 2026-10-30 修出来的：原设计"任一页不可用即阻断整轮"，会让一个反爬页面静默拖垮一整周的积累与发布。</p>
+
+<h2>2. 真实故障与处置（不是示例，是线上记录）</h2>
+<table>
+<tr><th>时间（UTC）</th><th>线 / 页面</th><th>观测</th><th>处置与结果</th></tr>
+<tr><td>2026-10-30 09:06:48</td><td>sb253-docket / sb253-reporting</td><td>HTTP 403，919 B（挑战页）</td><td>按 RETRYABLE 重试；09:10:34 恢复 200，58,613 B，写 recovered 事件，数据未中断</td></tr>
+<tr><td>2026-10-30 09:09:34</td><td>sb253-docket / sb253-program</td><td>HTTP 403，919 B</td><td>重试；09:10:43 恢复 200，61,221 B</td></tr>
+<tr><td>持续</td><td>sb253-docket / sb261-docket</td><td>CARB 对非浏览器客户端返回 417/202</td><td>在 <code>portfolio.json</code> 声明 <code>tolerate:true</code> 并写明原因：该分卷长期不可抓取，主线数据由 sb253-reporting / sb253-program 承担。只记事件，不阻断</td></tr>
+<tr><td>持续</td><td>compute-futures / cme-compute</td><td>HTTP 404（路径已下线）</td><td>同法声明豁免；该线仍因其他源缺失而<b>拒绝</b>给出成功退出，不拿旧值顶替</td></tr>
+</table>
+<p class="d">事件原文见 <code>data/lines/*.json</code> 的 <code>collect.events</code>，每条带 <code>date</code>、<code>page</code>、<code>status</code>、<code>bytes</code>、<code>reason</code>。</p>
+
+<div class="box warn">
+<b>为什么 417 被当成"环境性拦截"而不是"数据源死了"：</b>反爬挑战页会返回 417/202 与一段 HTML（本例 919 B），内容不是数据。把它记成不可用并阻断发布，等于让对方的反爬策略决定我们有没有数据；把它悄悄记成 0，等于编数字。所以只记事件、保留最后有效版本、并在页面与 llms.txt 里说明该源受限。
+</div>
+
+<h2>3. 发布前的四道门禁</h2>
+<p><code>scripts/assurance-gate.mjs</code> 依次跑四项，任一非零退出即整轮拦下，<code>publish.mjs</code> 还会校验门禁结果是否来自同一 commit 与同一输入指纹。</p>
+<table>
+<tr><th>门禁</th><th>检查什么</th><th>2026-10-30 结果</th></tr>
+<tr><td>verify</td><td>页面存在、含生成日期、页面数字与重算值一致、事件必须带日期</td><td>PASS</td></tr>
+<tr><td>contracts</td><td>数据契约 schema、单位、去重、非空</td><td>13 条契约 / 105 条断言 全通过</td></tr>
+<tr><td>fixtures</td><td>39 个构造样本（正常/空/缺字段/类型错/单位错/重复/HTTP 429）</td><td>39/39 PASS（3 条 not_applicable，3 条 marker）</td></tr>
+<tr><td>fault-injection</td><td>往副本里注入 6 类故障，要求 gate 拦下且真实数据哈希不变</td><td>6/6 全部 BLOCKED，真实数据未变</td></tr>
+</table>
+<p class="d">门禁结果落盘于 <code>assurance/.gate/result.json</code>：<code>passed:true</code>、<code>head:df87cd6</code>、<code>inputs_hash:ef6f2815f12d0053…</code>，四项 exitCode 均为 0。<br>
+故障注入 nightly 记录（<code>docs/assurance/fault-injection.md</code>）：column-rename 与 unit-mw-to-gw 拦在 fixtures；empty-response 与 truncated-data-file 拦在 verify；http-429 与 duplicate-rows 拦在 contracts——拦截点是分散的，说明门禁不是只靠一条规则兜底。</p>
+
+<h2>4. 可复算产物</h2>
+<p>每轮门禁都会导出一份自包含的校验快照，含各检查的退出码、样本清单、数据文件 sha256 与首次观测时间，可直接下载后重算：</p>
+<pre><a href="https://xka0085-byte.github.io/longgame/assurance/artifact-2026-10-30.json">assurance/artifact-2026-10-30.json</a></pre>
+<p>本地复算：</p>
+<pre>git clone https://github.com/xka0085-byte/longgame &amp;&amp; cd longgame
+npm i
+node scripts/assurance-gate.mjs      # 四项检查，等价于上面的门禁
+sha256sum data/lines/sb253-docket.json   # 与快照里的 raw_sha256 对齐</pre>
+
+<h2>5. 这套流程被谁用过</h2>
+<p>站点里 <code>mcpreflight-weekly</code> 这条线做的是 MCP 生态周度普查，工具就是开源项目 mcpreflight。它在这套门禁下的实际表现（含端点普查口径、随机样本复算方式、以及同样被反爬拦下的处置）写在对方的案例页里：<br>
+<a href="https://xka0085-byte.github.io/mcpreflight/case-longgame.html">mcpreflight 案例：longgame 的 MCP 端点周度普查</a></p>
+
+<h2>6. 边界</h2>
+<ul>
+<li>证据等级全线 <b>E0</b>：数据与流程可公开复核，但<b>未经第三方复算</b>，<code>verified_by_third_party</code> 为 false。</li>
+<li>不做对外联系、不做付费数据、不做人工补数；缺口就写缺口。</li>
+<li>任何一页的"数字"都带生成日期；引用格式见 <a href="https://xka0085-byte.github.io/longgame/llms.txt">llms.txt</a>。</li>
+</ul>
+
+<footer>longgame · 方法与边界公开可查 · 本页事实截至 2026-10-30（gate head df87cd6）。
+<br>相关：<a href="https://xka0085-byte.github.io/longgame/">组合仪表盘</a> · <a href="https://xka0085-byte.github.io/longgame/verify.html">验证页</a> · <a href="https://github.com/xka0085-byte/longgame">源码</a></footer>
+</div>
+</html>
