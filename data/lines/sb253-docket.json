@@ -724,6 +724,24 @@
     "channel": "hn",
     "query": "SB 253 climate",
     "count": 0
+   },
+   {
+    "date": "2026-10-31T10:48:51.719Z",
+    "channel": "gn",
+    "query": "California SB 253 climate disclosure",
+    "count": 5
+   },
+   {
+    "date": "2026-10-31T10:48:51.719Z",
+    "channel": "gn",
+    "query": "SB 261 climate risk California",
+    "count": 5
+   },
+   {
+    "date": "2026-10-31T10:48:51.719Z",
+    "channel": "hn",
+    "query": "SB 253 climate",
+    "count": 0
    }
   ],
   "items": [
@@ -744,6 +762,24 @@
     "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQT1d5YjdLaDVPenF6MW9CSU9HOUZGU0ZrM0pKQWJ1RFVNcHROMl94aUlvcF9YUWtTWnh1VUdreWVKa2xRZnlIYzNZNzBjZ1pTTjFfSkZjSHlVd0ZrS2F4azdfeDB5bGFUYkdZbHRSaEM5RTBWRE4zOUc4UW9kbElrVXhtUjFyNkhKR1NFM1N5dGV5TUJGZW1VWkNCMGxaZ0doWWhuX05TWTFLZjg2bGVhUjMyLXU0emhLZ0xFZ1hHMDlrbVZVME9zTUpUNEhFb0FSbTNGS21raU5yR29RQ1hqQ2dFSDBiVmhGMHRFUXYzNmt4R2tFOXRYMmxLU1prRGFOdkNUcktR?oc=5",
     "date": "Tue, 20 Oct 2026 22:10:27 GMT",
     "foundAt": "2026-10-21T07:36:45.201Z"
+   },
+   {
+    "line": "sb253-docket",
+    "channel": "gn",
+    "query": "California SB 253 climate disclosure",
+    "title": "California climate disclosure laws: CARB delays SB 253 reporting deadline to November 10 - White &amp; Case LLP",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcXFIcGlMLXhuNjhTaTQ4amJzdHBJLUVkWVFwNkJKS0dMSXhUbnpLdnI4a09tcDBjb0NIalZGMzctQmtnbzE4ekp0NDV3T1NhWXdCd0tCZ2JqM05Zb2JWUF9UMWtqdmIyd1NNeWtSQnVTQmVNUU5CMVA5X3FlZlduMU5pSF9yVFo4MWd0WEduVG92MG1pR3NRdlJoOUp3Z0JOU2lIanlienBhdzFldWNzVVhzZWFJb2tvVWxDVTFGcTJ0QQ?oc=5",
+    "date": "Thu, 02 Jul 2026 07:00:00 GMT",
+    "foundAt": "2026-10-31T10:48:51.719Z"
+   },
+   {
+    "line": "sb253-docket",
+    "channel": "gn",
+    "query": "California SB 253 climate disclosure",
+    "title": "CARB Workshop for California Climate Disclosure Rule (SB 253): Key Takeaways from July 21, 2026 Workshop - Mintz",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOTlY0UnBoYlpWSEFtWWZYZE5FV1p6a0U3YW12SmZ5cWZ0YS13UWM4czZLNG5JY2ZTeWxjRkwwcGQzVEFhNjdCalh4N3B2VjRJUkdYLXA3RlloT3lLeTh5bFd6Y2w3Mm5XX1FBTXVfRU0tN2FQOTRlTjVrMlFFbTZPUjF3TFdMLURiRklramhOSmpYUUhrYlBtejFRQjZfb3dUTTNzYWd6TnRNVGt2eGRxd0pPZjRubi12T0RDSE5B?oc=5",
+    "date": "Fri, 24 Jul 2026 07:00:00 GMT",
+    "foundAt": "2026-10-31T10:48:51.719Z"
    }
   ],
   "alerts": [
@@ -757,6 +793,18 @@
     "date": "2026-10-21T07:36:45.201Z",
     "title": "California's Initial Climate Disclosure Regulation Takes Effect as First SB 253 Reporting Deadline Approaches - Akin Gump Strauss Hauer &amp; Feld LLP",
     "url": "https://news.google.com/rss/articles/CBMihgJBVV95cUxQT1d5YjdLaDVPenF6MW9CSU9HOUZGU0ZrM0pKQWJ1RFVNcHROMl94aUlvcF9YUWtTWnh1VUdreWVKa2xRZnlIYzNZNzBjZ1pTTjFfSkZjSHlVd0ZrS2F4azdfeDB5bGFUYkdZbHRSaEM5RTBWRE4zOUc4UW9kbElrVXhtUjFyNkhKR1NFM1N5dGV5TUJGZW1VWkNCMGxaZ0doWWhuX05TWTFLZjg2bGVhUjMyLXU0emhLZ0xFZ1hHMDlrbVZVME9zTUpUNEhFb0FSbTNGS21raU5yR29RQ1hqQ2dFSDBiVmhGMHRFUXYzNmt4R2tFOXRYMmxLU1prRGFOdkNUcktR?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-10-31T10:48:51.719Z",
+    "title": "California climate disclosure laws: CARB delays SB 253 reporting deadline to November 10 - White &amp; Case LLP",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcXFIcGlMLXhuNjhTaTQ4amJzdHBJLUVkWVFwNkJKS0dMSXhUbnpLdnI4a09tcDBjb0NIalZGMzctQmtnbzE4ekp0NDV3T1NhWXdCd0tCZ2JqM05Zb2JWUF9UMWtqdmIyd1NNeWtSQnVTQmVNUU5CMVA5X3FlZlduMU5pSF9yVFo4MWd0WEduVG92MG1pR3NRdlJoOUp3Z0JOU2lIanlienBhdzFldWNzVVhzZWFJb2tvVWxDVTFGcTJ0QQ?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-10-31T10:48:51.719Z",
+    "title": "CARB Workshop for California Climate Disclosure Rule (SB 253): Key Takeaways from July 21, 2026 Workshop - Mintz",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOTlY0UnBoYlpWSEFtWWZYZE5FV1p6a0U3YW12SmZ5cWZ0YS13UWM4czZLNG5JY2ZTeWxjRkwwcGQzVEFhNjdCalh4N3B2VjRJUkdYLXA3RlloT3lLeTh5bFd6Y2w3Mm5XX1FBTXVfRU0tN2FQOTRlTjVrMlFFbTZPUjF3TFdMLURiRklramhOSmpYUUhrYlBtejFRQjZfb3dUTTNzYWd6TnRNVGt2eGRxd0pPZjRubi12T0RDSE5B?oc=5",
     "channel": "gn"
    }
   ]

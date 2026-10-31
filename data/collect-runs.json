@@ -1,8 +1,8 @@
 {
-  "at": "2026-10-31T10:12:27.845Z",
+  "at": "2026-10-31T10:49:02.984Z",
   "today": "2026-10-31",
-  "mode": "collect-daily",
-  "attempted": 0,
+  "mode": "radar",
+  "attempted": 10,
   "failures": 0,
   "failed_lines": [],
   "stale_lines": [],

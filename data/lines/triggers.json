@@ -477,6 +477,54 @@
     "channel": "hn",
     "query": "Cloudflare Monetization Gateway",
     "count": 0
+   },
+   {
+    "date": "2026-10-31T10:48:55.707Z",
+    "channel": "fr",
+    "query": "compute derivatives",
+    "count": 1
+   },
+   {
+    "date": "2026-10-31T10:48:55.707Z",
+    "channel": "fr",
+    "query": "autonomous agent income",
+    "count": 0
+   },
+   {
+    "date": "2026-10-31T10:48:55.707Z",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "count": 5
+   },
+   {
+    "date": "2026-10-31T10:48:55.707Z",
+    "channel": "gn",
+    "query": "agent insurance",
+    "count": 5
+   },
+   {
+    "date": "2026-10-31T10:48:55.707Z",
+    "channel": "gn",
+    "query": "AI personality rights bill",
+    "count": 5
+   },
+   {
+    "date": "2026-10-31T10:48:55.707Z",
+    "channel": "hn",
+    "query": "compute futures",
+    "count": 2
+   },
+   {
+    "date": "2026-10-31T10:48:55.707Z",
+    "channel": "hn",
+    "query": "agent insurance",
+    "count": 0
+   },
+   {
+    "date": "2026-10-31T10:48:55.707Z",
+    "channel": "hn",
+    "query": "Cloudflare Monetization Gateway",
+    "count": 0
    }
   ],
   "items": [
@@ -596,6 +644,15 @@
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTzV6WldoVTVHSGEwSGkzZF9WeFpzLXhQbkxCYlU2Sl94M2haOTJNejY0WWpsNTRmRnJKTm8tUVJhTWlkRUwwYTY0ZGk4WmxZVDV6MWVsNGhtbnltMlBLTjRuWlgxME9vOVBzcmdfd3FHb3BoWTRzZGp2dm14ZGxtZ0x0Nm9mcER1WnZDOE5HVGRkUEg3SWJoMmRXQzBLekd6TUVCZWxxZlA5Wk96RW9Z?oc=5",
     "date": "Wed, 19 Aug 2026 07:00:00 GMT",
     "foundAt": "2026-10-30T08:04:00.050Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Do you need AI agent liability insurance? What to know before you sign up - ZDNET",
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4wN092NXVzeERtVXBZbWY3cDNESV9WTW9icUtkcTdXdThvU2dVX0pfWFA5OEhxOFFkZjdhclZUbUJpR3RGUmhqRmtLX2pqSDl0dHNWdk1ZcEgxMjFnaTk3LW9Pc2p1Y0hIUmNDemR4TWpBWDlYYmczeUVWUQ?oc=5",
+    "date": "Fri, 30 Oct 2026 15:01:11 GMT",
+    "foundAt": "2026-10-31T10:48:55.707Z"
    }
   ],
   "alerts": [
@@ -675,6 +732,12 @@
     "date": "2026-10-30T08:04:00.050Z",
     "title": "CFTC Considers AI Compute Futures as ICE, CME Eye New Market - Bloomberg.com",
     "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTzV6WldoVTVHSGEwSGkzZF9WeFpzLXhQbkxCYlU2Sl94M2haOTJNejY0WWpsNTRmRnJKTm8tUVJhTWlkRUwwYTY0ZGk4WmxZVDV6MWVsNGhtbnltMlBLTjRuWlgxME9vOVBzcmdfd3FHb3BoWTRzZGp2dm14ZGxtZ0x0Nm9mcER1WnZDOE5HVGRkUEg3SWJoMmRXQzBLekd6TUVCZWxxZlA5Wk96RW9Z?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-10-31T10:48:55.707Z",
+    "title": "Do you need AI agent liability insurance? What to know before you sign up - ZDNET",
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4wN092NXVzeERtVXBZbWY3cDNESV9WTW9icUtkcTdXdThvU2dVX0pfWFA5OEhxOFFkZjdhclZUbUJpR3RGUmhqRmtLX2pqSDl0dHNWdk1ZcEgxMjFnaTk3LW9Pc2p1Y0hIUmNDemR4TWpBWDlYYmczeUVWUQ?oc=5",
     "channel": "gn"
    }
   ]

@@ -197,7 +197,79 @@
    "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNWXoxdHlYaUgyV0M3OHR6V0NxRHhET1c2SncxcHA0c1hpRzdxN2w2eWw4Ul81OHktU0MxQzlyWnktbjdfUFZKZEJVcUhqX1RWWllONWMtTUN3SmUxVVN6MFhELV9oVEc1N2F1MndZMWtTb0dWU21ndFd2V1RQT3pRdlBWS0Q4bEQzcnc2LTJ1UVd6MUduTVNOa0JSV3JNQXZwYnhWem12Q1V6OEh6YWg1ZkRzd0Jpa2pOVjU5MFNvM0pMOXNzX3pCRURyTjRHalpjU0c0WjRPcDNEWjgxUFZYbDBXRWVDU25rRTZSMmtyTk9CcEV5?oc=5",
    "type": "noise",
    "action": "只记录"
+  },
+  {
+   "date": "2026-10-31T10:49:03.024Z",
+   "line": "sb253-docket",
+   "channel": "gn",
+   "title": "California climate disclosure laws: CARB delays SB 253 reporting deadline to November 10 - White &amp; Case LLP",
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcXFIcGlMLXhuNjhTaTQ4amJzdHBJLUVkWVFwNkJKS0dMSXhUbnpLdnI4a09tcDBjb0NIalZGMzctQmtnbzE4ekp0NDV3T1NhWXdCd0tCZ2JqM05Zb2JWUF9UMWtqdmIyd1NNeWtSQnVTQmVNUU5CMVA5X3FlZlduMU5pSF9yVFo4MWd0WEduVG92MG1pR3NRdlJoOUp3Z0JOU2lIanlienBhdzFldWNzVVhzZWFJb2tvVWxDVTFGcTJ0QQ?oc=5",
+   "type": "rule",
+   "action": "更新该线参数，必要时出解读"
+  },
+  {
+   "date": "2026-10-31T10:49:03.024Z",
+   "line": "sb253-docket",
+   "channel": "gn",
+   "title": "CARB Workshop for California Climate Disclosure Rule (SB 253): Key Takeaways from July 21, 2026 Workshop - Mintz",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOTlY0UnBoYlpWSEFtWWZYZE5FV1p6a0U3YW12SmZ5cWZ0YS13UWM4czZLNG5JY2ZTeWxjRkwwcGQzVEFhNjdCalh4N3B2VjRJUkdYLXA3RlloT3lLeTh5bFd6Y2w3Mm5XX1FBTXVfRU0tN2FQOTRlTjVrMlFFbTZPUjF3TFdMLURiRklramhOSmpYUUhrYlBtejFRQjZfb3dUTTNzYWd6TnRNVGt2eGRxd0pPZjRubi12T0RDSE5B?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-10-31T10:49:03.024Z",
+   "line": "agent-dirs",
+   "channel": "hn",
+   "title": "Web Bot Auth: messh SDK 0.2.0 is out",
+   "url": "https://messh.io",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-10-31T10:49:03.024Z",
+   "line": "triggers",
+   "channel": "gn",
+   "title": "CFTC’s Selig Sees Role for Compute Futures, Rules for AI Trading Agents - PYMNTS.com",
+   "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOd1laTjFsTS0xTS1rQWVaYkRMdzRxWGE2NHZiS2VIT28wakhYSEs0Vnl2amRKVnBRVTZEakVrS0lzUmxMR2lEZlJWWXNtNTViMi1CaENhbkszRzZNM25iQmRHYnMyYjJWUkRIckN2b0JwSzRkcV9lYWU0bnMxQ0V6aGF4b1JIZ1l2VWhmeE9FMHpZOENpSnNScE9FdmdXQnk3d2ROdkJ5S3hvX2RSZUZ1bDczRnpWRmNrVmhESnRNSTlRYkFqM0E?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-10-31T10:49:03.024Z",
+   "line": "triggers",
+   "channel": "gn",
+   "title": "CFTC Considers AI Compute Futures as ICE, CME Eye New Market - Bloomberg.com",
+   "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOTzV6WldoVTVHSGEwSGkzZF9WeFpzLXhQbkxCYlU2Sl94M2haOTJNejY0WWpsNTRmRnJKTm8tUVJhTWlkRUwwYTY0ZGk4WmxZVDV6MWVsNGhtbnltMlBLTjRuWlgxME9vOVBzcmdfd3FHb3BoWTRzZGp2dm14ZGxtZ0x0Nm9mcER1WnZDOE5HVGRkUEg3SWJoMmRXQzBLekd6TUVCZWxxZlA5Wk96RW9Z?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-10-31T10:49:03.024Z",
+   "line": "triggers",
+   "channel": "gn",
+   "title": "Do you need AI agent liability insurance? What to know before you sign up - ZDNET",
+   "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4wN092NXVzeERtVXBZbWY3cDNESV9WTW9icUtkcTdXdThvU2dVX0pfWFA5OEhxOFFkZjdhclZUbUJpR3RGUmhqRmtLX2pqSDl0dHNWdk1ZcEgxMjFnaTk3LW9Pc2p1Y0hIUmNDemR4TWpBWDlYYmczeUVWUQ?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-10-31T10:49:03.024Z",
+   "line": "grid-queue",
+   "channel": "gn",
+   "title": "Bipartisan Permitting Bill Data Centers Grid Interconnection Could Clear Queues - Enverus",
+   "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPTnhyMlpsMVZ1NzZJa2hrN2UxQVE0Z3hkTGN2UXRKLTAyOEZBVTd1WnNIRnNzT1hHejVRSDM2bVEtNkgxTlFVV094SG9WQTlRZ1JxVmdFN2FNb2QtaGVQRTlOWGRvTVJPZnlnbkpDdUtja2FUeGM4Y0tReHphVEhHRjY1aUFiMXE2dUVqb1ZZNnpOMUx0?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-10-31T10:49:03.024Z",
+   "line": "grid-queue",
+   "channel": "gn",
+   "title": "Large-load tariffs increasingly rely on upfront payments, exit fees, ramp schedules - Utility Dive",
+   "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE13OWFvNDVDT3NybEdkNDZYcndoTmlYTWlfSVhoekVGd1NqOFBBckV3VFczSVlpa2VCRXVwdUs2Y0s4ZEt4cWFrZWtuMHNsOHFhSlZ1YktmRjhXaXFHSUVwSEh1WXc2cDhVWDkxZnRLaEx4Yy16dm9wdE9GYmE?oc=5",
+   "type": "noise",
+   "action": "只记录"
   }
  ],
- "updated": "2026-10-23T09:42:30.023Z"
+ "updated": "2026-10-31T10:49:03.024Z"
 }
