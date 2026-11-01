@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T08:38:03.693Z",
+  "generated_at": "2026-11-01T15:22:56.146Z",
   "today": "2026-11-01",
   "trigger": "schedule",
   "overall": "ok",
@@ -192,16 +192,12 @@
     }
   ],
   "heal": {
-    "healed": [
-      "sb253-docket"
-    ],
+    "healed": [],
     "failed": [],
-    "attempted": [
-      "sb253-docket"
-    ]
+    "attempted": []
   },
-  "previous_heartbeat_at": "2026-10-31T18:22:35.047Z",
-  "silence_hours": 14.3,
+  "previous_heartbeat_at": "2026-11-01T08:38:03.693Z",
+  "silence_hours": 6.7,
   "gate": {
     "at": "2026-10-30T15:22:53Z",
     "passed": true,
