@@ -103,6 +103,16 @@
       "critical": 0,
       "warn": 0,
       "healed": []
+    },
+    {
+      "at": "2026-11-01T08:38:03.693Z",
+      "trigger": "schedule",
+      "overall": "ok",
+      "critical": 0,
+      "warn": 0,
+      "healed": [
+        "sb253-docket"
+      ]
     }
   ]
 }
