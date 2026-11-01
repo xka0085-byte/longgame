@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-01T15:22:56.146Z",
+  "generated_at": "2026-11-01T18:48:43.588Z",
   "today": "2026-11-01",
   "trigger": "schedule",
   "overall": "ok",
@@ -196,8 +196,8 @@
     "failed": [],
     "attempted": []
   },
-  "previous_heartbeat_at": "2026-11-01T08:38:03.693Z",
-  "silence_hours": 6.7,
+  "previous_heartbeat_at": "2026-11-01T15:22:56.146Z",
+  "silence_hours": 3.4,
   "gate": {
     "at": "2026-10-30T15:22:53Z",
     "passed": true,
