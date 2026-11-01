@@ -405,6 +405,18 @@
     "channel": "hn",
     "query": "eIDAS 2.0",
     "count": 0
+   },
+   {
+    "date": "2026-11-01T11:45:34.892Z",
+    "channel": "gn",
+    "query": "eIDAS wallet",
+    "count": 5
+   },
+   {
+    "date": "2026-11-01T11:45:34.892Z",
+    "channel": "hn",
+    "query": "eIDAS 2.0",
+    "count": 0
    }
   ],
   "items": [
@@ -425,6 +437,15 @@
     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQUGd3aV9ZSVo4bDhXRXlpUVh3bVRZVDYzbjNlakY1OHZ2eFM4cDFkc0IxcEMwTnJ1cWtVQU5sZjBFNTl1ZlQzUTFPVzFlUXpFSS00bHNqU2VFLWVBQ1A0WFB2WjRuMU13Mzkxc3VFQUlwTmhqVnZmU1NxRy1CanFzTmgzMDdORGw1YW5yQ3hFWlJTTTdxQXc4ZVYwTHBEN1hsdUk5TERaZEFWM21SLUxLeHRXa3NtZnJ1TXN1Y1l0RjJjQ3JWU0RuU3NiZ19lRGZs?oc=5",
     "date": "Mon, 07 Sep 2026 07:00:00 GMT",
     "foundAt": "2026-10-20T16:01:04.587Z"
+   },
+   {
+    "line": "eidas-tsl",
+    "channel": "gn",
+    "query": "eIDAS wallet",
+    "title": "Nect earns eIDAS certification for EUDI Wallet trust services - Biometric Update",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPX3dpTGQ4bVVENmw0Nm9ULWx0RDc0Qm9CdGtON3FpbG1ZcjEwdXZuenhWOUtFTjQ3YTNPNjByVnNfSjdndVZnNnFHVDVhTVhaOGF4YndnM1dRR19mU0Z5bHNCMU9UT3BVbHdxSnVHRHlSOThFSGF1ZmxfRTFrcnZDOHdsRTN2VHBkQ1B5d011TWZ0YUwzSTB0bHRzblczT0VzdHc?oc=5",
+    "date": "Thu, 23 Jul 2026 07:00:00 GMT",
+    "foundAt": "2026-11-01T11:45:34.892Z"
    }
   ],
   "alerts": [
@@ -438,6 +459,12 @@
     "date": "2026-10-20T16:01:04.587Z",
     "title": "eIDAS 2.0 European Business Wallet: 6 Questions Every Financial Institution Should Ask in 2026: By Bo Harald - Finextra Research",
     "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQUGd3aV9ZSVo4bDhXRXlpUVh3bVRZVDYzbjNlakY1OHZ2eFM4cDFkc0IxcEMwTnJ1cWtVQU5sZjBFNTl1ZlQzUTFPVzFlUXpFSS00bHNqU2VFLWVBQ1A0WFB2WjRuMU13Mzkxc3VFQUlwTmhqVnZmU1NxRy1CanFzTmgzMDdORGw1YW5yQ3hFWlJTTTdxQXc4ZVYwTHBEN1hsdUk5TERaZEFWM21SLUxLeHRXa3NtZnJ1TXN1Y1l0RjJjQ3JWU0RuU3NiZ19lRGZs?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-01T11:45:34.892Z",
+    "title": "Nect earns eIDAS certification for EUDI Wallet trust services - Biometric Update",
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPX3dpTGQ4bVVENmw0Nm9ULWx0RDc0Qm9CdGtON3FpbG1ZcjEwdXZuenhWOUtFTjQ3YTNPNjByVnNfSjdndVZnNnFHVDVhTVhaOGF4YndnM1dRR19mU0Z5bHNCMU9UT3BVbHdxSnVHRHlSOThFSGF1ZmxfRTFrcnZDOHdsRTN2VHBkQ1B5d011TWZ0YUwzSTB0bHRzblczT0VzdHc?oc=5",
     "channel": "gn"
    }
   ]

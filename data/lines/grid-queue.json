@@ -270,6 +270,24 @@
     "channel": "hn",
     "query": "interconnection queue",
     "count": 0
+   },
+   {
+    "date": "2026-11-01T11:45:49.535Z",
+    "channel": "gn",
+    "query": "interconnection queue data center",
+    "count": 5
+   },
+   {
+    "date": "2026-11-01T11:45:49.535Z",
+    "channel": "gn",
+    "query": "large load tariff utility",
+    "count": 5
+   },
+   {
+    "date": "2026-11-01T11:45:49.535Z",
+    "channel": "hn",
+    "query": "interconnection queue",
+    "count": 0
    }
   ],
   "items": [
