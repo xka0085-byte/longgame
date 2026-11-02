@@ -14,3 +14,5 @@
 {"run_id":"local-20261030105217635","line":"compute-futures","at":"2026-10-30T10:52:17.635Z","reason":"data-source-unavailable","last_success_at":null}
 {"run_id":"local-20261030105440092","line":"triggers","at":"2026-10-30T10:54:40.092Z","reason":"latest run is not publish-eligible","last_success_at":null}
 {"run_id":"local-20261030105440092","line":"compute-futures","at":"2026-10-30T10:54:40.092Z","reason":"data-source-unavailable","last_success_at":null}
+{"run_id":"local-20261102031106803","line":"triggers","at":"2026-11-02T03:11:06.803Z","reason":"latest run is not publish-eligible","last_success_at":null}
+{"run_id":"local-20261102031106803","line":"compute-futures","at":"2026-11-02T03:11:06.803Z","reason":"data-source-unavailable","last_success_at":null}

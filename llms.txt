@@ -18,9 +18,9 @@
 可复算的采集与门禁细节（403/417 重试与恢复、404 豁免、四道门禁与故障注入、artifact 校验快照）：https://xka0085-byte.github.io/longgame/method.html 。对应的外部案例记录：https://xka0085-byte.github.io/mcpreflight/case-longgame.html 。
 
 <!-- AUTO-CITATIONS:START -->
-## 引用格式（自动生成 2026-10-30）
+## 引用格式（自动生成 2026-11-02）
 
-- sb253-docket：CARB 披露相关链接 0 条（首窗 11-10）（最近一次成功采集于 2026-10-20，本期采集失败），自 2026-10，链接 https://xka0085-byte.github.io/longgame/lines/sb253-docket.html
+- sb253-docket：CARB 披露相关链接 0 条（首窗 11-10），自 2026-10，链接 https://xka0085-byte.github.io/longgame/lines/sb253-docket.html
 - agent-dirs：当前登记的 agent 密钥 6 把，自 2026-10，链接 https://xka0085-byte.github.io/longgame/lines/agent-dirs.html
 - eidas-tsl：EU 信任列表指针 42 个，自 2026-10，链接 https://xka0085-byte.github.io/longgame/lines/eidas-tsl.html
 - formd-sweep：本月十个关键词合计新增 Form D 备案 23 件，自 2026-10，链接 https://xka0085-byte.github.io/longgame/lines/formd-sweep.html

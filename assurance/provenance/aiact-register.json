@@ -1,15 +1,15 @@
 {
-  "run_id": "local-20261030105440092",
+  "run_id": "local-20261102031106803",
   "line": "aiact-register",
-  "commit": "ed5e81f1b374c23fa36c5c7983cb5761a437699c",
+  "commit": "ea6184a03dd1e4e516ca81917939dc0dcbad776f",
   "contract_version": 1,
   "assurance_level": 2,
   "first_observed": "2026-10-20T13:48:33.401Z",
-  "raw_sha256": "4606314f876502c65394144532e673ed770b6a95449cbe5c797d7fc7656ff40d",
+  "raw_sha256": "8369fcd0227ea3c3d96ac1e8f7edb0b52f1a7cb4f5766d9248ad0a27993d2b7f",
   "normalized_sha256": "92a8223a2e096bf7a957869237d66f04da5035213e7d0006d5efb7dc27a00b49",
   "validation_status": "PASS",
   "publication_status": "PUBLISHED",
   "publication_reason": null,
   "last_success_at": "2026-10-21T08:17:10.353Z",
-  "generated_at": "2026-10-30T10:54:40.092Z"
+  "generated_at": "2026-11-02T03:11:06.803Z"
 }
