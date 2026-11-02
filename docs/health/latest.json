@@ -1,9 +1,14 @@
 {
-  "generated_at": "2026-11-01T18:48:43.588Z",
-  "today": "2026-11-01",
+  "generated_at": "2026-11-02T08:48:00.556Z",
+  "today": "2026-11-02",
   "trigger": "schedule",
   "overall": "ok",
   "signals": [
+    {
+      "id": "line-degraded:triggers",
+      "severity": "info",
+      "detail": "triggers 最近一轮有 1 个页面不可用（按容错档放行，已记事件）"
+    },
     {
       "id": "line-degraded:compute-futures",
       "severity": "info",
@@ -56,7 +61,7 @@
       "status": "active",
       "cadence": "window",
       "last_collect": "2026-11-01",
-      "gap_days": 0,
+      "gap_days": 1,
       "limit_days": 1,
       "consecutive_failed_rounds": 0,
       "last_round": null,
@@ -70,7 +75,7 @@
       "status": "active",
       "cadence": "weekly",
       "last_collect": "2026-10-30",
-      "gap_days": 2,
+      "gap_days": 3,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": null,
@@ -79,12 +84,26 @@
       "last_attempt": "2026-10-30"
     },
     {
+      "id": "trust-delta",
+      "managed": true,
+      "status": "active",
+      "cadence": "weekly",
+      "last_collect": "2026-11-02",
+      "gap_days": 0,
+      "limit_days": 8,
+      "consecutive_failed_rounds": 0,
+      "last_round": "ok",
+      "degraded_pages": 0,
+      "freshness": "fresh",
+      "last_attempt": "2026-11-02"
+    },
+    {
       "id": "eidas-tsl",
       "managed": true,
       "status": "active",
       "cadence": "weekly",
       "last_collect": "2026-10-30",
-      "gap_days": 2,
+      "gap_days": 3,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": null,
@@ -97,42 +116,42 @@
       "managed": true,
       "status": "auto-wait",
       "cadence": "monthly",
-      "last_collect": "2026-10-21",
-      "gap_days": 11,
+      "last_collect": "2026-11-02",
+      "gap_days": 0,
       "limit_days": 34,
       "consecutive_failed_rounds": 0,
       "last_round": null,
       "degraded_pages": 0,
       "freshness": "fresh",
-      "last_attempt": "2026-10-21"
+      "last_attempt": "2026-11-02"
     },
     {
       "id": "triggers",
       "managed": true,
       "status": "active",
       "cadence": "monthly",
-      "last_collect": "2026-10-21",
-      "gap_days": 11,
+      "last_collect": "2026-11-02",
+      "gap_days": 0,
       "limit_days": 34,
       "consecutive_failed_rounds": 0,
-      "last_round": null,
-      "degraded_pages": 0,
+      "last_round": "partial",
+      "degraded_pages": 1,
       "freshness": "fresh",
-      "last_attempt": "2026-10-21"
+      "last_attempt": "2026-11-02"
     },
     {
       "id": "formd-sweep",
       "managed": true,
       "status": "active",
       "cadence": "monthly",
-      "last_collect": "2026-10-21",
-      "gap_days": 11,
+      "last_collect": "2026-11-02",
+      "gap_days": 0,
       "limit_days": 34,
       "consecutive_failed_rounds": 0,
       "last_round": null,
       "degraded_pages": 0,
       "freshness": "fresh",
-      "last_attempt": "2026-10-21"
+      "last_attempt": "2026-11-02"
     },
     {
       "id": "compute-futures",
@@ -140,7 +159,7 @@
       "status": "active",
       "cadence": "weekly",
       "last_collect": "2026-10-30",
-      "gap_days": 2,
+      "gap_days": 3,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": "partial",
@@ -154,7 +173,7 @@
       "status": "active",
       "cadence": "weekly",
       "last_collect": "2026-10-30",
-      "gap_days": 2,
+      "gap_days": 3,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": null,
@@ -168,7 +187,7 @@
       "status": "active",
       "cadence": "weekly",
       "last_collect": "2026-10-30",
-      "gap_days": 2,
+      "gap_days": 3,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": null,
@@ -181,14 +200,14 @@
       "managed": true,
       "status": "active",
       "cadence": "monthly",
-      "last_collect": "2026-10-21",
-      "gap_days": 11,
+      "last_collect": "2026-11-02",
+      "gap_days": 0,
       "limit_days": 34,
       "consecutive_failed_rounds": 0,
       "last_round": null,
       "degraded_pages": 0,
       "freshness": "fresh",
-      "last_attempt": "2026-10-21"
+      "last_attempt": "2026-11-02"
     }
   ],
   "heal": {
@@ -196,13 +215,13 @@
     "failed": [],
     "attempted": []
   },
-  "previous_heartbeat_at": "2026-11-01T15:22:56.146Z",
-  "silence_hours": 3.4,
+  "previous_heartbeat_at": "2026-11-01T18:48:43.588Z",
+  "silence_hours": 14,
   "gate": {
-    "at": "2026-10-30T15:22:53Z",
+    "at": "2026-11-02T04:59:38Z",
     "passed": true,
     "source": "actions-api",
-    "url": "https://github.com/xka0085-byte/longgame/actions/runs/41080142540"
+    "url": "https://github.com/xka0085-byte/longgame/actions/runs/41391426350"
   },
   "thresholds": {
     "weeklyGraceDays": 1,
