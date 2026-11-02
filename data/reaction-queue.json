@@ -278,7 +278,52 @@
    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPX3dpTGQ4bVVENmw0Nm9ULWx0RDc0Qm9CdGtON3FpbG1ZcjEwdXZuenhWOUtFTjQ3YTNPNjByVnNfSjdndVZnNnFHVDVhTVhaOGF4YndnM1dRR19mU0Z5bHNCMU9UT3BVbHdxSnVHRHlSOThFSGF1ZmxfRTFrcnZDOHdsRTN2VHBkQ1B5d011TWZ0YUwzSTB0bHRzblczT0VzdHc?oc=5",
    "type": "noise",
    "action": "只记录"
+  },
+  {
+   "date": "2026-11-02T13:18:27.315Z",
+   "line": "trust-delta",
+   "channel": "gn",
+   "title": "Introducing MCP server for Registry of Open Data on AWS | Amazon Web Services - Amazon Web Services (AWS)",
+   "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPQVczZklNU0xxTnY0YlJYQ0NqdDdhQTJzMlFQdmtCd0FRUHczUDlOWWNpVVpjajMtVFladkF4dUIwNmczZVlFVFRVaXpNZXFURnJFcmJucEZTMm5DMGtWWkNEVVhGRW1BdWhLcXNXakZzNW4wU3dISzlmSzVCdk9WVHJ2TWFDV3FveVplYkJ1Z0xBYUNVWHpMeWtuNkU?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-02T13:18:27.315Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Show HN: An MCP server that runs 27 small web and open-data scrapers",
+   "url": "https://github.com/emirmrkaljevic/tinyrex-mcp",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-02T13:18:27.315Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Show HN: Arken – cryptographic identity for AI agents calling MCP servers/APIs",
+   "url": "https://github.com/arkenforge/arken-core",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-02T13:18:27.315Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Show HN: Paste your MCP config, see what each server does at startup",
+   "url": "https://mcp.brydge-ai.com",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-02T13:18:27.315Z",
+   "line": "grid-queue",
+   "channel": "gn",
+   "title": "ERCOT Interconnection Queue: Gas Up 85.5% in a Year Amid Texas Data Center Boom - EIN Presswire",
+   "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOLVdRcHpWVjh4Y2hHOWlKUGlGanJ3U1NPVUtYUmtaMXlnTlQxWlYwTURIYWFyN3dHNjlkbEdmRm1nd1dwdzhpNk9qWm94QVN2RElDZFh6bFNxVGZ0SG9kdVhTY1RSTGo5OWtMX0UxZVl3WWQ1UGNKNmF1RlhnYllJSlFmTVBGT0hweGt5QzVYcGxoVkpVWmxWREVFSDdIUzJQV3VUVk1yTEtHTG1tOFRseVhsako0YlpjT3VRLUpoQmc3UQ?oc=5",
+   "type": "noise",
+   "action": "只记录"
   }
  ],
- "updated": "2026-11-02T03:55:09.709Z"
+ "updated": "2026-11-02T13:18:27.315Z"
 }

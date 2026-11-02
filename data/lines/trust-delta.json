@@ -990,8 +990,89 @@
   ]
  },
  "radar": {
-  "runs": [],
-  "items": [],
-  "alerts": []
+  "runs": [
+   {
+    "date": "2026-11-02T13:18:17.072Z",
+    "channel": "hn",
+    "query": "MCP registry",
+    "count": 0
+   },
+   {
+    "date": "2026-11-02T13:18:17.072Z",
+    "channel": "gn",
+    "query": "MCP server registry",
+    "count": 5
+   },
+   {
+    "date": "2026-11-02T13:18:17.072Z",
+    "channel": "hn",
+    "query": "MCP server",
+    "count": 5
+   }
+  ],
+  "items": [
+   {
+    "line": "trust-delta",
+    "channel": "gn",
+    "query": "MCP server registry",
+    "title": "Introducing MCP server for Registry of Open Data on AWS | Amazon Web Services - Amazon Web Services (AWS)",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPQVczZklNU0xxTnY0YlJYQ0NqdDdhQTJzMlFQdmtCd0FRUHczUDlOWWNpVVpjajMtVFladkF4dUIwNmczZVlFVFRVaXpNZXFURnJFcmJucEZTMm5DMGtWWkNEVVhGRW1BdWhLcXNXakZzNW4wU3dISzlmSzVCdk9WVHJ2TWFDV3FveVplYkJ1Z0xBYUNVWHpMeWtuNkU?oc=5",
+    "date": "Tue, 07 Jul 2026 07:00:00 GMT",
+    "foundAt": "2026-11-02T13:18:17.072Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: An MCP server that runs 27 small web and open-data scrapers",
+    "url": "https://github.com/emirmrkaljevic/tinyrex-mcp",
+    "date": "2026-11-02T12:04:55Z",
+    "foundAt": "2026-11-02T13:18:17.072Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: Arken – cryptographic identity for AI agents calling MCP servers/APIs",
+    "url": "https://github.com/arkenforge/arken-core",
+    "date": "2026-11-02T04:29:23Z",
+    "foundAt": "2026-11-02T13:18:17.072Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: Paste your MCP config, see what each server does at startup",
+    "url": "https://mcp.brydge-ai.com",
+    "date": "2026-11-02T03:30:50Z",
+    "foundAt": "2026-11-02T13:18:17.072Z"
+   }
+  ],
+  "alerts": [
+   {
+    "date": "2026-11-02T13:18:17.072Z",
+    "title": "Introducing MCP server for Registry of Open Data on AWS | Amazon Web Services - Amazon Web Services (AWS)",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPQVczZklNU0xxTnY0YlJYQ0NqdDdhQTJzMlFQdmtCd0FRUHczUDlOWWNpVVpjajMtVFladkF4dUIwNmczZVlFVFRVaXpNZXFURnJFcmJucEZTMm5DMGtWWkNEVVhGRW1BdWhLcXNXakZzNW4wU3dISzlmSzVCdk9WVHJ2TWFDV3FveVplYkJ1Z0xBYUNVWHpMeWtuNkU?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-02T13:18:17.072Z",
+    "title": "Show HN: An MCP server that runs 27 small web and open-data scrapers",
+    "url": "https://github.com/emirmrkaljevic/tinyrex-mcp",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-02T13:18:17.072Z",
+    "title": "Show HN: Arken – cryptographic identity for AI agents calling MCP servers/APIs",
+    "url": "https://github.com/arkenforge/arken-core",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-02T13:18:17.072Z",
+    "title": "Show HN: Paste your MCP config, see what each server does at startup",
+    "url": "https://mcp.brydge-ai.com",
+    "channel": "hn"
+   }
+  ]
  }
 }

@@ -190,6 +190,18 @@
     "channel": "hn",
     "query": "content credentials",
     "count": 0
+   },
+   {
+    "date": "2026-11-02T13:18:24.301Z",
+    "channel": "gn",
+    "query": "C2PA content credentials adoption",
+    "count": 5
+   },
+   {
+    "date": "2026-11-02T13:18:24.301Z",
+    "channel": "hn",
+    "query": "content credentials",
+    "count": 0
    }
   ],
   "items": [

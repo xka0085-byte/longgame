@@ -351,6 +351,24 @@
     "channel": "hn",
     "query": "interconnection queue",
     "count": 0
+   },
+   {
+    "date": "2026-11-02T13:18:26.078Z",
+    "channel": "gn",
+    "query": "interconnection queue data center",
+    "count": 5
+   },
+   {
+    "date": "2026-11-02T13:18:26.078Z",
+    "channel": "gn",
+    "query": "large load tariff utility",
+    "count": 5
+   },
+   {
+    "date": "2026-11-02T13:18:26.078Z",
+    "channel": "hn",
+    "query": "interconnection queue",
+    "count": 0
    }
   ],
   "items": [
@@ -371,6 +389,15 @@
     "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE13OWFvNDVDT3NybEdkNDZYcndoTmlYTWlfSVhoekVGd1NqOFBBckV3VFczSVlpa2VCRXVwdUs2Y0s4ZEt4cWFrZWtuMHNsOHFhSlZ1YktmRjhXaXFHSUVwSEh1WXc2cDhVWDkxZnRLaEx4Yy16dm9wdE9GYmE?oc=5",
     "date": "Tue, 08 Sep 2026 07:00:00 GMT",
     "foundAt": "2026-10-30T08:04:19.239Z"
+   },
+   {
+    "line": "grid-queue",
+    "channel": "gn",
+    "query": "interconnection queue data center",
+    "title": "ERCOT Interconnection Queue: Gas Up 85.5% in a Year Amid Texas Data Center Boom - EIN Presswire",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOLVdRcHpWVjh4Y2hHOWlKUGlGanJ3U1NPVUtYUmtaMXlnTlQxWlYwTURIYWFyN3dHNjlkbEdmRm1nd1dwdzhpNk9qWm94QVN2RElDZFh6bFNxVGZ0SG9kdVhTY1RSTGo5OWtMX0UxZVl3WWQ1UGNKNmF1RlhnYllJSlFmTVBGT0hweGt5QzVYcGxoVkpVWmxWREVFSDdIUzJQV3VUVk1yTEtHTG1tOFRseVhsako0YlpjT3VRLUpoQmc3UQ?oc=5",
+    "date": "Mon, 02 Nov 2026 13:00:00 GMT",
+    "foundAt": "2026-11-02T13:18:26.078Z"
    }
   ],
   "alerts": [
@@ -384,6 +411,12 @@
     "date": "2026-10-30T08:04:19.239Z",
     "title": "Large-load tariffs increasingly rely on upfront payments, exit fees, ramp schedules - Utility Dive",
     "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE13OWFvNDVDT3NybEdkNDZYcndoTmlYTWlfSVhoekVGd1NqOFBBckV3VFczSVlpa2VCRXVwdUs2Y0s4ZEt4cWFrZWtuMHNsOHFhSlZ1YktmRjhXaXFHSUVwSEh1WXc2cDhVWDkxZnRLaEx4Yy16dm9wdE9GYmE?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-02T13:18:26.078Z",
+    "title": "ERCOT Interconnection Queue: Gas Up 85.5% in a Year Amid Texas Data Center Boom - EIN Presswire",
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOLVdRcHpWVjh4Y2hHOWlKUGlGanJ3U1NPVUtYUmtaMXlnTlQxWlYwTURIYWFyN3dHNjlkbEdmRm1nd1dwdzhpNk9qWm94QVN2RElDZFh6bFNxVGZ0SG9kdVhTY1RSTGo5OWtMX0UxZVl3WWQ1UGNKNmF1RlhnYllJSlFmTVBGT0hweGt5QzVYcGxoVkpVWmxWREVFSDdIUzJQV3VUVk1yTEtHTG1tOFRseVhsako0YlpjT3VRLUpoQmc3UQ?oc=5",
     "channel": "gn"
    }
   ]
