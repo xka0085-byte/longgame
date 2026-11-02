@@ -1,7 +1,7 @@
 {
-  "run_id": "local-20261102031106803",
+  "run_id": "local-20261102045849934",
   "line": "eidas-tsl",
-  "commit": "ea6184a03dd1e4e516ca81917939dc0dcbad776f",
+  "commit": "27c2ef0eda421bb198af0707641a4396c99dadfc",
   "contract_version": 1,
   "assurance_level": 2,
   "first_observed": "2026-10-20T13:48:02.426Z",
@@ -11,5 +11,5 @@
   "publication_status": "PUBLISHED",
   "publication_reason": null,
   "last_success_at": "2026-10-30T11:49:32.375Z",
-  "generated_at": "2026-11-02T03:11:06.803Z"
+  "generated_at": "2026-11-02T04:58:49.934Z"
 }

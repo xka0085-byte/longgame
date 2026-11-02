@@ -1,0 +1,99 @@
+contract_version: 1
+assurance_level: 2
+assurance_level_basis: "本仓库已具备契约、固定样本、发布门禁与故障注入，但尚无独立于本仓库的外部复算，按上限 2 记录。"
+id: "trust-delta"
+status: "contract-only"
+owner: "UNKNOWN"
+scope:
+  external: false
+  local_path: "data/lines/trust-delta.json"
+  record_selector: "collect.runs"
+source:
+  name: "mcpreflight Trust Directory weekly registry-changes feed"
+  hosts:
+    - "raw.githubusercontent.com"
+  url: "https://raw.githubusercontent.com/xka0085-byte/mcpreflight/main/trust-data/registry-changes.json"
+  access: "public"
+  license: "UNKNOWN"
+  license_note: "上游 feed 由本项目自身的扫描器生成，未单独声明许可条款，本阶段未核验。"
+schema:
+  format: "json"
+  required_fields:
+    - path: "run.date"
+      type: "string"
+      unit: "UNKNOWN"
+      note: "ISO-8601，本仓库的采集时刻"
+    - path: "run.scanDate"
+      type: "string"
+      unit: "UNKNOWN"
+      note: "上游扫描日，YYYY-MM-DD"
+    - path: "run.summary"
+      type: "object"
+      unit: "UNKNOWN"
+      note: "serversThisWeek / added / addedUncomparable / removed / statusChanged"
+    - path: "run.direction"
+      type: "object"
+      unit: "UNKNOWN"
+      note: "toPass / fromPass / unknownStatusInvolved"
+    - path: "run.samples"
+      type: "object"
+      unit: "UNKNOWN"
+      note: "added / removed / statusChanged 各取前 N 条，N 由 sampleLimit 决定"
+  primary_key:
+    - "run.date"
+  dedupe:
+    strategy: "run.date 唯一；同一 scanDate 再次采集只留痕迹"
+    basis: "line.mjs 每轮追加一条 run，重复扫描日标 duplicateScan 且不重复产生事件"
+  invariants:
+    - id: "servers-positive"
+      rule: "summary.serversThisWeek 必须为正整数"
+      basis: "注册表不会在一夜之间清空，规模为 0 只可能是上游采集失败"
+    - id: "direction-subset-of-changed"
+      rule: "direction.toPass + direction.fromPass 不得大于 summary.statusChanged"
+      basis: "方向分解是变更总数的子集，超出说明解析串位或重复计数"
+    - id: "samples-are-lower-bound"
+      rule: "samples 与 flapping 只覆盖抽样，不得被当作全量计数"
+      basis: "上游 feed 只给各数组前若干条，抖动数为下界"
+    - id: "failure-recorded-not-published"
+      rule: "run.error 存在时该轮不得计入有效运行"
+      basis: "采集器自己判失败时把原因写进数据，下游据此判不可发布"
+units:
+  - field: "run.summary.serversThisWeek"
+    unit: "count"
+    basis: "上游 feed 的 summary.serversThisWeek，即本次扫描在册端点数"
+freshness:
+  cadence: "weekly"
+  max_age_days: 10
+  basis: "上游每周 rescan 一次；按 1.5 个采集周期设定上限，超过即视为过期，不以旧值冒充新鲜数据。"
+failure_policy:
+  on_http_error: "fail"
+  on_429: "fail"
+  on_empty: "fail"
+  on_parse_error: "fail"
+  on_missing_field: "fail"
+  on_unit_mismatch: "fail"
+  on_duplicate: "fail"
+  on_source_host_mismatch: "fail"
+  on_quarantine: "keep-previous"
+publish:
+  require_gate: true
+  blocked_by:
+    - "verify"
+    - "contracts"
+    - "fixtures"
+  external_data: false
+  preconditions:
+    - "同一 commit 的 assurance-gate 必须 PASS（verify / contracts / fixtures / fault-injection）"
+    - "validate-contracts 零失败"
+    - "本地线固定样本全部通过"
+    - "候选仅写入 assurance/.staging，全部校验通过后才原子替换 docs 与 data"
+    - "provenance 必须写入 raw_sha256 / normalized_sha256 / validation_status / publication_status"
+review:
+  last_reviewed: "2026-11-01"
+  unresolved_assumptions:
+    - "owner 未指定，责任人与升级路径为 UNKNOWN。"
+    - "接入首周（扫描日 2026-11-01）的上游对比基线只覆盖 9991 个端点（comparedAgainst=2026-10-30、comparedAgainstComplete=false），因此该轮的 added=0 与 addedUncomparable=25382 不能解读为注册表没有新增，只说明基线不完整；本仓库如实记录这一字段，不做修正。"
+    - "抖动计数基于相邻两轮抽样比对，是全量下界而非全量计数。"
+    - "本线只有接入周起的自有序列，上游不留历史，接续之前的周变化无法回填。"
+    - "来源许可条款未核验，故标记 UNKNOWN。"
+    - "本契约只覆盖字段与不变量，不证明上游判定 PASS/AUTH_GATED/UNKNOWN 的语义正确性。"

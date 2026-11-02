@@ -1,0 +1,27 @@
+{
+ "collect": {
+  "runs": [
+   {
+    "date": "2026-10-25T03:00:00.000Z",
+    "scanDate": "2026-10-25",
+    "summary": {
+     "serversThisWeek": 1200,
+     "added": 0,
+     "removed": 0,
+     "statusChanged": 1
+    },
+    "direction": {
+     "toPass": "2",
+     "fromPass": 1,
+     "unknownStatusInvolved": 0
+    },
+    "samples": {
+     "added": [],
+     "removed": [],
+     "statusChanged": []
+    },
+    "ok": true
+   }
+  ]
+ }
+}

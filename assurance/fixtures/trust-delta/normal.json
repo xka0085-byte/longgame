@@ -1,0 +1,58 @@
+{
+ "collect": {
+  "runs": [
+   {
+    "date": "2026-10-25T03:00:00.000Z",
+    "scanDate": "2026-10-25",
+    "generatedAt": "2026-10-25T02:55:00.000Z",
+    "feedVersion": 1,
+    "baseline": false,
+    "comparedAgainst": "2026-10-18",
+    "comparedAgainstComplete": true,
+    "comparedAgainstCoverage": 1200,
+    "summary": {
+     "serversThisWeek": 1200,
+     "added": 3,
+     "addedUncomparable": 0,
+     "removed": 2,
+     "statusChanged": 4
+    },
+    "direction": {
+     "toPass": 2,
+     "fromPass": 1,
+     "unknownStatusInvolved": 1
+    },
+    "samples": {
+     "added": [
+      {
+       "name": "ex.svc/alpha",
+       "url": "https://alpha.example/mcp"
+      }
+     ],
+     "removed": [
+      {
+       "name": "ex.svc/beta",
+       "url": "https://beta.example/mcp",
+       "lastStatus": "UNKNOWN"
+      }
+     ],
+     "statusChanged": [
+      {
+       "name": "ex.svc/gamma",
+       "url": "https://gamma.example/mcp",
+       "from": "UNKNOWN",
+       "to": "AUTH_GATED"
+      },
+      {
+       "name": "ex.svc/delta",
+       "url": "https://delta.example/mcp",
+       "from": "PASS",
+       "to": "UNKNOWN"
+      }
+     ]
+    },
+    "ok": true
+   }
+  ]
+ }
+}

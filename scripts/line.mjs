@@ -4,6 +4,7 @@ import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'node:fs';
 import { radarOnce } from './lib/radar.mjs';
 import { collectEia } from './lib/eia860m.mjs';
 import { parseSb253Html, parseSb253Csv, findCsvLinks } from './lib/sb253-entities.mjs';
+import { buildTrustDeltaRun } from './lib/trustdir.mjs';
 
 const UA = { 'User-Agent': 'longgame-portfolio/0.2 personal research' };
 const [lineId, mode] = process.argv.slice(2);
@@ -291,6 +292,45 @@ if (mode === 'collect' && line.collect) {
         for (const u of prevPtrs) if (!run.pointers.includes(u)) st.collect.events.push({ date: nowISO, type: 'tsl-removed', url: u });
       }
     } catch (e) { run.error = String(e).slice(0, 140); collectFailure = true; console.error(`${lineId}: LOTL collect failed`); }
+  } else if (c.type === 'trustdir') {
+    // Trust Directory 变化线：源是 mcpreflight 每周 rescan 产出的 registry-changes.json，
+    // 它只讲"这一次扫描相对上一次"的差异，自身没有跨周历史。接进来之后，longgame 侧
+    // 才有一条真正的序列：注册表规模、新增、消失、判定升降级，以及同一端点在两次
+    // 扫描之间来回翻的抖动（抖动不能当趋势读，所以单独计数）。
+    try {
+      const r = await fetch(c.url, { headers: UA, signal: AbortSignal.timeout(30000) });
+      if (!r.ok) throw new Error(`trustdir http-${r.status}`);
+      const doc = await r.json();
+      const prevScan = [...st.collect.runs]
+        .reverse()
+        .find((x) => typeof x.scanDate === 'string' && x.scanDate !== doc.scanDate);
+      const { run: built, events, errors } = buildTrustDeltaRun(doc, {
+        nowISO,
+        prevScan,
+        sampleLimit: c.sampleLimit ?? 20,
+      });
+      Object.assign(run, built);
+      if (errors.length) {
+        // 形状不对就整轮判失败，绝不把半成品写进出成功的序列里
+        collectFailure = true;
+        console.error(`${lineId}: registry-changes rejected: ${errors.join('; ')}`);
+      }
+      const dup = typeof run.scanDate === 'string' && st.collect.runs.some((x) => x.scanDate === run.scanDate);
+      if (dup) {
+        // 手动 dispatch 撞上同一扫描日时，保留这次运行痕迹但不重复产生事件，
+        // 否则一次 diff 会在事件流里出现两遍，月报会重复计数。
+        run.duplicateScan = true;
+        console.warn(`${lineId}: scanDate ${run.scanDate} already recorded, events not appended`);
+      } else {
+        st.collect.events.push(...events);
+      }
+      if (!collectFailure) run.status = 'ok';
+    } catch (e) {
+      run.error = String(e).slice(0, 160);
+      run.status = 'error';
+      collectFailure = true;
+      console.error(`${lineId}: trustdir collect failed: ${run.error}`);
+    }
   }
   st.collect.runs.push(run);
   // 把本轮的成败判定写进数据本身。没有这个字段时，下游只能靠"数不可用页"反推，

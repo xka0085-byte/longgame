@@ -70,6 +70,7 @@ function scalarOf(id, st) {
     if (r.eiaCounts?.missingFields?.length) return false;
     if (id === 'formd-sweep') return r.queries?.length > 0 && r.queries.every(q => typeof q.thisMonth === 'number');
     if (id === 'agent-dirs') return r.dirs && Object.values(r.dirs).length > 0 && Object.values(r.dirs).every(d => d.keyCount != null && d.keyCount > 0);
+    if (id === 'trust-delta') return typeof r.scanDate === 'string' && r.summary?.serversThisWeek > 0 && !r.error;
     if (id === 'eidas-tsl') return r.pointerCount != null && r.pointerCount > 0;
     if (id === 'grid-queue') return r.eiaCounts != null
       && r.eiaCounts.planned != null && r.eiaCounts.plannedMW != null
@@ -96,6 +97,17 @@ function scalarOf(id, st) {
   if (id === 'sb253-docket' && good?.pages) {
     const links = good.links?.length ?? 0;
     return { value: links, label: `CARB 披露相关链接 ${links} 条（首窗 11-10）${suffix}`, unit: '条' };
+  }
+  if (id === 'trust-delta' && good?.summary) {
+    const s = good.summary;
+    const dir = good.direction || {};
+    const scope = good.baseline === true ? '（本轮为首个基线，无上一轮可比）'
+      : good.comparedAgainstComplete === false ? '（上游本轮对比覆盖不完整，新增/消失数只作参考）' : '';
+    return {
+      value: s.serversThisWeek,
+      label: `Trust Directory 在册端点 ${s.serversThisWeek} 个，本轮判定变更 ${s.statusChanged} 次（转 PASS ${dir.toPass ?? 0}、离开 PASS ${dir.fromPass ?? 0}），消失 ${s.removed ?? 0} 个${scope}${suffix}`,
+      unit: '个',
+    };
   }
   if (id === 'grid-queue' && good?.eiaCounts) {
     const e = good.eiaCounts;

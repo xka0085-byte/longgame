@@ -1,15 +1,15 @@
 {
-  "run_id": "local-20261102031106803",
+  "run_id": "local-20261102045849934",
   "line": "formd-sweep",
-  "commit": "ea6184a03dd1e4e516ca81917939dc0dcbad776f",
+  "commit": "27c2ef0eda421bb198af0707641a4396c99dadfc",
   "contract_version": 1,
   "assurance_level": 2,
   "first_observed": "2026-10-20T15:58:42.262Z",
-  "raw_sha256": "a94269cfedd281b8ce8a31c3f3f4e4de953e59c604571230345fe200abbc13ec",
-  "normalized_sha256": "fe4445f79526bfc758a1a9a148174462ff1145ca29e7b337a51c7f086b333457",
+  "raw_sha256": "46d29714ee6b2c94fa4b92e9cdea9feccabece569ac9c7b14d035fa1410fd749",
+  "normalized_sha256": "f70c675b78a720e9c978dcdcb6442840dad4d24c6d8e9dad880e5e90a2c8e0b6",
   "validation_status": "PASS",
   "publication_status": "PUBLISHED",
   "publication_reason": null,
-  "last_success_at": "2026-10-21T08:17:13.673Z",
-  "generated_at": "2026-11-02T03:11:06.803Z"
+  "last_success_at": "2026-11-02T03:55:01.817Z",
+  "generated_at": "2026-11-02T04:58:49.934Z"
 }

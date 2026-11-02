@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02T03:55:09.820Z",
+  "updated": "2026-11-02T04:58:00.145Z",
   "philosophy": "不是少铺是让每个自己转。每条线三件套：采集（数据 diff）、雷达（每日扫外部最新消息）、反应（命中即报警进月报，升降级有规则）。十年会天翻地覆，线是动态的。",
   "rules": {
     "maintenance_budget": "雷达每日自动扫，采集每周自动跑，产物与反应每月自动生成，人工每月读月报点头合计一小时",
@@ -195,6 +195,39 @@
       "evidence_level": "E0",
       "quality_status": "DEGRADED",
       "backfill_difficulty": "H3",
+      "verified_by_third_party": false
+    },
+    {
+      "id": "trust-delta",
+      "status": "active",
+      "cron": {
+        "collect": "weekly",
+        "radar": "daily"
+      },
+      "collect": {
+        "type": "trustdir",
+        "url": "https://raw.githubusercontent.com/xka0085-byte/mcpreflight/main/trust-data/registry-changes.json",
+        "sampleLimit": 20
+      },
+      "radar": [
+        {
+          "channel": "hn",
+          "query": "MCP registry"
+        },
+        {
+          "channel": "gn",
+          "query": "MCP server registry"
+        },
+        {
+          "channel": "hn",
+          "query": "MCP server"
+        }
+      ],
+      "driver": "MCP 注册表端点可信度周变化（与 mcpreflight Trust Directory 打通）",
+      "unbackfillable": "源只保留最近一次 diff，上游每周覆盖；本仓库从接入周起自行累积，此前历史无法回填",
+      "evidence_level": "E0",
+      "quality_status": "OK",
+      "backfill_difficulty": "H2",
       "verified_by_third_party": false
     },
     {

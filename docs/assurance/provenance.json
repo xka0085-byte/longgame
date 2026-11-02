@@ -1,12 +1,12 @@
 {
-  "run_id": "41385584899",
-  "commit": "ae37adacb0eaea6f9cfb1c26f1f8065828c5f4f8",
-  "generated_at": "2026-11-02T03:55:10.351Z",
+  "run_id": "local-20261102045849934",
+  "commit": "27c2ef0eda421bb198af0707641a4396c99dadfc",
+  "generated_at": "2026-11-02T04:58:49.934Z",
   "lines": [
     {
-      "run_id": "41385584899",
+      "run_id": "local-20261102045849934",
       "line": "sb253-docket",
-      "commit": "ae37adacb0eaea6f9cfb1c26f1f8065828c5f4f8",
+      "commit": "27c2ef0eda421bb198af0707641a4396c99dadfc",
       "contract_version": 1,
       "assurance_level": 2,
       "first_observed": "2026-10-20T13:47:38.359Z",
@@ -16,12 +16,12 @@
       "publication_status": "PUBLISHED",
       "publication_reason": null,
       "last_success_at": "2026-11-01T11:02:57.984Z",
-      "generated_at": "2026-11-02T03:55:10.351Z"
+      "generated_at": "2026-11-02T04:58:49.934Z"
     },
     {
-      "run_id": "41385584899",
+      "run_id": "local-20261102045849934",
       "line": "agent-dirs",
-      "commit": "ae37adacb0eaea6f9cfb1c26f1f8065828c5f4f8",
+      "commit": "27c2ef0eda421bb198af0707641a4396c99dadfc",
       "contract_version": 1,
       "assurance_level": 2,
       "first_observed": "2026-10-20T13:47:40.900Z",
@@ -31,12 +31,27 @@
       "publication_status": "PUBLISHED",
       "publication_reason": null,
       "last_success_at": "2026-10-30T11:49:30.200Z",
-      "generated_at": "2026-11-02T03:55:10.351Z"
+      "generated_at": "2026-11-02T04:58:49.934Z"
     },
     {
-      "run_id": "41385584899",
+      "run_id": "local-20261102045849934",
+      "line": "trust-delta",
+      "commit": "27c2ef0eda421bb198af0707641a4396c99dadfc",
+      "contract_version": 1,
+      "assurance_level": 2,
+      "first_observed": "2026-11-02T04:54:08.542Z",
+      "raw_sha256": "8bd285449f8dd3e728a3f8e67ac315a9976107affe81c51aae7dad5d8249f3bb",
+      "normalized_sha256": "18b3e724a8099b61b186a783c75ac4e986d60b73b265a48342193f508729b928",
+      "validation_status": "PASS",
+      "publication_status": "PUBLISHED",
+      "publication_reason": null,
+      "last_success_at": "2026-11-02T04:57:54.190Z",
+      "generated_at": "2026-11-02T04:58:49.934Z"
+    },
+    {
+      "run_id": "local-20261102045849934",
       "line": "eidas-tsl",
-      "commit": "ae37adacb0eaea6f9cfb1c26f1f8065828c5f4f8",
+      "commit": "27c2ef0eda421bb198af0707641a4396c99dadfc",
       "contract_version": 1,
       "assurance_level": 2,
       "first_observed": "2026-10-20T13:48:02.426Z",
@@ -46,12 +61,12 @@
       "publication_status": "PUBLISHED",
       "publication_reason": null,
       "last_success_at": "2026-10-30T11:49:32.375Z",
-      "generated_at": "2026-11-02T03:55:10.351Z"
+      "generated_at": "2026-11-02T04:58:49.934Z"
     },
     {
-      "run_id": "41385584899",
+      "run_id": "local-20261102045849934",
       "line": "aiact-register",
-      "commit": "ae37adacb0eaea6f9cfb1c26f1f8065828c5f4f8",
+      "commit": "27c2ef0eda421bb198af0707641a4396c99dadfc",
       "contract_version": 1,
       "assurance_level": 2,
       "first_observed": "2026-10-20T13:48:33.401Z",
@@ -61,12 +76,12 @@
       "publication_status": "PUBLISHED",
       "publication_reason": null,
       "last_success_at": "2026-11-02T03:54:57.180Z",
-      "generated_at": "2026-11-02T03:55:10.351Z"
+      "generated_at": "2026-11-02T04:58:49.934Z"
     },
     {
-      "run_id": "41385584899",
+      "run_id": "local-20261102045849934",
       "line": "triggers",
-      "commit": "ae37adacb0eaea6f9cfb1c26f1f8065828c5f4f8",
+      "commit": "27c2ef0eda421bb198af0707641a4396c99dadfc",
       "contract_version": 1,
       "assurance_level": 2,
       "first_observed": "2026-10-20T13:48:44.453Z",
@@ -76,12 +91,12 @@
       "publication_status": "QUARANTINED",
       "publication_reason": "data-source-unavailable",
       "last_success_at": null,
-      "generated_at": "2026-11-02T03:55:10.351Z"
+      "generated_at": "2026-11-02T04:58:49.934Z"
     },
     {
-      "run_id": "41385584899",
+      "run_id": "local-20261102045849934",
       "line": "formd-sweep",
-      "commit": "ae37adacb0eaea6f9cfb1c26f1f8065828c5f4f8",
+      "commit": "27c2ef0eda421bb198af0707641a4396c99dadfc",
       "contract_version": 1,
       "assurance_level": 2,
       "first_observed": "2026-10-20T15:58:42.262Z",
@@ -91,12 +106,12 @@
       "publication_status": "PUBLISHED",
       "publication_reason": null,
       "last_success_at": "2026-11-02T03:55:01.817Z",
-      "generated_at": "2026-11-02T03:55:10.351Z"
+      "generated_at": "2026-11-02T04:58:49.934Z"
     },
     {
-      "run_id": "41385584899",
+      "run_id": "local-20261102045849934",
       "line": "compute-futures",
-      "commit": "ae37adacb0eaea6f9cfb1c26f1f8065828c5f4f8",
+      "commit": "27c2ef0eda421bb198af0707641a4396c99dadfc",
       "contract_version": 1,
       "assurance_level": 2,
       "first_observed": "2026-10-20T16:00:48.085Z",
@@ -106,12 +121,12 @@
       "publication_status": "QUARANTINED",
       "publication_reason": "data-source-unavailable",
       "last_success_at": null,
-      "generated_at": "2026-11-02T03:55:10.351Z"
+      "generated_at": "2026-11-02T04:58:49.934Z"
     },
     {
-      "run_id": "41385584899",
+      "run_id": "local-20261102045849934",
       "line": "c2pa-spec",
-      "commit": "ae37adacb0eaea6f9cfb1c26f1f8065828c5f4f8",
+      "commit": "27c2ef0eda421bb198af0707641a4396c99dadfc",
       "contract_version": 1,
       "assurance_level": 2,
       "first_observed": "2026-10-20T16:00:49.940Z",
@@ -121,12 +136,12 @@
       "publication_status": "PUBLISHED",
       "publication_reason": null,
       "last_success_at": "2026-10-30T11:49:38.570Z",
-      "generated_at": "2026-11-02T03:55:10.351Z"
+      "generated_at": "2026-11-02T04:58:49.934Z"
     },
     {
-      "run_id": "41385584899",
+      "run_id": "local-20261102045849934",
       "line": "state-ai-laws",
-      "commit": "ae37adacb0eaea6f9cfb1c26f1f8065828c5f4f8",
+      "commit": "27c2ef0eda421bb198af0707641a4396c99dadfc",
       "contract_version": 1,
       "assurance_level": 2,
       "first_observed": "2026-10-20T16:00:51.708Z",
@@ -136,12 +151,12 @@
       "publication_status": "PUBLISHED",
       "publication_reason": null,
       "last_success_at": "2026-10-30T11:49:40.084Z",
-      "generated_at": "2026-11-02T03:55:10.351Z"
+      "generated_at": "2026-11-02T04:58:49.934Z"
     },
     {
-      "run_id": "41385584899",
+      "run_id": "local-20261102045849934",
       "line": "grid-queue",
-      "commit": "ae37adacb0eaea6f9cfb1c26f1f8065828c5f4f8",
+      "commit": "27c2ef0eda421bb198af0707641a4396c99dadfc",
       "contract_version": 1,
       "assurance_level": 2,
       "first_observed": "2026-10-20T16:00:53.029Z",
@@ -151,7 +166,7 @@
       "publication_status": "PUBLISHED",
       "publication_reason": null,
       "last_success_at": "2026-11-02T03:55:05.809Z",
-      "generated_at": "2026-11-02T03:55:10.351Z"
+      "generated_at": "2026-11-02T04:58:49.934Z"
     }
   ]
 }

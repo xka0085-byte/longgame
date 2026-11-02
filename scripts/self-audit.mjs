@@ -185,6 +185,14 @@ function classifyRun(run) {
     return { status: 'ok', success: true, detail: null };
   }
 
+  // Trust Directory 差异线的载荷是 summary + direction，没有 pages/dirs，
+  // 若不在这里识别，会被当成 unrecognized 从而把成功轮记成失败。
+  if (run.summary && typeof run.summary.serversThisWeek === 'number') {
+    return run.summary.serversThisWeek > 0
+      ? { status: 'ok', success: true, detail: null }
+      : { status: 'error', success: false, detail: 'summary.serversThisWeek is not positive' };
+  }
+
   const checks = [...pageChecks, ...queryChecks];
   if (checks.length === 0) {
     // A run with no recognizable payload is not a success.

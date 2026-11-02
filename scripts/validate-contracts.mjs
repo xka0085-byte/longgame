@@ -253,7 +253,8 @@ for (const file of files) {
 }
 
 for (const id of ids) if (!seen.has(id)) fail('portfolio', `series ${id} has no contract`);
-if (contracts.length !== 13) fail('contracts', `expected 13 contract files, got ${contracts.length}`);
+// 契约数量跟着 portfolio 走：每条线必须恰有一份契约，多一份或少一份都是登记错误。
+if (contracts.length !== portfolio.series.length) fail('contracts', `expected ${portfolio.series.length} contract files (one per series), got ${contracts.length}`);
 
 // ---- 强制契约：对真实本地数据执行字段、主键、不变量与来源主机检查 ----
 function checkGrid(c) {
@@ -340,10 +341,10 @@ for (const c of contracts) {
   for (const msg of evaluateRun(c.id, data, { strict: false })) fail(c.id, `data: ${msg}`);
 }
 
-// ---- 固定样本覆盖：九条本地线每线至少 3 个（正常/空/结构异常），外部三线 NOT_APPLICABLE ----
+// ---- 固定样本覆盖：十条本地线每线至少 3 个（正常/空/结构异常），外部三线 NOT_APPLICABLE ----
 const REQUIRED_SAMPLE_LINES = [
   'sb253-docket', 'agent-dirs', 'eidas-tsl', 'aiact-register', 'triggers',
-  'formd-sweep', 'compute-futures', 'c2pa-spec', 'state-ai-laws',
+  'formd-sweep', 'compute-futures', 'c2pa-spec', 'state-ai-laws', 'trust-delta',
 ];
 const EXTERNAL_LINES = ['mcpreflight-weekly', 'erc8004-snapshot', 'protocol-watch'];
 const sha256 = (p) => createHash('sha256').update(readFileSync(p)).digest('hex');

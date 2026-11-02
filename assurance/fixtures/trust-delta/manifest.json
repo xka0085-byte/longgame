@@ -1,0 +1,37 @@
+{
+ "dataset": "trust-delta",
+ "line": "trust-delta",
+ "sample_status": "REQUIRED",
+ "samples": [
+  {
+   "file": "normal.json",
+   "kind": "normal",
+   "target": "contract-schema",
+   "expected": "pass",
+   "expected_error_contains": null,
+   "sha256": "b0103028ff2a3bd8bb0460e7eaa11f6ac5c762d4fa0fc6b334e5da298cfb1b54",
+   "source": "hand-authored synthetic; 不含生产数据",
+   "basis": "依据 trust-delta 契约的 run.scanDate/summary/direction/samples 字段与 direction 为 statusChanged 子集的不变量。 一次正常扫描：规模 1200，4 次状态变更分解为转 PASS 2、离开 PASS 1、涉及未知状态 1"
+  },
+  {
+   "file": "empty.json",
+   "kind": "empty",
+   "target": "contract-schema",
+   "expected": "fail",
+   "expected_error_contains": "summary.serversThisWeek must be a positive integer",
+   "sha256": "361d8b68156a7dcd581545016f02f60dd00c8f36904466bda08740ac5768e5c6",
+   "source": "hand-authored synthetic; 不含生产数据",
+   "basis": "依据同一契约。 上游把规模写成 0 且缺 scanDate，视为采集失败，不是注册表清空"
+  },
+  {
+   "file": "structural.json",
+   "kind": "invalid",
+   "target": "contract-schema",
+   "expected": "fail",
+   "expected_error_contains": "direction.toPass must be a non-negative integer",
+   "sha256": "74724ded6549d23c55b3be33a0f30ed50f0a60a6fd48b25bdd3fbdec2e9bd068",
+   "source": "hand-authored synthetic; 不含生产数据",
+   "basis": "依据同一契约。 direction.toPass 用字符串冒充整数，且与 summary.statusChanged 对不上"
+  }
+ ]
+}

@@ -1,0 +1,687 @@
+{
+ "collect": {
+  "runs": [
+   {
+    "date": "2026-11-02T04:54:08.542Z",
+    "scanDate": "2026-11-01",
+    "generatedAt": "2026-11-01T04:53:56.182Z",
+    "feedVersion": 1,
+    "baseline": false,
+    "comparedAgainst": "2026-10-30",
+    "comparedAgainstComplete": false,
+    "comparedAgainstCoverage": 9991,
+    "summary": {
+     "serversThisWeek": 35327,
+     "added": 0,
+     "addedUncomparable": 25382,
+     "removed": 46,
+     "statusChanged": 264
+    },
+    "samples": {
+     "added": [],
+     "removed": [
+      {
+       "name": "ai.agentlookups/greenlight",
+       "url": "https://solar.agentlookups.ai/mcp",
+       "lastStatus": "UNKNOWN"
+      },
+      {
+       "name": "ai.aimentiontracker/mcp",
+       "url": "https://mcp.aimentiontracker.ai/mcp",
+       "lastStatus": "AUTH_GATED"
+      },
+      {
+       "name": "ai.b77/fibalo",
+       "url": "https://fibalo.b77.ai/mcp",
+       "lastStatus": "AUTH_GATED"
+      },
+      {
+       "name": "ai.cobbles/cobbles",
+       "url": "https://api.cobbles.ai/mcp",
+       "lastStatus": "UNKNOWN"
+      },
+      {
+       "name": "ai.inxy/seo-audit",
+       "url": "https://inxy.ai/api/mcp",
+       "lastStatus": "UNKNOWN"
+      },
+      {
+       "name": "ai.limitguard.api/trust-intelligence",
+       "url": "https://api.limitguard.ai/mcp",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "ai.plith/plith",
+       "url": "https://plith.ai/api/mcp",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "ai.readypermit/geo",
+       "url": "https://rnfonkwthefktfvfwypr.supabase.co/functions/v1/mcp-server",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "app.apick/skills",
+       "url": "https://apick.app/mcp/skills",
+       "lastStatus": "UNKNOWN"
+      },
+      {
+       "name": "app.floot.shadowgraph-live/shadowgraph",
+       "url": "https://shadowgraph-live.floot.app/_api/mcp",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "app.getjopp/jobs",
+       "url": "https://getjopp.app/mcp",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "art.maddegen.agent/synapse",
+       "url": "https://agent.maddegen.art/hub/mcp",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "art.maddegen.agent/synapse-chain",
+       "url": "https://agent.maddegen.art/hub/mcp/chain",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "art.maddegen.agent/synapse-forensics",
+       "url": "https://agent.maddegen.art/hub/mcp/forensics",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "art.maddegen.agent/synapse-pump",
+       "url": "https://agent.maddegen.art/hub/mcp/pump",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "art.maddegen.agent/synapse-risk",
+       "url": "https://agent.maddegen.art/hub/mcp/risk",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "art.maddegen.agent/synapse-util",
+       "url": "https://agent.maddegen.art/hub/mcp/util",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "art.maddegen.agent/synapse-web",
+       "url": "https://agent.maddegen.art/hub/mcp/web",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "art.maddegen.agent/synapse-world",
+       "url": "https://agent.maddegen.art/hub/mcp/world",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "co.thisdot.docusign-navigator/mcp",
+       "url": "https://docusign-navigator.thisdot.co/mcp",
+       "lastStatus": "AUTH_GATED"
+      }
+     ],
+     "statusChanged": [
+      {
+       "name": "africa.ugc/ugc",
+       "url": "https://api.ugc.africa/mcp",
+       "from": "UNKNOWN",
+       "to": "AUTH_GATED"
+      },
+      {
+       "name": "agency.ottobot/licensed-house-painters",
+       "url": "https://house-painters.ottobot.agency/mcp",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.agentrapay/agentra",
+       "url": "https://api.agentrapay.ai/mcp",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.cactal/cactal",
+       "url": "https://api.cactal.ai/v1/mcp",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.chinamarketing/intelligence",
+       "url": "https://api.chinamarketing.ai/mcp",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.contractorsnearme/contractors-near-me",
+       "url": "https://contractorsnearme.ai/api/mcp",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.datacenterindex/datacenterindex",
+       "url": "https://datacenterindex.ai/mcp",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.dinglebear/rtailscale",
+       "url": "https://ts.dinglebear.ai/mcp",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.fastinsight/fast-insight",
+       "url": "https://fastinsight.ai/api/public/mcp",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.gigaverse/gigaverse",
+       "url": "https://gigaverse.ai/api/mcp",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.helixar/mcp",
+       "url": "https://mcp.helixar.ai/mcp",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.mcpanalytics/analytics",
+       "url": "https://api.mcpanalytics.ai/mcp/api-key",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.multinex/memq",
+       "url": "https://mcp.multinex.ai/mcp/v1",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.projectlaunch/mcp",
+       "url": "https://projectlaunch.ai/mcp",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.signalharness/mcp",
+       "url": "https://signalharness.ai/api/agent/services/mcp",
+       "from": "UNKNOWN",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.spendline/spendline",
+       "url": "https://www.spendline.ai/mcp",
+       "from": "PASS",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.trayo/signals",
+       "url": "https://api.trayo.ai/mcp",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "al.flytravel/travel-prices",
+       "url": "https://flytravel.al/mcp",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "app.applybolt/applybolt",
+       "url": "https://api.applybolt.app/mcp",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "app.finfam/calculators",
+       "url": "https://ff-api.finfam.app/mcp/mcp",
+       "from": "PASS",
+       "to": "UNKNOWN"
+      }
+     ]
+    },
+    "direction": {
+     "toPass": 181,
+     "fromPass": 50,
+     "unknownStatusInvolved": 0
+    },
+    "ok": true
+   },
+   {
+    "date": "2026-11-02T04:57:54.190Z",
+    "scanDate": "2026-11-01",
+    "generatedAt": "2026-11-01T04:53:56.182Z",
+    "feedVersion": 1,
+    "baseline": false,
+    "comparedAgainst": "2026-10-30",
+    "comparedAgainstComplete": false,
+    "comparedAgainstCoverage": 9991,
+    "summary": {
+     "serversThisWeek": 35327,
+     "added": 0,
+     "addedUncomparable": 25382,
+     "removed": 46,
+     "statusChanged": 264
+    },
+    "samples": {
+     "added": [],
+     "removed": [
+      {
+       "name": "ai.agentlookups/greenlight",
+       "url": "https://solar.agentlookups.ai/mcp",
+       "lastStatus": "UNKNOWN"
+      },
+      {
+       "name": "ai.aimentiontracker/mcp",
+       "url": "https://mcp.aimentiontracker.ai/mcp",
+       "lastStatus": "AUTH_GATED"
+      },
+      {
+       "name": "ai.b77/fibalo",
+       "url": "https://fibalo.b77.ai/mcp",
+       "lastStatus": "AUTH_GATED"
+      },
+      {
+       "name": "ai.cobbles/cobbles",
+       "url": "https://api.cobbles.ai/mcp",
+       "lastStatus": "UNKNOWN"
+      },
+      {
+       "name": "ai.inxy/seo-audit",
+       "url": "https://inxy.ai/api/mcp",
+       "lastStatus": "UNKNOWN"
+      },
+      {
+       "name": "ai.limitguard.api/trust-intelligence",
+       "url": "https://api.limitguard.ai/mcp",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "ai.plith/plith",
+       "url": "https://plith.ai/api/mcp",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "ai.readypermit/geo",
+       "url": "https://rnfonkwthefktfvfwypr.supabase.co/functions/v1/mcp-server",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "app.apick/skills",
+       "url": "https://apick.app/mcp/skills",
+       "lastStatus": "UNKNOWN"
+      },
+      {
+       "name": "app.floot.shadowgraph-live/shadowgraph",
+       "url": "https://shadowgraph-live.floot.app/_api/mcp",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "app.getjopp/jobs",
+       "url": "https://getjopp.app/mcp",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "art.maddegen.agent/synapse",
+       "url": "https://agent.maddegen.art/hub/mcp",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "art.maddegen.agent/synapse-chain",
+       "url": "https://agent.maddegen.art/hub/mcp/chain",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "art.maddegen.agent/synapse-forensics",
+       "url": "https://agent.maddegen.art/hub/mcp/forensics",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "art.maddegen.agent/synapse-pump",
+       "url": "https://agent.maddegen.art/hub/mcp/pump",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "art.maddegen.agent/synapse-risk",
+       "url": "https://agent.maddegen.art/hub/mcp/risk",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "art.maddegen.agent/synapse-util",
+       "url": "https://agent.maddegen.art/hub/mcp/util",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "art.maddegen.agent/synapse-web",
+       "url": "https://agent.maddegen.art/hub/mcp/web",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "art.maddegen.agent/synapse-world",
+       "url": "https://agent.maddegen.art/hub/mcp/world",
+       "lastStatus": "PASS"
+      },
+      {
+       "name": "co.thisdot.docusign-navigator/mcp",
+       "url": "https://docusign-navigator.thisdot.co/mcp",
+       "lastStatus": "AUTH_GATED"
+      }
+     ],
+     "statusChanged": [
+      {
+       "name": "africa.ugc/ugc",
+       "url": "https://api.ugc.africa/mcp",
+       "from": "UNKNOWN",
+       "to": "AUTH_GATED"
+      },
+      {
+       "name": "agency.ottobot/licensed-house-painters",
+       "url": "https://house-painters.ottobot.agency/mcp",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.agentrapay/agentra",
+       "url": "https://api.agentrapay.ai/mcp",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.cactal/cactal",
+       "url": "https://api.cactal.ai/v1/mcp",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.chinamarketing/intelligence",
+       "url": "https://api.chinamarketing.ai/mcp",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.contractorsnearme/contractors-near-me",
+       "url": "https://contractorsnearme.ai/api/mcp",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.datacenterindex/datacenterindex",
+       "url": "https://datacenterindex.ai/mcp",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.dinglebear/rtailscale",
+       "url": "https://ts.dinglebear.ai/mcp",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.fastinsight/fast-insight",
+       "url": "https://fastinsight.ai/api/public/mcp",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.gigaverse/gigaverse",
+       "url": "https://gigaverse.ai/api/mcp",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.helixar/mcp",
+       "url": "https://mcp.helixar.ai/mcp",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.mcpanalytics/analytics",
+       "url": "https://api.mcpanalytics.ai/mcp/api-key",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.multinex/memq",
+       "url": "https://mcp.multinex.ai/mcp/v1",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.projectlaunch/mcp",
+       "url": "https://projectlaunch.ai/mcp",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.signalharness/mcp",
+       "url": "https://signalharness.ai/api/agent/services/mcp",
+       "from": "UNKNOWN",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.spendline/spendline",
+       "url": "https://www.spendline.ai/mcp",
+       "from": "PASS",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.trayo/signals",
+       "url": "https://api.trayo.ai/mcp",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "al.flytravel/travel-prices",
+       "url": "https://flytravel.al/mcp",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "app.applybolt/applybolt",
+       "url": "https://api.applybolt.app/mcp",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "app.finfam/calculators",
+       "url": "https://ff-api.finfam.app/mcp/mcp",
+       "from": "PASS",
+       "to": "UNKNOWN"
+      }
+     ]
+    },
+    "direction": {
+     "toPass": 181,
+     "fromPass": 50,
+     "unknownStatusInvolved": 0
+    },
+    "duplicateScan": true,
+    "status": "ok",
+    "ok": true
+   }
+  ],
+  "events": [
+   {
+    "date": "2026-11-02T04:54:08.542Z",
+    "type": "endpoints-removed",
+    "count": 46,
+    "sample": [
+     "ai.agentlookups/greenlight",
+     "ai.aimentiontracker/mcp",
+     "ai.b77/fibalo",
+     "ai.cobbles/cobbles",
+     "ai.inxy/seo-audit"
+    ]
+   },
+   {
+    "date": "2026-11-02T04:54:08.542Z",
+    "type": "endpoint-downgraded",
+    "name": "ai.spendline/spendline",
+    "url": "https://www.spendline.ai/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-02T04:54:08.542Z",
+    "type": "endpoint-downgraded",
+    "name": "app.finfam/calculators",
+    "url": "https://ff-api.finfam.app/mcp/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-02T04:54:08.542Z",
+    "type": "endpoint-downgraded",
+    "name": "app.marketgenius/mcp",
+    "url": "https://marketgenius.app/mcp",
+    "from": "PASS",
+    "to": "AUTH_GATED"
+   },
+   {
+    "date": "2026-11-02T04:54:08.542Z",
+    "type": "endpoint-downgraded",
+    "name": "app.soclo/soclo-mcp",
+    "url": "https://mcp.soclo.app/mcp/auth",
+    "from": "PASS",
+    "to": "AUTH_GATED"
+   },
+   {
+    "date": "2026-11-02T04:54:08.542Z",
+    "type": "endpoint-downgraded",
+    "name": "app.vercel.agentready-rho/agentready",
+    "url": "https://agentready-rho.vercel.app/api/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-02T04:54:08.542Z",
+    "type": "endpoint-downgraded",
+    "name": "br.com.wikijuridica/acervo-juridico",
+    "url": "https://wikijuridica.com.br/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-02T04:54:08.542Z",
+    "type": "endpoint-downgraded",
+    "name": "ca.findmyfarmer/farms",
+    "url": "https://findmyfarmer.ca/mcp",
+    "from": "PASS",
+    "to": "AUTH_GATED"
+   },
+   {
+    "date": "2026-11-02T04:54:08.542Z",
+    "type": "endpoint-downgraded",
+    "name": "co.foodose/glp1-nutrition",
+    "url": "https://www.foodose.co/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-02T04:54:08.542Z",
+    "type": "endpoint-downgraded",
+    "name": "com.airblockfz/coin-signal",
+    "url": "https://coin-signal.airblock2026.workers.dev/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-02T04:54:08.542Z",
+    "type": "endpoint-downgraded",
+    "name": "com.answeringservicecare/public",
+    "url": "https://answeringservicecare.com/mcp",
+    "from": "PASS",
+    "to": "AUTH_GATED"
+   },
+   {
+    "date": "2026-11-02T04:54:08.542Z",
+    "type": "endpoint-upgraded",
+    "name": "agency.ottobot/licensed-house-painters",
+    "url": "https://house-painters.ottobot.agency/mcp",
+    "from": "AUTH_GATED",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-02T04:54:08.542Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.agentrapay/agentra",
+    "url": "https://api.agentrapay.ai/mcp",
+    "from": "AUTH_GATED",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-02T04:54:08.542Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.cactal/cactal",
+    "url": "https://api.cactal.ai/v1/mcp",
+    "from": "AUTH_GATED",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-02T04:54:08.542Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.chinamarketing/intelligence",
+    "url": "https://api.chinamarketing.ai/mcp",
+    "from": "AUTH_GATED",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-02T04:54:08.542Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.contractorsnearme/contractors-near-me",
+    "url": "https://contractorsnearme.ai/api/mcp",
+    "from": "AUTH_GATED",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-02T04:54:08.542Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.datacenterindex/datacenterindex",
+    "url": "https://datacenterindex.ai/mcp",
+    "from": "AUTH_GATED",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-02T04:54:08.542Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.gigaverse/gigaverse",
+    "url": "https://gigaverse.ai/api/mcp",
+    "from": "AUTH_GATED",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-02T04:54:08.542Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.helixar/mcp",
+    "url": "https://mcp.helixar.ai/mcp",
+    "from": "AUTH_GATED",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-02T04:54:08.542Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.mcpanalytics/analytics",
+    "url": "https://api.mcpanalytics.ai/mcp/api-key",
+    "from": "AUTH_GATED",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-02T04:54:08.542Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.projectlaunch/mcp",
+    "url": "https://projectlaunch.ai/mcp",
+    "from": "AUTH_GATED",
+    "to": "PASS"
+   }
+  ]
+ },
+ "radar": {
+  "runs": [],
+  "items": [],
+  "alerts": []
+ }
+}

@@ -156,6 +156,52 @@ export function evaluateRun(lineId, data, { strict = false } = {}) {
       if (latest.eia?.error) errors.push(`collection error recorded: ${latest.eia.error}`);
       if (latest.eia?.parseError) errors.push(`parse error recorded: ${latest.eia.parseError}`);
     }
+  } else if (lineId === 'trust-delta') {
+    // 这条线只有两个坐标是硬的：这一次扫描的规模（本来在册多少个端点）与这一次判定的
+    // 变化数。上游只要少给一个，这轮就不能算注册表没变化，必须显式判失败。
+    if (typeof latest.scanDate !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(latest.scanDate)) {
+      errors.push('scanDate must be a YYYY-MM-DD string');
+    }
+    const sum = latest.summary;
+    if (!sum || typeof sum !== 'object' || Array.isArray(sum)) {
+      errors.push('summary must be an object');
+    } else {
+      if (!isInt(sum.serversThisWeek) || sum.serversThisWeek <= 0) errors.push('summary.serversThisWeek must be a positive integer');
+      if (!isInt(sum.statusChanged) || sum.statusChanged < 0) errors.push('summary.statusChanged must be a non-negative integer');
+      for (const k of ['added', 'addedUncomparable', 'removed']) {
+        if (sum[k] != null && (!isInt(sum[k]) || sum[k] < 0)) errors.push(`summary.${k} must be a non-negative integer when present`);
+      }
+    }
+    const dir = latest.direction;
+    if (!dir || typeof dir !== 'object' || Array.isArray(dir)) {
+      errors.push('direction must be an object');
+    } else {
+      for (const k of ['toPass', 'fromPass', 'unknownStatusInvolved']) {
+        if (!isInt(dir[k]) || dir[k] < 0) errors.push(`direction.${k} must be a non-negative integer`);
+      }
+      // 方向分解是 statusChanged 的子集。加起来超了说明解析串位或重复计数。
+      if (isInt(dir.toPass) && isInt(dir.fromPass) && isInt(sum?.statusChanged)
+        && dir.toPass + dir.fromPass > sum.statusChanged) {
+        errors.push(`direction.toPass+fromPass=${dir.toPass + dir.fromPass} exceeds summary.statusChanged=${sum.statusChanged}`);
+      }
+      if (isInt(dir.unknownStatusInvolved) && isInt(sum?.statusChanged) && dir.unknownStatusInvolved > sum.statusChanged) {
+        errors.push(`direction.unknownStatusInvolved=${dir.unknownStatusInvolved} exceeds summary.statusChanged=${sum.statusChanged}`);
+      }
+    }
+    const sm = latest.samples;
+    if (!sm || typeof sm !== 'object' || Array.isArray(sm)) {
+      errors.push('samples must be an object');
+    } else {
+      for (const k of ['added', 'removed', 'statusChanged']) {
+        if (!Array.isArray(sm[k])) { errors.push(`samples.${k} must be an array`); continue; }
+        sm[k].forEach((x, i) => {
+          if (!x || typeof x !== 'object' || Array.isArray(x)) { errors.push(`samples.${k}[${i}] is not an object`); return; }
+          if (typeof x.name !== 'string' || !x.name) errors.push(`samples.${k}[${i}].name must be a non-empty string`);
+        });
+      }
+    }
+    // 采集器自己判失败时（HTTP/解析/形状）数据里留着 error，不能当有效运行读。
+    if (typeof latest.error === 'string' && latest.error) errors.push(`collection error recorded: ${latest.error}`);
   }
   return errors;
 }
@@ -181,6 +227,12 @@ function runEligible(lineId, run) {
   if (lineId === 'grid-queue') {
     return run.eiaCounts && !run.eia?.error && !run.eia?.parseError &&
       isInt(run.eiaCounts.planned) && isInt(run.eiaCounts.canceled);
+  }
+  if (lineId === 'trust-delta') {
+    // 可发布的前提是这一次扫描本身可用：有扫描日、规模为正、采集器没记 error。
+    return typeof run.scanDate === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(run.scanDate) &&
+      isInt(run.summary?.serversThisWeek) && run.summary.serversThisWeek > 0 &&
+      isInt(run.summary?.statusChanged) && !run.error;
   }
   return false;
 }

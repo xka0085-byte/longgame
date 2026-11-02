@@ -16,3 +16,9 @@
 {"run_id":"local-20261030105440092","line":"compute-futures","at":"2026-10-30T10:54:40.092Z","reason":"data-source-unavailable","last_success_at":null}
 {"run_id":"local-20261102031106803","line":"triggers","at":"2026-11-02T03:11:06.803Z","reason":"latest run is not publish-eligible","last_success_at":null}
 {"run_id":"local-20261102031106803","line":"compute-futures","at":"2026-11-02T03:11:06.803Z","reason":"data-source-unavailable","last_success_at":null}
+{"run_id":"local-20261102045607624","line":"triggers","at":"2026-11-02T04:56:07.624Z","reason":"data-source-unavailable","last_success_at":null}
+{"run_id":"local-20261102045607624","line":"compute-futures","at":"2026-11-02T04:56:07.624Z","reason":"data-source-unavailable","last_success_at":null}
+{"run_id":"local-20261102045813038","line":"triggers","at":"2026-11-02T04:58:13.038Z","reason":"data-source-unavailable","last_success_at":null}
+{"run_id":"local-20261102045813038","line":"compute-futures","at":"2026-11-02T04:58:13.038Z","reason":"data-source-unavailable","last_success_at":null}
+{"run_id":"local-20261102045849934","line":"triggers","at":"2026-11-02T04:58:49.934Z","reason":"data-source-unavailable","last_success_at":null}
+{"run_id":"local-20261102045849934","line":"compute-futures","at":"2026-11-02T04:58:49.934Z","reason":"data-source-unavailable","last_success_at":null}

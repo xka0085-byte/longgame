@@ -26,6 +26,8 @@ const NUMERIC = {
   'grid-queue': (r) => [r.eiaCounts?.plannedMW, r.eiaCounts?.operating].filter(v => typeof v === 'number'),
   'agent-dirs': (r) => Object.values(r.dirs || {}).map(d => d.keyCount).filter(v => typeof v === 'number'),
   'eidas-tsl': (r) => [r.pointerCount].filter(v => typeof v === 'number'),
+  // 注册表在册规模：一夜掉一大截只可能是上游采集出问题，不当成注册表缩水
+  'trust-delta': (r) => [r.summary?.serversThisWeek].filter(v => typeof v === 'number'),
 };
 
 for (const s of portfolio.series) {

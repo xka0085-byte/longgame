@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T03:55:09.755Z",
+  "generated_at": "2026-11-02T04:58:00.077Z",
   "lines": [
     {
       "id": "mcpreflight-weekly",
@@ -60,6 +60,19 @@
       "consecutive_failures": 0,
       "source_status": "ok",
       "data_age_days": 2,
+      "expected_cadence_days": 7,
+      "freshness": "fresh",
+      "page_ok": true,
+      "csv_ok": null,
+      "evidence_count_90d": 0
+    },
+    {
+      "id": "trust-delta",
+      "last_attempt_at": "2026-11-02T04:57:54.190Z",
+      "last_success_at": "2026-11-02T04:57:54.190Z",
+      "consecutive_failures": 0,
+      "source_status": "ok",
+      "data_age_days": 0,
       "expected_cadence_days": 7,
       "freshness": "fresh",
       "page_ok": true,

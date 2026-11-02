@@ -1,11 +1,11 @@
 {
-  "at": "2026-11-02T03:49:49.591Z",
-  "samples": 39,
-  "passed": 39,
+  "at": "2026-11-02T04:58:50.411Z",
+  "samples": 42,
+  "passed": 42,
   "failed": 0,
   "not_applicable": 3,
   "markers_passed": 3,
-  "entries": 42,
+  "entries": 45,
   "results": [
     {
       "dataset": "agent-dirs",
@@ -533,6 +533,41 @@
         "page[0].bytes must be a non-negative integer",
         "page[0].sig must be string or null",
         "page[0].keywordHit must be boolean for triggers"
+      ],
+      "observed": null
+    },
+    {
+      "dataset": "trust-delta",
+      "file": "normal.json",
+      "target": "contract-schema",
+      "expected": "pass",
+      "status": "PASS",
+      "errors": [],
+      "checks": [],
+      "observed": null
+    },
+    {
+      "dataset": "trust-delta",
+      "file": "empty.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "scanDate must be a YYYY-MM-DD string",
+        "summary.serversThisWeek must be a positive integer"
+      ],
+      "observed": null
+    },
+    {
+      "dataset": "trust-delta",
+      "file": "structural.json",
+      "target": "contract-schema",
+      "expected": "fail",
+      "status": "PASS",
+      "errors": [],
+      "checks": [
+        "direction.toPass must be a non-negative integer"
       ],
       "observed": null
     }

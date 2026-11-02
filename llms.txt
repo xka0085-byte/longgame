@@ -22,6 +22,7 @@
 
 - sb253-docket：CARB 披露相关链接 0 条（首窗 11-10），自 2026-10，链接 https://xka0085-byte.github.io/longgame/lines/sb253-docket.html
 - agent-dirs：当前登记的 agent 密钥 6 把，自 2026-10，链接 https://xka0085-byte.github.io/longgame/lines/agent-dirs.html
+- trust-delta：Trust Directory 在册端点 35327 个，本轮判定变更 264 次（转 PASS 181、离开 PASS 50），消失 46 个（上游本轮对比覆盖不完整，新增/消失数只作参考），自 2026-10，链接 https://xka0085-byte.github.io/longgame/lines/trust-delta.html
 - eidas-tsl：EU 信任列表指针 42 个，自 2026-10，链接 https://xka0085-byte.github.io/longgame/lines/eidas-tsl.html
 - formd-sweep：本月十个关键词合计新增 Form D 备案 34 件，自 2026-10，链接 https://xka0085-byte.github.io/longgame/lines/formd-sweep.html
 - grid-queue：EIA-860M september_generator2026.xlsx 计划新增 2360 行合计 290242 MW，已取消 1747 行合计 185356.8 MW，自 2026-10，链接 https://xka0085-byte.github.io/longgame/lines/grid-queue.html

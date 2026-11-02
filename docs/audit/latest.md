@@ -1,6 +1,6 @@
 # longgame 自我审计 2026-11-02
 
-生成时间：2026-11-02T03:55:09.755Z（UTC）。这是本地 self-audit 的状态汇总与提案，不是第三方复算，也不代表任何外部验证。
+生成时间：2026-11-02T04:58:00.077Z（UTC）。这是本地 self-audit 的状态汇总与提案，不是第三方复算，也不代表任何外部验证。
 
 ## 状态表
 
@@ -18,19 +18,20 @@
 | sb253-docket | fresh | 2026-11-01 11:02:57.984Z | 2026-11-01 11:02:57.984Z | 0 | 0 | ok | true | — | 0 |
 | state-ai-laws | fresh | 2026-10-30 11:49:40.084Z | 2026-10-30 11:49:40.084Z | 2 | 0 | ok | true | — | 0 |
 | triggers | fresh | 2026-11-02 03:54:57.937Z | 2026-11-02 03:54:57.937Z | 0 | 0 | partial | true | — | 0 |
+| trust-delta | fresh | 2026-11-02 04:57:54.190Z | 2026-11-02 04:57:54.190Z | 0 | 0 | ok | true | — | 0 |
 | erc8004-snapshot | external | — | — | — | — | external-managed | false | — | 0 |
 | mcpreflight-weekly | external | — | — | — | — | external-managed | false | — | 2 |
 | protocol-watch | external | — | — | — | — | external-managed | false | — | 0 |
 
-统计：fresh 10，stale 0，unavailable 0，never 0。
+统计：fresh 11，stale 0，unavailable 0，never 0。
 
 ## 异常项
 
 - **compute-futures**：部分来源失败：partial。
 - **triggers**：部分来源失败：partial。
-- **erc8004-snapshot**：无成功记录（不是 0 天），无本地采集节奏；最近状态/错误：external line; no local collector；页面不可用（missing /home/runner/work/longgame/longgame/docs/lines/erc8004-snapshot.html）。
-- **mcpreflight-weekly**：无成功记录（不是 0 天），无本地采集节奏；最近状态/错误：external line; no local collector；页面不可用（missing /home/runner/work/longgame/longgame/docs/lines/mcpreflight-weekly.html）。
-- **protocol-watch**：无成功记录（不是 0 天），无本地采集节奏；最近状态/错误：external line; no local collector；页面不可用（missing /home/runner/work/longgame/longgame/docs/lines/protocol-watch.html）。
+- **erc8004-snapshot**：无成功记录（不是 0 天），无本地采集节奏；最近状态/错误：external line; no local collector；页面不可用（missing C:\Users\eqzyz\agenttoll-master\longgame\docs\lines\erc8004-snapshot.html）。
+- **mcpreflight-weekly**：无成功记录（不是 0 天），无本地采集节奏；最近状态/错误：external line; no local collector；页面不可用（missing C:\Users\eqzyz\agenttoll-master\longgame\docs\lines\mcpreflight-weekly.html）。
+- **protocol-watch**：无成功记录（不是 0 天），无本地采集节奏；最近状态/错误：external line; no local collector；页面不可用（missing C:\Users\eqzyz\agenttoll-master\longgame\docs\lines\protocol-watch.html）。
 
 ## 提案（最多 3 条）
 

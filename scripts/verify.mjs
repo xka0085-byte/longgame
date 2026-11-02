@@ -17,6 +17,7 @@ for (const s of portfolio.series) {
     if (s.id === 'agent-dirs') return r.dirs && Object.values(r.dirs).some(d => d.keyCount != null);
     if (s.id === 'eidas-tsl') return r.pointerCount != null;
     if (s.id === 'grid-queue') return r.eiaCounts != null;
+    if (s.id === 'trust-delta') return r.summary && typeof r.summary.serversThisWeek === 'number';
     return false;
   });
   let expected = null;
@@ -28,6 +29,8 @@ for (const s of portfolio.series) {
     expected = Object.values(last.dirs).reduce((a, d) => a + (d.keyCount || 0), 0);
   } else if (s.id === 'eidas-tsl' && last?.pointerCount != null) {
     expected = last.pointerCount;
+  } else if (s.id === 'trust-delta' && last?.summary) {
+    expected = last.summary.serversThisWeek;
   }
   const pagePath = `${DOCS}/lines/${s.id}.html`;
   if (!existsSync(pagePath)) { fail(s.id, `page missing ${pagePath}`); continue; }

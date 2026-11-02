@@ -1,0 +1,15 @@
+{
+  "run_id": "local-20261102045849934",
+  "line": "trust-delta",
+  "commit": "27c2ef0eda421bb198af0707641a4396c99dadfc",
+  "contract_version": 1,
+  "assurance_level": 2,
+  "first_observed": "2026-11-02T04:54:08.542Z",
+  "raw_sha256": "8bd285449f8dd3e728a3f8e67ac315a9976107affe81c51aae7dad5d8249f3bb",
+  "normalized_sha256": "18b3e724a8099b61b186a783c75ac4e986d60b73b265a48342193f508729b928",
+  "validation_status": "PASS",
+  "publication_status": "PUBLISHED",
+  "publication_reason": null,
+  "last_success_at": "2026-11-02T04:57:54.190Z",
+  "generated_at": "2026-11-02T04:58:49.934Z"
+}

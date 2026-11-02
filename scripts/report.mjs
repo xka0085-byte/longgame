@@ -14,7 +14,7 @@ function readLine(id) {
 }
 
 const GROUPS = [
-  { name: 'Agent 经济', lines: ['mcpreflight-weekly', 'erc8004-snapshot', 'protocol-watch', 'agent-dirs'] },
+  { name: 'Agent 经济', lines: ['mcpreflight-weekly', 'erc8004-snapshot', 'protocol-watch', 'agent-dirs', 'trust-delta'] },
   { name: '气候与能源', lines: ['sb253-docket', 'grid-queue'] },
   { name: '合规与身份信任', lines: ['aiact-register', 'eidas-tsl', 'c2pa-spec', 'state-ai-laws'] },
   { name: '算力金融与守候', lines: ['formd-sweep', 'compute-futures', 'triggers'] },
