@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-02T08:48:00.556Z",
+  "generated_at": "2026-11-02T18:39:51.221Z",
   "today": "2026-11-02",
   "trigger": "schedule",
   "overall": "ok",
@@ -60,28 +60,28 @@
       "managed": true,
       "status": "active",
       "cadence": "window",
-      "last_collect": "2026-11-01",
-      "gap_days": 1,
+      "last_collect": "2026-11-02",
+      "gap_days": 0,
       "limit_days": 1,
       "consecutive_failed_rounds": 0,
       "last_round": null,
       "degraded_pages": 0,
       "freshness": "fresh",
-      "last_attempt": "2026-11-01"
+      "last_attempt": "2026-11-02"
     },
     {
       "id": "agent-dirs",
       "managed": true,
       "status": "active",
       "cadence": "weekly",
-      "last_collect": "2026-10-30",
-      "gap_days": 3,
+      "last_collect": "2026-11-02",
+      "gap_days": 0,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": null,
       "degraded_pages": 0,
       "freshness": "fresh",
-      "last_attempt": "2026-10-30"
+      "last_attempt": "2026-11-02"
     },
     {
       "id": "trust-delta",
@@ -102,14 +102,14 @@
       "managed": true,
       "status": "active",
       "cadence": "weekly",
-      "last_collect": "2026-10-30",
-      "gap_days": 3,
+      "last_collect": "2026-11-02",
+      "gap_days": 0,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": null,
       "degraded_pages": 0,
       "freshness": "fresh",
-      "last_attempt": "2026-10-30"
+      "last_attempt": "2026-11-02"
     },
     {
       "id": "aiact-register",
@@ -158,42 +158,42 @@
       "managed": true,
       "status": "active",
       "cadence": "weekly",
-      "last_collect": "2026-10-30",
-      "gap_days": 3,
+      "last_collect": "2026-11-02",
+      "gap_days": 0,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": "partial",
       "degraded_pages": 1,
       "freshness": "fresh",
-      "last_attempt": "2026-10-30"
+      "last_attempt": "2026-11-02"
     },
     {
       "id": "c2pa-spec",
       "managed": true,
       "status": "active",
       "cadence": "weekly",
-      "last_collect": "2026-10-30",
-      "gap_days": 3,
+      "last_collect": "2026-11-02",
+      "gap_days": 0,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": null,
       "degraded_pages": 0,
       "freshness": "fresh",
-      "last_attempt": "2026-10-30"
+      "last_attempt": "2026-11-02"
     },
     {
       "id": "state-ai-laws",
       "managed": true,
       "status": "active",
       "cadence": "weekly",
-      "last_collect": "2026-10-30",
-      "gap_days": 3,
+      "last_collect": "2026-11-02",
+      "gap_days": 0,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": null,
       "degraded_pages": 0,
       "freshness": "fresh",
-      "last_attempt": "2026-10-30"
+      "last_attempt": "2026-11-02"
     },
     {
       "id": "grid-queue",
@@ -215,8 +215,8 @@
     "failed": [],
     "attempted": []
   },
-  "previous_heartbeat_at": "2026-11-01T18:48:43.588Z",
-  "silence_hours": 14,
+  "previous_heartbeat_at": "2026-11-02T08:48:00.556Z",
+  "silence_hours": 9.9,
   "gate": {
     "at": "2026-11-02T04:59:38Z",
     "passed": true,
