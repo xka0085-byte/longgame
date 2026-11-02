@@ -77,6 +77,62 @@
       "keywordHit": false
      }
     ]
+   },
+   {
+    "date": "2026-11-02T03:54:57.937Z",
+    "pages": [
+     {
+      "id": "x402-spec",
+      "status": 200,
+      "bytes": 90460,
+      "sig": "90449:PCFkb2N0eXBlIGh0bWw+",
+      "changed": true,
+      "keywordHit": false,
+      "unavailable": false
+     },
+     {
+      "id": "coloprice-marketplace",
+      "status": 200,
+      "bytes": 23285,
+      "sig": "22796:PCFET0NUWVBFIGh0bWw+",
+      "changed": true,
+      "keywordHit": false,
+      "unavailable": false
+     },
+     {
+      "id": "parametrix-llm",
+      "status": 200,
+      "bytes": 40083,
+      "sig": "40066:PCFET0NUWVBFIGh0bWw+",
+      "changed": true,
+      "keywordHit": false,
+      "unavailable": false
+     },
+     {
+      "id": "lloyds-lab",
+      "status": 200,
+      "bytes": 113727,
+      "sig": "113656:DQo8IURPQ1RZUEUgaHRt",
+      "changed": true,
+      "keywordHit": false,
+      "unavailable": false
+     },
+     {
+      "id": "hr8915",
+      "status": 403,
+      "bytes": 5649,
+      "unavailable": true,
+      "tolerated": false,
+      "throttled": true,
+      "reason": "http-403",
+      "sig": null,
+      "changed": false,
+      "keywordHit": false
+     }
+    ],
+    "unavailablePages": 1,
+    "status": "partial",
+    "ok": true
    }
   ],
   "events": [
@@ -89,6 +145,34 @@
     "date": "2026-10-21T08:17:11.684Z",
     "page": "hr8915",
     "note": "content changed"
+   },
+   {
+    "date": "2026-11-02T03:54:57.937Z",
+    "page": "x402-spec",
+    "note": "content changed"
+   },
+   {
+    "date": "2026-11-02T03:54:57.937Z",
+    "page": "coloprice-marketplace",
+    "note": "content changed"
+   },
+   {
+    "date": "2026-11-02T03:54:57.937Z",
+    "page": "parametrix-llm",
+    "note": "content changed"
+   },
+   {
+    "date": "2026-11-02T03:54:57.937Z",
+    "page": "lloyds-lab",
+    "note": "content changed"
+   },
+   {
+    "date": "2026-11-02T03:54:57.937Z",
+    "page": "hr8915",
+    "type": "data-source-unavailable",
+    "status": 403,
+    "bytes": 5649,
+    "reason": "http-403"
    }
   ]
  },
