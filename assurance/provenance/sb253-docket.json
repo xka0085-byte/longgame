@@ -1,15 +1,15 @@
 {
-  "run_id": "local-20261030105440092",
+  "run_id": "local-20261102031106803",
   "line": "sb253-docket",
-  "commit": "ed5e81f1b374c23fa36c5c7983cb5761a437699c",
+  "commit": "ea6184a03dd1e4e516ca81917939dc0dcbad776f",
   "contract_version": 1,
   "assurance_level": 2,
   "first_observed": "2026-10-20T13:47:38.359Z",
-  "raw_sha256": "87bb091008b8481b557629faf258539f0d61ba46d8f1f0c8ef6b5638a04617d2",
-  "normalized_sha256": "73109c9bd38f6d2c7eec2d6301e2ee8fce829016368980da1989214f878443ef",
+  "raw_sha256": "e05af7f450796a0c1ee5880dd74aa33bf7de72300c7180f6c470cb6e58d5bb2e",
+  "normalized_sha256": "384479b5fa4474b4e6642ac81f54386469d4c2dbcc4a69eb7133fe045b126bbf",
   "validation_status": "PASS",
   "publication_status": "PUBLISHED",
   "publication_reason": null,
-  "last_success_at": "2026-10-30T09:10:43.157Z",
-  "generated_at": "2026-10-30T10:54:40.092Z"
+  "last_success_at": "2026-11-01T11:02:57.984Z",
+  "generated_at": "2026-11-02T03:11:06.803Z"
 }

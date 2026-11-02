@@ -1,15 +1,15 @@
 {
-  "run_id": "local-20261030105440092",
+  "run_id": "local-20261102031106803",
   "line": "eidas-tsl",
-  "commit": "ed5e81f1b374c23fa36c5c7983cb5761a437699c",
+  "commit": "ea6184a03dd1e4e516ca81917939dc0dcbad776f",
   "contract_version": 1,
   "assurance_level": 2,
   "first_observed": "2026-10-20T13:48:02.426Z",
-  "raw_sha256": "a9673e7895f28eeefc33ed8d353ac28e7461a547abac1ec8ac072c7ac170a524",
-  "normalized_sha256": "a29ad8cefff14dd18e2cbba81d91aa08470c56b7bc8621d62ccfc81522f170c8",
+  "raw_sha256": "57b02f04834d7f41b58f004d0c68118f9f399ea935b860bc4b6c92c1130e34a8",
+  "normalized_sha256": "0fc933ed9a2db357147651c3eb53a9d1ea6de4c5829a28eb14625af3ac162275",
   "validation_status": "PASS",
   "publication_status": "PUBLISHED",
   "publication_reason": null,
-  "last_success_at": "2026-10-30T09:15:27.042Z",
-  "generated_at": "2026-10-30T10:54:40.092Z"
+  "last_success_at": "2026-10-30T11:49:32.375Z",
+  "generated_at": "2026-11-02T03:11:06.803Z"
 }

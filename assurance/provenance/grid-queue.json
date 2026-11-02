@@ -1,15 +1,15 @@
 {
-  "run_id": "local-20261030105440092",
+  "run_id": "local-20261102031106803",
   "line": "grid-queue",
-  "commit": "ed5e81f1b374c23fa36c5c7983cb5761a437699c",
+  "commit": "ea6184a03dd1e4e516ca81917939dc0dcbad776f",
   "contract_version": 1,
   "assurance_level": 2,
   "first_observed": "2026-10-20T16:00:53.029Z",
-  "raw_sha256": "ff82786715bd4da2b22d0979b2a58eafeb78dd4776f5d2f6ef792d1258f6b5bb",
+  "raw_sha256": "b46782d22b9bc4376946009d479874f3606248d9f411dce6bc9a4b5e81152853",
   "normalized_sha256": "c26211f9e9147873b7312a4c318a7a8b87cd6f0d2bb78e87e86658a0100f56ef",
   "validation_status": "PASS",
   "publication_status": "PUBLISHED",
   "publication_reason": null,
   "last_success_at": "2026-10-21T08:17:25.373Z",
-  "generated_at": "2026-10-30T10:54:40.092Z"
+  "generated_at": "2026-11-02T03:11:06.803Z"
 }
