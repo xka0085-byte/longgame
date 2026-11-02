@@ -68,11 +68,31 @@
       "unavailable": false
      }
     ]
+   },
+   {
+    "date": "2026-11-02T10:51:12.082Z",
+    "pages": [
+     {
+      "id": "multistate-ai",
+      "status": 200,
+      "bytes": 1992652,
+      "sig": "1992628:PCFkb2N0eXBlIGh0bWw+",
+      "changed": true,
+      "keywordHit": false,
+      "unavailable": false
+     }
+    ],
+    "ok": true
    }
   ],
   "events": [
    {
     "date": "2026-10-30T08:05:17.183Z",
+    "page": "multistate-ai",
+    "note": "content changed"
+   },
+   {
+    "date": "2026-11-02T10:51:12.082Z",
     "page": "multistate-ai",
     "note": "content changed"
    }
