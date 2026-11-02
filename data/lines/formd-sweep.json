@@ -165,6 +165,77 @@
       "thisMonth": 1
      }
     ]
+   },
+   {
+    "date": "2026-11-02T03:53:41.650Z",
+    "queries": [
+     {
+      "keyword": "humanoid",
+      "month": "2026-10",
+      "allTime": 12,
+      "thisMonth": 1
+     },
+     {
+      "keyword": "robotics",
+      "month": "2026-10",
+      "allTime": 615,
+      "thisMonth": 10
+     },
+     {
+      "keyword": "defense tech",
+      "month": "2026-10",
+      "allTime": 7,
+      "thisMonth": 1
+     },
+     {
+      "keyword": "stablecoin",
+      "month": "2026-10",
+      "allTime": 21,
+      "thisMonth": 0
+     },
+     {
+      "keyword": "AI infrastructure",
+      "month": "2026-10",
+      "allTime": 36,
+      "thisMonth": 0
+     },
+     {
+      "keyword": "compute",
+      "month": "2026-10",
+      "allTime": 44,
+      "thisMonth": 5
+     },
+     {
+      "keyword": "agentic",
+      "month": "2026-10",
+      "allTime": 10,
+      "thisMonth": 0
+     },
+     {
+      "keyword": "data center",
+      "month": "2026-10",
+      "allTime": 96,
+      "thisMonth": 10
+     },
+     {
+      "keyword": "fusion",
+      "month": "2026-10",
+      "allTime": 438,
+      "thisMonth": 6
+     },
+     {
+      "keyword": "nuclear",
+      "month": "2026-10",
+      "allTime": 75,
+      "thisMonth": 1
+     }
+    ],
+    "monthWindow": {
+     "month": "2026-10",
+     "startdt": "2026-10-01",
+     "enddt": "2026-10-31"
+    },
+    "ok": true
    }
   ],
   "events": []

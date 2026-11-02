@@ -196,7 +196,18 @@ if (mode === 'collect' && line.collect) {
   } else if (c.type === 'edgar') {
     // EDGAR Form D 关键词备案量月度快照：当月计数加全历史计数，构成不可回填的资金流向序列
     run.queries = [];
-    const monthStart = nowISO.slice(0, 7) + '-01';
+    // 统计口径：取"最近一个完整自然月"，不是"当月至今"。
+    // 原因：monthly-report 固定在每月 1 号跑，按当月至今统计时月初必然接近 0，
+    // 2026-11-01 的 run 就是这样产出 10 个关键词全 0、被 verify-data 缩水守卫拦下。
+    // 记完整上月才有月度可比性，也才配得上"月度备案量序列"这个定位。
+    const _d = new Date(nowISO);
+    const monthEndD = new Date(Date.UTC(_d.getUTCFullYear(), _d.getUTCMonth(), 0));
+    const monthStartD = new Date(Date.UTC(monthEndD.getUTCFullYear(), monthEndD.getUTCMonth(), 1));
+    const _iso = (x) => x.toISOString().slice(0, 10);
+    const monthStart = _iso(monthStartD);
+    const monthEnd = _iso(monthEndD);
+    const monthLabel = monthStart.slice(0, 7);
+    run.monthWindow = { month: monthLabel, startdt: monthStart, enddt: monthEnd };
     for (const kw of c.keywords) {
       try {
         const base = `https://efts.sec.gov/LATEST/search-index?q=%22${encodeURIComponent(kw)}%22&forms=${c.form || 'D'}`;
@@ -208,8 +219,8 @@ if (mode === 'collect' && line.collect) {
           }
           return {};
         })();
-        const mo = await (await fetch(`${base}&dateRange=custom&startdt=${monthStart}&enddt=${nowISO.slice(0, 10)}`, { headers: UA, signal: AbortSignal.timeout(30000) })).json();
-        const entry = { keyword: kw, allTime: all.hits?.total?.value ?? null, thisMonth: mo.hits?.total?.value ?? null };
+        const mo = await (await fetch(`${base}&dateRange=custom&startdt=${monthStart}&enddt=${monthEnd}`, { headers: UA, signal: AbortSignal.timeout(30000) })).json();
+        const entry = { keyword: kw, month: monthLabel, allTime: all.hits?.total?.value ?? null, thisMonth: mo.hits?.total?.value ?? null };
         run.queries.push(entry);
         if (entry.allTime == null || entry.thisMonth == null) {
           collectFailure = true;
