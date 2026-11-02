@@ -113,6 +113,14 @@
       "healed": [
         "sb253-docket"
       ]
+    },
+    {
+      "at": "2026-11-02T03:14:43.783Z",
+      "trigger": "push",
+      "overall": "degraded",
+      "critical": 0,
+      "warn": 1,
+      "healed": []
     }
   ]
 }

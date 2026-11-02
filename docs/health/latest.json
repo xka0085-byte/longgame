@@ -1,13 +1,18 @@
 {
-  "generated_at": "2026-11-01T08:38:03.693Z",
-  "today": "2026-11-01",
-  "trigger": "schedule",
-  "overall": "ok",
+  "generated_at": "2026-11-02T03:14:43.783Z",
+  "today": "2026-11-02",
+  "trigger": "push",
+  "overall": "degraded",
   "signals": [
     {
       "id": "line-degraded:compute-futures",
       "severity": "info",
       "detail": "compute-futures 最近一轮有 1 个页面不可用（按容错档放行，已记事件）"
+    },
+    {
+      "id": "gate-missing",
+      "severity": "warn",
+      "detail": "查不到最近一次 assurance-gate 的结论（无 token 且无本地 result.json），门禁状态未知"
     }
   ],
   "lines": [
@@ -56,7 +61,7 @@
       "status": "active",
       "cadence": "window",
       "last_collect": "2026-11-01",
-      "gap_days": 0,
+      "gap_days": 1,
       "limit_days": 1,
       "consecutive_failed_rounds": 0,
       "last_round": null,
@@ -70,7 +75,7 @@
       "status": "active",
       "cadence": "weekly",
       "last_collect": "2026-10-30",
-      "gap_days": 2,
+      "gap_days": 3,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": null,
@@ -84,7 +89,7 @@
       "status": "active",
       "cadence": "weekly",
       "last_collect": "2026-10-30",
-      "gap_days": 2,
+      "gap_days": 3,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": null,
@@ -98,7 +103,7 @@
       "status": "auto-wait",
       "cadence": "monthly",
       "last_collect": "2026-10-21",
-      "gap_days": 11,
+      "gap_days": 12,
       "limit_days": 34,
       "consecutive_failed_rounds": 0,
       "last_round": null,
@@ -112,7 +117,7 @@
       "status": "active",
       "cadence": "monthly",
       "last_collect": "2026-10-21",
-      "gap_days": 11,
+      "gap_days": 12,
       "limit_days": 34,
       "consecutive_failed_rounds": 0,
       "last_round": null,
@@ -126,7 +131,7 @@
       "status": "active",
       "cadence": "monthly",
       "last_collect": "2026-10-21",
-      "gap_days": 11,
+      "gap_days": 12,
       "limit_days": 34,
       "consecutive_failed_rounds": 0,
       "last_round": null,
@@ -140,7 +145,7 @@
       "status": "active",
       "cadence": "weekly",
       "last_collect": "2026-10-30",
-      "gap_days": 2,
+      "gap_days": 3,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": "partial",
@@ -154,7 +159,7 @@
       "status": "active",
       "cadence": "weekly",
       "last_collect": "2026-10-30",
-      "gap_days": 2,
+      "gap_days": 3,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": null,
@@ -168,7 +173,7 @@
       "status": "active",
       "cadence": "weekly",
       "last_collect": "2026-10-30",
-      "gap_days": 2,
+      "gap_days": 3,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": null,
@@ -182,7 +187,7 @@
       "status": "active",
       "cadence": "monthly",
       "last_collect": "2026-10-21",
-      "gap_days": 11,
+      "gap_days": 12,
       "limit_days": 34,
       "consecutive_failed_rounds": 0,
       "last_round": null,
@@ -192,22 +197,13 @@
     }
   ],
   "heal": {
-    "healed": [
-      "sb253-docket"
-    ],
+    "healed": [],
     "failed": [],
-    "attempted": [
-      "sb253-docket"
-    ]
+    "attempted": []
   },
-  "previous_heartbeat_at": "2026-10-31T18:22:35.047Z",
-  "silence_hours": 14.3,
-  "gate": {
-    "at": "2026-10-30T15:22:53Z",
-    "passed": true,
-    "source": "actions-api",
-    "url": "https://github.com/xka0085-byte/longgame/actions/runs/41080142540"
-  },
+  "previous_heartbeat_at": "2026-11-01T08:38:03.693Z",
+  "silence_hours": 18.6,
+  "gate": null,
   "thresholds": {
     "weeklyGraceDays": 1,
     "monthlyGraceDays": 3,
