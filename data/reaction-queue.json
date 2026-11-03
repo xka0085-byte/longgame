@@ -323,7 +323,43 @@
    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOLVdRcHpWVjh4Y2hHOWlKUGlGanJ3U1NPVUtYUmtaMXlnTlQxWlYwTURIYWFyN3dHNjlkbEdmRm1nd1dwdzhpNk9qWm94QVN2RElDZFh6bFNxVGZ0SG9kdVhTY1RSTGo5OWtMX0UxZVl3WWQ1UGNKNmF1RlhnYllJSlFmTVBGT0hweGt5QzVYcGxoVkpVWmxWREVFSDdIUzJQV3VUVk1yTEtHTG1tOFRseVhsako0YlpjT3VRLUpoQmc3UQ?oc=5",
    "type": "noise",
    "action": "只记录"
+  },
+  {
+   "date": "2026-11-03T12:42:03.320Z",
+   "line": "agent-dirs",
+   "channel": "gn",
+   "title": "We’re donating Agent Payments Protocol to the FIDO Alliance to support the future of secure, agentic payments. - blog.google",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQVm9jeDVDSGZoejNaRE5DUjZpMHVsNEhSSjVleTlRZ3pvN3ctRVVKREdKbVk5ZzBlcEZ2N3lCS1loTmJsSGJ4dFkwVGxkRDU3MVJuZGExY0IwcWRFTkk1MC1aNGlMQVZJWjBPMDY1c0JOanhjMUV6bXo0REpjM1FYM2R6Y1RKaFZ2emkzeEhrNDVXT2J1d2lpLTRUcl9tVm00T3pFSg?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-03T12:42:03.320Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Show HN: DevShelf Free, zero-paywall directory of 565 dev tools and MCP server",
+   "url": "https://ritualdev.in/devshelf/",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-03T12:42:03.320Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Built open-source auth for AI agents calling MCP servers – looking for builders",
+   "url": "https://www.reddit.com/r/mcp/comments/1xlf1kl/built_opensource_auth_for_ai_agents_calling_mcp/",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-03T12:42:03.320Z",
+   "line": "grid-queue",
+   "channel": "gn",
+   "title": "ERCOT Interconnection Queue: Gas Up 85.5% in a Year Amid Texas Data Center Boom - EIN News",
+   "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUnh2WUdacE1Palp0eFdoSFEzV1lrZXRsWWxKT1JWbm1ndWN5NS1Da1NuUXdYRnBnaHFMcWVRMWJfM2k3OWFVaDd0czVMWEJvT1pndzRYdmoxcE5nTm9sdGd3dE5pcjhFZTQtSGk3NFgwV2hOanpyRUwyZkxKalNmY3RPemhVcS1OdDJpUWthdnpCd2lzcWpZcHQ0OVJvdjJ3SDV3LWZjV2drWjd1WTB5U3QwVTI3WmpTUkg4?oc=5",
+   "type": "noise",
+   "action": "只记录"
   }
  ],
- "updated": "2026-11-02T13:18:27.315Z"
+ "updated": "2026-11-03T12:42:03.320Z"
 }

@@ -1008,6 +1008,24 @@
     "channel": "hn",
     "query": "MCP server",
     "count": 5
+   },
+   {
+    "date": "2026-11-03T12:41:53.192Z",
+    "channel": "hn",
+    "query": "MCP registry",
+    "count": 0
+   },
+   {
+    "date": "2026-11-03T12:41:53.192Z",
+    "channel": "gn",
+    "query": "MCP server registry",
+    "count": 5
+   },
+   {
+    "date": "2026-11-03T12:41:53.192Z",
+    "channel": "hn",
+    "query": "MCP server",
+    "count": 4
    }
   ],
   "items": [
@@ -1046,6 +1064,24 @@
     "url": "https://mcp.brydge-ai.com",
     "date": "2026-11-02T03:30:50Z",
     "foundAt": "2026-11-02T13:18:17.072Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: DevShelf Free, zero-paywall directory of 565 dev tools and MCP server",
+    "url": "https://ritualdev.in/devshelf/",
+    "date": "2026-11-03T10:14:36Z",
+    "foundAt": "2026-11-03T12:41:53.192Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Built open-source auth for AI agents calling MCP servers – looking for builders",
+    "url": "https://www.reddit.com/r/mcp/comments/1xlf1kl/built_opensource_auth_for_ai_agents_calling_mcp/",
+    "date": "2026-11-02T18:01:35Z",
+    "foundAt": "2026-11-03T12:41:53.192Z"
    }
   ],
   "alerts": [
@@ -1071,6 +1107,18 @@
     "date": "2026-11-02T13:18:17.072Z",
     "title": "Show HN: Paste your MCP config, see what each server does at startup",
     "url": "https://mcp.brydge-ai.com",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-03T12:41:53.192Z",
+    "title": "Show HN: DevShelf Free, zero-paywall directory of 565 dev tools and MCP server",
+    "url": "https://ritualdev.in/devshelf/",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-03T12:41:53.192Z",
+    "title": "Built open-source auth for AI agents calling MCP servers – looking for builders",
+    "url": "https://www.reddit.com/r/mcp/comments/1xlf1kl/built_opensource_auth_for_ai_agents_calling_mcp/",
     "channel": "hn"
    }
   ]

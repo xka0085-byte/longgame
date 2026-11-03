@@ -373,6 +373,24 @@
     "channel": "gn",
     "query": "web bot auth agent identity",
     "count": 5
+   },
+   {
+    "date": "2026-11-03T12:41:52.219Z",
+    "channel": "hn",
+    "query": "web bot auth",
+    "count": 3
+   },
+   {
+    "date": "2026-11-03T12:41:52.219Z",
+    "channel": "gn",
+    "query": "agent payments protocol",
+    "count": 5
+   },
+   {
+    "date": "2026-11-03T12:41:52.219Z",
+    "channel": "gn",
+    "query": "web bot auth agent identity",
+    "count": 5
    }
   ],
   "items": [
@@ -402,6 +420,15 @@
     "url": "https://messh.io",
     "date": "2026-10-29T17:51:05Z",
     "foundAt": "2026-10-30T08:03:50.770Z"
+   },
+   {
+    "line": "agent-dirs",
+    "channel": "gn",
+    "query": "agent payments protocol",
+    "title": "We’re donating Agent Payments Protocol to the FIDO Alliance to support the future of secure, agentic payments. - blog.google",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQVm9jeDVDSGZoejNaRE5DUjZpMHVsNEhSSjVleTlRZ3pvN3ctRVVKREdKbVk5ZzBlcEZ2N3lCS1loTmJsSGJ4dFkwVGxkRDU3MVJuZGExY0IwcWRFTkk1MC1aNGlMQVZJWjBPMDY1c0JOanhjMUV6bXo0REpjM1FYM2R6Y1RKaFZ2emkzeEhrNDVXT2J1d2lpLTRUcl9tVm00T3pFSg?oc=5",
+    "date": "Tue, 28 Apr 2026 07:00:00 GMT",
+    "foundAt": "2026-11-03T12:41:52.219Z"
    }
   ],
   "alerts": [
@@ -422,6 +449,12 @@
     "title": "Web Bot Auth: messh SDK 0.2.0 is out",
     "url": "https://messh.io",
     "channel": "hn"
+   },
+   {
+    "date": "2026-11-03T12:41:52.219Z",
+    "title": "We’re donating Agent Payments Protocol to the FIDO Alliance to support the future of secure, agentic payments. - blog.google",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQVm9jeDVDSGZoejNaRE5DUjZpMHVsNEhSSjVleTlRZ3pvN3ctRVVKREdKbVk5ZzBlcEZ2N3lCS1loTmJsSGJ4dFkwVGxkRDU3MVJuZGExY0IwcWRFTkk1MC1aNGlMQVZJWjBPMDY1c0JOanhjMUV6bXo0REpjM1FYM2R6Y1RKaFZ2emkzeEhrNDVXT2J1d2lpLTRUcl9tVm00T3pFSg?oc=5",
+    "channel": "gn"
    }
   ]
  }
