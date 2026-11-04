@@ -1026,6 +1026,24 @@
     "channel": "hn",
     "query": "MCP server",
     "count": 4
+   },
+   {
+    "date": "2026-11-04T12:52:30.824Z",
+    "channel": "hn",
+    "query": "MCP registry",
+    "count": 1
+   },
+   {
+    "date": "2026-11-04T12:52:30.824Z",
+    "channel": "gn",
+    "query": "MCP server registry",
+    "count": 5
+   },
+   {
+    "date": "2026-11-04T12:52:30.824Z",
+    "channel": "hn",
+    "query": "MCP server",
+    "count": 5
    }
   ],
   "items": [
@@ -1082,6 +1100,51 @@
     "url": "https://www.reddit.com/r/mcp/comments/1xlf1kl/built_opensource_auth_for_ai_agents_calling_mcp/",
     "date": "2026-11-02T18:01:35Z",
     "foundAt": "2026-11-03T12:41:53.192Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "AI coding agents are installing abandoned MCP servers with known security issues",
+    "url": "https://www.glow.io/blogs/mcphantom-ai-coding-agents-are-installing-vulnerable-deprecated-mcp-servers-from-training-data",
+    "date": "2026-11-04T10:58:43Z",
+    "foundAt": "2026-11-04T12:52:30.824Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: Meteosource MCP server, weather data for AI assistants",
+    "url": "https://mcp.meteosource.com/",
+    "date": "2026-11-04T08:02:25Z",
+    "foundAt": "2026-11-04T12:52:30.824Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Craft CMS 5.12.0: Added an authenticated HTTP MCP server",
+    "url": "https://github.com/craftcms/cms/releases/tag/5.12.0",
+    "date": "2026-11-03T23:38:08Z",
+    "foundAt": "2026-11-04T12:52:30.824Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: Small Print, see when an MCP server changes what it tells your agent",
+    "url": "https://smallprint.dev",
+    "date": "2026-11-03T21:38:37Z",
+    "foundAt": "2026-11-04T12:52:30.824Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: An MCP Server for Manpages",
+    "url": "https://www.chainguard.dev/unchained/every-manual-page-in-chainguard-os-now-readable-by-your-agent",
+    "date": "2026-11-03T21:24:51Z",
+    "foundAt": "2026-11-04T12:52:30.824Z"
    }
   ],
   "alerts": [
@@ -1119,6 +1182,36 @@
     "date": "2026-11-03T12:41:53.192Z",
     "title": "Built open-source auth for AI agents calling MCP servers – looking for builders",
     "url": "https://www.reddit.com/r/mcp/comments/1xlf1kl/built_opensource_auth_for_ai_agents_calling_mcp/",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-04T12:52:30.824Z",
+    "title": "AI coding agents are installing abandoned MCP servers with known security issues",
+    "url": "https://www.glow.io/blogs/mcphantom-ai-coding-agents-are-installing-vulnerable-deprecated-mcp-servers-from-training-data",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-04T12:52:30.824Z",
+    "title": "Show HN: Meteosource MCP server, weather data for AI assistants",
+    "url": "https://mcp.meteosource.com/",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-04T12:52:30.824Z",
+    "title": "Craft CMS 5.12.0: Added an authenticated HTTP MCP server",
+    "url": "https://github.com/craftcms/cms/releases/tag/5.12.0",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-04T12:52:30.824Z",
+    "title": "Show HN: Small Print, see when an MCP server changes what it tells your agent",
+    "url": "https://smallprint.dev",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-04T12:52:30.824Z",
+    "title": "Show HN: An MCP Server for Manpages",
+    "url": "https://www.chainguard.dev/unchained/every-manual-page-in-chainguard-os-now-readable-by-your-agent",
     "channel": "hn"
    }
   ]

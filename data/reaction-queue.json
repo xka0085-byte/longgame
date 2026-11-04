@@ -359,7 +359,61 @@
    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUnh2WUdacE1Palp0eFdoSFEzV1lrZXRsWWxKT1JWbm1ndWN5NS1Da1NuUXdYRnBnaHFMcWVRMWJfM2k3OWFVaDd0czVMWEJvT1pndzRYdmoxcE5nTm9sdGd3dE5pcjhFZTQtSGk3NFgwV2hOanpyRUwyZkxKalNmY3RPemhVcS1OdDJpUWthdnpCd2lzcWpZcHQ0OVJvdjJ3SDV3LWZjV2drWjd1WTB5U3QwVTI3WmpTUkg4?oc=5",
    "type": "noise",
    "action": "只记录"
+  },
+  {
+   "date": "2026-11-04T12:52:42.881Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "AI coding agents are installing abandoned MCP servers with known security issues",
+   "url": "https://www.glow.io/blogs/mcphantom-ai-coding-agents-are-installing-vulnerable-deprecated-mcp-servers-from-training-data",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-04T12:52:42.881Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Show HN: Meteosource MCP server, weather data for AI assistants",
+   "url": "https://mcp.meteosource.com/",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-04T12:52:42.881Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Craft CMS 5.12.0: Added an authenticated HTTP MCP server",
+   "url": "https://github.com/craftcms/cms/releases/tag/5.12.0",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-04T12:52:42.881Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Show HN: Small Print, see when an MCP server changes what it tells your agent",
+   "url": "https://smallprint.dev",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-04T12:52:42.881Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Show HN: An MCP Server for Manpages",
+   "url": "https://www.chainguard.dev/unchained/every-manual-page-in-chainguard-os-now-readable-by-your-agent",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-04T12:52:42.881Z",
+   "line": "grid-queue",
+   "channel": "gn",
+   "title": "ERCOT Interconnection Queue: Gas Up 85.5% in a Year Amid Texas Data Center Boom - The Des Moines Register",
+   "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNOUk3QVBTdng1VEZqMVBsaGZoZ1hwbk41VGlPRHQ4bnBtdmw2STV0bFpCblI4eHFFdkFuUm1hY3RaZFR5SkRwMDZ0ME1xbVpaNW9yN3kydEhvWEctdkhJUkpMcWZFd1BTTGFLZVVMTHJWNjR6VXo1aXQ0Q3pORWQydUN0bnJqRTBQb1VQUFZlQzhVSVlhd25IcGxRTmo4QThGSFNhb0trdDNEVkNlTXF2SGdkeWZNZlpRNGFTeUsyVTlNWTlnakNhYWFfLVJXZG5FWjlWWnd3?oc=5",
+   "type": "noise",
+   "action": "只记录"
   }
  ],
- "updated": "2026-11-03T12:42:03.320Z"
+ "updated": "2026-11-04T12:52:42.881Z"
 }

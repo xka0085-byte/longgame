@@ -1016,6 +1016,24 @@
     "channel": "hn",
     "query": "SB 253 climate",
     "count": 0
+   },
+   {
+    "date": "2026-11-04T12:52:27.982Z",
+    "channel": "gn",
+    "query": "California SB 253 climate disclosure",
+    "count": 5
+   },
+   {
+    "date": "2026-11-04T12:52:27.982Z",
+    "channel": "gn",
+    "query": "SB 261 climate risk California",
+    "count": 5
+   },
+   {
+    "date": "2026-11-04T12:52:27.982Z",
+    "channel": "hn",
+    "query": "SB 253 climate",
+    "count": 0
    }
   ],
   "items": [

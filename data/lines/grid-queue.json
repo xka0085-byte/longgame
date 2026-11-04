@@ -387,6 +387,24 @@
     "channel": "hn",
     "query": "interconnection queue",
     "count": 0
+   },
+   {
+    "date": "2026-11-04T12:52:41.599Z",
+    "channel": "gn",
+    "query": "interconnection queue data center",
+    "count": 5
+   },
+   {
+    "date": "2026-11-04T12:52:41.599Z",
+    "channel": "gn",
+    "query": "large load tariff utility",
+    "count": 5
+   },
+   {
+    "date": "2026-11-04T12:52:41.599Z",
+    "channel": "hn",
+    "query": "interconnection queue",
+    "count": 0
    }
   ],
   "items": [
@@ -425,6 +443,15 @@
     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUnh2WUdacE1Palp0eFdoSFEzV1lrZXRsWWxKT1JWbm1ndWN5NS1Da1NuUXdYRnBnaHFMcWVRMWJfM2k3OWFVaDd0czVMWEJvT1pndzRYdmoxcE5nTm9sdGd3dE5pcjhFZTQtSGk3NFgwV2hOanpyRUwyZkxKalNmY3RPemhVcS1OdDJpUWthdnpCd2lzcWpZcHQ0OVJvdjJ3SDV3LWZjV2drWjd1WTB5U3QwVTI3WmpTUkg4?oc=5",
     "date": "Mon, 02 Nov 2026 13:00:00 GMT",
     "foundAt": "2026-11-03T12:42:02.199Z"
+   },
+   {
+    "line": "grid-queue",
+    "channel": "gn",
+    "query": "interconnection queue data center",
+    "title": "ERCOT Interconnection Queue: Gas Up 85.5% in a Year Amid Texas Data Center Boom - The Des Moines Register",
+    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNOUk3QVBTdng1VEZqMVBsaGZoZ1hwbk41VGlPRHQ4bnBtdmw2STV0bFpCblI4eHFFdkFuUm1hY3RaZFR5SkRwMDZ0ME1xbVpaNW9yN3kydEhvWEctdkhJUkpMcWZFd1BTTGFLZVVMTHJWNjR6VXo1aXQ0Q3pORWQydUN0bnJqRTBQb1VQUFZlQzhVSVlhd25IcGxRTmo4QThGSFNhb0trdDNEVkNlTXF2SGdkeWZNZlpRNGFTeUsyVTlNWTlnakNhYWFfLVJXZG5FWjlWWnd3?oc=5",
+    "date": "Mon, 02 Nov 2026 23:36:46 GMT",
+    "foundAt": "2026-11-04T12:52:41.599Z"
    }
   ],
   "alerts": [
@@ -450,6 +477,12 @@
     "date": "2026-11-03T12:42:02.199Z",
     "title": "ERCOT Interconnection Queue: Gas Up 85.5% in a Year Amid Texas Data Center Boom - EIN News",
     "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOUnh2WUdacE1Palp0eFdoSFEzV1lrZXRsWWxKT1JWbm1ndWN5NS1Da1NuUXdYRnBnaHFMcWVRMWJfM2k3OWFVaDd0czVMWEJvT1pndzRYdmoxcE5nTm9sdGd3dE5pcjhFZTQtSGk3NFgwV2hOanpyRUwyZkxKalNmY3RPemhVcS1OdDJpUWthdnpCd2lzcWpZcHQ0OVJvdjJ3SDV3LWZjV2drWjd1WTB5U3QwVTI3WmpTUkg4?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-04T12:52:41.599Z",
+    "title": "ERCOT Interconnection Queue: Gas Up 85.5% in a Year Amid Texas Data Center Boom - The Des Moines Register",
+    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNOUk3QVBTdng1VEZqMVBsaGZoZ1hwbk41VGlPRHQ4bnBtdmw2STV0bFpCblI4eHFFdkFuUm1hY3RaZFR5SkRwMDZ0ME1xbVpaNW9yN3kydEhvWEctdkhJUkpMcWZFd1BTTGFLZVVMTHJWNjR6VXo1aXQ0Q3pORWQydUN0bnJqRTBQb1VQUFZlQzhVSVlhd25IcGxRTmo4QThGSFNhb0trdDNEVkNlTXF2SGdkeWZNZlpRNGFTeUsyVTlNWTlnakNhYWFfLVJXZG5FWjlWWnd3?oc=5",
     "channel": "gn"
    }
   ]
