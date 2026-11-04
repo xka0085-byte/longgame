@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T08:32:27.524Z",
+  "generated_at": "2026-11-04T16:28:16.524Z",
   "today": "2026-11-04",
   "trigger": "schedule",
   "overall": "ok",
@@ -60,14 +60,14 @@
       "managed": true,
       "status": "active",
       "cadence": "window",
-      "last_collect": "2026-11-03",
-      "gap_days": 1,
+      "last_collect": "2026-11-04",
+      "gap_days": 0,
       "limit_days": 1,
       "consecutive_failed_rounds": 0,
       "last_round": null,
       "degraded_pages": 0,
       "freshness": "fresh",
-      "last_attempt": "2026-11-03"
+      "last_attempt": "2026-11-04"
     },
     {
       "id": "agent-dirs",
@@ -215,8 +215,8 @@
     "failed": [],
     "attempted": []
   },
-  "previous_heartbeat_at": "2026-11-03T20:27:03.594Z",
-  "silence_hours": 12.1,
+  "previous_heartbeat_at": "2026-11-04T08:32:27.524Z",
+  "silence_hours": 7.9,
   "gate": {
     "at": "2026-11-02T04:59:38Z",
     "passed": true,
