@@ -1,7 +1,7 @@
 {
-  "run_id": "local-20261105081750678",
+  "run_id": "local-20261105082135737",
   "line": "c2pa-spec",
-  "commit": "c2b434ace426a7b3d514372c787e810fa4ea4b52",
+  "commit": "b82cc6608aed1c74738bed5de9f1dfa305de97d3",
   "contract_version": 1,
   "assurance_level": 2,
   "first_observed": "2026-10-20T16:00:49.940Z",
@@ -11,5 +11,5 @@
   "publication_status": "PUBLISHED",
   "publication_reason": null,
   "last_success_at": "2026-11-02T10:51:11.307Z",
-  "generated_at": "2026-11-05T08:17:50.678Z"
+  "generated_at": "2026-11-05T08:21:35.737Z"
 }

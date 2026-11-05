@@ -273,6 +273,9 @@ llms = at === -1
   ? stripped.trimEnd() + '\n\n' + block + '\n'
   : stripped.slice(0, at) + block + '\n\n' + stripped.slice(at);
 writeFileSync(STAGE_LLMS, llms);
+// 站点根也要有一份：AI/爬虫请求的是 https://<site>/llms.txt，而不是仓库根文件。
+// 只放仓库根等于只有会翻 GitHub 的人能看到引用行。
+writeFileSync(join(STAGE_DOCS, 'llms.txt'), llms);
 
 // grid-queue 单行 CSV 同步导出：数据只来自 data/lines/grid-queue.json 最近一次含 eiaCounts 的运行。
 const env = { ...process.env, LONGGAME_DOCS: STAGE_DOCS };

@@ -14,7 +14,7 @@
   "assurance_level": 2,
   "contract_version": 1,
   "raw_sha256": "651a71d086752e228fbcd6e70baaa216886efb479cc74229c2acfae920f091e9",
-  "generated_at": "2026-11-05T08:17:50.678Z",
+  "generated_at": "2026-11-05T08:21:35.737Z",
   "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/eidas-tsl.json 自洽",
   "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
 }

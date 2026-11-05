@@ -1,0 +1,29 @@
+# longgame portfolio
+
+零人工自转的测量线组合，自 2026 年 10 月起。每条线是一个独立的时间序列：采集做数据 diff，雷达每日扫外部最新消息，反应规则自动进月报。
+
+<!-- AUTO-CITATIONS:START -->
+## 一句话引用（自动生成 2026-11-05）
+
+每条线一行，可整句引用。括号里的 as_of 是数字的数据日期，不是文档日期——跨期引用必须连 as_of 一起给。
+机器可读全文（全部线、含原始数据 hash 与复算命令）：https://xka0085-byte.github.io/longgame/citation.json
+
+- longgame sb253-docket（2026-11-04）：CARB 披露相关链接 0 条（首窗 11-10） — https://xka0085-byte.github.io/longgame/lines/sb253-docket.html · 原始数据 https://raw.githubusercontent.com/xka0085-byte/longgame/main/data/lines/sb253-docket.json
+- longgame agent-dirs（2026-11-02）：当前登记的 agent 密钥 6 把 — https://xka0085-byte.github.io/longgame/lines/agent-dirs.html · 原始数据 https://raw.githubusercontent.com/xka0085-byte/longgame/main/data/lines/agent-dirs.json
+- longgame trust-delta（2026-11-01）：Trust Directory 在册端点 35327 个，本轮判定变更 264 次（转 PASS 181、离开 PASS 50），消失 46 个（上游本轮对比覆盖不完整，新增/消失数只作参考）（最近一次采集 2026-11-02 为当日刷新，只更新在册与状态快照；周变化仍按 2026-10-30 起算的上一次跨周对比） — https://xka0085-byte.github.io/longgame/lines/trust-delta.html · 原始数据 https://raw.githubusercontent.com/xka0085-byte/longgame/main/data/lines/trust-delta.json
+- longgame eidas-tsl（2026-11-02）：EU 信任列表指针 42 个 — https://xka0085-byte.github.io/longgame/lines/eidas-tsl.html · 原始数据 https://raw.githubusercontent.com/xka0085-byte/longgame/main/data/lines/eidas-tsl.json
+- longgame aiact-register（2026-11-05）：本期无新增可分享数字（PUBLISHED） — https://xka0085-byte.github.io/longgame/lines/aiact-register.html · 原始数据 https://raw.githubusercontent.com/xka0085-byte/longgame/main/data/lines/aiact-register.json
+- longgame triggers（2026-11-05）：本期无新增可分享数字（QUARANTINED：data-source-unavailable） — https://xka0085-byte.github.io/longgame/lines/triggers.html · 原始数据 https://raw.githubusercontent.com/xka0085-byte/longgame/main/data/lines/triggers.json
+- longgame formd-sweep（2026-11-02）：本月十个关键词合计新增 Form D 备案 34 件 — https://xka0085-byte.github.io/longgame/lines/formd-sweep.html · 原始数据 https://raw.githubusercontent.com/xka0085-byte/longgame/main/data/lines/formd-sweep.json
+- longgame compute-futures（2026-11-05）：本期无新增可分享数字（QUARANTINED：data-source-unavailable） — https://xka0085-byte.github.io/longgame/lines/compute-futures.html · 原始数据 https://raw.githubusercontent.com/xka0085-byte/longgame/main/data/lines/compute-futures.json
+- longgame c2pa-spec（2026-11-05）：本期无新增可分享数字（PUBLISHED） — https://xka0085-byte.github.io/longgame/lines/c2pa-spec.html · 原始数据 https://raw.githubusercontent.com/xka0085-byte/longgame/main/data/lines/c2pa-spec.json
+- longgame state-ai-laws（2026-11-05）：本期无新增可分享数字（PUBLISHED） — https://xka0085-byte.github.io/longgame/lines/state-ai-laws.html · 原始数据 https://raw.githubusercontent.com/xka0085-byte/longgame/main/data/lines/state-ai-laws.json
+- longgame grid-queue（2026-11-02）：EIA-860M september_generator2026.xlsx 计划新增 2360 行合计 290242 MW，已取消 1747 行合计 185356.8 MW — https://xka0085-byte.github.io/longgame/lines/grid-queue.html · 原始数据 https://raw.githubusercontent.com/xka0085-byte/longgame/main/data/lines/grid-queue.json
+<!-- AUTO-CITATIONS:END -->
+
+## 方法与边界
+
+全部数据来自公开免费来源（SEC EDGAR、Federal Register、CARB、EU LOTL、各官方页），采集与雷达自动化，数字自带生成日期。任何序列的口径修订会在事件流中留痕。年度三问体检：驱动推进、买方与引用、回填者。
+
+可复算的采集与门禁细节（403/417 重试与恢复、404 豁免、四道门禁与故障注入、artifact 校验快照）：https://xka0085-byte.github.io/longgame/method.html 。对应的外部案例记录：https://xka0085-byte.github.io/mcpreflight/case-longgame.html 。
+
