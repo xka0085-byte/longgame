@@ -4,7 +4,7 @@ name: forced-failure
 on:
   workflow_dispatch:
   push:
-    branches: [master, assurance-phase2]
+    branches: [master]
     paths:
       - assurance/tests/forced-failure.mjs
       - .github/workflows/forced-failure.yml
