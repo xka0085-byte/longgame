@@ -1,15 +1,15 @@
 {
-  "run_id": "local-20261102045849934",
+  "run_id": "local-20261105081750678",
   "line": "trust-delta",
-  "commit": "27c2ef0eda421bb198af0707641a4396c99dadfc",
+  "commit": "c2b434ace426a7b3d514372c787e810fa4ea4b52",
   "contract_version": 1,
   "assurance_level": 2,
   "first_observed": "2026-11-02T04:54:08.542Z",
-  "raw_sha256": "8bd285449f8dd3e728a3f8e67ac315a9976107affe81c51aae7dad5d8249f3bb",
-  "normalized_sha256": "18b3e724a8099b61b186a783c75ac4e986d60b73b265a48342193f508729b928",
+  "raw_sha256": "d327610f3b076680222a8a6d44322aeca461949691a6b1b3f2ac8ba49576a130",
+  "normalized_sha256": "f10ecbf5d43977d100336b24033b52c53d6bf1e03963e67db74fd56c94fcfddd",
   "validation_status": "PASS",
   "publication_status": "PUBLISHED",
   "publication_reason": null,
-  "last_success_at": "2026-11-02T04:57:54.190Z",
-  "generated_at": "2026-11-02T04:58:49.934Z"
+  "last_success_at": "2026-11-02T10:51:09.593Z",
+  "generated_at": "2026-11-05T08:17:50.678Z"
 }

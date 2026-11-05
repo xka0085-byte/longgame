@@ -1,15 +1,15 @@
 {
-  "run_id": "local-20261102045849934",
+  "run_id": "local-20261105081750678",
   "line": "compute-futures",
-  "commit": "27c2ef0eda421bb198af0707641a4396c99dadfc",
+  "commit": "c2b434ace426a7b3d514372c787e810fa4ea4b52",
   "contract_version": 1,
   "assurance_level": 2,
   "first_observed": "2026-10-20T16:00:48.085Z",
-  "raw_sha256": "8a4619d587908ee161d9720d574c82457f79ae87d7248984edaf660f4738d5d0",
-  "normalized_sha256": "ac314c864acd63417e0f59a341a25f791e2d1430fa5221bbaf39d1267c2cc2be",
+  "raw_sha256": "c8c4f9aafc3ac52c761e32eba06abf2c1b3af535053a2c60734181c692d53ad5",
+  "normalized_sha256": "fdcbd3ac0267a3a7ceb5bc0c731865280d6ebf2367a191af178dd902e36f5009",
   "validation_status": "PASS",
   "publication_status": "QUARANTINED",
   "publication_reason": "data-source-unavailable",
   "last_success_at": null,
-  "generated_at": "2026-11-02T04:58:49.934Z"
+  "generated_at": "2026-11-05T08:17:50.678Z"
 }

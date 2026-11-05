@@ -1,0 +1,20 @@
+{
+  "id": "eidas-tsl",
+  "title": "eIDAS 2.0 钱包推开",
+  "as_of": "2026-11-02",
+  "url": "https://xka0085-byte.github.io/longgame/lines/eidas-tsl.html",
+  "data_url": "https://raw.githubusercontent.com/xka0085-byte/longgame/main/data/lines/eidas-tsl.json",
+  "citation": "longgame eidas-tsl（2026-11-02）：EU 信任列表指针 42 个",
+  "scalar": {
+    "value": 42,
+    "unit": "个",
+    "label": "EU 信任列表指针 42 个"
+  },
+  "publication_status": "PUBLISHED",
+  "assurance_level": 2,
+  "contract_version": 1,
+  "raw_sha256": "651a71d086752e228fbcd6e70baaa216886efb479cc74229c2acfae920f091e9",
+  "generated_at": "2026-11-05T08:17:50.678Z",
+  "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/eidas-tsl.json 自洽",
+  "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
+}

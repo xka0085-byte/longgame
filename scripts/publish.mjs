@@ -60,6 +60,14 @@ function assuranceLevel(id) {
   return m ? Number(m[1]) : null;
 }
 
+// 同日重扫判定：comparedAgainst 与 scanDate 相同，说明这一 run 是同一批上游快照的日内重跑，
+// 它的 statusChanged 是扫描抖动，不是周变化。历史 run 没有 refreshOnly / comparisonKind 字段，
+// 只能靠 comparedAgainst 判定——所以这里不能依赖新字段，否则旧数据会绕过口径直接进标题。
+const sameDayRefresh = r => !!r && (
+  r.refreshOnly === true || r.comparisonKind === 'same-day'
+  || (typeof r.scanDate === 'string' && r.comparedAgainst === r.scanDate)
+);
+
 // 从各线数据里抽一个可分享标量。只在 PUBLISHED 状态下调用。
 function scalarOf(id, st) {
   if (!st) return null;
@@ -72,7 +80,7 @@ function scalarOf(id, st) {
     if (id === 'agent-dirs') return r.dirs && Object.values(r.dirs).length > 0 && Object.values(r.dirs).every(d => d.keyCount != null && d.keyCount > 0);
     // 只认跨周运行：周内刷新（同日/同周重跑）的 statusChanged 是扫描抖动，
     // 不能作为发布口径。没有跨周运行时退回上次的跨周记录，并标注为刷新。
-    if (id === 'trust-delta') return typeof r.scanDate === 'string' && r.summary?.serversThisWeek > 0 && !r.error && !r.refreshOnly;
+    if (id === 'trust-delta') return typeof r.scanDate === 'string' && r.summary?.serversThisWeek > 0 && !r.error && !sameDayRefresh(r);
     if (id === 'eidas-tsl') return r.pointerCount != null && r.pointerCount > 0;
     if (id === 'grid-queue') return r.eiaCounts != null
       && r.eiaCounts.planned != null && r.eiaCounts.plannedMW != null
@@ -86,25 +94,25 @@ function scalarOf(id, st) {
   // trust-delta 的"落后"有两种：本期采集失败，或本期只是周内刷新（不为周变化口径）。
   // 后者不是失败，措辞必须分开，否则会被读成采集出了问题。
   const suffix = stale
-    ? (id === 'trust-delta' && latest?.refreshOnly
-      ? `（最近一次采集 ${latest.scanDate} 为${latest.comparisonKind === 'same-day' ? '当日' : '同周'}刷新，只更新在册与状态快照；周变化仍按 ${good.comparedAgainst || '上次基线'} 起算的上一次跨周对比）`
+    ? (id === 'trust-delta' && sameDayRefresh(latest)
+      ? `（最近一次采集 ${latest.scanDate} 为${latest.comparedAgainst === latest.scanDate || latest.comparisonKind === 'same-day' ? '当日' : '同周'}刷新，只更新在册与状态快照；周变化仍按 ${good.comparedAgainst || '上次基线'} 起算的上一次跨周对比）`
       : `（最近一次成功采集于 ${stamp}，本期采集失败）`)
     : '';
   if (id === 'formd-sweep' && good?.queries) {
     const ok = good.queries.filter(q => typeof q.thisMonth === 'number');
     const sum = ok.reduce((a, q) => a + q.thisMonth, 0);
-    return { value: sum, label: `本月十个关键词合计新增 Form D 备案 ${sum} 件${suffix}`, unit: '件' };
+    return { asOf: good?.scanDate || stamp, value: sum, label: `本月十个关键词合计新增 Form D 备案 ${sum} 件${suffix}`, unit: '件' };
   }
   if (id === 'agent-dirs' && good?.dirs) {
     const keys = Object.values(good.dirs).reduce((a, d) => a + (d.keyCount || 0), 0);
-    return { value: keys, label: `当前登记的 agent 密钥 ${keys} 把${suffix}`, unit: '把' };
+    return { asOf: good?.scanDate || stamp, value: keys, label: `当前登记的 agent 密钥 ${keys} 把${suffix}`, unit: '把' };
   }
   if (id === 'eidas-tsl' && good?.pointerCount != null) {
-    return { value: good.pointerCount, label: `EU 信任列表指针 ${good.pointerCount} 个${suffix}`, unit: '个' };
+    return { asOf: good?.scanDate || stamp, value: good.pointerCount, label: `EU 信任列表指针 ${good.pointerCount} 个${suffix}`, unit: '个' };
   }
   if (id === 'sb253-docket' && good?.pages) {
     const links = good.links?.length ?? 0;
-    return { value: links, label: `CARB 披露相关链接 ${links} 条（首窗 11-10）${suffix}`, unit: '条' };
+    return { asOf: good?.scanDate || stamp, value: links, label: `CARB 披露相关链接 ${links} 条（首窗 11-10）${suffix}`, unit: '条' };
   }
   if (id === 'trust-delta' && good?.summary) {
     const s = good.summary;
@@ -112,6 +120,7 @@ function scalarOf(id, st) {
     const scope = good.baseline === true ? '（本轮为首个基线，无上一轮可比）'
       : good.comparedAgainstComplete === false ? '（上游本轮对比覆盖不完整，新增/消失数只作参考）' : '';
     return {
+      asOf: good?.scanDate || stamp,
       value: s.serversThisWeek,
       label: `Trust Directory 在册端点 ${s.serversThisWeek} 个，本轮判定变更 ${s.statusChanged} 次（转 PASS ${dir.toPass ?? 0}、离开 PASS ${dir.fromPass ?? 0}），消失 ${s.removed ?? 0} 个${scope}${suffix}`,
       unit: '个',
@@ -119,13 +128,14 @@ function scalarOf(id, st) {
   }
   if (id === 'grid-queue' && good?.eiaCounts) {
     const e = good.eiaCounts;
-    return { value: e.plannedMW, label: `EIA-860M ${e.file} 计划新增 ${e.planned} 行合计 ${e.plannedMW} MW，已取消 ${e.canceled} 行合计 ${e.canceledMW} MW${suffix}`, unit: 'MW' };
+    return { asOf: good?.scanDate || stamp, value: e.plannedMW, label: `EIA-860M ${e.file} 计划新增 ${e.planned} 行合计 ${e.plannedMW} MW，已取消 ${e.canceled} 行合计 ${e.canceledMW} MW${suffix}`, unit: 'MW' };
   }
   const alerts = st.radar?.alerts?.length ?? 0;
-  return alerts ? { value: alerts, label: `累计雷达命中 ${alerts} 条`, unit: '条' } : null;
+  return alerts ? { asOf: stamp, value: alerts, label: `累计雷达命中 ${alerts} 条`, unit: '条' } : null;
 }
 
 const items = [];
+const citations = [];
 const sitemap = [];
 const provenance = [];
 mkdirSync('assurance/provenance', { recursive: true });
@@ -169,14 +179,45 @@ for (const s of portfolio.series) {
 <div class="lbl">assurance_level: <b>${esc(prov.assurance_level ?? 'UNKNOWN')}</b> · 最近一次验证时间：<span class="d">${iso}</span></div>
 <div class="lbl">首次观测：<span class="d">${firstObserved ? esc(firstObserved.slice(0, 19).replace('T', ' ')) + ' UTC' : '外部托管，本仓库无本地采集记录'}</span>${firstObserved ? '（取本线最早一次采集 run 的时间戳，不追溯外推）' : ''}</div>
 ${unavailableBlock}
-${sc ? `<div class="kpi"><div class="n">${esc(sc.value)}</div><div class="lbl">${esc(sc.label)}</div><div class="d" style="margin-top:8px">数字生成于 ${day}</div></div>` : (pub.publication_status === 'PUBLISHED' ? '<div class="kpi"><div class="lbl">本期无新增可分享数字</div></div>' : '')}
+${sc ? `<div class="kpi"><div class="n">${esc(sc.value)}</div><div class="lbl">${esc(sc.label)}</div><div class="d" style="margin-top:8px">数字生成于 ${sc.asOf || day}${sc.asOf && sc.asOf !== day ? `（本期按 ${sc.asOf} 的采集数据发布，页面生成于 ${day}）` : ''}</div></div>` : (pub.publication_status === 'PUBLISHED' ? '<div class="kpi"><div class="lbl">本期无新增可分享数字</div></div>' : '')}
 <h2>最近雷达命中</h2><ul>${alerts.map(a => `<li><span class="d">${a.date.slice(0, 10)}</span> [${esc(a.channel)}] ${esc(a.title)}</li>`).join('') || '<li>无</li>'}</ul>
 <h2>数据变更</h2><ul>${events.map(e => `<li><span class="d">${e.date.slice(0, 10)}</span> ${esc(e.note || e.type)} ${esc(e.page || e.url || e.kid || '')}</li>`).join('') || '<li>无</li>'}</ul>
 <footer>longgame ${esc(s.id)}，数据自 2026-10 起，生成于 ${iso}。来源为公开数据，数字自带生成日期。引用格式：longgame ${esc(s.id)}（${day}）。方法与边界见 llms.txt。</footer></div>`;
   writeFileSync(join(STAGE_DOCS, 'lines', `${s.id}.html`), html);
   sitemap.push(`https://xka0085-byte.github.io/longgame/lines/${s.id}.html`);
   if (sc) items.push({ id: s.id, title: `${s.id}：${sc.label}`, date: iso, link: `lines/${s.id}.html` });
+
+  // 每条线一份机器可读引用：一句话可直接整句粘贴，带 as_of、线页、原始数据与复算入口。
+  // 无可发布标量时明写状态与原因，不写零、不拿旧值顶当期。
+  const cite = {
+    id: s.id,
+    title: s.driver || s.id,
+    as_of: sc?.asOf || day,
+    url: `https://xka0085-byte.github.io/longgame/lines/${s.id}.html`,
+    data_url: `https://raw.githubusercontent.com/xka0085-byte/longgame/main/data/lines/${s.id}.json`,
+    citation: sc
+      ? `longgame ${s.id}（${sc.asOf || day}）：${sc.label}`
+      : `longgame ${s.id}（${day}）：本期无新增可分享数字（${pub.publication_status}${pub.reason ? `：${pub.reason}` : ''}）`,
+    scalar: sc ? { value: sc.value, unit: sc.unit ?? null, label: sc.label } : null,
+    publication_status: pub.publication_status,
+    assurance_level: prov.assurance_level,
+    contract_version: prov.contract_version,
+    raw_sha256: prov.raw_sha256,
+    generated_at: iso,
+    reproduce: `node scripts/verify-data.mjs  # 校验 data/lines/${s.id}.json 自洽`,
+    license: '数据来自公开政府与监管页面；引用请保留 as_of 与 url',
+  };
+  writeFileSync(join(STAGE_DOCS, 'lines', `${s.id}.json`), JSON.stringify(cite, null, 2) + '\n');
+  citations.push(cite);
 }
+
+// 汇总引用：单文件入口，给 LLM / agent 一次拿全部可引用句，不用逐页抓。
+writeFileSync(join(STAGE_DOCS, 'citation.json'), JSON.stringify({
+  project: 'longgame',
+  updated: day,
+  how_to_cite: '整句引用 citation 字段；数字随 as_of 变化，跨期引用必须同时给出 as_of。',
+  lines: citations,
+}, null, 2) + '\n');
 
 // 公开溯源快照
 mkdirSync(join(STAGE_DOCS, 'assurance'), { recursive: true });
@@ -211,18 +252,26 @@ const BASE = `# longgame portfolio
 
 零人工自转的测量线组合，自 2026 年 10 月起。每条线是一个独立时间序列：采集做数据 diff，雷达每日扫外部消息，产物带生成日期与引用行。`;
 
+// 引用块置顶：AI 读 llms.txt 往往只看前几百字，引用行必须出现在方法与边界之前，
+// 否则会被当成正文的一部分而不是"可直接抄的一句"。
 const block = `<!-- AUTO-CITATIONS:START -->
-## 引用格式（自动生成 ${day}）
+## 一句话引用（自动生成 ${day}）
 
-${items.map(i => `- ${i.title}，自 2026-10，链接 https://xka0085-byte.github.io/longgame/${i.link}`).join('\n')}
+每条线一行，可整句引用。括号里的 as_of 是数字的数据日期，不是文档日期——跨期引用必须连 as_of 一起给。
+机器可读全文（全部线、含原始数据 hash 与复算命令）：https://xka0085-byte.github.io/longgame/citation.json
+
+${citations.map(c => `- ${c.citation}${c.url ? ` — ${c.url}` : ''}${c.data_url ? ` · 原始数据 ${c.data_url}` : ''}`).join('\n')}
 <!-- AUTO-CITATIONS:END -->`;
 
 let llms = existsSync('llms.txt') ? readFileSync('llms.txt', 'utf8') : BASE + '\n';
-if (llms.includes('<!-- AUTO-CITATIONS:START -->')) {
-  llms = llms.replace(/<!-- AUTO-CITATIONS:START -->[\s\S]*?<!-- AUTO-CITATIONS:END -->/, block);
-} else {
-  llms += '\n' + block + '\n';
-}
+// 先剥掉旧块（无论在哪个位置），再插到首个二级标题之前，保证块唯一且置顶。
+const stripped = llms
+  .replace(/<!-- AUTO-CITATIONS:START -->[\s\S]*?<!-- AUTO-CITATIONS:END -->\n?/g, '')
+  .replace(/\n{3,}/g, '\n\n');
+const at = stripped.search(/^## /m);
+llms = at === -1
+  ? stripped.trimEnd() + '\n\n' + block + '\n'
+  : stripped.slice(0, at) + block + '\n\n' + stripped.slice(at);
 writeFileSync(STAGE_LLMS, llms);
 
 // grid-queue 单行 CSV 同步导出：数据只来自 data/lines/grid-queue.json 最近一次含 eiaCounts 的运行。
