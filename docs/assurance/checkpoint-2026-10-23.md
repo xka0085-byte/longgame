@@ -1,14 +1,3 @@
----
-AIGC:
-    Label: "1"
-    ContentProducer: 001191440300708461136T1XGW3
-    ProduceID: 8172bbfeb60efe68b8a8218b437d3563_7472e8f1cead11f1b37d525400248c00
-    ReservedCode1: v1KJzgZAfHgUtJbIdOuA/4W84Tgmi+Y9nDwxw2osPYzAby2+LIZGpEQjgCh3d4rv4rF3wsFEi7JsGzXuUpQ/5ZgtAI3bp7djj5rJET8jbGuK3PXwf+/Tr+DBEoTg57zalIRfdIvJqUwrQHidRq/u4ZsgNd5Ga7Ln4KRHTftiUSsMtaiE6twb3htozbI=
-    ContentPropagator: 001191440300708461136T1XGW3
-    PropagateID: 8172bbfeb60efe68b8a8218b437d3563_7472e8f1cead11f1b37d525400248c00
-    ReservedCode2: v1KJzgZAfHgUtJbIdOuA/4W84Tgmi+Y9nDwxw2osPYzAby2+LIZGpEQjgCh3d4rv4rF3wsFEi7JsGzXuUpQ/5ZgtAI3bp7djj5rJET8jbGuK3PXwf+/Tr+DBEoTg57zalIRfdIvJqUwrQHidRq/u4ZsgNd5Ga7Ln4KRHTftiUSsMtaiE6twb3htozbI=
----
-
 # 2026-10-23 夜间核查记录
 
 生成时间：2026-10-23 02:40 (本地 UTC-04:00，即 2026-10-23T06:40Z)
@@ -126,4 +115,3 @@ EXIT=0
 - 新增/覆盖：`docs/assurance/checkpoint-2026-10-23.md`（本文件）
 - 本次改动 commit：由承载本文件的提交提供（`git log -1 --format=%H -- docs/assurance/checkpoint-2026-10-23.md`），最终 SHA 见交付回复。
 - 未修改其他任何文件；`assurance-gate.mjs` 在提交前返回 `PASS (4/4 checks executed)`。
-*（内容由AI生成，仅供参考）*

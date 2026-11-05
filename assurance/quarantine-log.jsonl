@@ -34,3 +34,5 @@
 {"run_id":"local-20261105082546063","line":"compute-futures","at":"2026-11-05T08:25:46.063Z","reason":"data-source-unavailable","last_success_at":null}
 {"run_id":"local-20261105083244861","line":"triggers","at":"2026-11-05T08:32:44.861Z","reason":"data-source-unavailable","last_success_at":null}
 {"run_id":"local-20261105083244861","line":"compute-futures","at":"2026-11-05T08:32:44.861Z","reason":"data-source-unavailable","last_success_at":null}
+{"run_id":"local-20261105084726225","line":"triggers","at":"2026-11-05T08:47:26.225Z","reason":"data-source-unavailable","last_success_at":null}
+{"run_id":"local-20261105084726225","line":"compute-futures","at":"2026-11-05T08:47:26.225Z","reason":"data-source-unavailable","last_success_at":null}

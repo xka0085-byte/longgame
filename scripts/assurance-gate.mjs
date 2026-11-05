@@ -8,6 +8,7 @@ import { spawnSync } from 'node:child_process';
 import { writeGateResult } from './lib/assurance-gate.mjs';
 
 const CHECKS = [
+  ['doc-hygiene', 'scripts/check-doc-hygiene.mjs'],
   ['data', 'scripts/verify-data.mjs'],
   ['contracts', 'scripts/validate-contracts.mjs'],
   ['fixtures', 'scripts/run-fixtures.mjs'],

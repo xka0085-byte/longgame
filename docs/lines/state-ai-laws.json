@@ -11,7 +11,7 @@
   "assurance_level": 2,
   "contract_version": 1,
   "raw_sha256": "56160ab6ef6b30fced3ba9d0e0fa26a914ab68ccafa3304bf41fa11fe2244b73",
-  "generated_at": "2026-11-05T08:32:44.861Z",
+  "generated_at": "2026-11-05T08:47:26.225Z",
   "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/state-ai-laws.json 自洽",
   "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
 }
