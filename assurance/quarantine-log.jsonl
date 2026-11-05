@@ -30,3 +30,5 @@
 {"run_id":"local-20261105081750678","line":"compute-futures","at":"2026-11-05T08:17:50.678Z","reason":"data-source-unavailable","last_success_at":null}
 {"run_id":"local-20261105082135737","line":"triggers","at":"2026-11-05T08:21:35.737Z","reason":"data-source-unavailable","last_success_at":null}
 {"run_id":"local-20261105082135737","line":"compute-futures","at":"2026-11-05T08:21:35.737Z","reason":"data-source-unavailable","last_success_at":null}
+{"run_id":"local-20261105082546063","line":"triggers","at":"2026-11-05T08:25:46.063Z","reason":"data-source-unavailable","last_success_at":null}
+{"run_id":"local-20261105082546063","line":"compute-futures","at":"2026-11-05T08:25:46.063Z","reason":"data-source-unavailable","last_success_at":null}
