@@ -70,7 +70,9 @@ function scalarOf(id, st) {
     if (r.eiaCounts?.missingFields?.length) return false;
     if (id === 'formd-sweep') return r.queries?.length > 0 && r.queries.every(q => typeof q.thisMonth === 'number');
     if (id === 'agent-dirs') return r.dirs && Object.values(r.dirs).length > 0 && Object.values(r.dirs).every(d => d.keyCount != null && d.keyCount > 0);
-    if (id === 'trust-delta') return typeof r.scanDate === 'string' && r.summary?.serversThisWeek > 0 && !r.error;
+    // 只认跨周运行：周内刷新（同日/同周重跑）的 statusChanged 是扫描抖动，
+    // 不能作为发布口径。没有跨周运行时退回上次的跨周记录，并标注为刷新。
+    if (id === 'trust-delta') return typeof r.scanDate === 'string' && r.summary?.serversThisWeek > 0 && !r.error && !r.refreshOnly;
     if (id === 'eidas-tsl') return r.pointerCount != null && r.pointerCount > 0;
     if (id === 'grid-queue') return r.eiaCounts != null
       && r.eiaCounts.planned != null && r.eiaCounts.plannedMW != null
@@ -81,7 +83,13 @@ function scalarOf(id, st) {
   if (!good) return null;
   const stale = latest && good !== latest;
   const stamp = good?.date?.slice(0, 10) || day;
-  const suffix = stale ? `（最近一次成功采集于 ${stamp}，本期采集失败）` : '';
+  // trust-delta 的"落后"有两种：本期采集失败，或本期只是周内刷新（不为周变化口径）。
+  // 后者不是失败，措辞必须分开，否则会被读成采集出了问题。
+  const suffix = stale
+    ? (id === 'trust-delta' && latest?.refreshOnly
+      ? `（最近一次采集 ${latest.scanDate} 为${latest.comparisonKind === 'same-day' ? '当日' : '同周'}刷新，只更新在册与状态快照；周变化仍按 ${good.comparedAgainst || '上次基线'} 起算的上一次跨周对比）`
+      : `（最近一次成功采集于 ${stamp}，本期采集失败）`)
+    : '';
   if (id === 'formd-sweep' && good?.queries) {
     const ok = good.queries.filter(q => typeof q.thisMonth === 'number');
     const sum = ok.reduce((a, q) => a + q.thisMonth, 0);

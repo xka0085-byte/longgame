@@ -301,9 +301,12 @@ if (mode === 'collect' && line.collect) {
       const r = await fetch(c.url, { headers: UA, signal: AbortSignal.timeout(30000) });
       if (!r.ok) throw new Error(`trustdir http-${r.status}`);
       const doc = await r.json();
-      const prevScan = [...st.collect.runs]
-        .reverse()
-        .find((x) => typeof x.scanDate === 'string' && x.scanDate !== doc.scanDate);
+      // 对比锚点只认上一个"跨周且上一份基线完整"的运行。周内刷新（同日/同周重跑）
+      // 的记录本身是抖动快照，拿它当基准会把抖动读成趋势；没有跨周记录时才回退到
+      // 最近一条不同扫描日的运行。
+      const revRuns = [...st.collect.runs].reverse();
+      const prevScan = revRuns.find((x) => x.baselineEligible === true)
+        ?? revRuns.find((x) => typeof x.scanDate === 'string' && x.scanDate !== doc.scanDate);
       const { run: built, events, errors } = buildTrustDeltaRun(doc, {
         nowISO,
         prevScan,
@@ -315,14 +318,19 @@ if (mode === 'collect' && line.collect) {
         collectFailure = true;
         console.error(`${lineId}: registry-changes rejected: ${errors.join('; ')}`);
       }
-      const dup = typeof run.scanDate === 'string' && st.collect.runs.some((x) => x.scanDate === run.scanDate);
+      const dup = typeof run.scanDate === 'string' && st.collect.runs.some((x) => x.scanDate === run.scanDate && x.comparedAgainst === run.comparedAgainst);
       if (dup) {
-        // 手动 dispatch 撞上同一扫描日时，保留这次运行痕迹但不重复产生事件，
+        // 手动 dispatch 撞上同一次对比时，保留这次运行痕迹但不重复产生事件，
         // 否则一次 diff 会在事件流里出现两遍，月报会重复计数。
         run.duplicateScan = true;
-        console.warn(`${lineId}: scanDate ${run.scanDate} already recorded, events not appended`);
+        console.warn(`${lineId}: ${run.scanDate} vs ${run.comparedAgainst ?? 'none'} already recorded, events not appended`);
       } else {
         st.collect.events.push(...events);
+      }
+      // 周内刷新只更新 status 快照：事件流不动，但要在日志里说清楚，避免下次看到
+      // "success 但事件没长"时误以为采集失败。
+      if (run.refreshOnly) {
+        console.warn(`${lineId}: ${run.comparisonKind} refresh (scanDate ${run.scanDate} vs ${run.comparedAgainst ?? 'none'}), status updated, weekly events withheld`);
       }
       if (!collectFailure) run.status = 'ok';
     } catch (e) {
