@@ -3,7 +3,7 @@
   "title": "agent 支付轨道 2026 起跑",
   "as_of": "2026-11-02",
   "url": "https://xka0085-byte.github.io/longgame/lines/agent-dirs.html",
-  "data_url": "https://raw.githubusercontent.com/xka0085-byte/longgame/main/data/lines/agent-dirs.json",
+  "data_url": "https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/agent-dirs.json",
   "citation": "longgame agent-dirs（2026-11-02）：当前登记的 agent 密钥 6 把",
   "scalar": {
     "value": 6,
@@ -14,7 +14,7 @@
   "assurance_level": 2,
   "contract_version": 1,
   "raw_sha256": "bc225ff2110c3ebe1a081671b6c807ccead5493f3331ac59abc6275a3961e454",
-  "generated_at": "2026-11-05T08:21:35.737Z",
+  "generated_at": "2026-11-05T08:25:46.063Z",
   "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/agent-dirs.json 自洽",
   "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
 }

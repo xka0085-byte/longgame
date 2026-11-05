@@ -194,7 +194,7 @@ ${sc ? `<div class="kpi"><div class="n">${esc(sc.value)}</div><div class="lbl">$
     title: s.driver || s.id,
     as_of: sc?.asOf || day,
     url: `https://xka0085-byte.github.io/longgame/lines/${s.id}.html`,
-    data_url: `https://raw.githubusercontent.com/xka0085-byte/longgame/main/data/lines/${s.id}.json`,
+    data_url: `https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/${s.id}.json`,
     citation: sc
       ? `longgame ${s.id}（${sc.asOf || day}）：${sc.label}`
       : `longgame ${s.id}（${day}）：本期无新增可分享数字（${pub.publication_status}${pub.reason ? `：${pub.reason}` : ''}）`,
