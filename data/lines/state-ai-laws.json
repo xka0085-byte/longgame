@@ -297,6 +297,24 @@
     "channel": "hn",
     "query": "state AI law",
     "count": 1
+   },
+   {
+    "date": "2026-11-05T13:00:16.306Z",
+    "channel": "gn",
+    "query": "state AI law enforcement",
+    "count": 5
+   },
+   {
+    "date": "2026-11-05T13:00:16.306Z",
+    "channel": "gn",
+    "query": "Colorado AI Act",
+    "count": 5
+   },
+   {
+    "date": "2026-11-05T13:00:16.306Z",
+    "channel": "hn",
+    "query": "state AI law",
+    "count": 2
    }
   ],
   "items": [
@@ -326,6 +344,24 @@
     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOMER1QW1ZQldaOWU3RDd4QjVUdWZJcUlabUxKX1BLd2NubzBiV2dpdE02WTRyQW5wUGdUUVdMV2xZRXpBOUtnQnFfSFZ5dXhPY3pCdnBCLTJVRUI3VzlleXdPbEltV20zTmY5UXRIQ1QtMTNCODdUdHdHdWNPU1hCb0V4TS04LVBkbWlmRE0wYjJ3b2FvdWd5R1NPTDlZMWRQZ0gyLTJHR1dBVmpYM3U3QlRmcUNSZzA?oc=5",
     "date": "Fri, 28 Aug 2026 07:00:00 GMT",
     "foundAt": "2026-10-22T09:47:27.927Z"
+   },
+   {
+    "line": "state-ai-laws",
+    "channel": "gn",
+    "query": "Colorado AI Act",
+    "title": "Connecticut Enacts AI Framework While Colorado Scales Back Landmark AI Law - Wiley Law",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNTUZrYkpmamtwT2xTTnlRc0F0T1Y5SUVPQUozMHhTakt3QnVTcTBCZExfQndwd0FsVHpaNldVUTM1TDJCNndzN3kwaEM3QmVLSTgwSVQzbVU3ZzZwN1JUcVVmaUNGVF9DTmdOOHowbzhQNENrZUIwQUVWeFVrYmNEMTltOHpHRXhOTnBGRUlCSTFKV183OExVTTAyZXRYRHc5SFl4Uw?oc=5",
+    "date": "Tue, 02 Jun 2026 07:00:00 GMT",
+    "foundAt": "2026-11-05T13:00:16.306Z"
+   },
+   {
+    "line": "state-ai-laws",
+    "channel": "gn",
+    "query": "Colorado AI Act",
+    "title": "Colorado’s New AI Act Targets Automated Decision-Making for Consequential Decisions - Ogletree",
+    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNZTdXU0l2T3pISWdTNHFOa25pQ05HY0RiSlczS1FPVWZOSzZndVdYZ3JHTlRnTFdNYUlnV3h1c25URndVZmVRSk9RT1lONmdiSmpGd3l6UUpHNUxIX1VqTnlJeGNrNVluN0MyTHNBWklBYmNPV2R3Nk1aMUFib1dQSjVENk5rbmpYc1FOMFhzODNWS1JxRGFqUzFiVWlWMjNnTkhTQWJhV1BxX29RUzdrSzNFYWFYNm9ZZHpnRmNvckpva3FSd3psUUM2ZUVpUVk?oc=5",
+    "date": "Tue, 26 May 2026 07:00:00 GMT",
+    "foundAt": "2026-11-05T13:00:16.306Z"
    }
   ],
   "alerts": [
@@ -345,6 +381,18 @@
     "date": "2026-10-22T09:47:27.927Z",
     "title": "Colorado Unveils New Proposed Rules Implementing Revamped AI Act - Ogletree",
     "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOMER1QW1ZQldaOWU3RDd4QjVUdWZJcUlabUxKX1BLd2NubzBiV2dpdE02WTRyQW5wUGdUUVdMV2xZRXpBOUtnQnFfSFZ5dXhPY3pCdnBCLTJVRUI3VzlleXdPbEltV20zTmY5UXRIQ1QtMTNCODdUdHdHdWNPU1hCb0V4TS04LVBkbWlmRE0wYjJ3b2FvdWd5R1NPTDlZMWRQZ0gyLTJHR1dBVmpYM3U3QlRmcUNSZzA?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-05T13:00:16.306Z",
+    "title": "Connecticut Enacts AI Framework While Colorado Scales Back Landmark AI Law - Wiley Law",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNTUZrYkpmamtwT2xTTnlRc0F0T1Y5SUVPQUozMHhTakt3QnVTcTBCZExfQndwd0FsVHpaNldVUTM1TDJCNndzN3kwaEM3QmVLSTgwSVQzbVU3ZzZwN1JUcVVmaUNGVF9DTmdOOHowbzhQNENrZUIwQUVWeFVrYmNEMTltOHpHRXhOTnBGRUlCSTFKV183OExVTTAyZXRYRHc5SFl4Uw?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-05T13:00:16.306Z",
+    "title": "Colorado’s New AI Act Targets Automated Decision-Making for Consequential Decisions - Ogletree",
+    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNZTdXU0l2T3pISWdTNHFOa25pQ05HY0RiSlczS1FPVWZOSzZndVdYZ3JHTlRnTFdNYUlnV3h1c25URndVZmVRSk9RT1lONmdiSmpGd3l6UUpHNUxIX1VqTnlJeGNrNVluN0MyTHNBWklBYmNPV2R3Nk1aMUFib1dQSjVENk5rbmpYc1FOMFhzODNWS1JxRGFqUzFiVWlWMjNnTkhTQWJhV1BxX29RUzdrSzNFYWFYNm9ZZHpnRmNvckpva3FSd3psUUM2ZUVpUVk?oc=5",
     "channel": "gn"
    }
   ]

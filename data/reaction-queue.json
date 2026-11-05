@@ -413,7 +413,88 @@
    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNOUk3QVBTdng1VEZqMVBsaGZoZ1hwbk41VGlPRHQ4bnBtdmw2STV0bFpCblI4eHFFdkFuUm1hY3RaZFR5SkRwMDZ0ME1xbVpaNW9yN3kydEhvWEctdkhJUkpMcWZFd1BTTGFLZVVMTHJWNjR6VXo1aXQ0Q3pORWQydUN0bnJqRTBQb1VQUFZlQzhVSVlhd25IcGxRTmo4QThGSFNhb0trdDNEVkNlTXF2SGdkeWZNZlpRNGFTeUsyVTlNWTlnakNhYWFfLVJXZG5FWjlWWnd3?oc=5",
    "type": "noise",
    "action": "只记录"
+  },
+  {
+   "date": "2026-11-05T13:00:24.892Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Show HN: Hosted MCP server for 16 crypto exchanges and MetaTrader 5",
+   "url": "https://github.com/AlgoVesta/mcp",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-05T13:00:24.892Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "What is your biggest concern when building an MCP server?",
+   "url": "https://news.ycombinator.com/item?id=50368160",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-05T13:00:24.892Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Show HN: QAmcp – an open-source tester and monitor for MCP servers",
+   "url": "https://qamcp.dev/?from=hackernews",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-05T13:00:24.892Z",
+   "line": "triggers",
+   "channel": "gn",
+   "title": "$75K in premiums, no answers - and the agent who collected them tried to walk - Insurance Business",
+   "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQUWRIMzFacUdsX0kwSmQ1SEtDX3dPcHlDNF9OaC1QZU9jUVNGbVRrSkY5aXRHNGhxY2FkaEdqSy1INDhKZWZkZmU3aFJiT05UZ0t1OGJpa1IwbzA2YjNUTkRJbjdZeGZCSHZuRkFIRmFIUVVNeWRXUUtNMEg1c0Y4ZnFWWEZrbHZ5ekZHTzRtY3VSdERVdXRsV2NPZFZzUXVodG1OeVVkWDJGRFJPWEJaOFRORk4yT0JuZllHMnJwY3g2Qk5jMXRZd3Q5MWlYVDI2aDUxQjJfd0F5R3lmbVRnM0NvZFl5M2JW?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-05T13:00:24.892Z",
+   "line": "triggers",
+   "channel": "gn",
+   "title": "Capgemini: Multi-agent AI moves into banking and insurance, but orchestration remains limited - Finextra Research",
+   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOc0Nzck5UOFliSmRnTmVFYnRQa3NHQVJiRVhsNUY0ZGNuUEpLNDJaY3ItTDJZT2hQbFk5dzFWVWFXcWVIWkdzOGVNWlY3MURHZ0JJQzA0U1VJcG1JV3RZaVdMeHRUZmdCcllsUWZlRlV0cWd3dk9udXFoa0NwVTI2RS1Mb3l6bE9DMnZUcE10Nm1fNTlxODQzSGNqYVdhREt3blBGWkRGU2FZa2RhdTZSZXNqeXl0QTR2dF9OZHFNZVpkQXJhM3JqTWE5VGgzcG8?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-05T13:00:24.892Z",
+   "line": "triggers",
+   "channel": "gn",
+   "title": "Just 4% of U.S. homeowners carry flood insurance — FEMA's new online tool lets you buy coverage without an agent - Yahoo Finance",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNRVZJakVYQ0VKSlE3cjBNVjI4MV9wVXFuaUt1ckVTeEJFMThiOGN4dEZvTWMyNzA0dlh5WkRPek9rVVVheUJGd3FFV200b2ltLWo2RW1RdDh5VHF6cDNDV3VRRURwRFNveXFmUkl4WE50azd4bkxpbEhtRjdoUDRiQmZXUV84UkJscXdRRS1aaDY?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-05T13:00:24.892Z",
+   "line": "triggers",
+   "channel": "gn",
+   "title": "Vertafore Launches Velocity Change Request Agent - - Insurance Edge",
+   "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNbzRuNDlQa2FxVXRRVzlUYWt3ODhQYTB1Zmp4RmNrVTZPaXZ3OHRmYnVkVkpPdmp2V0tJcndTMTE3dm1rMzhHWmJSMUt3ZkFrUkM5YmlKbGlsLWNVcG1VY1ptRTg4aTFLTk1uaG05WVd0Y2czNGVlYXFsM1psc0pWTTk2eGdlbDBETFR5WEtieUc?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-05T13:00:24.892Z",
+   "line": "state-ai-laws",
+   "channel": "gn",
+   "title": "Connecticut Enacts AI Framework While Colorado Scales Back Landmark AI Law - Wiley Law",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNTUZrYkpmamtwT2xTTnlRc0F0T1Y5SUVPQUozMHhTakt3QnVTcTBCZExfQndwd0FsVHpaNldVUTM1TDJCNndzN3kwaEM3QmVLSTgwSVQzbVU3ZzZwN1JUcVVmaUNGVF9DTmdOOHowbzhQNENrZUIwQUVWeFVrYmNEMTltOHpHRXhOTnBGRUlCSTFKV183OExVTTAyZXRYRHc5SFl4Uw?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-05T13:00:24.892Z",
+   "line": "state-ai-laws",
+   "channel": "gn",
+   "title": "Colorado’s New AI Act Targets Automated Decision-Making for Consequential Decisions - Ogletree",
+   "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNZTdXU0l2T3pISWdTNHFOa25pQ05HY0RiSlczS1FPVWZOSzZndVdYZ3JHTlRnTFdNYUlnV3h1c25URndVZmVRSk9RT1lONmdiSmpGd3l6UUpHNUxIX1VqTnlJeGNrNVluN0MyTHNBWklBYmNPV2R3Nk1aMUFib1dQSjVENk5rbmpYc1FOMFhzODNWS1JxRGFqUzFiVWlWMjNnTkhTQWJhV1BxX29RUzdrSzNFYWFYNm9ZZHpnRmNvckpva3FSd3psUUM2ZUVpUVk?oc=5",
+   "type": "noise",
+   "action": "只记录"
   }
  ],
- "updated": "2026-11-04T12:52:42.881Z"
+ "updated": "2026-11-05T13:00:24.892Z"
 }

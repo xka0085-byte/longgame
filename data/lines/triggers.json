@@ -801,6 +801,54 @@
     "channel": "hn",
     "query": "Cloudflare Monetization Gateway",
     "count": 0
+   },
+   {
+    "date": "2026-11-05T12:59:58.680Z",
+    "channel": "fr",
+    "query": "compute derivatives",
+    "count": 0
+   },
+   {
+    "date": "2026-11-05T12:59:58.680Z",
+    "channel": "fr",
+    "query": "autonomous agent income",
+    "count": 0
+   },
+   {
+    "date": "2026-11-05T12:59:58.680Z",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "count": 5
+   },
+   {
+    "date": "2026-11-05T12:59:58.680Z",
+    "channel": "gn",
+    "query": "agent insurance",
+    "count": 5
+   },
+   {
+    "date": "2026-11-05T12:59:58.680Z",
+    "channel": "gn",
+    "query": "AI personality rights bill",
+    "count": 5
+   },
+   {
+    "date": "2026-11-05T12:59:58.680Z",
+    "channel": "hn",
+    "query": "compute futures",
+    "count": 2
+   },
+   {
+    "date": "2026-11-05T12:59:58.680Z",
+    "channel": "hn",
+    "query": "agent insurance",
+    "count": 1
+   },
+   {
+    "date": "2026-11-05T12:59:58.680Z",
+    "channel": "hn",
+    "query": "Cloudflare Monetization Gateway",
+    "count": 0
    }
   ],
   "items": [
@@ -929,6 +977,42 @@
     "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4wN092NXVzeERtVXBZbWY3cDNESV9WTW9icUtkcTdXdThvU2dVX0pfWFA5OEhxOFFkZjdhclZUbUJpR3RGUmhqRmtLX2pqSDl0dHNWdk1ZcEgxMjFnaTk3LW9Pc2p1Y0hIUmNDemR4TWpBWDlYYmczeUVWUQ?oc=5",
     "date": "Fri, 30 Oct 2026 15:01:11 GMT",
     "foundAt": "2026-10-31T10:48:55.707Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "$75K in premiums, no answers - and the agent who collected them tried to walk - Insurance Business",
+    "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQUWRIMzFacUdsX0kwSmQ1SEtDX3dPcHlDNF9OaC1QZU9jUVNGbVRrSkY5aXRHNGhxY2FkaEdqSy1INDhKZWZkZmU3aFJiT05UZ0t1OGJpa1IwbzA2YjNUTkRJbjdZeGZCSHZuRkFIRmFIUVVNeWRXUUtNMEg1c0Y4ZnFWWEZrbHZ5ekZHTzRtY3VSdERVdXRsV2NPZFZzUXVodG1OeVVkWDJGRFJPWEJaOFRORk4yT0JuZllHMnJwY3g2Qk5jMXRZd3Q5MWlYVDI2aDUxQjJfd0F5R3lmbVRnM0NvZFl5M2JW?oc=5",
+    "date": "Wed, 04 Nov 2026 19:45:20 GMT",
+    "foundAt": "2026-11-05T12:59:58.680Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Capgemini: Multi-agent AI moves into banking and insurance, but orchestration remains limited - Finextra Research",
+    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOc0Nzck5UOFliSmRnTmVFYnRQa3NHQVJiRVhsNUY0ZGNuUEpLNDJaY3ItTDJZT2hQbFk5dzFWVWFXcWVIWkdzOGVNWlY3MURHZ0JJQzA0U1VJcG1JV3RZaVdMeHRUZmdCcllsUWZlRlV0cWd3dk9udXFoa0NwVTI2RS1Mb3l6bE9DMnZUcE10Nm1fNTlxODQzSGNqYVdhREt3blBGWkRGU2FZa2RhdTZSZXNqeXl0QTR2dF9OZHFNZVpkQXJhM3JqTWE5VGgzcG8?oc=5",
+    "date": "Thu, 05 Nov 2026 05:00:00 GMT",
+    "foundAt": "2026-11-05T12:59:58.680Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Just 4% of U.S. homeowners carry flood insurance — FEMA's new online tool lets you buy coverage without an agent - Yahoo Finance",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNRVZJakVYQ0VKSlE3cjBNVjI4MV9wVXFuaUt1ckVTeEJFMThiOGN4dEZvTWMyNzA0dlh5WkRPek9rVVVheUJGd3FFV200b2ltLWo2RW1RdDh5VHF6cDNDV3VRRURwRFNveXFmUkl4WE50azd4bkxpbEhtRjdoUDRiQmZXUV84UkJscXdRRS1aaDY?oc=5",
+    "date": "Wed, 04 Nov 2026 19:48:26 GMT",
+    "foundAt": "2026-11-05T12:59:58.680Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Vertafore Launches Velocity Change Request Agent - - Insurance Edge",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNbzRuNDlQa2FxVXRRVzlUYWt3ODhQYTB1Zmp4RmNrVTZPaXZ3OHRmYnVkVkpPdmp2V0tJcndTMTE3dm1rMzhHWmJSMUt3ZkFrUkM5YmlKbGlsLWNVcG1VY1ptRTg4aTFLTk1uaG05WVd0Y2czNGVlYXFsM1psc0pWTTk2eGdlbDBETFR5WEtieUc?oc=5",
+    "date": "Thu, 05 Nov 2026 11:48:35 GMT",
+    "foundAt": "2026-11-05T12:59:58.680Z"
    }
   ],
   "alerts": [
@@ -1014,6 +1098,30 @@
     "date": "2026-10-31T10:48:55.707Z",
     "title": "Do you need AI agent liability insurance? What to know before you sign up - ZDNET",
     "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE4wN092NXVzeERtVXBZbWY3cDNESV9WTW9icUtkcTdXdThvU2dVX0pfWFA5OEhxOFFkZjdhclZUbUJpR3RGUmhqRmtLX2pqSDl0dHNWdk1ZcEgxMjFnaTk3LW9Pc2p1Y0hIUmNDemR4TWpBWDlYYmczeUVWUQ?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-05T12:59:58.680Z",
+    "title": "$75K in premiums, no answers - and the agent who collected them tried to walk - Insurance Business",
+    "url": "https://news.google.com/rss/articles/CBMi6AFBVV95cUxQUWRIMzFacUdsX0kwSmQ1SEtDX3dPcHlDNF9OaC1QZU9jUVNGbVRrSkY5aXRHNGhxY2FkaEdqSy1INDhKZWZkZmU3aFJiT05UZ0t1OGJpa1IwbzA2YjNUTkRJbjdZeGZCSHZuRkFIRmFIUVVNeWRXUUtNMEg1c0Y4ZnFWWEZrbHZ5ekZHTzRtY3VSdERVdXRsV2NPZFZzUXVodG1OeVVkWDJGRFJPWEJaOFRORk4yT0JuZllHMnJwY3g2Qk5jMXRZd3Q5MWlYVDI2aDUxQjJfd0F5R3lmbVRnM0NvZFl5M2JW?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-05T12:59:58.680Z",
+    "title": "Capgemini: Multi-agent AI moves into banking and insurance, but orchestration remains limited - Finextra Research",
+    "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOc0Nzck5UOFliSmRnTmVFYnRQa3NHQVJiRVhsNUY0ZGNuUEpLNDJaY3ItTDJZT2hQbFk5dzFWVWFXcWVIWkdzOGVNWlY3MURHZ0JJQzA0U1VJcG1JV3RZaVdMeHRUZmdCcllsUWZlRlV0cWd3dk9udXFoa0NwVTI2RS1Mb3l6bE9DMnZUcE10Nm1fNTlxODQzSGNqYVdhREt3blBGWkRGU2FZa2RhdTZSZXNqeXl0QTR2dF9OZHFNZVpkQXJhM3JqTWE5VGgzcG8?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-05T12:59:58.680Z",
+    "title": "Just 4% of U.S. homeowners carry flood insurance — FEMA's new online tool lets you buy coverage without an agent - Yahoo Finance",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNRVZJakVYQ0VKSlE3cjBNVjI4MV9wVXFuaUt1ckVTeEJFMThiOGN4dEZvTWMyNzA0dlh5WkRPek9rVVVheUJGd3FFV200b2ltLWo2RW1RdDh5VHF6cDNDV3VRRURwRFNveXFmUkl4WE50azd4bkxpbEhtRjdoUDRiQmZXUV84UkJscXdRRS1aaDY?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-05T12:59:58.680Z",
+    "title": "Vertafore Launches Velocity Change Request Agent - - Insurance Edge",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNbzRuNDlQa2FxVXRRVzlUYWt3ODhQYTB1Zmp4RmNrVTZPaXZ3OHRmYnVkVkpPdmp2V0tJcndTMTE3dm1rMzhHWmJSMUt3ZkFrUkM5YmlKbGlsLWNVcG1VY1ptRTg4aTFLTk1uaG05WVd0Y2czNGVlYXFsM1psc0pWTTk2eGdlbDBETFR5WEtieUc?oc=5",
     "channel": "gn"
    }
   ]

@@ -1044,6 +1044,24 @@
     "channel": "hn",
     "query": "MCP server",
     "count": 5
+   },
+   {
+    "date": "2026-11-05T12:59:55.915Z",
+    "channel": "hn",
+    "query": "MCP registry",
+    "count": 0
+   },
+   {
+    "date": "2026-11-05T12:59:55.915Z",
+    "channel": "gn",
+    "query": "MCP server registry",
+    "count": 5
+   },
+   {
+    "date": "2026-11-05T12:59:55.915Z",
+    "channel": "hn",
+    "query": "MCP server",
+    "count": 3
    }
   ],
   "items": [
@@ -1145,6 +1163,33 @@
     "url": "https://www.chainguard.dev/unchained/every-manual-page-in-chainguard-os-now-readable-by-your-agent",
     "date": "2026-11-03T21:24:51Z",
     "foundAt": "2026-11-04T12:52:30.824Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: Hosted MCP server for 16 crypto exchanges and MetaTrader 5",
+    "url": "https://github.com/AlgoVesta/mcp",
+    "date": "2026-11-05T05:27:53Z",
+    "foundAt": "2026-11-05T12:59:55.915Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "What is your biggest concern when building an MCP server?",
+    "url": "https://news.ycombinator.com/item?id=50368160",
+    "date": "2026-11-04T16:41:46Z",
+    "foundAt": "2026-11-05T12:59:55.915Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: QAmcp – an open-source tester and monitor for MCP servers",
+    "url": "https://qamcp.dev/?from=hackernews",
+    "date": "2026-11-04T14:32:47Z",
+    "foundAt": "2026-11-05T12:59:55.915Z"
    }
   ],
   "alerts": [
@@ -1212,6 +1257,24 @@
     "date": "2026-11-04T12:52:30.824Z",
     "title": "Show HN: An MCP Server for Manpages",
     "url": "https://www.chainguard.dev/unchained/every-manual-page-in-chainguard-os-now-readable-by-your-agent",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-05T12:59:55.915Z",
+    "title": "Show HN: Hosted MCP server for 16 crypto exchanges and MetaTrader 5",
+    "url": "https://github.com/AlgoVesta/mcp",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-05T12:59:55.915Z",
+    "title": "What is your biggest concern when building an MCP server?",
+    "url": "https://news.ycombinator.com/item?id=50368160",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-05T12:59:55.915Z",
+    "title": "Show HN: QAmcp – an open-source tester and monitor for MCP servers",
+    "url": "https://qamcp.dev/?from=hackernews",
     "channel": "hn"
    }
   ]
