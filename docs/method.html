@@ -83,7 +83,15 @@ sha256sum data/lines/sb253-docket.json   # 与快照里的 raw_sha256 对齐</pr
 <li>任何一页的"数字"都带生成日期；引用格式见 <a href="https://xka0085-byte.github.io/longgame/llms.txt">llms.txt</a>。</li>
 </ul>
 
-<footer>longgame · 方法与边界公开可查 · 本页事实截至 2026-10-30（gate head df87cd6）。
+<h2>7. 口径变更记录</h2>
+<p>判定定义发生过变化的，全部记在这里。旧口径产生的历史事件保留原样，不重建、不回填，也不追改已经发出的数字。</p>
+<table>
+<tr><th>生效</th><th>线</th><th>变更</th><th>原因与影响</th></tr>
+<tr><td>2026-11-04 修复，下一个跨周采集起生效</td><td>trust-delta</td><td>变更判定从「每次刷新的差」改为「ISO 自然周口径」：同日或同周的重跑只刷新已存状态，不产生事件；事件只能来自 <code>baselineEligible</code> 的锚点，且必须跨自然周</td><td>2026-11-02 的同一日内重跑（<code>scanDate</code> 等于 <code>comparedAgainst</code>）在 41 条事件里贡献了 40 条（20 条升级 + 20 条降级），使页面报出「变更 171 次」。这不是周变化，是重扫波动。修复见提交 <code>44a3bc6</code>；11-02 及之前的事件流按旧口径保留，该线数字在下一次跨周采集后按新口径重算</td></tr>
+</table>
+<p class="d">新增口径先写进本表再上线。本表只追加、不删行；口径变更不修改历史记录，只影响此后产生的判定。</p>
+
+<footer>longgame · 方法与边界公开可查 · 本页事实截至 2026-11-04（registry 修复 44a3bc6；门禁快照仍为 2026-10-30, head df87cd6）。
 <br>相关：<a href="https://xka0085-byte.github.io/longgame/">组合仪表盘</a> · <a href="https://xka0085-byte.github.io/longgame/verify.html">验证页</a> · <a href="https://github.com/xka0085-byte/longgame">源码</a></footer>
 </div>
 </html>
