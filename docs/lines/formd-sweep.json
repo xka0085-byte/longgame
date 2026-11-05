@@ -10,11 +10,12 @@
     "unit": "件",
     "label": "本月十个关键词合计新增 Form D 备案 34 件"
   },
+  "citable": true,
   "publication_status": "PUBLISHED",
   "assurance_level": 2,
   "contract_version": 1,
   "raw_sha256": "4530ee66ca06ad133c7ef1bab4cf1cde546c13d7607a43e526326a1429874626",
-  "generated_at": "2026-11-05T08:25:46.063Z",
+  "generated_at": "2026-11-05T08:32:44.861Z",
   "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/formd-sweep.json 自洽",
   "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
 }

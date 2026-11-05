@@ -1,7 +1,7 @@
 {
-  "run_id": "local-20261105082546063",
+  "run_id": "local-20261105083244861",
   "line": "compute-futures",
-  "commit": "e4f560ddcbb439c373b152ddb9e5dd628af4ea57",
+  "commit": "c3b4aa93c2ff4abc3d21e91997e6b06f18e81d57",
   "contract_version": 1,
   "assurance_level": 2,
   "first_observed": "2026-10-20T16:00:48.085Z",
@@ -11,5 +11,5 @@
   "publication_status": "QUARANTINED",
   "publication_reason": "data-source-unavailable",
   "last_success_at": null,
-  "generated_at": "2026-11-05T08:25:46.063Z"
+  "generated_at": "2026-11-05T08:32:44.861Z"
 }

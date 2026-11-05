@@ -6,11 +6,12 @@
   "data_url": "https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/triggers.json",
   "citation": "longgame triggers（2026-11-05）：本期无新增可分享数字（QUARANTINED：data-source-unavailable）",
   "scalar": null,
+  "citable": false,
   "publication_status": "QUARANTINED",
   "assurance_level": 2,
   "contract_version": 1,
   "raw_sha256": "e796f857d9b69a529af0fe5e094ebb11f547d38161eb34e82591ce68aa0bf897",
-  "generated_at": "2026-11-05T08:25:46.063Z",
+  "generated_at": "2026-11-05T08:32:44.861Z",
   "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/triggers.json 自洽",
   "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
 }

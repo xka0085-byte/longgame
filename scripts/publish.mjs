@@ -199,6 +199,9 @@ ${sc ? `<div class="kpi"><div class="n">${esc(sc.value)}</div><div class="lbl">$
       ? `longgame ${s.id}（${sc.asOf || day}）：${sc.label}`
       : `longgame ${s.id}（${day}）：本期无新增可分享数字（${pub.publication_status}${pub.reason ? `：${pub.reason}` : ''}）`,
     scalar: sc ? { value: sc.value, unit: sc.unit ?? null, label: sc.label } : null,
+    // 只有真拿到数字的线才适合被整句引用；QUARANTINED 或本期无数字的线
+    // 引用出来是一句"没有数字"，对引用者是噪声，程序侧也应能一眼过滤。
+    citable: Boolean(sc) && sc.value !== null && sc.value !== undefined,
     publication_status: pub.publication_status,
     assurance_level: prov.assurance_level,
     contract_version: prov.contract_version,
@@ -260,7 +263,13 @@ const block = `<!-- AUTO-CITATIONS:START -->
 每条线一行，可整句引用。括号里的 as_of 是数字的数据日期，不是文档日期——跨期引用必须连 as_of 一起给。
 机器可读全文（全部线、含原始数据 hash 与复算命令）：https://xka0085-byte.github.io/longgame/citation.json
 
-${citations.map(c => `- ${c.citation}${c.url ? ` — ${c.url}` : ''}${c.data_url ? ` · 原始数据 ${c.data_url}` : ''}`).join('\n')}
+${citations.filter(c => c.citable).map(c => `- ${c.citation}${c.url ? ` — ${c.url}` : ''}${c.data_url ? ` · 原始数据 ${c.data_url}` : ''}`).join('\n')}
+${citations.some(c => !c.citable) ? `
+### 当前没有可引用数字的线（${citations.filter(c => !c.citable).map(c => c.id).join('、')}）
+
+这些线本期没有产出数字，引用它们只会得到一句"没有数字"。列在这里是为了透明，不是让你引用。
+${citations.filter(c => !c.citable).map(c => `- ${c.id}：${c.publication_status === 'QUARANTINED' ? '隔离中（数据源不可用）' : '本期无新增数字'} — ${c.url}`).join('\n')}
+` : ''}
 <!-- AUTO-CITATIONS:END -->`;
 
 let llms = existsSync('llms.txt') ? readFileSync('llms.txt', 'utf8') : BASE + '\n';

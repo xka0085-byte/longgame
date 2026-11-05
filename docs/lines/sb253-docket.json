@@ -10,11 +10,12 @@
     "unit": "条",
     "label": "CARB 披露相关链接 0 条（首窗 11-10）"
   },
+  "citable": true,
   "publication_status": "PUBLISHED",
   "assurance_level": 2,
   "contract_version": 1,
   "raw_sha256": "425a4b53cd09bfcae466a067cf3cbf94fd4b0fc1755746d91ae9c9df3828a22f",
-  "generated_at": "2026-11-05T08:25:46.063Z",
+  "generated_at": "2026-11-05T08:32:44.861Z",
   "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/sb253-docket.json 自洽",
   "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
 }
