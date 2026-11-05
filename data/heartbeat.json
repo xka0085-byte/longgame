@@ -209,6 +209,14 @@
       "critical": 0,
       "warn": 0,
       "healed": []
+    },
+    {
+      "at": "2026-11-05T16:38:58.796Z",
+      "trigger": "schedule",
+      "overall": "ok",
+      "critical": 0,
+      "warn": 0,
+      "healed": []
     }
   ]
 }
