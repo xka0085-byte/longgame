@@ -173,7 +173,34 @@ for (const s of portfolio.series) {
     ? `<div class="kpi warn"><div class="n">unavailable</div><div class="lbl">该线已进入 quarantine（隔离）。原因：${esc(pub.reason || 'latest run is not publish-eligible')}。最后成功时间：${esc(pub.last_success_at || '无历史成功记录')}。本页仅展示最后有效版本状态，不写零、不用旧值冒充本期数字。</div></div>`
     : '';
 
-  const html = `<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(s.id)} — longgame</title>
+  // 结构化元数据：回答"这段数字是什么、什么时候的、能不能核、怎么引"。
+  // AI 抽取与 Google Dataset Search 都靠 JSON-LD 判时效，纯 HTML 文本会被当成无日期内容。
+  const ld = {
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: `longgame ${s.id}`,
+    description: sc ? sc.label : `${s.id} 本期无新增可分享数字（${pub.publication_status}）`,
+    url: `https://xka0085-byte.github.io/longgame/lines/${s.id}.html`,
+    sameAs: `https://xka0085-byte.github.io/longgame/lines/${s.id}.json`,
+    identifier: `longgame:${s.id}`,
+    dateModified: iso,
+    datePublished: firstObserved || day,
+    isAccessibleForFree: true,
+    creator: { '@type': 'Organization', name: 'longgame', url: 'https://xka0085-byte.github.io/longgame/' },
+    license: 'https://github.com/xka0085-byte/longgame/blob/master/LICENSE',
+    citation: sc ? `longgame ${s.id}（${sc.asOf || day}）：${sc.label}` : undefined,
+    variableMeasured: sc ? { '@type': 'PropertyValue', name: sc.label, unitText: sc.unit || undefined, value: sc.value } : undefined,
+    distribution: {
+      '@type': 'DataDownload',
+      contentUrl: `https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/${s.id}.json`,
+      encodingFormat: 'application/json',
+      sha256: prov.raw_sha256,
+    },
+  };
+  const headExtra = `<link rel="alternate" type="application/json" href="${esc(s.id)}.json">`
+    + `<script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>`;
+
+  const html = `<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${esc(s.id)} — longgame</title>${headExtra}
 <style>:root{--bg:#f6f8fa;--surface:#fff;--border:#d0d7de;--text:#1f2328;--muted:#57606a;--brand:#1a7f37;--warn:#9a6700;--warnbg:#fff8c5}*{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui;background:var(--bg);color:var(--text)}.wrap{max-width:820px;margin:0 auto;padding:32px 16px}.kpi{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px;margin:16px 0}.kpi.warn{background:var(--warnbg);border-color:var(--warn)}.n{font-size:34px;font-weight:700;color:var(--brand)}.kpi.warn .n{color:var(--warn);font-size:28px}.lbl{font-size:14px;color:var(--muted);margin-top:4px}h1{font-size:22px;margin:0}h2{font-size:15px;margin:24px 0 8px;color:var(--muted)}li{font-size:13px;margin:6px 0}.d{font-family:monospace;font-size:12px;color:var(--muted)}footer{margin-top:32px;font-size:12px;color:var(--muted);border-top:1px solid var(--border);padding-top:12px}</style>
 <div class="wrap"><h1>${esc(s.id)}</h1><div class="lbl">${esc(s.driver || '')}</div>
 <div class="lbl">assurance_level: <b>${esc(prov.assurance_level ?? 'UNKNOWN')}</b> · 最近一次验证时间：<span class="d">${iso}</span></div>
@@ -249,6 +276,25 @@ writeFileSync(join(STAGE_DOCS, 'sitemap.xml'), `<?xml version="1.0" encoding="UT
 <url><loc>https://xka0085-byte.github.io/longgame/</loc><lastmod>${day}</lastmod></url>
 ${sitemap.map(u => `<url><loc>${u}</loc><lastmod>${day}</lastmod></url>`).join('\n')}
 </urlset>`);
+
+// robots.txt：之前站点根没有这个文件（404）。缺它不只是少个提示——AI 检索管线
+// 常先读 robots 找 Sitemap 与政策，读不到就按默认策略冷启动，且无法确认是否被欢迎抓取。
+const robots = `# longgame — 公开数据，欢迎检索与引用。请保留 as_of 与 url。
+User-agent: *
+Allow: /
+
+# AI / LLM 抓取方显式放行（未列出者同样允许，这里只是避免被上游默认策略误伤）
+${['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-Web', 'anthropic-ai',
+  'PerplexityBot', 'Perplexity-User', 'Google-Extended', 'Applebot-Extended',
+  'CCBot', 'Bytespider', 'meta-externalagent', 'cohere-ai', 'Diffbot']
+  .map(ua => `User-agent: ${ua}\nAllow: /`).join('\n\n')}
+
+Sitemap: https://xka0085-byte.github.io/longgame/sitemap.xml
+# 给 LLM/agent 的机器可读索引与引用清单：
+# llms.txt     https://xka0085-byte.github.io/longgame/llms.txt
+# citation.json https://xka0085-byte.github.io/longgame/citation.json
+`;
+writeFileSync(join(STAGE_DOCS, 'robots.txt'), robots);
 
 // llms.txt 自动引用块
 const BASE = `# longgame portfolio

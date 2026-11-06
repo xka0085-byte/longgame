@@ -136,7 +136,25 @@ ${[['数据源', 40], ['雷达', 170], ['采集', 300], ['事件流', 430], ['�
 </svg>`;
 
 const alertsHtml = alertsAll.map(a => `<li><span class="d">${a.date.slice(0, 10)}</span> <code>${a.line}</code> ${esc(a.title)}</li>`).join('') || '<li>暂无命中</li>';
-const html = `<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>longgame portfolio</title>
+// 仪表盘的结构化声明：告诉抓取方"这是一个带日期的数据集，机器可读入口在 citation.json"。
+const HEAD_EXTRA = `<link rel="alternate" type="application/json" title="citation.json" href="citation.json">`
+  + `<script type="application/ld+json">${JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: 'longgame portfolio',
+    description: '零人工测量的公开数据线组合：每条线一个可核查标量，附 as_of、原始数据 sha256 与复算命令。',
+    url: 'https://xka0085-byte.github.io/longgame/',
+    identifier: 'longgame:portfolio',
+    dateModified: now.toISOString(),
+    isAccessibleForFree: true,
+    license: 'https://github.com/xka0085-byte/longgame/blob/master/LICENSE',
+    creator: { '@type': 'Organization', name: 'longgame', url: 'https://xka0085-byte.github.io/longgame/' },
+    distribution: [
+      { '@type': 'DataDownload', contentUrl: 'https://xka0085-byte.github.io/longgame/citation.json', encodingFormat: 'application/json' },
+      { '@type': 'DataDownload', contentUrl: 'https://xka0085-byte.github.io/longgame/llms.txt', encodingFormat: 'text/plain' },
+    ],
+  }).replace(/</g, '\\u003c')}</script>`;
+const html = `<!doctype html><html lang="zh"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>longgame portfolio</title>${HEAD_EXTRA}
 <style>
 :root{--bg:#f6f8fa;--surface:#ffffff;--border:#d0d7de;--text:#1f2328;--muted:#57606a;--brand:#1a7f37;--brand-soft:#dafbe1}
 *{box-sizing:border-box}body{margin:0;font-family:ui-sans-serif,system-ui,'Segoe UI';background:var(--bg);color:var(--text)}

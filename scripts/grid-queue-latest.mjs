@@ -57,6 +57,21 @@ const html = `<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>grid-queue 月度简报：计划新增 ${esc(e.plannedMW)} MW — longgame</title>
+<link rel="alternate" type="application/json" href="grid-queue-latest.json">
+<script type="application/ld+json">${JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: 'longgame grid-queue',
+  description: `EIA-860M ${e.file}：计划新增 ${e.planned} 行合计 ${e.plannedMW} MW，已取消 ${e.canceled} 行合计 ${e.canceledMW} MW`,
+  url: 'https://xka0085-byte.github.io/longgame/lines/grid-queue-latest.html',
+  identifier: 'longgame:grid-queue',
+  dateModified: generated,
+  isAccessibleForFree: true,
+  license: 'https://github.com/xka0085-byte/longgame/blob/master/LICENSE',
+  creator: { '@type': 'Organization', name: 'longgame', url: 'https://xka0085-byte.github.io/longgame/' },
+  variableMeasured: { '@type': 'PropertyValue', name: '计划新增发电装机', value: e.plannedMW, unitText: 'MW' },
+  distribution: { '@type': 'DataDownload', contentUrl: 'https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/grid-queue.json', encodingFormat: 'application/json' },
+}).replace(/</g, '\\u003c')}</script>
 <style>
 :root{--bg:#f6f8fa;--surface:#fff;--border:#d0d7de;--text:#1f2328;--muted:#57606a;--brand:#1a7f37;--cancel:#a40e26}
 *{box-sizing:border-box}

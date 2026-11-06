@@ -84,6 +84,21 @@ page = page.replace(/<div class="cite" id="cite-line">[\s\S]*?<\/div>/,
 // 名单已载入时去掉「模板」字样；仍为空名单时保留，避免把骨架页说成正式名单。
 const titleSuffix = entities.length ? '' : '（模板）';
 page = page.replace(/<title>[^<]*<\/title>/, `<title>sb253 首窗名单${titleSuffix} — longgame</title>`);
+// 结构化声明：这页常被当作"有多少公司进了 SB 253 首窗"的来源，必须自带日期与许可，
+// 否则抓取方无法判断数字时效，只能当无日期文本处理。
+page = page.replace(/(<title>[^<]*<\/title>)/, `$1`
+  + `<script type="application/ld+json">${JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'Dataset',
+    name: 'longgame sb253 first-window docket',
+    description: `SB 253 首窗名单，覆盖实体 ${entities.length} 家，页面更新 ${day}。我方扫描结果，未经第三方复算。`,
+    url: 'https://xka0085-byte.github.io/longgame/lines/sb253-first-window.html',
+    identifier: 'longgame:sb253-docket',
+    dateModified: new Date().toISOString(),
+    isAccessibleForFree: true,
+    license: 'https://github.com/xka0085-byte/longgame/blob/master/LICENSE',
+    creator: { '@type': 'Organization', name: 'longgame', url: 'https://xka0085-byte.github.io/longgame/' },
+  }).replace(/</g, '\\u003c')}</script>`);
 page = page.replace(/(<h1[^>]*>)SB 253 首窗名单（模板）(<\/h1>)/, `$1SB 253 首窗名单${titleSuffix}$2`);
 page = page.replace(/<div style="margin-top:6px" id="build-record">[\s\S]*?<\/div>/,
   `<div style="margin-top:6px" id="build-record">构建记录：本骨架构建于 2026-10-21；首窗采集窗口 2026-11-01 至 2026-11-15，窗口内每日采集后刷新；页面最近更新 ${day}。以上为我方扫描结果，未经第三方复算。方法与边界见 <a href="../../llms.txt">llms.txt</a>。</div>`);
