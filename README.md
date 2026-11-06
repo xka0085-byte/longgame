@@ -38,6 +38,8 @@ curl -s https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/line
 
 Machine-readable entry points: `docs/feed.xml`, `docs/status.json`, `docs/attestations.json`, and `llms.txt` for readers that prefer one flat document.
 
+A read-only snapshot mirror of the same files is served from Hugging Face datasets: https://huggingface.co/datasets/Eidonze/longgame-public-data-series (same `data/lines/*.json`, plus a derived run index at `data/hf/runs_index.csv`). The mirror is a snapshot, not a continuous sync; this repository is the upstream of record when the two disagree.
+
 ## Verifying it yourself
 
 ```bash

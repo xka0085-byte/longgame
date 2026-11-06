@@ -27,6 +27,10 @@
 
 <!-- AUTO-CITATIONS:END -->
 
+## 镜像（同一批文件，只读快照）
+
+Hugging Face datasets 镜像：https://huggingface.co/datasets/Eidonze/longgame-public-data-series —— 同一批 data/lines/*.json，另有派生索引 data/hf/runs_index.csv（每次采集一行，计数只统计上游 JSON 里的数组元素，不做重新解释）。镜像是快照，不连续同步；两者不一致时以 GitHub 仓库为准。
+
 ## 方法与边界
 
 全部数据来自公开免费来源（SEC EDGAR、Federal Register、CARB、EU LOTL、各官方页），采集与雷达自动化，数字自带生成日期。任何序列的口径修订会在事件流中留痕。年度三问体检：驱动推进、买方与引用、回填者。
