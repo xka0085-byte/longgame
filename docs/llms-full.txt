@@ -19,6 +19,7 @@ All numbers come from public government/regulator pages; the pipeline diffs raw 
 整句引用下面 "citation" 字段；括号中的 as_of 是数据日期，不是文档日期，跨期引用必须同时给出 as_of。
 Quote the citation string verbatim. The date in parentheses is the data date (as_of), not the publication date — always carry it along.
 机器可读全文 / machine-readable: https://xka0085-byte.github.io/longgame/citation.json
+归档 DOI / archive DOI (frozen snapshot, does not move): https://doi.org/10.5281/zenodo.23998349
 
 ## 可引用的线 / Citable lines
 ### sb253-docket — as_of 2026-11-05

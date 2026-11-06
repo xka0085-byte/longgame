@@ -17,6 +17,11 @@ const now = new Date();
 const iso = now.toISOString();
 const day = iso.slice(0, 10);
 const SITE = 'https://xka0085-byte.github.io/longgame';
+// 归档锚点：Zenodo 冻结快照的 DOI 不随仓库改动变化，是"永远能打开的同一条链接"。
+// 写进产物而不是只写进 README，是因为机器可读入口（citation.json / llms.txt）才是
+// 引用方实际抓取的地方；重生产物时必须带上，否则下一次 publish 就把它抹掉了。
+const ARCHIVE_DOI = '10.5281/zenodo.23998349';
+const ARCHIVE_DOI_URL = `https://doi.org/${ARCHIVE_DOI}`;
 const portfolio = JSON.parse(readFileSync('portfolio.json', 'utf8'));
 
 const STAGE = 'assurance/.staging';
@@ -251,6 +256,8 @@ ${sc ? `<div class="kpi"><div class="n">${esc(sc.value)}</div><div class="lbl">$
 writeFileSync(join(STAGE_DOCS, 'citation.json'), JSON.stringify({
   project: 'longgame',
   updated: day,
+  archive_doi: ARCHIVE_DOI,
+  archive_doi_url: ARCHIVE_DOI_URL,
   how_to_cite: '整句引用 citation 字段；数字随 as_of 变化，跨期引用必须同时给出 as_of。',
   lines: citations,
 }, null, 2) + '\n');
@@ -316,6 +323,7 @@ const block = `<!-- AUTO-CITATIONS:START -->
 每条线一行，可整句引用。括号里的 as_of 是数字的数据日期，不是文档日期——跨期引用必须连 as_of 一起给。
 机器可读全文（全部线、含原始数据 hash 与复算命令）：https://xka0085-byte.github.io/longgame/citation.json
 带方法与边界的一次性全文（不必再逐页抓）：https://xka0085-byte.github.io/longgame/llms-full.txt
+本快照的归档 DOI（不随仓库改动变化）：${ARCHIVE_DOI_URL}
 
 ${citations.filter(c => c.citable).map(c => `- ${c.citation}${c.url ? ` — ${c.url}` : ''}${c.data_url ? ` · 原始数据 ${c.data_url}` : ''}`).join('\n')}
 ${citations.some(c => !c.citable) ? `
@@ -364,6 +372,7 @@ All numbers come from public government/regulator pages; the pipeline diffs raw 
 整句引用下面 "citation" 字段；括号中的 as_of 是数据日期，不是文档日期，跨期引用必须同时给出 as_of。
 Quote the citation string verbatim. The date in parentheses is the data date (as_of), not the publication date — always carry it along.
 机器可读全文 / machine-readable: ${SITE}/citation.json
+归档 DOI / archive DOI (frozen snapshot, does not move): ${ARCHIVE_DOI_URL}
 
 ## 可引用的线 / Citable lines
 ${citations.filter(c => c.citable).map(c => `### ${c.id} — as_of ${c.as_of}

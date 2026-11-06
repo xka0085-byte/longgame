@@ -1,6 +1,8 @@
 {
   "project": "longgame",
   "updated": "2026-11-06",
+  "archive_doi": "10.5281/zenodo.23998349",
+  "archive_doi_url": "https://doi.org/10.5281/zenodo.23998349",
   "how_to_cite": "整句引用 citation 字段；数字随 as_of 变化，跨期引用必须同时给出 as_of。",
   "lines": [
     {

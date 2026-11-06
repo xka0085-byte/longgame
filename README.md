@@ -53,7 +53,9 @@ The gate refuses to publish when any of those fails, and its result is stamped w
 
 ## Citing
 
-`CITATION.cff` for the citation entry, `.zenodo.json` for archive metadata.
+Archive DOI for this snapshot: **[10.5281/zenodo.23998349](https://doi.org/10.5281/zenodo.23998349)** — the archive holds the same content as commit `4cec9a7`, as a single tarball.
+
+`CITATION.cff` for the citation entry, `.zenodo.json` for archive metadata. If you need a link that cannot change, use the DOI; if you need the upstream of record, use the GitHub URL.
 
 ## License
 

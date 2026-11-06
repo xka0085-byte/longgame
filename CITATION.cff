@@ -9,10 +9,11 @@ date-released: "2026-11-05"
 license: CC-BY-4.0
 url: "https://xka0085-byte.github.io/longgame/"
 repository-code: "https://github.com/xka0085-byte/longgame"
+doi: "10.5281/zenodo.23998349"
 identifiers:
   - type: url
     value: "https://github.com/xka0085-byte/longgame/releases/tag/snapshot-2026-11-05"
-    description: "Frozen snapshot used when no DOI is available yet"
+    description: "GitHub release for the same snapshot (source of record)"
 abstract: "A set of independently maintained public-data series. Each series records one quantity that cannot be reconstructed after the fact, with source, collection date, and method stated on its page. Some series are pending source availability and are labelled as such."
 keywords:
   - public data
