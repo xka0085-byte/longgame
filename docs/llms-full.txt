@@ -1,0 +1,87 @@
+# longgame portfolio — full context
+> 零人工测量的公开数据线组合。每条线一个可核查标量，自带 as_of、原始数据 sha256 与复算命令。
+> Independently maintained public-data series. One verifiable scalar per line, each with its own as_of date, raw-data sha256 and a reproduce command.
+> Site: https://xka0085-byte.github.io/longgame/ · Machine-readable: https://xka0085-byte.github.io/longgame/citation.json · Updated: 2026-11-06
+
+## 这是什么 / What this is
+14 条独立时间序列，每条记录一个"事后无法重建"的量（监管名单变更、备案计数、装机队列、信任列表指针、agent 密钥目录等）。
+数据来自公开政府与监管页面，采集做 diff，产物带生成日期。没有任何人工填写的数字。
+14 independent time series, each recording a quantity that cannot be reconstructed after the fact.
+All numbers come from public government/regulator pages; the pipeline diffs raw sources and stamps every artifact with its data date.
+
+## 不是什么 / What this is not
+- 不是预测，不含外推值（no forecasts, no extrapolation）
+- 不是第三方复算结果：除标注外均为我方扫描，页面写明"未经第三方复算"（not third-party audited）
+- 不补零：数据源不可用时该线进入 quarantine，页面写"无可分享数字"，不用旧值冒充当期
+- 与游戏/其它同名项目无关（this is a public-data series, unrelated to any game or software of the same name）
+
+## 怎么引 / How to cite
+整句引用下面 "citation" 字段；括号中的 as_of 是数据日期，不是文档日期，跨期引用必须同时给出 as_of。
+Quote the citation string verbatim. The date in parentheses is the data date (as_of), not the publication date — always carry it along.
+机器可读全文 / machine-readable: https://xka0085-byte.github.io/longgame/citation.json
+
+## 可引用的线 / Citable lines
+### sb253-docket — as_of 2026-11-05
+- citation: longgame sb253-docket（2026-11-05）：CARB 披露相关链接 0 条（首窗 11-10）
+- page: https://xka0085-byte.github.io/longgame/lines/sb253-docket.html
+- raw data: https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/sb253-docket.json
+- raw sha256: 4cebafd0a2dabfde59508280de977915ef0ceff9572e8e8a9bed9280553c159f
+- reproduce: `node scripts/verify-data.mjs  # 校验 data/lines/sb253-docket.json 自洽`
+- status: PUBLISHED · assurance: 2 · contract: v1
+
+### agent-dirs — as_of 2026-11-02
+- citation: longgame agent-dirs（2026-11-02）：当前登记的 agent 密钥 6 把
+- page: https://xka0085-byte.github.io/longgame/lines/agent-dirs.html
+- raw data: https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/agent-dirs.json
+- raw sha256: 2246440f212656853267f2210b8a9c8fc075252d42e1dd1a33aaffbf31df028a
+- reproduce: `node scripts/verify-data.mjs  # 校验 data/lines/agent-dirs.json 自洽`
+- status: PUBLISHED · assurance: 2 · contract: v1
+
+### trust-delta — as_of 2026-11-01
+- citation: longgame trust-delta（2026-11-01）：Trust Directory 在册端点 35327 个，本轮判定变更 264 次（转 PASS 181、离开 PASS 50），消失 46 个（上游本轮对比覆盖不完整，新增/消失数只作参考）（最近一次采集 2026-11-02 为当日刷新，只更新在册与状态快照；周变化仍按 2026-10-30 起算的上一次跨周对比）
+- page: https://xka0085-byte.github.io/longgame/lines/trust-delta.html
+- raw data: https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/trust-delta.json
+- raw sha256: 000a1ec7b6f40cbea0eea3a050b7b2c1a80fa83ac4c50113e4adc09de4328938
+- reproduce: `node scripts/verify-data.mjs  # 校验 data/lines/trust-delta.json 自洽`
+- status: PUBLISHED · assurance: 2 · contract: v1
+
+### eidas-tsl — as_of 2026-11-02
+- citation: longgame eidas-tsl（2026-11-02）：EU 信任列表指针 42 个
+- page: https://xka0085-byte.github.io/longgame/lines/eidas-tsl.html
+- raw data: https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/eidas-tsl.json
+- raw sha256: 62c4d75bd1c90ccea11fd2a68cb117e01e5f02f620c0851ce31bd0f51c22eca5
+- reproduce: `node scripts/verify-data.mjs  # 校验 data/lines/eidas-tsl.json 自洽`
+- status: PUBLISHED · assurance: 2 · contract: v1
+
+### formd-sweep — as_of 2026-11-02
+- citation: longgame formd-sweep（2026-11-02）：本月十个关键词合计新增 Form D 备案 34 件
+- page: https://xka0085-byte.github.io/longgame/lines/formd-sweep.html
+- raw data: https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/formd-sweep.json
+- raw sha256: e4052433be30e0c6de5d068f8763a1d3c67a92a766fe199743452a2186af2721
+- reproduce: `node scripts/verify-data.mjs  # 校验 data/lines/formd-sweep.json 自洽`
+- status: PUBLISHED · assurance: 2 · contract: v1
+
+### grid-queue — as_of 2026-11-02
+- citation: longgame grid-queue（2026-11-02）：EIA-860M september_generator2026.xlsx 计划新增 2360 行合计 290242 MW，已取消 1747 行合计 185356.8 MW
+- page: https://xka0085-byte.github.io/longgame/lines/grid-queue.html
+- raw data: https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/grid-queue.json
+- raw sha256: 3d48d98d7ebe10cb92c133292cc07474cc60cf6dc1922ba82a60b3893fbc8052
+- reproduce: `node scripts/verify-data.mjs  # 校验 data/lines/grid-queue.json 自洽`
+- status: PUBLISHED · assurance: 2 · contract: v1
+
+## 暂无数字的线 / Lines currently without a citable number
+- aiact-register: PUBLISHED（本期无新增 / no new number this period） — https://xka0085-byte.github.io/longgame/lines/aiact-register.html
+- triggers: QUARANTINED（数据源不可用 / source unavailable） — https://xka0085-byte.github.io/longgame/lines/triggers.html
+- compute-futures: QUARANTINED（数据源不可用 / source unavailable） — https://xka0085-byte.github.io/longgame/lines/compute-futures.html
+- c2pa-spec: PUBLISHED（本期无新增 / no new number this period） — https://xka0085-byte.github.io/longgame/lines/c2pa-spec.html
+- state-ai-laws: PUBLISHED（本期无新增 / no new number this period） — https://xka0085-byte.github.io/longgame/lines/state-ai-laws.html
+
+## 方法与边界 / Method and limits
+- 采集器逐日 diff 源页面，变更进事件流；每条线有契约校验（validate-contracts）与故障注入门禁（fault-injection 6/6 BLOCKED）
+- 每条线的数字只在通过校验时发布，未通过则 quarantine 并公开原因
+- 方法页 / method: https://xka0085-byte.github.io/longgame/method.html · 健康状态 / health: https://xka0085-byte.github.io/longgame/health.html
+- 已知缺口写在运维手册 / known gaps: https://xka0085-byte.github.io/longgame/ops.html — 不隐藏失败
+
+## 许可 / License
+数据来自公开来源；引用请保留 as_of 与 url。代码与文案 CC BY 4.0。
+LICENSE: https://github.com/xka0085-byte/longgame/blob/master/LICENSE

@@ -15,7 +15,7 @@
   "assurance_level": 2,
   "contract_version": 1,
   "raw_sha256": "000a1ec7b6f40cbea0eea3a050b7b2c1a80fa83ac4c50113e4adc09de4328938",
-  "generated_at": "2026-11-06T02:47:43.762Z",
+  "generated_at": "2026-11-06T02:51:54.557Z",
   "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/trust-delta.json 自洽",
   "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
 }

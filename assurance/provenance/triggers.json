@@ -1,7 +1,7 @@
 {
-  "run_id": "local-20261106024743762",
+  "run_id": "local-20261106025154557",
   "line": "triggers",
-  "commit": "0b0a374ccd9b9219d8130dc9a5c3fca1ba3cc602",
+  "commit": "0870f3c6e575037068cf721507d19dbc80cbe729",
   "contract_version": 1,
   "assurance_level": 2,
   "first_observed": "2026-10-20T13:48:44.453Z",
@@ -11,5 +11,5 @@
   "publication_status": "QUARANTINED",
   "publication_reason": "data-source-unavailable",
   "last_success_at": null,
-  "generated_at": "2026-11-06T02:47:43.762Z"
+  "generated_at": "2026-11-06T02:51:54.557Z"
 }

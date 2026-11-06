@@ -11,7 +11,7 @@
   "assurance_level": 2,
   "contract_version": 1,
   "raw_sha256": "094d355f8325986aeaa4bf600d77b3140eb19e472208a7a8d5181b2f8a19dd89",
-  "generated_at": "2026-11-06T02:47:43.762Z",
+  "generated_at": "2026-11-06T02:51:54.557Z",
   "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/triggers.json 自洽",
   "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
 }

@@ -51,4 +51,5 @@ Allow: /
 Sitemap: https://xka0085-byte.github.io/longgame/sitemap.xml
 # 给 LLM/agent 的机器可读索引与引用清单：
 # llms.txt     https://xka0085-byte.github.io/longgame/llms.txt
+# llms-full.txt https://xka0085-byte.github.io/longgame/llms-full.txt
 # citation.json https://xka0085-byte.github.io/longgame/citation.json

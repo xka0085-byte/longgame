@@ -7,6 +7,7 @@
 
 每条线一行，可整句引用。括号里的 as_of 是数字的数据日期，不是文档日期——跨期引用必须连 as_of 一起给。
 机器可读全文（全部线、含原始数据 hash 与复算命令）：https://xka0085-byte.github.io/longgame/citation.json
+带方法与边界的一次性全文（不必再逐页抓）：https://xka0085-byte.github.io/longgame/llms-full.txt
 
 - longgame sb253-docket（2026-11-05）：CARB 披露相关链接 0 条（首窗 11-10） — https://xka0085-byte.github.io/longgame/lines/sb253-docket.html · 原始数据 https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/sb253-docket.json
 - longgame agent-dirs（2026-11-02）：当前登记的 agent 密钥 6 把 — https://xka0085-byte.github.io/longgame/lines/agent-dirs.html · 原始数据 https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/agent-dirs.json

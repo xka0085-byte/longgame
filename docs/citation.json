@@ -20,7 +20,7 @@
       "assurance_level": 2,
       "contract_version": 1,
       "raw_sha256": "4cebafd0a2dabfde59508280de977915ef0ceff9572e8e8a9bed9280553c159f",
-      "generated_at": "2026-11-06T02:47:43.762Z",
+      "generated_at": "2026-11-06T02:51:54.557Z",
       "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/sb253-docket.json 自洽",
       "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
     },
@@ -41,7 +41,7 @@
       "assurance_level": 2,
       "contract_version": 1,
       "raw_sha256": "2246440f212656853267f2210b8a9c8fc075252d42e1dd1a33aaffbf31df028a",
-      "generated_at": "2026-11-06T02:47:43.762Z",
+      "generated_at": "2026-11-06T02:51:54.557Z",
       "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/agent-dirs.json 自洽",
       "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
     },
@@ -62,7 +62,7 @@
       "assurance_level": 2,
       "contract_version": 1,
       "raw_sha256": "000a1ec7b6f40cbea0eea3a050b7b2c1a80fa83ac4c50113e4adc09de4328938",
-      "generated_at": "2026-11-06T02:47:43.762Z",
+      "generated_at": "2026-11-06T02:51:54.557Z",
       "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/trust-delta.json 自洽",
       "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
     },
@@ -83,7 +83,7 @@
       "assurance_level": 2,
       "contract_version": 1,
       "raw_sha256": "62c4d75bd1c90ccea11fd2a68cb117e01e5f02f620c0851ce31bd0f51c22eca5",
-      "generated_at": "2026-11-06T02:47:43.762Z",
+      "generated_at": "2026-11-06T02:51:54.557Z",
       "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/eidas-tsl.json 自洽",
       "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
     },
@@ -100,7 +100,7 @@
       "assurance_level": 2,
       "contract_version": 1,
       "raw_sha256": "1c00d6e16ac8eb1870d0a5f0be068e107ee991337552f15d89d2174c793daf19",
-      "generated_at": "2026-11-06T02:47:43.762Z",
+      "generated_at": "2026-11-06T02:51:54.557Z",
       "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/aiact-register.json 自洽",
       "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
     },
@@ -117,7 +117,7 @@
       "assurance_level": 2,
       "contract_version": 1,
       "raw_sha256": "094d355f8325986aeaa4bf600d77b3140eb19e472208a7a8d5181b2f8a19dd89",
-      "generated_at": "2026-11-06T02:47:43.762Z",
+      "generated_at": "2026-11-06T02:51:54.557Z",
       "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/triggers.json 自洽",
       "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
     },
@@ -138,7 +138,7 @@
       "assurance_level": 2,
       "contract_version": 1,
       "raw_sha256": "e4052433be30e0c6de5d068f8763a1d3c67a92a766fe199743452a2186af2721",
-      "generated_at": "2026-11-06T02:47:43.762Z",
+      "generated_at": "2026-11-06T02:51:54.557Z",
       "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/formd-sweep.json 自洽",
       "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
     },
@@ -155,7 +155,7 @@
       "assurance_level": 2,
       "contract_version": 1,
       "raw_sha256": "7161dc7c84cdb9cf10bd946fdf4530f4789746627ba54239d453f1390186c9fb",
-      "generated_at": "2026-11-06T02:47:43.762Z",
+      "generated_at": "2026-11-06T02:51:54.557Z",
       "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/compute-futures.json 自洽",
       "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
     },
@@ -172,7 +172,7 @@
       "assurance_level": 2,
       "contract_version": 1,
       "raw_sha256": "6a0d13bbf288f9268de404a0d22ecf342c72b8cbde5b143ca3caac736441eeba",
-      "generated_at": "2026-11-06T02:47:43.762Z",
+      "generated_at": "2026-11-06T02:51:54.557Z",
       "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/c2pa-spec.json 自洽",
       "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
     },
@@ -189,7 +189,7 @@
       "assurance_level": 2,
       "contract_version": 1,
       "raw_sha256": "411f414401ca910a451d926535414a97c02fab62fa5d452bb5e7c517875b4896",
-      "generated_at": "2026-11-06T02:47:43.762Z",
+      "generated_at": "2026-11-06T02:51:54.557Z",
       "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/state-ai-laws.json 自洽",
       "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
     },
@@ -210,7 +210,7 @@
       "assurance_level": 2,
       "contract_version": 1,
       "raw_sha256": "3d48d98d7ebe10cb92c133292cc07474cc60cf6dc1922ba82a60b3893fbc8052",
-      "generated_at": "2026-11-06T02:47:43.762Z",
+      "generated_at": "2026-11-06T02:51:54.557Z",
       "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/grid-queue.json 自洽",
       "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
     }

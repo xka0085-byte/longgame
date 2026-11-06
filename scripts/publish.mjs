@@ -16,6 +16,7 @@ assertGate();
 const now = new Date();
 const iso = now.toISOString();
 const day = iso.slice(0, 10);
+const SITE = 'https://xka0085-byte.github.io/longgame';
 const portfolio = JSON.parse(readFileSync('portfolio.json', 'utf8'));
 
 const STAGE = 'assurance/.staging';
@@ -179,7 +180,12 @@ for (const s of portfolio.series) {
     '@context': 'https://schema.org',
     '@type': 'Dataset',
     name: `longgame ${s.id}`,
+    alternateName: `${s.id} (longgame public data series)`,
     description: sc ? sc.label : `${s.id} 本期无新增可分享数字（${pub.publication_status}）`,
+    // 同名实体消歧：longgame 在搜索里主要指向游戏/软件，这里明确是公开数据序列，
+    // 否则检索方会把这条线的数字挂到错误实体上。
+    disambiguatingDescription: 'Independently maintained public-data time series (regulatory dockets, filings, energy queue, trust lists). Not a game, not a software product.',
+    keywords: ['public data', 'time series', s.id, 'regulatory disclosure', 'open data'],
     url: `https://xka0085-byte.github.io/longgame/lines/${s.id}.html`,
     sameAs: `https://xka0085-byte.github.io/longgame/lines/${s.id}.json`,
     identifier: `longgame:${s.id}`,
@@ -292,6 +298,7 @@ ${['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-Web', 'anthro
 Sitemap: https://xka0085-byte.github.io/longgame/sitemap.xml
 # 给 LLM/agent 的机器可读索引与引用清单：
 # llms.txt     https://xka0085-byte.github.io/longgame/llms.txt
+# llms-full.txt https://xka0085-byte.github.io/longgame/llms-full.txt
 # citation.json https://xka0085-byte.github.io/longgame/citation.json
 `;
 writeFileSync(join(STAGE_DOCS, 'robots.txt'), robots);
@@ -308,6 +315,7 @@ const block = `<!-- AUTO-CITATIONS:START -->
 
 每条线一行，可整句引用。括号里的 as_of 是数字的数据日期，不是文档日期——跨期引用必须连 as_of 一起给。
 机器可读全文（全部线、含原始数据 hash 与复算命令）：https://xka0085-byte.github.io/longgame/citation.json
+带方法与边界的一次性全文（不必再逐页抓）：https://xka0085-byte.github.io/longgame/llms-full.txt
 
 ${citations.filter(c => c.citable).map(c => `- ${c.citation}${c.url ? ` — ${c.url}` : ''}${c.data_url ? ` · 原始数据 ${c.data_url}` : ''}`).join('\n')}
 ${citations.some(c => !c.citable) ? `
@@ -331,6 +339,59 @@ writeFileSync(STAGE_LLMS, llms);
 // 站点根也要有一份：AI/爬虫请求的是 https://<site>/llms.txt，而不是仓库根文件。
 // 只放仓库根等于只有会翻 GitHub 的人能看到引用行。
 writeFileSync(join(STAGE_DOCS, 'llms.txt'), llms);
+
+// llms-full.txt：llms.txt 是索引，这个是全文。检索型 agent 拿到索引后还要再抓 N 次才能凑齐
+// 上下文，一次给出全文能把"能不能引用"的判断成本压到一次请求。
+// 与 llms.txt 同源生成，避免两处口径分叉。
+const full = `# longgame portfolio — full context
+> 零人工测量的公开数据线组合。每条线一个可核查标量，自带 as_of、原始数据 sha256 与复算命令。
+> Independently maintained public-data series. One verifiable scalar per line, each with its own as_of date, raw-data sha256 and a reproduce command.
+> Site: ${SITE}/ · Machine-readable: ${SITE}/citation.json · Updated: ${day}
+
+## 这是什么 / What this is
+${portfolio.series.length} 条独立时间序列，每条记录一个"事后无法重建"的量（监管名单变更、备案计数、装机队列、信任列表指针、agent 密钥目录等）。
+数据来自公开政府与监管页面，采集做 diff，产物带生成日期。没有任何人工填写的数字。
+${portfolio.series.length} independent time series, each recording a quantity that cannot be reconstructed after the fact.
+All numbers come from public government/regulator pages; the pipeline diffs raw sources and stamps every artifact with its data date.
+
+## 不是什么 / What this is not
+- 不是预测，不含外推值（no forecasts, no extrapolation）
+- 不是第三方复算结果：除标注外均为我方扫描，页面写明"未经第三方复算"（not third-party audited）
+- 不补零：数据源不可用时该线进入 quarantine，页面写"无可分享数字"，不用旧值冒充当期
+- 与游戏/其它同名项目无关（this is a public-data series, unrelated to any game or software of the same name）
+
+## 怎么引 / How to cite
+整句引用下面 "citation" 字段；括号中的 as_of 是数据日期，不是文档日期，跨期引用必须同时给出 as_of。
+Quote the citation string verbatim. The date in parentheses is the data date (as_of), not the publication date — always carry it along.
+机器可读全文 / machine-readable: ${SITE}/citation.json
+
+## 可引用的线 / Citable lines
+${citations.filter(c => c.citable).map(c => `### ${c.id} — as_of ${c.as_of}
+- citation: ${c.citation}
+- page: ${c.url}
+- raw data: ${c.data_url}
+- raw sha256: ${c.raw_sha256}
+- reproduce: \`${c.reproduce}\`
+- status: ${c.publication_status} · assurance: ${c.assurance_level} · contract: v${c.contract_version}`).join('\n\n')}
+
+## 暂无数字的线 / Lines currently without a citable number
+${citations.filter(c => !c.citable).map(c => `- ${c.id}: ${c.publication_status}${c.publication_status === 'QUARANTINED' ? '（数据源不可用 / source unavailable）' : '（本期无新增 / no new number this period）'} — ${c.url}`).join('\n') || '- 无'}
+
+## 方法与边界 / Method and limits
+- 采集器逐日 diff 源页面，变更进事件流；每条线有契约校验（validate-contracts）与故障注入门禁（fault-injection 6/6 BLOCKED）
+- 每条线的数字只在通过校验时发布，未通过则 quarantine 并公开原因
+- 方法页 / method: ${SITE}/method.html · 健康状态 / health: ${SITE}/health.html
+- 已知缺口写在运维手册 / known gaps: ${SITE}/ops.html — 不隐藏失败
+
+## 许可 / License
+数据来自公开来源；引用请保留 as_of 与 url。代码与文案 CC BY 4.0。
+LICENSE: https://github.com/xka0085-byte/longgame/blob/master/LICENSE
+`;
+writeFileSync(join(STAGE_DOCS, 'llms-full.txt'), full);
+
+// IndexNow 的 key 文件：协议要求站点根可达 <key>.txt 且内容等于 key，否则提交被拒。
+const INDEXNOW_KEY = process.env.INDEXNOW_KEY || 'a7f3c9d21e8b4a6f5c0d9e2b7a1f4c83';
+writeFileSync(join(STAGE_DOCS, `${INDEXNOW_KEY}.txt`), INDEXNOW_KEY + '\n');
 
 // grid-queue 单行 CSV 同步导出：数据只来自 data/lines/grid-queue.json 最近一次含 eiaCounts 的运行。
 const env = { ...process.env, LONGGAME_DOCS: STAGE_DOCS };

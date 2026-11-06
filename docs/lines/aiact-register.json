@@ -11,7 +11,7 @@
   "assurance_level": 2,
   "contract_version": 1,
   "raw_sha256": "1c00d6e16ac8eb1870d0a5f0be068e107ee991337552f15d89d2174c793daf19",
-  "generated_at": "2026-11-06T02:47:43.762Z",
+  "generated_at": "2026-11-06T02:51:54.557Z",
   "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/aiact-register.json 自洽",
   "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
 }
