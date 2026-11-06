@@ -849,6 +849,54 @@
     "channel": "hn",
     "query": "Cloudflare Monetization Gateway",
     "count": 0
+   },
+   {
+    "date": "2026-11-06T12:48:30.619Z",
+    "channel": "fr",
+    "query": "compute derivatives",
+    "count": 0
+   },
+   {
+    "date": "2026-11-06T12:48:30.619Z",
+    "channel": "fr",
+    "query": "autonomous agent income",
+    "count": 1
+   },
+   {
+    "date": "2026-11-06T12:48:30.619Z",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "count": 5
+   },
+   {
+    "date": "2026-11-06T12:48:30.619Z",
+    "channel": "gn",
+    "query": "agent insurance",
+    "count": 5
+   },
+   {
+    "date": "2026-11-06T12:48:30.619Z",
+    "channel": "gn",
+    "query": "AI personality rights bill",
+    "count": 5
+   },
+   {
+    "date": "2026-11-06T12:48:30.619Z",
+    "channel": "hn",
+    "query": "compute futures",
+    "count": 1
+   },
+   {
+    "date": "2026-11-06T12:48:30.619Z",
+    "channel": "hn",
+    "query": "agent insurance",
+    "count": 0
+   },
+   {
+    "date": "2026-11-06T12:48:30.619Z",
+    "channel": "hn",
+    "query": "Cloudflare Monetization Gateway",
+    "count": 0
    }
   ],
   "items": [
@@ -1013,6 +1061,33 @@
     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNbzRuNDlQa2FxVXRRVzlUYWt3ODhQYTB1Zmp4RmNrVTZPaXZ3OHRmYnVkVkpPdmp2V0tJcndTMTE3dm1rMzhHWmJSMUt3ZkFrUkM5YmlKbGlsLWNVcG1VY1ptRTg4aTFLTk1uaG05WVd0Y2czNGVlYXFsM1psc0pWTTk2eGdlbDBETFR5WEtieUc?oc=5",
     "date": "Thu, 05 Nov 2026 11:48:35 GMT",
     "foundAt": "2026-11-05T12:59:58.680Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Health agents victorious against CMS moratorium - InsuranceNewsNet",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPalBLV2lzOUhFeVUxNk1SY3UwaHg4NGhfenROY19QVlBUR2VLTmhkUVhMR01jQmc4ajlyUVR5bUc1VkY1SEdRT0N1VS1LQ0dyZnZsQ0Q4bTc3ZWJ1elBJX2xJTzdkX2k0ZGdDM01SREdPUHNYQkZKZTJzMkR2NDRWS1ZKeC16MnhaSXNmamNvVHY?oc=5",
+    "date": "Thu, 05 Nov 2026 18:59:55 GMT",
+    "foundAt": "2026-11-06T12:48:30.619Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "40 fake addresses, a $200K fine, and the agent who said nothing - Insurance Business",
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxONW1wN0ZlX29BdE1lT2dGMURCb3Vfd2txT1ZQenJ1akpGMThoS3h5bzUyTVljUVg1dWVQWGhlT0VDUUhIbXBVS19jNi05TFVPeWpBWE9ibGJwMXdub1NfemktOTM5c3VEOFF0OHJZVnJNTWJ6Nl92NUJfY2dZVUxTQ3d6RHBPTlJiNV9WQlZlRW1maFJnenlwLWg1NEJjTFpsa2tZd29ZVnBCNHg5TEZoUnNRcTBvQlRrT2tqTVk2TFVsUlhsNXAzcTNEY3M?oc=5",
+    "date": "Fri, 06 Nov 2026 04:01:35 GMT",
+    "foundAt": "2026-11-06T12:48:30.619Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Who signs off the AI number? What insurance Finance Teams need before an AI Agent touches the Reserving Report - Insurance Edge",
+    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxON2RwRENpX2lEampmclJuVUM0ekVQU2NQRWZ0X0pkR085VUJOcXFnTVNTT3pCay1XWlI3bmhmRlVCYXhVZUlNMVBiZTdFeTk5MWo4eWI1SlFmZTdoenQzRWtDZldROHV5dzd2TVQ3SkVMek5vNDFzcW4zM1Vqcm85NXRmREU0QXdKMmtFa2hYZGtJSjFiQ3N6ZEc4VU03MG52WjFBTHVQUkV0eFJxdlRScUVmcDNGSnBDcUZqMmI2Rmd5XzRia182bktiY1JaSjJtdExPLWNoSHVNZUhMTE1MMGl3?oc=5",
+    "date": "Fri, 06 Nov 2026 12:32:07 GMT",
+    "foundAt": "2026-11-06T12:48:30.619Z"
    }
   ],
   "alerts": [
@@ -1122,6 +1197,24 @@
     "date": "2026-11-05T12:59:58.680Z",
     "title": "Vertafore Launches Velocity Change Request Agent - - Insurance Edge",
     "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNbzRuNDlQa2FxVXRRVzlUYWt3ODhQYTB1Zmp4RmNrVTZPaXZ3OHRmYnVkVkpPdmp2V0tJcndTMTE3dm1rMzhHWmJSMUt3ZkFrUkM5YmlKbGlsLWNVcG1VY1ptRTg4aTFLTk1uaG05WVd0Y2czNGVlYXFsM1psc0pWTTk2eGdlbDBETFR5WEtieUc?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-06T12:48:30.619Z",
+    "title": "Health agents victorious against CMS moratorium - InsuranceNewsNet",
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPalBLV2lzOUhFeVUxNk1SY3UwaHg4NGhfenROY19QVlBUR2VLTmhkUVhMR01jQmc4ajlyUVR5bUc1VkY1SEdRT0N1VS1LQ0dyZnZsQ0Q4bTc3ZWJ1elBJX2xJTzdkX2k0ZGdDM01SREdPUHNYQkZKZTJzMkR2NDRWS1ZKeC16MnhaSXNmamNvVHY?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-06T12:48:30.619Z",
+    "title": "40 fake addresses, a $200K fine, and the agent who said nothing - Insurance Business",
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxONW1wN0ZlX29BdE1lT2dGMURCb3Vfd2txT1ZQenJ1akpGMThoS3h5bzUyTVljUVg1dWVQWGhlT0VDUUhIbXBVS19jNi05TFVPeWpBWE9ibGJwMXdub1NfemktOTM5c3VEOFF0OHJZVnJNTWJ6Nl92NUJfY2dZVUxTQ3d6RHBPTlJiNV9WQlZlRW1maFJnenlwLWg1NEJjTFpsa2tZd29ZVnBCNHg5TEZoUnNRcTBvQlRrT2tqTVk2TFVsUlhsNXAzcTNEY3M?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-06T12:48:30.619Z",
+    "title": "Who signs off the AI number? What insurance Finance Teams need before an AI Agent touches the Reserving Report - Insurance Edge",
+    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxON2RwRENpX2lEampmclJuVUM0ekVQU2NQRWZ0X0pkR085VUJOcXFnTVNTT3pCay1XWlI3bmhmRlVCYXhVZUlNMVBiZTdFeTk5MWo4eWI1SlFmZTdoenQzRWtDZldROHV5dzd2TVQ3SkVMek5vNDFzcW4zM1Vqcm85NXRmREU0QXdKMmtFa2hYZGtJSjFiQ3N6ZEc4VU03MG52WjFBTHVQUkV0eFJxdlRScUVmcDNGSnBDcUZqMmI2Rmd5XzRia182bktiY1JaSjJtdExPLWNoSHVNZUhMTE1MMGl3?oc=5",
     "channel": "gn"
    }
   ]

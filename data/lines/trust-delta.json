@@ -1062,6 +1062,24 @@
     "channel": "hn",
     "query": "MCP server",
     "count": 3
+   },
+   {
+    "date": "2026-11-06T12:48:27.599Z",
+    "channel": "hn",
+    "query": "MCP registry",
+    "count": 0
+   },
+   {
+    "date": "2026-11-06T12:48:27.599Z",
+    "channel": "gn",
+    "query": "MCP server registry",
+    "count": 5
+   },
+   {
+    "date": "2026-11-06T12:48:27.599Z",
+    "channel": "hn",
+    "query": "MCP server",
+    "count": 5
    }
   ],
   "items": [
@@ -1190,6 +1208,15 @@
     "url": "https://qamcp.dev/?from=hackernews",
     "date": "2026-11-04T14:32:47Z",
     "foundAt": "2026-11-05T12:59:55.915Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: Paste your MCP config, see what each server does at startup",
+    "url": "https://mcp.brydge-ai.com/paste.html",
+    "date": "2026-11-05T17:52:40Z",
+    "foundAt": "2026-11-06T12:48:27.599Z"
    }
   ],
   "alerts": [
@@ -1275,6 +1302,12 @@
     "date": "2026-11-05T12:59:55.915Z",
     "title": "Show HN: QAmcp – an open-source tester and monitor for MCP servers",
     "url": "https://qamcp.dev/?from=hackernews",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-06T12:48:27.599Z",
+    "title": "Show HN: Paste your MCP config, see what each server does at startup",
+    "url": "https://mcp.brydge-ai.com/paste.html",
     "channel": "hn"
    }
   ]

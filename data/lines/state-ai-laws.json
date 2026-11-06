@@ -315,6 +315,24 @@
     "channel": "hn",
     "query": "state AI law",
     "count": 2
+   },
+   {
+    "date": "2026-11-06T12:48:34.892Z",
+    "channel": "gn",
+    "query": "state AI law enforcement",
+    "count": 5
+   },
+   {
+    "date": "2026-11-06T12:48:34.892Z",
+    "channel": "gn",
+    "query": "Colorado AI Act",
+    "count": 5
+   },
+   {
+    "date": "2026-11-06T12:48:34.892Z",
+    "channel": "hn",
+    "query": "state AI law",
+    "count": 1
    }
   ],
   "items": [
@@ -362,6 +380,15 @@
     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNZTdXU0l2T3pISWdTNHFOa25pQ05HY0RiSlczS1FPVWZOSzZndVdYZ3JHTlRnTFdNYUlnV3h1c25URndVZmVRSk9RT1lONmdiSmpGd3l6UUpHNUxIX1VqTnlJeGNrNVluN0MyTHNBWklBYmNPV2R3Nk1aMUFib1dQSjVENk5rbmpYc1FOMFhzODNWS1JxRGFqUzFiVWlWMjNnTkhTQWJhV1BxX29RUzdrSzNFYWFYNm9ZZHpnRmNvckpva3FSd3psUUM2ZUVpUVk?oc=5",
     "date": "Tue, 26 May 2026 07:00:00 GMT",
     "foundAt": "2026-11-05T13:00:16.306Z"
+   },
+   {
+    "line": "state-ai-laws",
+    "channel": "gn",
+    "query": "Colorado AI Act",
+    "title": "Colorado Hits Reset on AI Regulation: SB 26-189 Repeals and Reenacts the Colorado AI Act - Crowell &amp; Moring LLP",
+    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOZWZqRDRsRmR0dVdqdkNqS3Jrb1hSZ0xXallSTkNKaTU4M3pFZnBWZ052TzdXTFRHN1dwaTJaLXp4WUtzajJNci1YRGUyVTZkVzF6MmMwSE1oVEI3bEsxSDNldGF1VTlkbUxKaWJ3VU9Id3RtaUpmak1jRzlzMUltMEtSWWVnRU1Bdm1nWS05RUdrOGNHUU1HTDV1Qi1Gclg2NDFlZUJFRGlmRS1OMHBfNUZNMlZMY1dVTjZCQXc5QXB3NElJOUxyVjAwOHNMU09USHZv?oc=5",
+    "date": "Wed, 27 May 2026 07:00:00 GMT",
+    "foundAt": "2026-11-06T12:48:34.892Z"
    }
   ],
   "alerts": [
@@ -393,6 +420,12 @@
     "date": "2026-11-05T13:00:16.306Z",
     "title": "Colorado’s New AI Act Targets Automated Decision-Making for Consequential Decisions - Ogletree",
     "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNZTdXU0l2T3pISWdTNHFOa25pQ05HY0RiSlczS1FPVWZOSzZndVdYZ3JHTlRnTFdNYUlnV3h1c25URndVZmVRSk9RT1lONmdiSmpGd3l6UUpHNUxIX1VqTnlJeGNrNVluN0MyTHNBWklBYmNPV2R3Nk1aMUFib1dQSjVENk5rbmpYc1FOMFhzODNWS1JxRGFqUzFiVWlWMjNnTkhTQWJhV1BxX29RUzdrSzNFYWFYNm9ZZHpnRmNvckpva3FSd3psUUM2ZUVpUVk?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-06T12:48:34.892Z",
+    "title": "Colorado Hits Reset on AI Regulation: SB 26-189 Repeals and Reenacts the Colorado AI Act - Crowell &amp; Moring LLP",
+    "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOZWZqRDRsRmR0dVdqdkNqS3Jrb1hSZ0xXallSTkNKaTU4M3pFZnBWZ052TzdXTFRHN1dwaTJaLXp4WUtzajJNci1YRGUyVTZkVzF6MmMwSE1oVEI3bEsxSDNldGF1VTlkbUxKaWJ3VU9Id3RtaUpmak1jRzlzMUltMEtSWWVnRU1Bdm1nWS05RUdrOGNHUU1HTDV1Qi1Gclg2NDFlZUJFRGlmRS1OMHBfNUZNMlZMY1dVTjZCQXc5QXB3NElJOUxyVjAwOHNMU09USHZv?oc=5",
     "channel": "gn"
    }
   ]
