@@ -14,8 +14,8 @@
   "publication_status": "PUBLISHED",
   "assurance_level": 2,
   "contract_version": 1,
-  "raw_sha256": "4530ee66ca06ad133c7ef1bab4cf1cde546c13d7607a43e526326a1429874626",
-  "generated_at": "2026-11-06T02:46:11.362Z",
+  "raw_sha256": "e4052433be30e0c6de5d068f8763a1d3c67a92a766fe199743452a2186af2721",
+  "generated_at": "2026-11-06T02:47:43.762Z",
   "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/formd-sweep.json 自洽",
   "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
 }

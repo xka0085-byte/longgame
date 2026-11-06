@@ -6,10 +6,10 @@
     {
       "id": "sb253-docket",
       "title": "加州气候披露，2026-11-10 首窗，2027 鉴证，2030 合理鉴证",
-      "as_of": "2026-11-04",
+      "as_of": "2026-11-05",
       "url": "https://xka0085-byte.github.io/longgame/lines/sb253-docket.html",
       "data_url": "https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/sb253-docket.json",
-      "citation": "longgame sb253-docket（2026-11-04）：CARB 披露相关链接 0 条（首窗 11-10）",
+      "citation": "longgame sb253-docket（2026-11-05）：CARB 披露相关链接 0 条（首窗 11-10）",
       "scalar": {
         "value": 0,
         "unit": "条",
@@ -19,8 +19,8 @@
       "publication_status": "PUBLISHED",
       "assurance_level": 2,
       "contract_version": 1,
-      "raw_sha256": "425a4b53cd09bfcae466a067cf3cbf94fd4b0fc1755746d91ae9c9df3828a22f",
-      "generated_at": "2026-11-06T02:46:11.362Z",
+      "raw_sha256": "4cebafd0a2dabfde59508280de977915ef0ceff9572e8e8a9bed9280553c159f",
+      "generated_at": "2026-11-06T02:47:43.762Z",
       "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/sb253-docket.json 自洽",
       "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
     },
@@ -40,8 +40,8 @@
       "publication_status": "PUBLISHED",
       "assurance_level": 2,
       "contract_version": 1,
-      "raw_sha256": "bc225ff2110c3ebe1a081671b6c807ccead5493f3331ac59abc6275a3961e454",
-      "generated_at": "2026-11-06T02:46:11.362Z",
+      "raw_sha256": "2246440f212656853267f2210b8a9c8fc075252d42e1dd1a33aaffbf31df028a",
+      "generated_at": "2026-11-06T02:47:43.762Z",
       "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/agent-dirs.json 自洽",
       "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
     },
@@ -61,8 +61,8 @@
       "publication_status": "PUBLISHED",
       "assurance_level": 2,
       "contract_version": 1,
-      "raw_sha256": "d327610f3b076680222a8a6d44322aeca461949691a6b1b3f2ac8ba49576a130",
-      "generated_at": "2026-11-06T02:46:11.362Z",
+      "raw_sha256": "000a1ec7b6f40cbea0eea3a050b7b2c1a80fa83ac4c50113e4adc09de4328938",
+      "generated_at": "2026-11-06T02:47:43.762Z",
       "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/trust-delta.json 自洽",
       "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
     },
@@ -82,8 +82,8 @@
       "publication_status": "PUBLISHED",
       "assurance_level": 2,
       "contract_version": 1,
-      "raw_sha256": "651a71d086752e228fbcd6e70baaa216886efb479cc74229c2acfae920f091e9",
-      "generated_at": "2026-11-06T02:46:11.362Z",
+      "raw_sha256": "62c4d75bd1c90ccea11fd2a68cb117e01e5f02f620c0851ce31bd0f51c22eca5",
+      "generated_at": "2026-11-06T02:47:43.762Z",
       "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/eidas-tsl.json 自洽",
       "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
     },
@@ -99,8 +99,8 @@
       "publication_status": "PUBLISHED",
       "assurance_level": 2,
       "contract_version": 1,
-      "raw_sha256": "0e708b4885bb84c5ff35821b52c16fbc8b1cde7b03a1111827b565a3557a1020",
-      "generated_at": "2026-11-06T02:46:11.362Z",
+      "raw_sha256": "1c00d6e16ac8eb1870d0a5f0be068e107ee991337552f15d89d2174c793daf19",
+      "generated_at": "2026-11-06T02:47:43.762Z",
       "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/aiact-register.json 自洽",
       "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
     },
@@ -116,8 +116,8 @@
       "publication_status": "QUARANTINED",
       "assurance_level": 2,
       "contract_version": 1,
-      "raw_sha256": "e796f857d9b69a529af0fe5e094ebb11f547d38161eb34e82591ce68aa0bf897",
-      "generated_at": "2026-11-06T02:46:11.362Z",
+      "raw_sha256": "094d355f8325986aeaa4bf600d77b3140eb19e472208a7a8d5181b2f8a19dd89",
+      "generated_at": "2026-11-06T02:47:43.762Z",
       "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/triggers.json 自洽",
       "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
     },
@@ -137,8 +137,8 @@
       "publication_status": "PUBLISHED",
       "assurance_level": 2,
       "contract_version": 1,
-      "raw_sha256": "4530ee66ca06ad133c7ef1bab4cf1cde546c13d7607a43e526326a1429874626",
-      "generated_at": "2026-11-06T02:46:11.362Z",
+      "raw_sha256": "e4052433be30e0c6de5d068f8763a1d3c67a92a766fe199743452a2186af2721",
+      "generated_at": "2026-11-06T02:47:43.762Z",
       "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/formd-sweep.json 自洽",
       "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
     },
@@ -154,8 +154,8 @@
       "publication_status": "QUARANTINED",
       "assurance_level": 2,
       "contract_version": 1,
-      "raw_sha256": "c8c4f9aafc3ac52c761e32eba06abf2c1b3af535053a2c60734181c692d53ad5",
-      "generated_at": "2026-11-06T02:46:11.362Z",
+      "raw_sha256": "7161dc7c84cdb9cf10bd946fdf4530f4789746627ba54239d453f1390186c9fb",
+      "generated_at": "2026-11-06T02:47:43.762Z",
       "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/compute-futures.json 自洽",
       "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
     },
@@ -171,8 +171,8 @@
       "publication_status": "PUBLISHED",
       "assurance_level": 2,
       "contract_version": 1,
-      "raw_sha256": "fca6439f5f8236436eb49cdf250f527c869d6044e1e33ee54baf5e3a5bc11aea",
-      "generated_at": "2026-11-06T02:46:11.362Z",
+      "raw_sha256": "6a0d13bbf288f9268de404a0d22ecf342c72b8cbde5b143ca3caac736441eeba",
+      "generated_at": "2026-11-06T02:47:43.762Z",
       "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/c2pa-spec.json 自洽",
       "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
     },
@@ -188,8 +188,8 @@
       "publication_status": "PUBLISHED",
       "assurance_level": 2,
       "contract_version": 1,
-      "raw_sha256": "56160ab6ef6b30fced3ba9d0e0fa26a914ab68ccafa3304bf41fa11fe2244b73",
-      "generated_at": "2026-11-06T02:46:11.362Z",
+      "raw_sha256": "411f414401ca910a451d926535414a97c02fab62fa5d452bb5e7c517875b4896",
+      "generated_at": "2026-11-06T02:47:43.762Z",
       "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/state-ai-laws.json 自洽",
       "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
     },
@@ -209,8 +209,8 @@
       "publication_status": "PUBLISHED",
       "assurance_level": 2,
       "contract_version": 1,
-      "raw_sha256": "c3342db0700872dbd9754d1f277d794281df948a0cb7530d943919563a270ab7",
-      "generated_at": "2026-11-06T02:46:11.362Z",
+      "raw_sha256": "3d48d98d7ebe10cb92c133292cc07474cc60cf6dc1922ba82a60b3893fbc8052",
+      "generated_at": "2026-11-06T02:47:43.762Z",
       "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/grid-queue.json 自洽",
       "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
     }

@@ -1,15 +1,15 @@
 {
-  "run_id": "local-20261106024611362",
+  "run_id": "local-20261106024743762",
   "line": "triggers",
-  "commit": "32fcae298d8f01dee689522123bbad78c6ab9d2f",
+  "commit": "0b0a374ccd9b9219d8130dc9a5c3fca1ba3cc602",
   "contract_version": 1,
   "assurance_level": 2,
   "first_observed": "2026-10-20T13:48:44.453Z",
-  "raw_sha256": "e796f857d9b69a529af0fe5e094ebb11f547d38161eb34e82591ce68aa0bf897",
+  "raw_sha256": "094d355f8325986aeaa4bf600d77b3140eb19e472208a7a8d5181b2f8a19dd89",
   "normalized_sha256": "3590da46d92b08e48a5f8da54a9a84dd1c88878b13c035077ba613c45a23e3a5",
   "validation_status": "PASS",
   "publication_status": "QUARANTINED",
   "publication_reason": "data-source-unavailable",
   "last_success_at": null,
-  "generated_at": "2026-11-06T02:46:11.362Z"
+  "generated_at": "2026-11-06T02:47:43.762Z"
 }

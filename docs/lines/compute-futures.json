@@ -10,8 +10,8 @@
   "publication_status": "QUARANTINED",
   "assurance_level": 2,
   "contract_version": 1,
-  "raw_sha256": "c8c4f9aafc3ac52c761e32eba06abf2c1b3af535053a2c60734181c692d53ad5",
-  "generated_at": "2026-11-06T02:46:11.362Z",
+  "raw_sha256": "7161dc7c84cdb9cf10bd946fdf4530f4789746627ba54239d453f1390186c9fb",
+  "generated_at": "2026-11-06T02:47:43.762Z",
   "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/compute-futures.json 自洽",
   "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
 }
