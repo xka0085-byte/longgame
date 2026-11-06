@@ -38,6 +38,13 @@ jobs:
           echo "push failed after 3 attempts" >&2
           exit 1
 
+      # IndexNow：站点内容每次采集都会变，主动把 URL 推给 Bing/Yandex，
+      # 把"发布 → 可被检索 → 可被引用"的间隔从按天压到按分钟。
+      # 放在 push 之后，只对已落地的版本推；失败不影响采集结果（continue-on-error）。
+      - name: indexnow
+        continue-on-error: true
+        run: node scripts/indexnow.mjs
+
       - name: notify failure
         if: failure()
         env:
