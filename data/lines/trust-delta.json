@@ -1080,6 +1080,24 @@
     "channel": "hn",
     "query": "MCP server",
     "count": 5
+   },
+   {
+    "date": "2026-11-07T11:36:45.073Z",
+    "channel": "hn",
+    "query": "MCP registry",
+    "count": 0
+   },
+   {
+    "date": "2026-11-07T11:36:45.073Z",
+    "channel": "gn",
+    "query": "MCP server registry",
+    "count": 5
+   },
+   {
+    "date": "2026-11-07T11:36:45.073Z",
+    "channel": "hn",
+    "query": "MCP server",
+    "count": 3
    }
   ],
   "items": [
@@ -1217,6 +1235,15 @@
     "url": "https://mcp.brydge-ai.com/paste.html",
     "date": "2026-11-05T17:52:40Z",
     "foundAt": "2026-11-06T12:48:27.599Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "MCP-server-AutoCAD-Lisp-helper",
+    "url": "https://github.com/radwanalmsora/mcp-server-autocad-lisp-helper",
+    "date": "2026-11-07T04:31:05Z",
+    "foundAt": "2026-11-07T11:36:45.073Z"
    }
   ],
   "alerts": [
@@ -1308,6 +1335,12 @@
     "date": "2026-11-06T12:48:27.599Z",
     "title": "Show HN: Paste your MCP config, see what each server does at startup",
     "url": "https://mcp.brydge-ai.com/paste.html",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-07T11:36:45.073Z",
+    "title": "MCP-server-AutoCAD-Lisp-helper",
+    "url": "https://github.com/radwanalmsora/mcp-server-autocad-lisp-helper",
     "channel": "hn"
    }
   ]

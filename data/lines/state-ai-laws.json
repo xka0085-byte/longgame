@@ -333,6 +333,24 @@
     "channel": "hn",
     "query": "state AI law",
     "count": 1
+   },
+   {
+    "date": "2026-11-07T11:36:52.413Z",
+    "channel": "gn",
+    "query": "state AI law enforcement",
+    "count": 5
+   },
+   {
+    "date": "2026-11-07T11:36:52.413Z",
+    "channel": "gn",
+    "query": "Colorado AI Act",
+    "count": 5
+   },
+   {
+    "date": "2026-11-07T11:36:52.413Z",
+    "channel": "hn",
+    "query": "state AI law",
+    "count": 1
    }
   ],
   "items": [
@@ -389,6 +407,15 @@
     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOZWZqRDRsRmR0dVdqdkNqS3Jrb1hSZ0xXallSTkNKaTU4M3pFZnBWZ052TzdXTFRHN1dwaTJaLXp4WUtzajJNci1YRGUyVTZkVzF6MmMwSE1oVEI3bEsxSDNldGF1VTlkbUxKaWJ3VU9Id3RtaUpmak1jRzlzMUltMEtSWWVnRU1Bdm1nWS05RUdrOGNHUU1HTDV1Qi1Gclg2NDFlZUJFRGlmRS1OMHBfNUZNMlZMY1dVTjZCQXc5QXB3NElJOUxyVjAwOHNMU09USHZv?oc=5",
     "date": "Wed, 27 May 2026 07:00:00 GMT",
     "foundAt": "2026-11-06T12:48:34.892Z"
+   },
+   {
+    "line": "state-ai-laws",
+    "channel": "gn",
+    "query": "Colorado AI Act",
+    "title": "Colorado enacts revised AI law | United States | Global law firm - Norton Rose Fulbright",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMktfT1VQY0JUZ1Y2V09fTm90TThxUzdUbW5panJNbGJWdzRXYmdMd2RSTlJlLWVJejFqcko3NmZ1d0pScTE2OHlFXzFwZlBWdS1odUlBbmRUNVB2REVGdllwMHJGZjlHZ3RWZ1dUNml3bkVRcFg0MFJhZ1V1SzBWLUhmb0N1WFZRWWNjQWxWeTA2TWpZdWZrVm1aRUcxb0VULW5nTzZSZw?oc=5",
+    "date": "Wed, 20 May 2026 06:17:55 GMT",
+    "foundAt": "2026-11-07T11:36:52.413Z"
    }
   ],
   "alerts": [
@@ -426,6 +453,12 @@
     "date": "2026-11-06T12:48:34.892Z",
     "title": "Colorado Hits Reset on AI Regulation: SB 26-189 Repeals and Reenacts the Colorado AI Act - Crowell &amp; Moring LLP",
     "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOZWZqRDRsRmR0dVdqdkNqS3Jrb1hSZ0xXallSTkNKaTU4M3pFZnBWZ052TzdXTFRHN1dwaTJaLXp4WUtzajJNci1YRGUyVTZkVzF6MmMwSE1oVEI3bEsxSDNldGF1VTlkbUxKaWJ3VU9Id3RtaUpmak1jRzlzMUltMEtSWWVnRU1Bdm1nWS05RUdrOGNHUU1HTDV1Qi1Gclg2NDFlZUJFRGlmRS1OMHBfNUZNMlZMY1dVTjZCQXc5QXB3NElJOUxyVjAwOHNMU09USHZv?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-07T11:36:52.413Z",
+    "title": "Colorado enacts revised AI law | United States | Global law firm - Norton Rose Fulbright",
+    "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMktfT1VQY0JUZ1Y2V09fTm90TThxUzdUbW5panJNbGJWdzRXYmdMd2RSTlJlLWVJejFqcko3NmZ1d0pScTE2OHlFXzFwZlBWdS1odUlBbmRUNVB2REVGdllwMHJGZjlHZ3RWZ1dUNml3bkVRcFg0MFJhZ1V1SzBWLUhmb0N1WFZRWWNjQWxWeTA2TWpZdWZrVm1aRUcxb0VULW5nTzZSZw?oc=5",
     "channel": "gn"
    }
   ]

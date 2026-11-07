@@ -897,6 +897,54 @@
     "channel": "hn",
     "query": "Cloudflare Monetization Gateway",
     "count": 0
+   },
+   {
+    "date": "2026-11-07T11:36:47.674Z",
+    "channel": "fr",
+    "query": "compute derivatives",
+    "count": 0
+   },
+   {
+    "date": "2026-11-07T11:36:47.674Z",
+    "channel": "fr",
+    "query": "autonomous agent income",
+    "count": 1
+   },
+   {
+    "date": "2026-11-07T11:36:47.674Z",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "count": 5
+   },
+   {
+    "date": "2026-11-07T11:36:47.674Z",
+    "channel": "gn",
+    "query": "agent insurance",
+    "count": 5
+   },
+   {
+    "date": "2026-11-07T11:36:47.674Z",
+    "channel": "gn",
+    "query": "AI personality rights bill",
+    "count": 5
+   },
+   {
+    "date": "2026-11-07T11:36:47.674Z",
+    "channel": "hn",
+    "query": "compute futures",
+    "count": 3
+   },
+   {
+    "date": "2026-11-07T11:36:47.674Z",
+    "channel": "hn",
+    "query": "agent insurance",
+    "count": 1
+   },
+   {
+    "date": "2026-11-07T11:36:47.674Z",
+    "channel": "hn",
+    "query": "Cloudflare Monetization Gateway",
+    "count": 0
    }
   ],
   "items": [
@@ -1088,6 +1136,15 @@
     "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxON2RwRENpX2lEampmclJuVUM0ekVQU2NQRWZ0X0pkR085VUJOcXFnTVNTT3pCay1XWlI3bmhmRlVCYXhVZUlNMVBiZTdFeTk5MWo4eWI1SlFmZTdoenQzRWtDZldROHV5dzd2TVQ3SkVMek5vNDFzcW4zM1Vqcm85NXRmREU0QXdKMmtFa2hYZGtJSjFiQ3N6ZEc4VU03MG52WjFBTHVQUkV0eFJxdlRScUVmcDNGSnBDcUZqMmI2Rmd5XzRia182bktiY1JaSjJtdExPLWNoSHVNZUhMTE1MMGl3?oc=5",
     "date": "Fri, 06 Nov 2026 12:32:07 GMT",
     "foundAt": "2026-11-06T12:48:30.619Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "How far can P&amp;C insurance carriers take agentic AI? - PropertyCasualty360",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPMG9KdjRLelduSDhreDhpUml3akJjOFFGR0NweGFVbEtIWThOMXN0cFRsMVVzSXA5a1VhMC1Pc0F5WnV6VjBleF9TTXlpQWVvZDNaTWlsQ2N4LUpUWXRURFpqTzZ6aENoMTdxWlppTlpTa0tiVlN4UlBVckEyNTg4Z1Z5UnVySzdyRnFvejI0QTZNSjNxMnhvQ09hdzRKUQ?oc=5",
+    "date": "Sat, 07 Nov 2026 00:42:08 GMT",
+    "foundAt": "2026-11-07T11:36:47.674Z"
    }
   ],
   "alerts": [
@@ -1215,6 +1272,12 @@
     "date": "2026-11-06T12:48:30.619Z",
     "title": "Who signs off the AI number? What insurance Finance Teams need before an AI Agent touches the Reserving Report - Insurance Edge",
     "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxON2RwRENpX2lEampmclJuVUM0ekVQU2NQRWZ0X0pkR085VUJOcXFnTVNTT3pCay1XWlI3bmhmRlVCYXhVZUlNMVBiZTdFeTk5MWo4eWI1SlFmZTdoenQzRWtDZldROHV5dzd2TVQ3SkVMek5vNDFzcW4zM1Vqcm85NXRmREU0QXdKMmtFa2hYZGtJSjFiQ3N6ZEc4VU03MG52WjFBTHVQUkV0eFJxdlRScUVmcDNGSnBDcUZqMmI2Rmd5XzRia182bktiY1JaSjJtdExPLWNoSHVNZUhMTE1MMGl3?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-07T11:36:47.674Z",
+    "title": "How far can P&amp;C insurance carriers take agentic AI? - PropertyCasualty360",
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPMG9KdjRLelduSDhreDhpUml3akJjOFFGR0NweGFVbEtIWThOMXN0cFRsMVVzSXA5a1VhMC1Pc0F5WnV6VjBleF9TTXlpQWVvZDNaTWlsQ2N4LUpUWXRURFpqTzZ6aENoMTdxWlppTlpTa0tiVlN4UlBVckEyNTg4Z1Z5UnVySzdyRnFvejI0QTZNSjNxMnhvQ09hdzRKUQ?oc=5",
     "channel": "gn"
    }
   ]

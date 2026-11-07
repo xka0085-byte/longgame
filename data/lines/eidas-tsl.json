@@ -526,6 +526,18 @@
     "channel": "hn",
     "query": "eIDAS 2.0",
     "count": 0
+   },
+   {
+    "date": "2026-11-07T11:36:45.940Z",
+    "channel": "gn",
+    "query": "eIDAS wallet",
+    "count": 5
+   },
+   {
+    "date": "2026-11-07T11:36:45.940Z",
+    "channel": "hn",
+    "query": "eIDAS 2.0",
+    "count": 0
    }
   ],
   "items": [
@@ -555,6 +567,15 @@
     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPX3dpTGQ4bVVENmw0Nm9ULWx0RDc0Qm9CdGtON3FpbG1ZcjEwdXZuenhWOUtFTjQ3YTNPNjByVnNfSjdndVZnNnFHVDVhTVhaOGF4YndnM1dRR19mU0Z5bHNCMU9UT3BVbHdxSnVHRHlSOThFSGF1ZmxfRTFrcnZDOHdsRTN2VHBkQ1B5d011TWZ0YUwzSTB0bHRzblczT0VzdHc?oc=5",
     "date": "Thu, 23 Jul 2026 07:00:00 GMT",
     "foundAt": "2026-11-01T11:45:34.892Z"
+   },
+   {
+    "line": "eidas-tsl",
+    "channel": "gn",
+    "query": "eIDAS wallet",
+    "title": "Italy approves IT Wallet framework ahead of eIDAS rollout - Biometric Update",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOMWZoNzlIaHVNSmpTZFc5amdiZzl2c1lVM0d6WUpWbEczdjZxekNoU3B2b1M3TU1kZmR2WVQ5Ykx6MURvdDFWQXJmZ003SUNVcF80MkhEN1gtMkNmNW9selNibHpVTDUtcUJvc3VYWnhKYkRFYjZxRGVPZEVqMkRVSHY1d3VlQkotdzVoNnRJTE9QclFkeTNYY29ZZnA?oc=5",
+    "date": "Wed, 12 Aug 2026 07:00:00 GMT",
+    "foundAt": "2026-11-07T11:36:45.940Z"
    }
   ],
   "alerts": [
@@ -574,6 +595,12 @@
     "date": "2026-11-01T11:45:34.892Z",
     "title": "Nect earns eIDAS certification for EUDI Wallet trust services - Biometric Update",
     "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPX3dpTGQ4bVVENmw0Nm9ULWx0RDc0Qm9CdGtON3FpbG1ZcjEwdXZuenhWOUtFTjQ3YTNPNjByVnNfSjdndVZnNnFHVDVhTVhaOGF4YndnM1dRR19mU0Z5bHNCMU9UT3BVbHdxSnVHRHlSOThFSGF1ZmxfRTFrcnZDOHdsRTN2VHBkQ1B5d011TWZ0YUwzSTB0bHRzblczT0VzdHc?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-07T11:36:45.940Z",
+    "title": "Italy approves IT Wallet framework ahead of eIDAS rollout - Biometric Update",
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOMWZoNzlIaHVNSmpTZFc5amdiZzl2c1lVM0d6WUpWbEczdjZxekNoU3B2b1M3TU1kZmR2WVQ5Ykx6MURvdDFWQXJmZ003SUNVcF80MkhEN1gtMkNmNW9selNibHpVTDUtcUJvc3VYWnhKYkRFYjZxRGVPZEVqMkRVSHY1d3VlQkotdzVoNnRJTE9QclFkeTNYY29ZZnA?oc=5",
     "channel": "gn"
    }
   ]
