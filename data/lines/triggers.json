@@ -1011,6 +1011,54 @@
     "channel": "hn",
     "query": "Cloudflare Monetization Gateway",
     "count": 0
+   },
+   {
+    "date": "2026-11-08T11:48:51.434Z",
+    "channel": "fr",
+    "query": "compute derivatives",
+    "count": 0
+   },
+   {
+    "date": "2026-11-08T11:48:51.434Z",
+    "channel": "fr",
+    "query": "autonomous agent income",
+    "count": 0
+   },
+   {
+    "date": "2026-11-08T11:48:51.434Z",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "count": 5
+   },
+   {
+    "date": "2026-11-08T11:48:51.434Z",
+    "channel": "gn",
+    "query": "agent insurance",
+    "count": 5
+   },
+   {
+    "date": "2026-11-08T11:48:51.434Z",
+    "channel": "gn",
+    "query": "AI personality rights bill",
+    "count": 5
+   },
+   {
+    "date": "2026-11-08T11:48:51.434Z",
+    "channel": "hn",
+    "query": "compute futures",
+    "count": 1
+   },
+   {
+    "date": "2026-11-08T11:48:51.434Z",
+    "channel": "hn",
+    "query": "agent insurance",
+    "count": 0
+   },
+   {
+    "date": "2026-11-08T11:48:51.434Z",
+    "channel": "hn",
+    "query": "Cloudflare Monetization Gateway",
+    "count": 0
    }
   ],
   "items": [
@@ -1211,6 +1259,15 @@
     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPMG9KdjRLelduSDhreDhpUml3akJjOFFGR0NweGFVbEtIWThOMXN0cFRsMVVzSXA5a1VhMC1Pc0F5WnV6VjBleF9TTXlpQWVvZDNaTWlsQ2N4LUpUWXRURFpqTzZ6aENoMTdxWlppTlpTa0tiVlN4UlBVckEyNTg4Z1Z5UnVySzdyRnFvejI0QTZNSjNxMnhvQ09hdzRKUQ?oc=5",
     "date": "Sat, 07 Nov 2026 00:42:08 GMT",
     "foundAt": "2026-11-07T11:36:47.674Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Law Firms Have Malpractice Insurance. Should Their A.I. Agents? - The New York Times",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOaXFuOUJSYi1iVEUzaFZ1Yk90dW9TTldVaXpyNXpoUnJqMW9OTEkzZVNOdl9yVFFMTi1Nb1RLSERwLTByY2J4SXlqWVNRY3pfZG50TnZTdzJUN3Z2ZVEzcVFuQ0VNX2pBRWdjaUJMNEJtQUI3NC1nNURiOGMzbEt1V0M1ODlRRE5iTHFVQnJUY2s5YlFhaG45MjdSdDBrR1VYSXFVWnRoWUc?oc=5",
+    "date": "Sat, 07 Nov 2026 13:00:06 GMT",
+    "foundAt": "2026-11-08T11:48:51.434Z"
    }
   ],
   "alerts": [
@@ -1344,6 +1401,12 @@
     "date": "2026-11-07T11:36:47.674Z",
     "title": "How far can P&amp;C insurance carriers take agentic AI? - PropertyCasualty360",
     "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPMG9KdjRLelduSDhreDhpUml3akJjOFFGR0NweGFVbEtIWThOMXN0cFRsMVVzSXA5a1VhMC1Pc0F5WnV6VjBleF9TTXlpQWVvZDNaTWlsQ2N4LUpUWXRURFpqTzZ6aENoMTdxWlppTlpTa0tiVlN4UlBVckEyNTg4Z1Z5UnVySzdyRnFvejI0QTZNSjNxMnhvQ09hdzRKUQ?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-08T11:48:51.434Z",
+    "title": "Law Firms Have Malpractice Insurance. Should Their A.I. Agents? - The New York Times",
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOaXFuOUJSYi1iVEUzaFZ1Yk90dW9TTldVaXpyNXpoUnJqMW9OTEkzZVNOdl9yVFFMTi1Nb1RLSERwLTByY2J4SXlqWVNRY3pfZG50TnZTdzJUN3Z2ZVEzcVFuQ0VNX2pBRWdjaUJMNEJtQUI3NC1nNURiOGMzbEt1V0M1ODlRRE5iTHFVQnJUY2s5YlFhaG45MjdSdDBrR1VYSXFVWnRoWUc?oc=5",
     "channel": "gn"
    }
   ]

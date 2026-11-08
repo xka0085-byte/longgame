@@ -1098,6 +1098,24 @@
     "channel": "hn",
     "query": "MCP server",
     "count": 3
+   },
+   {
+    "date": "2026-11-08T11:48:49.006Z",
+    "channel": "hn",
+    "query": "MCP registry",
+    "count": 0
+   },
+   {
+    "date": "2026-11-08T11:48:49.006Z",
+    "channel": "gn",
+    "query": "MCP server registry",
+    "count": 5
+   },
+   {
+    "date": "2026-11-08T11:48:49.006Z",
+    "channel": "hn",
+    "query": "MCP server",
+    "count": 2
    }
   ],
   "items": [
