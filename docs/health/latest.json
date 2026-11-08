@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-11-08T01:56:51.801Z",
+  "generated_at": "2026-11-08T01:57:20.580Z",
   "today": "2026-11-08",
-  "trigger": "push",
-  "overall": "degraded",
+  "trigger": "workflow_dispatch",
+  "overall": "ok",
   "signals": [
     {
       "id": "line-degraded:triggers",
@@ -13,11 +13,6 @@
       "id": "line-degraded:compute-futures",
       "severity": "info",
       "detail": "compute-futures 最近一轮有 1 个页面不可用（按容错档放行，已记事件）"
-    },
-    {
-      "id": "gate-missing",
-      "severity": "warn",
-      "detail": "查不到最近一次 assurance-gate 的结论（无 token 且无本地 result.json），门禁状态未知"
     }
   ],
   "lines": [
@@ -220,9 +215,14 @@
     "failed": [],
     "attempted": []
   },
-  "previous_heartbeat_at": "2026-11-07T18:32:15.748Z",
-  "silence_hours": 7.4,
-  "gate": null,
+  "previous_heartbeat_at": "2026-11-08T01:56:51.801Z",
+  "silence_hours": 0,
+  "gate": {
+    "at": "2026-11-08T01:56:56Z",
+    "passed": true,
+    "source": "actions-api",
+    "url": "https://github.com/xka0085-byte/longgame/actions/runs/42436400410"
+  },
   "thresholds": {
     "weeklyGraceDays": 1,
     "monthlyGraceDays": 3,
