@@ -29,10 +29,14 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add data/ docs/ llms.txt 2>/dev/null || true
           git diff --cached --quiet || git commit -m "collect daily $(date -u +%F)"
-          BRANCH="${GITHUB_REF_NAME:-main}"
+          # 写回目标固定为默认分支，不用 GITHUB_REF_NAME：tag 或临时分支触发时它取到的是
+          # 那个 ref 名，push 会因为远端已有同名 tag 被直接拒绝（2026-11-05 / 11-06 两次
+          # heartbeat 变红即此因，见 issue #5）。同时显式写 refs/heads/ 前缀，避免 git
+          # 把裸分支名解析成同名 tag。
+          BRANCH="${{ github.event.repository.default_branch }}"
           for i in 1 2 3; do
             git pull --rebase --autostash origin "$BRANCH" || true
-            if git push origin "HEAD:$BRANCH"; then echo "pushed (attempt $i)"; exit 0; fi
+            if git push origin "HEAD:refs/heads/$BRANCH"; then echo "pushed (attempt $i)"; exit 0; fi
             sleep 5
           done
           echo "push failed after 3 attempts" >&2

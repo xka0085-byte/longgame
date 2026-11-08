@@ -18,9 +18,15 @@ on:
     - cron: "0 14 * * *"   # UTC 14:00 = 北京 22:00
   workflow_dispatch:
   push:
+    # 只在 master 上响应脚本改动。原来没写 branches，任何分支/tag 上改到这两个脚本
+    # 都会触发一次心跳；而心跳会 checkout 那个 ref 再写回，遇到同名 tag 就必然被拒
+    # （2026-11-05 archive/main-2026-11-05、11-06 snapshot-2026-11-05 两次变红）。
+    # 脚本改动的自检只关心主干，没有理由在临时快照分支上跑。
+    branches: [master]
     paths:
       - "scripts/heartbeat.mjs"
       - "scripts/lib/github-issue.mjs"
+      - "scripts/resolve-failure.mjs"
 
 permissions:
   contents: write
@@ -54,7 +60,11 @@ jobs:
         run: |
           git config user.name "longgame-bot"
           git config user.email "actions@users.noreply.github.com"
-          BRANCH="${GITHUB_REF_NAME:-main}"
+          # 写回目标固定为默认分支，不用 GITHUB_REF_NAME：tag 或临时分支触发时它取到的是
+          # 那个 ref 名，push 会因为远端已有同名 tag 被直接拒绝（2026-11-05 / 11-06 两次
+          # heartbeat 变红即此因，见 issue #5）。同时显式写 refs/heads/ 前缀，避免 git
+          # 把裸分支名解析成同名 tag。
+          BRANCH="${{ github.event.repository.default_branch }}"
           git add data/heartbeat.json data/collect-runs.json data/lines docs/health docs/health.html 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "no health change to commit"
@@ -65,7 +75,7 @@ jobs:
           # 重试三次、每次先 rebase：宁可多试几次，也不要因为一次非快进把健康状态丢掉。
           for i in 1 2 3; do
             git pull --rebase --autostash origin "$BRANCH" || true
-            if git push origin "HEAD:$BRANCH"; then echo "pushed (attempt $i)"; exit 0; fi
+            if git push origin "HEAD:refs/heads/$BRANCH"; then echo "pushed (attempt $i)"; exit 0; fi
             sleep 5
           done
           echo "push failed after 3 attempts" >&2
@@ -99,3 +109,11 @@ jobs:
           else
             node scripts/notify-failure.mjs "${{ github.workflow }}"
           fi
+
+      # 恢复收口：整条 run 绿了就把之前登记的那条 workflow-failed 关掉，
+      # 不让 issue 列表靠人记忆维护。
+      - name: close stale failure issue
+        if: success()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/resolve-failure.mjs "${{ github.workflow }}"
