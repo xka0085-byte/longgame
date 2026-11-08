@@ -1,9 +1,14 @@
 {
-  "generated_at": "2026-11-08T08:29:46.977Z",
+  "generated_at": "2026-11-08T15:28:29.704Z",
   "today": "2026-11-08",
   "trigger": "schedule",
   "overall": "ok",
   "signals": [
+    {
+      "id": "line-degraded:sb253-docket",
+      "severity": "info",
+      "detail": "sb253-docket 最近一轮有 2 个页面不可用（按容错档放行，已记事件）"
+    },
     {
       "id": "line-degraded:triggers",
       "severity": "info",
@@ -60,14 +65,14 @@
       "managed": true,
       "status": "active",
       "cadence": "window",
-      "last_collect": "2026-11-07",
-      "gap_days": 1,
+      "last_collect": "2026-11-08",
+      "gap_days": 0,
       "limit_days": 1,
       "consecutive_failed_rounds": 0,
-      "last_round": null,
-      "degraded_pages": 0,
+      "last_round": "partial",
+      "degraded_pages": 2,
       "freshness": "fresh",
-      "last_attempt": "2026-11-07"
+      "last_attempt": "2026-11-08"
     },
     {
       "id": "agent-dirs",
@@ -215,8 +220,8 @@
     "failed": [],
     "attempted": []
   },
-  "previous_heartbeat_at": "2026-11-08T01:57:20.580Z",
-  "silence_hours": 6.5,
+  "previous_heartbeat_at": "2026-11-08T08:29:46.977Z",
+  "silence_hours": 7,
   "gate": {
     "at": "2026-11-08T01:56:56Z",
     "passed": true,
