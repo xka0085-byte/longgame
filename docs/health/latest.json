@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-08T01:57:20.580Z",
+  "generated_at": "2026-11-08T08:29:46.977Z",
   "today": "2026-11-08",
-  "trigger": "workflow_dispatch",
+  "trigger": "schedule",
   "overall": "ok",
   "signals": [
     {
@@ -116,42 +116,42 @@
       "managed": true,
       "status": "auto-wait",
       "cadence": "monthly",
-      "last_collect": "2026-11-02",
-      "gap_days": 6,
+      "last_collect": "2026-11-08",
+      "gap_days": 0,
       "limit_days": 34,
       "consecutive_failed_rounds": 0,
       "last_round": null,
       "degraded_pages": 0,
       "freshness": "fresh",
-      "last_attempt": "2026-11-02"
+      "last_attempt": "2026-11-08"
     },
     {
       "id": "triggers",
       "managed": true,
       "status": "active",
       "cadence": "monthly",
-      "last_collect": "2026-11-02",
-      "gap_days": 6,
+      "last_collect": "2026-11-08",
+      "gap_days": 0,
       "limit_days": 34,
       "consecutive_failed_rounds": 0,
       "last_round": "partial",
       "degraded_pages": 1,
       "freshness": "fresh",
-      "last_attempt": "2026-11-02"
+      "last_attempt": "2026-11-08"
     },
     {
       "id": "formd-sweep",
       "managed": true,
       "status": "active",
       "cadence": "monthly",
-      "last_collect": "2026-11-02",
-      "gap_days": 6,
+      "last_collect": "2026-11-08",
+      "gap_days": 0,
       "limit_days": 34,
       "consecutive_failed_rounds": 0,
       "last_round": null,
       "degraded_pages": 0,
       "freshness": "fresh",
-      "last_attempt": "2026-11-02"
+      "last_attempt": "2026-11-08"
     },
     {
       "id": "compute-futures",
@@ -200,14 +200,14 @@
       "managed": true,
       "status": "active",
       "cadence": "monthly",
-      "last_collect": "2026-11-02",
-      "gap_days": 6,
+      "last_collect": "2026-11-08",
+      "gap_days": 0,
       "limit_days": 34,
       "consecutive_failed_rounds": 0,
       "last_round": null,
       "degraded_pages": 0,
       "freshness": "fresh",
-      "last_attempt": "2026-11-02"
+      "last_attempt": "2026-11-08"
     }
   ],
   "heal": {
@@ -215,8 +215,8 @@
     "failed": [],
     "attempted": []
   },
-  "previous_heartbeat_at": "2026-11-08T01:56:51.801Z",
-  "silence_hours": 0,
+  "previous_heartbeat_at": "2026-11-08T01:57:20.580Z",
+  "silence_hours": 6.5,
   "gate": {
     "at": "2026-11-08T01:56:56Z",
     "passed": true,
