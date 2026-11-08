@@ -3,18 +3,19 @@
 零人工自转的测量线组合，自 2026 年 10 月起。每条线是一个独立的时间序列：采集做数据 diff，雷达每日扫外部最新消息，反应规则自动进月报。
 
 <!-- AUTO-CITATIONS:START -->
-## 一句话引用（自动生成 2026-11-06）
+## 一句话引用（自动生成 2026-11-08）
 
 每条线一行，可整句引用。括号里的 as_of 是数字的数据日期，不是文档日期——跨期引用必须连 as_of 一起给。
 机器可读全文（全部线、含原始数据 hash 与复算命令）：https://xka0085-byte.github.io/longgame/citation.json
 带方法与边界的一次性全文（不必再逐页抓）：https://xka0085-byte.github.io/longgame/llms-full.txt
+本快照的归档 DOI（不随仓库改动变化）：https://doi.org/10.5281/zenodo.23998349
 
-- longgame sb253-docket（2026-11-05）：CARB 披露相关链接 0 条（首窗 11-10） — https://xka0085-byte.github.io/longgame/lines/sb253-docket.html · 原始数据 https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/sb253-docket.json
+- longgame sb253-docket（2026-11-07）：CARB 披露相关链接 0 条（首窗 11-10） — https://xka0085-byte.github.io/longgame/lines/sb253-docket.html · 原始数据 https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/sb253-docket.json
 - longgame agent-dirs（2026-11-02）：当前登记的 agent 密钥 6 把 — https://xka0085-byte.github.io/longgame/lines/agent-dirs.html · 原始数据 https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/agent-dirs.json
 - longgame trust-delta（2026-11-01）：Trust Directory 在册端点 35327 个，本轮判定变更 264 次（转 PASS 181、离开 PASS 50），消失 46 个（上游本轮对比覆盖不完整，新增/消失数只作参考）（最近一次采集 2026-11-02 为当日刷新，只更新在册与状态快照；周变化仍按 2026-10-30 起算的上一次跨周对比） — https://xka0085-byte.github.io/longgame/lines/trust-delta.html · 原始数据 https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/trust-delta.json
 - longgame eidas-tsl（2026-11-02）：EU 信任列表指针 42 个 — https://xka0085-byte.github.io/longgame/lines/eidas-tsl.html · 原始数据 https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/eidas-tsl.json
-- longgame formd-sweep（2026-11-02）：本月十个关键词合计新增 Form D 备案 34 件 — https://xka0085-byte.github.io/longgame/lines/formd-sweep.html · 原始数据 https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/formd-sweep.json
-- longgame grid-queue（2026-11-02）：EIA-860M september_generator2026.xlsx 计划新增 2360 行合计 290242 MW，已取消 1747 行合计 185356.8 MW — https://xka0085-byte.github.io/longgame/lines/grid-queue.html · 原始数据 https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/grid-queue.json
+- longgame formd-sweep（2026-11-08）：本月十个关键词合计新增 Form D 备案 34 件 — https://xka0085-byte.github.io/longgame/lines/formd-sweep.html · 原始数据 https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/formd-sweep.json
+- longgame grid-queue（2026-11-08）：EIA-860M september_generator2026.xlsx 计划新增 2360 行合计 290242 MW，已取消 1747 行合计 185356.8 MW — https://xka0085-byte.github.io/longgame/lines/grid-queue.html · 原始数据 https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/grid-queue.json
 
 ### 当前没有可引用数字的线（aiact-register、triggers、compute-futures、c2pa-spec、state-ai-laws）
 

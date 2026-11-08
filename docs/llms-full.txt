@@ -1,7 +1,7 @@
 # longgame portfolio — full context
 > 零人工测量的公开数据线组合。每条线一个可核查标量，自带 as_of、原始数据 sha256 与复算命令。
 > Independently maintained public-data series. One verifiable scalar per line, each with its own as_of date, raw-data sha256 and a reproduce command.
-> Site: https://xka0085-byte.github.io/longgame/ · Machine-readable: https://xka0085-byte.github.io/longgame/citation.json · Updated: 2026-11-06
+> Site: https://xka0085-byte.github.io/longgame/ · Machine-readable: https://xka0085-byte.github.io/longgame/citation.json · Updated: 2026-11-08
 
 ## 这是什么 / What this is
 14 条独立时间序列，每条记录一个"事后无法重建"的量（监管名单变更、备案计数、装机队列、信任列表指针、agent 密钥目录等）。
@@ -22,11 +22,11 @@ Quote the citation string verbatim. The date in parentheses is the data date (as
 归档 DOI / archive DOI (frozen snapshot, does not move): https://doi.org/10.5281/zenodo.23998349
 
 ## 可引用的线 / Citable lines
-### sb253-docket — as_of 2026-11-05
-- citation: longgame sb253-docket（2026-11-05）：CARB 披露相关链接 0 条（首窗 11-10）
+### sb253-docket — as_of 2026-11-07
+- citation: longgame sb253-docket（2026-11-07）：CARB 披露相关链接 0 条（首窗 11-10）
 - page: https://xka0085-byte.github.io/longgame/lines/sb253-docket.html
 - raw data: https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/sb253-docket.json
-- raw sha256: 4cebafd0a2dabfde59508280de977915ef0ceff9572e8e8a9bed9280553c159f
+- raw sha256: 5683aa4f3ab74ea9a88395611850174404e90a8f6b0c96d38941ccdbb3e0db57
 - reproduce: `node scripts/verify-data.mjs  # 校验 data/lines/sb253-docket.json 自洽`
 - status: PUBLISHED · assurance: 2 · contract: v1
 
@@ -34,7 +34,7 @@ Quote the citation string verbatim. The date in parentheses is the data date (as
 - citation: longgame agent-dirs（2026-11-02）：当前登记的 agent 密钥 6 把
 - page: https://xka0085-byte.github.io/longgame/lines/agent-dirs.html
 - raw data: https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/agent-dirs.json
-- raw sha256: 2246440f212656853267f2210b8a9c8fc075252d42e1dd1a33aaffbf31df028a
+- raw sha256: 462daf36bea720341547fee0457e82b72b4f64d62965e92f9060c2dc104711ec
 - reproduce: `node scripts/verify-data.mjs  # 校验 data/lines/agent-dirs.json 自洽`
 - status: PUBLISHED · assurance: 2 · contract: v1
 
@@ -42,7 +42,7 @@ Quote the citation string verbatim. The date in parentheses is the data date (as
 - citation: longgame trust-delta（2026-11-01）：Trust Directory 在册端点 35327 个，本轮判定变更 264 次（转 PASS 181、离开 PASS 50），消失 46 个（上游本轮对比覆盖不完整，新增/消失数只作参考）（最近一次采集 2026-11-02 为当日刷新，只更新在册与状态快照；周变化仍按 2026-10-30 起算的上一次跨周对比）
 - page: https://xka0085-byte.github.io/longgame/lines/trust-delta.html
 - raw data: https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/trust-delta.json
-- raw sha256: 000a1ec7b6f40cbea0eea3a050b7b2c1a80fa83ac4c50113e4adc09de4328938
+- raw sha256: 9a98ad0a241b7a1d86c99b82ca5ea57bd86a0d2f63dfa27284c054f16929b96d
 - reproduce: `node scripts/verify-data.mjs  # 校验 data/lines/trust-delta.json 自洽`
 - status: PUBLISHED · assurance: 2 · contract: v1
 
@@ -50,23 +50,23 @@ Quote the citation string verbatim. The date in parentheses is the data date (as
 - citation: longgame eidas-tsl（2026-11-02）：EU 信任列表指针 42 个
 - page: https://xka0085-byte.github.io/longgame/lines/eidas-tsl.html
 - raw data: https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/eidas-tsl.json
-- raw sha256: 62c4d75bd1c90ccea11fd2a68cb117e01e5f02f620c0851ce31bd0f51c22eca5
+- raw sha256: 4c7d33baa93832b70fe80e54c2eba70296fd29bfccea558efde0735368baedfb
 - reproduce: `node scripts/verify-data.mjs  # 校验 data/lines/eidas-tsl.json 自洽`
 - status: PUBLISHED · assurance: 2 · contract: v1
 
-### formd-sweep — as_of 2026-11-02
-- citation: longgame formd-sweep（2026-11-02）：本月十个关键词合计新增 Form D 备案 34 件
+### formd-sweep — as_of 2026-11-08
+- citation: longgame formd-sweep（2026-11-08）：本月十个关键词合计新增 Form D 备案 34 件
 - page: https://xka0085-byte.github.io/longgame/lines/formd-sweep.html
 - raw data: https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/formd-sweep.json
-- raw sha256: e4052433be30e0c6de5d068f8763a1d3c67a92a766fe199743452a2186af2721
+- raw sha256: 355783c885fa862a6d6f2387db1315f40947b2eaa2638bc76a7cce466e98bda1
 - reproduce: `node scripts/verify-data.mjs  # 校验 data/lines/formd-sweep.json 自洽`
 - status: PUBLISHED · assurance: 2 · contract: v1
 
-### grid-queue — as_of 2026-11-02
-- citation: longgame grid-queue（2026-11-02）：EIA-860M september_generator2026.xlsx 计划新增 2360 行合计 290242 MW，已取消 1747 行合计 185356.8 MW
+### grid-queue — as_of 2026-11-08
+- citation: longgame grid-queue（2026-11-08）：EIA-860M september_generator2026.xlsx 计划新增 2360 行合计 290242 MW，已取消 1747 行合计 185356.8 MW
 - page: https://xka0085-byte.github.io/longgame/lines/grid-queue.html
 - raw data: https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/grid-queue.json
-- raw sha256: 3d48d98d7ebe10cb92c133292cc07474cc60cf6dc1922ba82a60b3893fbc8052
+- raw sha256: e7bbeffc1527faa6149c8939812cf286369d7123db1b68c51a57eed5eec4a519
 - reproduce: `node scripts/verify-data.mjs  # 校验 data/lines/grid-queue.json 自洽`
 - status: PUBLISHED · assurance: 2 · contract: v1
 

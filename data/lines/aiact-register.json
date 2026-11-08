@@ -108,6 +108,48 @@
      }
     ],
     "ok": true
+   },
+   {
+    "date": "2026-11-08T01:59:19.552Z",
+    "pages": [
+     {
+      "id": "ec-gpai-practice",
+      "status": 200,
+      "bytes": 46446,
+      "sig": "46411:PCFET0NUWVBFIGh0bWw+",
+      "changed": true,
+      "keywordHit": false,
+      "unavailable": false
+     },
+     {
+      "id": "ec-aiact-policy",
+      "status": 200,
+      "bytes": 46446,
+      "sig": "46411:PCFET0NUWVBFIGh0bWw+",
+      "changed": true,
+      "keywordHit": false,
+      "unavailable": false
+     },
+     {
+      "id": "ec-register-hr",
+      "status": 200,
+      "bytes": 46446,
+      "sig": "46411:PCFET0NUWVBFIGh0bWw+",
+      "changed": true,
+      "keywordHit": false,
+      "unavailable": false
+     },
+     {
+      "id": "proxy-timeline",
+      "status": 200,
+      "bytes": 339608,
+      "sig": "339565:PCFET0NUWVBFIGh0bWw+",
+      "changed": false,
+      "keywordHit": false,
+      "unavailable": false
+     }
+    ],
+    "ok": true
    }
   ],
   "events": [
@@ -149,6 +191,21 @@
    {
     "date": "2026-11-02T03:54:57.180Z",
     "page": "proxy-timeline",
+    "note": "content changed"
+   },
+   {
+    "date": "2026-11-08T01:59:19.552Z",
+    "page": "ec-gpai-practice",
+    "note": "content changed"
+   },
+   {
+    "date": "2026-11-08T01:59:19.552Z",
+    "page": "ec-aiact-policy",
+    "note": "content changed"
+   },
+   {
+    "date": "2026-11-08T01:59:19.552Z",
+    "page": "ec-register-hr",
     "note": "content changed"
    }
   ]

@@ -1,10 +1,10 @@
 {
   "id": "formd-sweep",
   "title": "私募资金流向硬数据",
-  "as_of": "2026-11-02",
+  "as_of": "2026-11-08",
   "url": "https://xka0085-byte.github.io/longgame/lines/formd-sweep.html",
   "data_url": "https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/formd-sweep.json",
-  "citation": "longgame formd-sweep（2026-11-02）：本月十个关键词合计新增 Form D 备案 34 件",
+  "citation": "longgame formd-sweep（2026-11-08）：本月十个关键词合计新增 Form D 备案 34 件",
   "scalar": {
     "value": 34,
     "unit": "件",
@@ -14,8 +14,8 @@
   "publication_status": "PUBLISHED",
   "assurance_level": 2,
   "contract_version": 1,
-  "raw_sha256": "e4052433be30e0c6de5d068f8763a1d3c67a92a766fe199743452a2186af2721",
-  "generated_at": "2026-11-06T02:51:54.557Z",
+  "raw_sha256": "355783c885fa862a6d6f2387db1315f40947b2eaa2638bc76a7cce466e98bda1",
+  "generated_at": "2026-11-08T01:59:40.643Z",
   "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/formd-sweep.json 自洽",
   "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
 }

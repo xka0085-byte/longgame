@@ -14,8 +14,8 @@
   "publication_status": "PUBLISHED",
   "assurance_level": 2,
   "contract_version": 1,
-  "raw_sha256": "2246440f212656853267f2210b8a9c8fc075252d42e1dd1a33aaffbf31df028a",
-  "generated_at": "2026-11-06T02:51:54.557Z",
+  "raw_sha256": "462daf36bea720341547fee0457e82b72b4f64d62965e92f9060c2dc104711ec",
+  "generated_at": "2026-11-08T01:59:40.643Z",
   "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/agent-dirs.json 自洽",
   "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
 }

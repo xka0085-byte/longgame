@@ -1,17 +1,17 @@
 {
   "id": "state-ai-laws",
   "title": "州级 AI 法案 patchwork，科罗拉多 2026 生效",
-  "as_of": "2026-11-06",
+  "as_of": "2026-11-08",
   "url": "https://xka0085-byte.github.io/longgame/lines/state-ai-laws.html",
   "data_url": "https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/state-ai-laws.json",
-  "citation": "longgame state-ai-laws（2026-11-06）：本期无新增可分享数字（PUBLISHED）",
+  "citation": "longgame state-ai-laws（2026-11-08）：本期无新增可分享数字（PUBLISHED）",
   "scalar": null,
   "citable": false,
   "publication_status": "PUBLISHED",
   "assurance_level": 2,
   "contract_version": 1,
-  "raw_sha256": "411f414401ca910a451d926535414a97c02fab62fa5d452bb5e7c517875b4896",
-  "generated_at": "2026-11-06T02:51:54.557Z",
+  "raw_sha256": "8cb7d7dbe35c959b95bc0cf36c3434ed917548d907bf33f5e88de768c8f8c026",
+  "generated_at": "2026-11-08T01:59:40.643Z",
   "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/state-ai-laws.json 自洽",
   "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
 }

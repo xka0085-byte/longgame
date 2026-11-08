@@ -1,10 +1,10 @@
 {
   "id": "sb253-docket",
   "title": "加州气候披露，2026-11-10 首窗，2027 鉴证，2030 合理鉴证",
-  "as_of": "2026-11-05",
+  "as_of": "2026-11-07",
   "url": "https://xka0085-byte.github.io/longgame/lines/sb253-docket.html",
   "data_url": "https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/sb253-docket.json",
-  "citation": "longgame sb253-docket（2026-11-05）：CARB 披露相关链接 0 条（首窗 11-10）",
+  "citation": "longgame sb253-docket（2026-11-07）：CARB 披露相关链接 0 条（首窗 11-10）",
   "scalar": {
     "value": 0,
     "unit": "条",
@@ -14,8 +14,8 @@
   "publication_status": "PUBLISHED",
   "assurance_level": 2,
   "contract_version": 1,
-  "raw_sha256": "4cebafd0a2dabfde59508280de977915ef0ceff9572e8e8a9bed9280553c159f",
-  "generated_at": "2026-11-06T02:51:54.557Z",
+  "raw_sha256": "5683aa4f3ab74ea9a88395611850174404e90a8f6b0c96d38941ccdbb3e0db57",
+  "generated_at": "2026-11-08T01:59:40.643Z",
   "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/sb253-docket.json 自洽",
   "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
 }
