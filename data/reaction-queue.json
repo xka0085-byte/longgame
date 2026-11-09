@@ -584,7 +584,25 @@
    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOaXFuOUJSYi1iVEUzaFZ1Yk90dW9TTldVaXpyNXpoUnJqMW9OTEkzZVNOdl9yVFFMTi1Nb1RLSERwLTByY2J4SXlqWVNRY3pfZG50TnZTdzJUN3Z2ZVEzcVFuQ0VNX2pBRWdjaUJMNEJtQUI3NC1nNURiOGMzbEt1V0M1ODlRRE5iTHFVQnJUY2s5YlFhaG45MjdSdDBrR1VYSXFVWnRoWUc?oc=5",
    "type": "noise",
    "action": "只记录"
+  },
+  {
+   "date": "2026-11-09T13:44:05.134Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Byward – put any MCP server behind OAuth 2.1 and Entra ID",
+   "url": "https://github.com/byward-dev/byward",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-09T13:44:05.134Z",
+   "line": "state-ai-laws",
+   "channel": "gn",
+   "title": "DOJ Launches Super Intelligence Task Force, Merging AI Crime Enforcement With Challenges to State AI Laws - XenoSpectrum",
+   "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBoajlOcHhLUmdUVzBZQzN1bFdva1Zpbmd6WFk2azBoTnVIckJfUGpmcEQzeHNFX2EzNUFmNUV4ZUs4ZVpzbnZ6Z0ZSLUtfbmRQQVd4c21rVzhPbWdrVFRzU0xVV1dBc3V2SG5jdzhGaw?oc=5",
+   "type": "rule",
+   "action": "更新该线参数，必要时出解读"
   }
  ],
- "updated": "2026-11-08T11:48:57.729Z"
+ "updated": "2026-11-09T13:44:05.134Z"
 }

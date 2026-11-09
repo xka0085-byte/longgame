@@ -1447,6 +1447,24 @@
     "channel": "hn",
     "query": "MCP server",
     "count": 2
+   },
+   {
+    "date": "2026-11-09T13:43:56.095Z",
+    "channel": "hn",
+    "query": "MCP registry",
+    "count": 0
+   },
+   {
+    "date": "2026-11-09T13:43:56.095Z",
+    "channel": "gn",
+    "query": "MCP server registry",
+    "count": 5
+   },
+   {
+    "date": "2026-11-09T13:43:56.095Z",
+    "channel": "hn",
+    "query": "MCP server",
+    "count": 4
    }
   ],
   "items": [
@@ -1593,6 +1611,15 @@
     "url": "https://github.com/radwanalmsora/mcp-server-autocad-lisp-helper",
     "date": "2026-11-07T04:31:05Z",
     "foundAt": "2026-11-07T11:36:45.073Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Byward – put any MCP server behind OAuth 2.1 and Entra ID",
+    "url": "https://github.com/byward-dev/byward",
+    "date": "2026-11-08T15:31:25Z",
+    "foundAt": "2026-11-09T13:43:56.095Z"
    }
   ],
   "alerts": [
@@ -1690,6 +1717,12 @@
     "date": "2026-11-07T11:36:45.073Z",
     "title": "MCP-server-AutoCAD-Lisp-helper",
     "url": "https://github.com/radwanalmsora/mcp-server-autocad-lisp-helper",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-09T13:43:56.095Z",
+    "title": "Byward – put any MCP server behind OAuth 2.1 and Entra ID",
+    "url": "https://github.com/byward-dev/byward",
     "channel": "hn"
    }
   ]

@@ -389,6 +389,24 @@
     "channel": "hn",
     "query": "state AI law",
     "count": 0
+   },
+   {
+    "date": "2026-11-09T13:44:03.025Z",
+    "channel": "gn",
+    "query": "state AI law enforcement",
+    "count": 5
+   },
+   {
+    "date": "2026-11-09T13:44:03.025Z",
+    "channel": "gn",
+    "query": "Colorado AI Act",
+    "count": 5
+   },
+   {
+    "date": "2026-11-09T13:44:03.025Z",
+    "channel": "hn",
+    "query": "state AI law",
+    "count": 0
    }
   ],
   "items": [
@@ -454,6 +472,15 @@
     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMktfT1VQY0JUZ1Y2V09fTm90TThxUzdUbW5panJNbGJWdzRXYmdMd2RSTlJlLWVJejFqcko3NmZ1d0pScTE2OHlFXzFwZlBWdS1odUlBbmRUNVB2REVGdllwMHJGZjlHZ3RWZ1dUNml3bkVRcFg0MFJhZ1V1SzBWLUhmb0N1WFZRWWNjQWxWeTA2TWpZdWZrVm1aRUcxb0VULW5nTzZSZw?oc=5",
     "date": "Wed, 20 May 2026 06:17:55 GMT",
     "foundAt": "2026-11-07T11:36:52.413Z"
+   },
+   {
+    "line": "state-ai-laws",
+    "channel": "gn",
+    "query": "state AI law enforcement",
+    "title": "DOJ Launches Super Intelligence Task Force, Merging AI Crime Enforcement With Challenges to State AI Laws - XenoSpectrum",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBoajlOcHhLUmdUVzBZQzN1bFdva1Zpbmd6WFk2azBoTnVIckJfUGpmcEQzeHNFX2EzNUFmNUV4ZUs4ZVpzbnZ6Z0ZSLUtfbmRQQVd4c21rVzhPbWdrVFRzU0xVV1dBc3V2SG5jdzhGaw?oc=5",
+    "date": "Sun, 08 Nov 2026 05:22:05 GMT",
+    "foundAt": "2026-11-09T13:44:03.025Z"
    }
   ],
   "alerts": [
@@ -497,6 +524,12 @@
     "date": "2026-11-07T11:36:52.413Z",
     "title": "Colorado enacts revised AI law | United States | Global law firm - Norton Rose Fulbright",
     "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPMktfT1VQY0JUZ1Y2V09fTm90TThxUzdUbW5panJNbGJWdzRXYmdMd2RSTlJlLWVJejFqcko3NmZ1d0pScTE2OHlFXzFwZlBWdS1odUlBbmRUNVB2REVGdllwMHJGZjlHZ3RWZ1dUNml3bkVRcFg0MFJhZ1V1SzBWLUhmb0N1WFZRWWNjQWxWeTA2TWpZdWZrVm1aRUcxb0VULW5nTzZSZw?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-09T13:44:03.025Z",
+    "title": "DOJ Launches Super Intelligence Task Force, Merging AI Crime Enforcement With Challenges to State AI Laws - XenoSpectrum",
+    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBoajlOcHhLUmdUVzBZQzN1bFdva1Zpbmd6WFk2azBoTnVIckJfUGpmcEQzeHNFX2EzNUFmNUV4ZUs4ZVpzbnZ6Z0ZSLUtfbmRQQVd4c21rVzhPbWdrVFRzU0xVV1dBc3V2SG5jdzhGaw?oc=5",
     "channel": "gn"
    }
   ]

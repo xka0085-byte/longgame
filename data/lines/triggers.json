@@ -1059,6 +1059,54 @@
     "channel": "hn",
     "query": "Cloudflare Monetization Gateway",
     "count": 0
+   },
+   {
+    "date": "2026-11-09T13:43:58.476Z",
+    "channel": "fr",
+    "query": "compute derivatives",
+    "count": 3
+   },
+   {
+    "date": "2026-11-09T13:43:58.476Z",
+    "channel": "fr",
+    "query": "autonomous agent income",
+    "count": 1
+   },
+   {
+    "date": "2026-11-09T13:43:58.476Z",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "count": 5
+   },
+   {
+    "date": "2026-11-09T13:43:58.476Z",
+    "channel": "gn",
+    "query": "agent insurance",
+    "count": 5
+   },
+   {
+    "date": "2026-11-09T13:43:58.476Z",
+    "channel": "gn",
+    "query": "AI personality rights bill",
+    "count": 5
+   },
+   {
+    "date": "2026-11-09T13:43:58.476Z",
+    "channel": "hn",
+    "query": "compute futures",
+    "count": 0
+   },
+   {
+    "date": "2026-11-09T13:43:58.476Z",
+    "channel": "hn",
+    "query": "agent insurance",
+    "count": 1
+   },
+   {
+    "date": "2026-11-09T13:43:58.476Z",
+    "channel": "hn",
+    "query": "Cloudflare Monetization Gateway",
+    "count": 0
    }
   ],
   "items": [
