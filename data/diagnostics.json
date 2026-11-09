@@ -1,13 +1,18 @@
 {
-  "generated_at": "2026-11-05T20:10:33.673Z",
+  "generated_at": "2026-11-09T13:13:11.562Z",
   "changes_proposed": [],
   "changes_applied": [],
   "reverted_by_gate": null,
   "observations": [
     {
+      "id": "triggers/hr8915",
+      "kind": "intermittent",
+      "detail": "近 4 轮中成功 2 轮、当前连续不可用 2 轮，属间歇性拦截，不自动 tolerate（会掩盖真实故障），留待人工判断"
+    },
+    {
       "id": "compute-futures/cme-compute",
       "kind": "tolerated-long-outage",
-      "detail": "已标记 tolerate，但近 10 轮只有 1 轮成功、当前连续 9 轮不可用——需人工确认该源是否已永久下线/改版，若是则应把这条线降级而不是继续占位"
+      "detail": "已标记 tolerate，但近 11 轮只有 1 轮成功、当前连续 10 轮不可用——需人工确认该源是否已永久下线/改版，若是则应把这条线降级而不是继续占位"
     }
   ],
   "note": "诊断只记录现象与建议，不改代码。任何\"看起来像 bug\"的判断都需要人确认后才动解析器。"
