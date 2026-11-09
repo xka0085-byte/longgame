@@ -1,14 +1,9 @@
 {
-  "generated_at": "2026-11-09T09:00:18.094Z",
+  "generated_at": "2026-11-09T18:59:29.740Z",
   "today": "2026-11-09",
   "trigger": "schedule",
   "overall": "ok",
   "signals": [
-    {
-      "id": "line-degraded:sb253-docket",
-      "severity": "info",
-      "detail": "sb253-docket 最近一轮有 2 个页面不可用（按容错档放行，已记事件）"
-    },
     {
       "id": "line-degraded:triggers",
       "severity": "info",
@@ -65,56 +60,56 @@
       "managed": true,
       "status": "active",
       "cadence": "window",
-      "last_collect": "2026-11-08",
-      "gap_days": 1,
+      "last_collect": "2026-11-09",
+      "gap_days": 0,
       "limit_days": 1,
       "consecutive_failed_rounds": 0,
-      "last_round": "partial",
-      "degraded_pages": 2,
+      "last_round": null,
+      "degraded_pages": 0,
       "freshness": "fresh",
-      "last_attempt": "2026-11-08"
+      "last_attempt": "2026-11-09"
     },
     {
       "id": "agent-dirs",
       "managed": true,
       "status": "active",
       "cadence": "weekly",
-      "last_collect": "2026-11-02",
-      "gap_days": 7,
+      "last_collect": "2026-11-09",
+      "gap_days": 0,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": null,
       "degraded_pages": 0,
       "freshness": "fresh",
-      "last_attempt": "2026-11-02"
+      "last_attempt": "2026-11-09"
     },
     {
       "id": "trust-delta",
       "managed": true,
       "status": "active",
       "cadence": "weekly",
-      "last_collect": "2026-11-02",
-      "gap_days": 7,
+      "last_collect": "2026-11-09",
+      "gap_days": 0,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": "ok",
       "degraded_pages": 0,
       "freshness": "fresh",
-      "last_attempt": "2026-11-02"
+      "last_attempt": "2026-11-09"
     },
     {
       "id": "eidas-tsl",
       "managed": true,
       "status": "active",
       "cadence": "weekly",
-      "last_collect": "2026-11-02",
-      "gap_days": 7,
+      "last_collect": "2026-11-09",
+      "gap_days": 0,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": null,
       "degraded_pages": 0,
       "freshness": "fresh",
-      "last_attempt": "2026-11-02"
+      "last_attempt": "2026-11-09"
     },
     {
       "id": "aiact-register",
@@ -163,42 +158,42 @@
       "managed": true,
       "status": "active",
       "cadence": "weekly",
-      "last_collect": "2026-11-02",
-      "gap_days": 7,
+      "last_collect": "2026-11-09",
+      "gap_days": 0,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": "partial",
       "degraded_pages": 1,
       "freshness": "fresh",
-      "last_attempt": "2026-11-02"
+      "last_attempt": "2026-11-09"
     },
     {
       "id": "c2pa-spec",
       "managed": true,
       "status": "active",
       "cadence": "weekly",
-      "last_collect": "2026-11-02",
-      "gap_days": 7,
+      "last_collect": "2026-11-09",
+      "gap_days": 0,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": null,
       "degraded_pages": 0,
       "freshness": "fresh",
-      "last_attempt": "2026-11-02"
+      "last_attempt": "2026-11-09"
     },
     {
       "id": "state-ai-laws",
       "managed": true,
       "status": "active",
       "cadence": "weekly",
-      "last_collect": "2026-11-02",
-      "gap_days": 7,
+      "last_collect": "2026-11-09",
+      "gap_days": 0,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": null,
       "degraded_pages": 0,
       "freshness": "fresh",
-      "last_attempt": "2026-11-02"
+      "last_attempt": "2026-11-09"
     },
     {
       "id": "grid-queue",
@@ -220,8 +215,8 @@
     "failed": [],
     "attempted": []
   },
-  "previous_heartbeat_at": "2026-11-08T18:42:36.009Z",
-  "silence_hours": 14.3,
+  "previous_heartbeat_at": "2026-11-09T09:00:18.094Z",
+  "silence_hours": 10,
   "gate": {
     "at": "2026-11-08T01:56:56Z",
     "passed": true,
