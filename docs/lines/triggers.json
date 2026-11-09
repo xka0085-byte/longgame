@@ -1,17 +1,17 @@
 {
   "id": "triggers",
   "title": "守候清单 B/C 全部升级触发器",
-  "as_of": "2026-11-08",
+  "as_of": "2026-11-09",
   "url": "https://xka0085-byte.github.io/longgame/lines/triggers.html",
   "data_url": "https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/triggers.json",
-  "citation": "longgame triggers（2026-11-08）：本期无新增可分享数字（QUARANTINED：data-source-unavailable）",
+  "citation": "longgame triggers（2026-11-09）：本期无新增可分享数字（QUARANTINED：data-source-unavailable）",
   "scalar": null,
   "citable": false,
   "publication_status": "QUARANTINED",
   "assurance_level": 2,
   "contract_version": 1,
-  "raw_sha256": "9a0a237953296c777871a3b066780a3a8bb45e8400d96e65401dd4801ea63f3a",
-  "generated_at": "2026-11-08T01:59:40.643Z",
+  "raw_sha256": "f37b59559162d255232b4b52d71afd6ba983cd6e950df156951dda94bf3a0c05",
+  "generated_at": "2026-11-09T11:15:32.386Z",
   "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/triggers.json 自洽",
   "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
 }

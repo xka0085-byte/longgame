@@ -1,21 +1,21 @@
 {
   "id": "trust-delta",
   "title": "MCP 注册表端点可信度周变化（与 mcpreflight Trust Directory 打通）",
-  "as_of": "2026-11-01",
+  "as_of": "2026-11-09",
   "url": "https://xka0085-byte.github.io/longgame/lines/trust-delta.html",
   "data_url": "https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/trust-delta.json",
-  "citation": "longgame trust-delta（2026-11-01）：Trust Directory 在册端点 35327 个，本轮判定变更 264 次（转 PASS 181、离开 PASS 50），消失 46 个（上游本轮对比覆盖不完整，新增/消失数只作参考）（最近一次采集 2026-11-02 为当日刷新，只更新在册与状态快照；周变化仍按 2026-10-30 起算的上一次跨周对比）",
+  "citation": "longgame trust-delta（2026-11-09）：Trust Directory 在册端点 35327 个，本轮判定变更 713 次（转 PASS 274、离开 PASS 303），消失 0 个",
   "scalar": {
     "value": 35327,
     "unit": "个",
-    "label": "Trust Directory 在册端点 35327 个，本轮判定变更 264 次（转 PASS 181、离开 PASS 50），消失 46 个（上游本轮对比覆盖不完整，新增/消失数只作参考）（最近一次采集 2026-11-02 为当日刷新，只更新在册与状态快照；周变化仍按 2026-10-30 起算的上一次跨周对比）"
+    "label": "Trust Directory 在册端点 35327 个，本轮判定变更 713 次（转 PASS 274、离开 PASS 303），消失 0 个"
   },
   "citable": true,
   "publication_status": "PUBLISHED",
   "assurance_level": 2,
   "contract_version": 1,
-  "raw_sha256": "9a98ad0a241b7a1d86c99b82ca5ea57bd86a0d2f63dfa27284c054f16929b96d",
-  "generated_at": "2026-11-08T01:59:40.643Z",
+  "raw_sha256": "937681b946cb99f69ab258d508b9cd7af8ee456a8cab40aade583366b37bc491",
+  "generated_at": "2026-11-09T11:15:32.386Z",
   "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/trust-delta.json 自洽",
   "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
 }

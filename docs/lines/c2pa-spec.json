@@ -1,17 +1,17 @@
 {
   "id": "c2pa-spec",
   "title": "EU AI Act Art 50 水印互操作 2027-02-02 生效前采纳窗口",
-  "as_of": "2026-11-08",
+  "as_of": "2026-11-09",
   "url": "https://xka0085-byte.github.io/longgame/lines/c2pa-spec.html",
   "data_url": "https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/c2pa-spec.json",
-  "citation": "longgame c2pa-spec（2026-11-08）：本期无新增可分享数字（PUBLISHED）",
+  "citation": "longgame c2pa-spec（2026-11-09）：本期无新增可分享数字（PUBLISHED）",
   "scalar": null,
   "citable": false,
   "publication_status": "PUBLISHED",
   "assurance_level": 2,
   "contract_version": 1,
-  "raw_sha256": "dada3bd00dc4c93beabfce9e4dd87e0e76bf12e9f11f1d3be4f1ac6742299d39",
-  "generated_at": "2026-11-08T01:59:40.643Z",
+  "raw_sha256": "1486cfa8e0bf00b3bf4c2893947a0d7ae6e1ccb2ee84e521338e4535a61534c6",
+  "generated_at": "2026-11-09T11:15:32.386Z",
   "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/c2pa-spec.json 自洽",
   "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
 }

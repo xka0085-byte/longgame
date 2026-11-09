@@ -188,6 +188,32 @@
      ]
     },
     "ok": true
+   },
+   {
+    "date": "2026-11-09T11:15:27.618Z",
+    "dirs": {
+     "https://chatgpt.com/.well-known/http-message-signatures-directory": {
+      "status": 200,
+      "keyCount": 1
+     },
+     "https://agent.bot.goog/.well-known/http-message-signatures-directory": {
+      "status": 200,
+      "keyCount": 5
+     }
+    },
+    "keys": {
+     "https://chatgpt.com/.well-known/http-message-signatures-directory": [
+      "ArwjqcCqtA5oxEWkzXGC-To_0A9whHmajCHtfe8I9aY"
+     ],
+     "https://agent.bot.goog/.well-known/http-message-signatures-directory": [
+      "mhxuPw",
+      "cYSMkA",
+      "bUCe2A",
+      "DYiMjA",
+      "Ggh50g"
+     ]
+    },
+    "ok": true
    }
   ],
   "events": []

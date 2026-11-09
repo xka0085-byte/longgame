@@ -652,6 +652,164 @@
     },
     "status": "ok",
     "ok": true
+   },
+   {
+    "date": "2026-11-09T11:15:28.023Z",
+    "scanDate": "2026-11-09",
+    "generatedAt": "2026-11-09T10:15:03.216Z",
+    "feedVersion": 1,
+    "baseline": false,
+    "comparedAgainst": "2026-11-02",
+    "comparedAgainstComplete": true,
+    "comparedAgainstCoverage": 35327,
+    "comparisonKind": "cross-week",
+    "weekOf": "2026-W46",
+    "comparedAgainstWeek": "2026-W45",
+    "daysSinceBaseline": 7,
+    "refreshOnly": false,
+    "baselineEligible": true,
+    "summary": {
+     "serversThisWeek": 35327,
+     "added": 0,
+     "addedUncomparable": 0,
+     "removed": 0,
+     "statusChanged": 713
+    },
+    "samples": {
+     "added": [],
+     "removed": [],
+     "statusChanged": [
+      {
+       "name": "ae.datadubai/dubai-real-estate",
+       "url": "https://mcp.datadubai.ae/mcp",
+       "from": "UNKNOWN",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.askgina/gina",
+       "url": "https://askgina.ai/ai/gina/mcp",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.askgina/perps",
+       "url": "https://askgina.ai/ai/perps/mcp",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.askgina/predictions",
+       "url": "https://askgina.ai/ai/predictions/mcp",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.askgina/spot",
+       "url": "https://askgina.ai/ai/spot/mcp",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.astrofabric/mcp",
+       "url": "https://www.astrofabric.ai/api/mcp",
+       "from": "FAIL",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.augmentev/paseo",
+       "url": "https://api.augmentev.ai/mcp",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.bitroad/bitroad",
+       "url": "https://app.bitroad.ai/api/v1/mcp",
+       "from": "UNKNOWN",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.bringyour/bringyour",
+       "url": "https://bringyour.ai/mcp",
+       "from": "UNKNOWN",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.bugtape/bugtape-demo",
+       "url": "https://app.bugtape.ai/demo/mcp",
+       "from": "UNKNOWN",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.diezx/diezx",
+       "url": "https://agents.diezx.ai/api/mcp",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.flyvolo/knowledge",
+       "url": "https://mcp.flyvolo.ai/mcp",
+       "from": "PASS",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.hlix/hlix",
+       "url": "https://mcp.hlix.ai/mcp",
+       "from": "UNKNOWN",
+       "to": "AUTH_GATED"
+      },
+      {
+       "name": "ai.instantclips/instantclips",
+       "url": "https://app.instantclips.ai/mcp",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.mediora/mediora",
+       "url": "https://mcp.mediora.ai/mcp/catalog",
+       "from": "UNKNOWN",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.partsgraph/catalog",
+       "url": "https://partsgraph.ai/api/mcp",
+       "from": "PASS",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.ragjur/mcp",
+       "url": "https://mcp.ragjur.ai/mcp",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.raisonn/connect",
+       "url": "https://mcp.raisonn.ai/mcp",
+       "from": "UNKNOWN",
+       "to": "AUTH_GATED"
+      },
+      {
+       "name": "ai.router/ai-gateway",
+       "url": "https://mcp.router.ai/mcp",
+       "from": "PASS",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.seomatic/seomatic",
+       "url": "https://app.seomatic.ai/api/mcp",
+       "from": "PASS",
+       "to": "AUTH_GATED"
+      }
+     ]
+    },
+    "direction": {
+     "toPass": 274,
+     "fromPass": 303,
+     "unknownStatusInvolved": 0
+    },
+    "flapping": 11,
+    "flappingBasis": "与 2026-11-02 的抽样（20 条）比对，为非全量下界",
+    "status": "ok",
+    "ok": true
    }
   ],
   "events": [
@@ -986,6 +1144,179 @@
     "url": "https://api.brainiall.com/mcp/nlp/mcp",
     "from": "UNKNOWN",
     "to": "PASS"
+   },
+   {
+    "date": "2026-11-09T11:15:28.023Z",
+    "type": "endpoint-downgraded",
+    "name": "ai.flyvolo/knowledge",
+    "url": "https://mcp.flyvolo.ai/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-09T11:15:28.023Z",
+    "type": "endpoint-downgraded",
+    "name": "ai.partsgraph/catalog",
+    "url": "https://partsgraph.ai/api/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-09T11:15:28.023Z",
+    "type": "endpoint-downgraded",
+    "name": "ai.router/ai-gateway",
+    "url": "https://mcp.router.ai/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-09T11:15:28.023Z",
+    "type": "endpoint-downgraded",
+    "name": "ai.seomatic/seomatic",
+    "url": "https://app.seomatic.ai/api/mcp",
+    "from": "PASS",
+    "to": "AUTH_GATED"
+   },
+   {
+    "date": "2026-11-09T11:15:28.023Z",
+    "type": "endpoint-downgraded",
+    "name": "ai.thetickeris/agent-rail",
+    "url": "https://thetickeris.ai/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-09T11:15:28.023Z",
+    "type": "endpoint-downgraded",
+    "name": "ai.usepromise/promise",
+    "url": "https://mcp.usepromise.ai/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-09T11:15:28.023Z",
+    "type": "endpoint-downgraded",
+    "name": "ai.v-safe/vsafe-risk",
+    "url": "https://mcp.v-safe.ai/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-09T11:15:28.023Z",
+    "type": "endpoint-downgraded",
+    "name": "app.askqa/structforge",
+    "url": "https://structforge.askqa.app/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-09T11:15:28.023Z",
+    "type": "endpoint-downgraded",
+    "name": "app.netlify.x402-preflight-grokbot/usdc-rpc-reference",
+    "url": "https://x402-preflight-grokbot.netlify.app/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-09T11:15:28.023Z",
+    "type": "endpoint-downgraded",
+    "name": "app.neurorank/mcp",
+    "url": "https://www.neurorank.app/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-09T11:15:28.023Z",
+    "type": "endpoint-upgraded",
+    "name": "ae.datadubai/dubai-real-estate",
+    "url": "https://mcp.datadubai.ae/mcp",
+    "from": "UNKNOWN",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-09T11:15:28.023Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.bitroad/bitroad",
+    "url": "https://app.bitroad.ai/api/v1/mcp",
+    "from": "UNKNOWN",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-09T11:15:28.023Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.bringyour/bringyour",
+    "url": "https://bringyour.ai/mcp",
+    "from": "UNKNOWN",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-09T11:15:28.023Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.bugtape/bugtape-demo",
+    "url": "https://app.bugtape.ai/demo/mcp",
+    "from": "UNKNOWN",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-09T11:15:28.023Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.instantclips/instantclips",
+    "url": "https://app.instantclips.ai/mcp",
+    "from": "AUTH_GATED",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-09T11:15:28.023Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.mediora/mediora",
+    "url": "https://mcp.mediora.ai/mcp/catalog",
+    "from": "UNKNOWN",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-09T11:15:28.023Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.unraster/convert",
+    "url": "https://unraster.ai/mcp",
+    "from": "AUTH_GATED",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-09T11:15:28.023Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.usestring/web-access",
+    "url": "https://mcp.usestring.ai/v1/mcp",
+    "from": "AUTH_GATED",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-09T11:15:28.023Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.willder/willder",
+    "url": "https://willder.ai/api/mcp",
+    "from": "AUTH_GATED",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-09T11:15:28.023Z",
+    "type": "endpoint-upgraded",
+    "name": "app.fawtar/fawtar",
+    "url": "https://fawtar.app/api/mcp",
+    "from": "AUTH_GATED",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-09T11:15:28.023Z",
+    "type": "status-flapping",
+    "count": 11,
+    "sample": [
+     "ai.bringyour/bringyour",
+     "ai.bugtape/bugtape-demo",
+     "ai.mediora/mediora",
+     "at.fixfind/fixfind",
+     "be.vakmanindebuurt/leads"
+    ],
+    "basis": "sample-only"
    }
   ]
  },

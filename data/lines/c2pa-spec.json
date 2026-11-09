@@ -83,6 +83,21 @@
      }
     ],
     "ok": true
+   },
+   {
+    "date": "2026-11-09T11:15:30.791Z",
+    "pages": [
+     {
+      "id": "c2pa-specs",
+      "status": 200,
+      "bytes": 13225,
+      "sig": "13224:PCFET0NUWVBFIGh0bWw+",
+      "changed": false,
+      "keywordHit": true,
+      "unavailable": false
+     }
+    ],
+    "ok": true
    }
   ],
   "events": [
