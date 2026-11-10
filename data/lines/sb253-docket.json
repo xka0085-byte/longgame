@@ -1425,6 +1425,24 @@
     "channel": "hn",
     "query": "SB 253 climate",
     "count": 0
+   },
+   {
+    "date": "2026-11-10T13:22:31.561Z",
+    "channel": "gn",
+    "query": "California SB 253 climate disclosure",
+    "count": 5
+   },
+   {
+    "date": "2026-11-10T13:22:31.561Z",
+    "channel": "gn",
+    "query": "SB 261 climate risk California",
+    "count": 5
+   },
+   {
+    "date": "2026-11-10T13:22:31.561Z",
+    "channel": "hn",
+    "query": "SB 253 climate",
+    "count": 0
    }
   ],
   "items": [
@@ -1463,6 +1481,24 @@
     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOTlY0UnBoYlpWSEFtWWZYZE5FV1p6a0U3YW12SmZ5cWZ0YS13UWM4czZLNG5JY2ZTeWxjRkwwcGQzVEFhNjdCalh4N3B2VjRJUkdYLXA3RlloT3lLeTh5bFd6Y2w3Mm5XX1FBTXVfRU0tN2FQOTRlTjVrMlFFbTZPUjF3TFdMLURiRklramhOSmpYUUhrYlBtejFRQjZfb3dUTTNzYWd6TnRNVGt2eGRxd0pPZjRubi12T0RDSE5B?oc=5",
     "date": "Fri, 24 Jul 2026 07:00:00 GMT",
     "foundAt": "2026-10-31T10:48:51.719Z"
+   },
+   {
+    "line": "sb253-docket",
+    "channel": "gn",
+    "query": "California SB 253 climate disclosure",
+    "title": "California Climate Disclosure Laws – Ninth Circuit Ruling: SB 253 Scope 1 &amp; 2 Disclosures Move Ahead, SB 253 Scope 3 Disclosures and SB 261 Expected to Be Enjoined - Foley &amp; Lardner LLP",
+    "url": "https://news.google.com/rss/articles/CBMitAJBVV95cUxPZkV4Vm9qWWwyT1BEeW5yS0pacFREWm0zeVJ2cTAzTXBVbWFjUmtGUmd5eWNBcFpmNm91NWV1WmlPT1daMGgzWmhkc2NfWTdBTTJ4aERmS0lLYnZpdDFIcERJQ1pSSURkRDFkMWZaS0RrWkpfcHZlS3dPZ3R1VnBaanlKTHJMREtWYmVrbXlGYUFZV2xxam1OMkROa2dMSmRUVmdSU0c1Vnl5S0ZDVDFCRGNrdE1XNktqNWgwamcwTUNIaEk2bjZWT2ZmY2o3V3JBaUVyT3IzSkRLLTlkQkhSY29EYWxxSXZCeUQyUk9abHRPbGZDbkRhVmNFM3BTXzFYUmNDSzlzLTBvRVFTYnJpOVZmNkx5c3NUTER5bXpaSWJveUg5bGp5UDdYUmY0TmpVaERESw?oc=5",
+    "date": "Mon, 09 Nov 2026 21:07:36 GMT",
+    "foundAt": "2026-11-10T13:22:31.561Z"
+   },
+   {
+    "line": "sb253-docket",
+    "channel": "gn",
+    "query": "California SB 253 climate disclosure",
+    "title": "isomerra Launches Free California Climate Disclosure Assessment Ahead of First SB 253 Reporting Deadline - IndyStar",
+    "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPODNSaDVzU200b3J5eHVOeDNrbzBrSkQwd2FUU2ZLSzRoMVZMc0Q4X0NuTTJiQjloaUNlOEhtUXdDUTFLYzRhVjh5NWJOZjkxOThfTFRuU2dxeElENVNyWUNNbHlKclhSVnIzRF80dmJwRHFSV3k0TEt0WnM4WDBqRkJBNDBEOEJZSU5Nb1BhbmN6Zktnemx1OFpwOUs0NjJ1UnRkU21mcmRTX2w1NkF0U0JBNFdMRUFTTGdVa01MMmZBX3pvSGROdHJjcHBsVUVEaFBqNE1GTjNNYlZMZ0ZGNG9qNVBHR3ctQXJLaVNR?oc=5",
+    "date": "Mon, 09 Nov 2026 17:29:40 GMT",
+    "foundAt": "2026-11-10T13:22:31.561Z"
    }
   ],
   "alerts": [
@@ -1488,6 +1524,18 @@
     "date": "2026-10-31T10:48:51.719Z",
     "title": "CARB Workshop for California Climate Disclosure Rule (SB 253): Key Takeaways from July 21, 2026 Workshop - Mintz",
     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOTlY0UnBoYlpWSEFtWWZYZE5FV1p6a0U3YW12SmZ5cWZ0YS13UWM4czZLNG5JY2ZTeWxjRkwwcGQzVEFhNjdCalh4N3B2VjRJUkdYLXA3RlloT3lLeTh5bFd6Y2w3Mm5XX1FBTXVfRU0tN2FQOTRlTjVrMlFFbTZPUjF3TFdMLURiRklramhOSmpYUUhrYlBtejFRQjZfb3dUTTNzYWd6TnRNVGt2eGRxd0pPZjRubi12T0RDSE5B?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-10T13:22:31.561Z",
+    "title": "California Climate Disclosure Laws – Ninth Circuit Ruling: SB 253 Scope 1 &amp; 2 Disclosures Move Ahead, SB 253 Scope 3 Disclosures and SB 261 Expected to Be Enjoined - Foley &amp; Lardner LLP",
+    "url": "https://news.google.com/rss/articles/CBMitAJBVV95cUxPZkV4Vm9qWWwyT1BEeW5yS0pacFREWm0zeVJ2cTAzTXBVbWFjUmtGUmd5eWNBcFpmNm91NWV1WmlPT1daMGgzWmhkc2NfWTdBTTJ4aERmS0lLYnZpdDFIcERJQ1pSSURkRDFkMWZaS0RrWkpfcHZlS3dPZ3R1VnBaanlKTHJMREtWYmVrbXlGYUFZV2xxam1OMkROa2dMSmRUVmdSU0c1Vnl5S0ZDVDFCRGNrdE1XNktqNWgwamcwTUNIaEk2bjZWT2ZmY2o3V3JBaUVyT3IzSkRLLTlkQkhSY29EYWxxSXZCeUQyUk9abHRPbGZDbkRhVmNFM3BTXzFYUmNDSzlzLTBvRVFTYnJpOVZmNkx5c3NUTER5bXpaSWJveUg5bGp5UDdYUmY0TmpVaERESw?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-10T13:22:31.561Z",
+    "title": "isomerra Launches Free California Climate Disclosure Assessment Ahead of First SB 253 Reporting Deadline - IndyStar",
+    "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPODNSaDVzU200b3J5eHVOeDNrbzBrSkQwd2FUU2ZLSzRoMVZMc0Q4X0NuTTJiQjloaUNlOEhtUXdDUTFLYzRhVjh5NWJOZjkxOThfTFRuU2dxeElENVNyWUNNbHlKclhSVnIzRF80dmJwRHFSV3k0TEt0WnM4WDBqRkJBNDBEOEJZSU5Nb1BhbmN6Zktnemx1OFpwOUs0NjJ1UnRkU21mcmRTX2w1NkF0U0JBNFdMRUFTTGdVa01MMmZBX3pvSGROdHJjcHBsVUVEaFBqNE1GTjNNYlZMZ0ZGNG9qNVBHR3ctQXJLaVNR?oc=5",
     "channel": "gn"
    }
   ]

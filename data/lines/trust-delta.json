@@ -1465,6 +1465,24 @@
     "channel": "hn",
     "query": "MCP server",
     "count": 4
+   },
+   {
+    "date": "2026-11-10T13:22:34.017Z",
+    "channel": "hn",
+    "query": "MCP registry",
+    "count": 1
+   },
+   {
+    "date": "2026-11-10T13:22:34.017Z",
+    "channel": "gn",
+    "query": "MCP server registry",
+    "count": 5
+   },
+   {
+    "date": "2026-11-10T13:22:34.017Z",
+    "channel": "hn",
+    "query": "MCP server",
+    "count": 5
    }
   ],
   "items": [
@@ -1620,6 +1638,60 @@
     "url": "https://github.com/byward-dev/byward",
     "date": "2026-11-08T15:31:25Z",
     "foundAt": "2026-11-09T13:43:56.095Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP registry",
+    "title": "MCP server security: a census of every host in the official MCP Registry",
+    "url": "https://spellwarden.ai/research/mcp-server-security-2026-11",
+    "date": "2026-11-10T12:14:52Z",
+    "foundAt": "2026-11-10T13:22:34.017Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "MCP server security: a census of every host in the official MCP Registry",
+    "url": "https://spellwarden.ai/research/mcp-server-security-2026-11",
+    "date": "2026-11-10T12:14:52Z",
+    "foundAt": "2026-11-10T13:22:34.017Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "My notes app has no database, just a folder of Markdown and an MCP server",
+    "url": "https://sayjot.xyz/blog/no-database",
+    "date": "2026-11-10T07:19:52Z",
+    "foundAt": "2026-11-10T13:22:34.017Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "USB: A trust layer for AI skills and MCP servers",
+    "url": "https://github.com/PeepSick/usbplus",
+    "date": "2026-11-09T21:42:46Z",
+    "foundAt": "2026-11-10T13:22:34.017Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: Markolis – Market microstructure and MCP server for AI agents",
+    "url": "https://www.markolis.com",
+    "date": "2026-11-09T19:51:18Z",
+    "foundAt": "2026-11-10T13:22:34.017Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: Wealthnow – a read-only financial data MCP server with OAuth sign-in",
+    "url": "https://wealthnow.io/mcp",
+    "date": "2026-11-09T16:23:46Z",
+    "foundAt": "2026-11-10T13:22:34.017Z"
    }
   ],
   "alerts": [
@@ -1723,6 +1795,42 @@
     "date": "2026-11-09T13:43:56.095Z",
     "title": "Byward – put any MCP server behind OAuth 2.1 and Entra ID",
     "url": "https://github.com/byward-dev/byward",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-10T13:22:34.017Z",
+    "title": "MCP server security: a census of every host in the official MCP Registry",
+    "url": "https://spellwarden.ai/research/mcp-server-security-2026-11",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-10T13:22:34.017Z",
+    "title": "MCP server security: a census of every host in the official MCP Registry",
+    "url": "https://spellwarden.ai/research/mcp-server-security-2026-11",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-10T13:22:34.017Z",
+    "title": "My notes app has no database, just a folder of Markdown and an MCP server",
+    "url": "https://sayjot.xyz/blog/no-database",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-10T13:22:34.017Z",
+    "title": "USB: A trust layer for AI skills and MCP servers",
+    "url": "https://github.com/PeepSick/usbplus",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-10T13:22:34.017Z",
+    "title": "Show HN: Markolis – Market microstructure and MCP server for AI agents",
+    "url": "https://www.markolis.com",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-10T13:22:34.017Z",
+    "title": "Show HN: Wealthnow – a read-only financial data MCP server with OAuth sign-in",
+    "url": "https://wealthnow.io/mcp",
     "channel": "hn"
    }
   ]

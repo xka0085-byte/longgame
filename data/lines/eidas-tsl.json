@@ -611,6 +611,18 @@
     "channel": "hn",
     "query": "eIDAS 2.0",
     "count": 0
+   },
+   {
+    "date": "2026-11-10T13:22:35.046Z",
+    "channel": "gn",
+    "query": "eIDAS wallet",
+    "count": 5
+   },
+   {
+    "date": "2026-11-10T13:22:35.046Z",
+    "channel": "hn",
+    "query": "eIDAS 2.0",
+    "count": 0
    }
   ],
   "items": [

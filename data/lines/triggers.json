@@ -1107,6 +1107,54 @@
     "channel": "hn",
     "query": "Cloudflare Monetization Gateway",
     "count": 0
+   },
+   {
+    "date": "2026-11-10T13:22:36.890Z",
+    "channel": "fr",
+    "query": "compute derivatives",
+    "count": 3
+   },
+   {
+    "date": "2026-11-10T13:22:36.890Z",
+    "channel": "fr",
+    "query": "autonomous agent income",
+    "count": 1
+   },
+   {
+    "date": "2026-11-10T13:22:36.890Z",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "count": 5
+   },
+   {
+    "date": "2026-11-10T13:22:36.890Z",
+    "channel": "gn",
+    "query": "agent insurance",
+    "count": 5
+   },
+   {
+    "date": "2026-11-10T13:22:36.890Z",
+    "channel": "gn",
+    "query": "AI personality rights bill",
+    "count": 5
+   },
+   {
+    "date": "2026-11-10T13:22:36.890Z",
+    "channel": "hn",
+    "query": "compute futures",
+    "count": 1
+   },
+   {
+    "date": "2026-11-10T13:22:36.890Z",
+    "channel": "hn",
+    "query": "agent insurance",
+    "count": 0
+   },
+   {
+    "date": "2026-11-10T13:22:36.890Z",
+    "channel": "hn",
+    "query": "Cloudflare Monetization Gateway",
+    "count": 0
    }
   ],
   "items": [
@@ -1316,6 +1364,15 @@
     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOaXFuOUJSYi1iVEUzaFZ1Yk90dW9TTldVaXpyNXpoUnJqMW9OTEkzZVNOdl9yVFFMTi1Nb1RLSERwLTByY2J4SXlqWVNRY3pfZG50TnZTdzJUN3Z2ZVEzcVFuQ0VNX2pBRWdjaUJMNEJtQUI3NC1nNURiOGMzbEt1V0M1ODlRRE5iTHFVQnJUY2s5YlFhaG45MjdSdDBrR1VYSXFVWnRoWUc?oc=5",
     "date": "Sat, 07 Nov 2026 13:00:06 GMT",
     "foundAt": "2026-11-08T11:48:51.434Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Goosehead data reveals $19,000 output gap between new and tenured agents - Insurance Business",
+    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPN1B0UER3MC1UU3Zsa1dQV1Q1YmhzN3Q5UU1YdlI2WmRscFRTY0ZrOHJzbXdIYWxEWG8zSnJLYjd5ZUVFUVE3alpTYUg4QTI5MnlFOW9fOGZoS2ZHMnhlMm5jVXBpTTc1MFZMbGxaQTlwWnh6NC02eGNzQTJGajNBSzc0MURORFhHM2kwdWFJZTVlWkdTc3BkMGJ6akJQNC1LanN4ejhxS3hFdmtIWlVlb1dxT2xyT21EVUVTYkxrMHhLSmw0U25PZ0ViTDYxRlFlUDVoRklPdXY?oc=5",
+    "date": "Tue, 10 Nov 2026 09:16:11 GMT",
+    "foundAt": "2026-11-10T13:22:36.890Z"
    }
   ],
   "alerts": [
@@ -1455,6 +1512,12 @@
     "date": "2026-11-08T11:48:51.434Z",
     "title": "Law Firms Have Malpractice Insurance. Should Their A.I. Agents? - The New York Times",
     "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOaXFuOUJSYi1iVEUzaFZ1Yk90dW9TTldVaXpyNXpoUnJqMW9OTEkzZVNOdl9yVFFMTi1Nb1RLSERwLTByY2J4SXlqWVNRY3pfZG50TnZTdzJUN3Z2ZVEzcVFuQ0VNX2pBRWdjaUJMNEJtQUI3NC1nNURiOGMzbEt1V0M1ODlRRE5iTHFVQnJUY2s5YlFhaG45MjdSdDBrR1VYSXFVWnRoWUc?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-10T13:22:36.890Z",
+    "title": "Goosehead data reveals $19,000 output gap between new and tenured agents - Insurance Business",
+    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPN1B0UER3MC1UU3Zsa1dQV1Q1YmhzN3Q5UU1YdlI2WmRscFRTY0ZrOHJzbXdIYWxEWG8zSnJLYjd5ZUVFUVE3alpTYUg4QTI5MnlFOW9fOGZoS2ZHMnhlMm5jVXBpTTc1MFZMbGxaQTlwWnh6NC02eGNzQTJGajNBSzc0MURORFhHM2kwdWFJZTVlWkdTc3BkMGJ6akJQNC1LanN4ejhxS3hFdmtIWlVlb1dxT2xyT21EVUVTYkxrMHhLSmw0U25PZ0ViTDYxRlFlUDVoRklPdXY?oc=5",
     "channel": "gn"
    }
   ]

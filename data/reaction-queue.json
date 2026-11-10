@@ -602,7 +602,79 @@
    "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBoajlOcHhLUmdUVzBZQzN1bFdva1Zpbmd6WFk2azBoTnVIckJfUGpmcEQzeHNFX2EzNUFmNUV4ZUs4ZVpzbnZ6Z0ZSLUtfbmRQQVd4c21rVzhPbWdrVFRzU0xVV1dBc3V2SG5jdzhGaw?oc=5",
    "type": "rule",
    "action": "更新该线参数，必要时出解读"
+  },
+  {
+   "date": "2026-11-10T13:22:44.624Z",
+   "line": "sb253-docket",
+   "channel": "gn",
+   "title": "California Climate Disclosure Laws – Ninth Circuit Ruling: SB 253 Scope 1 &amp; 2 Disclosures Move Ahead, SB 253 Scope 3 Disclosures and SB 261 Expected to Be Enjoined - Foley &amp; Lardner LLP",
+   "url": "https://news.google.com/rss/articles/CBMitAJBVV95cUxPZkV4Vm9qWWwyT1BEeW5yS0pacFREWm0zeVJ2cTAzTXBVbWFjUmtGUmd5eWNBcFpmNm91NWV1WmlPT1daMGgzWmhkc2NfWTdBTTJ4aERmS0lLYnZpdDFIcERJQ1pSSURkRDFkMWZaS0RrWkpfcHZlS3dPZ3R1VnBaanlKTHJMREtWYmVrbXlGYUFZV2xxam1OMkROa2dMSmRUVmdSU0c1Vnl5S0ZDVDFCRGNrdE1XNktqNWgwamcwTUNIaEk2bjZWT2ZmY2o3V3JBaUVyT3IzSkRLLTlkQkhSY29EYWxxSXZCeUQyUk9abHRPbGZDbkRhVmNFM3BTXzFYUmNDSzlzLTBvRVFTYnJpOVZmNkx5c3NUTER5bXpaSWJveUg5bGp5UDdYUmY0TmpVaERESw?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-10T13:22:44.624Z",
+   "line": "sb253-docket",
+   "channel": "gn",
+   "title": "isomerra Launches Free California Climate Disclosure Assessment Ahead of First SB 253 Reporting Deadline - IndyStar",
+   "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPODNSaDVzU200b3J5eHVOeDNrbzBrSkQwd2FUU2ZLSzRoMVZMc0Q4X0NuTTJiQjloaUNlOEhtUXdDUTFLYzRhVjh5NWJOZjkxOThfTFRuU2dxeElENVNyWUNNbHlKclhSVnIzRF80dmJwRHFSV3k0TEt0WnM4WDBqRkJBNDBEOEJZSU5Nb1BhbmN6Zktnemx1OFpwOUs0NjJ1UnRkU21mcmRTX2w1NkF0U0JBNFdMRUFTTGdVa01MMmZBX3pvSGROdHJjcHBsVUVEaFBqNE1GTjNNYlZMZ0ZGNG9qNVBHR3ctQXJLaVNR?oc=5",
+   "type": "rule",
+   "action": "更新该线参数，必要时出解读"
+  },
+  {
+   "date": "2026-11-10T13:22:44.624Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "MCP server security: a census of every host in the official MCP Registry",
+   "url": "https://spellwarden.ai/research/mcp-server-security-2026-11",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-10T13:22:44.624Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "My notes app has no database, just a folder of Markdown and an MCP server",
+   "url": "https://sayjot.xyz/blog/no-database",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-10T13:22:44.624Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "USB: A trust layer for AI skills and MCP servers",
+   "url": "https://github.com/PeepSick/usbplus",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-10T13:22:44.624Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Show HN: Markolis – Market microstructure and MCP server for AI agents",
+   "url": "https://www.markolis.com",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-10T13:22:44.624Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Show HN: Wealthnow – a read-only financial data MCP server with OAuth sign-in",
+   "url": "https://wealthnow.io/mcp",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-10T13:22:44.624Z",
+   "line": "triggers",
+   "channel": "gn",
+   "title": "Goosehead data reveals $19,000 output gap between new and tenured agents - Insurance Business",
+   "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPN1B0UER3MC1UU3Zsa1dQV1Q1YmhzN3Q5UU1YdlI2WmRscFRTY0ZrOHJzbXdIYWxEWG8zSnJLYjd5ZUVFUVE3alpTYUg4QTI5MnlFOW9fOGZoS2ZHMnhlMm5jVXBpTTc1MFZMbGxaQTlwWnh6NC02eGNzQTJGajNBSzc0MURORFhHM2kwdWFJZTVlWkdTc3BkMGJ6akJQNC1LanN4ejhxS3hFdmtIWlVlb1dxT2xyT21EVUVTYkxrMHhLSmw0U25PZ0ViTDYxRlFlUDVoRklPdXY?oc=5",
+   "type": "noise",
+   "action": "只记录"
   }
  ],
- "updated": "2026-11-09T13:44:05.134Z"
+ "updated": "2026-11-10T13:22:44.624Z"
 }
