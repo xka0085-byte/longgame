@@ -674,7 +674,52 @@
    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPN1B0UER3MC1UU3Zsa1dQV1Q1YmhzN3Q5UU1YdlI2WmRscFRTY0ZrOHJzbXdIYWxEWG8zSnJLYjd5ZUVFUVE3alpTYUg4QTI5MnlFOW9fOGZoS2ZHMnhlMm5jVXBpTTc1MFZMbGxaQTlwWnh6NC02eGNzQTJGajNBSzc0MURORFhHM2kwdWFJZTVlWkdTc3BkMGJ6akJQNC1LanN4ejhxS3hFdmtIWlVlb1dxT2xyT21EVUVTYkxrMHhLSmw0U25PZ0ViTDYxRlFlUDVoRklPdXY?oc=5",
    "type": "noise",
    "action": "只记录"
+  },
+  {
+   "date": "2026-11-11T12:33:41.093Z",
+   "line": "sb253-docket",
+   "channel": "gn",
+   "title": "Split Decision: Ninth Circuit Lets California's Scope 1 and 2 Emissions Reporting Proceed But Finds Scope 3 and SB 261 Climate-Risk Reporting Likely Unconstitutional - The National Law Review",
+   "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPaGZiZGJFVFlNMUFDZkZhOXdaS1RKUzVFa2dmMlQ5dzdTMnpPdXBmOW01VDdKOWtHa2FJQTJ5Z21FaVFPU1lHMVVZYzVsa3E3OHlIbGR3eFhWYzVsWEI2Z3hablJhci0tYlNaLU45ZjIyUkJqTG1Bbko5Uy1uOC1GWmZqMHdpMXlseF9XSDdNWEJXaEU5OVhUMThkTHNTWWZjblV3VkxVczhxclZiNy1mQUtn0gG3AUFVX3lxTE9OLThqSXBlbURBbWpTQUxNVlIxUDZzWldxbTFPcThnemRMZHBIOU5VUDAwS0NNTU8ta1hFaVNYdEF5V1VKVXo5ZWtaTXAzcHh2QUk3NE5nWHNQYjZhMnhiWEFXY1JJS3BfS3JhWVNuY1R1SlU3WHZsTGQ1cHRsNmF6VVR5dXFidVRtM3pQNDYwSkdYbGtraU9VTXVSNktneGh2QU5iWmNSc2YteW1wSTM0dmFmbGRYNA?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-11T12:33:41.093Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "MCP Shelf Watch: daily snapshots of the MCP registry, first numbers",
+   "url": "https://bot2botlabs.com/shelf-watch/2026-11",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-11T12:33:41.093Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Lost Updates in the GitHub, Grafana and PostHog MCP Servers",
+   "url": "https://isokron.ai/research/mcp-lost-updates-three-servers",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-11T12:33:41.093Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Almanzor – Ask AI and an MCP server for your docs, with cited answers",
+   "url": "https://almanzor.cloud",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-11T12:33:41.093Z",
+   "line": "triggers",
+   "channel": "gn",
+   "title": "AI Compute Futures Hit Another Hurdle: CFTC Extends Review by 60 Days, First Trades May Slip to Early 2027 - BigGo Finance",
+   "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1nMGthWmZ3WHl2RFBFelZBbXBFWFlab18zUXVHZ25RWjYyR2RVQmNscUs4dXpmbDlseG8wSnpfY0pOcXRicjhuX2hpYXZoRFdocWRqZVdBMF9zUHNEQVZMejFVamdPNjVpZGtyUVJidEcxTjZDY3c?oc=5",
+   "type": "noise",
+   "action": "只记录"
   }
  ],
- "updated": "2026-11-10T13:22:44.624Z"
+ "updated": "2026-11-11T12:33:41.093Z"
 }

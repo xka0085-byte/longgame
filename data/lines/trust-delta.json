@@ -1483,6 +1483,24 @@
     "channel": "hn",
     "query": "MCP server",
     "count": 5
+   },
+   {
+    "date": "2026-11-11T12:33:31.413Z",
+    "channel": "hn",
+    "query": "MCP registry",
+    "count": 1
+   },
+   {
+    "date": "2026-11-11T12:33:31.413Z",
+    "channel": "gn",
+    "query": "MCP server registry",
+    "count": 5
+   },
+   {
+    "date": "2026-11-11T12:33:31.413Z",
+    "channel": "hn",
+    "query": "MCP server",
+    "count": 5
    }
   ],
   "items": [
@@ -1692,6 +1710,33 @@
     "url": "https://wealthnow.io/mcp",
     "date": "2026-11-09T16:23:46Z",
     "foundAt": "2026-11-10T13:22:34.017Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP registry",
+    "title": "MCP Shelf Watch: daily snapshots of the MCP registry, first numbers",
+    "url": "https://bot2botlabs.com/shelf-watch/2026-11",
+    "date": "2026-11-10T19:08:21Z",
+    "foundAt": "2026-11-11T12:33:31.413Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Lost Updates in the GitHub, Grafana and PostHog MCP Servers",
+    "url": "https://isokron.ai/research/mcp-lost-updates-three-servers",
+    "date": "2026-11-10T14:36:04Z",
+    "foundAt": "2026-11-11T12:33:31.413Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Almanzor – Ask AI and an MCP server for your docs, with cited answers",
+    "url": "https://almanzor.cloud",
+    "date": "2026-11-10T14:02:44Z",
+    "foundAt": "2026-11-11T12:33:31.413Z"
    }
   ],
   "alerts": [
@@ -1831,6 +1876,24 @@
     "date": "2026-11-10T13:22:34.017Z",
     "title": "Show HN: Wealthnow – a read-only financial data MCP server with OAuth sign-in",
     "url": "https://wealthnow.io/mcp",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-11T12:33:31.413Z",
+    "title": "MCP Shelf Watch: daily snapshots of the MCP registry, first numbers",
+    "url": "https://bot2botlabs.com/shelf-watch/2026-11",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-11T12:33:31.413Z",
+    "title": "Lost Updates in the GitHub, Grafana and PostHog MCP Servers",
+    "url": "https://isokron.ai/research/mcp-lost-updates-three-servers",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-11T12:33:31.413Z",
+    "title": "Almanzor – Ask AI and an MCP server for your docs, with cited answers",
+    "url": "https://almanzor.cloud",
     "channel": "hn"
    }
   ]

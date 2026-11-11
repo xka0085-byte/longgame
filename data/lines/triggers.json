@@ -1155,6 +1155,54 @@
     "channel": "hn",
     "query": "Cloudflare Monetization Gateway",
     "count": 0
+   },
+   {
+    "date": "2026-11-11T12:33:34.357Z",
+    "channel": "fr",
+    "query": "compute derivatives",
+    "count": 1
+   },
+   {
+    "date": "2026-11-11T12:33:34.357Z",
+    "channel": "fr",
+    "query": "autonomous agent income",
+    "count": 0
+   },
+   {
+    "date": "2026-11-11T12:33:34.357Z",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "count": 5
+   },
+   {
+    "date": "2026-11-11T12:33:34.357Z",
+    "channel": "gn",
+    "query": "agent insurance",
+    "count": 5
+   },
+   {
+    "date": "2026-11-11T12:33:34.357Z",
+    "channel": "gn",
+    "query": "AI personality rights bill",
+    "count": 5
+   },
+   {
+    "date": "2026-11-11T12:33:34.357Z",
+    "channel": "hn",
+    "query": "compute futures",
+    "count": 4
+   },
+   {
+    "date": "2026-11-11T12:33:34.357Z",
+    "channel": "hn",
+    "query": "agent insurance",
+    "count": 0
+   },
+   {
+    "date": "2026-11-11T12:33:34.357Z",
+    "channel": "hn",
+    "query": "Cloudflare Monetization Gateway",
+    "count": 0
    }
   ],
   "items": [
@@ -1373,6 +1421,15 @@
     "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPN1B0UER3MC1UU3Zsa1dQV1Q1YmhzN3Q5UU1YdlI2WmRscFRTY0ZrOHJzbXdIYWxEWG8zSnJLYjd5ZUVFUVE3alpTYUg4QTI5MnlFOW9fOGZoS2ZHMnhlMm5jVXBpTTc1MFZMbGxaQTlwWnh6NC02eGNzQTJGajNBSzc0MURORFhHM2kwdWFJZTVlWkdTc3BkMGJ6akJQNC1LanN4ejhxS3hFdmtIWlVlb1dxT2xyT21EVUVTYkxrMHhLSmw0U25PZ0ViTDYxRlFlUDVoRklPdXY?oc=5",
     "date": "Tue, 10 Nov 2026 09:16:11 GMT",
     "foundAt": "2026-11-10T13:22:36.890Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "title": "AI Compute Futures Hit Another Hurdle: CFTC Extends Review by 60 Days, First Trades May Slip to Early 2027 - BigGo Finance",
+    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1nMGthWmZ3WHl2RFBFelZBbXBFWFlab18zUXVHZ25RWjYyR2RVQmNscUs4dXpmbDlseG8wSnpfY0pOcXRicjhuX2hpYXZoRFdocWRqZVdBMF9zUHNEQVZMejFVamdPNjVpZGtyUVJidEcxTjZDY3c?oc=5",
+    "date": "Wed, 11 Nov 2026 03:55:00 GMT",
+    "foundAt": "2026-11-11T12:33:34.357Z"
    }
   ],
   "alerts": [
@@ -1518,6 +1575,12 @@
     "date": "2026-11-10T13:22:36.890Z",
     "title": "Goosehead data reveals $19,000 output gap between new and tenured agents - Insurance Business",
     "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPN1B0UER3MC1UU3Zsa1dQV1Q1YmhzN3Q5UU1YdlI2WmRscFRTY0ZrOHJzbXdIYWxEWG8zSnJLYjd5ZUVFUVE3alpTYUg4QTI5MnlFOW9fOGZoS2ZHMnhlMm5jVXBpTTc1MFZMbGxaQTlwWnh6NC02eGNzQTJGajNBSzc0MURORFhHM2kwdWFJZTVlWkdTc3BkMGJ6akJQNC1LanN4ejhxS3hFdmtIWlVlb1dxT2xyT21EVUVTYkxrMHhLSmw0U25PZ0ViTDYxRlFlUDVoRklPdXY?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-11T12:33:34.357Z",
+    "title": "AI Compute Futures Hit Another Hurdle: CFTC Extends Review by 60 Days, First Trades May Slip to Early 2027 - BigGo Finance",
+    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1nMGthWmZ3WHl2RFBFelZBbXBFWFlab18zUXVHZ25RWjYyR2RVQmNscUs4dXpmbDlseG8wSnpfY0pOcXRicjhuX2hpYXZoRFdocWRqZVdBMF9zUHNEQVZMejFVamdPNjVpZGtyUVJidEcxTjZDY3c?oc=5",
     "channel": "gn"
    }
   ]

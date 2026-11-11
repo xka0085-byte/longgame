@@ -1499,6 +1499,24 @@
     "channel": "hn",
     "query": "SB 253 climate",
     "count": 0
+   },
+   {
+    "date": "2026-11-11T12:33:29.185Z",
+    "channel": "gn",
+    "query": "California SB 253 climate disclosure",
+    "count": 5
+   },
+   {
+    "date": "2026-11-11T12:33:29.185Z",
+    "channel": "gn",
+    "query": "SB 261 climate risk California",
+    "count": 5
+   },
+   {
+    "date": "2026-11-11T12:33:29.185Z",
+    "channel": "hn",
+    "query": "SB 253 climate",
+    "count": 0
    }
   ],
   "items": [
@@ -1555,6 +1573,15 @@
     "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPODNSaDVzU200b3J5eHVOeDNrbzBrSkQwd2FUU2ZLSzRoMVZMc0Q4X0NuTTJiQjloaUNlOEhtUXdDUTFLYzRhVjh5NWJOZjkxOThfTFRuU2dxeElENVNyWUNNbHlKclhSVnIzRF80dmJwRHFSV3k0TEt0WnM4WDBqRkJBNDBEOEJZSU5Nb1BhbmN6Zktnemx1OFpwOUs0NjJ1UnRkU21mcmRTX2w1NkF0U0JBNFdMRUFTTGdVa01MMmZBX3pvSGROdHJjcHBsVUVEaFBqNE1GTjNNYlZMZ0ZGNG9qNVBHR3ctQXJLaVNR?oc=5",
     "date": "Mon, 09 Nov 2026 17:29:40 GMT",
     "foundAt": "2026-11-10T13:22:31.561Z"
+   },
+   {
+    "line": "sb253-docket",
+    "channel": "gn",
+    "query": "SB 261 climate risk California",
+    "title": "Split Decision: Ninth Circuit Lets California's Scope 1 and 2 Emissions Reporting Proceed But Finds Scope 3 and SB 261 Climate-Risk Reporting Likely Unconstitutional - The National Law Review",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPaGZiZGJFVFlNMUFDZkZhOXdaS1RKUzVFa2dmMlQ5dzdTMnpPdXBmOW01VDdKOWtHa2FJQTJ5Z21FaVFPU1lHMVVZYzVsa3E3OHlIbGR3eFhWYzVsWEI2Z3hablJhci0tYlNaLU45ZjIyUkJqTG1Bbko5Uy1uOC1GWmZqMHdpMXlseF9XSDdNWEJXaEU5OVhUMThkTHNTWWZjblV3VkxVczhxclZiNy1mQUtn0gG3AUFVX3lxTE9OLThqSXBlbURBbWpTQUxNVlIxUDZzWldxbTFPcThnemRMZHBIOU5VUDAwS0NNTU8ta1hFaVNYdEF5V1VKVXo5ZWtaTXAzcHh2QUk3NE5nWHNQYjZhMnhiWEFXY1JJS3BfS3JhWVNuY1R1SlU3WHZsTGQ1cHRsNmF6VVR5dXFidVRtM3pQNDYwSkdYbGtraU9VTXVSNktneGh2QU5iWmNSc2YteW1wSTM0dmFmbGRYNA?oc=5",
+    "date": "Tue, 10 Nov 2026 23:12:14 GMT",
+    "foundAt": "2026-11-11T12:33:29.185Z"
    }
   ],
   "alerts": [
@@ -1592,6 +1619,12 @@
     "date": "2026-11-10T13:22:31.561Z",
     "title": "isomerra Launches Free California Climate Disclosure Assessment Ahead of First SB 253 Reporting Deadline - IndyStar",
     "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPODNSaDVzU200b3J5eHVOeDNrbzBrSkQwd2FUU2ZLSzRoMVZMc0Q4X0NuTTJiQjloaUNlOEhtUXdDUTFLYzRhVjh5NWJOZjkxOThfTFRuU2dxeElENVNyWUNNbHlKclhSVnIzRF80dmJwRHFSV3k0TEt0WnM4WDBqRkJBNDBEOEJZSU5Nb1BhbmN6Zktnemx1OFpwOUs0NjJ1UnRkU21mcmRTX2w1NkF0U0JBNFdMRUFTTGdVa01MMmZBX3pvSGROdHJjcHBsVUVEaFBqNE1GTjNNYlZMZ0ZGNG9qNVBHR3ctQXJLaVNR?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-11T12:33:29.185Z",
+    "title": "Split Decision: Ninth Circuit Lets California's Scope 1 and 2 Emissions Reporting Proceed But Finds Scope 3 and SB 261 Climate-Risk Reporting Likely Unconstitutional - The National Law Review",
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPaGZiZGJFVFlNMUFDZkZhOXdaS1RKUzVFa2dmMlQ5dzdTMnpPdXBmOW01VDdKOWtHa2FJQTJ5Z21FaVFPU1lHMVVZYzVsa3E3OHlIbGR3eFhWYzVsWEI2Z3hablJhci0tYlNaLU45ZjIyUkJqTG1Bbko5Uy1uOC1GWmZqMHdpMXlseF9XSDdNWEJXaEU5OVhUMThkTHNTWWZjblV3VkxVczhxclZiNy1mQUtn0gG3AUFVX3lxTE9OLThqSXBlbURBbWpTQUxNVlIxUDZzWldxbTFPcThnemRMZHBIOU5VUDAwS0NNTU8ta1hFaVNYdEF5V1VKVXo5ZWtaTXAzcHh2QUk3NE5nWHNQYjZhMnhiWEFXY1JJS3BfS3JhWVNuY1R1SlU3WHZsTGQ1cHRsNmF6VVR5dXFidVRtM3pQNDYwSkdYbGtraU9VTXVSNktneGh2QU5iWmNSc2YteW1wSTM0dmFmbGRYNA?oc=5",
     "channel": "gn"
    }
   ]
