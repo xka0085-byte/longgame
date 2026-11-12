@@ -1572,6 +1572,24 @@
     "channel": "hn",
     "query": "SB 253 climate",
     "count": 0
+   },
+   {
+    "date": "2026-11-12T13:38:24.152Z",
+    "channel": "gn",
+    "query": "California SB 253 climate disclosure",
+    "count": 5
+   },
+   {
+    "date": "2026-11-12T13:38:24.152Z",
+    "channel": "gn",
+    "query": "SB 261 climate risk California",
+    "count": 5
+   },
+   {
+    "date": "2026-11-12T13:38:24.152Z",
+    "channel": "hn",
+    "query": "SB 253 climate",
+    "count": 0
    }
   ],
   "items": [
@@ -1637,6 +1655,15 @@
     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPaGZiZGJFVFlNMUFDZkZhOXdaS1RKUzVFa2dmMlQ5dzdTMnpPdXBmOW01VDdKOWtHa2FJQTJ5Z21FaVFPU1lHMVVZYzVsa3E3OHlIbGR3eFhWYzVsWEI2Z3hablJhci0tYlNaLU45ZjIyUkJqTG1Bbko5Uy1uOC1GWmZqMHdpMXlseF9XSDdNWEJXaEU5OVhUMThkTHNTWWZjblV3VkxVczhxclZiNy1mQUtn0gG3AUFVX3lxTE9OLThqSXBlbURBbWpTQUxNVlIxUDZzWldxbTFPcThnemRMZHBIOU5VUDAwS0NNTU8ta1hFaVNYdEF5V1VKVXo5ZWtaTXAzcHh2QUk3NE5nWHNQYjZhMnhiWEFXY1JJS3BfS3JhWVNuY1R1SlU3WHZsTGQ1cHRsNmF6VVR5dXFidVRtM3pQNDYwSkdYbGtraU9VTXVSNktneGh2QU5iWmNSc2YteW1wSTM0dmFmbGRYNA?oc=5",
     "date": "Tue, 10 Nov 2026 23:12:14 GMT",
     "foundAt": "2026-11-11T12:33:29.185Z"
+   },
+   {
+    "line": "sb253-docket",
+    "channel": "gn",
+    "query": "California SB 253 climate disclosure",
+    "title": "Ninth Circuit Limits California Climate Disclosure Laws; November 10 SB 253 Reporting Deadline Remains in Effect - The National Law Review",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNMnd2ekp1V1ptV3ZDdUpXcFgyTnA5cWl6Yk5FRUcyLWRzRkpSNm54WUxNUEkwbkg3SWEySUFYY19wb2R6SHFCQ1hCbWtuNE1ac1NWZ1JiY2JybWUtZTFoZ0NqZ3UtWnRsVGJKc0RoNlNxTl8xTTRhRzJTV05DYVFBUXFkYW1Vd0g2WVNBSFNaMzVpU2l2dnVCcmVuUmo0d1I1Smp0NHFjc0xaR3fSAbABQVVfeXFMT0VnTXVpdW5kQ29adGxCV290dXVuMzBLb3BIUnpveVZYXy1RNUQ1WV9uSm52cnRweDMtYzMzNzFiaklEY1EzbFp2TlU1Nk45X2FIMmZLc2hhVWdlcng2OHJvT0dkSjF2Y3lEZ3g0VmxlQUtlZWhFWDc3T29MLUxOX0R0cGdNS091WnRXMEZDeEdibEdtT2Vnblp4cnZTLUo4enBOZzNRVUVyY1BkMFZ1blg?oc=5",
+    "date": "Thu, 12 Nov 2026 00:13:26 GMT",
+    "foundAt": "2026-11-12T13:38:24.152Z"
    }
   ],
   "alerts": [
@@ -1680,6 +1707,12 @@
     "date": "2026-11-11T12:33:29.185Z",
     "title": "Split Decision: Ninth Circuit Lets California's Scope 1 and 2 Emissions Reporting Proceed But Finds Scope 3 and SB 261 Climate-Risk Reporting Likely Unconstitutional - The National Law Review",
     "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPaGZiZGJFVFlNMUFDZkZhOXdaS1RKUzVFa2dmMlQ5dzdTMnpPdXBmOW01VDdKOWtHa2FJQTJ5Z21FaVFPU1lHMVVZYzVsa3E3OHlIbGR3eFhWYzVsWEI2Z3hablJhci0tYlNaLU45ZjIyUkJqTG1Bbko5Uy1uOC1GWmZqMHdpMXlseF9XSDdNWEJXaEU5OVhUMThkTHNTWWZjblV3VkxVczhxclZiNy1mQUtn0gG3AUFVX3lxTE9OLThqSXBlbURBbWpTQUxNVlIxUDZzWldxbTFPcThnemRMZHBIOU5VUDAwS0NNTU8ta1hFaVNYdEF5V1VKVXo5ZWtaTXAzcHh2QUk3NE5nWHNQYjZhMnhiWEFXY1JJS3BfS3JhWVNuY1R1SlU3WHZsTGQ1cHRsNmF6VVR5dXFidVRtM3pQNDYwSkdYbGtraU9VTXVSNktneGh2QU5iWmNSc2YteW1wSTM0dmFmbGRYNA?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-12T13:38:24.152Z",
+    "title": "Ninth Circuit Limits California Climate Disclosure Laws; November 10 SB 253 Reporting Deadline Remains in Effect - The National Law Review",
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNMnd2ekp1V1ptV3ZDdUpXcFgyTnA5cWl6Yk5FRUcyLWRzRkpSNm54WUxNUEkwbkg3SWEySUFYY19wb2R6SHFCQ1hCbWtuNE1ac1NWZ1JiY2JybWUtZTFoZ0NqZ3UtWnRsVGJKc0RoNlNxTl8xTTRhRzJTV05DYVFBUXFkYW1Vd0g2WVNBSFNaMzVpU2l2dnVCcmVuUmo0d1I1Smp0NHFjc0xaR3fSAbABQVVfeXFMT0VnTXVpdW5kQ29adGxCV290dXVuMzBLb3BIUnpveVZYXy1RNUQ1WV9uSm52cnRweDMtYzMzNzFiaklEY1EzbFp2TlU1Nk45X2FIMmZLc2hhVWdlcng2OHJvT0dkSjF2Y3lEZ3g0VmxlQUtlZWhFWDc3T29MLUxOX0R0cGdNS091WnRXMEZDeEdibEdtT2Vnblp4cnZTLUo4enBOZzNRVUVyY1BkMFZ1blg?oc=5",
     "channel": "gn"
    }
   ]

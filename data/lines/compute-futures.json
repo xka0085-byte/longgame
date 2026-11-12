@@ -710,9 +710,44 @@
     "channel": "hn",
     "query": "compute futures",
     "count": 2
+   },
+   {
+    "date": "2026-11-12T13:38:32.889Z",
+    "channel": "fr",
+    "query": "compute derivatives",
+    "count": 1
+   },
+   {
+    "date": "2026-11-12T13:38:32.889Z",
+    "channel": "gn",
+    "query": "compute futures exchange",
+    "count": 5
+   },
+   {
+    "date": "2026-11-12T13:38:32.889Z",
+    "channel": "hn",
+    "query": "compute futures",
+    "count": 2
    }
   ],
-  "items": [],
-  "alerts": []
+  "items": [
+   {
+    "line": "compute-futures",
+    "channel": "gn",
+    "query": "compute futures exchange",
+    "title": "Nodal Exchange Planning AI Compute Futures to Rival CME, ICE - Bloomberg.com",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPSGkwVkF2MHNDT2R4MUxOYmlzcDEtZzhqcVEtdzVPV3dZbkFFRDgxM3hZcWxBMnZxX0paVC14SDVYYXZjUHduLWJJUjdrY2xnQWN2M3k0WGF4OEtJbXk5anJHRm9kdVdRQjdwWnNtdEMzS2JqNjZGN3dMQk11X1BEQXV5YXg4RW1yZTI1RHhXYUYwNHZvaGp2S2ZKYUNKdndOb3VoaU8xZnA4RzJwZWZR?oc=5",
+    "date": "Thu, 03 Sep 2026 07:00:00 GMT",
+    "foundAt": "2026-11-12T13:38:32.889Z"
+   }
+  ],
+  "alerts": [
+   {
+    "date": "2026-11-12T13:38:32.889Z",
+    "title": "Nodal Exchange Planning AI Compute Futures to Rival CME, ICE - Bloomberg.com",
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPSGkwVkF2MHNDT2R4MUxOYmlzcDEtZzhqcVEtdzVPV3dZbkFFRDgxM3hZcWxBMnZxX0paVC14SDVYYXZjUHduLWJJUjdrY2xnQWN2M3k0WGF4OEtJbXk5anJHRm9kdVdRQjdwWnNtdEMzS2JqNjZGN3dMQk11X1BEQXV5YXg4RW1yZTI1RHhXYUYwNHZvaGp2S2ZKYUNKdndOb3VoaU8xZnA4RzJwZWZR?oc=5",
+    "channel": "gn"
+   }
+  ]
  }
 }

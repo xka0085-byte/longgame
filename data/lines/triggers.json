@@ -1203,6 +1203,54 @@
     "channel": "hn",
     "query": "Cloudflare Monetization Gateway",
     "count": 0
+   },
+   {
+    "date": "2026-11-12T13:38:29.555Z",
+    "channel": "fr",
+    "query": "compute derivatives",
+    "count": 1
+   },
+   {
+    "date": "2026-11-12T13:38:29.555Z",
+    "channel": "fr",
+    "query": "autonomous agent income",
+    "count": 0
+   },
+   {
+    "date": "2026-11-12T13:38:29.555Z",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "count": 5
+   },
+   {
+    "date": "2026-11-12T13:38:29.555Z",
+    "channel": "gn",
+    "query": "agent insurance",
+    "count": 5
+   },
+   {
+    "date": "2026-11-12T13:38:29.555Z",
+    "channel": "gn",
+    "query": "AI personality rights bill",
+    "count": 5
+   },
+   {
+    "date": "2026-11-12T13:38:29.555Z",
+    "channel": "hn",
+    "query": "compute futures",
+    "count": 4
+   },
+   {
+    "date": "2026-11-12T13:38:29.555Z",
+    "channel": "hn",
+    "query": "agent insurance",
+    "count": 1
+   },
+   {
+    "date": "2026-11-12T13:38:29.555Z",
+    "channel": "hn",
+    "query": "Cloudflare Monetization Gateway",
+    "count": 0
    }
   ],
   "items": [
@@ -1430,6 +1478,24 @@
     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1nMGthWmZ3WHl2RFBFelZBbXBFWFlab18zUXVHZ25RWjYyR2RVQmNscUs4dXpmbDlseG8wSnpfY0pOcXRicjhuX2hpYXZoRFdocWRqZVdBMF9zUHNEQVZMejFVamdPNjVpZGtyUVJidEcxTjZDY3c?oc=5",
     "date": "Wed, 11 Nov 2026 03:55:00 GMT",
     "foundAt": "2026-11-11T12:33:34.357Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "What Spirit’s Collapse Can Teach Advisors About Travel Insurance - Travel Agent Central",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxON2drNTV0V1lEWmJuVDN0SXdmdlZKbjh4T3RUTjVvbTdZU1VPZDR5MmdJaFFzM3ZrYnNjbHNqeGVDeHhEcTRNYnI3dGI5OHh1cWpDel82ZFlYZUppcE8xOWUyMi1zTDJXYlVpQ2FLeVQ4OWFYUXQ1WFJWV3RKeENmVjdqVlJieU8tMy01S0ZZWElhNHN5cEZiNlVEM09SbXlKQkVLNEM2SzljR0VZRkFyQWtneWROQQ?oc=5",
+    "date": "Thu, 12 Nov 2026 13:35:00 GMT",
+    "foundAt": "2026-11-12T13:38:29.555Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Cowbell launches standalone AI agent liability policy for SMEs - Insurance Business",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOWmJ3cmp3OVlsbm9xRWFNaldhOENMTEV6Q3NKaUU2Y0FLWlY5Z0NKVzltSVVYYXhsSjJINWVLMmpYdW1uY21xM3RIbDFubnFGT0YyMXJfTVhfbGN0NElFUFh3U09YaTlIeVB6Y1Q2NU14TlN5TElKdUFKWC03WDcyWDhqcl9TbW1fLTN2dWY0Um1BaEszcGJyNjVySXRFWDBPMEZ5LUNOam01WGFNZndRMnV6Z3pxbnRqSmxoMDd5b01IRWNWMjBjY0p3?oc=5",
+    "date": "Tue, 10 Nov 2026 14:05:39 GMT",
+    "foundAt": "2026-11-12T13:38:29.555Z"
    }
   ],
   "alerts": [
@@ -1581,6 +1647,18 @@
     "date": "2026-11-11T12:33:34.357Z",
     "title": "AI Compute Futures Hit Another Hurdle: CFTC Extends Review by 60 Days, First Trades May Slip to Early 2027 - BigGo Finance",
     "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1nMGthWmZ3WHl2RFBFelZBbXBFWFlab18zUXVHZ25RWjYyR2RVQmNscUs4dXpmbDlseG8wSnpfY0pOcXRicjhuX2hpYXZoRFdocWRqZVdBMF9zUHNEQVZMejFVamdPNjVpZGtyUVJidEcxTjZDY3c?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-12T13:38:29.555Z",
+    "title": "What Spirit’s Collapse Can Teach Advisors About Travel Insurance - Travel Agent Central",
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxON2drNTV0V1lEWmJuVDN0SXdmdlZKbjh4T3RUTjVvbTdZU1VPZDR5MmdJaFFzM3ZrYnNjbHNqeGVDeHhEcTRNYnI3dGI5OHh1cWpDel82ZFlYZUppcE8xOWUyMi1zTDJXYlVpQ2FLeVQ4OWFYUXQ1WFJWV3RKeENmVjdqVlJieU8tMy01S0ZZWElhNHN5cEZiNlVEM09SbXlKQkVLNEM2SzljR0VZRkFyQWtneWROQQ?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-12T13:38:29.555Z",
+    "title": "Cowbell launches standalone AI agent liability policy for SMEs - Insurance Business",
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOWmJ3cmp3OVlsbm9xRWFNaldhOENMTEV6Q3NKaUU2Y0FLWlY5Z0NKVzltSVVYYXhsSjJINWVLMmpYdW1uY21xM3RIbDFubnFGT0YyMXJfTVhfbGN0NElFUFh3U09YaTlIeVB6Y1Q2NU14TlN5TElKdUFKWC03WDcyWDhqcl9TbW1fLTN2dWY0Um1BaEszcGJyNjVySXRFWDBPMEZ5LUNOam01WGFNZndRMnV6Z3pxbnRqSmxoMDd5b01IRWNWMjBjY0p3?oc=5",
     "channel": "gn"
    }
   ]
