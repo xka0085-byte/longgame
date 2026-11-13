@@ -1251,6 +1251,54 @@
     "channel": "hn",
     "query": "Cloudflare Monetization Gateway",
     "count": 0
+   },
+   {
+    "date": "2026-11-13T12:56:31.457Z",
+    "channel": "fr",
+    "query": "compute derivatives",
+    "count": 1
+   },
+   {
+    "date": "2026-11-13T12:56:31.457Z",
+    "channel": "fr",
+    "query": "autonomous agent income",
+    "count": 0
+   },
+   {
+    "date": "2026-11-13T12:56:31.457Z",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "count": 5
+   },
+   {
+    "date": "2026-11-13T12:56:31.457Z",
+    "channel": "gn",
+    "query": "agent insurance",
+    "count": 5
+   },
+   {
+    "date": "2026-11-13T12:56:31.457Z",
+    "channel": "gn",
+    "query": "AI personality rights bill",
+    "count": 5
+   },
+   {
+    "date": "2026-11-13T12:56:31.457Z",
+    "channel": "hn",
+    "query": "compute futures",
+    "count": 1
+   },
+   {
+    "date": "2026-11-13T12:56:31.457Z",
+    "channel": "hn",
+    "query": "agent insurance",
+    "count": 2
+   },
+   {
+    "date": "2026-11-13T12:56:31.457Z",
+    "channel": "hn",
+    "query": "Cloudflare Monetization Gateway",
+    "count": 0
    }
   ],
   "items": [
@@ -1496,6 +1544,24 @@
     "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOWmJ3cmp3OVlsbm9xRWFNaldhOENMTEV6Q3NKaUU2Y0FLWlY5Z0NKVzltSVVYYXhsSjJINWVLMmpYdW1uY21xM3RIbDFubnFGT0YyMXJfTVhfbGN0NElFUFh3U09YaTlIeVB6Y1Q2NU14TlN5TElKdUFKWC03WDcyWDhqcl9TbW1fLTN2dWY0Um1BaEszcGJyNjVySXRFWDBPMEZ5LUNOam01WGFNZndRMnV6Z3pxbnRqSmxoMDd5b01IRWNWMjBjY0p3?oc=5",
     "date": "Tue, 10 Nov 2026 14:05:39 GMT",
     "foundAt": "2026-11-12T13:38:29.555Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "OutSystems Introduces Agentic Claims Solution to Modernize Policyholder Experiences - Insurance Journal",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFAzaWUwTnlEeU96TnRBR25qM05iZzMyXzR1VDBic0Z5Q2dxTTM1V09IbTZrQzBUQ0theUNWY3dlblJSczRBUS1RUm5LMjluWG1zekZoNDRlazlJYUpxZWRqZDhKdkxwQ2FMbHlNb3BpdllkYVRxSGUyc051MDM?oc=5",
+    "date": "Fri, 13 Nov 2026 10:48:36 GMT",
+    "foundAt": "2026-11-13T12:56:31.457Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Farmers faces class-action lawsuit over agent commission cuts - InsuranceNewsNet",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPekZhY213dW5fOTU0eWJPbEcwaGR6cWo0bHhINWNNTHE5aGphcjA2LUh3VjNocjV5YVFoNEZ2SjdLS3FuM1RVODlzQkg0NG1OQ1h6aEVMb0dtWHp2eFlKVDFUaDJNZWJVNmhVanZqeHBnOVBKR0NueUlIMG5qZTNvNXFnWGRFNWFscDFRZnVpdVU4bE40Wld0anVBOHFVRkpHWU04YWVfLUxiOHFObEVrRTd3M0hmemZ5dEstUlJR?oc=5",
+    "date": "Thu, 12 Nov 2026 15:06:25 GMT",
+    "foundAt": "2026-11-13T12:56:31.457Z"
    }
   ],
   "alerts": [
@@ -1659,6 +1725,18 @@
     "date": "2026-11-12T13:38:29.555Z",
     "title": "Cowbell launches standalone AI agent liability policy for SMEs - Insurance Business",
     "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOWmJ3cmp3OVlsbm9xRWFNaldhOENMTEV6Q3NKaUU2Y0FLWlY5Z0NKVzltSVVYYXhsSjJINWVLMmpYdW1uY21xM3RIbDFubnFGT0YyMXJfTVhfbGN0NElFUFh3U09YaTlIeVB6Y1Q2NU14TlN5TElKdUFKWC03WDcyWDhqcl9TbW1fLTN2dWY0Um1BaEszcGJyNjVySXRFWDBPMEZ5LUNOam01WGFNZndRMnV6Z3pxbnRqSmxoMDd5b01IRWNWMjBjY0p3?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-13T12:56:31.457Z",
+    "title": "OutSystems Introduces Agentic Claims Solution to Modernize Policyholder Experiences - Insurance Journal",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFAzaWUwTnlEeU96TnRBR25qM05iZzMyXzR1VDBic0Z5Q2dxTTM1V09IbTZrQzBUQ0theUNWY3dlblJSczRBUS1RUm5LMjluWG1zekZoNDRlazlJYUpxZWRqZDhKdkxwQ2FMbHlNb3BpdllkYVRxSGUyc051MDM?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-13T12:56:31.457Z",
+    "title": "Farmers faces class-action lawsuit over agent commission cuts - InsuranceNewsNet",
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPekZhY213dW5fOTU0eWJPbEcwaGR6cWo0bHhINWNNTHE5aGphcjA2LUh3VjNocjV5YVFoNEZ2SjdLS3FuM1RVODlzQkg0NG1OQ1h6aEVMb0dtWHp2eFlKVDFUaDJNZWJVNmhVanZqeHBnOVBKR0NueUlIMG5qZTNvNXFnWGRFNWFscDFRZnVpdVU4bE40Wld0anVBOHFVRkpHWU04YWVfLUxiOHFObEVrRTd3M0hmemZ5dEstUlJR?oc=5",
     "channel": "gn"
    }
   ]

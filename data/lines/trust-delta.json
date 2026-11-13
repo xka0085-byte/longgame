@@ -1519,6 +1519,24 @@
     "channel": "hn",
     "query": "MCP server",
     "count": 5
+   },
+   {
+    "date": "2026-11-13T12:56:28.753Z",
+    "channel": "hn",
+    "query": "MCP registry",
+    "count": 0
+   },
+   {
+    "date": "2026-11-13T12:56:28.753Z",
+    "channel": "gn",
+    "query": "MCP server registry",
+    "count": 5
+   },
+   {
+    "date": "2026-11-13T12:56:28.753Z",
+    "channel": "hn",
+    "query": "MCP server",
+    "count": 5
    }
   ],
   "items": [
@@ -1755,6 +1773,24 @@
     "url": "https://almanzor.cloud",
     "date": "2026-11-10T14:02:44Z",
     "foundAt": "2026-11-11T12:33:31.413Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "TalkingTech – Free MCP server and API for engineering leadership content",
+    "url": "https://www.talkingtech.online/",
+    "date": "2026-11-12T21:03:02Z",
+    "foundAt": "2026-11-13T12:56:28.753Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: TestedMCP – 299 MCP servers we installed and handshake-tested",
+    "url": "https://testedmcp.com/",
+    "date": "2026-11-12T13:39:07Z",
+    "foundAt": "2026-11-13T12:56:28.753Z"
    }
   ],
   "alerts": [
@@ -1912,6 +1948,18 @@
     "date": "2026-11-11T12:33:31.413Z",
     "title": "Almanzor – Ask AI and an MCP server for your docs, with cited answers",
     "url": "https://almanzor.cloud",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-13T12:56:28.753Z",
+    "title": "TalkingTech – Free MCP server and API for engineering leadership content",
+    "url": "https://www.talkingtech.online/",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-13T12:56:28.753Z",
+    "title": "Show HN: TestedMCP – 299 MCP servers we installed and handshake-tested",
+    "url": "https://testedmcp.com/",
     "channel": "hn"
    }
   ]

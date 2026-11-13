@@ -755,7 +755,43 @@
    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPSGkwVkF2MHNDT2R4MUxOYmlzcDEtZzhqcVEtdzVPV3dZbkFFRDgxM3hZcWxBMnZxX0paVC14SDVYYXZjUHduLWJJUjdrY2xnQWN2M3k0WGF4OEtJbXk5anJHRm9kdVdRQjdwWnNtdEMzS2JqNjZGN3dMQk11X1BEQXV5YXg4RW1yZTI1RHhXYUYwNHZvaGp2S2ZKYUNKdndOb3VoaU8xZnA4RzJwZWZR?oc=5",
    "type": "noise",
    "action": "只记录"
+  },
+  {
+   "date": "2026-11-13T12:56:37.761Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "TalkingTech – Free MCP server and API for engineering leadership content",
+   "url": "https://www.talkingtech.online/",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-13T12:56:37.761Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Show HN: TestedMCP – 299 MCP servers we installed and handshake-tested",
+   "url": "https://testedmcp.com/",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-13T12:56:37.761Z",
+   "line": "triggers",
+   "channel": "gn",
+   "title": "OutSystems Introduces Agentic Claims Solution to Modernize Policyholder Experiences - Insurance Journal",
+   "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFAzaWUwTnlEeU96TnRBR25qM05iZzMyXzR1VDBic0Z5Q2dxTTM1V09IbTZrQzBUQ0theUNWY3dlblJSczRBUS1RUm5LMjluWG1zekZoNDRlazlJYUpxZWRqZDhKdkxwQ2FMbHlNb3BpdllkYVRxSGUyc051MDM?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-13T12:56:37.761Z",
+   "line": "triggers",
+   "channel": "gn",
+   "title": "Farmers faces class-action lawsuit over agent commission cuts - InsuranceNewsNet",
+   "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPekZhY213dW5fOTU0eWJPbEcwaGR6cWo0bHhINWNNTHE5aGphcjA2LUh3VjNocjV5YVFoNEZ2SjdLS3FuM1RVODlzQkg0NG1OQ1h6aEVMb0dtWHp2eFlKVDFUaDJNZWJVNmhVanZqeHBnOVBKR0NueUlIMG5qZTNvNXFnWGRFNWFscDFRZnVpdVU4bE40Wld0anVBOHFVRkpHWU04YWVfLUxiOHFObEVrRTd3M0hmemZ5dEstUlJR?oc=5",
+   "type": "noise",
+   "action": "只记录"
   }
  ],
- "updated": "2026-11-12T13:38:37.106Z"
+ "updated": "2026-11-13T12:56:37.761Z"
 }
