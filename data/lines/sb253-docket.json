@@ -911,6 +911,39 @@
      }
     ],
     "ok": true
+   },
+   {
+    "date": "2026-11-13T11:52:30.114Z",
+    "pages": [
+     {
+      "id": "sb261-docket",
+      "status": 200,
+      "bytes": 69248,
+      "sig": "69095:CjwhRE9DVFlQRSBodG1s",
+      "changed": true,
+      "keywordHit": false,
+      "unavailable": false
+     },
+     {
+      "id": "sb253-reporting",
+      "status": 200,
+      "bytes": 58594,
+      "sig": "58580:CjwhRE9DVFlQRSBodG1s",
+      "changed": false,
+      "keywordHit": false,
+      "unavailable": false
+     },
+     {
+      "id": "sb253-program",
+      "status": 200,
+      "bytes": 61221,
+      "sig": "61201:CjwhRE9DVFlQRSBodG1s",
+      "changed": false,
+      "keywordHit": false,
+      "unavailable": false
+     }
+    ],
+    "ok": true
    }
   ],
   "events": [
@@ -1207,6 +1240,11 @@
    {
     "date": "2026-11-12T12:13:14.452Z",
     "page": "sb253-program",
+    "note": "content changed"
+   },
+   {
+    "date": "2026-11-13T11:52:30.114Z",
+    "page": "sb261-docket",
     "note": "content changed"
    }
   ]
