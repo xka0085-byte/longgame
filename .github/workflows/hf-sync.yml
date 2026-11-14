@@ -1,0 +1,45 @@
+name: hf-sync
+# The pages site and the GitHub tree move daily; the Hugging Face dataset mirror
+# did not, and a stale mirror is worse than no mirror because the card still
+# claims to be a snapshot "from the upstream repository". Runs after the daily
+# collection jobs and uploads the tree with the derived runs_index rebuilt first.
+# Deliberately daily only: this job produces no data, it only copies what the
+# collection jobs already wrote.
+on:
+  schedule:
+    - cron: "30 6 * * *"
+  workflow_dispatch:
+    inputs:
+      force_card:
+        description: "rewrite the dataset card even when no files changed"
+        type: boolean
+        default: false
+permissions:
+  contents: read
+  issues: write
+concurrency:
+  group: hf-sync
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install "huggingface_hub>=0.27"
+      - name: mirror to hugging face
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          UPSTREAM_SHA: ${{ github.sha }}
+          FORCE_CARD: ${{ inputs.force_card == true && '1' || '' }}
+        run: python scripts/hf-sync.py
+
+      - name: notify failure
+        if: failure()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/notify-failure.mjs "${{ github.workflow }}"
