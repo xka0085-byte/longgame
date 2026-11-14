@@ -791,7 +791,43 @@
    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPekZhY213dW5fOTU0eWJPbEcwaGR6cWo0bHhINWNNTHE5aGphcjA2LUh3VjNocjV5YVFoNEZ2SjdLS3FuM1RVODlzQkg0NG1OQ1h6aEVMb0dtWHp2eFlKVDFUaDJNZWJVNmhVanZqeHBnOVBKR0NueUlIMG5qZTNvNXFnWGRFNWFscDFRZnVpdVU4bE40Wld0anVBOHFVRkpHWU04YWVfLUxiOHFObEVrRTd3M0hmemZ5dEstUlJR?oc=5",
    "type": "noise",
    "action": "只记录"
+  },
+  {
+   "date": "2026-11-14T12:01:03.137Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Show HN: Language for API calls, load tests and MCP server",
+   "url": "https://stampdrill.com/",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-14T12:01:03.137Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "We tested 37,000 MCP servers",
+   "url": "https://nestdaddy.com/blog/we-tested-37000-mcp-servers",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-14T12:01:03.137Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Show HN: Clozemaster MCP server that turns class notes into cloze sentences",
+   "url": "https://www.youtube.com/watch?v=mN1eZl0hKTQ",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-14T12:01:03.137Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Show HN: Webcrawl, an open-source web crawling API and MCP server for agents",
+   "url": "https://github.com/brainfish-ai/webcrawl-anything",
+   "type": "noise",
+   "action": "只记录"
   }
  ],
- "updated": "2026-11-13T12:56:37.761Z"
+ "updated": "2026-11-14T12:01:03.137Z"
 }
