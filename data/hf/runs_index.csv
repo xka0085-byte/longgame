@@ -7,6 +7,7 @@ agent-dirs,2026-10-30,,,,
 agent-dirs,2026-10-30,,,,
 agent-dirs,2026-10-30,,,,
 agent-dirs,2026-11-02,true,,,
+agent-dirs,2026-11-09,true,,,
 aiact-register,2026-10-20,,4,0,0
 aiact-register,2026-10-21,,4,4,0
 aiact-register,2026-11-02,true,4,4,0
@@ -17,6 +18,7 @@ c2pa-spec,2026-10-30,,1,0,0
 c2pa-spec,2026-10-30,,1,0,0
 c2pa-spec,2026-10-30,,1,0,0
 c2pa-spec,2026-11-02,true,1,0,0
+c2pa-spec,2026-11-09,true,1,0,0
 compute-futures,2026-10-20,,2,0,0
 compute-futures,2026-10-30,,2,1,1
 compute-futures,2026-10-30,,2,0,1
@@ -27,6 +29,7 @@ compute-futures,2026-10-30,,3,0,1
 compute-futures,2026-10-30,,3,0,1
 compute-futures,2026-10-30,,3,0,1
 compute-futures,2026-11-02,true,3,0,1
+compute-futures,2026-11-09,true,3,0,1
 eidas-tsl,2026-10-20,,,,
 eidas-tsl,2026-10-21,,,,
 eidas-tsl,2026-10-30,,,,
@@ -35,6 +38,7 @@ eidas-tsl,2026-10-30,,,,
 eidas-tsl,2026-10-30,,,,
 eidas-tsl,2026-10-30,,,,
 eidas-tsl,2026-11-02,true,,,
+eidas-tsl,2026-11-09,true,,,
 formd-sweep,2026-10-20,,,,
 formd-sweep,2026-10-21,,,,
 formd-sweep,2026-10-21,,,,
@@ -69,12 +73,19 @@ sb253-docket,2026-11-04,true,3,3,0
 sb253-docket,2026-11-05,true,3,3,0
 sb253-docket,2026-11-06,true,3,1,0
 sb253-docket,2026-11-07,true,3,2,0
+sb253-docket,2026-11-08,true,3,1,2
+sb253-docket,2026-11-09,true,3,3,0
+sb253-docket,2026-11-10,true,3,3,0
+sb253-docket,2026-11-11,true,3,2,1
+sb253-docket,2026-11-12,true,3,3,0
+sb253-docket,2026-11-13,true,3,1,0
 state-ai-laws,2026-10-20,,1,0,0
 state-ai-laws,2026-10-30,,1,1,0
 state-ai-laws,2026-10-30,,1,0,0
 state-ai-laws,2026-10-30,,1,0,0
 state-ai-laws,2026-10-30,,1,0,0
 state-ai-laws,2026-11-02,true,1,1,0
+state-ai-laws,2026-11-09,true,1,1,0
 triggers,2026-10-20,,5,0,0
 triggers,2026-10-21,,5,2,0
 triggers,2026-11-02,true,5,4,1
@@ -82,3 +93,4 @@ triggers,2026-11-08,true,5,2,1
 trust-delta,2026-11-02,true,,,
 trust-delta,2026-11-02,true,,,
 trust-delta,2026-11-02,true,,,
+trust-delta,2026-11-09,true,,,

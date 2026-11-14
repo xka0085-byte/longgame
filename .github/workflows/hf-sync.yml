@@ -15,7 +15,7 @@ on:
         type: boolean
         default: false
 permissions:
-  contents: read
+  contents: write
   issues: write
 concurrency:
   group: hf-sync
@@ -37,6 +37,25 @@ jobs:
           UPSTREAM_SHA: ${{ github.sha }}
           FORCE_CARD: ${{ inputs.force_card == true && '1' || '' }}
         run: python scripts/hf-sync.py
+
+      # The index is rebuilt from data/lines/*.json, which the collection jobs
+      # rewrite daily. Commit the rebuilt copy back so the repository and the
+      # mirror never disagree about how many runs exist.
+      - name: commit rebuilt index
+        run: |
+          git config user.name "longgame-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/hf/runs_index.csv
+          if git diff --cached --quiet; then echo "index already current"; exit 0; fi
+          git commit -m "data(hf): rebuild runs_index $(date -u +%F) [skip ci]"
+          BRANCH="${{ github.event.repository.default_branch }}"
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin "$BRANCH" || true
+            if git push origin "HEAD:refs/heads/$BRANCH"; then echo "pushed (attempt $i)"; exit 0; fi
+            sleep 5
+          done
+          echo "push failed after 3 attempts" >&2
+          exit 1
 
       - name: notify failure
         if: failure()
