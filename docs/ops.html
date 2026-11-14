@@ -40,7 +40,7 @@ blockquote{border-left:3px solid #d1d5db;margin:18px 0;padding:6px 16px;color:#4
 <tr><th>层</th><th>位置</th><th>做什么</th><th>防的是什么</th></tr>
 <tr><td>页级</td><td><code>scripts/line.mjs</code></td><td>三档容错：tolerate（已知抓不到，只记事件）／throttled（202/403/417/429/空挑战页，重试一次后放行）／其余（首次告警放行，连续两轮才判失败）</td><td>单页反爬拖垮一条线</td></tr>
 <tr><td>线级</td><td><code>scripts/run-all.mjs</code></td><td>单线失败只记录（写进 <code>data/collect-runs.json</code>），只有本轮尝试的线<b>全部</b>失败才判整轮失败</td><td>一条线故障让其它 12 条线的数据无法发布</td></tr>
-<tr><td>心跳级</td><td><code>scripts/heartbeat.mjs</code></td><td>一日三次自检 → 超期线当场补采 → critical 开 Issue → 落健康页与心跳文件</td><td>整周断档无人知</td></tr>
+<tr><td>心跳级</td><td><code>scripts/heartbeat.mjs</code></td><td>一日一次自检（2026-11-13 由一日三次降频）→ 超期线当场补采 → critical 开 Issue → 落健康页与心跳文件</td><td>整周断档无人知</td></tr>
 </table>
 
 <p>新鲜度按<b>最后一次成功采集</b>算，不按最后一次运行算。差别很关键：一条每周都跑、每次都全挂的线，
