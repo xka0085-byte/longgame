@@ -764,6 +764,24 @@
     "channel": "hn",
     "query": "compute futures",
     "count": 0
+   },
+   {
+    "date": "2026-11-15T12:36:23.375Z",
+    "channel": "fr",
+    "query": "compute derivatives",
+    "count": 0
+   },
+   {
+    "date": "2026-11-15T12:36:23.375Z",
+    "channel": "gn",
+    "query": "compute futures exchange",
+    "count": 5
+   },
+   {
+    "date": "2026-11-15T12:36:23.375Z",
+    "channel": "hn",
+    "query": "compute futures",
+    "count": 0
    }
   ],
   "items": [

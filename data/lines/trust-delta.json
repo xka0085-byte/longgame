@@ -1555,6 +1555,24 @@
     "channel": "hn",
     "query": "MCP server",
     "count": 5
+   },
+   {
+    "date": "2026-11-15T12:36:18.040Z",
+    "channel": "hn",
+    "query": "MCP registry",
+    "count": 0
+   },
+   {
+    "date": "2026-11-15T12:36:18.040Z",
+    "channel": "gn",
+    "query": "MCP server registry",
+    "count": 5
+   },
+   {
+    "date": "2026-11-15T12:36:18.040Z",
+    "channel": "hn",
+    "query": "MCP server",
+    "count": 0
    }
   ],
   "items": [
