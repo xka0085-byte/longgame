@@ -1902,6 +1902,24 @@
     "channel": "hn",
     "query": "MCP server",
     "count": 0
+   },
+   {
+    "date": "2026-11-16T13:28:00.181Z",
+    "channel": "hn",
+    "query": "MCP registry",
+    "count": 0
+   },
+   {
+    "date": "2026-11-16T13:28:00.181Z",
+    "channel": "gn",
+    "query": "MCP server registry",
+    "count": 5
+   },
+   {
+    "date": "2026-11-16T13:28:00.181Z",
+    "channel": "hn",
+    "query": "MCP server",
+    "count": 1
    }
   ],
   "items": [
