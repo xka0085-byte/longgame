@@ -810,6 +810,164 @@
     "flappingBasis": "与 2026-11-02 的抽样（20 条）比对，为非全量下界",
     "status": "ok",
     "ok": true
+   },
+   {
+    "date": "2026-11-16T10:55:33.759Z",
+    "scanDate": "2026-11-16",
+    "generatedAt": "2026-11-16T10:03:31.707Z",
+    "feedVersion": 1,
+    "baseline": false,
+    "comparedAgainst": "2026-11-09",
+    "comparedAgainstComplete": true,
+    "comparedAgainstCoverage": 35327,
+    "comparisonKind": "cross-week",
+    "weekOf": "2026-W47",
+    "comparedAgainstWeek": "2026-W46",
+    "daysSinceBaseline": 7,
+    "refreshOnly": false,
+    "baselineEligible": true,
+    "summary": {
+     "serversThisWeek": 35327,
+     "added": 0,
+     "addedUncomparable": 0,
+     "removed": 0,
+     "statusChanged": 1052
+    },
+    "samples": {
+     "added": [],
+     "removed": [],
+     "statusChanged": [
+      {
+       "name": "ag.hood/name-service",
+       "url": "https://www.hood.ag/api/mcp",
+       "from": "PASS",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.agothe.mcp-chatgpt/agent-contract-preflight",
+       "url": "https://mcp-chatgpt.agothe.ai/mcp",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.ai-akari/agent-trust-receipt",
+       "url": "https://ai-akari.ai/mcp-trust",
+       "from": "PASS",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.ai-akari/one-minute-akari",
+       "url": "https://ai-akari.ai/mcp",
+       "from": "PASS",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.askline/askline",
+       "url": "https://askline.ai/mcp",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.astrofabric/mcp",
+       "url": "https://www.astrofabric.ai/api/mcp",
+       "from": "UNKNOWN",
+       "to": "FAIL"
+      },
+      {
+       "name": "ai.augmentev/paseo",
+       "url": "https://api.augmentev.ai/mcp",
+       "from": "UNKNOWN",
+       "to": "AUTH_GATED"
+      },
+      {
+       "name": "ai.betslipdoctor/mcp",
+       "url": "https://api.betslipdoctor.ai/api/mcp",
+       "from": "PASS",
+       "to": "FAIL"
+      },
+      {
+       "name": "ai.cosmonote/notes",
+       "url": "https://nebula.cosmonote.ai/mcp",
+       "from": "UNKNOWN",
+       "to": "AUTH_GATED"
+      },
+      {
+       "name": "ai.dryos/dryos",
+       "url": "https://api.dryos.ai/mcp",
+       "from": "PASS",
+       "to": "AUTH_GATED"
+      },
+      {
+       "name": "ai.gigaverse/gigaverse",
+       "url": "https://gigaverse.ai/api/mcp",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.hashgrid/dna",
+       "url": "https://dna.hashgrid.ai/mcp",
+       "from": "PASS",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.hotrepo/hotrepo",
+       "url": "https://hotrepo.ai/mcp",
+       "from": "PASS",
+       "to": "AUTH_GATED"
+      },
+      {
+       "name": "ai.migurei.pw/parallel-world",
+       "url": "https://pw.migurei.ai/mcp",
+       "from": "PASS",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.modulos/demo-booking",
+       "url": "https://www.modulos.ai/api/mcp/",
+       "from": "UNKNOWN",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.norg/express",
+       "url": "https://content-craft-api.norg.ai/v2/mcp/express",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.openarx/openarx",
+       "url": "https://mcp.openarx.ai/researcher/mcp",
+       "from": "UNKNOWN",
+       "to": "AUTH_GATED"
+      },
+      {
+       "name": "ai.ragjur/mcp",
+       "url": "https://mcp.ragjur.ai/mcp",
+       "from": "UNKNOWN",
+       "to": "AUTH_GATED"
+      },
+      {
+       "name": "ai.reka/mcp",
+       "url": "https://mcp.reka.ai/mcp",
+       "from": "PASS",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.robowrite/mcp",
+       "url": "https://www.robowrite.ai/api/mcp",
+       "from": "PASS",
+       "to": "UNKNOWN"
+      }
+     ]
+    },
+    "direction": {
+     "toPass": 551,
+     "fromPass": 341,
+     "unknownStatusInvolved": 0
+    },
+    "flapping": 3,
+    "flappingBasis": "与 2026-11-09 的抽样（20 条）比对，为非全量下界",
+    "status": "ok",
+    "ok": true
    }
   ],
   "events": [
@@ -1315,6 +1473,177 @@
      "ai.mediora/mediora",
      "at.fixfind/fixfind",
      "be.vakmanindebuurt/leads"
+    ],
+    "basis": "sample-only"
+   },
+   {
+    "date": "2026-11-16T10:55:33.759Z",
+    "type": "endpoint-downgraded",
+    "name": "ag.hood/name-service",
+    "url": "https://www.hood.ag/api/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-16T10:55:33.759Z",
+    "type": "endpoint-downgraded",
+    "name": "ai.ai-akari/agent-trust-receipt",
+    "url": "https://ai-akari.ai/mcp-trust",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-16T10:55:33.759Z",
+    "type": "endpoint-downgraded",
+    "name": "ai.ai-akari/one-minute-akari",
+    "url": "https://ai-akari.ai/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-16T10:55:33.759Z",
+    "type": "endpoint-downgraded",
+    "name": "ai.betslipdoctor/mcp",
+    "url": "https://api.betslipdoctor.ai/api/mcp",
+    "from": "PASS",
+    "to": "FAIL"
+   },
+   {
+    "date": "2026-11-16T10:55:33.759Z",
+    "type": "endpoint-downgraded",
+    "name": "ai.dryos/dryos",
+    "url": "https://api.dryos.ai/mcp",
+    "from": "PASS",
+    "to": "AUTH_GATED"
+   },
+   {
+    "date": "2026-11-16T10:55:33.759Z",
+    "type": "endpoint-downgraded",
+    "name": "ai.hashgrid/dna",
+    "url": "https://dna.hashgrid.ai/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-16T10:55:33.759Z",
+    "type": "endpoint-downgraded",
+    "name": "ai.hotrepo/hotrepo",
+    "url": "https://hotrepo.ai/mcp",
+    "from": "PASS",
+    "to": "AUTH_GATED"
+   },
+   {
+    "date": "2026-11-16T10:55:33.759Z",
+    "type": "endpoint-downgraded",
+    "name": "ai.migurei.pw/parallel-world",
+    "url": "https://pw.migurei.ai/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-16T10:55:33.759Z",
+    "type": "endpoint-downgraded",
+    "name": "ai.reka/mcp",
+    "url": "https://mcp.reka.ai/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-16T10:55:33.759Z",
+    "type": "endpoint-downgraded",
+    "name": "ai.robowrite/mcp",
+    "url": "https://www.robowrite.ai/api/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-16T10:55:33.759Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.gigaverse/gigaverse",
+    "url": "https://gigaverse.ai/api/mcp",
+    "from": "AUTH_GATED",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-16T10:55:33.759Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.modulos/demo-booking",
+    "url": "https://www.modulos.ai/api/mcp/",
+    "from": "UNKNOWN",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-16T10:55:33.759Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.sayitagain/sayitagain",
+    "url": "https://app.sayitagain.ai/mcp",
+    "from": "AUTH_GATED",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-16T10:55:33.759Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.usepromise/promise",
+    "url": "https://mcp.usepromise.ai/mcp",
+    "from": "UNKNOWN",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-16T10:55:33.759Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.userintuition/research",
+    "url": "https://mcp.userintuition.ai/mcp",
+    "from": "AUTH_GATED",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-16T10:55:33.759Z",
+    "type": "endpoint-upgraded",
+    "name": "app.askqa/structforge",
+    "url": "https://structforge.askqa.app/mcp",
+    "from": "UNKNOWN",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-16T10:55:33.759Z",
+    "type": "endpoint-upgraded",
+    "name": "app.creatora.lexatlas/lexatlas-mcp",
+    "url": "https://api.lexatlas.creatora.app/mcp",
+    "from": "AUTH_GATED",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-16T10:55:33.759Z",
+    "type": "endpoint-upgraded",
+    "name": "app.hidemail/hidemail",
+    "url": "https://hidemail.app/mcp",
+    "from": "AUTH_GATED",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-16T10:55:33.759Z",
+    "type": "endpoint-upgraded",
+    "name": "app.tradeit/mcp",
+    "url": "https://mcp.tradeit.app/mcp",
+    "from": "AUTH_GATED",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-16T10:55:33.759Z",
+    "type": "endpoint-upgraded",
+    "name": "au.com.rtopacks/rtopacks",
+    "url": "https://mcp.rtopacks.com.au/mcp",
+    "from": "UNKNOWN",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-16T10:55:33.759Z",
+    "type": "status-flapping",
+    "count": 3,
+    "sample": [
+     "ai.astrofabric/mcp",
+     "ai.augmentev/paseo",
+     "ai.ragjur/mcp"
     ],
     "basis": "sample-only"
    }

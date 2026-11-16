@@ -98,11 +98,31 @@
      }
     ],
     "ok": true
+   },
+   {
+    "date": "2026-11-16T10:55:36.717Z",
+    "pages": [
+     {
+      "id": "c2pa-specs",
+      "status": 200,
+      "bytes": 13228,
+      "sig": "13227:PCFET0NUWVBFIGh0bWw+",
+      "changed": true,
+      "keywordHit": true,
+      "unavailable": false
+     }
+    ],
+    "ok": true
    }
   ],
   "events": [
    {
     "date": "2026-10-30T08:05:13.760Z",
+    "page": "c2pa-specs",
+    "note": "CHANGE + KEYWORD HIT"
+   },
+   {
+    "date": "2026-11-16T10:55:36.717Z",
     "page": "c2pa-specs",
     "note": "CHANGE + KEYWORD HIT"
    }
