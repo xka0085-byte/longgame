@@ -1920,6 +1920,24 @@
     "channel": "hn",
     "query": "MCP server",
     "count": 1
+   },
+   {
+    "date": "2026-11-17T14:14:19.293Z",
+    "channel": "hn",
+    "query": "MCP registry",
+    "count": 0
+   },
+   {
+    "date": "2026-11-17T14:14:19.293Z",
+    "channel": "gn",
+    "query": "MCP server registry",
+    "count": 5
+   },
+   {
+    "date": "2026-11-17T14:14:19.293Z",
+    "channel": "hn",
+    "query": "MCP server",
+    "count": 5
    }
   ],
   "items": [
@@ -2210,6 +2228,42 @@
     "url": "https://github.com/brainfish-ai/webcrawl-anything",
     "date": "2026-11-13T13:33:42Z",
     "foundAt": "2026-11-14T12:00:00.158Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: OpenEye – Ollama for vision models (YOLO, SAM 2, depth) with MCP server",
+    "url": "https://github.com/aw3-technology/openeye.sh",
+    "date": "2026-11-17T13:42:52Z",
+    "foundAt": "2026-11-17T14:14:19.293Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: An MCP server inside a multi-profile browser, with approvals",
+    "url": "https://browser.softglaze.com/features/ai-agents",
+    "date": "2026-11-17T13:40:31Z",
+    "foundAt": "2026-11-17T14:14:19.293Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: An MCP server for searching 71 real, sourced AI agent deployments",
+    "url": "https://agentsinthewild.co/mcp-server",
+    "date": "2026-11-17T11:52:46Z",
+    "foundAt": "2026-11-17T14:14:19.293Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: One API and MCP Server to Publish to TikTok, Instagram and YouTube",
+    "url": "https://ugcapi.dev/",
+    "date": "2026-11-16T22:59:33Z",
+    "foundAt": "2026-11-17T14:14:19.293Z"
    }
   ],
   "alerts": [
@@ -2403,6 +2457,30 @@
     "date": "2026-11-14T12:00:00.158Z",
     "title": "Show HN: Webcrawl, an open-source web crawling API and MCP server for agents",
     "url": "https://github.com/brainfish-ai/webcrawl-anything",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-17T14:14:19.293Z",
+    "title": "Show HN: OpenEye – Ollama for vision models (YOLO, SAM 2, depth) with MCP server",
+    "url": "https://github.com/aw3-technology/openeye.sh",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-17T14:14:19.293Z",
+    "title": "Show HN: An MCP server inside a multi-profile browser, with approvals",
+    "url": "https://browser.softglaze.com/features/ai-agents",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-17T14:14:19.293Z",
+    "title": "Show HN: An MCP server for searching 71 real, sourced AI agent deployments",
+    "url": "https://agentsinthewild.co/mcp-server",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-17T14:14:19.293Z",
+    "title": "Show HN: One API and MCP Server to Publish to TikTok, Instagram and YouTube",
+    "url": "https://ugcapi.dev/",
     "channel": "hn"
    }
   ]

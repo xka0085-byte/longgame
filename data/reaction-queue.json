@@ -827,7 +827,43 @@
    "url": "https://github.com/brainfish-ai/webcrawl-anything",
    "type": "noise",
    "action": "只记录"
+  },
+  {
+   "date": "2026-11-17T14:14:30.396Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Show HN: OpenEye – Ollama for vision models (YOLO, SAM 2, depth) with MCP server",
+   "url": "https://github.com/aw3-technology/openeye.sh",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-17T14:14:30.396Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Show HN: An MCP server inside a multi-profile browser, with approvals",
+   "url": "https://browser.softglaze.com/features/ai-agents",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-17T14:14:30.396Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Show HN: An MCP server for searching 71 real, sourced AI agent deployments",
+   "url": "https://agentsinthewild.co/mcp-server",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-17T14:14:30.396Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Show HN: One API and MCP Server to Publish to TikTok, Instagram and YouTube",
+   "url": "https://ugcapi.dev/",
+   "type": "noise",
+   "action": "只记录"
   }
  ],
- "updated": "2026-11-16T13:28:09.567Z"
+ "updated": "2026-11-17T14:14:30.396Z"
 }

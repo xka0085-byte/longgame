@@ -405,6 +405,18 @@
     "channel": "hn",
     "query": "content credentials",
     "count": 0
+   },
+   {
+    "date": "2026-11-17T14:14:26.287Z",
+    "channel": "gn",
+    "query": "C2PA content credentials adoption",
+    "error": "Error: HTTP 429"
+   },
+   {
+    "date": "2026-11-17T14:14:26.287Z",
+    "channel": "hn",
+    "query": "content credentials",
+    "count": 1
    }
   ],
   "items": [
