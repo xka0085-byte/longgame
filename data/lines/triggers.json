@@ -1491,6 +1491,54 @@
     "channel": "hn",
     "query": "Cloudflare Monetization Gateway",
     "count": 0
+   },
+   {
+    "date": "2026-11-18T13:44:46.056Z",
+    "channel": "fr",
+    "query": "compute derivatives",
+    "count": 2
+   },
+   {
+    "date": "2026-11-18T13:44:46.056Z",
+    "channel": "fr",
+    "query": "autonomous agent income",
+    "count": 1
+   },
+   {
+    "date": "2026-11-18T13:44:46.056Z",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "count": 5
+   },
+   {
+    "date": "2026-11-18T13:44:46.056Z",
+    "channel": "gn",
+    "query": "agent insurance",
+    "count": 5
+   },
+   {
+    "date": "2026-11-18T13:44:46.056Z",
+    "channel": "gn",
+    "query": "AI personality rights bill",
+    "count": 5
+   },
+   {
+    "date": "2026-11-18T13:44:46.056Z",
+    "channel": "hn",
+    "query": "compute futures",
+    "count": 0
+   },
+   {
+    "date": "2026-11-18T13:44:46.056Z",
+    "channel": "hn",
+    "query": "agent insurance",
+    "count": 2
+   },
+   {
+    "date": "2026-11-18T13:44:46.056Z",
+    "channel": "hn",
+    "query": "Cloudflare Monetization Gateway",
+    "count": 0
    }
   ],
   "items": [
@@ -1754,6 +1802,24 @@
     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPekZhY213dW5fOTU0eWJPbEcwaGR6cWo0bHhINWNNTHE5aGphcjA2LUh3VjNocjV5YVFoNEZ2SjdLS3FuM1RVODlzQkg0NG1OQ1h6aEVMb0dtWHp2eFlKVDFUaDJNZWJVNmhVanZqeHBnOVBKR0NueUlIMG5qZTNvNXFnWGRFNWFscDFRZnVpdVU4bE40Wld0anVBOHFVRkpHWU04YWVfLUxiOHFObEVrRTd3M0hmemZ5dEstUlJR?oc=5",
     "date": "Thu, 12 Nov 2026 15:06:25 GMT",
     "foundAt": "2026-11-13T12:56:31.457Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Insurance workforce shifts test independent agents: Agree or disagree? - PropertyCasualty360",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPcHN3UzgtLURYN1gyV2dlQ3BSX1BYUHotaGliNXVKeVlCRk5QbVFROVdHY01nV1Z4cUg1bmVWZElFRXhyYlF3bEo1ZlZDMXh0X2RDbVJBMkY3dVRyQ3VBSG5RQmozNXg3TEx4YnROaTl0RlVWRFNDRTBod0d4alFxaWxBYUMwNkZjWmpTbHlJRk9XV2NuU0I3aFQtNlpaSEpnVExraDhYVjJkZVhjSDdhSHowVTVCNm8?oc=5",
+    "date": "Tue, 17 Nov 2026 21:39:36 GMT",
+    "foundAt": "2026-11-18T13:44:46.056Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "AI agents are starting to fill out medical forms and file insurance requests in place of human staff - The Decoder",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQVkpKU09ncUpnQzNjb1IxWjNzNEpxZkk5M1F5b2ZkamdBbmhqY0RvSzE0S3FsSkQtRXUyWTZuVXFXeDFtV0lFaE1NQUs4Vkc4eWlEZW5LSG1nTXdaQnl6Ykl2MUc3c2oxZzBtUnB4NXJQNlZ1YWVkck1aRm95Z29VQlBoRmhGdVVfRVFmWHQtWW9yUHNWQmMwR1JXOXdJbzdPYWxJVDdzZjV1Y2JtTzlBb3lILVJWWm1oYnkyS2VpTlVsSlE?oc=5",
+    "date": "Tue, 17 Nov 2026 16:57:06 GMT",
+    "foundAt": "2026-11-18T13:44:46.056Z"
    }
   ],
   "alerts": [
@@ -1929,6 +1995,18 @@
     "date": "2026-11-13T12:56:31.457Z",
     "title": "Farmers faces class-action lawsuit over agent commission cuts - InsuranceNewsNet",
     "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPekZhY213dW5fOTU0eWJPbEcwaGR6cWo0bHhINWNNTHE5aGphcjA2LUh3VjNocjV5YVFoNEZ2SjdLS3FuM1RVODlzQkg0NG1OQ1h6aEVMb0dtWHp2eFlKVDFUaDJNZWJVNmhVanZqeHBnOVBKR0NueUlIMG5qZTNvNXFnWGRFNWFscDFRZnVpdVU4bE40Wld0anVBOHFVRkpHWU04YWVfLUxiOHFObEVrRTd3M0hmemZ5dEstUlJR?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-18T13:44:46.056Z",
+    "title": "Insurance workforce shifts test independent agents: Agree or disagree? - PropertyCasualty360",
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPcHN3UzgtLURYN1gyV2dlQ3BSX1BYUHotaGliNXVKeVlCRk5QbVFROVdHY01nV1Z4cUg1bmVWZElFRXhyYlF3bEo1ZlZDMXh0X2RDbVJBMkY3dVRyQ3VBSG5RQmozNXg3TEx4YnROaTl0RlVWRFNDRTBod0d4alFxaWxBYUMwNkZjWmpTbHlJRk9XV2NuU0I3aFQtNlpaSEpnVExraDhYVjJkZVhjSDdhSHowVTVCNm8?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-18T13:44:46.056Z",
+    "title": "AI agents are starting to fill out medical forms and file insurance requests in place of human staff - The Decoder",
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQVkpKU09ncUpnQzNjb1IxWjNzNEpxZkk5M1F5b2ZkamdBbmhqY0RvSzE0S3FsSkQtRXUyWTZuVXFXeDFtV0lFaE1NQUs4Vkc4eWlEZW5LSG1nTXdaQnl6Ykl2MUc3c2oxZzBtUnB4NXJQNlZ1YWVkck1aRm95Z29VQlBoRmhGdVVfRVFmWHQtWW9yUHNWQmMwR1JXOXdJbzdPYWxJVDdzZjV1Y2JtTzlBb3lILVJWWm1oYnkyS2VpTlVsSlE?oc=5",
     "channel": "gn"
    }
   ]

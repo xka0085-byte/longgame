@@ -1938,6 +1938,24 @@
     "channel": "hn",
     "query": "MCP server",
     "count": 5
+   },
+   {
+    "date": "2026-11-18T13:44:43.298Z",
+    "channel": "hn",
+    "query": "MCP registry",
+    "count": 1
+   },
+   {
+    "date": "2026-11-18T13:44:43.298Z",
+    "channel": "gn",
+    "query": "MCP server registry",
+    "count": 5
+   },
+   {
+    "date": "2026-11-18T13:44:43.298Z",
+    "channel": "hn",
+    "query": "MCP server",
+    "count": 5
    }
   ],
   "items": [
@@ -2264,6 +2282,33 @@
     "url": "https://ugcapi.dev/",
     "date": "2026-11-16T22:59:33Z",
     "foundAt": "2026-11-17T14:14:19.293Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP registry",
+    "title": "Show HN: Korean company registry for AI agents – free MCP server and CSV batch",
+    "url": "https://comepass.xyz/?lang=en",
+    "date": "2026-11-18T11:24:17Z",
+    "foundAt": "2026-11-18T13:44:43.298Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: Korean company registry for AI agents – free MCP server and CSV batch",
+    "url": "https://comepass.xyz/?lang=en",
+    "date": "2026-11-18T11:24:17Z",
+    "foundAt": "2026-11-18T13:44:43.298Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Rebuilding the Metabase MCP server: lessons for MCP tool design",
+    "url": "https://www.metabase.com/blog/mcp-tool-design-lessons",
+    "date": "2026-11-17T17:38:15Z",
+    "foundAt": "2026-11-18T13:44:43.298Z"
    }
   ],
   "alerts": [
@@ -2481,6 +2526,24 @@
     "date": "2026-11-17T14:14:19.293Z",
     "title": "Show HN: One API and MCP Server to Publish to TikTok, Instagram and YouTube",
     "url": "https://ugcapi.dev/",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-18T13:44:43.298Z",
+    "title": "Show HN: Korean company registry for AI agents – free MCP server and CSV batch",
+    "url": "https://comepass.xyz/?lang=en",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-18T13:44:43.298Z",
+    "title": "Show HN: Korean company registry for AI agents – free MCP server and CSV batch",
+    "url": "https://comepass.xyz/?lang=en",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-18T13:44:43.298Z",
+    "title": "Rebuilding the Metabase MCP server: lessons for MCP tool design",
+    "url": "https://www.metabase.com/blog/mcp-tool-design-lessons",
     "channel": "hn"
    }
   ]

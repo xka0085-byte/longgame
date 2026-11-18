@@ -1837,6 +1837,24 @@
     "channel": "hn",
     "query": "SB 253 climate",
     "count": 0
+   },
+   {
+    "date": "2026-11-18T13:44:41.033Z",
+    "channel": "gn",
+    "query": "California SB 253 climate disclosure",
+    "count": 5
+   },
+   {
+    "date": "2026-11-18T13:44:41.033Z",
+    "channel": "gn",
+    "query": "SB 261 climate risk California",
+    "count": 5
+   },
+   {
+    "date": "2026-11-18T13:44:41.033Z",
+    "channel": "hn",
+    "query": "SB 253 climate",
+    "count": 0
    }
   ],
   "items": [
@@ -1911,6 +1929,15 @@
     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNMnd2ekp1V1ptV3ZDdUpXcFgyTnA5cWl6Yk5FRUcyLWRzRkpSNm54WUxNUEkwbkg3SWEySUFYY19wb2R6SHFCQ1hCbWtuNE1ac1NWZ1JiY2JybWUtZTFoZ0NqZ3UtWnRsVGJKc0RoNlNxTl8xTTRhRzJTV05DYVFBUXFkYW1Vd0g2WVNBSFNaMzVpU2l2dnVCcmVuUmo0d1I1Smp0NHFjc0xaR3fSAbABQVVfeXFMT0VnTXVpdW5kQ29adGxCV290dXVuMzBLb3BIUnpveVZYXy1RNUQ1WV9uSm52cnRweDMtYzMzNzFiaklEY1EzbFp2TlU1Nk45X2FIMmZLc2hhVWdlcng2OHJvT0dkSjF2Y3lEZ3g0VmxlQUtlZWhFWDc3T29MLUxOX0R0cGdNS091WnRXMEZDeEdibEdtT2Vnblp4cnZTLUo4enBOZzNRVUVyY1BkMFZ1blg?oc=5",
     "date": "Thu, 12 Nov 2026 00:13:26 GMT",
     "foundAt": "2026-11-12T13:38:24.152Z"
+   },
+   {
+    "line": "sb253-docket",
+    "channel": "gn",
+    "query": "California SB 253 climate disclosure",
+    "title": "California climate disclosure laws: Ninth circuit finds SB 253 scope 3 requirements and SB 261 likely unconstitutional; scope 1 and 2 requirements proceed - White &amp; Case LLP",
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPSUtESHdUMF85TVowZXNlUFhtejRJUmEwSUZYelppX2JMOExTblhUZWdwLW9oZ3FocXd2MFdKaENqdmZNX1BOLXNEZUs0X3lHaDAyTFFKdU9aT0tJQXNQbVhvMWk0dGtNRUVBRXVrcUZaZVJ4Nm9GZkw3V29JeW5EQnFkQUZGZE9lR3o4MUlMMmFSRTRtRXVnTjF3TUptakdIVnJtU0Y3cjdxcUZ4cV9aMFJqdFh1aS1CZ1V6ZGlGbw?oc=5",
+    "date": "Mon, 16 Nov 2026 12:00:00 GMT",
+    "foundAt": "2026-11-18T13:44:41.033Z"
    }
   ],
   "alerts": [
@@ -1960,6 +1987,12 @@
     "date": "2026-11-12T13:38:24.152Z",
     "title": "Ninth Circuit Limits California Climate Disclosure Laws; November 10 SB 253 Reporting Deadline Remains in Effect - The National Law Review",
     "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNMnd2ekp1V1ptV3ZDdUpXcFgyTnA5cWl6Yk5FRUcyLWRzRkpSNm54WUxNUEkwbkg3SWEySUFYY19wb2R6SHFCQ1hCbWtuNE1ac1NWZ1JiY2JybWUtZTFoZ0NqZ3UtWnRsVGJKc0RoNlNxTl8xTTRhRzJTV05DYVFBUXFkYW1Vd0g2WVNBSFNaMzVpU2l2dnVCcmVuUmo0d1I1Smp0NHFjc0xaR3fSAbABQVVfeXFMT0VnTXVpdW5kQ29adGxCV290dXVuMzBLb3BIUnpveVZYXy1RNUQ1WV9uSm52cnRweDMtYzMzNzFiaklEY1EzbFp2TlU1Nk45X2FIMmZLc2hhVWdlcng2OHJvT0dkSjF2Y3lEZ3g0VmxlQUtlZWhFWDc3T29MLUxOX0R0cGdNS091WnRXMEZDeEdibEdtT2Vnblp4cnZTLUo4enBOZzNRVUVyY1BkMFZ1blg?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-18T13:44:41.033Z",
+    "title": "California climate disclosure laws: Ninth circuit finds SB 253 scope 3 requirements and SB 261 likely unconstitutional; scope 1 and 2 requirements proceed - White &amp; Case LLP",
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPSUtESHdUMF85TVowZXNlUFhtejRJUmEwSUZYelppX2JMOExTblhUZWdwLW9oZ3FocXd2MFdKaENqdmZNX1BOLXNEZUs0X3lHaDAyTFFKdU9aT0tJQXNQbVhvMWk0dGtNRUVBRXVrcUZaZVJ4Nm9GZkw3V29JeW5EQnFkQUZGZE9lR3o4MUlMMmFSRTRtRXVnTjF3TUptakdIVnJtU0Y3cjdxcUZ4cV9aMFJqdFh1aS1CZ1V6ZGlGbw?oc=5",
     "channel": "gn"
    }
   ]

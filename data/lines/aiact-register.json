@@ -679,6 +679,24 @@
     "channel": "hn",
     "query": "AI Act register",
     "count": 1
+   },
+   {
+    "date": "2026-11-18T13:44:45.056Z",
+    "channel": "gn",
+    "query": "EU AI Act high-risk register",
+    "count": 5
+   },
+   {
+    "date": "2026-11-18T13:44:45.056Z",
+    "channel": "gn",
+    "query": "AI Act Article 71 database",
+    "count": 5
+   },
+   {
+    "date": "2026-11-18T13:44:45.056Z",
+    "channel": "hn",
+    "query": "AI Act register",
+    "count": 1
    }
   ],
   "items": [],
