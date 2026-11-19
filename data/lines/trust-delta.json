@@ -1956,6 +1956,24 @@
     "channel": "hn",
     "query": "MCP server",
     "count": 5
+   },
+   {
+    "date": "2026-11-19T14:14:29.265Z",
+    "channel": "hn",
+    "query": "MCP registry",
+    "count": 1
+   },
+   {
+    "date": "2026-11-19T14:14:29.265Z",
+    "channel": "gn",
+    "query": "MCP server registry",
+    "count": 5
+   },
+   {
+    "date": "2026-11-19T14:14:29.265Z",
+    "channel": "hn",
+    "query": "MCP server",
+    "count": 5
    }
   ],
   "items": [
@@ -2309,6 +2327,42 @@
     "url": "https://www.metabase.com/blog/mcp-tool-design-lessons",
     "date": "2026-11-17T17:38:15Z",
     "foundAt": "2026-11-18T13:44:43.298Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: Melt value of gold and silver jewellery, as an MCP server for Claude",
+    "url": "https://github.com/srinivasalokeshraju/Jewellery_value",
+    "date": "2026-11-19T14:02:01Z",
+    "foundAt": "2026-11-19T14:14:29.265Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: IceShore – MCP server to help AI answer who a system change affects",
+    "url": "https://iceshore.ai/en/index.html",
+    "date": "2026-11-19T13:19:28Z",
+    "foundAt": "2026-11-19T14:14:29.265Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: An MCP server that lets Claude or ChatGPT schedule LinkedIn posts",
+    "url": "https://contentin.io/linkedin-mcp-server/setup/",
+    "date": "2026-11-19T12:57:47Z",
+    "foundAt": "2026-11-19T14:14:29.265Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: Open-source MCP server for pay-per-result research/public-data tools",
+    "url": "https://github.com/pandadad0214/panda-federation-tools",
+    "date": "2026-11-19T02:57:49Z",
+    "foundAt": "2026-11-19T14:14:29.265Z"
    }
   ],
   "alerts": [
@@ -2544,6 +2598,30 @@
     "date": "2026-11-18T13:44:43.298Z",
     "title": "Rebuilding the Metabase MCP server: lessons for MCP tool design",
     "url": "https://www.metabase.com/blog/mcp-tool-design-lessons",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-19T14:14:29.265Z",
+    "title": "Show HN: Melt value of gold and silver jewellery, as an MCP server for Claude",
+    "url": "https://github.com/srinivasalokeshraju/Jewellery_value",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-19T14:14:29.265Z",
+    "title": "Show HN: IceShore – MCP server to help AI answer who a system change affects",
+    "url": "https://iceshore.ai/en/index.html",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-19T14:14:29.265Z",
+    "title": "Show HN: An MCP server that lets Claude or ChatGPT schedule LinkedIn posts",
+    "url": "https://contentin.io/linkedin-mcp-server/setup/",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-19T14:14:29.265Z",
+    "title": "Show HN: Open-source MCP server for pay-per-result research/public-data tools",
+    "url": "https://github.com/pandadad0214/panda-federation-tools",
     "channel": "hn"
    }
   ]

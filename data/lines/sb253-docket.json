@@ -1855,6 +1855,24 @@
     "channel": "hn",
     "query": "SB 253 climate",
     "count": 0
+   },
+   {
+    "date": "2026-11-19T14:14:26.857Z",
+    "channel": "gn",
+    "query": "California SB 253 climate disclosure",
+    "count": 5
+   },
+   {
+    "date": "2026-11-19T14:14:26.857Z",
+    "channel": "gn",
+    "query": "SB 261 climate risk California",
+    "count": 5
+   },
+   {
+    "date": "2026-11-19T14:14:26.857Z",
+    "channel": "hn",
+    "query": "SB 253 climate",
+    "count": 0
    }
   ],
   "items": [
@@ -1938,6 +1956,15 @@
     "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPSUtESHdUMF85TVowZXNlUFhtejRJUmEwSUZYelppX2JMOExTblhUZWdwLW9oZ3FocXd2MFdKaENqdmZNX1BOLXNEZUs0X3lHaDAyTFFKdU9aT0tJQXNQbVhvMWk0dGtNRUVBRXVrcUZaZVJ4Nm9GZkw3V29JeW5EQnFkQUZGZE9lR3o4MUlMMmFSRTRtRXVnTjF3TUptakdIVnJtU0Y3cjdxcUZ4cV9aMFJqdFh1aS1CZ1V6ZGlGbw?oc=5",
     "date": "Mon, 16 Nov 2026 12:00:00 GMT",
     "foundAt": "2026-11-18T13:44:41.033Z"
+   },
+   {
+    "line": "sb253-docket",
+    "channel": "gn",
+    "query": "California SB 253 climate disclosure",
+    "title": "Business Value of California’s SB 253 Climate Disclosure - ESG News",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE96bUlsZ2U1TzJBaVpFdi1EaWZuVldaNDFoMDM2Q0w3Z1VyRTA0Q3NPMWQ1Q2gzWk9qTjdzMklGc2ROTGNRM2p1WlhTajVUSUo1RjVoRTZORDhfVi02S19TZjctaU9PZDl1ZVVMUWtRZ29PU2h5M3RIcGtKX0I?oc=5",
+    "date": "Wed, 18 Nov 2026 16:25:57 GMT",
+    "foundAt": "2026-11-19T14:14:26.857Z"
    }
   ],
   "alerts": [
@@ -1993,6 +2020,12 @@
     "date": "2026-11-18T13:44:41.033Z",
     "title": "California climate disclosure laws: Ninth circuit finds SB 253 scope 3 requirements and SB 261 likely unconstitutional; scope 1 and 2 requirements proceed - White &amp; Case LLP",
     "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPSUtESHdUMF85TVowZXNlUFhtejRJUmEwSUZYelppX2JMOExTblhUZWdwLW9oZ3FocXd2MFdKaENqdmZNX1BOLXNEZUs0X3lHaDAyTFFKdU9aT0tJQXNQbVhvMWk0dGtNRUVBRXVrcUZaZVJ4Nm9GZkw3V29JeW5EQnFkQUZGZE9lR3o4MUlMMmFSRTRtRXVnTjF3TUptakdIVnJtU0Y3cjdxcUZ4cV9aMFJqdFh1aS1CZ1V6ZGlGbw?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-19T14:14:26.857Z",
+    "title": "Business Value of California’s SB 253 Climate Disclosure - ESG News",
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE96bUlsZ2U1TzJBaVpFdi1EaWZuVldaNDFoMDM2Q0w3Z1VyRTA0Q3NPMWQ1Q2gzWk9qTjdzMklGc2ROTGNRM2p1WlhTajVUSUo1RjVoRTZORDhfVi02S19TZjctaU9PZDl1ZVVMUWtRZ29PU2h5M3RIcGtKX0I?oc=5",
     "channel": "gn"
    }
   ]

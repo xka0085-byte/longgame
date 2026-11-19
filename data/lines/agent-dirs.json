@@ -713,6 +713,24 @@
     "channel": "gn",
     "query": "web bot auth agent identity",
     "count": 5
+   },
+   {
+    "date": "2026-11-19T14:14:27.922Z",
+    "channel": "hn",
+    "query": "web bot auth",
+    "count": 2
+   },
+   {
+    "date": "2026-11-19T14:14:27.922Z",
+    "channel": "gn",
+    "query": "agent payments protocol",
+    "count": 5
+   },
+   {
+    "date": "2026-11-19T14:14:27.922Z",
+    "channel": "gn",
+    "query": "web bot auth agent identity",
+    "count": 5
    }
   ],
   "items": [

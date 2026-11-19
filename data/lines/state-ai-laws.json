@@ -589,6 +589,24 @@
     "channel": "hn",
     "query": "state AI law",
     "count": 0
+   },
+   {
+    "date": "2026-11-19T14:14:36.658Z",
+    "channel": "gn",
+    "query": "state AI law enforcement",
+    "count": 5
+   },
+   {
+    "date": "2026-11-19T14:14:36.658Z",
+    "channel": "gn",
+    "query": "Colorado AI Act",
+    "count": 5
+   },
+   {
+    "date": "2026-11-19T14:14:36.658Z",
+    "channel": "hn",
+    "query": "state AI law",
+    "count": 1
    }
   ],
   "items": [
@@ -663,6 +681,15 @@
     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBoajlOcHhLUmdUVzBZQzN1bFdva1Zpbmd6WFk2azBoTnVIckJfUGpmcEQzeHNFX2EzNUFmNUV4ZUs4ZVpzbnZ6Z0ZSLUtfbmRQQVd4c21rVzhPbWdrVFRzU0xVV1dBc3V2SG5jdzhGaw?oc=5",
     "date": "Sun, 08 Nov 2026 05:22:05 GMT",
     "foundAt": "2026-11-09T13:44:03.025Z"
+   },
+   {
+    "line": "state-ai-laws",
+    "channel": "gn",
+    "query": "Colorado AI Act",
+    "title": "Colorado AI Act: What the Replacement ADMT Law Requires From 1 January 2027 - Legal Desire",
+    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBvT3pnM09CWmY0TlVRTnMxZjk5bDJFWVpzX1JQTVJtazh5M3dzOHhPcjlWX0RxUEg4OEV2MzJKdDJVaVk2Y3RIX3V6Y0JIbmd6c1E?oc=5",
+    "date": "Thu, 19 Nov 2026 03:12:08 GMT",
+    "foundAt": "2026-11-19T14:14:36.658Z"
    }
   ],
   "alerts": [
@@ -712,6 +739,12 @@
     "date": "2026-11-09T13:44:03.025Z",
     "title": "DOJ Launches Super Intelligence Task Force, Merging AI Crime Enforcement With Challenges to State AI Laws - XenoSpectrum",
     "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBoajlOcHhLUmdUVzBZQzN1bFdva1Zpbmd6WFk2azBoTnVIckJfUGpmcEQzeHNFX2EzNUFmNUV4ZUs4ZVpzbnZ6Z0ZSLUtfbmRQQVd4c21rVzhPbWdrVFRzU0xVV1dBc3V2SG5jdzhGaw?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-19T14:14:36.658Z",
+    "title": "Colorado AI Act: What the Replacement ADMT Law Requires From 1 January 2027 - Legal Desire",
+    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBvT3pnM09CWmY0TlVRTnMxZjk5bDJFWVpzX1JQTVJtazh5M3dzOHhPcjlWX0RxUEg4OEV2MzJKdDJVaVk2Y3RIX3V6Y0JIbmd6c1E?oc=5",
     "channel": "gn"
    }
   ]

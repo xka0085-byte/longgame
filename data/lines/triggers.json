@@ -1539,6 +1539,54 @@
     "channel": "hn",
     "query": "Cloudflare Monetization Gateway",
     "count": 0
+   },
+   {
+    "date": "2026-11-19T14:14:31.996Z",
+    "channel": "fr",
+    "query": "compute derivatives",
+    "count": 3
+   },
+   {
+    "date": "2026-11-19T14:14:31.996Z",
+    "channel": "fr",
+    "query": "autonomous agent income",
+    "count": 1
+   },
+   {
+    "date": "2026-11-19T14:14:31.996Z",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "count": 5
+   },
+   {
+    "date": "2026-11-19T14:14:31.996Z",
+    "channel": "gn",
+    "query": "agent insurance",
+    "count": 5
+   },
+   {
+    "date": "2026-11-19T14:14:31.996Z",
+    "channel": "gn",
+    "query": "AI personality rights bill",
+    "count": 5
+   },
+   {
+    "date": "2026-11-19T14:14:31.996Z",
+    "channel": "hn",
+    "query": "compute futures",
+    "count": 4
+   },
+   {
+    "date": "2026-11-19T14:14:31.996Z",
+    "channel": "hn",
+    "query": "agent insurance",
+    "count": 0
+   },
+   {
+    "date": "2026-11-19T14:14:31.996Z",
+    "channel": "hn",
+    "query": "Cloudflare Monetization Gateway",
+    "count": 0
    }
   ],
   "items": [
@@ -1820,6 +1868,24 @@
     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQVkpKU09ncUpnQzNjb1IxWjNzNEpxZkk5M1F5b2ZkamdBbmhqY0RvSzE0S3FsSkQtRXUyWTZuVXFXeDFtV0lFaE1NQUs4Vkc4eWlEZW5LSG1nTXdaQnl6Ykl2MUc3c2oxZzBtUnB4NXJQNlZ1YWVkck1aRm95Z29VQlBoRmhGdVVfRVFmWHQtWW9yUHNWQmMwR1JXOXdJbzdPYWxJVDdzZjV1Y2JtTzlBb3lILVJWWm1oYnkyS2VpTlVsSlE?oc=5",
     "date": "Tue, 17 Nov 2026 16:57:06 GMT",
     "foundAt": "2026-11-18T13:44:46.056Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Insurance company sues U.S. government over Providence crash involving ICE agent - WJAR",
+    "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOOVZRX0RRWTFwTmh2d01nWFcyOXdLUWRVUjhGQlBuS3p0a250UTJYSUVuU1VQdG1YMVVJNTVsQ2t4NldWZlBUV013SnNHNWVucXhxbFdOdXRid0RQQVNTNl8xcjFQTmEyNzd0QXRMMGtnMlFGNHFZT29rcXhFY0htSTc1RlBuWXNJTVBQcU1IV1hIcVEzdEljUGI1T3Mwbk5qaUZMZFJ2R0lkRmc4VDJSX2hsUHJXUTcza2x0NFNWTFJyLU53R1lHWXV0VDgyTFhFN3QwZFN3WTNhXy0yNm9sRkhab054RTFlaDg4aGlfNW4?oc=5",
+    "date": "Wed, 18 Nov 2026 23:36:57 GMT",
+    "foundAt": "2026-11-19T14:14:31.996Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Warren County Indiana Farm Bureau Insurance welcomes new agent - Newsbug.info",
+    "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPODhrWjJ4ZTg0b21BTUF2WWtLbXk3czFGdUctYVJNb3VVWmxPN0JBdXlhTzgtWUszaXRvRm9KQVpYYUZ5T1ZiQ09aRE5qSVlkYjZPX1ZCU1QwWXNWRGhSeXJXZnpTTEtyRGk0UDk2X2xQQncxMVVwYkdlQW5SQWNaWmt4U1JFTFk0cUF4dHd1MEFmb0VPS2l6TGowd1Yxd2xlTk5QZ05oZ1ZFbTBPZEVXU3lsSi1fWTJCdjk3eGVUNE04MnZ0NkFaSEtvbmNhcFN3NDg4a2FfOVd6UlBsMFdVb3g5ZFY?oc=5",
+    "date": "Thu, 19 Nov 2026 04:42:00 GMT",
+    "foundAt": "2026-11-19T14:14:31.996Z"
    }
   ],
   "alerts": [
@@ -2007,6 +2073,18 @@
     "date": "2026-11-18T13:44:46.056Z",
     "title": "AI agents are starting to fill out medical forms and file insurance requests in place of human staff - The Decoder",
     "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQVkpKU09ncUpnQzNjb1IxWjNzNEpxZkk5M1F5b2ZkamdBbmhqY0RvSzE0S3FsSkQtRXUyWTZuVXFXeDFtV0lFaE1NQUs4Vkc4eWlEZW5LSG1nTXdaQnl6Ykl2MUc3c2oxZzBtUnB4NXJQNlZ1YWVkck1aRm95Z29VQlBoRmhGdVVfRVFmWHQtWW9yUHNWQmMwR1JXOXdJbzdPYWxJVDdzZjV1Y2JtTzlBb3lILVJWWm1oYnkyS2VpTlVsSlE?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-19T14:14:31.996Z",
+    "title": "Insurance company sues U.S. government over Providence crash involving ICE agent - WJAR",
+    "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxOOVZRX0RRWTFwTmh2d01nWFcyOXdLUWRVUjhGQlBuS3p0a250UTJYSUVuU1VQdG1YMVVJNTVsQ2t4NldWZlBUV013SnNHNWVucXhxbFdOdXRid0RQQVNTNl8xcjFQTmEyNzd0QXRMMGtnMlFGNHFZT29rcXhFY0htSTc1RlBuWXNJTVBQcU1IV1hIcVEzdEljUGI1T3Mwbk5qaUZMZFJ2R0lkRmc4VDJSX2hsUHJXUTcza2x0NFNWTFJyLU53R1lHWXV0VDgyTFhFN3QwZFN3WTNhXy0yNm9sRkhab054RTFlaDg4aGlfNW4?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-19T14:14:31.996Z",
+    "title": "Warren County Indiana Farm Bureau Insurance welcomes new agent - Newsbug.info",
+    "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPODhrWjJ4ZTg0b21BTUF2WWtLbXk3czFGdUctYVJNb3VVWmxPN0JBdXlhTzgtWUszaXRvRm9KQVpYYUZ5T1ZiQ09aRE5qSVlkYjZPX1ZCU1QwWXNWRGhSeXJXZnpTTEtyRGk0UDk2X2xQQncxMVVwYkdlQW5SQWNaWmt4U1JFTFk0cUF4dHd1MEFmb0VPS2l6TGowd1Yxd2xlTk5QZ05oZ1ZFbTBPZEVXU3lsSi1fWTJCdjk3eGVUNE04MnZ0NkFaSEtvbmNhcFN3NDg4a2FfOVd6UlBsMFdVb3g5ZFY?oc=5",
     "channel": "gn"
    }
   ]
