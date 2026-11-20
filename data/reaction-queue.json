@@ -980,7 +980,43 @@
    "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBvT3pnM09CWmY0TlVRTnMxZjk5bDJFWVpzX1JQTVJtazh5M3dzOHhPcjlWX0RxUEg4OEV2MzJKdDJVaVk2Y3RIX3V6Y0JIbmd6c1E?oc=5",
    "type": "noise",
    "action": "只记录"
+  },
+  {
+   "date": "2026-11-20T13:55:08.696Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Show HN: NostrPulse – Bitcoin HTTP 402 (L402 and Cashu) MCP Server for AI Agents",
+   "url": "https://github.com/PHONGUIT22/nostrpulse-full",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-20T13:55:08.696Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Show HN: MCP-CrashTest – Multi-step stateful contract fuzzer for MCP servers",
+   "url": "https://github.com/SnowyLumiere/mcp-crashtest",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-20T13:55:08.696Z",
+   "line": "eidas-tsl",
+   "channel": "gn",
+   "title": "EU Digital Identity Wallets Get a Payments Rulebook Ahead of eIDAS 2.0 - FinanceX Magazine",
+   "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPUGRkWlN5aDJFN2xoMjMwelZ6aXdKSGxMZENiVU1RODJ6NmhYc0JiaXRkVTJEaHZ3ZTY2VFBjVW4zT005N0l2eldJQ2VURnlnQnNiTURZMC1UTzVfUHcwY09CTjVQc3pXZVQ1SmtOd2tXSktyaXhDVnhocm02bFlhcDRTMUhrX1JPYjRIclJaQ294RHhZLW5WcTVza3FDODNfXzdPZjBGN1R3SF8y?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-20T13:55:08.696Z",
+   "line": "grid-queue",
+   "channel": "gn",
+   "title": "Pennsylvania Public Utility Commission Adopts Model Interconnection Tariff For Large Load Customers - Legal 500",
+   "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxPRVN6T1Y1clNFYVV0aHM4dDJqM3RyMl9yV2drclEzUHNmZWoybVo0dDJlTG5uTjhRTXJBMlpOOFFybE1BeU9OQV9pUmtEYl9TdUMzenpxdDgyWlpnWWJXRGo1V0FVRVNyLU02aDlBU3NOOERtYmdRTVhJOEF0RjRISVNiZkp5Q0JMZU1hZFhEXzBZUlM3LVN6QVFUYnFYTEpqY0daVm14eEQ0ODlKNTV3US1JMWVRR0VZSkU0enAtdlRBT3NIY0pfWDdQUERzZ1dfRFI3ZWN3QWlUQjZaZEF5NnBxeEJfQVZxRzNpZ1BvV0c5OF9LLUJTNEpMQm1jWGZrNkZCblN3R2N3TjAxemtoWGxLVnIxcmVSQkNxYlBrVW50OHVD?oc=5",
+   "type": "noise",
+   "action": "只记录"
   }
  ],
- "updated": "2026-11-19T14:14:38.933Z"
+ "updated": "2026-11-20T13:55:08.696Z"
 }

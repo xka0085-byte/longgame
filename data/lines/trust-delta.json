@@ -1974,6 +1974,24 @@
     "channel": "hn",
     "query": "MCP server",
     "count": 5
+   },
+   {
+    "date": "2026-11-20T13:54:58.820Z",
+    "channel": "hn",
+    "query": "MCP registry",
+    "count": 0
+   },
+   {
+    "date": "2026-11-20T13:54:58.820Z",
+    "channel": "gn",
+    "query": "MCP server registry",
+    "count": 5
+   },
+   {
+    "date": "2026-11-20T13:54:58.820Z",
+    "channel": "hn",
+    "query": "MCP server",
+    "count": 4
    }
   ],
   "items": [
@@ -2363,6 +2381,24 @@
     "url": "https://github.com/pandadad0214/panda-federation-tools",
     "date": "2026-11-19T02:57:49Z",
     "foundAt": "2026-11-19T14:14:29.265Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: NostrPulse – Bitcoin HTTP 402 (L402 and Cashu) MCP Server for AI Agents",
+    "url": "https://github.com/PHONGUIT22/nostrpulse-full",
+    "date": "2026-11-20T10:01:27Z",
+    "foundAt": "2026-11-20T13:54:58.820Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: MCP-CrashTest – Multi-step stateful contract fuzzer for MCP servers",
+    "url": "https://github.com/SnowyLumiere/mcp-crashtest",
+    "date": "2026-11-20T07:55:20Z",
+    "foundAt": "2026-11-20T13:54:58.820Z"
    }
   ],
   "alerts": [
@@ -2622,6 +2658,18 @@
     "date": "2026-11-19T14:14:29.265Z",
     "title": "Show HN: Open-source MCP server for pay-per-result research/public-data tools",
     "url": "https://github.com/pandadad0214/panda-federation-tools",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-20T13:54:58.820Z",
+    "title": "Show HN: NostrPulse – Bitcoin HTTP 402 (L402 and Cashu) MCP Server for AI Agents",
+    "url": "https://github.com/PHONGUIT22/nostrpulse-full",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-20T13:54:58.820Z",
+    "title": "Show HN: MCP-CrashTest – Multi-step stateful contract fuzzer for MCP servers",
+    "url": "https://github.com/SnowyLumiere/mcp-crashtest",
     "channel": "hn"
    }
   ]

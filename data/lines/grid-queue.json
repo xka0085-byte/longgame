@@ -726,6 +726,24 @@
     "channel": "hn",
     "query": "interconnection queue",
     "count": 0
+   },
+   {
+    "date": "2026-11-20T13:55:07.541Z",
+    "channel": "gn",
+    "query": "interconnection queue data center",
+    "count": 5
+   },
+   {
+    "date": "2026-11-20T13:55:07.541Z",
+    "channel": "gn",
+    "query": "large load tariff utility",
+    "count": 5
+   },
+   {
+    "date": "2026-11-20T13:55:07.541Z",
+    "channel": "hn",
+    "query": "interconnection queue",
+    "count": 0
    }
   ],
   "items": [
@@ -773,6 +791,15 @@
     "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNOUk3QVBTdng1VEZqMVBsaGZoZ1hwbk41VGlPRHQ4bnBtdmw2STV0bFpCblI4eHFFdkFuUm1hY3RaZFR5SkRwMDZ0ME1xbVpaNW9yN3kydEhvWEctdkhJUkpMcWZFd1BTTGFLZVVMTHJWNjR6VXo1aXQ0Q3pORWQydUN0bnJqRTBQb1VQUFZlQzhVSVlhd25IcGxRTmo4QThGSFNhb0trdDNEVkNlTXF2SGdkeWZNZlpRNGFTeUsyVTlNWTlnakNhYWFfLVJXZG5FWjlWWnd3?oc=5",
     "date": "Mon, 02 Nov 2026 23:36:46 GMT",
     "foundAt": "2026-11-04T12:52:41.599Z"
+   },
+   {
+    "line": "grid-queue",
+    "channel": "gn",
+    "query": "large load tariff utility",
+    "title": "Pennsylvania Public Utility Commission Adopts Model Interconnection Tariff For Large Load Customers - Legal 500",
+    "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxPRVN6T1Y1clNFYVV0aHM4dDJqM3RyMl9yV2drclEzUHNmZWoybVo0dDJlTG5uTjhRTXJBMlpOOFFybE1BeU9OQV9pUmtEYl9TdUMzenpxdDgyWlpnWWJXRGo1V0FVRVNyLU02aDlBU3NOOERtYmdRTVhJOEF0RjRISVNiZkp5Q0JMZU1hZFhEXzBZUlM3LVN6QVFUYnFYTEpqY0daVm14eEQ0ODlKNTV3US1JMWVRR0VZSkU0enAtdlRBT3NIY0pfWDdQUERzZ1dfRFI3ZWN3QWlUQjZaZEF5NnBxeEJfQVZxRzNpZ1BvV0c5OF9LLUJTNEpMQm1jWGZrNkZCblN3R2N3TjAxemtoWGxLVnIxcmVSQkNxYlBrVW50OHVD?oc=5",
+    "date": "Thu, 19 Nov 2026 02:14:42 GMT",
+    "foundAt": "2026-11-20T13:55:07.541Z"
    }
   ],
   "alerts": [
@@ -804,6 +831,12 @@
     "date": "2026-11-04T12:52:41.599Z",
     "title": "ERCOT Interconnection Queue: Gas Up 85.5% in a Year Amid Texas Data Center Boom - The Des Moines Register",
     "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNOUk3QVBTdng1VEZqMVBsaGZoZ1hwbk41VGlPRHQ4bnBtdmw2STV0bFpCblI4eHFFdkFuUm1hY3RaZFR5SkRwMDZ0ME1xbVpaNW9yN3kydEhvWEctdkhJUkpMcWZFd1BTTGFLZVVMTHJWNjR6VXo1aXQ0Q3pORWQydUN0bnJqRTBQb1VQUFZlQzhVSVlhd25IcGxRTmo4QThGSFNhb0trdDNEVkNlTXF2SGdkeWZNZlpRNGFTeUsyVTlNWTlnakNhYWFfLVJXZG5FWjlWWnd3?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-20T13:55:07.541Z",
+    "title": "Pennsylvania Public Utility Commission Adopts Model Interconnection Tariff For Large Load Customers - Legal 500",
+    "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxPRVN6T1Y1clNFYVV0aHM4dDJqM3RyMl9yV2drclEzUHNmZWoybVo0dDJlTG5uTjhRTXJBMlpOOFFybE1BeU9OQV9pUmtEYl9TdUMzenpxdDgyWlpnWWJXRGo1V0FVRVNyLU02aDlBU3NOOERtYmdRTVhJOEF0RjRISVNiZkp5Q0JMZU1hZFhEXzBZUlM3LVN6QVFUYnFYTEpqY0daVm14eEQ0ODlKNTV3US1JMWVRR0VZSkU0enAtdlRBT3NIY0pfWDdQUERzZ1dfRFI3ZWN3QWlUQjZaZEF5NnBxeEJfQVZxRzNpZ1BvV0c5OF9LLUJTNEpMQm1jWGZrNkZCblN3R2N3TjAxemtoWGxLVnIxcmVSQkNxYlBrVW50OHVD?oc=5",
     "channel": "gn"
    }
   ]

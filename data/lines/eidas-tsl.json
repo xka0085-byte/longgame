@@ -780,6 +780,18 @@
     "channel": "hn",
     "query": "eIDAS 2.0",
     "count": 0
+   },
+   {
+    "date": "2026-11-20T13:54:59.956Z",
+    "channel": "gn",
+    "query": "eIDAS wallet",
+    "count": 5
+   },
+   {
+    "date": "2026-11-20T13:54:59.956Z",
+    "channel": "hn",
+    "query": "eIDAS 2.0",
+    "count": 0
    }
   ],
   "items": [
@@ -818,6 +830,15 @@
     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOMWZoNzlIaHVNSmpTZFc5amdiZzl2c1lVM0d6WUpWbEczdjZxekNoU3B2b1M3TU1kZmR2WVQ5Ykx6MURvdDFWQXJmZ003SUNVcF80MkhEN1gtMkNmNW9selNibHpVTDUtcUJvc3VYWnhKYkRFYjZxRGVPZEVqMkRVSHY1d3VlQkotdzVoNnRJTE9QclFkeTNYY29ZZnA?oc=5",
     "date": "Wed, 12 Aug 2026 07:00:00 GMT",
     "foundAt": "2026-11-07T11:36:45.940Z"
+   },
+   {
+    "line": "eidas-tsl",
+    "channel": "gn",
+    "query": "eIDAS wallet",
+    "title": "EU Digital Identity Wallets Get a Payments Rulebook Ahead of eIDAS 2.0 - FinanceX Magazine",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPUGRkWlN5aDJFN2xoMjMwelZ6aXdKSGxMZENiVU1RODJ6NmhYc0JiaXRkVTJEaHZ3ZTY2VFBjVW4zT005N0l2eldJQ2VURnlnQnNiTURZMC1UTzVfUHcwY09CTjVQc3pXZVQ1SmtOd2tXSktyaXhDVnhocm02bFlhcDRTMUhrX1JPYjRIclJaQ294RHhZLW5WcTVza3FDODNfXzdPZjBGN1R3SF8y?oc=5",
+    "date": "Thu, 19 Nov 2026 21:19:31 GMT",
+    "foundAt": "2026-11-20T13:54:59.956Z"
    }
   ],
   "alerts": [
@@ -843,6 +864,12 @@
     "date": "2026-11-07T11:36:45.940Z",
     "title": "Italy approves IT Wallet framework ahead of eIDAS rollout - Biometric Update",
     "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOMWZoNzlIaHVNSmpTZFc5amdiZzl2c1lVM0d6WUpWbEczdjZxekNoU3B2b1M3TU1kZmR2WVQ5Ykx6MURvdDFWQXJmZ003SUNVcF80MkhEN1gtMkNmNW9selNibHpVTDUtcUJvc3VYWnhKYkRFYjZxRGVPZEVqMkRVSHY1d3VlQkotdzVoNnRJTE9QclFkeTNYY29ZZnA?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-20T13:54:59.956Z",
+    "title": "EU Digital Identity Wallets Get a Payments Rulebook Ahead of eIDAS 2.0 - FinanceX Magazine",
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPUGRkWlN5aDJFN2xoMjMwelZ6aXdKSGxMZENiVU1RODJ6NmhYc0JiaXRkVTJEaHZ3ZTY2VFBjVW4zT005N0l2eldJQ2VURnlnQnNiTURZMC1UTzVfUHcwY09CTjVQc3pXZVQ1SmtOd2tXSktyaXhDVnhocm02bFlhcDRTMUhrX1JPYjRIclJaQ294RHhZLW5WcTVza3FDODNfXzdPZjBGN1R3SF8y?oc=5",
     "channel": "gn"
    }
   ]
