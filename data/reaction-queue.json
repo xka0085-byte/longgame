@@ -1016,7 +1016,25 @@
    "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxPRVN6T1Y1clNFYVV0aHM4dDJqM3RyMl9yV2drclEzUHNmZWoybVo0dDJlTG5uTjhRTXJBMlpOOFFybE1BeU9OQV9pUmtEYl9TdUMzenpxdDgyWlpnWWJXRGo1V0FVRVNyLU02aDlBU3NOOERtYmdRTVhJOEF0RjRISVNiZkp5Q0JMZU1hZFhEXzBZUlM3LVN6QVFUYnFYTEpqY0daVm14eEQ0ODlKNTV3US1JMWVRR0VZSkU0enAtdlRBT3NIY0pfWDdQUERzZ1dfRFI3ZWN3QWlUQjZaZEF5NnBxeEJfQVZxRzNpZ1BvV0c5OF9LLUJTNEpMQm1jWGZrNkZCblN3R2N3TjAxemtoWGxLVnIxcmVSQkNxYlBrVW50OHVD?oc=5",
    "type": "noise",
    "action": "只记录"
+  },
+  {
+   "date": "2026-11-21T13:19:22.037Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Fokus, a local macOS site blocker and screen time tracker with an MCP server",
+   "url": "https://github.com/Jnooo-cloud/fokus",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-21T13:19:22.037Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Show HN: Formbook – MCP server for horse racing data",
+   "url": "https://mcp.formbook.io",
+   "type": "noise",
+   "action": "只记录"
   }
  ],
- "updated": "2026-11-20T13:55:08.696Z"
+ "updated": "2026-11-21T13:19:22.037Z"
 }

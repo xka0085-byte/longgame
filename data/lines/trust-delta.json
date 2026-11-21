@@ -1992,6 +1992,24 @@
     "channel": "hn",
     "query": "MCP server",
     "count": 4
+   },
+   {
+    "date": "2026-11-21T13:19:12.297Z",
+    "channel": "hn",
+    "query": "MCP registry",
+    "count": 0
+   },
+   {
+    "date": "2026-11-21T13:19:12.297Z",
+    "channel": "gn",
+    "query": "MCP server registry",
+    "count": 5
+   },
+   {
+    "date": "2026-11-21T13:19:12.297Z",
+    "channel": "hn",
+    "query": "MCP server",
+    "count": 2
    }
   ],
   "items": [
@@ -2399,6 +2417,24 @@
     "url": "https://github.com/SnowyLumiere/mcp-crashtest",
     "date": "2026-11-20T07:55:20Z",
     "foundAt": "2026-11-20T13:54:58.820Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Fokus, a local macOS site blocker and screen time tracker with an MCP server",
+    "url": "https://github.com/Jnooo-cloud/fokus",
+    "date": "2026-11-21T09:15:04Z",
+    "foundAt": "2026-11-21T13:19:12.297Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: Formbook – MCP server for horse racing data",
+    "url": "https://mcp.formbook.io",
+    "date": "2026-11-20T15:28:25Z",
+    "foundAt": "2026-11-21T13:19:12.297Z"
    }
   ],
   "alerts": [
@@ -2670,6 +2706,18 @@
     "date": "2026-11-20T13:54:58.820Z",
     "title": "Show HN: MCP-CrashTest – Multi-step stateful contract fuzzer for MCP servers",
     "url": "https://github.com/SnowyLumiere/mcp-crashtest",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-21T13:19:12.297Z",
+    "title": "Fokus, a local macOS site blocker and screen time tracker with an MCP server",
+    "url": "https://github.com/Jnooo-cloud/fokus",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-21T13:19:12.297Z",
+    "title": "Show HN: Formbook – MCP server for horse racing data",
+    "url": "https://mcp.formbook.io",
     "channel": "hn"
    }
   ]
