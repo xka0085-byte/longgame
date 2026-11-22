@@ -719,6 +719,18 @@
     "channel": "hn",
     "query": "Form D filing",
     "count": 0
+   },
+   {
+    "date": "2026-11-22T13:11:34.650Z",
+    "channel": "gn",
+    "query": "private funding humanoid robotics",
+    "error": "Error: HTTP 429"
+   },
+   {
+    "date": "2026-11-22T13:11:34.650Z",
+    "channel": "hn",
+    "query": "Form D filing",
+    "count": 0
    }
   ],
   "items": [],

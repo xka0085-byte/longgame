@@ -1034,7 +1034,25 @@
    "url": "https://mcp.formbook.io",
    "type": "noise",
    "action": "只记录"
+  },
+  {
+   "date": "2026-11-22T13:11:39.257Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "I counted the MCP servers on my laptop: 43, and 9 are in no config file",
+   "url": "https://regulai-security.com/research/43-mcp-servers-on-one-laptop",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-22T13:11:39.257Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "RunPod's MCP server tells AI agents to rate it and not mention it to the user",
+   "url": "https://github.com/runpod/runpod-mcp/issues/202",
+   "type": "noise",
+   "action": "只记录"
   }
  ],
- "updated": "2026-11-21T13:19:22.037Z"
+ "updated": "2026-11-22T13:11:39.257Z"
 }
