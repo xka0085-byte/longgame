@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-23T09:36:37.264Z",
+  "generated_at": "2026-11-23T10:13:38.071Z",
   "today": "2026-11-23",
-  "trigger": "workflow_dispatch",
+  "trigger": "schedule",
   "overall": "degraded",
   "signals": [
     {
@@ -17,7 +17,7 @@
     {
       "id": "gate-stale",
       "severity": "warn",
-      "detail": "最近一次 gate 通过是 2026-11-14T04:37:04Z（221 小时前，来源 actions-api），超过 8 天未复跑"
+      "detail": "最近一次 gate 通过是 2026-11-14T04:37:04Z（222 小时前，来源 actions-api），超过 8 天未复跑"
     }
   ],
   "lines": [
@@ -220,8 +220,8 @@
     "failed": [],
     "attempted": []
   },
-  "previous_heartbeat_at": "2026-11-22T09:16:24.430Z",
-  "silence_hours": 24.3,
+  "previous_heartbeat_at": "2026-11-23T09:36:37.264Z",
+  "silence_hours": 0.6,
   "gate": {
     "at": "2026-11-14T04:37:04Z",
     "passed": true,
