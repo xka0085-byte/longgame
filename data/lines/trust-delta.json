@@ -968,6 +968,164 @@
     "flappingBasis": "与 2026-11-09 的抽样（20 条）比对，为非全量下界",
     "status": "ok",
     "ok": true
+   },
+   {
+    "date": "2026-11-23T12:08:44.052Z",
+    "scanDate": "2026-11-23",
+    "generatedAt": "2026-11-23T11:07:30.566Z",
+    "feedVersion": 1,
+    "baseline": false,
+    "comparedAgainst": "2026-11-16",
+    "comparedAgainstComplete": true,
+    "comparedAgainstCoverage": 35327,
+    "comparisonKind": "cross-week",
+    "weekOf": "2026-W48",
+    "comparedAgainstWeek": "2026-W47",
+    "daysSinceBaseline": 7,
+    "refreshOnly": false,
+    "baselineEligible": true,
+    "summary": {
+     "serversThisWeek": 35327,
+     "added": 0,
+     "addedUncomparable": 0,
+     "removed": 0,
+     "statusChanged": 706
+    },
+    "samples": {
+     "added": [],
+     "removed": [],
+     "statusChanged": [
+      {
+       "name": "ag.hood/name-service",
+       "url": "https://www.hood.ag/api/mcp",
+       "from": "UNKNOWN",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.askgina/gina",
+       "url": "https://askgina.ai/ai/gina/mcp",
+       "from": "UNKNOWN",
+       "to": "AUTH_GATED"
+      },
+      {
+       "name": "ai.astrofabric/mcp",
+       "url": "https://www.astrofabric.ai/api/mcp",
+       "from": "FAIL",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.avasis.agents/avasis",
+       "url": "https://agents.avasis.ai/mcp",
+       "from": "PASS",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.avasis/quant-research",
+       "url": "https://quant-mcp.avasis.ai/mcp",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.biel/biel-ai",
+       "url": "https://mcp.biel.ai/v2/{project_slug}/mcp",
+       "from": "PASS",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.clawterminal/markets",
+       "url": "https://mcp.clawterminal.ai",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.craterview/mcp",
+       "url": "https://mcp.craterview.ai/mcp",
+       "from": "AUTH_GATED",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.creditpolicy/creditpolicy",
+       "url": "https://creditpolicy.ai/api/mcp",
+       "from": "UNKNOWN",
+       "to": "AUTH_GATED"
+      },
+      {
+       "name": "ai.dataecho/mcp",
+       "url": "https://dataecho.ai/mcp",
+       "from": "PASS",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.datamerge/mcp",
+       "url": "https://mcp.datamerge.ai",
+       "from": "PASS",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.draconic/market-intelligence",
+       "url": "https://mcp.draconic.ai/mcp",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.drillr/drillr",
+       "url": "https://gateway.drillr.ai/mcp/data",
+       "from": "PASS",
+       "to": "AUTH_GATED"
+      },
+      {
+       "name": "ai.fantopy/fantopy",
+       "url": "https://mcp.fantopy.ai/mcp",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.gemus/gemus",
+       "url": "https://gemus.ai/api/mcp",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.hostlo/hostlo",
+       "url": "https://hostlo.ai/mcp",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.hyperscale0/hyperscale-tenant-tools",
+       "url": "https://hyperscale0.ai/v1/mcp",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      },
+      {
+       "name": "ai.norg/express",
+       "url": "https://content-craft-api.norg.ai/v2/mcp/express",
+       "from": "UNKNOWN",
+       "to": "AUTH_GATED"
+      },
+      {
+       "name": "ai.painspotter/painspotter",
+       "url": "https://painspotter.ai/mcp",
+       "from": "UNKNOWN",
+       "to": "PASS"
+      },
+      {
+       "name": "ai.patentdata/patent-data",
+       "url": "https://api.patentdata.ai/mcp",
+       "from": "AUTH_GATED",
+       "to": "UNKNOWN"
+      }
+     ]
+    },
+    "direction": {
+     "toPass": 194,
+     "fromPass": 392,
+     "unknownStatusInvolved": 0
+    },
+    "flapping": 3,
+    "flappingBasis": "与 2026-11-16 的抽样（20 条）比对，为非全量下界",
+    "status": "ok",
+    "ok": true
    }
   ],
   "events": [
@@ -1644,6 +1802,177 @@
      "ai.astrofabric/mcp",
      "ai.augmentev/paseo",
      "ai.ragjur/mcp"
+    ],
+    "basis": "sample-only"
+   },
+   {
+    "date": "2026-11-23T12:08:44.052Z",
+    "type": "endpoint-downgraded",
+    "name": "ai.avasis.agents/avasis",
+    "url": "https://agents.avasis.ai/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-23T12:08:44.052Z",
+    "type": "endpoint-downgraded",
+    "name": "ai.biel/biel-ai",
+    "url": "https://mcp.biel.ai/v2/{project_slug}/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-23T12:08:44.052Z",
+    "type": "endpoint-downgraded",
+    "name": "ai.dataecho/mcp",
+    "url": "https://dataecho.ai/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-23T12:08:44.052Z",
+    "type": "endpoint-downgraded",
+    "name": "ai.datamerge/mcp",
+    "url": "https://mcp.datamerge.ai",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-23T12:08:44.052Z",
+    "type": "endpoint-downgraded",
+    "name": "ai.drillr/drillr",
+    "url": "https://gateway.drillr.ai/mcp/data",
+    "from": "PASS",
+    "to": "AUTH_GATED"
+   },
+   {
+    "date": "2026-11-23T12:08:44.052Z",
+    "type": "endpoint-downgraded",
+    "name": "ai.revuo/revuo",
+    "url": "https://www.revuo.ai/api/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-23T12:08:44.052Z",
+    "type": "endpoint-downgraded",
+    "name": "ai.weio/site-check",
+    "url": "https://weio.ai/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-23T12:08:44.052Z",
+    "type": "endpoint-downgraded",
+    "name": "ai.xpoz/social-insights",
+    "url": "https://mcp.xpoz.ai/mcp",
+    "from": "PASS",
+    "to": "AUTH_GATED"
+   },
+   {
+    "date": "2026-11-23T12:08:44.052Z",
+    "type": "endpoint-downgraded",
+    "name": "app.nanocorp.agentarena/agent-coliseum-mcp",
+    "url": "https://agentarena.nanocorp.app/api/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-23T12:08:44.052Z",
+    "type": "endpoint-downgraded",
+    "name": "app.nanocorp.webcheck/webcheck",
+    "url": "https://webcheck.nanocorp.app/mcp",
+    "from": "PASS",
+    "to": "UNKNOWN"
+   },
+   {
+    "date": "2026-11-23T12:08:44.052Z",
+    "type": "endpoint-upgraded",
+    "name": "ag.hood/name-service",
+    "url": "https://www.hood.ag/api/mcp",
+    "from": "UNKNOWN",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-23T12:08:44.052Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.craterview/mcp",
+    "url": "https://mcp.craterview.ai/mcp",
+    "from": "AUTH_GATED",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-23T12:08:44.052Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.painspotter/painspotter",
+    "url": "https://painspotter.ai/mcp",
+    "from": "UNKNOWN",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-23T12:08:44.052Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.pauhu/mcp",
+    "url": "https://api.pauhu.ai/mcp",
+    "from": "AUTH_GATED",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-23T12:08:44.052Z",
+    "type": "endpoint-upgraded",
+    "name": "ai.router/ai-gateway",
+    "url": "https://mcp.router.ai/mcp",
+    "from": "UNKNOWN",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-23T12:08:44.052Z",
+    "type": "endpoint-upgraded",
+    "name": "app.finfam/calculators",
+    "url": "https://ff-api.finfam.app/mcp/mcp",
+    "from": "UNKNOWN",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-23T12:08:44.052Z",
+    "type": "endpoint-upgraded",
+    "name": "app.frontierstack/frontierstack",
+    "url": "https://frontierstack.app/plugin/mcp",
+    "from": "AUTH_GATED",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-23T12:08:44.052Z",
+    "type": "endpoint-upgraded",
+    "name": "app.octotrip/flights",
+    "url": "https://mcp.octotrip.app/flights/mcp",
+    "from": "UNKNOWN",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-23T12:08:44.052Z",
+    "type": "endpoint-upgraded",
+    "name": "app.openkrill/hiring-signals",
+    "url": "https://hiring.openkrill.app/mcp",
+    "from": "UNKNOWN",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-23T12:08:44.052Z",
+    "type": "endpoint-upgraded",
+    "name": "app.openkrill/lane-planner",
+    "url": "https://lanes.openkrill.app/mcp",
+    "from": "UNKNOWN",
+    "to": "PASS"
+   },
+   {
+    "date": "2026-11-23T12:08:44.052Z",
+    "type": "status-flapping",
+    "count": 3,
+    "sample": [
+     "ag.hood/name-service",
+     "ai.astrofabric/mcp",
+     "ai.norg/express"
     ],
     "basis": "sample-only"
    }

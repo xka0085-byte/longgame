@@ -1,17 +1,17 @@
 {
   "id": "aiact-register",
   "title": "AI Act 高风险义务 2027-12-02 与 2028-08-02",
-  "as_of": "2026-11-16",
+  "as_of": "2026-11-23",
   "url": "https://xka0085-byte.github.io/longgame/lines/aiact-register.html",
   "data_url": "https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/aiact-register.json",
-  "citation": "longgame aiact-register（2026-11-16）：本期无新增可分享数字（PUBLISHED）",
+  "citation": "longgame aiact-register（2026-11-23）：本期无新增可分享数字（PUBLISHED）",
   "scalar": null,
   "citable": false,
   "publication_status": "PUBLISHED",
   "assurance_level": 2,
   "contract_version": 1,
-  "raw_sha256": "7a577ba5a4fca98ea59c2d400dfce3eb38f5332f44472054826fa58c0be6701a",
-  "generated_at": "2026-11-16T10:55:38.100Z",
+  "raw_sha256": "1d43ee36632dae90cf72200c037ad67c44bc32211061cb45ed987aca870ea2bd",
+  "generated_at": "2026-11-23T12:08:47.949Z",
   "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/aiact-register.json 自洽",
   "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
 }

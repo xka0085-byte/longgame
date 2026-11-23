@@ -1,17 +1,17 @@
 {
   "id": "compute-futures",
   "title": "CFTC 裁决加两所挂牌加承购转手市场成型",
-  "as_of": "2026-11-16",
+  "as_of": "2026-11-23",
   "url": "https://xka0085-byte.github.io/longgame/lines/compute-futures.html",
   "data_url": "https://raw.githubusercontent.com/xka0085-byte/longgame/master/data/lines/compute-futures.json",
-  "citation": "longgame compute-futures（2026-11-16）：本期无新增可分享数字（QUARANTINED：data-source-unavailable）",
+  "citation": "longgame compute-futures（2026-11-23）：本期无新增可分享数字（QUARANTINED：data-source-unavailable）",
   "scalar": null,
   "citable": false,
   "publication_status": "QUARANTINED",
   "assurance_level": 2,
   "contract_version": 1,
-  "raw_sha256": "42affb7eb48148bdfff17a56add009c5825ebd3030c2a0b6c473a53d387e9e60",
-  "generated_at": "2026-11-16T10:55:38.100Z",
+  "raw_sha256": "bfbe6174d0fec83d92884e8263f86e832ba555e2730b0e32f64e9af32314edbb",
+  "generated_at": "2026-11-23T12:08:47.949Z",
   "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/compute-futures.json 自洽",
   "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
 }

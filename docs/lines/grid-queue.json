@@ -14,8 +14,8 @@
   "publication_status": "PUBLISHED",
   "assurance_level": 2,
   "contract_version": 1,
-  "raw_sha256": "a7ebc267cd23c879f0f7edd16447f57ce0c31348fe6671979454a745fb420e72",
-  "generated_at": "2026-11-16T10:55:38.100Z",
+  "raw_sha256": "f84315a8f643fc3646092bfd345243d29713676995a7c918aac6539176ebeb61",
+  "generated_at": "2026-11-23T12:08:47.949Z",
   "reproduce": "node scripts/verify-data.mjs  # 校验 data/lines/grid-queue.json 自洽",
   "license": "数据来自公开政府与监管页面；引用请保留 as_of 与 url"
 }
