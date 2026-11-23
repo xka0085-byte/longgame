@@ -681,6 +681,24 @@
     "channel": "hn",
     "query": "state AI law",
     "count": 0
+   },
+   {
+    "date": "2026-11-23T15:48:56.446Z",
+    "channel": "gn",
+    "query": "state AI law enforcement",
+    "count": 5
+   },
+   {
+    "date": "2026-11-23T15:48:56.446Z",
+    "channel": "gn",
+    "query": "Colorado AI Act",
+    "count": 5
+   },
+   {
+    "date": "2026-11-23T15:48:56.446Z",
+    "channel": "hn",
+    "query": "state AI law",
+    "count": 0
    }
   ],
   "items": [
@@ -764,6 +782,15 @@
     "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBvT3pnM09CWmY0TlVRTnMxZjk5bDJFWVpzX1JQTVJtazh5M3dzOHhPcjlWX0RxUEg4OEV2MzJKdDJVaVk2Y3RIX3V6Y0JIbmd6c1E?oc=5",
     "date": "Thu, 19 Nov 2026 03:12:08 GMT",
     "foundAt": "2026-11-19T14:14:36.658Z"
+   },
+   {
+    "line": "state-ai-laws",
+    "channel": "gn",
+    "query": "Colorado AI Act",
+    "title": "X.AI sues, DOJ intervenes, enforcement of Colorado’s AI Act suspended | United States | Global law firm - Norton Rose Fulbright",
+    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQRXRrUDFFUHEzb2hOU3Fpa1NYTmJMcXNvUFhNSVQ4YVlCRjh2bnpydE45Nk5PRDNaVUVCOGM2VXg2VUg2UnJYV1RtNmROd2lLdWxqS1BBeUcwaHY0a1Zpamk5a0FnMHJESVFqTnhXa3Axdm4tZC1rcm9IY2E4RkZZemNjN3dnMWoxeldCWnBKVmhvTUVuTmR6MXRYdlBIRl9INmNCV3hHbU9JUlAyWWVQMGptYU1lRGktaDlkZHVZbmhzblNfcGVqODNmd3ZNM0pBZFE?oc=5",
+    "date": "Sun, 22 Nov 2026 01:50:26 GMT",
+    "foundAt": "2026-11-23T15:48:56.446Z"
    }
   ],
   "alerts": [
@@ -819,6 +846,12 @@
     "date": "2026-11-19T14:14:36.658Z",
     "title": "Colorado AI Act: What the Replacement ADMT Law Requires From 1 January 2027 - Legal Desire",
     "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBvT3pnM09CWmY0TlVRTnMxZjk5bDJFWVpzX1JQTVJtazh5M3dzOHhPcjlWX0RxUEg4OEV2MzJKdDJVaVk2Y3RIX3V6Y0JIbmd6c1E?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-23T15:48:56.446Z",
+    "title": "X.AI sues, DOJ intervenes, enforcement of Colorado’s AI Act suspended | United States | Global law firm - Norton Rose Fulbright",
+    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQRXRrUDFFUHEzb2hOU3Fpa1NYTmJMcXNvUFhNSVQ4YVlCRjh2bnpydE45Nk5PRDNaVUVCOGM2VXg2VUg2UnJYV1RtNmROd2lLdWxqS1BBeUcwaHY0a1Zpamk5a0FnMHJESVFqTnhXa3Axdm4tZC1rcm9IY2E4RkZZemNjN3dnMWoxeldCWnBKVmhvTUVuTmR6MXRYdlBIRl9INmNCV3hHbU9JUlAyWWVQMGptYU1lRGktaDlkZHVZbmhzblNfcGVqODNmd3ZNM0pBZFE?oc=5",
     "channel": "gn"
    }
   ]

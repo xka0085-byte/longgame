@@ -2357,6 +2357,24 @@
     "channel": "hn",
     "query": "MCP server",
     "count": 2
+   },
+   {
+    "date": "2026-11-23T15:48:48.553Z",
+    "channel": "hn",
+    "query": "MCP registry",
+    "count": 0
+   },
+   {
+    "date": "2026-11-23T15:48:48.553Z",
+    "channel": "gn",
+    "query": "MCP server registry",
+    "count": 5
+   },
+   {
+    "date": "2026-11-23T15:48:48.553Z",
+    "channel": "hn",
+    "query": "MCP server",
+    "count": 4
    }
   ],
   "items": [
@@ -2800,6 +2818,33 @@
     "url": "https://github.com/runpod/runpod-mcp/issues/202",
     "date": "2026-11-21T14:53:19Z",
     "foundAt": "2026-11-22T13:11:29.714Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: Tilen – Scheduling API and MCP Server for AI Agents",
+    "url": "https://www.tilen.cc",
+    "date": "2026-11-23T14:27:08Z",
+    "foundAt": "2026-11-23T15:48:48.553Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: Open-source MCP server to check AI search crawler readiness",
+    "url": "https://github.com/alicexixi85/geo-seo-mcp-pro",
+    "date": "2026-11-23T06:19:04Z",
+    "foundAt": "2026-11-23T15:48:48.553Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Saktum Check – test MCP servers against the OWASP MCP Top in one command",
+    "url": "https://github.com/soodhere/saktum-check",
+    "date": "2026-11-22T15:30:27Z",
+    "foundAt": "2026-11-23T15:48:48.553Z"
    }
   ],
   "alerts": [
@@ -3095,6 +3140,24 @@
     "date": "2026-11-22T13:11:29.714Z",
     "title": "RunPod's MCP server tells AI agents to rate it and not mention it to the user",
     "url": "https://github.com/runpod/runpod-mcp/issues/202",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-23T15:48:48.553Z",
+    "title": "Show HN: Tilen – Scheduling API and MCP Server for AI Agents",
+    "url": "https://www.tilen.cc",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-23T15:48:48.553Z",
+    "title": "Show HN: Open-source MCP server to check AI search crawler readiness",
+    "url": "https://github.com/alicexixi85/geo-seo-mcp-pro",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-23T15:48:48.553Z",
+    "title": "Saktum Check – test MCP servers against the OWASP MCP Top in one command",
+    "url": "https://github.com/soodhere/saktum-check",
     "channel": "hn"
    }
   ]
