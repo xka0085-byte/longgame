@@ -1,6 +1,6 @@
-# longgame 自我审计 2026-11-16
+# longgame 自我审计 2026-11-23
 
-生成时间：2026-11-16T11:54:23.277Z（UTC）。这是本地 self-audit 的状态汇总与提案，不是第三方复算，也不代表任何外部验证。
+生成时间：2026-11-23T13:28:51.044Z（UTC）。这是本地 self-audit 的状态汇总与提案，不是第三方复算，也不代表任何外部验证。
 
 ## 状态表
 
@@ -8,17 +8,17 @@
 
 | 线 | freshness | 最近尝试 (UTC) | 最近成功 (UTC) | 未更新天数 | 连续失败 | source_status | page_ok | csv_ok | 90天证据 |
 |---|---|---|---|---:|---:|---|---|---|---:|
-| agent-dirs | fresh | 2026-11-16 10:55:33.267Z | 2026-11-16 10:55:33.267Z | 0 | 0 | ok | true | — | 0 |
-| aiact-register | fresh | 2026-11-08 01:59:19.552Z | 2026-11-08 01:59:19.552Z | 8 | 0 | ok | true | — | 0 |
-| c2pa-spec | fresh | 2026-11-16 10:55:36.717Z | 2026-11-16 10:55:36.717Z | 0 | 0 | ok | true | — | 0 |
-| compute-futures | fresh | 2026-11-16 10:55:35.914Z | 2026-11-16 10:55:35.914Z | 0 | 0 | partial | true | — | 0 |
-| eidas-tsl | fresh | 2026-11-16 10:55:34.466Z | 2026-11-16 10:55:34.466Z | 0 | 0 | ok | true | — | 0 |
-| formd-sweep | fresh | 2026-11-08 01:59:25.223Z | 2026-11-08 01:59:25.223Z | 8 | 0 | ok | true | — | 0 |
-| grid-queue | fresh | 2026-11-08 01:59:35.333Z | 2026-11-08 01:59:35.333Z | 8 | 0 | ok | true | true | 0 |
-| sb253-docket | fresh | 2026-11-16 10:55:32.701Z | 2026-11-16 10:55:32.701Z | 0 | 0 | ok | true | — | 0 |
-| state-ai-laws | fresh | 2026-11-16 10:55:37.414Z | 2026-11-16 10:55:37.414Z | 0 | 0 | ok | true | — | 0 |
-| triggers | fresh | 2026-11-08 01:59:21.088Z | 2026-11-08 01:59:21.088Z | 8 | 0 | partial | true | — | 0 |
-| trust-delta | fresh | 2026-11-16 10:55:33.759Z | 2026-11-16 10:55:33.759Z | 0 | 0 | ok | true | — | 0 |
+| agent-dirs | fresh | 2026-11-23 12:08:43.475Z | 2026-11-23 12:08:43.475Z | 0 | 0 | ok | true | — | 0 |
+| aiact-register | fresh | 2026-11-08 01:59:19.552Z | 2026-11-08 01:59:19.552Z | 15 | 0 | ok | true | — | 0 |
+| c2pa-spec | fresh | 2026-11-23 12:08:46.404Z | 2026-11-23 12:08:46.404Z | 0 | 0 | ok | true | — | 0 |
+| compute-futures | fresh | 2026-11-23 12:08:45.720Z | 2026-11-23 12:08:45.720Z | 0 | 0 | partial | true | — | 0 |
+| eidas-tsl | fresh | 2026-11-23 12:08:44.473Z | 2026-11-23 12:08:44.473Z | 0 | 0 | ok | true | — | 0 |
+| formd-sweep | fresh | 2026-11-08 01:59:25.223Z | 2026-11-08 01:59:25.223Z | 15 | 0 | ok | true | — | 0 |
+| grid-queue | fresh | 2026-11-08 01:59:35.333Z | 2026-11-08 01:59:35.333Z | 15 | 0 | ok | true | true | 0 |
+| sb253-docket | fresh | 2026-11-23 12:08:42.735Z | 2026-11-23 12:08:42.735Z | 0 | 0 | ok | true | — | 0 |
+| state-ai-laws | fresh | 2026-11-23 12:08:47.199Z | 2026-11-23 12:08:47.199Z | 0 | 0 | ok | true | — | 0 |
+| triggers | fresh | 2026-11-08 01:59:21.088Z | 2026-11-08 01:59:21.088Z | 15 | 0 | partial | true | — | 0 |
+| trust-delta | fresh | 2026-11-23 12:08:44.052Z | 2026-11-23 12:08:44.052Z | 0 | 0 | ok | true | — | 0 |
 | erc8004-snapshot | external | — | — | — | — | external-managed | false | — | 0 |
 | mcpreflight-weekly | external | — | — | — | — | external-managed | false | — | 2 |
 | protocol-watch | external | — | — | — | — | external-managed | false | — | 0 |
@@ -35,7 +35,7 @@
 
 ## 提案（最多 3 条）
 
-### P-20261116-01
+### P-20261123-01
 - action: new-artifact
 - target: mcpreflight-weekly
 - reason: 该线已有 2 条外部证据（reply）；建议把证据固化为可引用产物，供人工判断。
