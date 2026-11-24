@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-23T10:13:38.071Z",
-  "today": "2026-11-23",
+  "generated_at": "2026-11-24T11:56:54.378Z",
+  "today": "2026-11-24",
   "trigger": "schedule",
   "overall": "degraded",
   "signals": [
@@ -17,7 +17,7 @@
     {
       "id": "gate-stale",
       "severity": "warn",
-      "detail": "最近一次 gate 通过是 2026-11-14T04:37:04Z（222 小时前，来源 actions-api），超过 8 天未复跑"
+      "detail": "最近一次 gate 通过是 2026-11-14T04:37:04Z（247 小时前，来源 actions-api），超过 8 天未复跑"
     }
   ],
   "lines": [
@@ -65,56 +65,56 @@
       "managed": true,
       "status": "active",
       "cadence": "weekly",
-      "last_collect": "2026-11-16",
-      "gap_days": 7,
+      "last_collect": "2026-11-23",
+      "gap_days": 1,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": null,
       "degraded_pages": 0,
       "freshness": "fresh",
-      "last_attempt": "2026-11-16"
+      "last_attempt": "2026-11-23"
     },
     {
       "id": "agent-dirs",
       "managed": true,
       "status": "active",
       "cadence": "weekly",
-      "last_collect": "2026-11-16",
-      "gap_days": 7,
+      "last_collect": "2026-11-23",
+      "gap_days": 1,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": null,
       "degraded_pages": 0,
       "freshness": "fresh",
-      "last_attempt": "2026-11-16"
+      "last_attempt": "2026-11-23"
     },
     {
       "id": "trust-delta",
       "managed": true,
       "status": "active",
       "cadence": "weekly",
-      "last_collect": "2026-11-16",
-      "gap_days": 7,
+      "last_collect": "2026-11-23",
+      "gap_days": 1,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": "ok",
       "degraded_pages": 0,
       "freshness": "fresh",
-      "last_attempt": "2026-11-16"
+      "last_attempt": "2026-11-23"
     },
     {
       "id": "eidas-tsl",
       "managed": true,
       "status": "active",
       "cadence": "weekly",
-      "last_collect": "2026-11-16",
-      "gap_days": 7,
+      "last_collect": "2026-11-23",
+      "gap_days": 1,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": null,
       "degraded_pages": 0,
       "freshness": "fresh",
-      "last_attempt": "2026-11-16"
+      "last_attempt": "2026-11-23"
     },
     {
       "id": "aiact-register",
@@ -122,7 +122,7 @@
       "status": "auto-wait",
       "cadence": "monthly",
       "last_collect": "2026-11-08",
-      "gap_days": 15,
+      "gap_days": 16,
       "limit_days": 34,
       "consecutive_failed_rounds": 0,
       "last_round": null,
@@ -136,7 +136,7 @@
       "status": "active",
       "cadence": "monthly",
       "last_collect": "2026-11-08",
-      "gap_days": 15,
+      "gap_days": 16,
       "limit_days": 34,
       "consecutive_failed_rounds": 0,
       "last_round": "partial",
@@ -150,7 +150,7 @@
       "status": "active",
       "cadence": "monthly",
       "last_collect": "2026-11-08",
-      "gap_days": 15,
+      "gap_days": 16,
       "limit_days": 34,
       "consecutive_failed_rounds": 0,
       "last_round": null,
@@ -163,42 +163,42 @@
       "managed": true,
       "status": "active",
       "cadence": "weekly",
-      "last_collect": "2026-11-16",
-      "gap_days": 7,
+      "last_collect": "2026-11-23",
+      "gap_days": 1,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": "partial",
       "degraded_pages": 1,
       "freshness": "fresh",
-      "last_attempt": "2026-11-16"
+      "last_attempt": "2026-11-23"
     },
     {
       "id": "c2pa-spec",
       "managed": true,
       "status": "active",
       "cadence": "weekly",
-      "last_collect": "2026-11-16",
-      "gap_days": 7,
+      "last_collect": "2026-11-23",
+      "gap_days": 1,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": null,
       "degraded_pages": 0,
       "freshness": "fresh",
-      "last_attempt": "2026-11-16"
+      "last_attempt": "2026-11-23"
     },
     {
       "id": "state-ai-laws",
       "managed": true,
       "status": "active",
       "cadence": "weekly",
-      "last_collect": "2026-11-16",
-      "gap_days": 7,
+      "last_collect": "2026-11-23",
+      "gap_days": 1,
       "limit_days": 8,
       "consecutive_failed_rounds": 0,
       "last_round": null,
       "degraded_pages": 0,
       "freshness": "fresh",
-      "last_attempt": "2026-11-16"
+      "last_attempt": "2026-11-23"
     },
     {
       "id": "grid-queue",
@@ -206,7 +206,7 @@
       "status": "active",
       "cadence": "monthly",
       "last_collect": "2026-11-08",
-      "gap_days": 15,
+      "gap_days": 16,
       "limit_days": 34,
       "consecutive_failed_rounds": 0,
       "last_round": null,
@@ -220,8 +220,8 @@
     "failed": [],
     "attempted": []
   },
-  "previous_heartbeat_at": "2026-11-23T09:36:37.264Z",
-  "silence_hours": 0.6,
+  "previous_heartbeat_at": "2026-11-23T10:13:38.071Z",
+  "silence_hours": 25.7,
   "gate": {
     "at": "2026-11-14T04:37:04Z",
     "passed": true,
