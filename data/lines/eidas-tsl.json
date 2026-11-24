@@ -877,6 +877,18 @@
     "channel": "hn",
     "query": "eIDAS 2.0",
     "count": 0
+   },
+   {
+    "date": "2026-11-24T15:39:41.460Z",
+    "channel": "gn",
+    "query": "eIDAS wallet",
+    "count": 5
+   },
+   {
+    "date": "2026-11-24T15:39:41.460Z",
+    "channel": "hn",
+    "query": "eIDAS 2.0",
+    "count": 0
    }
   ],
   "items": [
@@ -924,6 +936,15 @@
     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPUGRkWlN5aDJFN2xoMjMwelZ6aXdKSGxMZENiVU1RODJ6NmhYc0JiaXRkVTJEaHZ3ZTY2VFBjVW4zT005N0l2eldJQ2VURnlnQnNiTURZMC1UTzVfUHcwY09CTjVQc3pXZVQ1SmtOd2tXSktyaXhDVnhocm02bFlhcDRTMUhrX1JPYjRIclJaQ294RHhZLW5WcTVza3FDODNfXzdPZjBGN1R3SF8y?oc=5",
     "date": "Thu, 19 Nov 2026 21:19:31 GMT",
     "foundAt": "2026-11-20T13:54:59.956Z"
+   },
+   {
+    "line": "eidas-tsl",
+    "channel": "gn",
+    "query": "eIDAS wallet",
+    "title": "Building a secure and certifiable EUDI Wallet: what it takes to reach eIDAS High - Thales",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOaUpJSk9rdkhaTVU4endDWTMtdnRZYzFRU1dKcDZZaWFZUzNEY3UtV2hWME9nN1BEakEyLVo4aEFpbTVMbHd3Mi1lTEVuM0xpRFBIM2duZzBIYmRUcmUwTms1ZWpsTzJySmpGNWFIQXZJN013OXJ4aFl3X0lWQ1NVLW9XajZjbk1ZRVRua0NQbTQtZEYyWEdVOURVQlRONENSMGtJQ1hXMi1VUFQtUk5QcDI2b2tVdFRDajdLcUlha05EdC1H?oc=5",
+    "date": "Mon, 23 Nov 2026 12:00:00 GMT",
+    "foundAt": "2026-11-24T15:39:41.460Z"
    }
   ],
   "alerts": [
@@ -955,6 +976,12 @@
     "date": "2026-11-20T13:54:59.956Z",
     "title": "EU Digital Identity Wallets Get a Payments Rulebook Ahead of eIDAS 2.0 - FinanceX Magazine",
     "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPUGRkWlN5aDJFN2xoMjMwelZ6aXdKSGxMZENiVU1RODJ6NmhYc0JiaXRkVTJEaHZ3ZTY2VFBjVW4zT005N0l2eldJQ2VURnlnQnNiTURZMC1UTzVfUHcwY09CTjVQc3pXZVQ1SmtOd2tXSktyaXhDVnhocm02bFlhcDRTMUhrX1JPYjRIclJaQ294RHhZLW5WcTVza3FDODNfXzdPZjBGN1R3SF8y?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-24T15:39:41.460Z",
+    "title": "Building a secure and certifiable EUDI Wallet: what it takes to reach eIDAS High - Thales",
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOaUpJSk9rdkhaTVU4endDWTMtdnRZYzFRU1dKcDZZaWFZUzNEY3UtV2hWME9nN1BEakEyLVo4aEFpbTVMbHd3Mi1lTEVuM0xpRFBIM2duZzBIYmRUcmUwTms1ZWpsTzJySmpGNWFIQXZJN013OXJ4aFl3X0lWQ1NVLW9XajZjbk1ZRVRua0NQbTQtZEYyWEdVOURVQlRONENSMGtJQ1hXMi1VUFQtUk5QcDI2b2tVdFRDajdLcUlha05EdC1H?oc=5",
     "channel": "gn"
    }
   ]

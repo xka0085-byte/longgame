@@ -2375,6 +2375,24 @@
     "channel": "hn",
     "query": "MCP server",
     "count": 4
+   },
+   {
+    "date": "2026-11-24T15:39:40.399Z",
+    "channel": "hn",
+    "query": "MCP registry",
+    "count": 0
+   },
+   {
+    "date": "2026-11-24T15:39:40.399Z",
+    "channel": "gn",
+    "query": "MCP server registry",
+    "count": 5
+   },
+   {
+    "date": "2026-11-24T15:39:40.399Z",
+    "channel": "hn",
+    "query": "MCP server",
+    "count": 5
    }
   ],
   "items": [
@@ -2845,6 +2863,24 @@
     "url": "https://github.com/soodhere/saktum-check",
     "date": "2026-11-22T15:30:27Z",
     "foundAt": "2026-11-23T15:48:48.553Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "PlumCalc – 33 client-side calculators with a public MCP server",
+    "url": "https://plumcalc.com/",
+    "date": "2026-11-24T03:24:23Z",
+    "foundAt": "2026-11-24T15:39:40.399Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Mcpseal: Grade an MCP server for safety before you install it",
+    "url": "https://www.npmjs.com/package/@hashshabbir/mcp-pack",
+    "date": "2026-11-24T03:19:38Z",
+    "foundAt": "2026-11-24T15:39:40.399Z"
    }
   ],
   "alerts": [
@@ -3158,6 +3194,18 @@
     "date": "2026-11-23T15:48:48.553Z",
     "title": "Saktum Check – test MCP servers against the OWASP MCP Top in one command",
     "url": "https://github.com/soodhere/saktum-check",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-24T15:39:40.399Z",
+    "title": "PlumCalc – 33 client-side calculators with a public MCP server",
+    "url": "https://plumcalc.com/",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-24T15:39:40.399Z",
+    "title": "Mcpseal: Grade an MCP server for safety before you install it",
+    "url": "https://www.npmjs.com/package/@hashshabbir/mcp-pack",
     "channel": "hn"
    }
   ]

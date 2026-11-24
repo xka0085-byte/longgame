@@ -1088,7 +1088,70 @@
    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQRXRrUDFFUHEzb2hOU3Fpa1NYTmJMcXNvUFhNSVQ4YVlCRjh2bnpydE45Nk5PRDNaVUVCOGM2VXg2VUg2UnJYV1RtNmROd2lLdWxqS1BBeUcwaHY0a1Zpamk5a0FnMHJESVFqTnhXa3Axdm4tZC1rcm9IY2E4RkZZemNjN3dnMWoxeldCWnBKVmhvTUVuTmR6MXRYdlBIRl9INmNCV3hHbU9JUlAyWWVQMGptYU1lRGktaDlkZHVZbmhzblNfcGVqODNmd3ZNM0pBZFE?oc=5",
    "type": "rule",
    "action": "更新该线参数，必要时出解读"
+  },
+  {
+   "date": "2026-11-24T15:39:50.210Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "PlumCalc – 33 client-side calculators with a public MCP server",
+   "url": "https://plumcalc.com/",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-24T15:39:50.210Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Mcpseal: Grade an MCP server for safety before you install it",
+   "url": "https://www.npmjs.com/package/@hashshabbir/mcp-pack",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-24T15:39:50.210Z",
+   "line": "eidas-tsl",
+   "channel": "gn",
+   "title": "Building a secure and certifiable EUDI Wallet: what it takes to reach eIDAS High - Thales",
+   "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOaUpJSk9rdkhaTVU4endDWTMtdnRZYzFRU1dKcDZZaWFZUzNEY3UtV2hWME9nN1BEakEyLVo4aEFpbTVMbHd3Mi1lTEVuM0xpRFBIM2duZzBIYmRUcmUwTms1ZWpsTzJySmpGNWFIQXZJN013OXJ4aFl3X0lWQ1NVLW9XajZjbk1ZRVRua0NQbTQtZEYyWEdVOURVQlRONENSMGtJQ1hXMi1VUFQtUk5QcDI2b2tVdFRDajdLcUlha05EdC1H?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-24T15:39:50.210Z",
+   "line": "triggers",
+   "channel": "gn",
+   "title": "Nationwide Insurance Sues Government Over Collision It Says ICE Agent Caused - Insurance Journal",
+   "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5uakpLQUtaYzJaREpxZkRuel9rMVN5U1k0QkJVRDZwdWdNVUJZeHlJa3cxbVM0dk5Pa01ZQ2J2WWhuNmZ2c3A0TURLcHdFNnpoV1FOempqRXpqaEk1eGdTQkhzaVNpcThTRlRHY3RzUV9tdw?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-24T15:39:50.210Z",
+   "line": "triggers",
+   "channel": "gn",
+   "title": "The new agent recruiting tool? Health insurance and wellness benefits - HousingWire",
+   "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5YMkx3TTF3X2U5clM5bnV4U1pBQ1RHNHdyYXp2TVdTN3E5R0Y0N1h0TlNsRlFwOWpFem1EdHZJak5OZEtIcGtpQWdpaHlIOTdxQzVYOXc0T2llb01qNVhzN2ZTYVliMHpia1dmR0NLUXhXZlFoTjVYeXZ3?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-24T15:39:50.210Z",
+   "line": "triggers",
+   "channel": "gn",
+   "title": "Tigerless Health Launches Lara, the Enterprise AI Agent Born from Regulated Insurance Operations - The Batesville Daily Guard",
+   "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxQS2hJY1pVa011MlRWcFQ0T1JPa2hfa0NnNEdMY2pjaUpDNXdPcFVLSXBtempiVjNnb0t1dVhIVlUxV2k1XzFvS2c3U3pweURoWmUza05xc3dKU0hncTJLeU9wQ3R0S0h4blBKZFlQd05pSGdqTktYYXJhb2NxenZzbExkWmVORmRIWWZOXzdPZWNTX3JxcmtXQjhRdUtpMjNvcnRVcGpNNUJSLWo4WEJGSUpaVDdXMGYyVlVqRDVfRWJHWEFTbkQxcVZXTWFPNUtILTZTNDN3ZnpLOENKY3pwQTdvODFfTDF1cmhLQkNLTFkxN3JEZk1yVk1FUWUxQnVRMmNQZ3BpazFrNHJTbmZ4aGhLRDlNQQ?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-24T15:39:50.210Z",
+   "line": "triggers",
+   "channel": "gn",
+   "title": "Tigerless Health Launches Lara, the Enterprise AI Agent Born from Regulated Insurance Operations - Corsicana Daily Sun",
+   "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxQcC1Yek9zaDRWcUlIWURjNWpZWW9vV1RmSm5OSWtrNmxoMGNTV2cwbXRob010MzFoVE1KY3FaRzNIc3JYUkw3SzNBdVRuSUNFRWEyeE5WbHpUb1NtNnBwWUNWQkFMNDNPbXM5eUJyUzF2X2VnZWYxc29tdFNsOU9YX05mTGprZXIwbVRlRjl1a3EtenIwQ0NLMWNrXzRJQ2xVQURpYXJUODVuZ0JVRW5xR19hNGs5bnR6NzB5LUpUTmRveU1SVHNiVzZiRjQ0MmRULWhycXljSS1sd1dwM0Z0UEdRTnFQUkJhYkJnZVJRLTFGbTZzT0I2ZXNiaWI1QnZMUEVhOFJTWlZ6QTZNcDRiY0ltR2JiaTQ?oc=5",
+   "type": "noise",
+   "action": "只记录"
   }
  ],
- "updated": "2026-11-23T15:48:58.932Z"
+ "updated": "2026-11-24T15:39:50.210Z"
 }

@@ -1779,6 +1779,54 @@
     "channel": "hn",
     "query": "Cloudflare Monetization Gateway",
     "count": 0
+   },
+   {
+    "date": "2026-11-24T15:39:43.315Z",
+    "channel": "fr",
+    "query": "compute derivatives",
+    "count": 2
+   },
+   {
+    "date": "2026-11-24T15:39:43.315Z",
+    "channel": "fr",
+    "query": "autonomous agent income",
+    "count": 0
+   },
+   {
+    "date": "2026-11-24T15:39:43.315Z",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "count": 5
+   },
+   {
+    "date": "2026-11-24T15:39:43.315Z",
+    "channel": "gn",
+    "query": "agent insurance",
+    "count": 5
+   },
+   {
+    "date": "2026-11-24T15:39:43.315Z",
+    "channel": "gn",
+    "query": "AI personality rights bill",
+    "count": 5
+   },
+   {
+    "date": "2026-11-24T15:39:43.315Z",
+    "channel": "hn",
+    "query": "compute futures",
+    "count": 0
+   },
+   {
+    "date": "2026-11-24T15:39:43.315Z",
+    "channel": "hn",
+    "query": "agent insurance",
+    "count": 1
+   },
+   {
+    "date": "2026-11-24T15:39:43.315Z",
+    "channel": "hn",
+    "query": "Cloudflare Monetization Gateway",
+    "count": 0
    }
   ],
   "items": [
@@ -2078,6 +2126,42 @@
     "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPODhrWjJ4ZTg0b21BTUF2WWtLbXk3czFGdUctYVJNb3VVWmxPN0JBdXlhTzgtWUszaXRvRm9KQVpYYUZ5T1ZiQ09aRE5qSVlkYjZPX1ZCU1QwWXNWRGhSeXJXZnpTTEtyRGk0UDk2X2xQQncxMVVwYkdlQW5SQWNaWmt4U1JFTFk0cUF4dHd1MEFmb0VPS2l6TGowd1Yxd2xlTk5QZ05oZ1ZFbTBPZEVXU3lsSi1fWTJCdjk3eGVUNE04MnZ0NkFaSEtvbmNhcFN3NDg4a2FfOVd6UlBsMFdVb3g5ZFY?oc=5",
     "date": "Thu, 19 Nov 2026 04:42:00 GMT",
     "foundAt": "2026-11-19T14:14:31.996Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Nationwide Insurance Sues Government Over Collision It Says ICE Agent Caused - Insurance Journal",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5uakpLQUtaYzJaREpxZkRuel9rMVN5U1k0QkJVRDZwdWdNVUJZeHlJa3cxbVM0dk5Pa01ZQ2J2WWhuNmZ2c3A0TURLcHdFNnpoV1FOempqRXpqaEk1eGdTQkhzaVNpcThTRlRHY3RzUV9tdw?oc=5",
+    "date": "Tue, 24 Nov 2026 06:05:07 GMT",
+    "foundAt": "2026-11-24T15:39:43.315Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "The new agent recruiting tool? Health insurance and wellness benefits - HousingWire",
+    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5YMkx3TTF3X2U5clM5bnV4U1pBQ1RHNHdyYXp2TVdTN3E5R0Y0N1h0TlNsRlFwOWpFem1EdHZJak5OZEtIcGtpQWdpaHlIOTdxQzVYOXc0T2llb01qNVhzN2ZTYVliMHpia1dmR0NLUXhXZlFoTjVYeXZ3?oc=5",
+    "date": "Mon, 23 Nov 2026 20:16:36 GMT",
+    "foundAt": "2026-11-24T15:39:43.315Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Tigerless Health Launches Lara, the Enterprise AI Agent Born from Regulated Insurance Operations - The Batesville Daily Guard",
+    "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxQS2hJY1pVa011MlRWcFQ0T1JPa2hfa0NnNEdMY2pjaUpDNXdPcFVLSXBtempiVjNnb0t1dVhIVlUxV2k1XzFvS2c3U3pweURoWmUza05xc3dKU0hncTJLeU9wQ3R0S0h4blBKZFlQd05pSGdqTktYYXJhb2NxenZzbExkWmVORmRIWWZOXzdPZWNTX3JxcmtXQjhRdUtpMjNvcnRVcGpNNUJSLWo4WEJGSUpaVDdXMGYyVlVqRDVfRWJHWEFTbkQxcVZXTWFPNUtILTZTNDN3ZnpLOENKY3pwQTdvODFfTDF1cmhLQkNLTFkxN3JEZk1yVk1FUWUxQnVRMmNQZ3BpazFrNHJTbmZ4aGhLRDlNQQ?oc=5",
+    "date": "Tue, 24 Nov 2026 12:31:52 GMT",
+    "foundAt": "2026-11-24T15:39:43.315Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Tigerless Health Launches Lara, the Enterprise AI Agent Born from Regulated Insurance Operations - Corsicana Daily Sun",
+    "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxQcC1Yek9zaDRWcUlIWURjNWpZWW9vV1RmSm5OSWtrNmxoMGNTV2cwbXRob010MzFoVE1KY3FaRzNIc3JYUkw3SzNBdVRuSUNFRWEyeE5WbHpUb1NtNnBwWUNWQkFMNDNPbXM5eUJyUzF2X2VnZWYxc29tdFNsOU9YX05mTGprZXIwbVRlRjl1a3EtenIwQ0NLMWNrXzRJQ2xVQURpYXJUODVuZ0JVRW5xR19hNGs5bnR6NzB5LUpUTmRveU1SVHNiVzZiRjQ0MmRULWhycXljSS1sd1dwM0Z0UEdRTnFQUkJhYkJnZVJRLTFGbTZzT0I2ZXNiaWI1QnZMUEVhOFJTWlZ6QTZNcDRiY0ltR2JiaTQ?oc=5",
+    "date": "Tue, 24 Nov 2026 12:31:52 GMT",
+    "foundAt": "2026-11-24T15:39:43.315Z"
    }
   ],
   "alerts": [
@@ -2277,6 +2361,30 @@
     "date": "2026-11-19T14:14:31.996Z",
     "title": "Warren County Indiana Farm Bureau Insurance welcomes new agent - Newsbug.info",
     "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPODhrWjJ4ZTg0b21BTUF2WWtLbXk3czFGdUctYVJNb3VVWmxPN0JBdXlhTzgtWUszaXRvRm9KQVpYYUZ5T1ZiQ09aRE5qSVlkYjZPX1ZCU1QwWXNWRGhSeXJXZnpTTEtyRGk0UDk2X2xQQncxMVVwYkdlQW5SQWNaWmt4U1JFTFk0cUF4dHd1MEFmb0VPS2l6TGowd1Yxd2xlTk5QZ05oZ1ZFbTBPZEVXU3lsSi1fWTJCdjk3eGVUNE04MnZ0NkFaSEtvbmNhcFN3NDg4a2FfOVd6UlBsMFdVb3g5ZFY?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-24T15:39:43.315Z",
+    "title": "Nationwide Insurance Sues Government Over Collision It Says ICE Agent Caused - Insurance Journal",
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE5uakpLQUtaYzJaREpxZkRuel9rMVN5U1k0QkJVRDZwdWdNVUJZeHlJa3cxbVM0dk5Pa01ZQ2J2WWhuNmZ2c3A0TURLcHdFNnpoV1FOempqRXpqaEk1eGdTQkhzaVNpcThTRlRHY3RzUV9tdw?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-24T15:39:43.315Z",
+    "title": "The new agent recruiting tool? Health insurance and wellness benefits - HousingWire",
+    "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE5YMkx3TTF3X2U5clM5bnV4U1pBQ1RHNHdyYXp2TVdTN3E5R0Y0N1h0TlNsRlFwOWpFem1EdHZJak5OZEtIcGtpQWdpaHlIOTdxQzVYOXc0T2llb01qNVhzN2ZTYVliMHpia1dmR0NLUXhXZlFoTjVYeXZ3?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-24T15:39:43.315Z",
+    "title": "Tigerless Health Launches Lara, the Enterprise AI Agent Born from Regulated Insurance Operations - The Batesville Daily Guard",
+    "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxQS2hJY1pVa011MlRWcFQ0T1JPa2hfa0NnNEdMY2pjaUpDNXdPcFVLSXBtempiVjNnb0t1dVhIVlUxV2k1XzFvS2c3U3pweURoWmUza05xc3dKU0hncTJLeU9wQ3R0S0h4blBKZFlQd05pSGdqTktYYXJhb2NxenZzbExkWmVORmRIWWZOXzdPZWNTX3JxcmtXQjhRdUtpMjNvcnRVcGpNNUJSLWo4WEJGSUpaVDdXMGYyVlVqRDVfRWJHWEFTbkQxcVZXTWFPNUtILTZTNDN3ZnpLOENKY3pwQTdvODFfTDF1cmhLQkNLTFkxN3JEZk1yVk1FUWUxQnVRMmNQZ3BpazFrNHJTbmZ4aGhLRDlNQQ?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-24T15:39:43.315Z",
+    "title": "Tigerless Health Launches Lara, the Enterprise AI Agent Born from Regulated Insurance Operations - Corsicana Daily Sun",
+    "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxQcC1Yek9zaDRWcUlIWURjNWpZWW9vV1RmSm5OSWtrNmxoMGNTV2cwbXRob010MzFoVE1KY3FaRzNIc3JYUkw3SzNBdVRuSUNFRWEyeE5WbHpUb1NtNnBwWUNWQkFMNDNPbXM5eUJyUzF2X2VnZWYxc29tdFNsOU9YX05mTGprZXIwbVRlRjl1a3EtenIwQ0NLMWNrXzRJQ2xVQURpYXJUODVuZ0JVRW5xR19hNGs5bnR6NzB5LUpUTmRveU1SVHNiVzZiRjQ0MmRULWhycXljSS1sd1dwM0Z0UEdRTnFQUkJhYkJnZVJRLTFGbTZzT0I2ZXNiaWI1QnZMUEVhOFJTWlZ6QTZNcDRiY0ltR2JiaTQ?oc=5",
     "channel": "gn"
    }
   ]
