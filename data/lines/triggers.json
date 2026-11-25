@@ -1827,6 +1827,54 @@
     "channel": "hn",
     "query": "Cloudflare Monetization Gateway",
     "count": 0
+   },
+   {
+    "date": "2026-11-25T15:24:50.666Z",
+    "channel": "fr",
+    "query": "compute derivatives",
+    "count": 1
+   },
+   {
+    "date": "2026-11-25T15:24:50.666Z",
+    "channel": "fr",
+    "query": "autonomous agent income",
+    "count": 0
+   },
+   {
+    "date": "2026-11-25T15:24:50.666Z",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "count": 5
+   },
+   {
+    "date": "2026-11-25T15:24:50.666Z",
+    "channel": "gn",
+    "query": "agent insurance",
+    "count": 5
+   },
+   {
+    "date": "2026-11-25T15:24:50.666Z",
+    "channel": "gn",
+    "query": "AI personality rights bill",
+    "count": 5
+   },
+   {
+    "date": "2026-11-25T15:24:50.666Z",
+    "channel": "hn",
+    "query": "compute futures",
+    "count": 2
+   },
+   {
+    "date": "2026-11-25T15:24:50.666Z",
+    "channel": "hn",
+    "query": "agent insurance",
+    "count": 0
+   },
+   {
+    "date": "2026-11-25T15:24:50.666Z",
+    "channel": "hn",
+    "query": "Cloudflare Monetization Gateway",
+    "count": 0
    }
   ],
   "items": [
@@ -2162,6 +2210,15 @@
     "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxQcC1Yek9zaDRWcUlIWURjNWpZWW9vV1RmSm5OSWtrNmxoMGNTV2cwbXRob010MzFoVE1KY3FaRzNIc3JYUkw3SzNBdVRuSUNFRWEyeE5WbHpUb1NtNnBwWUNWQkFMNDNPbXM5eUJyUzF2X2VnZWYxc29tdFNsOU9YX05mTGprZXIwbVRlRjl1a3EtenIwQ0NLMWNrXzRJQ2xVQURpYXJUODVuZ0JVRW5xR19hNGs5bnR6NzB5LUpUTmRveU1SVHNiVzZiRjQ0MmRULWhycXljSS1sd1dwM0Z0UEdRTnFQUkJhYkJnZVJRLTFGbTZzT0I2ZXNiaWI1QnZMUEVhOFJTWlZ6QTZNcDRiY0ltR2JiaTQ?oc=5",
     "date": "Tue, 24 Nov 2026 12:31:52 GMT",
     "foundAt": "2026-11-24T15:39:43.315Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Testudo Provides AI Agent Insurance to Crosby as Legal AI Adoption Accelerates - The Joplin Globe",
+    "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOdk9XdmNZRWNIaHh6RFItaEJaYmRlNDFhd3VUcmNKdURvOUJTREdjTEc5RTFDOXQ5TDVka2IzaXZSckQwemoxWGhQVXpkdWxnVmVTbmlqcFNjUVdiUUtLdkpkamNHR3B6amNuZGNwS1BxMktsb1dDS05lVFF2bDJpQmtjUzJkU3M2Ql9hdERfYlFxc2hQUW16MEQ1SzB2TEFrV2ZyUk5EcUJGNmhGVXl4enhxWlV4RVBOb05tcVFlTFhyRUVuSUEwemVsZkR6SE1VQXA1RTY5azV1bE5OYmNIQ3ZKM084Z0pEYlBzX3VScC00aWNxRG9KM1dFcWZVcHdqNi1jdmlPYV8yelI1V2c?oc=5",
+    "date": "Wed, 25 Nov 2026 14:01:01 GMT",
+    "foundAt": "2026-11-25T15:24:50.666Z"
    }
   ],
   "alerts": [
@@ -2385,6 +2442,12 @@
     "date": "2026-11-24T15:39:43.315Z",
     "title": "Tigerless Health Launches Lara, the Enterprise AI Agent Born from Regulated Insurance Operations - Corsicana Daily Sun",
     "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxQcC1Yek9zaDRWcUlIWURjNWpZWW9vV1RmSm5OSWtrNmxoMGNTV2cwbXRob010MzFoVE1KY3FaRzNIc3JYUkw3SzNBdVRuSUNFRWEyeE5WbHpUb1NtNnBwWUNWQkFMNDNPbXM5eUJyUzF2X2VnZWYxc29tdFNsOU9YX05mTGprZXIwbVRlRjl1a3EtenIwQ0NLMWNrXzRJQ2xVQURpYXJUODVuZ0JVRW5xR19hNGs5bnR6NzB5LUpUTmRveU1SVHNiVzZiRjQ0MmRULWhycXljSS1sd1dwM0Z0UEdRTnFQUkJhYkJnZVJRLTFGbTZzT0I2ZXNiaWI1QnZMUEVhOFJTWlZ6QTZNcDRiY0ltR2JiaTQ?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-25T15:24:50.666Z",
+    "title": "Testudo Provides AI Agent Insurance to Crosby as Legal AI Adoption Accelerates - The Joplin Globe",
+    "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOdk9XdmNZRWNIaHh6RFItaEJaYmRlNDFhd3VUcmNKdURvOUJTREdjTEc5RTFDOXQ5TDVka2IzaXZSckQwemoxWGhQVXpkdWxnVmVTbmlqcFNjUVdiUUtLdkpkamNHR3B6amNuZGNwS1BxMktsb1dDS05lVFF2bDJpQmtjUzJkU3M2Ql9hdERfYlFxc2hQUW16MEQ1SzB2TEFrV2ZyUk5EcUJGNmhGVXl4enhxWlV4RVBOb05tcVFlTFhyRUVuSUEwemVsZkR6SE1VQXA1RTY5azV1bE5OYmNIQ3ZKM084Z0pEYlBzX3VScC00aWNxRG9KM1dFcWZVcHdqNi1jdmlPYV8yelI1V2c?oc=5",
     "channel": "gn"
    }
   ]

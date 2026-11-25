@@ -1151,7 +1151,52 @@
    "url": "https://news.google.com/rss/articles/CBMilwJBVV95cUxQcC1Yek9zaDRWcUlIWURjNWpZWW9vV1RmSm5OSWtrNmxoMGNTV2cwbXRob010MzFoVE1KY3FaRzNIc3JYUkw3SzNBdVRuSUNFRWEyeE5WbHpUb1NtNnBwWUNWQkFMNDNPbXM5eUJyUzF2X2VnZWYxc29tdFNsOU9YX05mTGprZXIwbVRlRjl1a3EtenIwQ0NLMWNrXzRJQ2xVQURpYXJUODVuZ0JVRW5xR19hNGs5bnR6NzB5LUpUTmRveU1SVHNiVzZiRjQ0MmRULWhycXljSS1sd1dwM0Z0UEdRTnFQUkJhYkJnZVJRLTFGbTZzT0I2ZXNiaWI1QnZMUEVhOFJTWlZ6QTZNcDRiY0ltR2JiaTQ?oc=5",
    "type": "noise",
    "action": "只记录"
+  },
+  {
+   "date": "2026-11-25T15:24:58.761Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Usage tiers and quotas for Google Workspace APIs and MCP servers",
+   "url": "https://developers.google.com/workspace/guides/quota-usage-tiers",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-25T15:24:58.761Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "MCP servers can now ship skills, run tasks, and more with Claude",
+   "url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-25T15:24:58.761Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "MCP tool lists: how much context 100 public servers cost before your prompt",
+   "url": "https://github.com/Suncly-Tech/mcp-reliability-index",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-25T15:24:58.761Z",
+   "line": "triggers",
+   "channel": "gn",
+   "title": "Testudo Provides AI Agent Insurance to Crosby as Legal AI Adoption Accelerates - The Joplin Globe",
+   "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOdk9XdmNZRWNIaHh6RFItaEJaYmRlNDFhd3VUcmNKdURvOUJTREdjTEc5RTFDOXQ5TDVka2IzaXZSckQwemoxWGhQVXpkdWxnVmVTbmlqcFNjUVdiUUtLdkpkamNHR3B6amNuZGNwS1BxMktsb1dDS05lVFF2bDJpQmtjUzJkU3M2Ql9hdERfYlFxc2hQUW16MEQ1SzB2TEFrV2ZyUk5EcUJGNmhGVXl4enhxWlV4RVBOb05tcVFlTFhyRUVuSUEwemVsZkR6SE1VQXA1RTY5azV1bE5OYmNIQ3ZKM084Z0pEYlBzX3VScC00aWNxRG9KM1dFcWZVcHdqNi1jdmlPYV8yelI1V2c?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-25T15:24:58.761Z",
+   "line": "grid-queue",
+   "channel": "gn",
+   "title": "TVA touts $1.7B data center deal under new large-load tariff - Utility Dive",
+   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQTUM3RDE4UEV5YXFERTZrXzBTX2x3Nkx5SDB4Z3pOalVNem00d0U1RzhlallxVFN5bG9odUo3S2ZqSnZvbnBvQmdLX1JhX3Q1LXUtZkVsUjJXYW81VGR3THZjZHhmYUQ4VUNhN2VhbmhJTkt4SEZIYlgzcEV0Vm56SkdXS25GWll6aUFiWHlFQ05JR2dQMzJmaGxDNHhWNmJQ?oc=5",
+   "type": "noise",
+   "action": "只记录"
   }
  ],
- "updated": "2026-11-24T15:39:50.210Z"
+ "updated": "2026-11-25T15:24:58.761Z"
 }

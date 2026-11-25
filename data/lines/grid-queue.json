@@ -816,6 +816,24 @@
     "channel": "hn",
     "query": "interconnection queue",
     "count": 0
+   },
+   {
+    "date": "2026-11-25T15:24:57.260Z",
+    "channel": "gn",
+    "query": "interconnection queue data center",
+    "count": 5
+   },
+   {
+    "date": "2026-11-25T15:24:57.260Z",
+    "channel": "gn",
+    "query": "large load tariff utility",
+    "count": 5
+   },
+   {
+    "date": "2026-11-25T15:24:57.260Z",
+    "channel": "hn",
+    "query": "interconnection queue",
+    "count": 0
    }
   ],
   "items": [
@@ -872,6 +890,15 @@
     "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxPRVN6T1Y1clNFYVV0aHM4dDJqM3RyMl9yV2drclEzUHNmZWoybVo0dDJlTG5uTjhRTXJBMlpOOFFybE1BeU9OQV9pUmtEYl9TdUMzenpxdDgyWlpnWWJXRGo1V0FVRVNyLU02aDlBU3NOOERtYmdRTVhJOEF0RjRISVNiZkp5Q0JMZU1hZFhEXzBZUlM3LVN6QVFUYnFYTEpqY0daVm14eEQ0ODlKNTV3US1JMWVRR0VZSkU0enAtdlRBT3NIY0pfWDdQUERzZ1dfRFI3ZWN3QWlUQjZaZEF5NnBxeEJfQVZxRzNpZ1BvV0c5OF9LLUJTNEpMQm1jWGZrNkZCblN3R2N3TjAxemtoWGxLVnIxcmVSQkNxYlBrVW50OHVD?oc=5",
     "date": "Thu, 19 Nov 2026 02:14:42 GMT",
     "foundAt": "2026-11-20T13:55:07.541Z"
+   },
+   {
+    "line": "grid-queue",
+    "channel": "gn",
+    "query": "large load tariff utility",
+    "title": "TVA touts $1.7B data center deal under new large-load tariff - Utility Dive",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQTUM3RDE4UEV5YXFERTZrXzBTX2x3Nkx5SDB4Z3pOalVNem00d0U1RzhlallxVFN5bG9odUo3S2ZqSnZvbnBvQmdLX1JhX3Q1LXUtZkVsUjJXYW81VGR3THZjZHhmYUQ4VUNhN2VhbmhJTkt4SEZIYlgzcEV0Vm56SkdXS25GWll6aUFiWHlFQ05JR2dQMzJmaGxDNHhWNmJQ?oc=5",
+    "date": "Tue, 24 Nov 2026 18:34:46 GMT",
+    "foundAt": "2026-11-25T15:24:57.260Z"
    }
   ],
   "alerts": [
@@ -909,6 +936,12 @@
     "date": "2026-11-20T13:55:07.541Z",
     "title": "Pennsylvania Public Utility Commission Adopts Model Interconnection Tariff For Large Load Customers - Legal 500",
     "url": "https://news.google.com/rss/articles/CBMipAJBVV95cUxPRVN6T1Y1clNFYVV0aHM4dDJqM3RyMl9yV2drclEzUHNmZWoybVo0dDJlTG5uTjhRTXJBMlpOOFFybE1BeU9OQV9pUmtEYl9TdUMzenpxdDgyWlpnWWJXRGo1V0FVRVNyLU02aDlBU3NOOERtYmdRTVhJOEF0RjRISVNiZkp5Q0JMZU1hZFhEXzBZUlM3LVN6QVFUYnFYTEpqY0daVm14eEQ0ODlKNTV3US1JMWVRR0VZSkU0enAtdlRBT3NIY0pfWDdQUERzZ1dfRFI3ZWN3QWlUQjZaZEF5NnBxeEJfQVZxRzNpZ1BvV0c5OF9LLUJTNEpMQm1jWGZrNkZCblN3R2N3TjAxemtoWGxLVnIxcmVSQkNxYlBrVW50OHVD?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-25T15:24:57.260Z",
+    "title": "TVA touts $1.7B data center deal under new large-load tariff - Utility Dive",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQTUM3RDE4UEV5YXFERTZrXzBTX2x3Nkx5SDB4Z3pOalVNem00d0U1RzhlallxVFN5bG9odUo3S2ZqSnZvbnBvQmdLX1JhX3Q1LXUtZkVsUjJXYW81VGR3THZjZHhmYUQ4VUNhN2VhbmhJTkt4SEZIYlgzcEV0Vm56SkdXS25GWll6aUFiWHlFQ05JR2dQMzJmaGxDNHhWNmJQ?oc=5",
     "channel": "gn"
    }
   ]

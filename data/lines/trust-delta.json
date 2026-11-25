@@ -2393,6 +2393,24 @@
     "channel": "hn",
     "query": "MCP server",
     "count": 5
+   },
+   {
+    "date": "2026-11-25T15:24:47.400Z",
+    "channel": "hn",
+    "query": "MCP registry",
+    "count": 0
+   },
+   {
+    "date": "2026-11-25T15:24:47.400Z",
+    "channel": "gn",
+    "query": "MCP server registry",
+    "count": 5
+   },
+   {
+    "date": "2026-11-25T15:24:47.400Z",
+    "channel": "hn",
+    "query": "MCP server",
+    "count": 5
    }
   ],
   "items": [
@@ -2881,6 +2899,33 @@
     "url": "https://www.npmjs.com/package/@hashshabbir/mcp-pack",
     "date": "2026-11-24T03:19:38Z",
     "foundAt": "2026-11-24T15:39:40.399Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Usage tiers and quotas for Google Workspace APIs and MCP servers",
+    "url": "https://developers.google.com/workspace/guides/quota-usage-tiers",
+    "date": "2026-11-24T22:39:26Z",
+    "foundAt": "2026-11-25T15:24:47.400Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "MCP servers can now ship skills, run tasks, and more with Claude",
+    "url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more",
+    "date": "2026-11-24T18:38:57Z",
+    "foundAt": "2026-11-25T15:24:47.400Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "MCP tool lists: how much context 100 public servers cost before your prompt",
+    "url": "https://github.com/Suncly-Tech/mcp-reliability-index",
+    "date": "2026-11-24T16:52:18Z",
+    "foundAt": "2026-11-25T15:24:47.400Z"
    }
   ],
   "alerts": [
@@ -3206,6 +3251,24 @@
     "date": "2026-11-24T15:39:40.399Z",
     "title": "Mcpseal: Grade an MCP server for safety before you install it",
     "url": "https://www.npmjs.com/package/@hashshabbir/mcp-pack",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-25T15:24:47.400Z",
+    "title": "Usage tiers and quotas for Google Workspace APIs and MCP servers",
+    "url": "https://developers.google.com/workspace/guides/quota-usage-tiers",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-25T15:24:47.400Z",
+    "title": "MCP servers can now ship skills, run tasks, and more with Claude",
+    "url": "https://claude.com/resources/articles/skills-over-mcp-tasks-and-more",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-25T15:24:47.400Z",
+    "title": "MCP tool lists: how much context 100 public servers cost before your prompt",
+    "url": "https://github.com/Suncly-Tech/mcp-reliability-index",
     "channel": "hn"
    }
   ]
