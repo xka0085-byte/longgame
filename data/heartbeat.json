@@ -1,14 +1,6 @@
 {
   "runs": [
     {
-      "at": "2026-10-30T13:21:56.685Z",
-      "trigger": "push",
-      "overall": "degraded",
-      "critical": 0,
-      "warn": 2,
-      "healed": []
-    },
-    {
       "at": "2026-10-30T13:22:27.645Z",
       "trigger": "workflow_dispatch",
       "overall": "degraded",
@@ -476,6 +468,14 @@
     },
     {
       "at": "2026-11-24T11:56:54.378Z",
+      "trigger": "schedule",
+      "overall": "degraded",
+      "critical": 0,
+      "warn": 1,
+      "healed": []
+    },
+    {
+      "at": "2026-11-25T10:49:44.957Z",
       "trigger": "schedule",
       "overall": "degraded",
       "critical": 0,
