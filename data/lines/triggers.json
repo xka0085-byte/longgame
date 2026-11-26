@@ -1875,6 +1875,54 @@
     "channel": "hn",
     "query": "Cloudflare Monetization Gateway",
     "count": 0
+   },
+   {
+    "date": "2026-11-26T14:54:23.406Z",
+    "channel": "fr",
+    "query": "compute derivatives",
+    "count": 1
+   },
+   {
+    "date": "2026-11-26T14:54:23.406Z",
+    "channel": "fr",
+    "query": "autonomous agent income",
+    "count": 0
+   },
+   {
+    "date": "2026-11-26T14:54:23.406Z",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "count": 5
+   },
+   {
+    "date": "2026-11-26T14:54:23.406Z",
+    "channel": "gn",
+    "query": "agent insurance",
+    "count": 5
+   },
+   {
+    "date": "2026-11-26T14:54:23.406Z",
+    "channel": "gn",
+    "query": "AI personality rights bill",
+    "count": 5
+   },
+   {
+    "date": "2026-11-26T14:54:23.406Z",
+    "channel": "hn",
+    "query": "compute futures",
+    "count": 0
+   },
+   {
+    "date": "2026-11-26T14:54:23.406Z",
+    "channel": "hn",
+    "query": "agent insurance",
+    "count": 0
+   },
+   {
+    "date": "2026-11-26T14:54:23.406Z",
+    "channel": "hn",
+    "query": "Cloudflare Monetization Gateway",
+    "count": 0
    }
   ],
   "items": [
@@ -2219,6 +2267,33 @@
     "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOdk9XdmNZRWNIaHh6RFItaEJaYmRlNDFhd3VUcmNKdURvOUJTREdjTEc5RTFDOXQ5TDVka2IzaXZSckQwemoxWGhQVXpkdWxnVmVTbmlqcFNjUVdiUUtLdkpkamNHR3B6amNuZGNwS1BxMktsb1dDS05lVFF2bDJpQmtjUzJkU3M2Ql9hdERfYlFxc2hQUW16MEQ1SzB2TEFrV2ZyUk5EcUJGNmhGVXl4enhxWlV4RVBOb05tcVFlTFhyRUVuSUEwemVsZkR6SE1VQXA1RTY5azV1bE5OYmNIQ3ZKM084Z0pEYlBzX3VScC00aWNxRG9KM1dFcWZVcHdqNi1jdmlPYV8yelI1V2c?oc=5",
     "date": "Wed, 25 Nov 2026 14:01:01 GMT",
     "foundAt": "2026-11-25T15:24:50.666Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "AI Agent Insurance Reaches Law Firms as Testudo Covers Crosby - FinanceX Magazine",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNQXV1RW15TjJvMHNhT3lqWDJHa2tfLXNJSENTV3RILXRKbm5oQmxXOGdlV0RqMk5PY2FmQWhVeW5qbVZQOEZKTnBGSkJyWXROWTE4ZnBzYm03c25tdjRZWTk1SWxEMThfeElJQ1lhdFZ6U3Jvdm4tT0Q2aDdfc0xGWnJtNEYzWDVTVnNuaHhpTlFyV2FiWXBkekVMaVAzZGhw?oc=5",
+    "date": "Wed, 25 Nov 2026 15:23:16 GMT",
+    "foundAt": "2026-11-26T14:54:23.406Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Insurance careers are escaping students’ attention, says 18-year-old agent - Insurance Business",
+    "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQSGRxR0ljUTBxTDlHcHJCR1ZBYmNtR3Qya18wVGN1TVpJZVZqWTRwbmI4TkRTQzVjSGlfREtETGFHQ3BwU3NoMnFJbW0xb0FQZmJ5VVh0UzVTenRRN1hLcVZrUi1GNDhyc0xJalJhQVRLWUwzMmNZVnNSbmZPYzY3QzhBWFlFQlR6TXVqRlVkUEtFNFVtc05vSnFDRXk1SklrRVNYSnQyZzB1WWV4MTFaTk9XRDhuczFPOGZqOG9jQjRRZWdHcXhDRUxibEt0X3llRnJjaWJvRkdQUWJUZXZtSQ?oc=5",
+    "date": "Wed, 25 Nov 2026 14:55:44 GMT",
+    "foundAt": "2026-11-26T14:54:23.406Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Nationwide Insurance Sues Government Over Collision it Says ICE Agent Caused - Claims Journal",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBtYS1JQUh5N0FOZWQ1X1hHaElXZ2pHOF9ldkZ2T1dSQ2lXWjBpNXhtdEhzSklvVW9PMmhnS2l2d1AzSXF0SmRONGh2UXN0ajNTVjZUaWkyMU9UUzFFZDFxNDM2X2RKQkFISzNBMGZUZm82RjA?oc=5",
+    "date": "Wed, 25 Nov 2026 06:00:00 GMT",
+    "foundAt": "2026-11-26T14:54:23.406Z"
    }
   ],
   "alerts": [
@@ -2448,6 +2523,24 @@
     "date": "2026-11-25T15:24:50.666Z",
     "title": "Testudo Provides AI Agent Insurance to Crosby as Legal AI Adoption Accelerates - The Joplin Globe",
     "url": "https://news.google.com/rss/articles/CBMijgJBVV95cUxOdk9XdmNZRWNIaHh6RFItaEJaYmRlNDFhd3VUcmNKdURvOUJTREdjTEc5RTFDOXQ5TDVka2IzaXZSckQwemoxWGhQVXpkdWxnVmVTbmlqcFNjUVdiUUtLdkpkamNHR3B6amNuZGNwS1BxMktsb1dDS05lVFF2bDJpQmtjUzJkU3M2Ql9hdERfYlFxc2hQUW16MEQ1SzB2TEFrV2ZyUk5EcUJGNmhGVXl4enhxWlV4RVBOb05tcVFlTFhyRUVuSUEwemVsZkR6SE1VQXA1RTY5azV1bE5OYmNIQ3ZKM084Z0pEYlBzX3VScC00aWNxRG9KM1dFcWZVcHdqNi1jdmlPYV8yelI1V2c?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-26T14:54:23.406Z",
+    "title": "AI Agent Insurance Reaches Law Firms as Testudo Covers Crosby - FinanceX Magazine",
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNQXV1RW15TjJvMHNhT3lqWDJHa2tfLXNJSENTV3RILXRKbm5oQmxXOGdlV0RqMk5PY2FmQWhVeW5qbVZQOEZKTnBGSkJyWXROWTE4ZnBzYm03c25tdjRZWTk1SWxEMThfeElJQ1lhdFZ6U3Jvdm4tT0Q2aDdfc0xGWnJtNEYzWDVTVnNuaHhpTlFyV2FiWXBkekVMaVAzZGhw?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-26T14:54:23.406Z",
+    "title": "Insurance careers are escaping students’ attention, says 18-year-old agent - Insurance Business",
+    "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQSGRxR0ljUTBxTDlHcHJCR1ZBYmNtR3Qya18wVGN1TVpJZVZqWTRwbmI4TkRTQzVjSGlfREtETGFHQ3BwU3NoMnFJbW0xb0FQZmJ5VVh0UzVTenRRN1hLcVZrUi1GNDhyc0xJalJhQVRLWUwzMmNZVnNSbmZPYzY3QzhBWFlFQlR6TXVqRlVkUEtFNFVtc05vSnFDRXk1SklrRVNYSnQyZzB1WWV4MTFaTk9XRDhuczFPOGZqOG9jQjRRZWdHcXhDRUxibEt0X3llRnJjaWJvRkdQUWJUZXZtSQ?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-26T14:54:23.406Z",
+    "title": "Nationwide Insurance Sues Government Over Collision it Says ICE Agent Caused - Claims Journal",
+    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBtYS1JQUh5N0FOZWQ1X1hHaElXZ2pHOF9ldkZ2T1dSQ2lXWjBpNXhtdEhzSklvVW9PMmhnS2l2d1AzSXF0SmRONGh2UXN0ajNTVjZUaWkyMU9UUzFFZDFxNDM2X2RKQkFISzNBMGZUZm82RjA?oc=5",
     "channel": "gn"
    }
   ]

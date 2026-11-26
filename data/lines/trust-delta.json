@@ -2411,6 +2411,24 @@
     "channel": "hn",
     "query": "MCP server",
     "count": 5
+   },
+   {
+    "date": "2026-11-26T14:54:20.765Z",
+    "channel": "hn",
+    "query": "MCP registry",
+    "count": 1
+   },
+   {
+    "date": "2026-11-26T14:54:20.765Z",
+    "channel": "gn",
+    "query": "MCP server registry",
+    "count": 5
+   },
+   {
+    "date": "2026-11-26T14:54:20.765Z",
+    "channel": "hn",
+    "query": "MCP server",
+    "count": 5
    }
   ],
   "items": [
@@ -2926,6 +2944,33 @@
     "url": "https://github.com/Suncly-Tech/mcp-reliability-index",
     "date": "2026-11-24T16:52:18Z",
     "foundAt": "2026-11-25T15:24:47.400Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Blofeld – Autonomous Fuzzing for MCP Servers",
+    "url": "https://blofeld.dev/",
+    "date": "2026-11-26T13:48:26Z",
+    "foundAt": "2026-11-26T14:54:20.765Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
+    "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
+    "date": "2026-11-26T09:44:23Z",
+    "foundAt": "2026-11-26T14:54:20.765Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Google MCP servers, CLI, standardized usage tiers, and admin policies",
+    "url": "https://workspaceupdates.googleblog.com/2026/11/mcp-servers-cli-standardized-usage-tiers-now-available.html",
+    "date": "2026-11-26T02:57:01Z",
+    "foundAt": "2026-11-26T14:54:20.765Z"
    }
   ],
   "alerts": [
@@ -3269,6 +3314,24 @@
     "date": "2026-11-25T15:24:47.400Z",
     "title": "MCP tool lists: how much context 100 public servers cost before your prompt",
     "url": "https://github.com/Suncly-Tech/mcp-reliability-index",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-26T14:54:20.765Z",
+    "title": "Blofeld – Autonomous Fuzzing for MCP Servers",
+    "url": "https://blofeld.dev/",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-26T14:54:20.765Z",
+    "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
+    "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-26T14:54:20.765Z",
+    "title": "Google MCP servers, CLI, standardized usage tiers, and admin policies",
+    "url": "https://workspaceupdates.googleblog.com/2026/11/mcp-servers-cli-standardized-usage-tiers-now-available.html",
     "channel": "hn"
    }
   ]

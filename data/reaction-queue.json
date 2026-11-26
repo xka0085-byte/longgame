@@ -1196,7 +1196,61 @@
    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQTUM3RDE4UEV5YXFERTZrXzBTX2x3Nkx5SDB4Z3pOalVNem00d0U1RzhlallxVFN5bG9odUo3S2ZqSnZvbnBvQmdLX1JhX3Q1LXUtZkVsUjJXYW81VGR3THZjZHhmYUQ4VUNhN2VhbmhJTkt4SEZIYlgzcEV0Vm56SkdXS25GWll6aUFiWHlFQ05JR2dQMzJmaGxDNHhWNmJQ?oc=5",
    "type": "noise",
    "action": "只记录"
+  },
+  {
+   "date": "2026-11-26T14:54:30.327Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Blofeld – Autonomous Fuzzing for MCP Servers",
+   "url": "https://blofeld.dev/",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-26T14:54:30.327Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Google Will Make AI Agents Use Its MCP Servers. The Gmail One Can't Send Email",
+   "url": "https://techstackups.com/articles/google-workspace-ai-agents-mcp/",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-26T14:54:30.327Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Google MCP servers, CLI, standardized usage tiers, and admin policies",
+   "url": "https://workspaceupdates.googleblog.com/2026/11/mcp-servers-cli-standardized-usage-tiers-now-available.html",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-26T14:54:30.327Z",
+   "line": "triggers",
+   "channel": "gn",
+   "title": "AI Agent Insurance Reaches Law Firms as Testudo Covers Crosby - FinanceX Magazine",
+   "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNQXV1RW15TjJvMHNhT3lqWDJHa2tfLXNJSENTV3RILXRKbm5oQmxXOGdlV0RqMk5PY2FmQWhVeW5qbVZQOEZKTnBGSkJyWXROWTE4ZnBzYm03c25tdjRZWTk1SWxEMThfeElJQ1lhdFZ6U3Jvdm4tT0Q2aDdfc0xGWnJtNEYzWDVTVnNuaHhpTlFyV2FiWXBkekVMaVAzZGhw?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-26T14:54:30.327Z",
+   "line": "triggers",
+   "channel": "gn",
+   "title": "Insurance careers are escaping students’ attention, says 18-year-old agent - Insurance Business",
+   "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQSGRxR0ljUTBxTDlHcHJCR1ZBYmNtR3Qya18wVGN1TVpJZVZqWTRwbmI4TkRTQzVjSGlfREtETGFHQ3BwU3NoMnFJbW0xb0FQZmJ5VVh0UzVTenRRN1hLcVZrUi1GNDhyc0xJalJhQVRLWUwzMmNZVnNSbmZPYzY3QzhBWFlFQlR6TXVqRlVkUEtFNFVtc05vSnFDRXk1SklrRVNYSnQyZzB1WWV4MTFaTk9XRDhuczFPOGZqOG9jQjRRZWdHcXhDRUxibEt0X3llRnJjaWJvRkdQUWJUZXZtSQ?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-26T14:54:30.327Z",
+   "line": "triggers",
+   "channel": "gn",
+   "title": "Nationwide Insurance Sues Government Over Collision it Says ICE Agent Caused - Claims Journal",
+   "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBtYS1JQUh5N0FOZWQ1X1hHaElXZ2pHOF9ldkZ2T1dSQ2lXWjBpNXhtdEhzSklvVW9PMmhnS2l2d1AzSXF0SmRONGh2UXN0ajNTVjZUaWkyMU9UUzFFZDFxNDM2X2RKQkFISzNBMGZUZm82RjA?oc=5",
+   "type": "noise",
+   "action": "只记录"
   }
  ],
- "updated": "2026-11-25T15:24:58.761Z"
+ "updated": "2026-11-26T14:54:30.327Z"
 }
