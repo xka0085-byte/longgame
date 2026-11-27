@@ -883,6 +883,24 @@
     "channel": "gn",
     "query": "web bot auth agent identity",
     "count": 5
+   },
+   {
+    "date": "2026-11-27T14:51:07.193Z",
+    "channel": "hn",
+    "query": "web bot auth",
+    "count": 5
+   },
+   {
+    "date": "2026-11-27T14:51:07.193Z",
+    "channel": "gn",
+    "query": "agent payments protocol",
+    "error": "Error: HTTP 429"
+   },
+   {
+    "date": "2026-11-27T14:51:07.193Z",
+    "channel": "gn",
+    "query": "web bot auth agent identity",
+    "count": 5
    }
   ],
   "items": [

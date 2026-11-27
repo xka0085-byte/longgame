@@ -1250,7 +1250,16 @@
    "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBtYS1JQUh5N0FOZWQ1X1hHaElXZ2pHOF9ldkZ2T1dSQ2lXWjBpNXhtdEhzSklvVW9PMmhnS2l2d1AzSXF0SmRONGh2UXN0ajNTVjZUaWkyMU9UUzFFZDFxNDM2X2RKQkFISzNBMGZUZm82RjA?oc=5",
    "type": "noise",
    "action": "只记录"
+  },
+  {
+   "date": "2026-11-27T14:51:18.431Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "An MCP server that tells your assistant if a price is a deal (FR/DE)",
+   "url": "https://dealectics.com/connect",
+   "type": "noise",
+   "action": "只记录"
   }
  ],
- "updated": "2026-11-26T14:54:30.327Z"
+ "updated": "2026-11-27T14:51:18.431Z"
 }

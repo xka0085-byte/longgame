@@ -913,6 +913,18 @@
     "channel": "hn",
     "query": "eIDAS 2.0",
     "count": 0
+   },
+   {
+    "date": "2026-11-27T14:51:09.241Z",
+    "channel": "gn",
+    "query": "eIDAS wallet",
+    "error": "Error: HTTP 429"
+   },
+   {
+    "date": "2026-11-27T14:51:09.241Z",
+    "channel": "hn",
+    "query": "eIDAS 2.0",
+    "count": 0
    }
   ],
   "items": [
