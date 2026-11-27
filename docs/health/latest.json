@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-11-27T10:11:27.244Z",
+  "generated_at": "2026-11-27T10:28:22.708Z",
   "today": "2026-11-27",
-  "trigger": "workflow_dispatch",
+  "trigger": "schedule",
   "overall": "degraded",
   "signals": [
     {
@@ -220,8 +220,8 @@
     "failed": [],
     "attempted": []
   },
-  "previous_heartbeat_at": "2026-11-26T10:23:34.187Z",
-  "silence_hours": 23.8,
+  "previous_heartbeat_at": "2026-11-27T10:11:27.244Z",
+  "silence_hours": 0.3,
   "gate": {
     "at": "2026-11-14T04:37:04Z",
     "passed": true,
