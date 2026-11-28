@@ -870,6 +870,24 @@
     "channel": "hn",
     "query": "interconnection queue",
     "count": 0
+   },
+   {
+    "date": "2026-11-28T13:59:49.109Z",
+    "channel": "gn",
+    "query": "interconnection queue data center",
+    "count": 5
+   },
+   {
+    "date": "2026-11-28T13:59:49.109Z",
+    "channel": "gn",
+    "query": "large load tariff utility",
+    "count": 5
+   },
+   {
+    "date": "2026-11-28T13:59:49.109Z",
+    "channel": "hn",
+    "query": "interconnection queue",
+    "count": 0
    }
   ],
   "items": [
@@ -935,6 +953,15 @@
     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQTUM3RDE4UEV5YXFERTZrXzBTX2x3Nkx5SDB4Z3pOalVNem00d0U1RzhlallxVFN5bG9odUo3S2ZqSnZvbnBvQmdLX1JhX3Q1LXUtZkVsUjJXYW81VGR3THZjZHhmYUQ4VUNhN2VhbmhJTkt4SEZIYlgzcEV0Vm56SkdXS25GWll6aUFiWHlFQ05JR2dQMzJmaGxDNHhWNmJQ?oc=5",
     "date": "Tue, 24 Nov 2026 18:34:46 GMT",
     "foundAt": "2026-11-25T15:24:57.260Z"
+   },
+   {
+    "line": "grid-queue",
+    "channel": "gn",
+    "query": "interconnection queue data center",
+    "title": "Abbott Orders Full Audit of Texas Data Center Interconnection Queue, Threatens to Deny Grid Access - POWER Magazine",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOXzNzVjgxcGstc1NDQmhEakRRdWVreHZqYzhhNU9zc2hPMDMzMXNYdmtoTzFNd3ZSSE9HdjQ1YVBCOUszRFpGM1E3dFZwRElNNWxnb3VEVllKc0RMZEpuUm1YMlFOZXhrVGNrajJHVTdxdUhOWVg1clpXNUZwVDZiQlNDZGZYVGdGcVgzblNVMVBPbk1HMUtoVVFiMnZaOHk1aEd1Vm5zWmFwNmZwb2xsZ0x5WTNlZHBDQk9mNDh3Vzc?oc=5",
+    "date": "Tue, 04 Aug 2026 07:00:00 GMT",
+    "foundAt": "2026-11-28T13:59:49.109Z"
    }
   ],
   "alerts": [
@@ -978,6 +1005,12 @@
     "date": "2026-11-25T15:24:57.260Z",
     "title": "TVA touts $1.7B data center deal under new large-load tariff - Utility Dive",
     "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQTUM3RDE4UEV5YXFERTZrXzBTX2x3Nkx5SDB4Z3pOalVNem00d0U1RzhlallxVFN5bG9odUo3S2ZqSnZvbnBvQmdLX1JhX3Q1LXUtZkVsUjJXYW81VGR3THZjZHhmYUQ4VUNhN2VhbmhJTkt4SEZIYlgzcEV0Vm56SkdXS25GWll6aUFiWHlFQ05JR2dQMzJmaGxDNHhWNmJQ?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-28T13:59:49.109Z",
+    "title": "Abbott Orders Full Audit of Texas Data Center Interconnection Queue, Threatens to Deny Grid Access - POWER Magazine",
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOXzNzVjgxcGstc1NDQmhEakRRdWVreHZqYzhhNU9zc2hPMDMzMXNYdmtoTzFNd3ZSSE9HdjQ1YVBCOUszRFpGM1E3dFZwRElNNWxnb3VEVllKc0RMZEpuUm1YMlFOZXhrVGNrajJHVTdxdUhOWVg1clpXNUZwVDZiQlNDZGZYVGdGcVgzblNVMVBPbk1HMUtoVVFiMnZaOHk1aEd1Vm5zWmFwNmZwb2xsZ0x5WTNlZHBDQk9mNDh3Vzc?oc=5",
     "channel": "gn"
    }
   ]

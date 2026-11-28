@@ -791,6 +791,18 @@
     "channel": "hn",
     "query": "Form D filing",
     "count": 0
+   },
+   {
+    "date": "2026-11-28T13:59:45.567Z",
+    "channel": "gn",
+    "query": "private funding humanoid robotics",
+    "count": 5
+   },
+   {
+    "date": "2026-11-28T13:59:45.567Z",
+    "channel": "hn",
+    "query": "Form D filing",
+    "count": 0
    }
   ],
   "items": [],

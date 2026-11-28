@@ -1259,7 +1259,79 @@
    "url": "https://dealectics.com/connect",
    "type": "noise",
    "action": "只记录"
+  },
+  {
+   "date": "2026-11-28T13:59:50.402Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Show HN: MCP server to Make LLMs duel",
+   "url": "https://news.ycombinator.com/item?id=50677734",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-28T13:59:50.402Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Pica: Local 2D vector design and animation MCP server (Bun, SVG, raw CDP)",
+   "url": "https://github.com/nadeeshafdo/pica",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-28T13:59:50.402Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "We reduced our MCP server's context window usage by up to 267x",
+   "url": "https://octri.dev/blog/how-we-reduced-mcp-context-window-usage",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-28T13:59:50.402Z",
+   "line": "trust-delta",
+   "channel": "hn",
+   "title": "Lantern Promos – An MCP server for checking store discount codes",
+   "url": "https://lanternpromos.com/",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-28T13:59:50.402Z",
+   "line": "triggers",
+   "channel": "gn",
+   "title": "Allstate Customer, Agent Access Disrupted by Multiday Tech Outage - Insurance Journal",
+   "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9RejNvVElTY1p2VjdjNncxbXh1Z1BFQy0weFdQb2NQRXE3M2plYnZ2MWl4UU85dmk0Q3dvaVJZbHJxcTRYcGU5ZjdFT0lpczV2ZUZuaHZCWlRmTG13RkNpNWJ5NWRCYUVWX282M3hxa0c0VkxOd0lJ?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-28T13:59:50.402Z",
+   "line": "triggers",
+   "channel": "gn",
+   "title": "Testudo provides AI agent insurance to AI-native law firm Crosby - Reinsurance News",
+   "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQWE9URGZSLW1lWDlJMzhWeUFWSWFPZGJJTGxCWWw1RnRrTVdFZlQtWXE2MDQ4SDlMX3hwNzVkR0dUMG4xcm9IcWNhS0JCTC0wUHZRTzgzSlJaTF9TcnRKanVER0hzQU5EenMza3dZNnJLSk5NYkRzRmxOczRjTnZKT0FEeS05LThiTWZ6RHVvYXg2dmFyTS11TmVR?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-28T13:59:50.402Z",
+   "line": "triggers",
+   "channel": "gn",
+   "title": "Rockies Have Intriguing Free-Agent Insurance Option for Ezequiel Tovar - Sports Illustrated",
+   "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZWJlZ01kWEliUmNreXFFcFVNeU9yNWVvaGE3NC1tZHB2UlZacWE1U0V5WTREbHlkMFFtTnhJTlVqN3VpWG1MQlJWbnRBMXV3QTZHTGlXOGlFa0VtOGg4NFg0eFFHUHh2cEJMdGZ0TUhkSi1NdGZtbVJtSjNYZE16ekVtZlRWMmlvZmh0M0FpQzFzYVIxZzhmU2xMc2VId3RxNlNTTA?oc=5",
+   "type": "noise",
+   "action": "只记录"
+  },
+  {
+   "date": "2026-11-28T13:59:50.402Z",
+   "line": "grid-queue",
+   "channel": "gn",
+   "title": "Abbott Orders Full Audit of Texas Data Center Interconnection Queue, Threatens to Deny Grid Access - POWER Magazine",
+   "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOXzNzVjgxcGstc1NDQmhEakRRdWVreHZqYzhhNU9zc2hPMDMzMXNYdmtoTzFNd3ZSSE9HdjQ1YVBCOUszRFpGM1E3dFZwRElNNWxnb3VEVllKc0RMZEpuUm1YMlFOZXhrVGNrajJHVTdxdUhOWVg1clpXNUZwVDZiQlNDZGZYVGdGcVgzblNVMVBPbk1HMUtoVVFiMnZaOHk1aEd1Vm5zWmFwNmZwb2xsZ0x5WTNlZHBDQk9mNDh3Vzc?oc=5",
+   "type": "noise",
+   "action": "只记录"
   }
  ],
- "updated": "2026-11-27T14:51:18.431Z"
+ "updated": "2026-11-28T13:59:50.402Z"
 }

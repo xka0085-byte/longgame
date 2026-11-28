@@ -1971,6 +1971,54 @@
     "channel": "hn",
     "query": "Cloudflare Monetization Gateway",
     "count": 0
+   },
+   {
+    "date": "2026-11-28T13:59:43.408Z",
+    "channel": "fr",
+    "query": "compute derivatives",
+    "count": 1
+   },
+   {
+    "date": "2026-11-28T13:59:43.408Z",
+    "channel": "fr",
+    "query": "autonomous agent income",
+    "count": 0
+   },
+   {
+    "date": "2026-11-28T13:59:43.408Z",
+    "channel": "gn",
+    "query": "compute futures CFTC",
+    "count": 5
+   },
+   {
+    "date": "2026-11-28T13:59:43.408Z",
+    "channel": "gn",
+    "query": "agent insurance",
+    "count": 5
+   },
+   {
+    "date": "2026-11-28T13:59:43.408Z",
+    "channel": "gn",
+    "query": "AI personality rights bill",
+    "count": 5
+   },
+   {
+    "date": "2026-11-28T13:59:43.408Z",
+    "channel": "hn",
+    "query": "compute futures",
+    "count": 0
+   },
+   {
+    "date": "2026-11-28T13:59:43.408Z",
+    "channel": "hn",
+    "query": "agent insurance",
+    "count": 0
+   },
+   {
+    "date": "2026-11-28T13:59:43.408Z",
+    "channel": "hn",
+    "query": "Cloudflare Monetization Gateway",
+    "count": 0
    }
   ],
   "items": [
@@ -2342,6 +2390,33 @@
     "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBtYS1JQUh5N0FOZWQ1X1hHaElXZ2pHOF9ldkZ2T1dSQ2lXWjBpNXhtdEhzSklvVW9PMmhnS2l2d1AzSXF0SmRONGh2UXN0ajNTVjZUaWkyMU9UUzFFZDFxNDM2X2RKQkFISzNBMGZUZm82RjA?oc=5",
     "date": "Wed, 25 Nov 2026 06:00:00 GMT",
     "foundAt": "2026-11-26T14:54:23.406Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Allstate Customer, Agent Access Disrupted by Multiday Tech Outage - Insurance Journal",
+    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9RejNvVElTY1p2VjdjNncxbXh1Z1BFQy0weFdQb2NQRXE3M2plYnZ2MWl4UU85dmk0Q3dvaVJZbHJxcTRYcGU5ZjdFT0lpczV2ZUZuaHZCWlRmTG13RkNpNWJ5NWRCYUVWX282M3hxa0c0VkxOd0lJ?oc=5",
+    "date": "Fri, 27 Nov 2026 16:39:59 GMT",
+    "foundAt": "2026-11-28T13:59:43.408Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Testudo provides AI agent insurance to AI-native law firm Crosby - Reinsurance News",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQWE9URGZSLW1lWDlJMzhWeUFWSWFPZGJJTGxCWWw1RnRrTVdFZlQtWXE2MDQ4SDlMX3hwNzVkR0dUMG4xcm9IcWNhS0JCTC0wUHZRTzgzSlJaTF9TcnRKanVER0hzQU5EenMza3dZNnJLSk5NYkRzRmxOczRjTnZKT0FEeS05LThiTWZ6RHVvYXg2dmFyTS11TmVR?oc=5",
+    "date": "Fri, 27 Nov 2026 15:04:24 GMT",
+    "foundAt": "2026-11-28T13:59:43.408Z"
+   },
+   {
+    "line": "triggers",
+    "channel": "gn",
+    "query": "agent insurance",
+    "title": "Rockies Have Intriguing Free-Agent Insurance Option for Ezequiel Tovar - Sports Illustrated",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZWJlZ01kWEliUmNreXFFcFVNeU9yNWVvaGE3NC1tZHB2UlZacWE1U0V5WTREbHlkMFFtTnhJTlVqN3VpWG1MQlJWbnRBMXV3QTZHTGlXOGlFa0VtOGg4NFg0eFFHUHh2cEJMdGZ0TUhkSi1NdGZtbVJtSjNYZE16ekVtZlRWMmlvZmh0M0FpQzFzYVIxZzhmU2xMc2VId3RxNlNTTA?oc=5",
+    "date": "Fri, 27 Nov 2026 15:00:00 GMT",
+    "foundAt": "2026-11-28T13:59:43.408Z"
    }
   ],
   "alerts": [
@@ -2589,6 +2664,24 @@
     "date": "2026-11-26T14:54:23.406Z",
     "title": "Nationwide Insurance Sues Government Over Collision it Says ICE Agent Caused - Claims Journal",
     "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTFBtYS1JQUh5N0FOZWQ1X1hHaElXZ2pHOF9ldkZ2T1dSQ2lXWjBpNXhtdEhzSklvVW9PMmhnS2l2d1AzSXF0SmRONGh2UXN0ajNTVjZUaWkyMU9UUzFFZDFxNDM2X2RKQkFISzNBMGZUZm82RjA?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-28T13:59:43.408Z",
+    "title": "Allstate Customer, Agent Access Disrupted by Multiday Tech Outage - Insurance Journal",
+    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE9RejNvVElTY1p2VjdjNncxbXh1Z1BFQy0weFdQb2NQRXE3M2plYnZ2MWl4UU85dmk0Q3dvaVJZbHJxcTRYcGU5ZjdFT0lpczV2ZUZuaHZCWlRmTG13RkNpNWJ5NWRCYUVWX282M3hxa0c0VkxOd0lJ?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-28T13:59:43.408Z",
+    "title": "Testudo provides AI agent insurance to AI-native law firm Crosby - Reinsurance News",
+    "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQWE9URGZSLW1lWDlJMzhWeUFWSWFPZGJJTGxCWWw1RnRrTVdFZlQtWXE2MDQ4SDlMX3hwNzVkR0dUMG4xcm9IcWNhS0JCTC0wUHZRTzgzSlJaTF9TcnRKanVER0hzQU5EenMza3dZNnJLSk5NYkRzRmxOczRjTnZKT0FEeS05LThiTWZ6RHVvYXg2dmFyTS11TmVR?oc=5",
+    "channel": "gn"
+   },
+   {
+    "date": "2026-11-28T13:59:43.408Z",
+    "title": "Rockies Have Intriguing Free-Agent Insurance Option for Ezequiel Tovar - Sports Illustrated",
+    "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQZWJlZ01kWEliUmNreXFFcFVNeU9yNWVvaGE3NC1tZHB2UlZacWE1U0V5WTREbHlkMFFtTnhJTlVqN3VpWG1MQlJWbnRBMXV3QTZHTGlXOGlFa0VtOGg4NFg0eFFHUHh2cEJMdGZ0TUhkSi1NdGZtbVJtSjNYZE16ekVtZlRWMmlvZmh0M0FpQzFzYVIxZzhmU2xMc2VId3RxNlNTTA?oc=5",
     "channel": "gn"
    }
   ]

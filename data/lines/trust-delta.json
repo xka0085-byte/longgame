@@ -2447,6 +2447,24 @@
     "channel": "hn",
     "query": "MCP server",
     "count": 5
+   },
+   {
+    "date": "2026-11-28T13:59:40.893Z",
+    "channel": "hn",
+    "query": "MCP registry",
+    "count": 0
+   },
+   {
+    "date": "2026-11-28T13:59:40.893Z",
+    "channel": "gn",
+    "query": "MCP server registry",
+    "count": 5
+   },
+   {
+    "date": "2026-11-28T13:59:40.893Z",
+    "channel": "hn",
+    "query": "MCP server",
+    "count": 4
    }
   ],
   "items": [
@@ -2998,6 +3016,42 @@
     "url": "https://dealectics.com/connect",
     "date": "2026-11-26T16:15:48Z",
     "foundAt": "2026-11-27T14:51:08.322Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Show HN: MCP server to Make LLMs duel",
+    "url": "https://news.ycombinator.com/item?id=50677734",
+    "date": "2026-11-28T13:57:50Z",
+    "foundAt": "2026-11-28T13:59:40.893Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Pica: Local 2D vector design and animation MCP server (Bun, SVG, raw CDP)",
+    "url": "https://github.com/nadeeshafdo/pica",
+    "date": "2026-11-28T09:07:23Z",
+    "foundAt": "2026-11-28T13:59:40.893Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "We reduced our MCP server's context window usage by up to 267x",
+    "url": "https://octri.dev/blog/how-we-reduced-mcp-context-window-usage",
+    "date": "2026-11-27T17:53:03Z",
+    "foundAt": "2026-11-28T13:59:40.893Z"
+   },
+   {
+    "line": "trust-delta",
+    "channel": "hn",
+    "query": "MCP server",
+    "title": "Lantern Promos – An MCP server for checking store discount codes",
+    "url": "https://lanternpromos.com/",
+    "date": "2026-11-27T17:22:17Z",
+    "foundAt": "2026-11-28T13:59:40.893Z"
    }
   ],
   "alerts": [
@@ -3365,6 +3419,30 @@
     "date": "2026-11-27T14:51:08.322Z",
     "title": "An MCP server that tells your assistant if a price is a deal (FR/DE)",
     "url": "https://dealectics.com/connect",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-28T13:59:40.893Z",
+    "title": "Show HN: MCP server to Make LLMs duel",
+    "url": "https://news.ycombinator.com/item?id=50677734",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-28T13:59:40.893Z",
+    "title": "Pica: Local 2D vector design and animation MCP server (Bun, SVG, raw CDP)",
+    "url": "https://github.com/nadeeshafdo/pica",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-28T13:59:40.893Z",
+    "title": "We reduced our MCP server's context window usage by up to 267x",
+    "url": "https://octri.dev/blog/how-we-reduced-mcp-context-window-usage",
+    "channel": "hn"
+   },
+   {
+    "date": "2026-11-28T13:59:40.893Z",
+    "title": "Lantern Promos – An MCP server for checking store discount codes",
+    "url": "https://lanternpromos.com/",
     "channel": "hn"
    }
   ]

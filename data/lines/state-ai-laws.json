@@ -771,6 +771,24 @@
     "channel": "hn",
     "query": "state AI law",
     "count": 1
+   },
+   {
+    "date": "2026-11-28T13:59:47.980Z",
+    "channel": "gn",
+    "query": "state AI law enforcement",
+    "count": 5
+   },
+   {
+    "date": "2026-11-28T13:59:47.980Z",
+    "channel": "gn",
+    "query": "Colorado AI Act",
+    "count": 5
+   },
+   {
+    "date": "2026-11-28T13:59:47.980Z",
+    "channel": "hn",
+    "query": "state AI law",
+    "count": 0
    }
   ],
   "items": [
